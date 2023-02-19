@@ -33,6 +33,11 @@
   "author": {
     "name": "Adam Rapoport"
   },
+  "publisher": {
+    "name": "Bon Appétit",
+    "url": "https://www.bonappetit.com",
+    "logo": "https://www.bonappetit.com/verso/static/bon-appetit/assets/logo-seo.ab5ac9b5dc6ca6c75c6117c680b076ea664f167e.png"
+  },
   "text": "This rich butter-basted pork is offset by a bright, crunchy celery salad that's a riff on a recipe from Joshua McFadden at Ava Gene's. P.S. Don't discard the inner leaves of your celery—they're tender and flavorful.",
   "keywords": [
     "celery",
@@ -77,13 +82,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 3,
-    "ratingValue": 4.3
-  },
-  "publisher": {
-    "name": "Bon Appétit",
-    "url": "https://www.bonappetit.com",
-    "logo": "https://www.bonappetit.com/verso/static/bon-appetit/assets/logo-seo.328de564b950e3d5d1fbe3e42f065290ca1d3844.png"
+    "ratingCount": 5,
+    "ratingValue": 3.8
   },
   "dateModified": "2017-10-17T11:00:00-04:00",
   "datePublished": "2017-10-17T11:00:00-04:00"

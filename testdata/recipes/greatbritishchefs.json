@@ -1,20 +1,23 @@
 {
-  "url": "https://media-cdn.greatbritishchefs.com/media/nbdbf2hl/img84970.jpg?mode=crop\u0026width=360\u0026height=175",
+  "url": "https://www.greatbritishchefs.com/recipes/picadillo-recipe",
   "name": "Picadillo",
   "description": "This simple picadillo recipe has the perfect balance of sweetness and spice. A pleasing tanginess comes from the addition of vibrant tomatillo salsa for a great depth of flavour.",
-  "thumbnailUrl": "https://media-cdn.greatbritishchefs.com/media/mwtkdmv3/img73858.jpg?mode=crop\u0026width=1426\u0026height=713",
-  "image": [
-    {
-      "url": "https://media-cdn.greatbritishchefs.com/media/mwtkdmv3/img73858.jpg?mode=crop\u0026width=768\u0026height=512",
-      "width": 768,
-      "height": 512
-    }
-  ],
-  "cookTime": 50,
+  "inLanguage": "en",
+  "thumbnailUrl": "https://media-cdn.greatbritishchefs.com/media/mwtkdmv3/img73858.whqc_1426x713q90.jpg",
+  "author": {
+    "name": "GBC Kitchen"
+  },
+  "publisher": {
+    "name": "Great British Chefs",
+    "url": "https://www.greatbritishchefs.com"
+  },
+  "totalTime": 50,
   "recipeCategory": [
     "Main"
   ],
-  "recipeYield": 4,
+  "keywords": [
+    "easy"
+  ],
   "recipeIngredient": [
     "500g of beef mince",
     "1 onion, diced",
@@ -49,9 +52,5 @@
       "text": "Season with the honey, lime juice and salt. Stir through the coriander and serve with rice or as a taco filling"
     }
   ],
-  "publisher": {
-    "name": "Great British Chefs",
-    "url": "https://www.greatbritishchefs.com",
-    "logo": "https://media-cdn.greatbritishchefs.com/media/kxtop14a/gbc_logo1.svg"
-  }
+  "datePublished": "2018-01-30T00:00:00Z"
 }

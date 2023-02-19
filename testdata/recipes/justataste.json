@@ -2,7 +2,7 @@
   "url": "https://www.justataste.com/healthy-baked-chicken-cheese-taquitos-recipe/",
   "name": "Baked Chicken and Cheese Taquitos (Oven or Air Fryer)",
   "description": "Ditch the deep-fryer and forget the freezer aisle in favor of this fast, fresh and family favorite recipe for Baked Chicken and Cheese Taquitos.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.justataste.com/wp-content/uploads/2018/04/baked-air-fryer-cheese-taquitos.jpg",
   "image": [
     {
@@ -17,6 +17,12 @@
   ],
   "author": {
     "name": "Kelly Senyei"
+  },
+  "publisher": {
+    "name": "Just a Taste",
+    "description": "Quick and easy recipes for every meal and any occasion.",
+    "url": "https://www.justataste.com",
+    "logo": "https://www.justataste.com/wp-content/uploads/2020/10/just-a-taste-SQUARE-LOGO.jpg"
   },
   "prepTime": 30,
   "cookTime": 25,
@@ -102,12 +108,8 @@
     "unsaturatedFatContent": "8 g"
   },
   "aggregateRating": {
-    "ratingCount": 9,
-    "ratingValue": 4.45
-  },
-  "publisher": {
-    "name": "Just a Taste",
-    "url": "https://www.justataste.com"
+    "ratingCount": 10,
+    "ratingValue": 4.5
   },
   "datePublished": "2022-04-18T00:01:00Z"
 }

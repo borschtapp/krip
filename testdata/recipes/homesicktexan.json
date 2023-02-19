@@ -1,8 +1,8 @@
 {
   "url": "https://www.homesicktexan.com/and-end-to-my-quest-flour-tortillas/",
   "name": "Texas flour tortillas",
-  "description": "White bread was forbidden in my household as a child. We only ate whole-grain bread, the coarser, tougher and browner the better. I hated it. Especially since all the other kids brought their…",
-  "inLanguage": "en_US",
+  "description": "White bread was forbidden in my household as a child. We only ate whole-grain bread, the coarser, tougher and browner the better. I hated it. Especially since all the other kids brought their sandwiches to",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.homesicktexan.com/wp-content/uploads/2007/03/Flour-tortillas-DSC_0210.jpg",
   "image": [
     {
@@ -17,6 +17,10 @@
   ],
   "author": {
     "name": "Adapted by Lisa Fain from The Border Cookbook"
+  },
+  "publisher": {
+    "name": "Homesick Texan",
+    "url": "https://www.homesicktexan.com"
   },
   "recipeYield": 8,
   "recipeIngredient": [
@@ -49,12 +53,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 57,
-    "ratingValue": 4.81
-  },
-  "publisher": {
-    "name": "Homesick Texan",
-    "url": "https://www.homesicktexan.com"
+    "ratingCount": 62,
+    "ratingValue": 4.83
   },
   "datePublished": "2007-03-19T13:25:00Z"
 }

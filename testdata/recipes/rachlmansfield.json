@@ -2,7 +2,7 @@
   "url": "https://rachlmansfield.com/healthy-flourless-brownies/",
   "name": "Healthy Flourless Brownies (nut-free + gluten-free)",
   "description": "Healthy Flourless Brownies made with all gluten-free, paleo, nut-free and dairy-free ingredients. No flour needed! These are the best FUDGEY brownies ever!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://rachlmansfield.com/wp-content/uploads/2019/12/B6984237-A840-46A7-93FD-417FAA609A78-scaled.jpg",
   "image": [
     {
@@ -16,11 +16,18 @@
     }
   ],
   "author": {
-    "name": "Rachel"
+    "name": "Rachel",
+    "url": "https://rachlmansfield.com/author/rachlmansfieldgmail-com/",
+    "image": "https://secure.gravatar.com/avatar/7fbfc6ae7c2a1719434b9eb4901ca203?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "rachLmansfield",
+    "description": "deliciously easy and healthy recipes made with just the good stuff",
+    "url": "https://rachlmansfield.com"
   },
   "prepTime": 5,
   "cookTime": 22,
-  "totalTime": 27606778,
+  "totalTime": 27949695,
   "recipeYield": 9,
   "recipeIngredient": [
     "1 cup tahini*",
@@ -59,11 +66,7 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 75,
+    "reviewCount": 77,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "rachLmansfield",
-    "url": "https://rachlmansfield.com"
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/",
   "name": "Vegan Brown Butter Peach Cobbler",
   "description": "A delicious twist on the classic Southern peach cobbler. Peaches and blueberries get swirled with vegan brown butter and cobbler, making for a cake that’s sticky and caramelized on the outside yet fluffy and tender on the inside. It’s truly the best vegan peach cobbler!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://rainbowplantlife.com/wp-content/uploads/2020/08/peachblueberrrycobbler287of1029-scaled.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Nisha Vora"
+    "name": "Nisha Vora",
+    "url": "https://rainbowplantlife.com/author/rainbowplantlife/",
+    "image": "https://secure.gravatar.com/avatar/f03e985d170be56c26a69b2a4dc9475e?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Rainbow Plant Life",
+    "description": "Master vegan cooking at home.",
+    "url": "https://rainbowplantlife.com",
+    "logo": "https://rainbowplantlife.com/wp-content/uploads/2021/08/RPL-Logo-SQUARE.png"
   },
   "prepTime": 35,
   "cookTime": 45,
@@ -44,20 +52,20 @@
   "recipeIngredient": [
     "1 pound (454g) ripe but relatively firm peaches",
     "1/2 cup (75-85g) fresh blueberries",
-    "1/3 cup (45g) coconut sugar (or brown sugar)",
+    "1/3 cup (45g) brown sugar or coconut sugar",
     "1 teaspoon ground cinnamon",
     "1/4 teaspoon nutmeg ((I recommend freshly grated nutmeg))",
     "Scant 1/2 teaspoon ground ginger",
     "2 pinches of ground cardamom ((optional))",
-    "10 tablespoons (140g) Country Crock Plant Butter",
+    "10 tablespoons (140g) vegan butter*",
     "1 1/2 cups (180g) all-purpose flour",
-    "Scant 2/3 cup ((60g) old-fashioned rolled oats)",
+    "Scant 2/3 cup (60g) (old-fashioned rolled oats)",
     "1 cup (200g) organic cane sugar",
     "1/4 - 1/2 teaspoon kosher salt",
     "2 teaspoons baking powder",
-    "1 1/3 cups (320 mL) full-fat oat milk (I used Oatly)",
+    "1 1/3 cups (320 mL) full-fat oat milk***",
     "1 1/2 teaspoons pure vanilla extract",
-    "1/4 - 1/2 teaspoon pure almond extract ((optional))",
+    "1/4 teaspoon pure almond extract ((optional))",
     "For serving: vegan vanilla ice cream ((optional))"
   ],
   "recipeInstructions": [
@@ -70,19 +78,19 @@
       "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/#wprm-recipe-5716-step-0-1"
     },
     {
-      "text": "Heat a skillet over medium heat, then add the Plant Butter. Once the butter is melted, stir it often and swirl the pan to ensure even browning and cooking, until it foams and then eventually browns. You might want to stand back to avoid splatter. The browning process should take 5-8 minutes. Take the browned butter off the heat and immediately pour brown into a 2-quart/2-liter baking pan. See note below on alternative pan sizes.*",
+      "text": "Brown the butter. Heat a large cast iron skillet (11- or 12-inch) over medium heat. Add the vegan butter to the pan, and use a spatula to spread it across the sides of the pan. Once it’s melted, foamy, and at a bubble (it should take 2 to 3 minutes), heat for another 2 minutes, stirring frequently to prevent burning, then take the pan off the heat.See note below on alternative pan sizes.**",
       "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/#wprm-recipe-5716-step-0-2"
     },
     {
-      "text": "In a medium or large bowl, combine the flour, oats, cane sugar, salt, and baking powder. Whisk in the oat milk and vanilla extract and almond extract (if using) until well combined. Using a ladle or measuring cup, ladle the batter on top of the brown butter. Ladling, instead of pouring all of the batter on top at once, helps the butter swirl and mix into batter. Top the cobbler with the peach-blueberry mixture.",
+      "text": "Make the cake. In a medium or large bowl, combine the flour, oats, cane sugar, salt, and baking powder. Whisk in the oat milk and vanilla extract and almond extract (if using) until well combined. Using a ladle or measuring cup, ladle the batter on top of the brown butter in the pan. Ladling, instead of pouring all of the batter on top at once, helps the butter swirl and mix into batter. Top the cobbler with the peach-blueberry mixture.",
       "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/#wprm-recipe-5716-step-0-3"
     },
     {
-      "text": "Bake the cobbler for 45-50 minutes, rotating the pan 180° halfway through to ensure even browning, until the top is deeply golden brown and bubbling. Mine took exactly 45 minutes.",
+      "text": "Bake the cobbler for 45-50 minutes, rotating the pan 180° halfway through to ensure even browning, until the top is deeply golden brown and bubbling.",
       "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/#wprm-recipe-5716-step-0-4"
     },
     {
-      "text": "Allow the cobbler to cool slightly before serving. Serve warm and, if desired, with vegan vanilla ice cream on top.",
+      "text": "Transfer to a wire rack to cool for 10 minutes, then serve warm. If desired, scoop some vegan vanilla ice cream on each slice before serving.",
       "url": "https://rainbowplantlife.com/vegan-brown-butter-peach-cobbler/#wprm-recipe-5716-step-0-5"
     }
   ],
@@ -100,8 +108,8 @@
     "unsaturatedFatContent": "7 g"
   },
   "aggregateRating": {
-    "ratingCount": 46,
-    "ratingValue": 4.96
+    "ratingCount": 58,
+    "ratingValue": 4.95
   },
   "video": {
     "name": "My FAVORITE Vegan Dessert for Summer 🍑",
@@ -111,10 +119,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=Uibd56mftvg",
     "thumbnailUrl": "https://i.ytimg.com/vi/Uibd56mftvg/hqdefault.jpg",
     "uploadDate": "2020-08-08T13:30:04Z"
-  },
-  "publisher": {
-    "name": "Rainbow Plant Life",
-    "url": "https://rainbowplantlife.com"
   },
   "datePublished": "2020-08-08T13:25:00Z"
 }

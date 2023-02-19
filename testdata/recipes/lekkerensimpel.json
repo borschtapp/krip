@@ -2,8 +2,14 @@
   "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/",
   "name": "Poké bowl met kip",
   "description": "Een heerlijke poké bowl met kip, avocado, peen julienne en edamame bonen. Een makkelijk gerecht dat in 30 minuten op tafel staat én waarmee je heel goed kunt variëren.",
-  "inLanguage": "nl_NL",
+  "inLanguage": "nl-NL",
   "thumbnailUrl": "https://www.lekkerensimpel.com/wp-content/uploads/2022/03/588A2370-1.jpg",
+  "publisher": {
+    "name": "Lekker en Simpel",
+    "description": "Elke dag weer nieuwe lekkere, snelle en simpele recepten op Lekker en Simpel.",
+    "url": "https://www.lekkerensimpel.com",
+    "logo": "https://www.lekkerensimpel.com/wp-content/uploads/2021/11/1041c.png"
+  },
   "cookTime": 35,
   "recipeCategory": [
     "Hoofdgerecht"
@@ -46,12 +52,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 8,
-    "ratingValue": 4.75
-  },
-  "publisher": {
-    "name": "Lekker en Simpel",
-    "url": "https://www.lekkerensimpel.com"
+    "ratingCount": 40,
+    "ratingValue": 4.66
   },
   "datePublished": "2022-03-08T06:00:00Z"
 }

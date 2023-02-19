@@ -1,4 +1,11 @@
 {
   "url": "https://www.woolworths.com.au/shop/recipes/asparagus-salad-with-lemon-vinaigrette",
-  "inLanguage": "en-AU"
+  "name": "Woolworths Supermarket - Buy Groceries Online",
+  "description": "Shop online at Woolworths for your groceries. We’re here to help you eat fresher \u0026 healthier food, 7 days a week with low prices always.",
+  "inLanguage": "en-AU",
+  "thumbnailUrl": "https://cdn1.woolworths.media/content/content/wk34-wow-wapple-logo-horizontal-1200x1200.png",
+  "publisher": {
+    "name": "Buy Groceries Online",
+    "url": "https://www.woolworths.com.au"
+  }
 }

@@ -6,22 +6,22 @@
       "url": "https://d2am1qai33sroc.cloudfront.net/image/59b8e92b950000261749a08c?kptnkey=6q7QNKy-oIgk-IMuWisJ-jfN7s6"
     }
   ],
-  "totalTime": 25,
-  "recipeYield": 2,
-  "recipeIngredient": [
-    "2 eggs",
-    "200 g cream cheese / curd cheese",
-    "salt",
-    "pepper",
-    "80 g cream cheese",
-    "60 g prosciutto",
-    "20 g arugula",
-    "160 g cherry tomatoes",
-    "1 tsp herbes de Provence, dried",
-    "0.5 tsp chili flake"
-  ],
   "publisher": {
     "name": "KptnCook",
     "url": "https://mobile.kptncook.com"
-  }
+  },
+  "totalTime": 25,
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "200 g curd cheese",
+    "salt",
+    "pepper",
+    "60 g prosciutto",
+    "160 g cherry tomatoes",
+    "1 tsp herbes de Provence, dried",
+    "0.5 tsp chili flake",
+    "20 g arugula",
+    "80 g cream cheese",
+    "2 eggs"
+  ]
 }

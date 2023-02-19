@@ -9,8 +9,9 @@
       "url": "https://images.matprat.no/dxgehtetqy"
     }
   ],
-  "author": {
-    "name": "MatPrat"
+  "publisher": {
+    "name": "MatPrat",
+    "url": "https://www.matprat.no"
   },
   "prepTime": 80,
   "cookTime": 80,
@@ -87,7 +88,14 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 101,
-    "ratingValue": 5
+    "ratingCount": 179,
+    "ratingValue": 4.76536312849162
+  },
+  "video": {
+    "name": "Butter Chicken - kjapt og greit! | MatPrat",
+    "description": "Butter chicken har blitt en folkefavoritt fra det indiske kjøkken. Se hvordan man lager den populære indiske retten av hel kylling og en deilig smørcurry. Deilige smaker og en forrykende god lukt, passer perfekt om du skal invitere til gjester. Server med blant annet naanbrød, basmatiris og raita. NAM! ➡️ Her finner du oppskriften: https://www.matprat.no/oppskrifter/gjester/butter-chicken---indisk-smorkylling/ ➡️ Her finner du oppskrift på hjemmelaget naanbrød: https://www.matprat.no/oppskrifter/kos/nanbrod/ ➡️ Se flere Kylling-oppskrifter: https://www.matprat.no/kylling/ Abonner på kanalen vår for nydelige oppskrifter og nyttige tips: https://goo.gl/beBt6i Følg oss gjerne i sosiale medier: Facebook | https://www.facebook.com/MatPrat Instagram | https://www.instagram.com/matprat.no Flere oppskrifter | https://www.matprat.no",
+    "contentUrl": "https://youtu.be/NwlfMV747vI",
+    "thumbnailUrl": "https://i.ytimg.com/vi/NwlfMV747vI/sddefault.jpg",
+    "uploadDate": "2021-09-22T11:00:20Z"
   }
 }

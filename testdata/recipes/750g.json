@@ -2,15 +2,19 @@
   "url": "https://www.750g.com/salade-de-carottes-cuites-et-crues-a-l-orange-r201936.htm",
   "name": "Salade de carottes cuites et crues à l'orange",
   "description": "La petite salade détox parfaite pour un déjeuner vitaminé au coeur de l'hiver",
-  "inLanguage": "fr_FR",
+  "inLanguage": "fr-FR",
   "thumbnailUrl": "https://static.750g.com/images/1200-630/72dcbbdc4c59e14ea2e93632904fc482/salade-de-carottes-cuites-et-crues-a-l-orange.jpg",
   "image": [
     {
-      "url": "https://static.750g.com/images/600-600/72dcbbdc4c59e14ea2e93632904fc482/salade-de-carottes-cuites-et-crues-a-l-orange.jpg"
+      "url": "https://static.750g.com/images/1200-675/72dcbbdc4c59e14ea2e93632904fc482/salade-de-carottes-cuites-et-crues-a-l-orange.jpg"
     }
   ],
   "author": {
     "name": "750g La Table"
+  },
+  "publisher": {
+    "name": "750g",
+    "url": "https://www.750g.com"
   },
   "prepTime": 20,
   "cookTime": 15,
@@ -38,25 +42,14 @@
   ],
   "recipeInstructions": [
     {
-      "text": "Étape 1: Cuisson des carottes Découpez les carottes en rondelles et faites-les revenir à feu moyen à l'huile d'olive avec les graines de coriandre grossièrement concassées."
+      "name": "Cuisson des carottes",
+      "text": "Découpez les carottes en rondelles et faites-les revenir à feu moyen à l'huile d'olive avec les graines de coriandre grossièrement concassées. Déglacez au jus d'orange. Ajoutez la branche de thym ainsi que l'assaisonnement. Laissez cuire avec un couvercle une dizaine de minutes puis laissez refroidir.",
+      "url": "https://www.750g.com/salade-de-carottes-cuites-et-crues-a-l-orange-r201936.htm#recipe-step1"
     },
     {
-      "text": "Déglacez au jus d'orange."
-    },
-    {
-      "text": "Ajoutez la branche de thym ainsi que l'assaisonnement."
-    },
-    {
-      "text": "Laissez cuire avec un couvercle une dizaine de minutes puis laissez refroidir. Étape 2: Préparation de la salade Râpez les carottes."
-    },
-    {
-      "text": "Dans un saladier, mélangez les carottes râpées, les carottes cuites, le fenouil et les oranges en cubes."
-    },
-    {
-      "text": "Ajoutez la vinaigrette et mélangez."
-    },
-    {
-      "text": "Ajoutez la coriandre ciselée et le piment d'espelette."
+      "name": "Préparation de la salade",
+      "text": "Râpez les carottes. Dans un saladier, mélangez les carottes râpées, les carottes cuites, le fenouil et les oranges en cubes. Ajoutez la vinaigrette et mélangez. Ajoutez la coriandre ciselée et le piment d'espelette.",
+      "url": "https://www.750g.com/salade-de-carottes-cuites-et-crues-a-l-orange-r201936.htm#recipe-step2"
     }
   ],
   "aggregateRating": {
@@ -65,9 +58,5 @@
     "ratingValue": 4,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "750g",
-    "url": "https://www.750g.com"
   }
 }

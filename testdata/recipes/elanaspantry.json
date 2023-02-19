@@ -2,7 +2,7 @@
   "url": "https://elanaspantry.com/granola/",
   "name": "Paleo Granola",
   "description": "Purely fruit sweetened Paleo Granola made with 7 ingredients --almonds, macadamia nuts, pumpkin seeds, raisins, vanilla, cinnamon and salt.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://elanaspantry.com/wp-content/uploads/2009/07/granola.jpg",
   "image": [
     {
@@ -14,6 +14,12 @@
   ],
   "author": {
     "name": "Elana"
+  },
+  "publisher": {
+    "name": "Elana's Pantry",
+    "description": "New York Times Bestselling author Elana Amsterdam founded Elana’s Pantry, the go-to website for easy, healthy, grain-free, Paleo recipes, in 2006",
+    "url": "https://elanaspantry.com",
+    "logo": "https://elanaspantry.com/wp-content/uploads/2019/07/Elanas-Pantry.png"
   },
   "prepTime": 15,
   "cookTime": 1440,
@@ -74,9 +80,5 @@
       "url": "https://elanaspantry.com/granola/#wprm-recipe-221571-step-0-10"
     }
   ],
-  "publisher": {
-    "name": "Elana's Pantry",
-    "url": "https://elanaspantry.com"
-  },
   "datePublished": "2007-09-11T13:27:33Z"
 }

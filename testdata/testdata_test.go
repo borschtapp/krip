@@ -13,19 +13,6 @@ import (
 	"github.com/borschtapp/krip/scraper"
 )
 
-func TestSingleWebsite(t *testing.T) {
-	t.Skip("Skip online tests")
-
-	// var website = "https://www.thepioneerwoman.com/food-cooking/recipes/a11059/restaurant-style-salsa/"
-	// recipe, err := ScrapeUrl(website)
-
-	var website = "kitchenstories"
-	recipe, err := krip.ScrapeFile(WebsitesDir + website + HtmlExt)
-	assert.NoError(t, err)
-
-	AssertJson(t, recipe, RecipesDir+website)
-}
-
 func TestTestdataWebsites(t *testing.T) {
 	MockRequests(t)
 	t.Parallel()

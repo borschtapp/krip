@@ -1,31 +1,36 @@
 {
   "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/",
   "name": "Baked Chicken and Spinach Flautas",
-  "description": "Baked flautas stuffed with seasoned, shredded chicken, spinach, and cheese are crispy, but don’t have the greasiness of fried versions. To shred poached chicken easily, put it into the bowl of a stand mixer fitted with the paddle attachment and mix on medium for 45 seconds. Store-bought rotisserie chicken can be substituted for the poached chicken to save time. You might also like Baked Buffalo Chicken Taquitos",
-  "inLanguage": "en_US",
+  "description": "Baked flautas stuffed with seasoned, shredded chicken, spinach, and cheese are crispy, but don’t have the greasiness of fried versions. To shred poached chicken easily, put it into the bowl of a stand mixer fitted with the paddle attachment and mix on medium for 45 seconds. Store-bought rotisserie chicken can be substituted for the poached chicken to save time. You might also like Buffalo Chicken Taquitos",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.healthy-delicious.com/wp-content/uploads/2012/03/flautas-1.jpg",
-  "image": [
-    {
-      "url": "https://www.healthy-delicious.com/wp-content/uploads/2018/11/chicken-and-spinach-flautas-2.jpg"
-    }
-  ],
   "author": {
-    "name": "Lauren Keating"
+    "name": "Lauren Keating",
+    "image": "https://www.healthy-delicious.com/wp-content/uploads/2018/12/cropped-cropped-healthy-delicious-logo-update-1-2.png"
+  },
+  "publisher": {
+    "name": "Healthy Delicious",
+    "url": "https://www.healthy-delicious.com",
+    "logo": "https://www.healthy-delicious.com/wp-content/uploads/2018/12/cropped-cropped-healthy-delicious-logo-update-1-2.png"
   },
   "prepTime": 15,
   "cookTime": 45,
   "totalTime": 60,
   "recipeCategory": [
-    "Healthy Weekend Recipes"
+    "Chicken Recipes"
   ],
   "recipeCuisine": [
-    "Southwest"
+    "Mexican"
+  ],
+  "keywords": [
+    "baked flautas",
+    "baked taquitos"
   ],
   "recipeYield": 10,
   "recipeIngredient": [
     "1 pound boneless (skinless Chicken Thighs (about 4))",
+    "16 ounces Beer or chicken broth",
     "2 cups Water",
-    "16 ounces Light Beer (or chicken broth)",
     "1 teaspoon Paprika",
     "1 teaspoon Kosher Salt",
     "1 teaspoon Garlic Powder",
@@ -33,52 +38,49 @@
     "1 teaspoon Chili Powder",
     "1 Jalapeno Pepper (minced)",
     "3 cups Baby Spinach (chopped)",
-    "5 9- inch Flour Tortillas",
-    "6 ounces Queso Quesadilla or other melting cheese (shredded)",
+    "5 burrito-size Flour Tortillas (9 inches)",
+    "6 ounces Quesadilla cheese or other soft cheese like Monterey jack (shredded)",
     "1 teaspoon Olive Oil (or cooking spray)",
     "Salsa (for serving)"
   ],
   "recipeInstructions": [
     {
-      "text": "Preheat the oven to 450*F.",
-      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-17596-step-0-0"
+      "text": "Preheat the oven to 450ºF.",
+      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-20624-step-0-0"
     },
     {
       "text": "Put the chicken thighs in a deep sided saute pan and cover with the beer and water. Bring to a boil, then reduce heat and simmer for 10 minutes. Remove the chicken from the liquid and shred it. Mix together the chicken and seasonings.",
-      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-17596-step-0-1"
+      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-20624-step-0-1"
     },
     {
       "text": "Pour out all but 1/4 cup of the cooking liquid. Add the jalapeno and spinach and cook over low heat until for 2-3 minutes, or until the spinach is wilted.",
-      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-17596-step-0-2"
+      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-20624-step-0-2"
     },
     {
       "text": "Cut the tortillas in half. Spoon 1/10th of the chicken (about 1 tablespoon) along the long edge of a tortilla. Repeat with the spinach and cheese. Roll the tortilla up, starting with the straight edge. Place seam-side down on an oiled baking sheet. Repeat with remaining tortillas.",
-      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-17596-step-0-3"
+      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-20624-step-0-3"
     },
     {
       "text": "Brush the flautas with olive oil or spray with cooking spray. Bake for 10 minutes, then turn them over and bake for until 10 minutes, or until crispy. Serve with salsa.",
-      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-17596-step-0-4"
+      "url": "https://www.healthy-delicious.com/baked-chicken-and-spinach-flautas/#wprm-recipe-20624-step-0-4"
     }
   ],
   "nutrition": {
-    "calories": "227 kcal",
-    "servingSize": "1 g",
-    "carbohydrateContent": "15 g",
-    "cholesterolContent": "72 mg",
-    "fatContent": "11 g",
+    "calories": "169 kcal",
+    "servingSize": "1 taquito",
+    "carbohydrateContent": "8 g",
+    "cholesterolContent": "47 mg",
+    "fatContent": "8 g",
     "fiberContent": "1 g",
-    "proteinContent": "18 g",
+    "proteinContent": "16 g",
     "saturatedFatContent": "4 g",
-    "sodiumContent": "577 mg",
-    "unsaturatedFatContent": "6 g"
+    "sodiumContent": "464 mg",
+    "sugarContent": "1 g",
+    "unsaturatedFatContent": "2 g"
   },
   "aggregateRating": {
-    "ratingCount": 33,
-    "ratingValue": 4.52
-  },
-  "publisher": {
-    "name": "Healthy Delicious",
-    "url": "https://www.healthy-delicious.com"
+    "ratingCount": 54,
+    "ratingValue": 4.93
   },
   "datePublished": "2012-03-08T18:04:42Z"
 }

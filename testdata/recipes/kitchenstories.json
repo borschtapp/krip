@@ -3,7 +3,7 @@
   "name": "Special strawberry jam with matcha",
   "description": "This recipe gives homemade strawberry jam an exciting update: Matcha!",
   "inLanguage": "en",
-  "thumbnailUrl": "https://images.services.kitchenstories.io/gJdwau5yL9s2g_Hcie1LFsIFlkM=/512x384/images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg",
+  "thumbnailUrl": "https://images.services.kitchenstories.io/YWjpgTNHrAlnkPynyjA333tIl7U=/512x384/filters:quality(90)/images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg",
   "image": [
     {
       "url": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg",
@@ -14,7 +14,7 @@
   "author": {
     "name": "Christian Ruß",
     "jobTitle": "Test Kitchen Manager and Chef",
-    "description": "cook free or die",
+    "description": "Kochen ist mein Leben. Ich bin Koch, Rezeptentwickler, Foodstylist, Culinary Content Creator und Video-Host. Mich treibt die Liebe zu gutem Essen jeden Tag an, um die Welt ein wenig leckerer zu machen.",
     "url": "http://instagram.com/deepfriedtiger",
     "image": "https://images.kitchenstories.io/userImages/87dbd547-fa83-4022-ba46-1d200c5d5655_11d840a9.jpg"
   },
@@ -105,8 +105,8 @@
     "proteinContent": "2 g"
   },
   "aggregateRating": {
-    "ratingCount": 2,
-    "ratingValue": 1,
+    "ratingCount": 4,
+    "ratingValue": 0.8125,
     "bestRating": 1
   },
   "commentCount": 11

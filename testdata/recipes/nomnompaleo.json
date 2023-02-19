@@ -1,8 +1,8 @@
 {
-  "url": "//nomnompaleo.com/pineapple-coleslaw",
+  "url": "https://nomnompaleo.com/pineapple-coleslaw",
   "name": "Pineapple Coleslaw",
   "description": "This tropical pineapple coleslaw combines crunchy shredded cabbage, juicy pineapple, salty macadamia nuts, and a mayo-free, Asian-inspired dressing. It’s the perfect soy-free, paleo, gluten-free, and Whole30 summer side dish for your favorite grilled main dishes!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://nomnompaleo.com/wp-content/uploads/2022/05/1200-Pineapple-Coleslaw-DSC_7021.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Michelle Tam"
+    "name": "Michelle Tam",
+    "image": "https://secure.gravatar.com/avatar/3143e0cc2e74aee996111e4d1112e42f?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Nom Nom Paleo®",
+    "description": "Paleo recipes and more from New York Times bestselling cookbook author Michelle Tam!",
+    "url": "https://nomnompaleo.com",
+    "logo": "https://nomnompaleo.com/wp-content/uploads/2019/05/NNP-LI-Logo2.jpg"
   },
   "prepTime": 15,
   "cookTime": 15,
@@ -88,8 +95,8 @@
     "sugarContent": "12 g"
   },
   "aggregateRating": {
-    "ratingCount": 16,
-    "ratingValue": 4.75
+    "ratingCount": 18,
+    "ratingValue": 4.78
   },
   "video": {
     "name": "Pineapple Coleslaw",
@@ -97,10 +104,6 @@
     "contentUrl": "https://content.jwplatform.com/videos/MMD6EGVu.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/MMD6EGVu-720.jpg",
     "uploadDate": "2022-05-30T20:33:13Z"
-  },
-  "publisher": {
-    "name": "Nom Nom Paleo®",
-    "url": "//nomnompaleo.com"
   },
   "datePublished": "2022-05-17T00:56:53Z"
 }

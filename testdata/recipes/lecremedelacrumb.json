@@ -2,7 +2,7 @@
   "url": "https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/",
   "name": "Instant Pot Shredded Chicken Tacos",
   "description": "These are the BEST Instant Pot Shredded Chicken Tacos, hands down. You'll love how quick, easy, and healthy this recipe is!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.lecremedelacrumb.com/wp-content/uploads/2019/01/instant-pot-shredded-chicken-tacos-3.jpg",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Tiffany"
+    "name": "Tiffany",
+    "description": "Hey there, I’m Tiffany - cook, photographer, mother, and avid taco eater. I am passionate about turning simple flavors and ingredients into tasty meals the whole family will love, with minimal prep and cleanup so there’s more time to spend eating and enjoying. Stay awhile, and help yourself to a taco or two."
+  },
+  "publisher": {
+    "name": "Creme De La Crumb",
+    "description": "Simple, tasty recipes for people who love good food.",
+    "url": "https://www.lecremedelacrumb.com",
+    "logo": "https://www.lecremedelacrumb.com/wp-content/uploads/2020/06/cc-bg-emerald-stacked.jpg"
   },
   "prepTime": 15,
   "cookTime": 20,
@@ -80,12 +87,8 @@
     "transFatContent": "1 g"
   },
   "aggregateRating": {
-    "ratingCount": 129,
-    "ratingValue": 4.87
-  },
-  "publisher": {
-    "name": "Creme De La Crumb",
-    "url": "https://www.lecremedelacrumb.com"
+    "ratingCount": 147,
+    "ratingValue": 4.83
   },
   "datePublished": "2019-01-11T07:00:28Z"
 }

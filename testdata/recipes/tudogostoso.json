@@ -2,7 +2,7 @@
   "url": "https://www.tudogostoso.com.br/receita/128825-caipirinha-original.html",
   "name": "Caipirinha - Original",
   "description": "Receita de Caipirinha - Original. Enviada por Daniela Belizario e demora apenas 5 minutos.",
-  "inLanguage": "pt-BR",
+  "inLanguage": "pt-br",
   "thumbnailUrl": "https://img.itdg.com.br/images/recipes/000/128/825/319875/319875_original.jpg",
   "image": [
     {
@@ -11,6 +11,10 @@
   ],
   "author": {
     "name": "Daniela Belizario"
+  },
+  "publisher": {
+    "name": "TudoGostoso",
+    "url": "https://www.tudogostoso.com.br"
   },
   "prepTime": 5,
   "totalTime": 5,
@@ -43,12 +47,8 @@
   ],
   "nutrition": {},
   "aggregateRating": {
-    "reviewCount": 19,
+    "reviewCount": 23,
     "ratingValue": 4.5,
     "bestRating": 5
-  },
-  "publisher": {
-    "name": "TudoGostoso",
-    "url": "https://www.tudogostoso.com.br"
   }
 }

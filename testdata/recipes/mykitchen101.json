@@ -1,11 +1,131 @@
 {
   "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/",
   "name": "古早味迷你烤鸡蛋糕",
-  "description": "古早味迷你烤鸡蛋糕，小孩的最爱。用简单的材料做出浓郁蛋香味的小蛋糕。 ENGLISH VERSION: Mini Baked Egg Sponge Cakes 古早味迷你烤鸡蛋糕 | 清闲厨房 分量：30 个 材料： 4 个 蛋 (A级) 125 克 细砂糖 ⅛ 茶匙 细盐 115 克 普通面粉 20 克 玉米淀粉 30 克 溶化牛油 做法： 1 把烤炉预热至200°C/395°F。 2 把…",
-  "inLanguage": "en_US",
+  "description": "古早味迷你烤鸡蛋糕是小孩的最爱。只需用简单的材料就能做出浓郁蛋香味的小蛋糕。这可爱的小蛋糕适合任何时刻和场合。",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cake-mykitchen101-feature1.jpg",
+  "image": [
+    {
+      "url": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cake-mykitchen101-feature.jpg"
+    }
+  ],
+  "author": {
+    "name": "清闲廚房 团队"
+  },
   "publisher": {
     "name": "清闲廚房",
     "url": "https://mykitchen101.com"
-  }
+  },
+  "prepTime": 30,
+  "cookTime": 25,
+  "totalTime": 55,
+  "recipeCategory": [
+    "mini cakes"
+  ],
+  "recipeCuisine": [
+    "Southeast Asia"
+  ],
+  "keywords": [
+    "烤鸡蛋糕",
+    "迷你烤鸡蛋糕"
+  ],
+  "recipeYield": 30,
+  "recipeIngredient": [
+    "4 个 蛋 (A级)",
+    "125 克 细砂糖",
+    "⅛ 茶匙 细盐",
+    "115 克 普通面粉",
+    "20 克 玉米淀粉",
+    "30 克 溶化牛油"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "预热烤炉",
+      "text": "把烤炉预热至200°C/395°F。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-0",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn1.jpg"
+    },
+    {
+      "name": "把蛋打散，加入盐和糖",
+      "text": "把蛋轻轻打散，加入盐和和糖，打至混合。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-1",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn2.jpg"
+    },
+    {
+      "name": "准备温水",
+      "text": "把1公升的清水和400毫升的热水(热水炉取出的热水)混合在比搅拌碗大的钢盆以调出约45°C/113°F的温水。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-2",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn3.jpg"
+    },
+    {
+      "name": "把蛋打至浓稠",
+      "text": "把搅拌碗浸泡在温水里，以中高速把蛋打至浓稠 (约5分钟)。(温馨提示：隔着温水打蛋糊可以缩短打发蛋糊的时间。)",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-3",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn4b.jpg"
+    },
+    {
+      "name": "把粉类过筛",
+      "text": "把普通面粉和玉米淀粉混合过筛2次。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-4",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn5.jpg"
+    },
+    {
+      "name": "拌入粉和牛油",
+      "text": "慢慢把粉类加入蛋糊里，以低速混合，再用刮刀翻拌至均匀。慢慢加入溶化牛油，用刮刀轻轻翻拌至混合。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-5",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn6.jpg"
+    },
+    {
+      "name": "倒入裱花袋",
+      "text": "把面糊倒入裱花袋里。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-6",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn7.jpg"
+    },
+    {
+      "name": "把面糊装入模具",
+      "text": "把迷你玛芬蛋糕模 (直径 = 4.8 cm，深 = 2.2 cm) 铺上杯子蛋糕纸托，装入面糊直到80%满。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-7",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn9a.jpg"
+    },
+    {
+      "name": "烘烤",
+      "text": "放入已预热的烤炉，以190°C/375°F 烘烤20-22分钟，直到呈金黄色。(温馨提示：不同烤炉的温度不一样，烘烤时间只供参考，可依个自的烤炉调整烘烤的时间。如果第一批烤24个蛋糕，第二批只有6个，那么第二批的烘烤时间可以缩短，只要蛋糕表面呈金黄色就可以了。)",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-8",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cakes-cn9b.jpg"
+    },
+    {
+      "name": "脱模 \u0026 冷却",
+      "text": "把鸡蛋糕脱模后放在铁架上至冷却。",
+      "url": "https://mykitchen101.com/%e5%8f%a4%e6%97%a9%e5%91%b3%e8%bf%b7%e4%bd%a0%e7%83%a4%e9%b8%a1%e8%9b%8b%e7%b3%95/#wprm-recipe-11896-step-0-9",
+      "image": "https://mykitchen101.com/wp-content/uploads/2020/11/mini-baked-egg-sponge-cake-mykitchen101-feature1.jpg"
+    }
+  ],
+  "nutrition": {
+    "calories": "48 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "8 g",
+    "cholesterolContent": "24 mg",
+    "fatContent": "1 g",
+    "fiberContent": "0.1 g",
+    "proteinContent": "1 g",
+    "saturatedFatContent": "1 g",
+    "sodiumContent": "25 mg",
+    "sugarContent": "4 g",
+    "transFatContent": "0.04 g",
+    "unsaturatedFatContent": "0.6 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 1,
+    "ratingValue": 5
+  },
+  "video": {
+    "name": "古早味迷你烤鸡蛋糕 (清闲厨房)",
+    "description": "古早味迷你烤鸡蛋糕, 小孩的最爱。用简单的材料做出浓郁蛋香味的小蛋糕。 打印和收藏食谱: https://wp.me/p7BssL-2BS 更多食谱視頻欢迎加入(清闲廚房) FB 粉丝团 https://www.facebook.com/mykitchen101 Canon in D Major by Kevin MacLeod is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/) Source: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100301 Artist: http://incompetech.com/",
+    "duration": "PT5M38S",
+    "embedUrl": "https://www.youtube.com/embed/2lh7OkeNM8E?feature=oembed",
+    "contentUrl": "https://www.youtube.com/watch?v=2lh7OkeNM8E",
+    "thumbnailUrl": "https://i.ytimg.com/vi/2lh7OkeNM8E/hqdefault.jpg",
+    "uploadDate": "2020-11-02T14:40:57Z"
+  },
+  "datePublished": "2020-11-02T14:36:46Z"
 }

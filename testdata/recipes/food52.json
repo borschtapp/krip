@@ -19,6 +19,11 @@
     "name": "Sohla El-Waylly",
     "url": "https://food52.com/users/2110239-sohla-el-waylly"
   },
+  "publisher": {
+    "name": "Food52",
+    "url": "https://food52.com",
+    "logo": "https://food52.com/assets/logo-food52.png"
+  },
   "prepTime": 1440,
   "cookTime": 80,
   "recipeCategory": [
@@ -79,9 +84,5 @@
     "ratingCount": 9,
     "ratingValue": 4.55555555555556
   },
-  "commentCount": 12,
-  "publisher": {
-    "name": "Food52",
-    "url": "https://food52.com"
-  }
+  "commentCount": 12
 }

@@ -2,8 +2,8 @@
   "url": "https://hostthetoast.com/homemade-garlic-naan/",
   "name": "Homemade Garlic Naan",
   "description": "Homemade Garlic Naan. Even if you've never made bread at home before, this soft, chewy, garlicky Indian flatbread is easy to make and well worth the effort.",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://hostthetoast.com/wp-content/uploads/2018/08/Homemade-Garlic-Naan-Featured.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://hostthetoast.com/wp-content/uploads/2018/08/naan-203-684x1024.jpg",
   "image": [
     {
       "url": "https://hostthetoast.com/wp-content/uploads/2018/08/naan-202-320x320-1-225x225.jpg"
@@ -19,7 +19,13 @@
     }
   ],
   "author": {
-    "name": "Morgan"
+    "name": "Morgan",
+    "image": "https://secure.gravatar.com/avatar/f4aaa10aa8ba7b48928e3c7e79fc0ea9?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Host The Toast",
+    "url": "https://hostthetoast.com",
+    "logo": "https://hostthetoast.com/wp-content/uploads/2017/03/HOST-THE-TOAST-horizontal-logo-and-tagline-transparent-FINAL.png"
   },
   "prepTime": 90,
   "cookTime": 45,
@@ -68,9 +74,5 @@
     "description": "Making homemade garlic naan is easier than you’d think, even for novice bakers! Make these with your favorite Indian dish for a delicious dinner.",
     "contentUrl": "https://content.jwplatform.com/videos/OzDO4Iog.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/OzDO4Iog-720.jpg"
-  },
-  "publisher": {
-    "name": "Host The Toast",
-    "url": "https://hostthetoast.com"
   }
 }

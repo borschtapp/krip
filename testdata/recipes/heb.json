@@ -12,6 +12,10 @@
   "author": {
     "name": "H-E-B"
   },
+  "publisher": {
+    "name": "H-E-B | No Store Does More",
+    "url": "https://www.heb.com"
+  },
   "prepTime": 20,
   "cookTime": 40,
   "totalTime": 60,
@@ -54,9 +58,5 @@
   "aggregateRating": {
     "reviewCount": 8,
     "ratingValue": 4.8
-  },
-  "publisher": {
-    "name": "H-E-B | No Store Does More",
-    "url": "https://www.heb.com"
   }
 }

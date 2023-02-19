@@ -2,7 +2,7 @@
   "url": "https://copykat.com/make-tender-beef-tips-in-gravy/",
   "name": "Make Tender Beef Tips and Gravy",
   "description": "You can make amazingly tender beef tips and gravy in an Instant Pot or slow cooker.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://copykat.com/wp-content/uploads/2020/11/Beef-Tips-and-Gravy-Pin2.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Stephanie Manley"
+    "name": "Stephanie Manley",
+    "description": "I recreate your favorite restaurant recipes, so you can prepare these dishes at home. I help you cook dinner, and serve up dishes you know your family will love. You can find most of the ingredients for all of the recipes in your local grocery store. Stephanie is the author of CopyKat.com's Dining Out in the Home, and CopyKat.com's Dining Out in the Home 2.",
+    "url": "https://copykat.com/author/admin/"
+  },
+  "publisher": {
+    "name": "CopyKat Recipes",
+    "description": "You have loved that recipe in the restaurant, now make that recipe at home.",
+    "url": "https://copykat.com",
+    "logo": "https://copykat.com/wp-content/uploads/2022/10/CopyKat-CK-Logo-500px.jpg"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -113,10 +121,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=gBuDCW4qakg",
     "thumbnailUrl": "https://i.ytimg.com/vi/gBuDCW4qakg/hqdefault.jpg",
     "uploadDate": "2016-05-25T16:30:00Z"
-  },
-  "publisher": {
-    "name": "CopyKat Recipes",
-    "url": "https://copykat.com"
   },
   "datePublished": "2020-12-05T12:26:34Z"
 }

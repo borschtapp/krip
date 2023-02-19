@@ -2,7 +2,7 @@
   "url": "https://www.bowlofdelicious.com/six-minute-seared-ahi-tuna-steaks/",
   "name": "Six-Minute Seared Ahi Tuna Steaks",
   "description": "These seared ahi tuna steaks take only 6 minutes to make- they're healthy, crispy and seared on the outside, and medium-rare on the inside, and bursting with umami flavor!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.bowlofdelicious.com/wp-content/uploads/2019/09/Ahi-Tuna-Steaks-square.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Elizabeth Lindemann"
+    "name": "Elizabeth Lindemann",
+    "description": "Hi, I'm Elizabeth! I create easy, real food recipes for busy people. I'm a former high school art teacher from New England, now full time food blogger near Austin, TX, where I live with my hubby and two baby girls, Zoey and Eleanor.",
+    "url": "https://www.bowlofdelicious.com/author/evetlingmail-com/"
+  },
+  "publisher": {
+    "name": "Bowl of Delicious",
+    "description": "Real Food for Busy People",
+    "url": "https://www.bowlofdelicious.com",
+    "logo": "https://www.bowlofdelicious.com/wp-content/uploads/2021/10/alternate-logo-square-cropped-yoast.jpg"
   },
   "prepTime": 1,
   "cookTime": 5,
@@ -62,7 +70,7 @@
       "url": "https://www.bowlofdelicious.com/six-minute-seared-ahi-tuna-steaks/#wprm-recipe-7627-step-0-3"
     },
     {
-      "text": "Remove to a cutting board and allow to rest for at least 3 minutes. Slice into 1/2 inch slices and serve garnished with green onions, toasted sesame seeds, and a squeeze of fresh lime juice, if desired.",
+      "text": "Remove to a cutting board. Slice into 1/2 inch slices and serve garnished with green onions, toasted sesame seeds, and a squeeze of fresh lime juice, if desired.",
       "url": "https://www.bowlofdelicious.com/six-minute-seared-ahi-tuna-steaks/#wprm-recipe-7627-step-0-4"
     }
   ],
@@ -79,12 +87,8 @@
     "sugarContent": "9 g"
   },
   "aggregateRating": {
-    "ratingCount": 1139,
-    "ratingValue": 4.96
-  },
-  "publisher": {
-    "name": "Bowl of Delicious",
-    "url": "https://www.bowlofdelicious.com"
+    "ratingCount": 1381,
+    "ratingValue": 4.97
   },
   "datePublished": "2019-09-16T08:44:00Z"
 }

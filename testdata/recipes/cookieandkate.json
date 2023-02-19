@@ -2,7 +2,7 @@
   "url": "https://cookieandkate.com/broccoli-cheddar-spinach-frittata/",
   "name": "Broccoli, Cheddar \u0026 Spinach Frittata",
   "description": "This spinach, broccoli and cheddar frittata recipe is a simple breakfast, brunch or dinner! It's vegetarian and gluten free. Recipe yields 6 large or 8 more modest slices.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://cookieandkate.com/images/2017/02/spinach-broccoli-cheddar-frittata-recipe-1.jpg",
   "image": [
     {
@@ -18,6 +18,16 @@
       "url": "https://cookieandkate.com/images/2017/02/broccoli-cheddar-frittata.jpg"
     }
   ],
+  "author": {
+    "name": "Kate",
+    "description": "Vegetable enthusiast. Dog lover. I'm probably making a big mess in my Kansas City kitchen right now. More about me »"
+  },
+  "publisher": {
+    "name": "Cookie and Kate",
+    "description": "Whole Foods and Vegetarian Recipe Blog",
+    "url": "https://cookieandkate.com",
+    "logo": "https://cookieandkate.com/images/2017/04/header-google.jpg"
+  },
   "prepTime": 15,
   "cookTime": 25,
   "totalTime": 40,
@@ -82,11 +92,7 @@
     "transFatContent": "0 g"
   },
   "aggregateRating": {
-    "reviewCount": 58,
+    "reviewCount": 59,
     "ratingValue": 4.9
-  },
-  "publisher": {
-    "name": "Cookie and Kate",
-    "url": "https://cookieandkate.com"
   }
 }

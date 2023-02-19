@@ -2,10 +2,15 @@
   "url": "https://steamykitchen.com/56719-instant-pot-vietnamese-chicken-pho.html",
   "name": "Instant Pot Vietnamese Chicken Pho",
   "description": "This Vietnamese Chicken Pho is the definition of a cozy and comforting meal. In less than 1 hour you will have a nourishing bowl of warm noodle soup!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://steamykitchen.com/wp-content/uploads/2020/12/INSTANT-POT-CHICKEN-PHO-.png",
   "author": {
     "name": "Steamy Kitchen Team"
+  },
+  "publisher": {
+    "name": "Steamy Kitchen Recipes Giveaways",
+    "url": "https://steamykitchen.com",
+    "logo": "https://steamykitchen.com/wp-content/uploads/2014/10/SK-logo-100514-JERF1.jpg"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -90,9 +95,5 @@
       ]
     }
   ],
-  "publisher": {
-    "name": "Steamy Kitchen Recipes Giveaways",
-    "url": "https://steamykitchen.com"
-  },
   "datePublished": "2020-12-11T11:17:06Z"
 }

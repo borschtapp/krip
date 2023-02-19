@@ -2,7 +2,7 @@
   "url": "https://www.budgetbytes.com/creamy-coconut-curry-lentils-with-spinach/",
   "name": "Creamy Coconut Curry Lentils with Spinach",
   "description": "These rich, creamy, and earthy Coconut Curry Lentils are an easy and delicious vegan option for dinner or weekly meal prep!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.budgetbytes.com/wp-content/uploads/2019/07/Creamy-Coconut-Curry-Lentils-with-Spinach-dip-naan.jpg",
   "image": [
     {
@@ -16,7 +16,16 @@
     }
   ],
   "author": {
-    "name": "Beth - Budget Bytes"
+    "name": "Beth - Budget Bytes",
+    "description": "I’m a food lover, number cruncher, and meticulous budgeter. I love science and art, and the way they come together when I cook. I love to create, problem solve, and learn new things. Making great food is my passion, my purpose, and my favorite thing to share with others.",
+    "url": "https://www.budgetbytes.com/author/beth/",
+    "image": "https://www.budgetbytes.com/wp-content/uploads/2022/07/Beth-2022-3-96x96.jpg"
+  },
+  "publisher": {
+    "name": "Budget Bytes",
+    "description": "Delicious Recipes Designed for Small Budgets",
+    "url": "https://www.budgetbytes.com",
+    "logo": "https://www.budgetbytes.com/wp-content/uploads/2020/11/budgetbytes_square_icon_transparent.png"
   },
   "prepTime": 5,
   "cookTime": 40,
@@ -83,20 +92,17 @@
     "sodiumContent": "844.08 mg"
   },
   "aggregateRating": {
-    "ratingCount": 88,
+    "ratingCount": 94,
     "ratingValue": 4.97
   },
   "video": {
     "name": "Creamy Coconut Curry Lentils with Spinach",
     "description": "These rich, creamy, and earthy Coconut Curry Lentils are an easy and delicious vegan option for dinner or weekly meal prep!",
     "duration": "PT61S",
-    "contentUrl": "https://embed.mediavine.com/videos/cszu5igarnurncpmbfcm",
+    "embedUrl": "https://video.mediavine.com/videos/cszu5igarnurncpmbfcm.js",
+    "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1569265779/cszu5igarnurncpmbfcm.mp4",
     "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--z9Eq5SXb--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1569265813/btmkatyr4rja3wjjfb5k.jpg",
     "uploadDate": "2019-09-23T19:09:57Z"
-  },
-  "publisher": {
-    "name": "Budget Bytes",
-    "url": "https://www.budgetbytes.com"
   },
   "datePublished": "2019-07-13T19:00:50Z"
 }

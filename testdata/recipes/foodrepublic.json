@@ -2,13 +2,18 @@
   "url": "https://www.foodrepublic.com/recipes/dutch-white-asparagus-recipe/",
   "name": "Dutch White Asparagus Recipe",
   "description": "[related-posts]One of the great things about spring menus is all the tender, fresh green vegetable dishes. Longstanding Midtown dining spot Michael's New York, owned by restaurateur Michael McCarty, boasts a Dutch recipe we had to try: citrus-steamed Dutch white asparagus (they actually do a mix of white and green) with a wine-spiked butter sauce, a runny poached egg and a little Parmesan cheese. A little prosciutto never hurt anyone, either.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.foodrepublic.com/wp-content/uploads/2013/04/dutchasparagus-1024x680.jpg",
   "image": [
     {
       "url": "https://www.foodrepublic.com/wp-content/uploads/2013/04/dutchasparagus-700x465.jpg"
     }
   ],
+  "publisher": {
+    "name": "Food Republic",
+    "description": "Great recipes and stories on food, drink and travel",
+    "url": "https://www.foodrepublic.com"
+  },
   "recipeYield": 4,
   "recipeIngredient": [
     "12 spears Dutch white asparagus",
@@ -50,9 +55,5 @@
       "text": "Spring Asparagus Soup Recipe Goat Cheese And Asparagus Macaroni Salad Recipe Roasted Asparagus \u0026 Scrambled Eggs Recipe"
     }
   ],
-  "publisher": {
-    "name": "Food Republic",
-    "url": "https://www.foodrepublic.com"
-  },
   "datePublished": "2013-04-16T16:01:24-04:00"
 }

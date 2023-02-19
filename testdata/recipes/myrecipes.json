@@ -15,6 +15,10 @@
   "author": {
     "name": "Adam Dolge"
   },
+  "publisher": {
+    "name": "MyRecipes",
+    "url": "https://www.myrecipes.com"
+  },
   "totalTime": 20,
   "recipeYield": 2,
   "recipeIngredient": [
@@ -39,8 +43,8 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 2,
-    "ratingCount": 2,
+    "reviewCount": 3,
+    "ratingCount": 3,
     "ratingValue": 3,
     "bestRating": 5,
     "worstRating": 1
@@ -52,10 +56,6 @@
     "embedUrl": "https://players.brightcove.net/429048911/default_default/index.html?videoId=5717766046001",
     "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2018%2F01%2F25%2F429048911_5717773334001_5717766046001-vs.jpg",
     "uploadDate": "2018-01-23T20:31:25.602Z"
-  },
-  "publisher": {
-    "name": "MyRecipes",
-    "url": "https://www.myrecipes.com"
   },
   "datePublished": "2018-01-25T16:47:55Z"
 }

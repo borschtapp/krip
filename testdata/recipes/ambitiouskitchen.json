@@ -2,24 +2,32 @@
   "url": "https://www.ambitiouskitchen.com/vegetarian-spinach-pumpkin-lasagna/",
   "name": "Vegetarian Spinach Pumpkin Lasagna",
   "description": "Incredible vegetarian spinach pumpkin lasagna with layers of melty cheese and pumpkin flavors. This healthy pumpkin lasagna recipe has a full bag of spinach for extra veggies and makes the best freezer-friendly dinner!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.ambitiouskitchen.com/wp-content/uploads/2019/10/Vegetarian-Spinach-Pumpkin-Lasagna-5.jpg",
   "image": [
     {
       "url": "https://www.ambitiouskitchen.com/wp-content/uploads/2019/10/Vegetarian-Spinach-Pumpkin-Lasagna-5sq.jpg"
     },
     {
-      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/2019/10/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-500x500.jpg"
+      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/fly-images/37172/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-500x500-c.jpg"
     },
     {
-      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/2019/10/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-500x375.jpg"
+      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/fly-images/37172/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-500x375-c.jpg"
     },
     {
-      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/2019/10/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-480x270.jpg"
+      "url": "https://www.ambitiouskitchen.com/wp-content/uploads/fly-images/37172/Vegetarian-Spinach-Pumpkin-Lasagna-5sq-480x270-c.jpg"
     }
   ],
   "author": {
-    "name": "Monique of AmbitiousKitchen.com"
+    "name": "Monique of AmbitiousKitchen.com",
+    "url": "https://www.ambitiouskitchen.com/author/admin/",
+    "image": "https://secure.gravatar.com/avatar/6f70016c0e4f37df52313a8b264d620f?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Ambitious Kitchen",
+    "description": "Inspiring you in and out of the kitchen",
+    "url": "https://www.ambitiouskitchen.com",
+    "logo": "https://www.ambitiouskitchen.com/wp-content/uploads/2020/05/AK-for-small-sizes.png"
   },
   "prepTime": 30,
   "cookTime": 40,
@@ -108,12 +116,8 @@
     "sugarContent": "4 g"
   },
   "aggregateRating": {
-    "ratingCount": 45,
+    "ratingCount": 53,
     "ratingValue": 4.85
-  },
-  "publisher": {
-    "name": "Ambitious Kitchen",
-    "url": "https://www.ambitiouskitchen.com"
   },
   "datePublished": "2019-10-14T19:14:24Z"
 }

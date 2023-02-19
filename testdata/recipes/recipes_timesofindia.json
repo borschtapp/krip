@@ -12,6 +12,11 @@
   "author": {
     "name": "TNN"
   },
+  "publisher": {
+    "name": "Times Food",
+    "url": "https://recipes.timesofindia.com",
+    "logo": "https://static.toiimg.com/thumb/65949362.cms?width=600\u0026height=60"
+  },
   "prepTime": 15,
   "totalTime": 35,
   "recipeCategory": [

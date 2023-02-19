@@ -2,7 +2,7 @@
   "url": "https://www.bodybuilding.com/recipes/spicy-beans-and-rice",
   "name": "Spicy Beans and Rice",
   "description": "This one-dish meal has it all—flavorful wild rice, protein-rich beans, heart-healthy vegetables, and just the perfect amount of spice to make you come back for more every time. This dish is also quick and easy to prepare, making it ideal for those who just don't have time to dedicate hours to preparing lunch or dinner.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "image": [
     {
       "url": "https://www.bodybuilding.com/images/2021/october/spicy-beans-and-rice-header-960x540.jpg"
@@ -13,6 +13,11 @@
   ],
   "author": {
     "name": "Shannon Clark"
+  },
+  "publisher": {
+    "name": "Bodybuilding.com",
+    "url": "https://www.bodybuilding.com",
+    "logo": "https://www.bodybuilding.com/images/icons/bb-logo-clean.png"
   },
   "prepTime": 15,
   "cookTime": 60,
@@ -73,10 +78,5 @@
     "carbohydrateContent": "51 g",
     "fatContent": "10 g",
     "proteinContent": "14 g"
-  },
-  "publisher": {
-    "name": "Bodybuilding.com",
-    "url": "https://www.bodybuilding.com",
-    "logo": "https://www.bodybuilding.com/images/icons/bb-logo-clean.png"
   }
 }

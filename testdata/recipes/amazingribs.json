@@ -2,7 +2,7 @@
   "url": "https://amazingribs.com/tested-recipes/sausage-recipes/texas-hot-guts-smoked-sausage/",
   "name": "Texas Hot Guts Recipe",
   "description": "In the Lone Star state, smoked sausage is as central to barbecue as brisket. There is no standard recipe, but natural casing (the guts) always hold the ground meat mixture. My favorite blend leans more on pork than beef and includes lots of black pepper. IMPORTANT: Before you get started, read our article on The Science of Sausage Making.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://amazingribs.com/wp-content/uploads/2020/10/hot-guts-open.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Christine Bucher"
+    "name": "meathead",
+    "image": "https://secure.gravatar.com/avatar/efa6de870f04013db341fdba6f8e008a?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Meathead's AmazingRibs.com",
+    "description": "The Science \u0026 Art Of BBQ \u0026 Grilling Since 2005",
+    "url": "https://amazingribs.com",
+    "logo": "https://amazingribs.com/wp-content/uploads/2022/11/ARC-logo.png"
   },
   "prepTime": 45,
   "cookTime": 120,
@@ -64,12 +71,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 72,
-    "ratingValue": 4.09
-  },
-  "publisher": {
-    "name": "Meathead's AmazingRibs.com",
-    "url": "https://amazingribs.com"
+    "ratingCount": 93,
+    "ratingValue": 4.14
   },
   "datePublished": "2020-02-10T15:51:00Z"
 }

@@ -2,7 +2,7 @@
   "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/",
   "name": "Chicken Taquitos",
   "description": "These easy Baked Chicken Taquitos are stuffed with chicken and cheese and make a great appetizer or meal. These homemade taquitos are a family favorite! Plus, learn how to make taquitos you can freeze for later!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1.jpg",
   "image": [
     {
@@ -16,7 +16,16 @@
     }
   ],
   "author": {
-    "name": "Maria Lichty"
+    "name": "Maria Lichty",
+    "description": "I'm Maria and my husband is Josh. We share a love of cooking, baking, and entertaining. We enjoy creating recipes that are simple, fresh, and family friendly. We love sitting around the table with good food, good conversation, and good friends and family! Our kitchen is always open! Read More",
+    "url": "https://www.twopeasandtheirpod.com/author/twopeas/",
+    "image": "https://secure.gravatar.com/avatar/81588ba3dfde9527d94981a5b505b028?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Two Peas \u0026 Their Pod",
+    "description": "Our kitchen is always open!",
+    "url": "https://www.twopeasandtheirpod.com",
+    "logo": "https://www.twopeasandtheirpod.com/wp-content/uploads/2020/05/two-peas-and-their-pod-logo-1.jpg"
   },
   "prepTime": 15,
   "cookTime": 25,
@@ -82,12 +91,8 @@
     "sodiumContent": "123 mg"
   },
   "aggregateRating": {
-    "ratingCount": 81,
+    "ratingCount": 96,
     "ratingValue": 4.71
-  },
-  "publisher": {
-    "name": "Two Peas \u0026 Their Pod",
-    "url": "https://www.twopeasandtheirpod.com"
   },
   "datePublished": "2022-02-01T07:00:00Z"
 }

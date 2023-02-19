@@ -2,7 +2,7 @@
   "url": "https://madensverden.dk/trifli-med-rabarber/",
   "name": "Rabarbertrifli",
   "description": "Rabarbertrifli er en populær dessert, der laves med knuste makroner og flødeskum. Den lækre trifli med rabarber kan laves god tid i forvejen.",
-  "inLanguage": "da_DK",
+  "inLanguage": "da-DK",
   "thumbnailUrl": "https://madensverden.dk/wp-content/uploads/2017/08/billederesultat-for-rabarbertrifli.jpg",
   "image": [
     {
@@ -16,7 +16,16 @@
     }
   ],
   "author": {
-    "name": "Holger Rørby Madsen"
+    "name": "Holger Rørby Madsen",
+    "jobTitle": "Ejer",
+    "description": "Jeg hedder Holger, og er manden bag Madens Verden. Med omkring 2 mio. brugere hver måned er madensverden.dk et af Danmarks største madmedier, og her får du tusindvis af opskrifter, masser af viden om mad og råvarer, bageskole, alt om sous vide og meget mere. God fornøjelse, og husk du altid er velkommen til at skrive, hvis du har spørgsmål.",
+    "image": "https://secure.gravatar.com/avatar/b5a662a1d102c2e0b934e247b9d7c8b9?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Madens Verden",
+    "description": "Opskrifter og viden om mad.",
+    "url": "https://madensverden.dk",
+    "logo": "https://madensverden.dk/wp-content/uploads/2021/11/logo-circle.jpg"
   },
   "prepTime": 15,
   "cookTime": 15,
@@ -78,12 +87,8 @@
     "servingSize": "1 person"
   },
   "aggregateRating": {
-    "ratingCount": 24,
-    "ratingValue": 4.75
-  },
-  "publisher": {
-    "name": "Madens Verden",
-    "url": "https://madensverden.dk"
+    "ratingCount": 26,
+    "ratingValue": 4.77
   },
   "datePublished": "2022-05-18T04:50:00Z"
 }

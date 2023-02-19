@@ -2,7 +2,7 @@
   "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/",
   "name": "One-Pan Roasted Chicken, Broccoli \u0026 Sweet Potatoes + Meal Prep",
   "description": "Healthy one-pan chicken, sweet potatoes, and broccoli oven-roasted to perfection! This quick one-pan dish is packed full of flavor and is GREAT for meal prepping too!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://gimmedelicious.com/wp-content/uploads/2020/02/Healthy-Sheet-Pan-Chicken-Sweet-Potato-and-Broccoli-11.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Layla"
+    "name": "Layla",
+    "url": "https://gimmedelicious.com/author/laylaatikgmail-com/",
+    "image": "https://secure.gravatar.com/avatar/69455460fb3e478fdd1523524376161c?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Gimme Delicious",
+    "description": "Making Healthy Cooking Fun and Easy",
+    "url": "https://gimmedelicious.com"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -84,8 +91,8 @@
     "sugarContent": "8 g"
   },
   "aggregateRating": {
-    "ratingCount": 20,
-    "ratingValue": 4.85
+    "ratingCount": 23,
+    "ratingValue": 4.87
   },
   "video": {
     "name": "Sheet Pan Roasted Chicken, Sweet Potatoes, \u0026 Broccoli + Meal Prep",
@@ -95,10 +102,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=u7qA2OtB6uk",
     "thumbnailUrl": "https://i.ytimg.com/vi/u7qA2OtB6uk/hqdefault.jpg",
     "uploadDate": "2020-02-07T20:23:26Z"
-  },
-  "publisher": {
-    "name": "Gimme Delicious",
-    "url": "https://gimmedelicious.com"
   },
   "datePublished": "2020-02-06T23:21:08Z"
 }

@@ -2,17 +2,36 @@
   "url": "https://www.delish.com/cooking/recipe-ideas/recipes/a56732/pumpkin-cheesecake-roll-recipe/",
   "name": "Pumpkin Cheesecake Roll",
   "description": "Master the art of the Pumpkin Roll with this easy recipe.",
-  "inLanguage": "en-US",
-  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=0.668xw:1.00xh;0.282xw,0\u0026resize=100:*",
+  "inLanguage": "en-us",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=0.668xw:1.00xh;0.282xw,0\u0026resize=100:*",
   "image": [
     {
-      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg",
-      "width": 1900,
-      "height": 1267
+      "url": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=0.668xw:1.00xh;0.282xw,0\u0026resize=1200:*",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=0.8891228070175439xw:1xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=1xw:0.8435280189423836xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 675
     }
   ],
   "author": {
-    "name": "Lena Abraham"
+    "name": "Lena Abraham",
+    "jobTitle": "Contributor",
+    "description": "Lena Abraham is a freelance contributor with Delish, and was formerly Senior Food Editor, where she developed and styled recipes for video and photo, and also stayed on top of current food trends. She’s been working in the food industry for over 10 years, and will argue that the best fish tacos in the world are made in New York. Don’t @ her.",
+    "url": "https://www.delish.com/author/17077/lena-abraham/",
+    "image": "https://hips.hearstapps.com/rover/profile_photos/846121db-9644-42e0-a4fd-cf5d105bfdf9_1576786748.file"
+  },
+  "publisher": {
+    "name": "Delish",
+    "url": "https://www.delish.com",
+    "logo": "https://www.delish.com/_assets/design-tokens/delish/static/images/logos/logo-jsonld.1396ea2.png"
   },
   "prepTime": 30,
   "totalTime": 60,
@@ -66,8 +85,8 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 10,
-    "ratingValue": 4.2,
+    "reviewCount": 11,
+    "ratingValue": 4.2727275,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -75,16 +94,9 @@
     "name": "Impress Your Friends With This Amazing Pumpkin Roll",
     "description": "#spiralgoals",
     "duration": "PT1M2S",
-    "embedUrl": "https://glimmer.hearstapps.com/?id=8b0f5859-eec8-48b1-bad2-7230d6ce3830",
+    "embedUrl": "https://glimmer.hearstapps.com/amp.html?embedId=8b0f5859-eec8-48b1-bad2-7230d6ce3830",
     "contentUrl": "https://streaming.hearstdigitalstudios.com/df12ad5f-a0a9-44c6-ab62-022a0035c779/video_rover_16x9_1080p_hd_1567108334_55553.mp4",
-    "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0047-landscape-pf-1567187755.jpg",
-    "uploadDate": "2017-11-15T23:13:02.688285Z"
-  },
-  "publisher": {
-    "name": "Delish",
-    "url": "https://www.delish.com/",
-    "logo": "https://assets.hearstapps.com/sites/delish/assets/images/logos/logo-jsonld.58eed96.png"
-  },
-  "dateModified": "2021-08-02T19:31:00Z",
-  "datePublished": "2017-11-16T15:15:00Z"
+    "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=1xw:0.8435280189423836xh;center,top",
+    "uploadDate": "2018-03-13T21:44:33.130566Z"
+  }
 }

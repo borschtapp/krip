@@ -2,7 +2,7 @@
   "url": "https://thenutritiouskitchen.co/healthy-fig-pecan-crumble-bars/",
   "name": "Healthy Fig Pecan Crumble Bars",
   "description": "Healthy fig pecan crumble bars made vegan, grain free, paleo and low in added sugar! Simple ingredients and a delicious treat for fig season!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://thenutritiouskitchen.co/wp-content/uploads/2020/09/figpecanbars-10-of-17.jpg",
   "image": [
     {
@@ -15,6 +15,11 @@
       "url": "https://thenutritiouskitchen.co/wp-content/uploads/2020/09/figpecanbars-10-of-17-320x180.jpg"
     }
   ],
+  "publisher": {
+    "name": "The Nutritious Kitchen",
+    "url": "https://thenutritiouskitchen.co",
+    "logo": "https://thenutritiouskitchen.co/wp-content/uploads/2019/10/The-Nutritious-Kitchen-Logo-1.png"
+  },
   "prepTime": 10,
   "cookTime": 25,
   "totalTime": 35,
@@ -77,8 +82,8 @@
       "url": "https://thenutritiouskitchen.co/healthy-fig-pecan-crumble-bars/#instruction-step-7"
     }
   ],
-  "publisher": {
-    "name": "The Nutritious Kitchen",
-    "url": "https://thenutritiouskitchen.co"
+  "aggregateRating": {
+    "reviewCount": 2,
+    "ratingValue": 5
   }
 }

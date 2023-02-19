@@ -2,8 +2,7 @@
   "url": "https://www.simplywhisked.com/buffalo-chicken-chili/",
   "name": "Buffalo Chicken Chili",
   "description": "This buffalo chicken chili is a hearty, go-to meal that can be ready pretty quickly. The buffalo flavor is the perfect amount of spicy. Make this for your next football game, everyone will love it!",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1.jpg",
+  "inLanguage": "en-US",
   "image": [
     {
       "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1-225x225.jpg"
@@ -13,11 +12,20 @@
     },
     {
       "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1-320x180.jpg"
+    },
+    {
+      "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1.jpg"
     }
   ],
   "author": {
     "name": "Melissa Belanger",
-    "url": "http://Melissa%20Belanger"
+    "image": "https://secure.gravatar.com/avatar/ec052bce28b2db5163f58eed82302dcc?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Simply Whisked",
+    "description": "Dairy Free Recipes",
+    "url": "https://www.simplywhisked.com",
+    "logo": "https://www.simplywhisked.com/wp-content/uploads/2023/01/new-logo-2.png"
   },
   "prepTime": 15,
   "cookTime": 30,
@@ -94,9 +102,5 @@
   "aggregateRating": {
     "reviewCount": 1,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Simply Whisked",
-    "url": "https://www.simplywhisked.com"
   }
 }

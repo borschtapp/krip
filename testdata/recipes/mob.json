@@ -2,13 +2,13 @@
   "url": "https://www.mob.co.uk/recipes/chilli-cheese-paratha",
   "name": "Chilli Cheese Paratha",
   "description": "This Indian snack is oozing with molten cheese and chilli garlicky goodness. They will be demolished in seconds, I can promise you that. Seema x",
-  "inLanguage": "en_GB",
+  "inLanguage": "en-GB",
   "thumbnailUrl": "https://mobkitchen-objects.imgix.net/recipes/9K8A6392-2.jpg?auto=format\u0026crop=focalpoint\u0026domain=mobkitchen-objects.imgix.net\u0026fit=crop\u0026fp-x=0.5\u0026fp-y=0.5\u0026h=630\u0026ixlib=php-3.3.1\u0026q=82\u0026w=1200\u0026s=ee498c44c0fcb1398bed0dcedbd4feb6",
-  "image": [
-    {
-      "url": "https://mobkitchen-objects.imgix.net/recipes/9K8A6392-2.jpg?auto=format\u0026crop=focalpoint\u0026domain=mobkitchen-objects.imgix.net\u0026fit=crop\u0026fp-x=0.5\u0026fp-y=0.5\u0026h=827\u0026ixlib=php-3.3.1\u0026q=82\u0026w=1300\u0026s=412bb43eb2623e3afb2bebc5cc73b572"
-    }
-  ],
+  "publisher": {
+    "name": "Mob",
+    "description": "A food media platform. We share easy \u0026 affordable recipes, stunning food videos, weekly competitions, cooking hacks \u0026 tips and featured articles.",
+    "url": "https://www.mob.co.uk"
+  },
   "totalTime": 30,
   "recipeCategory": [
     "Munchies",
@@ -64,9 +64,5 @@
   ],
   "nutrition": {
     "servingSize": "4"
-  },
-  "publisher": {
-    "name": "Mob",
-    "url": "https://www.mob.co.uk"
   }
 }

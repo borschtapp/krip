@@ -2,9 +2,12 @@
   "url": "https://ketogasm.com/keto-stuffed-peppers/",
   "name": "Keto Stuffed Bell Peppers without Rice",
   "description": "A tried and true stuffed peppers recipe without rice, breadcrumbs or starchy fillers. Low carb and keto-friendly!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://cdn.ketogasm.com/wp-content/uploads/2019/09/Keto-Stuffed-Bell-Peppers-Recipe-Thumbnail.jpg",
   "image": [
+    {
+      "url": "https://ketogasm.com/wp-content/uploads/2019/09/Keto-Stuffed-Bell-Peppers-Recipe-Thumbnail.jpg"
+    },
     {
       "url": "https://ketogasm.com/wp-content/uploads/2019/09/Keto-Stuffed-Bell-Peppers-Recipe-Thumbnail-500x500.jpg"
     },
@@ -16,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Tasha"
+    "name": "Tasha",
+    "description": "Hi, I'm Tasha–nutritionist, recipe developer, and multi-published cookbook author.",
+    "url": "https://ketogasm.com/author/tasha/",
+    "image": "https://ketogasm.com/wp-content/uploads/2022/05/avatar_user_1_1652290765-96x96.png"
+  },
+  "publisher": {
+    "name": "KETOGASM",
+    "description": "Keto Living Made Easy",
+    "url": "https://ketogasm.com",
+    "logo": "https://ketogasm.com/wp-content/uploads/2021/05/Ketogasm-logo-with-emoji.jpg"
   },
   "prepTime": 15,
   "cookTime": 60,
@@ -124,10 +136,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=jKkKMg5T8_A",
     "thumbnailUrl": "https://i.ytimg.com/vi/jKkKMg5T8_A/hqdefault.jpg",
     "uploadDate": "2021-06-09T04:53:43Z"
-  },
-  "publisher": {
-    "name": "KETOGASM",
-    "url": "https://ketogasm.com"
   },
   "datePublished": "2021-06-09T13:10:00Z"
 }

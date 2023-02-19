@@ -11,6 +11,10 @@
   "author": {
     "name": "Becky"
   },
+  "publisher": {
+    "name": "Vintage Mixer",
+    "url": "https://www.thevintagemixer.com"
+  },
   "prepTime": 15,
   "cookTime": 20,
   "totalTime": 35,

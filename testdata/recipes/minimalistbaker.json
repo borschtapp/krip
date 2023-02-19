@@ -2,7 +2,7 @@
   "url": "https://minimalistbaker.com/vegan-cashew-ricotta-cheese-soy-free-fast-easy/",
   "name": "Cashew Ricotta Cheese (Soy-Free, Fast, Easy!)",
   "description": "Quick, fluffy vegan ricotta cheese made with 5 simple ingredients including cashews, lemon, and garlic. Comes together in a food processor or blender and is perfect for pasta, pizza, salads, and more!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://minimalistbaker.com/wp-content/uploads/2020/05/Quick-Fluffy-Vegan-Ricotta-Cheese-5-ingredients-1-bowl-perfect-for-pasta-salads-and-more-cheese-ricotta-plantbased-glutenfree-recipe-minimalistbaker-7.jpg",
   "image": [
     {
@@ -18,6 +18,17 @@
       "url": "https://minimalistbaker.com/wp-content/uploads/2020/05/Cashew-Ricotta-Cheese-sQUARE-480x270.jpg"
     }
   ],
+  "author": {
+    "name": "Dana @ Minimalist Baker",
+    "description": "Hi, I'm Dana! I am a food stylist, photographer, creator of the Food Photography School, and author of the 31 Meals Cookbook and Everyday Cooking. Find me on Twitter, Instagram, and Pinterest.",
+    "image": "https://secure.gravatar.com/avatar/83d23696ef5f7da8f411d78630a49041?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Minimalist Baker",
+    "description": "Simple Food, Simply Delicious",
+    "url": "https://minimalistbaker.com",
+    "logo": "https://minimalistbaker.com/wp-content/uploads/2015/04/logo@2x.png"
+  },
   "prepTime": 40,
   "totalTime": 40,
   "recipeCategory": [
@@ -89,10 +100,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=DYFh4t_kcEU",
     "thumbnailUrl": "https://i.ytimg.com/vi/DYFh4t_kcEU/hqdefault.jpg",
     "uploadDate": "2020-07-02T08:00:02Z"
-  },
-  "publisher": {
-    "name": "Minimalist Baker",
-    "url": "https://minimalistbaker.com"
   },
   "datePublished": "2020-07-02T03:00:00Z"
 }

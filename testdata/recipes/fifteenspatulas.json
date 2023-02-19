@@ -1,8 +1,8 @@
 {
   "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/",
-  "name": "Orange Creme Brulee",
+  "name": "Creme Brulee",
   "description": "This Orange Creme Brulee is a twist on the classic creamy custard, with aromatic and flavorful orange throughout. It's a great make ahead dessert!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.fifteenspatulas.com/wp-content/uploads/2019/05/Orange-Creme-Brulee-Fifteen-Spatulas-16.jpg",
   "image": [
     {
@@ -16,11 +16,21 @@
     }
   ],
   "author": {
-    "name": "Joanne Ozug"
+    "name": "Joanne Ozug",
+    "url": "https://www.fifteenspatulas.com/author/14spatulas1sn0teenoughnon0no34/"
+  },
+  "publisher": {
+    "name": "Fifteen Spatulas",
+    "description": "Easy Everyday Recipes from Scratch",
+    "url": "https://www.fifteenspatulas.com",
+    "logo": "https://www.fifteenspatulas.com/wp-content/uploads/2016/01/FifteenSpatulas.jpg"
   },
   "prepTime": 20,
   "cookTime": 40,
   "totalTime": 420,
+  "suitableForDiet": [
+    "https://schema.org/GlutenFreeDiet"
+  ],
   "recipeCategory": [
     "Dessert"
   ],
@@ -33,7 +43,7 @@
   ],
   "recipeYield": 6,
   "recipeIngredient": [
-    "zest of 4 oranges ((about 2 tsp))",
+    "zest of 4 oranges* ((about 2 tsp))",
     "3 cups heavy cream",
     "5 large egg yolks",
     "1/2 cup sugar +1 tsp for each crème brûlée",
@@ -53,7 +63,7 @@
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-2"
     },
     {
-      "text": "Heat the orange zest cream over medium high heat until 180F, bringing it almost to a boil, but not quite. You’ll know when bubbles begin forming on the side, but it's best to use a thermometer.",
+      "text": "Heat the orange zest cream over medium high heat until 180F, bringing it almost to a boil, but not quite. This is known as a scalding temperature. It's best to use a thermometer, but if you don't have one, you'll know the cream is hot enough when bubbles begin forming on the side, but it's not yet boiling.",
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-3"
     },
     {
@@ -61,7 +71,7 @@
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-4"
     },
     {
-      "text": "Add the vanilla, then pour the mixture through a sieve to strain out the orange zest and any coagulated egg.",
+      "text": "Add the vanilla extract, then pour the mixture through a sieve to strain out the orange zest and any coagulated egg.",
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-5"
     },
     {
@@ -77,15 +87,15 @@
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-8"
     },
     {
-      "text": "When you’re ready to serve the creme brulee, sprinkle 1 tsp of sugar evenly on top of each one.",
+      "text": "When you’re ready to serve the creme brulee, sprinkle 1 tsp of sugar evenly on top of each one, to prepare for caramelization.",
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-9"
     },
     {
-      "text": "Ideally, use a blowtorch to quickly caramelize the tops of each creme brulee, and serve immediately. This will give you the crunchy top layer you want, while keeping the creme brulee from getting warm.",
+      "text": "Torch Option: Ideally, use a handheld blowtorch to quickly caramelize the tops of each creme brulee, and serve immediately. This will give you the crunchy top layer you want, while keeping the creme brulee from getting warm.",
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-10"
     },
     {
-      "text": "If you don't have a torch, you can use the broiler of your oven to caramelize the top. Set the oven rack as close as possible to the broiler, and preheat to high. Place the ramekins on a sheet pan, and broil for 1-2 minutes, until the top caramelizes, making sure you keep your eye on the browning (it's easier to burn the sugar using the broiler). Serve promptly and enjoy!",
+      "text": "Oven broiler option: If you don't have a torch, you can use the broiler of your oven to caramelize the top. Set the oven rack as close as possible to the broiler, and preheat to high. Place the ramekins on a sheet pan, and broil for 1-2 minutes, until the top caramelizes, making sure you keep your eye on the browning (it's easier to burn the sugar using the broiler). If your oven's broiler isn't strong enough to caramelize the sugar without heating the filling, then place the ramekins back into the fridge for an hour before serving, to re-firm the custard. Serve and enjoy!",
       "url": "https://www.fifteenspatulas.com/orange-scented-creme-brulee/#wprm-recipe-29921-step-0-11"
     }
   ],
@@ -101,12 +111,8 @@
     "sugarContent": "1 g"
   },
   "aggregateRating": {
-    "ratingCount": 7,
+    "ratingCount": 10,
     "ratingValue": 5
   },
-  "publisher": {
-    "name": "Fifteen Spatulas",
-    "url": "https://www.fifteenspatulas.com"
-  },
-  "datePublished": "2019-07-09T18:27:50Z"
+  "datePublished": "2022-11-18T18:58:00Z"
 }

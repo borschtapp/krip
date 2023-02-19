@@ -2,10 +2,30 @@
   "url": "https://inspiralized.com/brussels-sprouts-and-apple-salad-with-parmesan/",
   "name": "Brussels Sprouts and Apple Salad with Parmesan",
   "description": "This crunchy sweet salad is perfectly balanced with salty Parmesan cheese for a satisfying bite. Serve this up with your favorite protein or have it as a side salad this Autumn - it's a great way to use up those apple picking apples!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://inspiralized.com/wp-content/uploads/2019/09/Brussels-Sprouts-and-Apple-Salad-with-Parmesan-2-copy-scaled-683x1024.jpg",
+  "image": [
+    {
+      "url": "https://inspiralized.com/wp-content/uploads/2019/09/Brussels-Sprouts-and-Apple-Salad-with-Parmesan-2-copy-scaled.jpg"
+    },
+    {
+      "url": "https://inspiralized.com/wp-content/uploads/2019/09/Brussels-Sprouts-and-Apple-Salad-with-Parmesan-2-copy-scaled-500x500.jpg"
+    },
+    {
+      "url": "https://inspiralized.com/wp-content/uploads/2019/09/Brussels-Sprouts-and-Apple-Salad-with-Parmesan-2-copy-scaled-500x375.jpg"
+    },
+    {
+      "url": "https://inspiralized.com/wp-content/uploads/2019/09/Brussels-Sprouts-and-Apple-Salad-with-Parmesan-2-copy-scaled-480x270.jpg"
+    }
+  ],
   "author": {
-    "name": "Ali Maffucci"
+    "name": "Ali Maffucci",
+    "image": "https://secure.gravatar.com/avatar/3ad5a83e70ed8f6df753c7f3450ca850?s=96\u0026d=identicon\u0026r=g"
+  },
+  "publisher": {
+    "name": "Inspiralized",
+    "url": "https://inspiralized.com",
+    "logo": "https://inspiralized.com/wp-content/uploads/2021/08/inspiralized-main-logo.png"
   },
   "prepTime": 15,
   "totalTime": 15,
@@ -25,9 +45,5 @@
       "url": "https://inspiralized.com/brussels-sprouts-and-apple-salad-with-parmesan/#wprm-recipe-111741-step-0-0"
     }
   ],
-  "publisher": {
-    "name": "Inspiralized",
-    "url": "https://inspiralized.com"
-  },
   "datePublished": "2019-09-30T14:20:17Z"
 }

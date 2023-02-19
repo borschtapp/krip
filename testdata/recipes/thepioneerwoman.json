@@ -2,17 +2,33 @@
   "url": "https://www.thepioneerwoman.com/food-cooking/recipes/a10720/patty-melts/",
   "name": "Patty Melts",
   "description": "Who doesn’t love a good old-fashioned patty melt? Here's the easiest way to make one at home that's beyond delicious.",
-  "inLanguage": "en-US",
-  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/patty-melt-1597698088.jpg?crop=0.508xw:0.450xh;0.229xw,0.200xh\u0026resize=100:*",
+  "inLanguage": "en-us",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/patty-melt-1597698088.jpg?crop=0.508xw:0.450xh;0.229xw,0.200xh\u0026resize=100:*",
   "image": [
     {
-      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/patty-melt-1597698088.jpg",
-      "width": 1800,
-      "height": 2032
+      "url": "https://hips.hearstapps.com/hmg-prod/images/patty-melt-1597698088.jpg?crop=0.508xw:0.450xh;0.229xw,0.200xh\u0026resize=1200:*",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/patty-melt-1597698088.jpg?crop=1xw:0.6643700787401575xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/patty-melt-1597698088.jpg?crop=1xw:0.4982775590551181xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 675
     }
   ],
   "author": {
-    "name": "Ree Drummond"
+    "name": "Ree Drummond",
+    "url": "https://www.thepioneerwoman.com/author/1143543/pioneerwoman/"
+  },
+  "publisher": {
+    "name": "The Pioneer Woman",
+    "url": "https://www.thepioneerwoman.com",
+    "logo": "https://www.thepioneerwoman.com/_assets/design-tokens/thepioneerwoman/static/images/logos/logo-jsonld.1dc32aa.png"
   },
   "prepTime": 10,
   "cookTime": 25,
@@ -58,11 +74,5 @@
     "ratingValue": 5,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "The Pioneer Woman",
-    "url": "https://www.thepioneerwoman.com/",
-    "logo": "https://assets.hearstapps.com/sites/thepioneerwoman/assets/images/logos/logo-jsonld.f682059.png"
-  },
-  "datePublished": "2012-08-06T13:28:02Z"
+  }
 }

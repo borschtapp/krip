@@ -2,7 +2,7 @@
   "url": "https://sweetpeasandsaffron.com/healthy-steel-cut-oats-recipes/",
   "name": "7 Healthy Steel Cut Oats Recipes",
   "description": "7 healthy steel cut oats recipes that are easy to make ahead and keep in the fridge or freezer for easy breakfasts. Plus instructions on how to cook steel cut oats in the Instant Pot, slow cooker or on the stovetop.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://sweetpeasandsaffron.com/wp-content/uploads/2017/05/steel-cut-oats-7-ways-PIN.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Denise Bustard"
+    "name": "Denise Bustard",
+    "description": "Denise Bustard is the creator of Sweet Peas and Saffron, a meal prep-focussed food blog. With a PhD in biochemistry, Denise takes a scientific approach to perfecting her recipes. You can find Denise's work featured on Huffington Post, MSN, Self and more.",
+    "url": "https://sweetpeasandsaffron.com/author/denisebustardgmail-com/"
+  },
+  "publisher": {
+    "name": "Sweet Peas and Saffron",
+    "description": "meal prep recipes for busy people",
+    "url": "https://sweetpeasandsaffron.com",
+    "logo": "https://sweetpeasandsaffron.com/wp-content/uploads/2020/12/sweet-peas-saffron-logo-square.jpg"
   },
   "prepTime": 10,
   "cookTime": 15,
@@ -149,12 +157,8 @@
     "sugarContent": "7 g"
   },
   "aggregateRating": {
-    "ratingCount": 23,
-    "ratingValue": 4.57
-  },
-  "publisher": {
-    "name": "Sweet Peas and Saffron",
-    "url": "https://sweetpeasandsaffron.com"
+    "ratingCount": 25,
+    "ratingValue": 4.6
   },
   "datePublished": "2020-04-14T01:48:00Z"
 }

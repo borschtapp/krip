@@ -3,7 +3,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
   <head>
-    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"6b8b93db2d",applicationID:"401100790"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <script src="https://cdn.yottaa.com/rapid.min.7.1.1.js?key=OxPT6H61GJkLAw" type="text/javascript"></script>
+    <script type="text/javascript">Yo.configure('https://qoe-1.yottaa.net/api/v1/configure.rapid.js?key=OxPT6H61GJkLAw');</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-M867KWL');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
 <link rel="canonical" href="https://www.kingarthurbaking.com/recipes/beautiful-burger-buns-recipe" />
 <link rel="image_src" href="https://www.kingarthurbaking.com/sites/default/files/2021-08/beautiful-burger-buns.jpg" />
 <meta name="description" content="Soft-textured, flavorful buns ideal for burgers as well as all kinds of sandwiches." />
@@ -20,7 +29,7 @@
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>var ct_check_js_val = 'ea3b5c83567cc25886111f3959614b56';var drupal_ac_antibot_cookie_value = '7c2700e6c99d9bf9c5636000c93c3a72cd120d879da71cf79e96b088ba71225c';var ct_use_alt_cookies = 0;var ct_capture_buffer = 0;</script>
+<script>var ct_check_js_val = 'ea3b5c83567cc25886111f3959614b56';var drupal_ac_antibot_cookie_value = '421abb42d80d8f92e17f05f44835068126a15a759cec47b292ce8656e6b054a6';var ct_use_cookies = 1;var ct_use_alt_cookies = 0;var ct_capture_buffer = 0;</script>
 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
@@ -28,7 +37,7 @@
             "@type": "Recipe",
             "keywords": "Hamburger \u0026 hot dog buns, 4th of July",
             "name": "Beautiful Burger Buns",
-            "description": "\u003Cp\u003EThe following recipe created quite a stir when \u0022\u003Ca href=\u0022https://www.kingarthurbaking.com/blog/2021/06/28/how-to-make-the-best-burger-buns\u0022\u003EMoomie\u003C/a\u003E\u0022 first posted it on our original online community. Baker after baker tried these buns and declared them THE BEST. Soft, vaguely sweet, and golden-yellow from the butter and egg, these simple buns are perfect for burgers (whether beef or plant-based), or any of your favorite sandwich fillings.  \u003C/p\u003E",
+            "description": "The following recipe created quite a stir when \u0022Moomie\u0022 first posted it on our original online community. Baker after baker tried these buns and declared them THE BEST. Soft, vaguely sweet, and golden-yellow from the butter and egg, these simple buns are perfect for burgers (whether beef or plant-based), or any of your favorite sandwich fillings.  ",
             "recipeYield": [
                 "8",
                 "8 large buns"
@@ -49,14 +58,14 @@
                 "1 large egg white whisked with 2 tablespoons cold water*",
                 "sesame seeds or the seeds of your choice"
             ],
-            "recipeInstructions": "\u003Cp\u003EWeigh your flour; or measure it by gently spooning it into a cup, then sweeping off any excess.  \u003C/p\u003E, \u003Cp\u003E\u003Cstrong\u003ETo make the dough: \u003C/strong\u003EMix and knead all of the dough ingredients — by hand, mixer, or bread machine — to make a soft, smooth dough.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00226c8ac347-a163-4759-a0d9-695a1e7b6576\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-2.jpg\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 2\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003ECover the dough and let it rise until it\u0027s nearly doubled in bulk, about 1 to 2 hours.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00227711d087-04c0-4f46-abfc-be04952b8e97\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-3.jpg\u0022 width=\u0022511\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 3\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003E\u003Cstrong\u003ETo shape the buns:\u003C/strong\u003E Gently deflate the dough and divide it into eight pieces (about 100g each); to make smaller or larger buns see \u0022tips,\u0022 below. Shape each piece into a ball.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00225c5f0b4e-bf3b-4689-87bb-6fa454dbba5c\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-4.gif\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 4\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003EFlatten each dough ball with the palm of your hand until it\u0027s about 3\u0022 across.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00224039ac29-faba-4101-95e9-8378d23e329b\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-5.gif\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 5\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003EPlace the buns on a lightly greased or parchment-lined baking sheet. Cover and let rise until noticeably puffy, about an hour. Toward the end of the rising time, preheat the oven to 375°F.\u003C/p\u003E\n, \u003Cp\u003EBrush the buns with about half of the melted butter. To make seeded buns, brush the egg white/water mixture right over the melted butter; it\u0027ll make the seeds adhere. Sprinkle buns with the seeds of your choice.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022f2c4b72e-ee9f-426f-b9e6-76679ef5e039\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-7.jpg\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 7\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003E\u003Cstrong\u003ETo bake the buns:\u003C/strong\u003E Bake the buns for 15 to 18 minutes, until golden. Remove them from the oven and brush with the remaining melted butter; this will give the buns a satiny, buttery crust. If you\u0027ve made seeded buns apply the melted butter carefully, to avoid brushing the seeds off the buns.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00221827e8ca-d467-4e4b-9fb6-507fba8f43e3\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-8.jpg\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 8\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003ECool the buns on a rack before slicing in half, horizontally. Use as a base for burgers (beef or plant-based) or any favorite sandwich filling.\u003C/p\u003E\n\n\u003Cdiv data-embed-button=\u0022media\u0022 data-entity-embed-display=\u0022view_mode:media.image_only\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00222b6bb34d-ff29-46a7-a52f-bcfc46b2c993\u0022 data-langcode=\u0022en\u0022 class=\u0022embedded-entity\u0022\u003E    \u003Cimg src=\u0022/sites/default/files/2021-08/step-9.jpg\u0022 width=\u0022512\u0022 height=\u0022342\u0022 alt=\u0022Beautiful Burger Buns – Step 9\u0022 loading=\u0022lazy\u0022 /\u003E\u003C/div\u003E\n, \u003Cp\u003E\u003Cstrong\u003EStorage information:\u003C/strong\u003E Store leftover buns, well-wrapped, at room temperature for several days; freeze for longer storage.\u003C/p\u003E",
+            "recipeInstructions": "Weigh your flour; or measure it by gently spooning it into a cup, then sweeping off any excess.  , To make the dough: Mix and knead all of the dough ingredients — by hand, mixer, or bread machine — to make a soft, smooth dough.\n\n    \n, Cover the dough and let it rise until it\u0027s nearly doubled in bulk, about 1 to 2 hours.\n\n    \n, To shape the buns: Gently deflate the dough and divide it into eight pieces (about 100g each); to make smaller or larger buns see \u0022tips,\u0022 below. Shape each piece into a ball.\n\n    \n, Flatten each dough ball with the palm of your hand until it\u0027s about 3\u0022 across.\n\n    \n, Place the buns on a lightly greased or parchment-lined baking sheet. Cover and let rise until noticeably puffy, about an hour. Toward the end of the rising time, preheat the oven to 375°F.\n, Brush the buns with about half of the melted butter. To make seeded buns, brush the egg white/water mixture right over the melted butter; it\u0027ll make the seeds adhere. Sprinkle buns with the seeds of your choice.\n\n    \n, To bake the buns: Bake the buns for 15 to 18 minutes, until golden. Remove them from the oven and brush with the remaining melted butter; this will give the buns a satiny, buttery crust. If you\u0027ve made seeded buns apply the melted butter carefully, to avoid brushing the seeds off the buns.\n\n    \n, Cool the buns on a rack before slicing in half, horizontally. Use as a base for burgers (beef or plant-based) or any favorite sandwich filling.\n\n    \n, Storage information: Store leftover buns, well-wrapped, at room temperature for several days; freeze for longer storage.",
             "author": {
                 "@type": "Organization",
-                "name": "King Arthur Flour",
-                "url": "https://www.kingarthurflour.com/",
+                "name": "King Arthur Baking",
+                "url": "https://www.kingarthurbaking.com/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://www.kingarthurflour.com/themes/custom/kaf_nextgenweb/images/logo--full.svg"
+                    "url": "https://www.kingarthurbaking.com/themes/custom/kaf_nextgenweb/images/KA_Logo_Small.svg"
                 }
             },
             "image": {
@@ -80,40 +89,74 @@
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.70",
-                "ratingCount": "1343"
+                "ratingCount": "1377"
             }
         }
     ]
 }</script>
 <link rel="icon" href="/themes/custom/kaf_nextgenweb/favicon.ico" type="image/vnd.microsoft.icon" />
-<script src="/sites/default/files/google_tag/drupal_gtm_container/google_tag.script.js?re0koe" defer></script>
 
-    <title>Beautiful Burger Buns | King Arthur Baking</title>
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <title>Beautiful Burger Buns Recipe | King Arthur Baking</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_owa6F_CIQDE57XmMNWvXWUYa2fmNL09lUFVu6FXfzxU.css" />
 <link rel="stylesheet" media="all" href="https://use.typekit.net/qwi2npt.css" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Xz4B9Y6sZlgpvsBWoTqGOaF36oNa0IbNfWwlFRkUnAE.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_jNRYJdR1Cl2FzEs7TVHFcIBTS4EvtDmKQ1LZAgV2vVE.css" />
 
     
   
-<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"true","rua.upre":"false","rua.cpre":"true","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-4fae28b3-837f-4e25-9eb0-17b10585c6ca","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
-                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="SQQ6J-MS2G2-ZFAMA-2TTB7-72K6R",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"SQQ6J-MS2G2-ZFAMA-2TTB7-72K6R",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e="true"=="true"?1:0,t="",n="kcbhvavn3zviyyv2u4uq-f-e1d315fc1-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"32","ak.cp":"1068635","ak.ai":parseInt("635712",10),"ak.ol":"0","ak.cr":19,"ak.ipv":4,"ak.proto":"h2","ak.rid":"7256b68c","ak.r":41766,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"80.130.122.0","ak.cport":60283,"ak.gh":"173.223.20.140","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1656399657","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==JNqOjVGGxUFuOGlTruuadAaOCFbOrp4jVjCXj4Nvpl4sD5iuYzYTi5ahQq73kF5y0ru/HGYKzNnDX9DOLRVi00lhp1LTl9VgOSStUJCD/me5vkDygIjLqqCTDH3z9fmrQg/48EPIXczCPvZBz8I4W/p7P2FN18lkV4oGAefVBWxQegKYMh5Bf6yTgkMeQUbWJbLDybe62F+h3WCfnxwdDHSZwTqM7t8Ko7RiYAQ6PbHeZy756SJK/NiBZy/mrCENiLdny9J+BFljaQvUC4IORHX9pbx1jyb/vXACbJ6X7pKy/L/W4+7RloVN5DhFsbYBP/62KdtiDsaDIWVvzZf90o4SdzLjtLNwORPbLa5D78Ho/73qeaaX6qgKRyvLA0nYCAR9MbDMdu89qBaY8rLx9AGboJ7M06O6BjWyeDi2KLI=","ak.pv":"40","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
-  <body class="has-subnav path-node page-node-type-recipe">
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch"}]);</script>
+                              <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="SQQ6J-MS2G2-ZFAMA-2TTB7-72K6R",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"SQQ6J-MS2G2-ZFAMA-2TTB7-72K6R",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="h3r2ljax2wq4sy7uvyma-f-67eca14e0-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"34","ak.cp":"1068635","ak.ai":parseInt("635712",10),"ak.ol":"0","ak.cr":10,"ak.ipv":4,"ak.proto":"h2","ak.rid":"8a214555","ak.r":38405,"ak.a2":e,"ak.m":"a","ak.n":"essl","ak.bpcip":"62.227.165.0","ak.cport":59547,"ak.gh":"23.213.160.201","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1676979736","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==GLdji3EokeQL1aCpodHRNXxefrJb3ddVQAoExCOMwyD00vdLuSlbaM4R9JSHM1x7gtiSpzsO9GjSnhTXea17hW7bhnTP+AWKw2aKWFDewQElEbCMro+8+4My7MS9EesgYFqoAbUz4NqvdQXJv0Bzd38dEhigf3aWbvs1bkRT5yrlmlSulbhJW9aqb3cKcolt+vV95xHVxU1Iky1LzOyAathNwN9eLLUwRI9zlXlsy2NruN1trZTwz888CoR2SA4oCIZRtDV0+Ng1MB8TGq7zIl5ei71MggqJJRJ6F0Y9wc7H95LyXdWNgMGpjcGt5CWlCs+4hH1cPQwFoX2pNXgrzHN7a7alL1kcNzB1db5bsPaLVwt4lgTy4u74Az018j5Om0lj60VVREIlUcb/KM9Ks2qWe1nTL3+TY4qRpZZ8Nrg=","ak.pv":"41","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+  <body class="has-subnav path-node page-node-type-recipe has-promo-banner">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M867KWL"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         <a href="#main-content" class="visually-hidden focusable skip-link">
       Skip to main content
     </a>
-    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M867KWL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
       <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
     <div class="page">
 
   <header class="header" role="banner">
+      <div class="alert--alt region region-promo-bar">
     
+  
+
+<div id="block-standardpromobanner" class="block block-block-content block-block-content4f566a07-78b0-483e-9a83-f09f3e7229fb block--block-content--promo-banner promo-banner--alert--alt">
+  <div class="alert alert--alt">
+    <div class="promo-banner__content">
+              <a href="https://shop.kingarthurbaking.com/current-promotions">  15% off 3+ Pancake Mixes
+</a>
+          </div>
+
+    
+    <div class="utility-nav__wrapper">
+      <nav class="utility-nav" aria-label="Utility Navigation">
+        
+
+                        <a href="/cafe-bakery-store">Café, Bakery &amp; Store</a>
+      
+                        <a href="/bakers-rewards">Baker&#039;s Rewards</a>
+      
+            
+
+
+
+      </nav>
+    </div>
+  </div>
+</div>
+
+  </div>
+
     <div class="header__wrap">
         <div class="region region-header">
     
 <div id="block-kaf-nextgenweb-branding" class="block block-branding">
             <a href="/" aria-label="King Arthur Baking Company home page" rel="home" class="site-logo">
-        <img class="brand-lg" src="/themes/custom/kaf_nextgenweb/images/king-arthur-baking@2x.png" alt="King Arthur Baking Company">
-        <img class="brand-sm" src="/themes/custom/kaf_nextgenweb/images/crown@2x.png" alt="King Arthur Baking Company">
+        <img class="brand-lg" src="/themes/custom/kaf_nextgenweb/images/king-arthur-baking@2x.png" alt="King Arthur Baking Company" width="200" height="200">
+        <img class="brand-sm" src="/themes/custom/kaf_nextgenweb/images/crown@2x.png" alt="King Arthur Baking Company" width="200" height="98">
       </a>
       </div>
 <div id="block-kafsubmenu" class="block block-kaf-submenu">
@@ -123,7 +166,550 @@
        <li class="mnav-l1--item mnav-item">
       <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/" class="mobile-subnav-l1">Shop</a></span>
 
-                  
+                    <button class="mnav-more"><span class="visually-hidden">Expand Shop</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Shop</span></button>
+            <h3 class="mnav-l2--title">Shop</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Flours</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Flours</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Flours</span></button>
+                      <h4 class="mnav-l3--title">Flours</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Flours</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/signature" class="mobile-subnav-l4">Signature</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/gluten-free" class="mobile-subnav-l4">Gluten-Free</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/specialty" class="mobile-subnav-l4">Specialty</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/grain-free" class="mobile-subnav-l4">Grain-Free</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/organic" class="mobile-subnav-l4">Organic</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/whole-grains" class="mobile-subnav-l4">Whole Grains</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours" class="mobile-subnav-l4">Shop All Flours »</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Flour For</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/bread" class="mobile-subnav-l4">Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/cake-pastry" class="mobile-subnav-l4">Cake &amp; Pastry</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/flours/pasta-pizza" class="mobile-subnav-l4">Pasta &amp; Pizza</a></span>
+                            </li>
+                                                                                                                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/c/flours" class="mobile-subnav-viewmore">Explore Our Flours</a></span>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Ingredients</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Ingredients</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Ingredients</span></button>
+                      <h4 class="mnav-l3--title">Ingredients</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Ingredients</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/vanilla" class="mobile-subnav-l4">Vanilla</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/extracts-flavorings" class="mobile-subnav-l4">Extracts &amp; Flavorings</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/spices-pantry" class="mobile-subnav-l4">Spices &amp; Pantry</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/yeast" class="mobile-subnav-l4">Yeast</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/starters-leaveners" class="mobile-subnav-l4">Starters &amp; Leaveners</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/fruit" class="mobile-subnav-l4">Fruit</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/chocolate" class="mobile-subnav-l4">Chocolate</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/cocoa" class="mobile-subnav-l4">Cocoa</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/enhancers-thickeners" class="mobile-subnav-l4">Enhancers &amp; Thickeners</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/sugars" class="mobile-subnav-l4">Sugars</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients/grains" class="mobile-subnav-l4">Grains</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/ingredients" class="mobile-subnav-l4">Shop All Ingredients »</a></span>
+                            </li>
+                                                                                                                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/c/ingredients" class="mobile-subnav-viewmore">Explore Our Ingredients</a></span>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Mixes</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Mixes</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Mixes</span></button>
+                      <h4 class="mnav-l3--title">Mixes</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Mixes</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/scones" class="mobile-subnav-l4">Scones</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/bread" class="mobile-subnav-l4">Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/cake-pie" class="mobile-subnav-l4">Cake &amp; Pie</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/cookies" class="mobile-subnav-l4">Cookies</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/doughnut" class="mobile-subnav-l4">Doughnuts</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/muffins-quick-bread" class="mobile-subnav-l4">Muffins &amp; Quick Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/pancakes" class="mobile-subnav-l4">Pancakes</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/frostings-fillings" class="mobile-subnav-l4">Frostings &amp; Fillings</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/gluten-free" class="mobile-subnav-l4">Gluten-Free</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/keto" class="mobile-subnav-l4">Keto</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/soups" class="mobile-subnav-l4">Soups</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/specialty" class="mobile-subnav-l4">Specialty</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes" class="mobile-subnav-l4">Shop All Mixes »</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Seasonal Mixes &amp; Sets</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/mixes/seasonal" class="mobile-subnav-l4">Seasonal</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/mix-pan-sets" class="mobile-subnav-l4">Mix &amp; Pan Sets</a></span>
+                            </li>
+                                                                                                                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/c/mixes" class="mobile-subnav-viewmore">Explore Our Mixes</a></span>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Gluten-Free</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Gluten-Free</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Gluten-Free</span></button>
+                      <h4 class="mnav-l3--title">Gluten-Free</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gluten-free/flours" class="mobile-subnav-l3">Flours</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gluten-free/mixes" class="mobile-subnav-l3">Mixes</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gluten-free/dessert-cups" class="mobile-subnav-l3">Dessert Cups</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gluten-free" class="mobile-subnav-l3">Shop All Gluten-Free »</a></span>
+                        </li>
+                                                                                                                                        </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Tools</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Tools</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Tools</span></button>
+                      <h4 class="mnav-l3--title">Tools</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Tools</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/parchment-mats" class="mobile-subnav-l4">Parchment &amp; Mats</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/bread" class="mobile-subnav-l4">Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/cake-cookie" class="mobile-subnav-l4">Cake &amp; Cookie</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/cookbooks" class="mobile-subnav-l4">Cookbooks</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/mitts-towels" class="mobile-subnav-l4">Mitts &amp; Towels</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/pie" class="mobile-subnav-l4">Pie</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/rolling-pins" class="mobile-subnav-l4">Rolling Pins</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/gadgets" class="mobile-subnav-l4">Gadgets</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/measuring" class="mobile-subnav-l4">Measuring</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/utensils" class="mobile-subnav-l4">Utensils</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/thermometers" class="mobile-subnav-l4">Thermometers</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/storage" class="mobile-subnav-l4">Storage</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/appliances" class="mobile-subnav-l4">Appliances</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools" class="mobile-subnav-l4">Shop All Tools »</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Featured Brands</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/ankarsrum" class="mobile-subnav-l4">Ankarsrum</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/zojirushi" class="mobile-subnav-l4">Zojirushi</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/thermoworks" class="mobile-subnav-l4">Thermoworks</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/tools/king-arthur" class="mobile-subnav-l4">King Arthur</a></span>
+                            </li>
+                                                                                                                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/c/tools" class="mobile-subnav-viewmore">Explore Our Tools</a></span>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Pans</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Pans</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Pans</span></button>
+                      <h4 class="mnav-l3--title">Pans</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Pans</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/scone-popover" class="mobile-subnav-l4">Scone &amp; Popover</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/doughnut-muffin" class="mobile-subnav-l4">Doughnut &amp; Muffin</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/cake" class="mobile-subnav-l4">Cake</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/bundt-specialty" class="mobile-subnav-l4">Bundt &amp; Specialty</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/pie" class="mobile-subnav-l4">Pie</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/bread" class="mobile-subnav-l4">Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/cookie-sheet-pans" class="mobile-subnav-l4">Cookie &amp; Sheet Pans</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans" class="mobile-subnav-l4">Shop All Pans »</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Featured Brands</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/emile-henry" class="mobile-subnav-l4">Emile Henry</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/nordic-ware" class="mobile-subnav-l4">Nordic Ware</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/king-arthur" class="mobile-subnav-l4">King Arthur</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Seasonal Pans &amp; Sets</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/seasonal" class="mobile-subnav-l4">Seasonal</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/mix-pan-sets" class="mobile-subnav-l4">Mix &amp; Pan Sets</a></span>
+                            </li>
+                                                                                                                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/c/pans" class="mobile-subnav-viewmore">Explore Our Pans</a></span>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Logo Shop</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Logo Shop</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Logo Shop</span></button>
+                      <h4 class="mnav-l3--title">Logo Shop</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/logo-shop/apparel" class="mobile-subnav-l3">Apparel</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/logo-shop/totes" class="mobile-subnav-l3">Totes</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/logo-shop/glasses-mugs" class="mobile-subnav-l3">Glasses &amp; Mugs</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/logo-shop/mitts-towels" class="mobile-subnav-l3">Mitts &amp; Towels</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/logo-shop" class="mobile-subnav-l3">Shop All Logo Shop »</a></span>
+                        </li>
+                                                                                                                                        </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Collections</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Collections</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Collections</span></button>
+                      <h4 class="mnav-l3--title">Collections</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Bakers&#039; Favorites</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/new-arrivals" class="mobile-subnav-l4">New Arrivals</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/best-sellers" class="mobile-subnav-l4">Best Sellers</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/seasonal" class="mobile-subnav-l4">Seasonal</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/digital-catalog" class="mobile-subnav-l4">Digital Catalog</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/recipe-of-the-year" class="mobile-subnav-l4">2023 Recipe of the Year</a></span>
+                            </li>
+                                                                                                                        <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Collections</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/pie-must-haves" class="mobile-subnav-l4">Pie Must-Haves</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/scrumptious-scones" class="mobile-subnav-l4">Scrumptious Scones</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/cookie-creativity" class="mobile-subnav-l4">Cookie Creativity</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/cake-made-easy" class="mobile-subnav-l4">Cake Made Easy</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/pantry-starts-here" class="mobile-subnav-l4">Pantry Starts Here</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/your-best-bread" class="mobile-subnav-l4">Your Best Bread</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/sourdough-savvy" class="mobile-subnav-l4">Sourdough Savvy</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/blissful-bagels" class="mobile-subnav-l4">Blissful Bagels</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/celebrate-breakfast" class="mobile-subnav-l4">Celebrate Breakfast</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/pizza-perfection" class="mobile-subnav-l4">Pizza Perfection</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/biscuits" class="mobile-subnav-l4">Brilliant Biscuits</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/sustainable-baking" class="mobile-subnav-l4">Sustainable Baking</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/special-diets" class="mobile-subnav-l4">Special Diets</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/secret-ingredients" class="mobile-subnav-l4">Secret Ingredients</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/collections/baking-school-favorites" class="mobile-subnav-l4">Baking School Favorites</a></span>
+                            </li>
+                                                                                                                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Gifts</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Gifts</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Gifts</span></button>
+                      <h4 class="mnav-l3--title">Gifts</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">Gifts</span></span>
+                        </li>
+                                                                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/gift-cards" class="mobile-subnav-l4">Gift Cards</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/sale-savings/recipe-bundles" class="mobile-subnav-l4">Recipe Bundles</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/pans/mix-pan-sets" class="mobile-subnav-l4">Mix &amp; Pan Sets</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/must-have-tools" class="mobile-subnav-l4">Must-Have Tools</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/pizza-lovers" class="mobile-subnav-l4">Pizza Lovers</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/customer-favorites" class="mobile-subnav-l4">Customer Favorites</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/everything-cake" class="mobile-subnav-l4">Everything Cake</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/for-kids" class="mobile-subnav-l4">For Kids</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/gifts-under-25" class="mobile-subnav-l4">Gifts Under $25</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/gifts-under-50" class="mobile-subnav-l4">Gifts Under $50</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/gifts-under-100" class="mobile-subnav-l4">Gifts Under $100</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts/best-splurges" class="mobile-subnav-l4">Best Splurges</a></span>
+                            </li>
+                                                      <li class="mnav-l4--item mnav-item">
+                              <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/gifts" class="mobile-subnav-l4">Shop All Gifts »</a></span>
+                            </li>
+                                                                                                                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Sale</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Sale</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Sale</span></button>
+                      <h4 class="mnav-l3--title">Sale</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/sale-savings/recipe-bundles" class="mobile-subnav-l3">Recipe Bundles</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/sale-savings/sets/" class="mobile-subnav-l3">Sets</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://shop.kingarthurbaking.com/sale-savings/" class="mobile-subnav-l3">Shop All Sale</a></span>
+                        </li>
+                                                                                                                                        </ul>
+                  </div>
+                                
+              </li>
+                      </ul>
+        </div>
+            
     </li>
        <li class="mnav-l1--item mnav-item">
       <span class="mnav-item--wrapper"><a href="/recipes" class="mobile-subnav-l1">Recipes</a></span>
@@ -149,40 +735,72 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/biscuits-shortcakes" class="mobile-subnav-l3">Biscuits &amp; Shortcakes</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/bread" class="mobile-subnav-l3">Bread</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/buns-rolls" class="mobile-subnav-l3">Buns &amp; Rolls</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/cake" class="mobile-subnav-l3">Cake</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/cookies-bars" class="mobile-subnav-l3">Cookies &amp; Bars</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/muffins-popovers" class="mobile-subnav-l3">Muffins &amp; Popovers</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/pancakes-waffles" class="mobile-subnav-l3">Pancakes &amp; Waffles</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/pastry" class="mobile-subnav-l3">Pastry</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/pie" class="mobile-subnav-l3">Pie</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/scones" class="mobile-subnav-l3">Scones</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">—</span></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="https://www.kingarthurbaking.com/recipes#categories" class="mobile-subnav-l3">See All Categories</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="https://www.kingarthurbaking.com/recipes#categories" class="mobile-subnav-l3">View All Categories</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Features</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Features</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Features</span></button>
+                      <h4 class="mnav-l3--title">Features</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/holiday-cookies" class="mobile-subnav-l3">Holiday Cookies</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/new-classics-thanksgiving-pie" class="mobile-subnav-l3">New Classics: Pie</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/buns" class="mobile-subnav-l3">Brilliant Beautiful Buns</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/pizza-school" class="mobile-subnav-l3">Pizza School</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">—</span></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/recipes/features" class="mobile-subnav-l3">View All Features</a></span>
+                        </li>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -199,25 +817,25 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/collections/new-from-the-test-kitchen" class="mobile-subnav-l3">New from the Test Kitchen</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="https://www.kingarthurbaking.com/recipes/collections/best-basic-recipes" class="mobile-subnav-l3">Best Basic Recipes</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/collections/recipes-with-5-ingredients-or-fewer" class="mobile-subnav-l3">5 Ingredients or Fewer</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/collections/sourdough-discard-recipes" class="mobile-subnav-l3">Sourdough Discard Recipes</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/recipes/collections/best-chocolate-recipes" class="mobile-subnav-l3">Best Chocolate Recipes</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/recipes/collections/recipes-to-bake-with-kids" class="mobile-subnav-l3">Recipes to Bake With Kids</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">—</span></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/collections" class="mobile-subnav-l3">View All Recipe Collections</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -234,19 +852,19 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipebox" class="mobile-subnav-l3">Recipe Box</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/bakers-hotline" class="mobile-subnav-l3">Bakers Hotline</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/ingredient-weight-chart" class="mobile-subnav-l3">Ingredient Weight Chart</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/videos/baking-skills/how-to-measure-flour" class="mobile-subnav-l3">How to Measure Flour</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/recipes/resources/recipe-success-guide" class="mobile-subnav-l3">Recipe Success Guide</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -278,22 +896,22 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/guides/pie" class="mobile-subnav-l3">Pie Baking</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/guides/sourdough" class="mobile-subnav-l3">Sourdough Baking</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/guides/scone-baking" class="mobile-subnav-l3">Scone Baking</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/guides/gluten-free" class="mobile-subnav-l3">Gluten-Free Baking</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><span class="mobile-subnav-l3">—</span></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/guides" class="mobile-subnav-l3">View All Baking Guides</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -304,6 +922,11 @@
               </li>
                           <li class="mnav-l2--item mnav-item">
                 <span class="mnav-item--wrapper"><a href="/baking-school" class="mobile-subnav-l2">Baking School</a></span>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/about/bakeforgood" class="mobile-subnav-l2">Bake for Good</a></span>
 
                                                 
               </li>
@@ -320,19 +943,19 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/resources/tools-and-pans" class="mobile-subnav-l3">Tools and Pans</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/resources/baking-tips-techniques" class="mobile-subnav-l3">Baking Tips and Techniques</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/resources/yeast" class="mobile-subnav-l3">All About Yeast</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/resources/high-altitude-baking" class="mobile-subnav-l3">High-Altitude Baking</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/learn/ingredient-weight-chart" class="mobile-subnav-l3">Ingredient Weight Chart</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -341,69 +964,121 @@
             
     </li>
        <li class="mnav-l1--item mnav-item">
-      <span class="mnav-item--wrapper"><a href="/about" class="mobile-subnav-l1">About</a></span>
+      <span class="mnav-item--wrapper"><a href="/baking-school" class="mobile-subnav-l1">Baking School</a></span>
 
-                    <button class="mnav-more"><span class="visually-hidden">Expand About</span></button>
+                    <button class="mnav-more"><span class="visually-hidden">Expand Baking School</span></button>
 
         <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
           <div class="mnav-header">
-            <button class="mnav-back"><span class="visually-hidden">Collapse About</span></button>
-            <h3 class="mnav-l2--title">About</h3>
+            <button class="mnav-back"><span class="visually-hidden">Collapse Baking School</span></button>
+            <h3 class="mnav-l2--title">Baking School</h3>
           </div>
           <ul class="mnav-l2">
                           <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/about/mission-impact" class="mobile-subnav-l2">Mission &amp; Impact</a></span>
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Our Locations</span></span>
 
-                                                
-              </li>
-                          <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/about/our-products" class="mobile-subnav-l2">Our Products</a></span>
-
-                                                
-              </li>
-                          <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/visit" class="mobile-subnav-l2">Visit Us</a></span>
-
-                                                
-              </li>
-                          <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/about/bakeforgood" class="mobile-subnav-l2">Bake for Good</a></span>
-
-                                                
-              </li>
-                          <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/about/history" class="mobile-subnav-l2">Our History</a></span>
-
-                                                
-              </li>
-                          <li class="mnav-l2--item mnav-item">
-                <span class="mnav-item--wrapper"><a href="/newsroom" class="mobile-subnav-l2">Newsroom</a></span>
-
-                                                  <button class="mnav-more"><span class="visually-hidden">Expand Newsroom</span></button>
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Our Locations</span></button>
                   <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
                     <div class="mnav-header">
-                      <button class="mnav-back"><span class="visually-hidden">Collapse Newsroom</span></button>
-                      <h4 class="mnav-l3--title">Newsroom</h4>
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Our Locations</span></button>
+                      <h4 class="mnav-l3--title">Our Locations</h4>
                     </div>
                     <ul class="mnav-l3">
                                               <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/newsroom" class="mobile-subnav-l3">Newsroom</a></span>
+                          <span class="mnav-item--wrapper"><a href="/baking-school/what-to-expect" class="mobile-subnav-l3">Online Class Information</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/newsroom/press-kit" class="mobile-subnav-l3">Press Kit</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Online Class Calendar</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/newsroom/company-stories" class="mobile-subnav-l3">Company Stories</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school-norwich" class="mobile-subnav-l3">Vermont Information</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/newsroom/press-releases" class="mobile-subnav-l3">Press Releases</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Vermont Class Calendar</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
-                          <span class="mnav-item--wrapper"><a href="/newsroom/in-the-press" class="mobile-subnav-l3">In the Press</a></span>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school-washington" class="mobile-subnav-l3">Washington Information</a></span>
                         </li>
-                                          </ul>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Washington Class Calendar</a></span>
+                        </li>
+                                                                                                                                        </ul>
                   </div>
                                 
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><span class="mobile-subnav-l2">Our Classes</span></span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Our Classes</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Our Classes</span></button>
+                      <h4 class="mnav-l3--title">Our Classes</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Home Baker Classes</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Guest Instructors</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Professional Baker</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Kids Classes</a></span>
+                        </li>
+                                                                                                                      <li class="mnav-l3--item mnav-item">
+                          <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">All Classes</a></span>
+                        </li>
+                                                                                                                                        </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/baking-school/what-to-expect" class="mobile-subnav-l2">What to Expect</a></span>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/baking-school/contact" class="mobile-subnav-l2">Contact Us</a></span>
+
+                                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <span class="mnav-item--wrapper"><a href="/impact" class="mobile-subnav-l1">Impact</a></span>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand Impact</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Impact</span></button>
+            <h3 class="mnav-l2--title">Impact</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/impact/people" class="mobile-subnav-l2">For People</a></span>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/impact/planet" class="mobile-subnav-l2">For Planet</a></span>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/impact/food-justice" class="mobile-subnav-l2">Food Justice</a></span>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mnav-item--wrapper"><a href="/impact/impact-report" class="mobile-subnav-l2">Impact Report</a></span>
+
+                                                
               </li>
                       </ul>
         </div>
@@ -478,37 +1153,37 @@
                                               <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/bakers-percentage" class="mobile-subnav-l3">Baker&#039;s Percentage</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/batch-costing" class="mobile-subnav-l3">Batch Costing</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/bromate" class="mobile-subnav-l3">Bromate</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/conversion" class="mobile-subnav-l3">Common conversions</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/dough-temperature" class="mobile-subnav-l3">Dough Temperatures</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/preferment" class="mobile-subnav-l3">Preferments</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/salt" class="mobile-subnav-l3">Salt</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/water" class="mobile-subnav-l3">Water</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/pro/reference/yeast" class="mobile-subnav-l3">Yeast</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/videos/professional-techniques" class="mobile-subnav-l3">Video Tips for Professionals</a></span>
                         </li>
-                                              <li class="mnav-l3--item mnav-item">
+                                                                                                                      <li class="mnav-l3--item mnav-item">
                           <span class="mnav-item--wrapper"><a href="/baking-school/calendar" class="mobile-subnav-l3">Professional Classes</a></span>
                         </li>
-                                          </ul>
+                                                                                                                                        </ul>
                   </div>
                                 
               </li>
@@ -520,6 +1195,16 @@
                       </ul>
         </div>
             
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <span class="mnav-item--wrapper"><a href="/cafe-bakery-store" class="mobile-subnav-utility">Café, Bakery &amp; Store</a></span>
+
+                  
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <span class="mnav-item--wrapper"><a href="/bakers-rewards" class="mobile-subnav-utility">Baker&#039;s Rewards</a></span>
+
+                  
     </li>
   </ul>
 
@@ -566,7 +1251,17 @@
               </li>
           
       <li class="menu-item">
-                  <a href="/about" data-drupal-link-system-path="node/27601">About</a>
+                  <a href="/baking-school" data-drupal-link-system-path="node/27726">Baking School</a>
+        
+                          
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+              </li>
+          
+      <li class="menu-item">
+                  <a href="/impact" data-drupal-link-system-path="node/48771">Impact</a>
         
                           
 
@@ -615,8 +1310,8 @@
         
 <ul class="menu menu-level-1">
   
-  <li class="user__item menu-item">
-    <a href="/account/orders" data-drupal-link-system-path="account/orders">Order History</a>
+  <li class="menu-item">
+    <a href="https://shop.kingarthurbaking.com/account.php?action=address_book">Account Overview</a>
 
               
 
@@ -626,7 +1321,17 @@
       </li>
   
   <li class="user__item menu-item">
-    <a href="https://shop.kingarthurbaking.com/wishlist.php">Wishlist</a>
+    <a href="/account/orders" data-drupal-link-system-path="account/orders">Orders</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item menu-item">
+    <a href="https://shop.kingarthurbaking.com/wishlist.php">Wish Lists</a>
 
               
 
@@ -768,7 +1473,39 @@
                                       
                       </li>
                               <li>
-                                                    <a href="https://www.kingarthurbaking.com/recipes#categories">See All Categories</a>
+                                                    <a href="https://www.kingarthurbaking.com/recipes#categories">View All Categories</a>
+                                      
+                      </li>
+              </ul>
+      
+                      </li>
+                              <li class="subnav-li parent-item">
+                                                    <a aria-haspopup="true" aria-expanded="false" href="">Features</a>
+                                      
+                          
+                  <ul>
+                                      <li>
+                                                    <a href="/holiday-cookies">Holiday Cookies</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="/new-classics-thanksgiving-pie">New Classics: Pie</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="/buns">Brilliant Beautiful Buns</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="/pizza-school">Pizza School</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="">—</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="/recipes/features">View All Features</a>
                                       
                       </li>
               </ul>
@@ -796,7 +1533,7 @@
                                       
                       </li>
                               <li>
-                                                    <a href="/recipes/collections/best-chocolate-recipes">Best Chocolate Recipes</a>
+                                                    <a href="/recipes/collections/recipes-to-bake-with-kids">Recipes to Bake With Kids</a>
                                       
                       </li>
                               <li>
@@ -901,8 +1638,10 @@
 </nav>
 
         
-        <h1><span>Beautiful Burger Buns</span>
-</h1>
+        <div id="hero--label">
+          <div class="backup-label"><span>Beautiful Burger Buns</span>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -925,14 +1664,19 @@
 </nav>
 
     
-    <h1><span>Beautiful Burger Buns</span>
+          <div id="quickview--label">
+        <h1><span>Beautiful Burger Buns</span>
 </h1>
-
-    <div class="quickview__meta">
+      </div>
+    
+          <div class="quickview__recipe-author">  Recipe by &quot;Moomie&quot; (Ellen Dorsey)
+</div>
+    
+    <div class="quickview__meta ">
       <div class="quickview__reviews reviews">
                   <a class="reviews__jumplink" href="#review-section">
                                 <div class="reviews__wrapper">
-                                      <span class="reviews__label">1343 Reviews</span>
+                                      <span class="reviews__label">1377 Reviews</span>
                                       <span class="rating rating-is-50">4.7 out of 5 stars</span>
                                     </div>
                               </a>
@@ -999,7 +1743,7 @@
                 <picture>
                   <source srcset="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH 1x, /sites/default/files/styles/featured_image_2x/public/2021-08/beautiful-burger-buns.jpg?itok=MmtRyF6R 2x" media="(min-width: 480px)" type="image/jpeg"/>
               <source srcset="/sites/default/files/styles/featured_image_sm/public/2021-08/beautiful-burger-buns.jpg?itok=NE8tXNRM 1x, /sites/default/files/styles/featured_image_sm_2x/public/2021-08/beautiful-burger-buns.jpg?itok=PFvAcmd8 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns" />
+                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns - select to zoom" />
 
   </picture>
 
@@ -1025,7 +1769,7 @@
                   <picture>
                   <source srcset="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH 1x, /sites/default/files/styles/featured_image_2x/public/2021-08/beautiful-burger-buns.jpg?itok=MmtRyF6R 2x" media="(min-width: 480px)" type="image/jpeg"/>
               <source srcset="/sites/default/files/styles/featured_image_sm/public/2021-08/beautiful-burger-buns.jpg?itok=NE8tXNRM 1x, /sites/default/files/styles/featured_image_sm_2x/public/2021-08/beautiful-burger-buns.jpg?itok=PFvAcmd8 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns" />
+                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns - select to zoom" />
 
   </picture>
 
@@ -1064,22 +1808,24 @@
   
 
   <div class="node__content">
-    <section class="recipe recipe--detail">
+    <section class="recipe recipe--detail" data-recipe-id="14606">
       <aside class="recipe__ingredients">
-        <h4>Ingredients</h4>
+        <div class="recipe__ingredients-header">
+          <h4>Ingredients</h4>
+        </div>
         
 <div  class="ingredients-list">
       <div class="ingredient-section">
       <p>Buns</p>
   
   <ul class="list--bullets">
-      <li>3 1/2 cups (420g) <a href="https://shop.kingarthurbaking.com/items/unbleached-all-purpose-flour" data-name="Unbleached All-Purpose Flour" data-sku="VG0001" data-price="$5.95">King Arthur Unbleached All-Purpose Flour</a></li>
+      <li>3 1/2 cups (420g) <a href="https://shop.kingarthurbaking.com/items/unbleached-all-purpose-flour" data-name="All-Purpose Flour" data-sku="01050" data-price="$6.95" class="product-modal">King Arthur Unbleached All-Purpose Flour</a></li>
       <li>3/4 to 1 cup (170g to 227g) water, lukewarm*</li>
       <li>2 tablespoons (28g) butter, at room temperature</li>
       <li>1 large egg</li>
       <li>1/4 cup (50g) granulated sugar</li>
       <li>1 1/4 teaspoons salt</li>
-      <li>1 tablespoon (9g) <a href="https://shop.kingarthurbaking.com/items/saf-red-instant-yeast" data-name="SAF Red Instant Yeast" data-sku="201264" data-price="$6.95">instant yeast</a></li>
+      <li>1 tablespoon (9g) <a href="https://shop.kingarthurbaking.com/items/saf-red-instant-yeast" data-name="SAF Red Instant Yeast" data-sku="201264" data-price="$8.95" class="product-modal">instant yeast</a></li>
   </ul>
 
 
@@ -1119,10 +1865,22 @@
   </div>
 
 
+        <div id="kaf-product-modal" class="kaf-product-modal modal__wrapper">
+          <div class="modal__contents kaf-modal">
+            <div class="modal__close-button icon-close-thin" role="button" tabindex="0" aria-label="Close modal"></div>
+
+            <div class="product-modal-content">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="recipe__ingredients-actions">
                   <a href="/nutritional-info/14606" rel="nofollow" aria-haspopup="dialog" class="btn btn--secondary use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:&quot;90%&quot;, &quot;dialogClass&quot;:&quot;kaf-modal&quot;}">Nutrition Information</a>
-        
-        <div class="recipe-ad__wrapper" id="recipe-ad__wrapper"></div>
-      </aside>
+                </div>
+
+                  <div class="recipe-ad__wrapper" id="recipe-ad__wrapper"></div>
+              </aside>
 
       <article class="recipe__instructions">
                   <a class="recipe__media-toggle" id="recipe__media-toggle" href="" aria-label="Hide images and videos in recipe steps">Hide images</a>
@@ -1139,7 +1897,7 @@
 
         <p><strong>To make the dough: </strong>Mix and knead all of the dough ingredients — by hand, mixer, or bread machine — to make a soft, smooth dough.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="6c8ac347-a163-4759-a0d9-695a1e7b6576" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-2.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 2" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="6c8ac347-a163-4759-a0d9-695a1e7b6576" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-2.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 2" loading="lazy" /></div>
 
 
         
@@ -1148,7 +1906,7 @@
 
         <p>Cover the dough and let it rise until it's nearly doubled in bulk, about 1 to 2 hours.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="7711d087-04c0-4f46-abfc-be04952b8e97" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-3.jpg" width="511" height="342" alt="Beautiful Burger Buns – Step 3" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="7711d087-04c0-4f46-abfc-be04952b8e97" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-3.jpg" width="511" height="342" alt="Beautiful Burger Buns – Step 3" loading="lazy" /></div>
 
 
         
@@ -1157,7 +1915,7 @@
 
         <p><strong>To shape the buns:</strong> Gently deflate the dough and divide it into eight pieces (about 100g each); to make smaller or larger buns see "tips," below. Shape each piece into a ball.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="5c5f0b4e-bf3b-4689-87bb-6fa454dbba5c" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-4.gif" width="512" height="342" alt="Beautiful Burger Buns – Step 4" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="5c5f0b4e-bf3b-4689-87bb-6fa454dbba5c" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-4.gif" width="512" height="342" alt="Beautiful Burger Buns – Step 4" loading="lazy" /></div>
 
 
         
@@ -1166,7 +1924,7 @@
 
         <p>Flatten each dough ball with the palm of your hand until it's about 3" across.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="4039ac29-faba-4101-95e9-8378d23e329b" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-5.gif" width="512" height="342" alt="Beautiful Burger Buns – Step 5" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="4039ac29-faba-4101-95e9-8378d23e329b" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-5.gif" width="512" height="342" alt="Beautiful Burger Buns – Step 5" loading="lazy" /></div>
 
 
         
@@ -1182,7 +1940,7 @@
 
         <p>Brush the buns with about half of the melted butter. To make seeded buns, brush the egg white/water mixture right over the melted butter; it'll make the seeds adhere. Sprinkle buns with the seeds of your choice.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="f2c4b72e-ee9f-426f-b9e6-76679ef5e039" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-7.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 7" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="f2c4b72e-ee9f-426f-b9e6-76679ef5e039" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-7.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 7" loading="lazy" /></div>
 
 
         
@@ -1191,7 +1949,7 @@
 
         <p><strong>To bake the buns:</strong> Bake the buns for 15 to 18 minutes, until golden. Remove them from the oven and brush with the remaining melted butter; this will give the buns a satiny, buttery crust. If you've made seeded buns apply the melted butter carefully, to avoid brushing the seeds off the buns.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="1827e8ca-d467-4e4b-9fb6-507fba8f43e3" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-8.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 8" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="1827e8ca-d467-4e4b-9fb6-507fba8f43e3" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-8.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 8" loading="lazy" /></div>
 
 
         
@@ -1200,7 +1958,7 @@
 
         <p>Cool the buns on a rack before slicing in half, horizontally. Use as a base for burgers (beef or plant-based) or any favorite sandwich filling.</p>
 
-<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="2b6bb34d-ff29-46a7-a52f-bcfc46b2c993" data-langcode="en" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-9.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 9" loading="lazy" /></div>
+<div data-embed-button="media" data-entity-embed-display="view_mode:media.image_only" data-entity-type="media" data-entity-uuid="2b6bb34d-ff29-46a7-a52f-bcfc46b2c993" data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity">    <img src="/sites/default/files/2021-08/step-9.jpg" width="512" height="342" alt="Beautiful Burger Buns – Step 9" loading="lazy" /></div>
 
 
         
@@ -1216,7 +1974,6 @@
 </div>
 
 
-        
                   <div class="recipe__tips">
             <h4>Tips from our Bakers</h4>
             <ul class="list--star">
@@ -1272,7 +2029,7 @@
 
   <aside class="recipe-bakers-hotline__aside">
     <div class="cta cta--card-small">
-      <img src="/themes/custom/kaf_nextgenweb/images/bakers-hotline.png" alt="Baker’s Hotline" />
+      <img src="/themes/custom/kaf_nextgenweb/images/bakers-hotline.png" alt="Baker’s Hotline" loading="lazy"/>
       <div class="cta__content">
         <a class="btn btn--secondary" href="/launchchat">Chat with a baker</a>
       </div>
@@ -1361,39 +2118,10 @@
   
   
 
-      <a href="https://shop.kingarthurbaking.com/items/flat-pastry-brush">
-  
-      <img 
-      src="/sites/default/files/product-image/3in-flat-pastry-brush-1__78190.1633400301.386.513.jpg%3Fc%3D1.jpg" 
-      alt="" 
-      width="386" 
-      height="386"
-    />
-  
-  <div class="product__content">
-    <div class="product__reviews">
-              <span class="rating rating-is-45">4.5 out of 5 stars<span class="visually-hidden"> out of 5 stars</span></span>
-                  <span class="reviews__label">(10<span class="visually-hidden"> Reviews</span>)</span>
-                  </div>
-
-    <div class="product--card__title" data-sku="201755" data-price="$46.95">
-      <span>Flat Pastry Brush</span>
-
-    </div>
-  </div>
-
-      </a>
-  
-</div>
-
-<div role="article" class="product product--card">
-  
-  
-
       <a href="https://shop.kingarthurbaking.com/items/everything-bagel-topping">
   
       <img 
-      src="/sites/default/files/product-image/everything-bagel-topping-8-oz-1__05388.1633400242.386.513.jpg%3Fc%3D1.jpg" 
+      src="/sites/default/files/product-image/everything-bagel-topping-8-oz-1__05388.1672153429.386.513.jpg%3Fc%3D1.jpg" 
       alt="" 
       width="386" 
       height="386"
@@ -1407,6 +2135,35 @@
 
     <div class="product--card__title" data-sku="200024" data-price="$9.95">
       <span>Everything Bagel Topping</span>
+
+    </div>
+  </div>
+
+      </a>
+  
+</div>
+
+<div role="article" class="product product--card">
+  
+  
+
+      <a href="https://shop.kingarthurbaking.com/items/unbleached-all-purpose-flour">
+  
+      <img 
+      src="/sites/default/files/product-image/king-arthur-unbleached-all-purpose-flour-5-lb-1__96453__68278.1672250630.386.513.jpg%3Fc%3D1.jpg" 
+      alt="" 
+      width="386" 
+      height="386"
+    />
+  
+  <div class="product__content">
+    <div class="product__reviews">
+              <span class="rating rating-is-50">5 out of 5 stars<span class="visually-hidden"> out of 5 stars</span></span>
+                  <span class="reviews__label">(311<span class="visually-hidden"> Reviews</span>)</span>
+                  </div>
+
+    <div class="product--card__title" data-sku="01050" data-price="$6.95">
+      <span>All-Purpose Flour</span>
 
     </div>
   </div>
@@ -1441,7 +2198,7 @@
           <picture>
                   <source srcset="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH 1x, /sites/default/files/styles/featured_image_2x/public/2021-08/beautiful-burger-buns.jpg?itok=MmtRyF6R 2x" media="(min-width: 480px)" type="image/jpeg"/>
               <source srcset="/sites/default/files/styles/featured_image_sm/public/2021-08/beautiful-burger-buns.jpg?itok=NE8tXNRM 1x, /sites/default/files/styles/featured_image_sm_2x/public/2021-08/beautiful-burger-buns.jpg?itok=PFvAcmd8 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns" />
+                  <img src="/sites/default/files/styles/featured_image/public/2021-08/beautiful-burger-buns.jpg?itok=R8cduYHH" alt="Beautiful Burger Buns - select to zoom" />
 
   </picture>
 
@@ -1475,36 +2232,6 @@
   <div class="related__nodes">
     
 <div role="article" class="recipe recipe--card">
-  <a href="/recipes/refrigerator-dough-for-quick-soft-rolls-recipe" rel="bookmark">
-    
-    
-
-    <div class="recipe__media">
-                  <picture>
-                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/6587-3-large.jpg?itok=paooYkAL 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/6587-3-large.jpg?itok=eV5g5BvT 2x" media="(min-width: 768px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6587-3-large.jpg?itok=OUmR40SX 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/6587-3-large.jpg?itok=2522dSyE 2x" media="(min-width: 480px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/6587-3-large.jpg?itok=L0S2bSHN 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/6587-3-large.jpg?itok=5bnjXCLq 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6587-3-large.jpg?itok=OUmR40SX" alt="Refrigerator Dough for Quick Soft Rolls" />
-
-  </picture>
-
-
-
-
-    </div>
-
-    <div class="recipe__content">
-              <span class="eyebrow">Sandwich buns &amp; dinner rolls</span>
-      
-              <h5>
-          Refrigerator Dough for Quick Soft Rolls
-        </h5>
-          </div>
-  </a>
-</div>
-
-
-<div role="article" class="recipe recipe--card">
   <a href="/recipes/buttery-hot-dog-buns-recipe" rel="bookmark">
     
     
@@ -1535,16 +2262,16 @@
 
 
 <div role="article" class="recipe recipe--card">
-  <a href="/recipes/seeded-hamburger-buns-recipe" rel="bookmark">
+  <a href="/recipes/sourdough-hot-dog-buns-recipe" rel="bookmark">
     
     
 
     <div class="recipe__media">
                   <picture>
-                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/2019-08/multi-seed-hamburger-buns.jpg?itok=1WLjD2ju 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/2019-08/multi-seed-hamburger-buns.jpg?itok=t4JhFAjv 2x" media="(min-width: 768px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/2019-08/multi-seed-hamburger-buns.jpg?itok=g9ad0t3K 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/2019-08/multi-seed-hamburger-buns.jpg?itok=J4_dL5DD 2x" media="(min-width: 480px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/2019-08/multi-seed-hamburger-buns.jpg?itok=3wTu2E6f 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/2019-08/multi-seed-hamburger-buns.jpg?itok=qVA5fG9B 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/kaf_thumbnail/public/2019-08/multi-seed-hamburger-buns.jpg?itok=g9ad0t3K" alt="Seeded Hamburger Buns" />
+                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/2019-09/sourdough-hot-dog-buns.jpg?itok=vf2lAIXL 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/2019-09/sourdough-hot-dog-buns.jpg?itok=cXYaCdVI 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/2019-09/sourdough-hot-dog-buns.jpg?itok=6YnOPBY7 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/2019-09/sourdough-hot-dog-buns.jpg?itok=RZfL3gnw 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/2019-09/sourdough-hot-dog-buns.jpg?itok=5t6S0R5r 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/2019-09/sourdough-hot-dog-buns.jpg?itok=2tyWwrKi 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/kaf_thumbnail/public/2019-09/sourdough-hot-dog-buns.jpg?itok=6YnOPBY7" alt="Sourdough Hot Dog Buns" />
 
   </picture>
 
@@ -1557,7 +2284,7 @@
               <span class="eyebrow">Hamburger &amp; hot dog buns</span>
       
               <h5>
-          Seeded Hamburger Buns
+          Sourdough Hot Dog Buns
         </h5>
           </div>
   </a>
@@ -1565,16 +2292,16 @@
 
 
 <div role="article" class="recipe recipe--card">
-  <a href="/recipes/cornbread-hot-dog-buns-recipe" rel="bookmark">
+  <a href="/recipes/hamburger-or-hot-dog-buns-recipe" rel="bookmark">
     
     
 
     <div class="recipe__media">
                   <picture>
-                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/6569-3-large.jpg?itok=qTB9Vuct 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/6569-3-large.jpg?itok=a_AGg_1x 2x" media="(min-width: 768px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6569-3-large.jpg?itok=XpHZGAEw 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/6569-3-large.jpg?itok=gB_0DXEt 2x" media="(min-width: 480px)" type="image/jpeg"/>
-              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/6569-3-large.jpg?itok=ss09hKau 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/6569-3-large.jpg?itok=Y0yaWyrc 2x" type="image/jpeg"/>
-                  <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6569-3-large.jpg?itok=XpHZGAEw" alt="Cornbread Hot Dog Buns" />
+                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/6133-3-large.jpg?itok=tCCQl6TG 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/6133-3-large.jpg?itok=7_szK0Vv 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6133-3-large.jpg?itok=icjza3zP 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/6133-3-large.jpg?itok=yMvLshc3 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/6133-3-large.jpg?itok=nGi9rqzR 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/6133-3-large.jpg?itok=ZbwzywMO 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/6133-3-large.jpg?itok=icjza3zP" alt="Hamburger or Hot Dog Buns" />
 
   </picture>
 
@@ -1587,7 +2314,37 @@
               <span class="eyebrow">Hamburger &amp; hot dog buns</span>
       
               <h5>
-          Cornbread Hot Dog Buns
+          Hamburger or Hot Dog Buns
+        </h5>
+          </div>
+  </a>
+</div>
+
+
+<div role="article" class="recipe recipe--card">
+  <a href="/recipes/sourdough-hamburger-buns-recipe" rel="bookmark">
+    
+    
+
+    <div class="recipe__media">
+                  <picture>
+                  <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=45M0xAlx 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=eIL6HOmW 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=mvXI7R1e 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=kLvgstVO 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=Wyhkdnd7 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=pNFbHa8v 2x" type="image/jpeg"/>
+                  <img src="/sites/default/files/styles/kaf_thumbnail/public/2021-01/Sourdough_Hamburger_20-2_web_2.jpg?itok=mvXI7R1e" alt="Sourdough Hamburger Buns" />
+
+  </picture>
+
+
+
+
+    </div>
+
+    <div class="recipe__content">
+              <span class="eyebrow">Sourdough</span>
+      
+              <h5>
+          Sourdough Hamburger Buns
         </h5>
           </div>
   </a>
@@ -1616,7 +2373,7 @@
       <h3 aria-live="polite">Receive Recipes &amp; Special Offers</h3>
     
         <form id="footer-newsletter-form">
-<div class="form-item-email"><input aria-label="Email address" class="custom-form-field form-email" id="footer-newsletter-input" placeholder="Email address" type="email" value="" /></div>
+<div class="form-item-email"><input aria-label="Email address" class="custom-form-field form-email" id="footer-newsletter-input" placeholder="Email address" type="email" inputmode="email" autocapitalize="off" autocorrect="off" autocomplete="email" value="" /></div>
 
 <div class="form-actions webform-actions js-form-wrapper form-wrapper"><input class="webform-button--submit button" id="footer-email-submit" type="submit" value="submit" /></div>
 </form>
@@ -1691,7 +2448,7 @@
           <div class="region region-footer-first">
     <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerthebakerscatalogue-menu" id="block-kaf-nextgenweb-footerthebakerscatalogue">
       
-  <h2 id="block-kaf-nextgenweb-footerthebakerscatalogue-menu">Shop Online</h2>
+  <h3 id="block-kaf-nextgenweb-footerthebakerscatalogue-menu">Shop Online</h3>
   
 
         
@@ -1729,6 +2486,10 @@
                                                     <a href="/bakers-rewards">Baker&#039;s Rewards Plus</a>
                                       
                       </li>
+                              <li>
+                                                    <a href="https://shop.kingarthurbaking.com/affiliate-program">Affiliate Program</a>
+                                      
+                      </li>
               </ul>
       
 
@@ -1744,7 +2505,7 @@
           <div class="region region-footer-second">
     <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerforhomebakers-menu" id="block-kaf-nextgenweb-footerforhomebakers">
       
-  <h2 id="block-kaf-nextgenweb-footerforhomebakers-menu">For Home Bakers</h2>
+  <h3 id="block-kaf-nextgenweb-footerforhomebakers-menu">For Home Bakers</h3>
   
 
         
@@ -1763,7 +2524,7 @@
                                       
                       </li>
                               <li>
-                                                    <a href="/about/products/docs/flour-safety">Say No to Raw Dough</a>
+                                                    <a href="/policies/flour-safety">Say No to Raw Dough</a>
                                       
                       </li>
                               <li>
@@ -1793,7 +2554,7 @@
           <div class="region region-footer-third">
     <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerforprofessionalbakers-menu" id="block-kaf-nextgenweb-footerforprofessionalbakers">
       
-  <h2 id="block-kaf-nextgenweb-footerforprofessionalbakers-menu">For Professional Bakers</h2>
+  <h3 id="block-kaf-nextgenweb-footerforprofessionalbakers-menu">For Professional Bakers</h3>
   
 
         
@@ -1838,14 +2599,14 @@
           <div class="region region-footer-fourth">
     <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerkingarthurflour-menu" id="block-kaf-nextgenweb-footerkingarthurflour">
       
-  <h2 id="block-kaf-nextgenweb-footerkingarthurflour-menu">Our Company</h2>
+  <h3 id="block-kaf-nextgenweb-footerkingarthurflour-menu">Our Company</h3>
   
 
         
 
                 <ul class="menu-footer-king-arthur-flour menu-level-0">
                                     <li>
-                                                    <a href="/about/our-products">Our Product Lines</a>
+                                                    <a href="/about/our-products/">Our Product Lines</a>
                                       
                       </li>
                               <li>
@@ -1861,7 +2622,11 @@
                                       
                       </li>
                               <li>
-                                                    <a href="/about/diversity-equity-inclusion">Diversity, Equity, and Inclusion</a>
+                                                    <a href="/history">Our History</a>
+                                      
+                      </li>
+                              <li>
+                                                    <a href="/impact/diversity-equity-inclusion">Diversity, Equity, and Inclusion</a>
                                       
                       </li>
                               <li>
@@ -1887,10 +2652,27 @@
       
 <div class="region region-footer">
   <p class="copyright">Copyright &copy;
-    2022
+    2023
     King Arthur Baking Company, Inc. All rights reserved.  </p>
 
-      <nav role="navigation" aria-labelledby="block-footerlegal-menu" id="block-footerlegal">
+      <div id="block-adtaxiscript" class="block block-block-content block-block-content861bd971-b20c-440a-bfd8-fe2fa87e45f7">
+  
+    
+        <script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+ (function () {
+var tagjs = document.createElement("script");
+var s = document.getElementsByTagName("script")[0]; tagjs.async = true;
+tagjs.src = "//s.btstatic.com/tag.js#site=1PR3l09"; s.parentNode.insertBefore(tagjs, s);
+}());
+
+//--><!]]>
+</script><noscript>
+<iframe src="//s.thebrighttag.com/iframe?c=1PR3l09" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</noscript>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-footerlegal-menu" id="block-footerlegal">
             
   <h2 class="visually-hidden" id="block-footerlegal-menu">Footer - Legal</h2>
   
@@ -1899,7 +2681,7 @@
 
                 <ul class="menu-footer-legal menu-level-0">
                                     <li>
-                                                    <a href="/about/products/docs/supply-chain-disclosure">Supply Chain Disclosure</a>
+                                                    <a href="/policies/supply-chain-disclosure">Supply Chain Disclosure</a>
                                       
                       </li>
                               <li>
@@ -1924,23 +2706,6 @@
 
 
   </nav>
-<div id="block-adtaxiscript" class="block block-block-content block-block-content861bd971-b20c-440a-bfd8-fe2fa87e45f7">
-  
-    
-        <script type="text/javascript">
-<!--//--><![CDATA[// ><!--
- (function () {
-var tagjs = document.createElement("script");
-var s = document.getElementsByTagName("script")[0]; tagjs.async = true;
-tagjs.src = "//s.btstatic.com/tag.js#site=1PR3l09"; s.parentNode.insertBefore(tagjs, s);
-}());
-
-//--><!]]>
-</script><noscript>
-<iframe src="//s.thebrighttag.com/iframe?c=1PR3l09" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</noscript>
-
-  </div>
 
   </div>
 
@@ -1973,7 +2738,7 @@ tagjs.src = "//s.btstatic.com/tag.js#site=1PR3l09"; s.parentNode.insertBefore(ta
           <button class="search-submit" name="search-submit" aria-label="Submit">
             <img class="search-image" style="min-width: 17px;" alt="" src="/themes/custom/kaf_nextgenweb/images/search--white.svg"/>
             <span class="visually-hidden">Submit</span>
-          </button/>
+          </button>
         </div>
       </div>
     </div>
@@ -1987,16 +2752,16 @@ tagjs.src = "//s.btstatic.com/tag.js#site=1PR3l09"; s.parentNode.insertBefore(ta
     
         <div class="wysiwyg__grid grid-has-3">
 <div class="wysiwyg__grid-item"><span class="eyebrow">Popular in recipes</span>
-<ul><li><a href="/recipes/crispy-cheesy-pan-pizza-recipe">Crispy Cheesy Pan Pizza</a></li>
-	<li><a href="/recipes/classic-birthday-cake-recipe">Classic Birthday Cake</a></li>
+<ul><li><a href="/recipes/cinnamon-crisp-coffee-cake-recipe">Cinnamon-Crisp Coffee Cake</a></li>
+	<li><a href="/recipes/ultimate-sandwich-bagels-recipe">Ultimate Sandwich Bagels</a></li>
 	<li><a href="/recipes/sourdough-starter-recipe">Sourdough Starter</a></li>
 </ul></div>
 
 <div class="wysiwyg__grid-item"><span class="eyebrow">Popular in products</span>
 
-<ul><li><a href="https://shop.kingarthurbaking.com/items/king-arthur-unbleached-all-purpose-flour-8-lb">Unbleached All-Purpose Flour</a></li>
-	<li><a href="https://shop.kingarthurbaking.com/items/gluten-free-measure-for-measure-flour-3-lb">Gluten-Free Measure for Measure</a></li>
-	<li><a href="https://shop.kingarthurbaking.com/items/baking-parchment-paper-set-of-100-half-sheets">Baking Parchment Paper</a></li>
+<ul><li><a href="https://shop.kingarthurbaking.com/items/unbleached-all-purpose-flour">Unbleached All-Purpose Flour</a></li>
+	<li><a href="https://shop.kingarthurbaking.com/items/gluten-free-measure-for-measure-flour">Gluten-Free Measure for Measure</a></li>
+	<li><a href="https://shop.kingarthurbaking.com/items/half-sheet-baking-parchment-paper">Baking Parchment Paper</a></li>
 </ul></div>
 
 <div class="wysiwyg__grid-item"><span class="eyebrow">Popular in blog</span>
@@ -2023,14 +2788,15 @@ tagjs.src = "//s.btstatic.com/tag.js#site=1PR3l09"; s.parentNode.insertBefore(ta
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/14606","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ckeditor_accordion\/accordion_style,cleantalk\/apbct-public,core\/picturefill,entity_embed\/caption,eu_cookie_compliance\/eu_cookie_compliance_bare,kab_bigcommerce\/kab_bigcommerce,kab_customer\/kab_customer,kaf_ga_tracking\/kaf_ga_tracking,kaf_helpscout\/helpscout,kaf_nextgenweb\/digioh,kaf_nextgenweb\/global-scripts,kaf_nextgenweb\/global-styling,kaf_nextgenweb\/status-message-ui,kaf_recipe_box\/recipebox_native,kaf_share\/kaf_share,system\/base","theme":"kaf_nextgenweb","theme_token":null},"ajaxTrustedUrl":[],"kabBigCommerce":{"apiBaseUrl":"https:\/\/shop.kingarthurbaking.com","appClientId":"j72v63q1r6g7gjpzidvupu142ducavb"},"kaf_helpscout":{"beacon_id":"fd820c57-521c-4c0a-9eff-0ba927533437"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":true,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \u003Cp\u003EThis site uses cookies to provide you with the best experience possible.\u003C\/p\u003E\n\n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ERead our Privacy Policy\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ERead our Privacy Policy\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/policies\/privacy.html","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"default","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":null,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":null,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"open_by_default":true},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"kaf_recipe_box":{"api_base_url":"https:\/\/www.kingarthurbaking.com\/api\/recipebox","shop_signin_url":"https:\/\/shop.kingarthurbaking.com\/login.php","bc_enabled":true},"kaf_search":{"algolia_app_id":"HWPWEWOTF5","algolia_api_key":"f76e4ac912eee478c11cad084afe4ecb"},"user":{"uid":0,"permissionsHash":"c50293c644408a7d52ffd7353eafe0b32da2035809d230aaf4ae7d894d3a6a42"}}</script>
-<script src="/sites/default/files/js/js__YYRcTIGd18pIPs7QuizNRJiFgEf-7fqrOmcgL23IcQ.js"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/14606","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ckeditor_accordion\/accordion_style,cleantalk\/apbct-public,core\/picturefill,entity_embed\/caption,eu_cookie_compliance\/eu_cookie_compliance_bare,kab_bigcommerce\/kab_bigcommerce,kab_customer\/kab_customer,kaf_ga_tracking\/kaf_ga_tracking,kaf_helpscout\/helpscout,kaf_nextgenweb\/digioh,kaf_nextgenweb\/global-scripts,kaf_nextgenweb\/global-styling,kaf_nextgenweb\/status-message-ui,kaf_recipe\/recipe-ingredients-modal,kaf_recipe_box\/recipebox_native,kaf_share\/kaf_share,system\/base","theme":"kaf_nextgenweb","theme_token":null},"ajaxTrustedUrl":[],"kabBigCommerce":{"apiBaseUrl":"https:\/\/shop.kingarthurbaking.com","appClientId":"j72v63q1r6g7gjpzidvupu142ducavb","apiCustomerNameUrl":"https:\/\/www.kingarthurbaking.com\/api\/customer_name"},"kaf_helpscout":{"beacon_id":"fd820c57-521c-4c0a-9eff-0ba927533437"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":true,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \u003Cp\u003EThis site uses cookies to provide you with the best experience possible.\u003C\/p\u003E\n\n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ERead our Privacy Policy\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ERead our Privacy Policy\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/policies\/privacy.html","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"default","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button \u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":null,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":null,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":"","olivero_secondary_button_classes":"","close_button_action":"","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"recipeAdList":[{"href":"https:\/\/shop.kingarthurbaking.com","src":"https:\/\/www.kingarthurbaking.com\/sites\/default\/files\/2022-10\/shop-rdp-generic.jpg","alt":"We have everything a baker needs: shop now"},{"href":"\/baking-school","src":"https:\/\/www.kingarthurbaking.com\/sites\/default\/files\/2022-10\/baking-school-rdp.jpg","alt":"Take your baking to the next level: virtual classes"}],"productsModal":{"productUrl":"\/api\/product-link\/__sku__","recipeUrl":"\/api\/shop-this-recipe\/__recipe_id__","storeUrl":"https:\/\/shop.kingarthurbaking.com","addToCartUrl":"https:\/\/www.kingarthurbaking.com\/api\/add_to_cart"},"kaf_recipe_box":{"api_base_url":"https:\/\/www.kingarthurbaking.com\/api\/recipebox","shop_signin_url":"https:\/\/shop.kingarthurbaking.com\/login.php","bc_enabled":true},"kaf_search":{"algolia_app_id":"HWPWEWOTF5","algolia_api_key":"6860dedd7a22f80f3bcb0402d1c7215a"},"user":{"uid":0,"permissionsHash":"c50293c644408a7d52ffd7353eafe0b32da2035809d230aaf4ae7d894d3a6a42"}}</script>
+<script src="/sites/default/files/js/js_c-qSEUIrUpYPP26gmmq6uv9sTgvfPwQ8aIhfS35uVYg.js"></script>
+<script src="/modules/custom/kaf_helpscout/js/helpscout.js?v=9.4.9" defer></script>
+<script src="/sites/default/files/js/js_8iuOMzqGBDKH6VQPOWCRHy7-8YVFXkvr3x7Tf2BMNDM.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.includes,Promise,Object.assign,Object.entries"></script>
-<script src="/sites/default/files/js/js_quXgSltOlV1dLyNm5uYOpwt0biVf15R-6JrlHm-Kbf8.js"></script>
+<script src="/sites/default/files/js/js_3kRgtnE5z8M1XdFgK-bI1K9kTnZYbqqfDb478kC0xew.js"></script>
 <script src="https://www.lightboxcdn.com/vendor/e4f80abf-94a1-4384-b89c-aed5749bcc2d/lightbox_speed.js" async></script>
-<script src="/sites/default/files/js/js_2YaXSay7C8woVi1VfveleEVrYbngmHpQ6SaSya0OH_w.js"></script>
-<script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.js?v=1.19" defer></script>
-<script src="/sites/default/files/js/js__-XZdbfWuemcY4DwMksiT7LIeKuYxexrE0Ifow4Q4EA.js"></script>
+<script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.min.js?v=9.4.9" defer></script>
+<script src="/sites/default/files/js/js_YdfBjaGEC88sUfWOUrl6kKr-2PyM6PQPhH1vyGBPHog.js"></script>
 
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6b8b93db2d","applicationID":"401100790","transactionName":"YABQZUUAChBXU0xYDVlKZ0NeTg0NUlVAHxJfFQ==","queueTime":0,"applicationTime":142,"atts":"TEdTEw0aGR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  </body>
 </html>

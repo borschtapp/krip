@@ -2,7 +2,7 @@
   "url": "https://julieblanner.com/basil-lemon-pasta/",
   "name": "Lemon Basil Pasta",
   "description": "Light and refreshing Lemon Basil Pasta made with staple ingredients and topped with fresh strips of basil for amazing flavor.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://julieblanner.com/wp-content/uploads/2016/04/lemon-pasta.jpg",
   "image": [
     {
@@ -18,6 +18,12 @@
       "url": "https://julieblanner.com/wp-content/uploads/2016/04/basil-lemon-sauce-e1606760377870-480x270.jpg"
     }
   ],
+  "publisher": {
+    "name": "Julie Blanner",
+    "description": "Recipes, Home Decor and Design",
+    "url": "https://julieblanner.com",
+    "logo": "https://julieblanner.com/wp-content/uploads/2018/11/favicon.png"
+  },
   "prepTime": 5,
   "cookTime": 10,
   "recipeCategory": [
@@ -75,12 +81,8 @@
     "sugarContent": "3 g"
   },
   "aggregateRating": {
-    "ratingCount": 17,
-    "ratingValue": 4.95
-  },
-  "publisher": {
-    "name": "Julie Blanner",
-    "url": "https://julieblanner.com"
+    "ratingCount": 21,
+    "ratingValue": 4.96
   },
   "datePublished": "2020-04-16T08:21:00Z"
 }

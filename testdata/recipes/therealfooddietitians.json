@@ -2,7 +2,7 @@
   "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/",
   "name": "Sweet and Smoky Shredded Brussels Sprout Slaw",
   "description": "This shredded Brussels sprouts salad will have your mouth bursting with flavor. The smoked almonds and salty bacon with the combination of sweet dates, is perfection.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-4.jpg",
   "image": [
     {
@@ -20,7 +20,14 @@
   ],
   "author": {
     "name": "Jessica Beacom",
-    "url": "https://therealfooddietitians.com/about/"
+    "url": "https://therealfooddietitians.com/about/",
+    "image": "https://therealfooddietitians.com/wp-content/uploads/2021/08/cropped-favicon-96x96.png"
+  },
+  "publisher": {
+    "name": "The Real Food Dietitians",
+    "description": "Eat well. Live well. Be well.",
+    "url": "https://therealfooddietitians.com",
+    "logo": "https://therealfooddietitians.com/wp-content/uploads/2019/05/RFD_Logo_500-x-500px.png"
   },
   "prepTime": 20,
   "totalTime": 20,
@@ -78,14 +85,14 @@
     "sodiumContent": "236mg",
     "sugarContent": "7g"
   },
-  "video": {
-    "name": "Sweet and Smoky Brussels Slaw",
-    "description": "Change things up this week with this irresistible Sweet and Smoky Brussels Slaw! A Whole30, paleo, gluten-free, dairy-free salad option.",
-    "contentUrl": "https://content.jwplatform.com/videos/6iw7vmhg.mp4",
-    "thumbnailUrl": "https://content.jwplatform.com/thumbs/6iw7vmhg-720.jpg"
+  "aggregateRating": {
+    "reviewCount": 3,
+    "ratingValue": 5
   },
-  "publisher": {
-    "name": "The Real Food Dietitians",
-    "url": "https://therealfooddietitians.com"
+  "video": {
+    "name": "”Sweet",
+    "description": "”Change",
+    "contentUrl": "https://content.jwplatform.com/videos/”6iw7vmhg”.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/”6iw7vmhg”-720.jpg"
   }
 }

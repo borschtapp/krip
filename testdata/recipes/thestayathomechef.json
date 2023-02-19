@@ -2,7 +2,7 @@
   "url": "https://thestayathomechef.com/pancake-recipe/",
   "name": "Perfect Pancakes",
   "description": "The Perfect Homemade Pancake Recipe is easy to make with ingredients you probably already have on hand. This recipe can easily be turned into a pancake mix or into buttermilk pancakes as well. It's the perfect versatile all-in one recipe.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://thestayathomechef.com/wp-content/uploads/2018/03/Perfect-Pancakes-16x9-1.jpg",
   "image": [
     {
@@ -10,7 +10,14 @@
     }
   ],
   "author": {
-    "name": "Rachel Farnsworth"
+    "name": "Rachel Farnsworth",
+    "url": "https://thestayathomechef.com/author/stayathomechefbloggmail-com/"
+  },
+  "publisher": {
+    "name": "thestayathomechef.com",
+    "description": "Restaurant quality recipes you can easily make at home.",
+    "url": "https://thestayathomechef.com",
+    "logo": "https://thestayathomechef.com/wp-content/uploads/2022/12/TSAHC_Words_Horizontal_Skillet_LogoTEAL.png"
   },
   "prepTime": 5,
   "cookTime": 15,
@@ -80,10 +87,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=-uo-K1HGyuE",
     "thumbnailUrl": "https://i.ytimg.com/vi/-uo-K1HGyuE/hqdefault.jpg",
     "uploadDate": "2018-03-14T14:30:01Z"
-  },
-  "publisher": {
-    "name": "thestayathomechef.com",
-    "url": "https://thestayathomechef.com"
   },
   "datePublished": "2018-03-14T08:30:24Z"
 }

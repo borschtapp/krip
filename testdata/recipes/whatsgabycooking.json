@@ -2,21 +2,30 @@
   "url": "https://whatsgabycooking.com/vegetarian-quinoa-bake/",
   "name": "Vegetarian Quinoa Bake",
   "description": "Grab the recipe for this Vegetarian Quinoa Bake loaded with corn, black beans, tons of cheese, chiles and my famous salsa!",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://cdn.whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://whatsgabycooking.com/wp-content/uploads/WGC-Quinoa-Bake-copy-2.jpg",
   "image": [
     {
-      "url": "https://cdn.whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-500x500.jpg"
+      "url": "https://whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2.jpg"
     },
     {
-      "url": "https://cdn.whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-500x375.jpg"
+      "url": "https://whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-500x500.jpg"
     },
     {
-      "url": "https://cdn.whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-480x270.jpg"
+      "url": "https://whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-500x375.jpg"
+    },
+    {
+      "url": "https://whatsgabycooking.com/wp-content/uploads/2017/10/WGC-Quinoa-Bake-copy-2-480x270.jpg"
     }
   ],
   "author": {
-    "name": "Gaby"
+    "name": "Gaby",
+    "image": "https://whatsgabycooking.com/wp-content/uploads/2021/09/cropped-wgc-logo-small-g.png"
+  },
+  "publisher": {
+    "name": "What's Gaby Cooking",
+    "url": "https://whatsgabycooking.com",
+    "logo": "https://whatsgabycooking.com/wp-content/uploads/2021/09/cropped-wgc-logo-small-g.png"
   },
   "prepTime": 5,
   "cookTime": 40,
@@ -26,17 +35,6 @@
   ],
   "recipeCuisine": [
     "Tex Mex"
-  ],
-  "keywords": [
-    "Quinoa Bake",
-    "vegetarian Quinoa Bake",
-    "salsa Quinoa Bake",
-    "cheesy Quinoa Bake",
-    "Quinoa Bake with salsa",
-    "Quinoa Bake with vegetables",
-    "easy Quinoa Bake",
-    "how to bake quinoa",
-    "weeknight quinoa dinner"
   ],
   "recipeYield": 6,
   "recipeIngredient": [
@@ -73,12 +71,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 1,
+    "ratingCount": 2,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "What's Gaby Cooking",
-    "url": "https://whatsgabycooking.com"
   },
   "datePublished": "2017-10-16T10:35:14Z"
 }

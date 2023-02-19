@@ -2,7 +2,7 @@
   "url": "https://www.dr.dk/mad/opskrift/millionaires-shortbread",
   "name": "Millionaires’ Shortbread",
   "description": "Sprød mørdejsbund, et lag smægtende, blød karamel og endelig et lag chokolade. Disse kagesnitter er svære at holde fingrene fra! Del dem med dine kære, eller spis dem allesammen selv og tag konsekvensen med badevægten senere…",
-  "inLanguage": "da_DK",
+  "inLanguage": "da-DK",
   "thumbnailUrl": "https://asset.dr.dk/imagescaler01/http://mad-recipe-pictures-dr-dk.s3.amazonaws.com/prod/recipe/millionaires-shortbread-jpg-1597218581.jpg",
   "image": [
     {
@@ -18,6 +18,10 @@
   ],
   "author": {
     "name": "Brdr. Price"
+  },
+  "publisher": {
+    "name": "DR Mad",
+    "url": "https://www.dr.dk"
   },
   "totalTime": 120,
   "recipeYield": 8,
@@ -46,9 +50,5 @@
       "text": "Til karamellen kommes den kondenserede mælk i en gryde sammen med farin, smør, sirup, vanille og salt. Bring massen i kog og lad den koge roligt til den når 110 grader på et sukkertermometer - eller til massen er tyk og gyldenbrun. Hæld karamellem over den stadig lune kagebund. Lad derpå kagen køle helt af. Smelt chokoladen i et vandbad sammen med smørret, bland godt og hæld så chokoladen ovenpå karamellen. Jævn ud med en spatel. Sæt kagen på køl. Tag kagen ud af formen og fjern bagepapiret. Skær kagen i små firkanter som opbevares på køl til de skal serveres."
     }
   ],
-  "publisher": {
-    "name": "DR Mad",
-    "url": "https://www.dr.dk"
-  },
   "datePublished": "2020-08-12T11:48:45Z"
 }

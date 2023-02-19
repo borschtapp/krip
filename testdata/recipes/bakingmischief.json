@@ -2,7 +2,7 @@
   "url": "https://bakingmischief.com/barbacoa-burrito-bowls/",
   "name": "Barbacoa Burrito Bowls",
   "description": "These barbacoa burrito bowls are loaded with tender and tangy homemade barbacoa and all your favorite burrito toppings layered over a bed of cilantro lime rice.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://bakingmischief.com/wp-content/uploads/2020/12/barbacoa-burrito-bowls-image-square-2.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Tracy"
+    "name": "Tracy",
+    "url": "https://bakingmischief.com/author/baking10_wp/"
+  },
+  "publisher": {
+    "name": "Baking Mischief",
+    "description": "Good Food, Nerdy Recipes, Living Well",
+    "url": "https://bakingmischief.com",
+    "logo": "https://bakingmischief.com/wp-content/uploads/2019/04/baking-mischief-logo-square.jpg"
   },
   "prepTime": 30,
   "cookTime": 160,
@@ -135,10 +142,6 @@
   "nutrition": {
     "calories": "824 kcal",
     "servingSize": "1 serving"
-  },
-  "publisher": {
-    "name": "Baking Mischief",
-    "url": "https://bakingmischief.com"
   },
   "datePublished": "2020-12-14T01:00:18Z"
 }

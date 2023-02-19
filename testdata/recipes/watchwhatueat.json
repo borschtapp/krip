@@ -1,8 +1,8 @@
 {
   "url": "https://www.watchwhatueat.com/healthy-instant-pot-cauliflower-head/",
-  "name": "Garlic And Herb Instant Pot Cauliflower With Delicious Gravy",
+  "name": "Healthy Instant Pot Cauliflower With Gravy",
   "description": "Whole cauliflower head flavored with fresh garlic and herbs and cooked in the pressure cooker. Also, learn to make delicious gravy that compliments this steamed whole cauliflower dish.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.watchwhatueat.com/wp-content/uploads/2018/10/Instant-Pot-Whole-Cauliflower-5.jpg",
   "image": [
     {
@@ -19,11 +19,23 @@
     }
   ],
   "author": {
-    "name": "Swati Kadam Gulati"
+    "name": "Swati Kadam Gulati",
+    "description": "We are Swati and Tushar, our passion for food and cooking has now led us to share some healthy, tasty recipes and the benefits of eating certain ingredients with the goal of inspiring you to eat well and live well.",
+    "url": "https://www.watchwhatueat.com/author/swatitushar/",
+    "image": "https://www.watchwhatueat.com/wp-content/uploads/2015/11/WWUE-logo-sub-96x96.png"
+  },
+  "publisher": {
+    "name": "Watch What U Eat",
+    "description": "Easy healthy meals | healthy family meals | healthy dinner recipes",
+    "url": "https://www.watchwhatueat.com",
+    "logo": "https://www.watchwhatueat.com/wp-content/uploads/2015/11/WWUE-logo-sub.png"
   },
   "prepTime": 10,
   "cookTime": 15,
   "totalTime": 25,
+  "suitableForDiet": [
+    "https://schema.org/LowFatDiet"
+  ],
   "recipeCategory": [
     "Lunch / Dinner",
     "Main Course"
@@ -102,12 +114,8 @@
     "sugarContent": "7.2 g"
   },
   "aggregateRating": {
-    "ratingCount": 13,
-    "ratingValue": 4.77
-  },
-  "publisher": {
-    "name": "Watch What U Eat",
-    "url": "https://www.watchwhatueat.com"
+    "ratingCount": 17,
+    "ratingValue": 4.59
   },
   "datePublished": "2018-10-17T13:39:21Z"
 }

@@ -2,10 +2,18 @@
   "url": "https://nourishedbynutrition.com/healthy-salsa-verde-chicken-enchiladas-dairy-free/",
   "name": "Salsa Verde Chicken Enchiladas",
   "description": "Healthy salsa verde chicken enchiladas made grain-free and dairy-free with cassava flour tortillas and vegan cashew queso. This enchilada recipe uses store-bought salsa verde and cooked shredded chicken for an easy weeknight dinner!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://nourishedbynutrition.com/wp-content/uploads/2020/08/Salsa-Verde-Chicken-Enchiladas-8.jpg",
   "author": {
-    "name": "Jessica Bippen"
+    "name": "Jessica Bippen",
+    "url": "https://nourishedbynutrition.com/author/jessica/",
+    "image": "https://secure.gravatar.com/avatar/c7d7463467396fcc216c80e4fd5d4412?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Nourished By Nutrition",
+    "description": "Making it easy to eat well and create a balanced lifestyle so you can live your healthiest, most vibrant life.",
+    "url": "https://nourishedbynutrition.com",
+    "logo": "https://nourishedbynutrition.com/wp-content/uploads/2019/06/Logo.png"
   },
   "prepTime": 10,
   "cookTime": 25,
@@ -55,9 +63,5 @@
   "aggregateRating": {
     "reviewCount": 1,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Nourished By Nutrition",
-    "url": "https://nourishedbynutrition.com"
   }
 }

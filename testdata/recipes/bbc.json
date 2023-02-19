@@ -12,6 +12,10 @@
   "author": {
     "name": "Rob Burns"
   },
+  "publisher": {
+    "name": "BBC Food",
+    "url": "https://www.bbc.co.uk"
+  },
   "prepTime": 120,
   "cookTime": 10,
   "suitableForDiet": [
@@ -25,6 +29,7 @@
   ],
   "keywords": [
     "our best cheesecake",
+    "alternative christmas cake",
     "boozy puddings",
     "decadent dessert",
     "easy dinner party",
@@ -34,6 +39,7 @@
     "irresistible irish food",
     "luxury christmas desserts",
     "no-bake cheesecakes",
+    "no-cook christmas",
     "no-cook christmas desserts",
     "vegetarian st patrick's day menu",
     "christmas",
@@ -70,11 +76,7 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 83,
-    "ratingValue": 4.542168674698795
-  },
-  "publisher": {
-    "name": "BBC Food",
-    "url": "https://www.bbc.co.uk"
+    "ratingCount": 90,
+    "ratingValue": 4.5777777777777775
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://www.kochbar.de/rezept/549118/Ligurisches-Huehnerragout-mit-Zucchini-Spezzatino-con-zucchine.html",
   "name": "Ligurisches Hühnerragout mit Zucchini – Spezzatino con zucchine",
   "description": "Eine gut gewürztes Ragout als Zwischenmahlzeit oder mit Baquettebrot eine vollständige Mahlzeit.",
-  "inLanguage": "de_DE",
+  "inLanguage": "de-DE",
   "thumbnailUrl": "https://ais.kochbar.de/kbrezept/549118_1087108/1500x1500/ligurisches-huehnerragout-mit-zucchini-spezzatino-con-zucchine-rezept-bild-nr-2.jpg",
   "image": [
     {
@@ -11,6 +11,10 @@
   ],
   "author": {
     "name": "Antareja"
+  },
+  "publisher": {
+    "name": "kochbar.de",
+    "url": "https://www.kochbar.de"
   },
   "prepTime": 30,
   "cookTime": 40,
@@ -101,10 +105,6 @@
     "ratingValue": 4.75,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "kochbar.de",
-    "url": "https://www.kochbar.de"
   },
   "datePublished": "2020-06-26T09:05:00+02:00"
 }

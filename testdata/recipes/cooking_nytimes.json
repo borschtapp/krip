@@ -6,11 +6,21 @@
   "thumbnailUrl": "https://static01.nyt.com/images/2020/05/28/dining/lp-cacio-e-pepe-crackers/merlin_172657737_693784a8-529d-4496-9e60-3ff2af3c7735-threeByTwoMediumAt2X.jpg",
   "image": [
     {
-      "url": "https://static01.nyt.com/images/2020/05/28/dining/lp-cacio-e-pepe-crackers/merlin_172657737_693784a8-529d-4496-9e60-3ff2af3c7735-articleLarge.jpg"
+      "url": "https://static01.nyt.com/images/2020/05/28/dining/lp-cacio-e-pepe-crackers/merlin_172657737_693784a8-529d-4496-9e60-3ff2af3c7735-mediumSquareAt3X.jpg"
+    },
+    {
+      "url": "https://static01.nyt.com/images/2020/05/28/dining/lp-cacio-e-pepe-crackers/merlin_172657737_693784a8-529d-4496-9e60-3ff2af3c7735-videoSixteenByNineJumbo1600.jpg"
+    },
+    {
+      "url": "https://static01.nyt.com/images/2020/05/28/dining/lp-cacio-e-pepe-crackers/merlin_172657737_693784a8-529d-4496-9e60-3ff2af3c7735-superJumbo.jpg"
     }
   ],
   "author": {
     "name": "Laurie Ellen Pellicano"
+  },
+  "publisher": {
+    "name": "NYT Cooking",
+    "url": "https://cooking.nytimes.com"
   },
   "totalTime": 45,
   "recipeCategory": [
@@ -70,12 +80,20 @@
       "text": "Once fully cooled, store crackers in a tin or covered container for up to 4 weeks."
     }
   ],
-  "aggregateRating": {
-    "ratingCount": 198,
-    "ratingValue": 4
+  "nutrition": {
+    "calories": "233",
+    "carbohydrateContent": "16 grams",
+    "fatContent": "14 grams",
+    "fiberContent": "1 gram",
+    "proteinContent": "10 grams",
+    "saturatedFatContent": "9 grams",
+    "sodiumContent": "282 milligrams",
+    "sugarContent": "0 grams",
+    "transFatContent": "0 grams",
+    "unsaturatedFatContent": "4 grams"
   },
-  "publisher": {
-    "name": "NYT Cooking",
-    "url": "https://cooking.nytimes.com"
+  "aggregateRating": {
+    "ratingCount": 221,
+    "ratingValue": 4
   }
 }

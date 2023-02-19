@@ -2,7 +2,7 @@
   "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/",
   "name": "Greek Chicken Kabobs",
   "description": "These greek chicken kabobs are incredibly flavorful and a perfect grilling recipe. Serve this with a homemade tzaztiki sauce!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3.jpg",
   "image": [
     {
@@ -15,8 +15,11 @@
       "url": "https://downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3-480x270.jpg"
     }
   ],
-  "author": {
-    "name": "Lisa Bryan"
+  "publisher": {
+    "name": "Downshiftology",
+    "description": "Healthy eating, living and travel.",
+    "url": "https://downshiftology.com",
+    "logo": "https://downshiftology.com/wp-content/uploads/2018/10/logo.png"
   },
   "prepTime": 30,
   "cookTime": 25,
@@ -94,10 +97,6 @@
   "aggregateRating": {
     "ratingCount": 25,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Downshiftology",
-    "url": "https://downshiftology.com"
   },
   "datePublished": "2020-09-24T09:56:54Z"
 }

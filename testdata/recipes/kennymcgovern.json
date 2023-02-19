@@ -2,8 +2,13 @@
   "url": "https://kennymcgovern.com/crispy-chicken-strips",
   "name": "Crispy Chicken Strips",
   "description": "Coated with panko breadcrumbs, these Crispy Chicken Strips are perfect served alongside fresh coleslaw \u0026 your favourite dips. Get the recipe here!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://kennymcgovern.com/wp-content/uploads/2020/02/crispy-chicken-strips-scaled.jpg",
+  "publisher": {
+    "name": "Kenny McGovern",
+    "description": "Fast food, street food \u0026 more.",
+    "url": "https://kennymcgovern.com"
+  },
   "prepTime": 10,
   "cookTime": 6,
   "totalTime": 16,
@@ -90,9 +95,5 @@
       ]
     }
   ],
-  "publisher": {
-    "name": "Kenny McGovern",
-    "url": "https://kennymcgovern.com"
-  },
   "datePublished": "2020-02-12T15:25:27Z"
 }

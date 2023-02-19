@@ -2,7 +2,7 @@
   "url": "https://livelytable.com/easy-chipotle-shrimp-tacos/",
   "name": "Easy Chipotle Shrimp Tacos",
   "description": "These easy chipotle shrimp tacos with a quick cilantro jalapeño sauce are flavorful, healthy and come together in just 15 minutes! They're perfect for weeknight dinners! (gluten-free)",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://livelytable.com/wp-content/uploads/2017/05/chipotle-shrimp-tacos.jpg",
   "image": [
     {
@@ -17,7 +17,15 @@
   ],
   "author": {
     "name": "Kaleigh",
-    "url": "https://livelytable.com/about-me/"
+    "jobTitle": "Registered Dietitian",
+    "description": "Kaleigh McMordie, MCN, RDN, LD, is a Registered Dietitian and Licensed Dietitian in Abilene, Texas, as well as a member of the Baby Led Weaning Dietitians Network. Kaleigh can be found at kaleighmcmordie.com.",
+    "url": "https://livelytable.com/about/",
+    "image": "https://secure.gravatar.com/avatar/b62c4bc773289034d61bd347edff2007?s=96\u0026d=mm\u0026r=pg"
+  },
+  "publisher": {
+    "name": "Lively Table",
+    "url": "https://livelytable.com",
+    "logo": "https://livelytable.com/wp-content/uploads/2019/04/logo-white-background.png"
   },
   "prepTime": 10,
   "cookTime": 5,
@@ -91,9 +99,5 @@
     "sodiumContent": "134 mg",
     "sugarContent": "1.4 g",
     "transFatContent": "0 g"
-  },
-  "publisher": {
-    "name": "Lively Table",
-    "url": "https://livelytable.com"
   }
 }

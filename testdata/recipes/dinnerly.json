@@ -2,7 +2,7 @@
   "url": "https://dinnerly.de/menu/114391-koestliches-haehnchen-mit-erdnusssauce-in-einer-brokkoli-nudelpfanne",
   "name": "Köstliches Hähnchen mit Erdnusssauce in einer Brokkoli-Nudelpfanne",
   "description": "Hähnchen mit Erdnusssauce ist ein Klassiker auf den Menüs der Asia-Restaurants. Daran haben wir uns ein Beispiel genommen und das Gericht noch weiter verfeinert: Wir verzichten auf die Panade – die wird in der Sauce sowieso nur pappig – und ergänzen die Nudelpfanne stattdessen mit frischem Brokkoli und ein paar extra Erdnüssen für ganz viel Crunch auf dem Teller. Einfach köstlich – da ist die Pfanne ganz schnell leer …",
-  "inLanguage": "de_DE",
+  "inLanguage": "de-DE",
   "thumbnailUrl": "https://marleyspoon.com/media/recipes/114391/main_photos/thumb/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
   "image": [
     {
@@ -16,7 +16,7 @@
     "name": "Jessica",
     "knowsAbout": "Mir geht immer das Herz auf, wenn ich sehe wie Leute bei einem Essen zusammenkommen. Das ist der Grund, warum ich es liebe, anderen etwas zum Thema Essen beizubringen oder sie zum Kochen inspirieren kann. Ich hoffe, dass auch die nächsten Generationen solche Traditionen beibehalten und nicht vergessen, dass Liebe durch den Magen geht und die Menschen verbindet.",
     "description": "Essen bringt die Menschen zusammen!",
-    "image": "https://marleyspoon.com/media/chefs/1204/avatars/medium/avatar-88853286603cef84bb4e7ec8174f6471.png"
+    "image": "https://marleyspoon.com/media/chefs/1354/avatars/medium/avatar-88853286603cef84bb4e7ec8174f6471.png"
   },
   "publisher": {
     "name": "Dinnerly",
@@ -33,12 +33,12 @@
   ],
   "recipeYield": 2,
   "recipeIngredient": [
-    "1 Päckchen Hühnerbrühgewürz",
-    "25ml Ketjap Manis",
-    "50g Erdnüsse, geröstet \u0026 gesalzen",
-    "1 Packung Hähnchenschenkelfilet",
-    "1 großer Brokkoli",
     "250g breite Mie-Nudeln",
+    "1 großer Brokkoli",
+    "1 Packung Hähnchenschenkelfilet",
+    "50g Erdnüsse, geröstet \u0026 gesalzen",
+    "25ml Ketjap Manis",
+    "1 Päckchen Hühnerbrühgewürz",
     "1 Knoblauchzehe",
     "1TL Weizenmehl",
     "Salz und Pfeffer",

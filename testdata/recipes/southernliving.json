@@ -3,23 +3,19 @@
   "name": "Spicy Sausage-and-Cheddar Kolaches Recipe",
   "description": "Kolaches are beloved in Texas, but we believe they deserve more widespread attention. Our savory spin on this classic Czech pastry is filled with a combo of smoky Conecuh sausage and sharp Cheddar cheese. Serve with coffee and a fruit salad for a simple yet satisfying breakfast. Leftover kolaches can be reheated in the microwave, but they're best when served fresh out of the oven and still warm.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?q=60\u0026c=sc\u0026poi=%5B1000%2C671%5D\u0026w=2000\u0026h=1000\u0026url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F24%2F2015%2F09%2F2546801_bread_02_1_0_1_0_0_0-2000.jpg",
-  "image": [
-    {
-      "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F24%2F2015%2F09%2F2546801_bread_02_1_0_1_0_0_0-2000.jpg",
-      "width": 2000,
-      "height": 1343
-    }
-  ],
+  "thumbnailUrl": "https://www.southernliving.com/thmb/NmEdFZ8hVQBgnmb5nut5blWQeB8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2546801_bread_02_1_0_1_0_0_0-2000-977edfb780ba45b3bcb767a382069298.jpg",
   "author": {
     "name": "Paige Grandjean",
+    "jobTitle": "Associate Food Editor - Food \u0026 Wine",
+    "description": "Paige Grandjean is a food editor and recipe developer with over seven years of experience in food media. Her recipes and writing have appeared in over 15 nationally distributed print publications, as well as on various digital platforms. Paige's recipes have been showcased on the covers of magazines such as Food \u0026 Wine, Southern Living, and Cooking Light, with her 2020 Food \u0026 Wine Lamination cover story earning a spot as a Folio: Eddie and Ozzie Award Finalist. She is a member of IACP and has a WSET Level 2 Award in Spirits.",
     "url": "https://www.southernliving.com/author/paige-grandjean"
   },
+  "publisher": {
+    "name": "Southern Living",
+    "url": "https://www.southernliving.com",
+    "logo": "https://www.southernliving.com/thmb/ESKPvTBAXaIuvqPKIXBHM-S4bSM=/640x111/filters:no_upscale():max_bytes(150000):strip_icc()/brand_logo_schema3-99a42e67d7c7496cacfce4cde9c2e6b9.jpg"
+  },
   "totalTime": 180,
-  "recipeCategory": [
-    "Breakfast"
-  ],
-  "recipeYield": 20,
   "recipeIngredient": [
     "1 cup whole milk",
     "3/4 cup salted butter, divided",
@@ -52,13 +48,6 @@
       "text": "Preheat oven to 375°F. Microwave remaining 1⁄4 cup butter in a small microwavable bowl on HIGH until melted, about 45 seconds. Brush kolaches with half of melted butter. Bake in preheated oven until golden brown, 14 to 16 minutes. Brush with remaining melted butter, and serve hot."
     }
   ],
-  "aggregateRating": {
-    "bestRating": 5,
-    "worstRating": 1
-  },
-  "publisher": {
-    "name": "Southern Living",
-    "url": "https://www.southernliving.com"
-  },
-  "datePublished": "2017-11-10T23:07:35Z"
+  "dateModified": "2022-01-06T18:01:10-05:00",
+  "datePublished": "2017-11-10T18:07:35-05:00"
 }

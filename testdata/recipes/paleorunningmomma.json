@@ -2,7 +2,7 @@
   "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/",
   "name": "Paleo Beef Stroganoff {Whole30, Keto}",
   "description": "This hearty and savory paleo beef stroganoff is made all in one skillet for a quick, delicious and cozy weeknight meal. It’s Whole30 compliant, low carb and keto and perfect served over sautéed cauliflower rice or your favorite veggie noodles!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Michele Rosen"
+    "name": "Michele Rosen",
+    "description": "More than a little into running and paleo recipes (yoga now too!) but I'm not here to rain on your grains (or anything else) so come along for the ride! I do a little too much of everything (except cleaning), and I enjoy laughing at myself. As long as I'm the one making the jokes, that is. Just kidding. So bring me your angst, your appetite and your frying pan and climb aboard!",
+    "url": "https://www.paleorunningmomma.com/author/rosenmichelegmail-com/",
+    "image": "https://secure.gravatar.com/avatar/aa32a12e9949f777242946f828e2c7cb?s=96\u0026r=g"
+  },
+  "publisher": {
+    "name": "The Paleo Running Momma",
+    "description": "Run Fast, Eat Clean, Live Messy!",
+    "url": "https://www.paleorunningmomma.com"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -92,12 +100,8 @@
     "sugarContent": "2 g"
   },
   "aggregateRating": {
-    "ratingCount": 69,
-    "ratingValue": 4.51
-  },
-  "publisher": {
-    "name": "The Paleo Running Momma",
-    "url": "https://www.paleorunningmomma.com"
+    "ratingCount": 87,
+    "ratingValue": 4.52
   },
   "datePublished": "2020-12-27T07:00:02Z"
 }

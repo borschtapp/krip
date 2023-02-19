@@ -2,7 +2,7 @@
   "url": "https://www.gimmesomeoven.com/sangria/",
   "name": "Sangria",
   "description": "Learn how to make authentic Spanish sangria with this easy sangria recipe. It only takes a few minutes to prep, it's easy to customize with your favorite wine and fruit, and it's great for entertaining a crowd!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.gimmesomeoven.com/wp-content/uploads/2019/06/Authentic-Spanish-Sangria-Recipe-3-1.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Ali"
+    "name": "Ali",
+    "url": "https://www.gimmesomeoven.com/author/ali/"
+  },
+  "publisher": {
+    "name": "Gimme Some Oven",
+    "description": "Celebrating Delicious and Easy Recipes",
+    "url": "https://www.gimmesomeoven.com",
+    "logo": "https://www.gimmesomeoven.com/wp-content/uploads/2021/09/Logo-square.png"
   },
   "prepTime": 10,
   "totalTime": 10,
@@ -54,9 +61,5 @@
     "description": "Learn how to make authentic Spanish sangria with this easy sangria recipe. It only takes a few minutes to prep, it’s easy to customize with your favorite wine and fruit, and it’s great for entertaining a crowd!",
     "contentUrl": "https://content.jwplatform.com/videos/7UuSrE1t.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/7UuSrE1t-720.jpg"
-  },
-  "publisher": {
-    "name": "Gimme Some Oven",
-    "url": "https://www.gimmesomeoven.com"
   }
 }

@@ -2,10 +2,15 @@
   "url": "https://www.popsugar.com/food/Rainbow-Pasta-Food-Video-42193637",
   "name": "You'll Never Want Plain Noodles Again After Making This Colorful Rainbow Pasta",
   "description": "Make This Kid Friendly All-Natural Rainbow Pasta",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://media1.popsugar-assets.com/files/thumbor/hbbUhFd95dWamtQ2nN66N1ZQY-U/fit-in/1200x630/filters:format_auto-!!-:strip_icc-!!-:fill-!white!-/2016/09/02/018/n/1922195/f35877c9_abaa056e_Rainbow_Pasta_FACEBOOK.jpg",
+  "author": {
+    "name": "Brandi Milloy",
+    "url": "https://www.popsugar.com/author/Brandi-Milloy"
+  },
   "publisher": {
     "name": "POPSUGAR Food",
-    "url": "https://www.popsugar.com"
+    "url": "https://www.popsugar.com",
+    "logo": "https://media1.popsugar-assets.com/v4785/themes/onsugar_themes/lightspeed/imgs/logo-new-600.png"
   }
 }

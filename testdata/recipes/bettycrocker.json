@@ -12,6 +12,10 @@
   "author": {
     "name": "Betty Crocker Kitchens"
   },
+  "publisher": {
+    "name": "BettyCrocker.com",
+    "url": "https://www.bettycrocker.com"
+  },
   "prepTime": 15,
   "totalTime": 290,
   "recipeCategory": [
@@ -66,9 +70,5 @@
     "ratingValue": 4.5,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "BettyCrocker.com",
-    "url": "https://www.bettycrocker.com"
   }
 }

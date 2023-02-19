@@ -11,7 +11,13 @@
     }
   ],
   "author": {
-    "name": "Good Food team"
+    "name": "Good Food team",
+    "url": "https://www.bbcgoodfood.com/author/goodfood"
+  },
+  "publisher": {
+    "name": "BBC Good Food",
+    "url": "https://www.bbcgoodfood.com",
+    "logo": "https://images.immediate.co.uk/production/volatile/sites/30/2022/12/cropped-GF-logos2022CMYK-PrintUKONLY10-2-434430d-f5051ed.png?resize=265,70"
   },
   "prepTime": 15,
   "cookTime": 20,
@@ -77,11 +83,6 @@
     "sodiumContent": "0.3 milligram of sodium",
     "sugarContent": "36 grams sugar"
   },
-  "publisher": {
-    "name": "BBC Good Food",
-    "url": "https://www.bbcgoodfood.com",
-    "logo": "https://images.immediate.co.uk/production/volatile/sites/30/2019/07/GoodFood-dark-516d417.png?resize=221,58"
-  },
-  "dateModified": "2020-08-07T16:47:08Z",
+  "dateModified": "2022-11-08T13:06:40Z",
   "datePublished": "2010-09-23T02:46:40Z"
 }

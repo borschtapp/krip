@@ -9,6 +9,11 @@
       "url": "https://images.eatsmarter.com/sites/default/files/styles/max_size/public/citrus-avocado-salad-with-almonds-628624.jpg"
     }
   ],
+  "publisher": {
+    "name": "EAT SMARTER",
+    "url": "https://eatsmarter.com",
+    "logo": "https://eatsmarter.com/sites/all/themes/eatsmarter/logo.png"
+  },
   "totalTime": 20,
   "recipeYield": 4,
   "recipeIngredient": [
@@ -40,10 +45,5 @@
     "ratingValue": 4,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "EAT SMARTER",
-    "url": "https://eatsmarter.com",
-    "logo": "https://eatsmarter.com/sites/all/themes/eatsmarter/logo.png"
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://www.theblackpeppercorn.com/baked-ratatouille/",
   "name": "Baked Ratatouille",
   "description": "This oven baked ratatouille recipe is a classic French Tian side dish. Made with tomatoes, eggplant, green and yellow zucchini, this is a hearty fall meal.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.theblackpeppercorn.com/wp-content/uploads/2019/09/Baked-Ratatouille-featured.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Steve Cylka"
+    "name": "Steve Cylka",
+    "url": "https://www.theblackpeppercorn.com/author/steve/",
+    "image": "https://secure.gravatar.com/avatar/c192aa2815e2249de2a6881916728495?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "The Black Peppercorn",
+    "description": "Spicing up mealtime!",
+    "url": "https://www.theblackpeppercorn.com",
+    "logo": "https://www.theblackpeppercorn.com/wp-content/uploads/2019/08/the-black-peppercorn@2x.png"
   },
   "prepTime": 45,
   "cookTime": 120,
@@ -98,10 +106,6 @@
   "aggregateRating": {
     "ratingCount": 3,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "The Black Peppercorn",
-    "url": "https://www.theblackpeppercorn.com"
   },
   "datePublished": "2019-09-14T16:52:10Z"
 }

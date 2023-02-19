@@ -1,4 +1,9 @@
 {
   "url": "https://paninihappy.com/grilled-mac-cheese-with-bbq-pulled-pork/",
-  "inLanguage": "en-US"
+  "name": "Grilled Mac \u0026 Cheese with BBQ Pulled Pork – Panini Happy®",
+  "inLanguage": "en-US",
+  "publisher": {
+    "name": "Panini Happy®",
+    "url": "https://paninihappy.com"
+  }
 }

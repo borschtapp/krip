@@ -2,22 +2,32 @@
   "url": "https://littlespicejar.com/crab-cake-bites/",
   "name": "Easy Addicting Crab Cake Bites (Crab Cake Cups)",
   "description": "Delicious mini crab cake bites that are quick and easy to make! These mini crab cakes taste just like the real thing but require way less work and are perfect to pass around for parties or for the holidays!",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-scaled.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1.jpg",
   "image": [
     {
-      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-scaled-720x720.jpg"
+      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-720x720.jpg"
     },
     {
-      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-scaled-720x540.jpg"
+      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-720x540.jpg"
     },
     {
-      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-scaled-720x405.jpg"
+      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-720x405.jpg"
     },
     {
-      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-scaled-735x1102.jpg"
+      "url": "https://littlespicejar.com/wp-content/uploads/2020/12/Addicting-Mini-Crab-Cake-Bites-1-735x1102.jpg"
     }
   ],
+  "author": {
+    "name": "Marzia",
+    "url": "https://littlespicejar.com/author/marziaa86gmail-com/",
+    "image": "https://secure.gravatar.com/avatar/88d62fdb8ac38b57157fd52df23349c8?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Little Spice Jar",
+    "description": "Little Spice Jar",
+    "url": "https://littlespicejar.com"
+  },
   "prepTime": 15,
   "cookTime": 15,
   "totalTime": 30,
@@ -60,11 +70,7 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 33,
+    "reviewCount": 38,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Little Spice Jar",
-    "url": "https://littlespicejar.com"
   }
 }

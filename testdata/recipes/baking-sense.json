@@ -2,107 +2,131 @@
   "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/",
   "name": "Sourdough Bundt Cake with Buttermilk Glaze",
   "description": "Sourdough Bundt Cake with Buttermilk Glaze is a perfect snack cake. The tangy-sweet buttermilk glaze forms an ultra-thin coating over the melt-in-your-mouth cake.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-social.jpg",
   "image": [
     {
-      "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a-480x480.jpg"
-    },
-    {
-      "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a-480x360.jpg"
-    },
-    {
       "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a.jpg"
+    },
+    {
+      "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a-500x500.jpg"
+    },
+    {
+      "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a-500x375.jpg"
     },
     {
       "url": "https://www.baking-sense.com/wp-content/uploads/2020/05/sourdough-bundt-9a-480x270.jpg"
     }
   ],
   "author": {
-    "name": "Eileen Gray"
+    "name": "Eileen Gray",
+    "url": "https://www.baking-sense.com/author/baking-sense/"
+  },
+  "publisher": {
+    "name": "Baking Sense®",
+    "description": "The Art And Science of Baking",
+    "url": "https://www.baking-sense.com",
+    "logo": "https://www.baking-sense.com/wp-content/uploads/2017/02/logo-new2.jpg"
   },
   "prepTime": 20,
   "cookTime": 40,
   "totalTime": 60,
   "recipeCategory": [
-    "Cakes/Cupcakes Recipes"
+    "Dessert",
+    "Snack"
   ],
-  "recipeYield": 12,
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "buttermilk",
+    "sourdough"
+  ],
+  "recipeYield": 16,
   "recipeIngredient": [
-    "2 large eggs plus 2 yolks, room temperature",
+    "2 large eggs (room temperature)",
+    "2 large yolks (room temperature)",
     "1 tablespoon vanilla extract",
-    "1 cup sourdough discard (100% hydration), room temperature",
-    "2 cups (9 oz, 252g) cake flour",
-    "1 1/3 cups (11 oz, 308g) granulated sugar",
+    "8 oz sourdough discard (1 cup, room temperature)",
+    "9 oz cake flour (2 cups)",
+    "11 oz granulated sugar (1 1/3 cups)",
     "2 teaspoons baking powder",
     "1/2 teaspoon table salt",
-    "1 1/2 sticks (6 oz, 168g) unsalted butter, room temperature, cut into 1\" chunks",
-    "1/2 cup (4oz, 120ml) buttermilk, room temperature",
-    "2 cups (8 oz, 224g) confectioner's sugar",
+    "6 oz unsalted butter (room temperature, cut into 1\" chunks)",
+    "4 oz buttermilk (1/2 cup, room temperature)",
+    "8 oz confectioner's sugar (2 cups)",
     "1 teaspoon vanilla",
-    "1/4 cup (2 oz, 60ml) buttermilk"
+    "2 oz buttermilk (1/4 cup)"
   ],
   "recipeInstructions": [
     {
-      "name": "Preheat the oven to 350°F. Generously butter and...",
       "text": "Preheat the oven to 350°F. Generously butter and flour a 12 cup Bundt pan.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_1"
+      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-0-0"
     },
     {
-      "name": "Whisk together the eggs, yolks, vanilla and the...",
-      "text": "Whisk together the eggs, yolks, vanilla and the discard, set aside.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_2"
+      "name": "Make the batter",
+      "itemListElement": [
+        {
+          "text": "Whisk together the eggs, yolks, vanilla and the discard, set aside.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-0"
+        },
+        {
+          "text": "Sift the flour, sugar, baking powder and salt into a mixer bowl. Mix on low speed to combine the dry ingredients. With the mixer running, toss the chunks of butter into the flour mixture.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-1"
+        },
+        {
+          "text": "Add the buttermilk and increase the speed to medium. Mix on medium high for 2 minutes to aerate the batter. Scrape the bowl and beater.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-2"
+        },
+        {
+          "text": "Add the egg mixture in 3 batches, scraping the bowl between each addition. Pour the batter into the prepared pan.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-3"
+        },
+        {
+          "text": "Bake until the cake springs back when lightly pressed or a toothpick inserted into the center comes out clean, about 40 minutes.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-4"
+        },
+        {
+          "text": "Cool for 10 minutes in the pan. Invert the cake onto a cooling rack set over a clean sheet pan. Cool until slightly warm before glazing.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-1-5"
+        }
+      ]
     },
     {
-      "name": "Sift the flour, sugar, baking powder and salt...",
-      "text": "Sift the flour, sugar, baking powder and salt into a mixer bowl. Mix on low speed to combine the dry ingredients. With the mixer running, toss the chunks of butter into the flour mixture.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_3"
-    },
-    {
-      "name": "Add the buttermilk and increase the speed to...",
-      "text": "Add the buttermilk and increase the speed to medium. Mix on medium high for 2 minutes to aerate the batter. Scrape the bowl and beater.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_4"
-    },
-    {
-      "name": "Add the egg mixture in 3 batches, scraping...",
-      "text": "Add the egg mixture in 3 batches, scraping the bowl between each addition. Pour the batter into the prepared pan.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_5"
-    },
-    {
-      "name": "Bake until the cake springs back when lightly...",
-      "text": "Bake until the cake springs back when lightly pressed or a toothpick inserted into the center comes out clean, about 40 minutes.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_6"
-    },
-    {
-      "name": "Cool for 10 minutes in the pan. Invert...",
-      "text": "Cool for 10 minutes in the pan. Invert the cake onto a cooling rack set over a clean sheet pan. Cool until slightly warm before glazing.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_7"
-    },
-    {
-      "name": "Combine the sugar, vanilla and buttermilk in a...",
-      "text": "Combine the sugar, vanilla and buttermilk in a small bowl and whisk until smooth.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_8"
-    },
-    {
-      "name": "Pour the glaze over the still slightly warm...",
-      "text": "Pour the glaze over the still slightly warm cake. You can scoop up the glaze from the sheet pan and use it to fill in any gaps in the glaze or leave it with the drips.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_9"
-    },
-    {
-      "name": "Cool completely and allow the glaze to set....",
-      "text": "Cool completely and allow the glaze to set. Transfer to a serving plate.",
-      "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#mv_create_771_10"
+      "name": "Make the Glaze",
+      "itemListElement": [
+        {
+          "text": "Combine the sugar, vanilla and buttermilk in a small bowl and whisk until smooth.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-2-0"
+        },
+        {
+          "text": "Pour the glaze over the still slightly warm cake. You can scoop up the glaze from the sheet pan and use it to fill in any gaps in the glaze or leave it with the drips.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-2-1"
+        },
+        {
+          "text": "Cool completely and allow the glaze to set. Transfer to a serving plate.",
+          "url": "https://www.baking-sense.com/2020/05/13/sourdough-bundt-cake/#wprm-recipe-23636-step-2-2"
+        }
+      ]
     }
   ],
   "nutrition": {
-    "calories": "9 calories"
+    "calories": "247 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "49 g",
+    "cholesterolContent": "69 mg",
+    "fatContent": "10 g",
+    "fiberContent": "1 g",
+    "proteinContent": "4 g",
+    "saturatedFatContent": "6 g",
+    "sodiumContent": "148 mg",
+    "sugarContent": "20 g",
+    "transFatContent": "1 g",
+    "unsaturatedFatContent": "4 g"
   },
   "aggregateRating": {
-    "reviewCount": 43,
-    "ratingValue": 4.5
+    "ratingCount": 4,
+    "ratingValue": 4.75
   },
-  "publisher": {
-    "name": "Baking Sense®",
-    "url": "https://www.baking-sense.com"
-  }
+  "datePublished": "2020-05-13T10:00:00Z"
 }

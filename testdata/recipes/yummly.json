@@ -15,15 +15,25 @@
       "url": "https://lh3.googleusercontent.com/UyOcAUtHtGMhwFNayuGToyY9V-S1vl9OOs8ycgXxJXevQDyHTkX5_luRkhU-hTHi4AlSkGA_lDUMxV-uQKfDFPY=w1920-h1080-c-rj-v1-e365"
     }
   ],
+  "publisher": {
+    "name": "Yummly",
+    "url": "https://www.yummly.com",
+    "logo": "https://x.yummlystatic.com/web/yummly.svg"
+  },
   "totalTime": 25,
   "cookingMethod": "Baking",
+  "recipeCuisine": [
+    "American"
+  ],
   "keywords": [
+    "Game Day",
     "Quick",
-    "Baking"
+    "Baking",
+    "American"
   ],
   "recipeYield": 4,
   "recipeIngredient": [
-    "4 pieces naan",
+    "4 pieces naan small",
     "2 tablespoons extra-virgin olive oil",
     "3 cloves garlic",
     "1 cup shredded mozzarella cheese or shredded pizza blend cheese, 1 cup is 4 oz.",
@@ -94,8 +104,8 @@
     "sugarContent": "1 grams"
   },
   "aggregateRating": {
-    "reviewCount": 20,
-    "ratingValue": 4.7,
+    "reviewCount": 22,
+    "ratingValue": 4.7727272727272725,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -104,9 +114,5 @@
     "description": "Cooking video for Easy White Cheese \u0026 Garlic Pizzas by Yummly on Yummly",
     "contentUrl": "https://gv.yummlystatic.com/oYMx9Sg9SROzCXdUrr8Y_Montage_Easy_Pizza_White_Pizza/oYMx9Sg9SROzCXdUrr8Y_Montage_Easy_Pizza_White_Pizza-hls.m3u8",
     "thumbnailUrl": "https://lh3.googleusercontent.com/UyOcAUtHtGMhwFNayuGToyY9V-S1vl9OOs8ycgXxJXevQDyHTkX5_luRkhU-hTHi4AlSkGA_lDUMxV-uQKfDFPY"
-  },
-  "publisher": {
-    "name": "Yummly",
-    "logo": "https://x.yummlystatic.com/web/yummly.svg"
   }
 }

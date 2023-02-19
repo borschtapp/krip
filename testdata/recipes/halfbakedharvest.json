@@ -2,7 +2,7 @@
   "url": "https://www.halfbakedharvest.com/brown-butter-corn-and-feta-orzo/",
   "name": "Brown Butter Corn and Feta Orzo with Crispy Prosciutto",
   "description": "When you’re in need of a quick and simple summer meal that's also bright and colorful, make this orzo!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2020/07/Brown-Butter-Corn-and-Feta-Orzo-with-Crispy-Prosciutto-1-1.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Tieghan Gerard"
+    "name": "Tieghan Gerard",
+    "image": "https://secure.gravatar.com/avatar/49ee4a23a1d5dffb1944da32800bb254?s=96\u0026d=mm\u0026r=pg"
+  },
+  "publisher": {
+    "name": "Half Baked Harvest",
+    "description": "Made with Love",
+    "url": "https://www.halfbakedharvest.com",
+    "logo": "https://www.halfbakedharvest.com/wp-content/uploads/2019/05/half-baked-harvest-square-logo.png"
   },
   "prepTime": 15,
   "cookTime": 10,
@@ -47,16 +54,12 @@
     }
   ],
   "nutrition": {
-    "calories": "480 kcal",
+    "calories": "722 kcal",
     "servingSize": "1 serving"
   },
   "aggregateRating": {
-    "ratingCount": 169,
-    "ratingValue": 4.56
-  },
-  "publisher": {
-    "name": "Half Baked Harvest",
-    "url": "https://www.halfbakedharvest.com"
+    "ratingCount": 171,
+    "ratingValue": 4.57
   },
   "datePublished": "2020-07-16T02:00:38Z"
 }

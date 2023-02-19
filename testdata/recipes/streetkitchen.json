@@ -2,10 +2,17 @@
   "url": "https://streetkitchen.hu/hust-hussal/kapros-tejfolos-sajtos-csirke-rizzsel/",
   "name": "Kapros tejfölös sajtos csirke rizzsel",
   "description": "Hétvégente ha hazamegyek, kb. 10 alkalomból 6-szor tuti,hogy ez az egyik ebéd, mivel nálunk mindenki szereti :D Ez egyértelmű, hiszen egy sajtos tejfölös csirkéről beszélünk, ami a sütőben tökéletesre sül, kell ennél több? :D",
-  "inLanguage": "hu_HU",
+  "inLanguage": "hu-HU",
   "thumbnailUrl": "https://streetkitchen.hu/wp-content/uploads/2019/03/kapros-tejfolos-csirke-talalasa.jpg",
+  "author": {
+    "name": "Vitális Lilla",
+    "description": "Nem hazudunk, ha azt mondjuk, hogy gyerekkora óta a főzés érdekli csak. Ezt az is bizonyítja, hogy bár agrár diplomája van, semmi sem teszi annyira boldoggá mint, amikor a tűzhely mellett áll. Lilla, Magyarország egyetlen, nyíregyházi gyrostál influencere, Jamie Oliver leghűségesebb követője, minden receptjével azt szeretné megmutatni az embereknek, hogy főzni bárki tud és nem kell mesterszakácsnak lenni ahhoz, hogy valami igazán jót együnk otthon is.",
+    "image": "https://secure.gravatar.com/avatar/069bb08fe88c02bb735eac84384ab43e?s=96\u0026d=mm\u0026r=g"
+  },
   "publisher": {
     "name": "Street Kitchen",
-    "url": "https://streetkitchen.hu"
+    "description": "A legbrutálisabb recepteket nálunk keresd!",
+    "url": "https://streetkitchen.hu",
+    "logo": "https://streetkitchen.hu/wp-content/uploads/2018/05/lunchbox-logo.png"
   }
 }

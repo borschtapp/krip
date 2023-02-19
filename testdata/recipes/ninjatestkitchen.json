@@ -1,8 +1,12 @@
 {
-  "url": "https://cookingcircle.com/recipe/vegan-lemon-cupcakes/",
+  "url": "https://ninjatestkitchen.eu/recipe/vegan-lemon-cupcakes/",
   "name": "Vegan Lemon Cupcakes",
-  "inLanguage": "en_UN",
+  "inLanguage": "en-UN",
   "thumbnailUrl": "https://sharkninja-cookingcircle.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/02/23144350/Vegan-Lemon-Cupcakes-2220x1000.jpg",
+  "publisher": {
+    "name": "Ninja Test Kitchen",
+    "url": "https://ninjatestkitchen.eu"
+  },
   "prepTime": 5,
   "cookTime": 30,
   "totalTime": 30,
@@ -22,9 +26,5 @@
     {
       "text": "[{"
     }
-  ],
-  "publisher": {
-    "name": "Cooking Circle",
-    "url": "https://cookingcircle.com"
-  }
+  ]
 }

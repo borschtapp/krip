@@ -2,7 +2,7 @@
   "url": "https://www.simplyquinoa.com/gluten-free-pancake-recipe/",
   "name": "The Best Gluten-Free Pancakes",
   "description": "This is the only gluten-free pancake recipe you'll ever need! Customize it with your favorite add-ins and toppings and enjoy the epic pancake breakfast you deserve!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.simplyquinoa.com/wp-content/uploads/2022/05/gluten-free-pancakes-recipe-apple-cinnamon.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Alyssa"
+    "name": "Alyssa",
+    "description": "Hey there! I’m Alyssa, certified holistic nutritionist and founder of SQ. My goal is to help you take simple, practical and personal steps to living a healthier life so that you can be well + truly healthy. learn more",
+    "url": "https://www.simplyquinoa.com/author/alyssa/"
+  },
+  "publisher": {
+    "name": "Simply Quinoa",
+    "description": "Healthy Quinoa Recipes Made Simple",
+    "url": "https://www.simplyquinoa.com",
+    "logo": "https://www.simplyquinoa.com/wp-content/uploads/2018/07/logo@2x.png"
   },
   "prepTime": 5,
   "cookTime": 15,
@@ -90,10 +98,6 @@
     "contentUrl": "https://content.jwplatform.com/videos/sHGZQf6N.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/sHGZQf6N-720.jpg",
     "uploadDate": "2019-08-27T18:00:38Z"
-  },
-  "publisher": {
-    "name": "Simply Quinoa",
-    "url": "https://www.simplyquinoa.com"
   },
   "datePublished": "2022-05-25T07:00:00Z"
 }

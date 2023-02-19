@@ -1,7 +1,7 @@
 {
   "url": "https://www.chefkoch.de/rezepte/1170311223132029/Hackbraten-supersaftig.html",
   "name": "Hackbraten supersaftig",
-  "description": "Hackbraten supersaftig - saftiger Hackbraten mit viel Soße. Über 1276 Bewertungen und für lecker befunden. Mit ► Portionsrechner ► Kochbuch ► Video-Tipps!",
+  "description": "Hackbraten supersaftig - saftiger Hackbraten mit viel Soße. Über 1310 Bewertungen und für lecker befunden. Mit ► Portionsrechner ► Kochbuch ► Video-Tipps!",
   "inLanguage": "de",
   "thumbnailUrl": "https://img.chefkoch-cdn.de/rezepte/1170311223132029/bilder/1435439/crop-960x720/hackbraten-supersaftig.jpg",
   "image": [
@@ -11,6 +11,10 @@
   ],
   "author": {
     "name": "Delphinella"
+  },
+  "publisher": {
+    "name": "Chefkoch.de",
+    "url": "https://www.chefkoch.de"
   },
   "prepTime": 40,
   "cookTime": 45,
@@ -37,12 +41,12 @@
     "1 kl. Bund Petersilie",
     "2 EL Zitronensaft",
     "50 g Butter",
-    "600 g Hackfleisch, gemischt",
+    "600 g Hackfleisch, gemischtes",
     "2 kleine Ei(er)",
     "125 ml Fleischbrühe",
     "125 ml Sahne",
     "1 EL Crème fraîche",
-    "1 TL Paprikapulver, edelsüß",
+    "1 TL Paprikapulver, edelsüßes",
     "Salz und Pfeffer, schwarzer",
     "Cayennepfeffer",
     "Fett für die Form"
@@ -75,9 +79,9 @@
     "proteinContent": "36,04g"
   },
   "aggregateRating": {
-    "reviewCount": 689,
-    "ratingCount": 1276,
-    "ratingValue": 4.57,
+    "reviewCount": 712,
+    "ratingCount": 1310,
+    "ratingValue": 4.58,
     "bestRating": 5
   },
   "video": {
@@ -85,10 +89,6 @@
     "description": "Video zu Hackbraten supersaftig",
     "embedUrl": "https://video.chefkoch-cdn.de/ck.de/videos/2162-video.mp4",
     "contentUrl": "https://www.chefkoch.de/rezepte/1170311223132029/Hackbraten-supersaftig.html",
-    "thumbnailUrl": "https://api.chefkoch.de/v2/images/crop-960x540/videos/2162/preview/org"
-  },
-  "publisher": {
-    "name": "Chefkoch.de",
-    "url": "https://www.chefkoch.de"
+    "thumbnailUrl": "https://static.chefkoch-cdn.de/images/crop-960x540/ck.de/videos/thumbs/2162-org.jpg"
   }
 }

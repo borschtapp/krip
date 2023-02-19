@@ -77,26 +77,63 @@
   ],
   "ingredients": [
     {
-      "name": "25g Erdnüsse, geröstet \u0026 gesalzen",
+      "name": "1 Packung festkochende Kartoffeln",
       "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/60913/photos/thumb/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg",
-        "medium": "https://marleyspoon.com/media/pantry_items/60913/photos/medium/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg"
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/61217/photos/thumb/potatoes_waxy_nedato_eu_455g_potatoes_tough_ones_nedato_eu_455g-d7d04d79eabbb7689e48052e4572a48f.jpeg",
+        "medium": "https://marleyspoon.com/media/pantry_items/61217/photos/medium/potatoes_waxy_nedato_eu_455g_potatoes_tough_ones_nedato_eu_455g-d7d04d79eabbb7689e48052e4572a48f.jpeg"
       },
-      "allergens": [
-        "peanuts"
-      ],
-      "name_with_quantity": "25g Erdnüsse, geröstet \u0026 gesalzen"
+      "allergens": [],
+      "name_with_quantity": "1 Packung festkochende Kartoffeln"
     },
     {
-      "name": "2 vegane Burgerpattys",
+      "name": "1 Apfel",
       "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/61186/photos/thumb/hamburger_vegan_ffg_eu_200g_2x100g_hamburger_vegan_ffg_eu_200g_2x100g-ea7a253e0d42fe4699a8a36a278040a8.jpeg",
-        "medium": "https://marleyspoon.com/media/pantry_items/61186/photos/medium/hamburger_vegan_ffg_eu_200g_2x100g_hamburger_vegan_ffg_eu_200g_2x100g-ea7a253e0d42fe4699a8a36a278040a8.jpeg"
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/2986/photos/thumb/apple_braeburn_eu_200g_appel_braeburn_200g-e2e0e9a54f36fa9e22a6e8d9d761a4e1.jpeg",
+        "medium": "https://marleyspoon.com/media/pantry_items/2986/photos/medium/apple_braeburn_eu_200g_appel_braeburn_200g-e2e0e9a54f36fa9e22a6e8d9d761a4e1.jpeg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 Apfel"
+    },
+    {
+      "name": "1 Minigurke",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/34693/photos/thumb/ING_Veg_Cucumber_Baby-30d6cbcfee107ae23eb7a38eca28283c.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/34693/photos/medium/ING_Veg_Cucumber_Baby-30d6cbcfee107ae23eb7a38eca28283c.jpg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 Minigurke"
+    },
+    {
+      "name": "2 Stangensellerie",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/955/photos/thumb/ING_Veg_Celery-c29065692c10c73c6df90a2359342926.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/955/photos/medium/ING_Veg_Celery-c29065692c10c73c6df90a2359342926.jpg"
       },
       "allergens": [
+        "celery"
+      ],
+      "name_with_quantity": "2 Stangensellerie"
+    },
+    {
+      "name": "25ml Sojasauce",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/61250/photos/thumb/soy_sauce_liquido_d_oro_eu_25ml_soy_sauce_eu_25ml-22184c0c6a130af2f74f82ad845ec42e.jpeg",
+        "medium": "https://marleyspoon.com/media/pantry_items/61250/photos/medium/soy_sauce_liquido_d_oro_eu_25ml_soy_sauce_eu_25ml-22184c0c6a130af2f74f82ad845ec42e.jpeg"
+      },
+      "allergens": [
+        "gluten",
         "soy"
       ],
-      "name_with_quantity": "2 vegane Burgerpattys"
+      "name_with_quantity": "25ml Sojasauce"
+    },
+    {
+      "name": "1 Päckchen Sriracha-Sauce",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/31167/photos/thumb/ING_Sauces_Sriracha-84a2d7d5b271b6eac695462d7a1d3189.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/31167/photos/medium/ING_Sauces_Sriracha-84a2d7d5b271b6eac695462d7a1d3189.jpg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 Päckchen Sriracha-Sauce"
     },
     {
       "name": "2 Burgerbrötchen mit Sesam",
@@ -113,63 +150,26 @@
       "name_with_quantity": "2 Burgerbrötchen mit Sesam"
     },
     {
-      "name": "1 Päckchen Sriracha-Sauce",
+      "name": "2 vegane Burgerpattys",
       "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/31167/photos/thumb/ING_Sauces_Sriracha-84a2d7d5b271b6eac695462d7a1d3189.jpg",
-        "medium": "https://marleyspoon.com/media/pantry_items/31167/photos/medium/ING_Sauces_Sriracha-84a2d7d5b271b6eac695462d7a1d3189.jpg"
-      },
-      "allergens": [],
-      "name_with_quantity": "1 Päckchen Sriracha-Sauce"
-    },
-    {
-      "name": "25ml Sojasauce",
-      "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/61250/photos/thumb/soy_sauce_liquido_d_oro_eu_25ml_soy_sauce_eu_25ml-22184c0c6a130af2f74f82ad845ec42e.jpeg",
-        "medium": "https://marleyspoon.com/media/pantry_items/61250/photos/medium/soy_sauce_liquido_d_oro_eu_25ml_soy_sauce_eu_25ml-22184c0c6a130af2f74f82ad845ec42e.jpeg"
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/61186/photos/thumb/hamburger_vegan_ffg_eu_200g_2x100g_hamburger_vegan_ffg_eu_200g_2x100g-ea7a253e0d42fe4699a8a36a278040a8.jpeg",
+        "medium": "https://marleyspoon.com/media/pantry_items/61186/photos/medium/hamburger_vegan_ffg_eu_200g_2x100g_hamburger_vegan_ffg_eu_200g_2x100g-ea7a253e0d42fe4699a8a36a278040a8.jpeg"
       },
       "allergens": [
-        "gluten",
         "soy"
       ],
-      "name_with_quantity": "25ml Sojasauce"
+      "name_with_quantity": "2 vegane Burgerpattys"
     },
     {
-      "name": "2 Stangensellerie",
+      "name": "25g Erdnüsse, geröstet \u0026 gesalzen",
       "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/955/photos/thumb/ING_Veg_Celery-c29065692c10c73c6df90a2359342926.jpg",
-        "medium": "https://marleyspoon.com/media/pantry_items/955/photos/medium/ING_Veg_Celery-c29065692c10c73c6df90a2359342926.jpg"
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/60913/photos/thumb/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/60913/photos/medium/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg"
       },
       "allergens": [
-        "celery"
+        "peanuts"
       ],
-      "name_with_quantity": "2 Stangensellerie"
-    },
-    {
-      "name": "1 Minigurke",
-      "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/34693/photos/thumb/ING_Veg_Cucumber_Baby-30d6cbcfee107ae23eb7a38eca28283c.jpg",
-        "medium": "https://marleyspoon.com/media/pantry_items/34693/photos/medium/ING_Veg_Cucumber_Baby-30d6cbcfee107ae23eb7a38eca28283c.jpg"
-      },
-      "allergens": [],
-      "name_with_quantity": "1 Minigurke"
-    },
-    {
-      "name": "1 Apfel",
-      "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/2986/photos/thumb/apple_braeburn_eu_200g_appel_braeburn_200g-e2e0e9a54f36fa9e22a6e8d9d761a4e1.jpeg",
-        "medium": "https://marleyspoon.com/media/pantry_items/2986/photos/medium/apple_braeburn_eu_200g_appel_braeburn_200g-e2e0e9a54f36fa9e22a6e8d9d761a4e1.jpeg"
-      },
-      "allergens": [],
-      "name_with_quantity": "1 Apfel"
-    },
-    {
-      "name": "1 Packung festkochende Kartoffeln",
-      "image": {
-        "thumbnail": "https://marleyspoon.com/media/pantry_items/61217/photos/thumb/potatoes_waxy_nedato_eu_455g_potatoes_tough_ones_nedato_eu_455g-d7d04d79eabbb7689e48052e4572a48f.jpeg",
-        "medium": "https://marleyspoon.com/media/pantry_items/61217/photos/medium/potatoes_waxy_nedato_eu_455g_potatoes_tough_ones_nedato_eu_455g-d7d04d79eabbb7689e48052e4572a48f.jpeg"
-      },
-      "allergens": [],
-      "name_with_quantity": "1 Packung festkochende Kartoffeln"
+      "name_with_quantity": "25g Erdnüsse, geröstet \u0026 gesalzen"
     }
   ],
   "assumed_ingredients": [
@@ -219,5 +219,6 @@
     },
     "slug": "lieke"
   },
-  "cooking_tip": null
+  "cooking_tip": null,
+  "recipe_type": "standard"
 }

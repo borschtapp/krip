@@ -1,4 +1,9 @@
 {
   "url": "https://www.gousto.co.uk/cookbook/pork-recipes/creamy-pork-tagliatelle",
-  "inLanguage": "en"
+  "name": "Recipes | Quick and Easy Dinner Ideas | Gousto",
+  "inLanguage": "en",
+  "publisher": {
+    "name": "Gousto",
+    "url": "https://www.gousto.co.uk"
+  }
 }

@@ -2,7 +2,7 @@
   "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/",
   "name": "Cheesy Grown Up SpaghettiOs",
   "description": "These Cheesy Grown Up SpaghettiOs are just like the version you loved as a kid except fresh and even more yummy. A flavorful blast from the past that you'll love to make and eat!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2.jpg",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Jenny"
+    "name": "Jenny",
+    "image": "https://secure.gravatar.com/avatar/daac4d0e761ba9d731752ba1d84083cb?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Picky Palate",
+    "description": "Original Family Style Recipes for Even Your Pickiest Eaters",
+    "url": "https://picky-palate.com",
+    "logo": "https://picky-palate.com/wp-content/uploads/2019/05/pp-logo-t.png"
   },
   "prepTime": 20,
   "cookTime": 5,
@@ -73,10 +80,6 @@
     "saturatedFatContent": "3 g",
     "sodiumContent": "950 mg",
     "sugarContent": "7 g"
-  },
-  "publisher": {
-    "name": "Picky Palate",
-    "url": "https://picky-palate.com"
   },
   "datePublished": "2018-03-27T00:00:22Z"
 }

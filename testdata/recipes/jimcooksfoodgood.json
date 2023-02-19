@@ -2,10 +2,17 @@
   "url": "https://jimcooksfoodgood.com/german-potato-salad/",
   "name": "German Potato Salad",
   "description": "German Potato Salad",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://jimcooksfoodgood.com/wp-content/uploads/2019/09/1282A83C-D784-4DF4-9623-C580DC9B9840.jpeg",
   "author": {
-    "name": "Jim"
+    "name": "Jim",
+    "url": "https://jimcooksfoodgood.com/author/jimjcgf/",
+    "image": "https://secure.gravatar.com/avatar/0c1efe3dbc678f9a3fe75c6227912cf4?s=96\u0026d=mm\u0026r=r"
+  },
+  "publisher": {
+    "name": "Jim Cooks Food Good!",
+    "description": "Reimagined family friendly dishes. Plus pizza.",
+    "url": "https://jimcooksfoodgood.com"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -53,10 +60,6 @@
   "aggregateRating": {
     "ratingCount": 2,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Jim Cooks Food Good!",
-    "url": "https://jimcooksfoodgood.com"
   },
   "datePublished": "2021-07-04T15:55:00Z"
 }

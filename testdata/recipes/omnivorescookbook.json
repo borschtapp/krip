@@ -2,7 +2,7 @@
   "url": "https://omnivorescookbook.com/tofu-and-broccoli/",
   "name": "Tofu and Broccoli Stir Fry",
   "description": "Make this easy tofu and broccoli for a healthy and delicious meal in 30 minutes! The tofu is cooked until perfectly browned and flavorful, then cooked with tender broccoli in a sticky ginger garlic sauce. {Vegan, Gluten-Free Adaptable}",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://omnivorescookbook.com/wp-content/uploads/2020/02/2002_Tofu-And-Broccoli-FB.jpg",
   "image": [
     {
@@ -19,7 +19,13 @@
     }
   ],
   "author": {
-    "name": "Maggie Zhu"
+    "name": "Maggie Zhu",
+    "description": "Hi I'm Maggie Zhu! Welcome to my site about modern Chinese cooking - including street food, family recipes, and restaurant dishes. I take a less labor-intensive approach while maintaining the taste and look of the dish. I am originally from Beijing, and now cook from my New York kitchen."
+  },
+  "publisher": {
+    "name": "Omnivore's Cookbook",
+    "description": "Modern Chinese Recipes",
+    "url": "https://omnivorescookbook.com"
   },
   "prepTime": 15,
   "cookTime": 10,
@@ -107,12 +113,8 @@
     "sugarContent": "4.6 g"
   },
   "aggregateRating": {
-    "ratingCount": 8,
+    "ratingCount": 13,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Omnivore's Cookbook",
-    "url": "https://omnivorescookbook.com"
   },
   "datePublished": "2020-02-12T20:00:57Z"
 }

@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html lang="de-DE">
   <head>
+    <script type="text/javascript">
+      window.enabledFeatures = {"fruitbox":false,"checkout_flow":true}
+    </script> 
     
     
     <link rel="preload" type="font/woff2" href="/fonts/dn/ffeda1c1-badb-47fc-b7b2-7da67113f119-3a00c17b57.woff2" as="font" crossorigin="anonymous">
@@ -14,7 +17,7 @@
   <script type="text/javascript">
     function OptanonWrapper() {
       window.dataLayer = window.dataLayer || []
-      window.dataLayer.push({ event: 'OnetrustGroupsUpdated' });
+      window.dataLayer.push({ event: 'OnetrustGroupsUpdated', funnelType: 'web_legacy_funnel'});
     }
   </script>
   <!-- OneTrust Cookies Consent Notice -->
@@ -91,7 +94,7 @@ var _rollbarConfig = {
         client: {
           javascript: {
             source_map_enabled: true,
-            code_version: "0e3da5e",
+            code_version: "d99447cd6b9b90cf8ecbf6681bdf1a2759321c34",
             guess_uncaught_frames: true
           }
         }
@@ -278,10 +281,10 @@ if (!performance.clearMeasures) {
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/dn/favicon/apple-touch-152x152-precomposed.png">
 
 
-<link rel='stylesheet' href='/stylesheets/dn-zurb-7dc6c67ecf.css'>
+<link rel='stylesheet' href='/stylesheets/dn-zurb-a6f92ab716.css'>
 
 <meta content="authenticity_token" name="csrf-param" />
-<meta content="9GNRU9J19si4FOfLv4aBRvM/2m7QzCCjVZTH14by9tk=" name="csrf-token" />
+<meta content="U/hm3cgIE86HbR78GnZLu3I6+TC5cZ/dZ+LuweE4Iec=" name="csrf-token" />
 
     <meta property="og:description" content="Köstliches Hähnchen mit Erdnusssauce">
   <meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/images-marleyspoon-production/media/recipes/114391/main_photos/large/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg">
@@ -295,7 +298,7 @@ if (!performance.clearMeasures) {
 
 <script type="text/javascript">
 //<![CDATA[
-window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_currency="EUR";gon.env="production";gon.api_token="eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtcyIsImNvdW50cnkiOiJkZSIsImJyYW5kIjoiZG4iLCJ0cyI6MTY1NjM0NTMzMSwicmFuZG9tX2lkIjoiMjRhYzdlIn0.OSB-IAqvyaOX6BRSLXyhCFC5CmBOXcl6LjHHONaGm2Y";gon.api_host="https:\/\/api.dinnerly.com";gon.git_revision="0e3da5e";gon.recipes_preview_enabled=false;
+window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_currency="EUR";gon.env="production";gon.api_token="eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtcyIsImNvdW50cnkiOiJkZSIsImJyYW5kIjoiZG4iLCJ0cyI6MTY3Njk3OTcwMCwicmFuZG9tX2lkIjoiYjEyNWFmIn0.TRDVXcTBihs09EPbXmuUqaz0vcxQ3yKvjA-6YA6MN_k";gon.api_host="https:\/\/api.dinnerly.com";gon.git_revision="d99447cd6b9b90cf8ecbf6681bdf1a2759321c34";gon.recipes_preview_enabled=false;gon.callback={"is_enabled":true,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaW5uZXJseSIsImV4cCI6MTAwMDAwMDAwMDAwMDAsInF1ZXVlcyI6eyJkZSI6eyJpZCI6IjAyNWNmMDRmMDU2NzQ0MGNiODZhNzg4YjBkOGJkZjFkIiwicGhvbmUiOjQ5MzAzMTE5ODA4OH0sIm5sIjp7ImlkIjoiNzA1MGEwOGY4Mzg1NDIyMjk3MzYxNzMwMzgzNjUyZjUiLCJwaG9uZSI6MzEzMDgwODExODV9LCJ1cyI6eyJpZCI6ImE2MWQ0YTg5NDNjNTRlMDI4NzM1MTgwMzQ0YWEwODcwIiwicGhvbmUiOjE4ODgyNjcyODUwfSwiYXUiOnsiaWQiOiI2Y2ZmYzkwMzk3NGU0YTNjYWE5MWQ4MjJmNzYwYWQ3MCIsInBob25lIjo2MTI5MDU2NzU3MH19fQ.cci_S_XL7PlNTkEcaEPFiFvaiEtT_oAjM1g0wwyP6tQ"};gon.self_service_complaints_gql_url="https:\/\/beef.marleyspoon.com\/steak\/graphql";
 //]]>
 </script>
 
@@ -306,10 +309,10 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
 <script defer src="/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 <script defer src=/javascripts/manifest-496038555708afce1270.js></script>
-<script defer src=/javascripts/vendor-019afd512917ae08cccc.js></script>
-<script defer src=/javascripts/commons-5e4ab60481df6e7f19ac.js></script>
-<script defer src=/javascripts/locales/de-DE-DN-bd910ade6a.js></script>
-<script defer src=/javascripts/menu-50d9af4948036629b689.js></script>
+<script defer src=/javascripts/vendor-cb20c2b3b18d01cdd9e1.js></script>
+<script defer src=/javascripts/commons-68aaa65f277227cac89d.js></script>
+<script defer src=/javascripts/locales/de-DE-DN-237d644125.js></script>
+<script defer src=/javascripts/menu-4e7706d8c81312ae390e.js></script>
 
 
 
@@ -350,10 +353,10 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
   <a href="https://support.dinnerly.com/hc/de?origin=de" target="_blank">Kundenservice</a>
 </li>
 <li class="pb3">
-  <a href="http://presse.dinnerly.de/">Presse</a>
+  <a href="https://dinnerly.de/about/presse">Presse</a>
 </li>
 <li class="pb3">
-  <a href="https://recycle.dinnerly.de">Recycling</a>
+  <a href="https://dinnerly.de/nachaltigkeit/recycle">Recycling</a>
 </li>
 <li class="pb3">
   <a href="/terms">AGB</a>
@@ -361,14 +364,14 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
 <li class="pb3">
   <a href="/privacy">Datenschutz</a>
 </li>
+  <li><a href="https://dinnerly.de/offer/kuendigung" rel="noopener" target="_blank">Abonnement kündigen</a></li>
 
           </ul>
         </nav>
-
         <div class="sign-in nui__center hide-tablet">
-          <div class="nui__col-3">
-            <a class="nui__signup-button nui__button--primary-inverse nui__button full" href="/select-plan">Registrieren</a>
-          </div>
+            <div class="nui__col-3">
+              <a class="nui__signup-button nui__button--primary-inverse nui__button full" href="/select-plan">Kochbox wählen</a>
+            </div>
           <div class="nui__login">
             Du bist schon dabei?
             <a class="nui__login-button" href="/login">Login</a>
@@ -376,7 +379,6 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
         </div>
       </div>
     </div>
-
     <div class="nui__row nui__nowrap nui__header-menu">
       <div class="nui__col-2 nui__col-5--tablet nui__col-3--mobile">
         <div class="mobile-menu-button hide-desktop">
@@ -405,11 +407,10 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
       </div>
       <div class="buttons-container nui__right hide-mobile">
         <a class="nui__login-button" href="/login">Login</a>
-        <a class="nui__signup-button nui__button--primary-inverse nui__button" data-webp="true" href="/select-plan">Registrieren</a>
+          <a class="nui__signup-button nui__button--primary-inverse nui__button" data-webp="true" href="/select-plan">Kochbox wählen</a>
       </div>
     </div>
   </div>
-
 </div>
 
 
@@ -542,15 +543,15 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
         <div class="siteMap__contentWrapper">
           <h4>Unternehmen</h4>
           <ul>
-              <li><a href="https://signup.dinnerly.de/partner-programm/" target="_blank">Partner Program</a></li>
+              <li><a href="https://dinnerly.de/about/partnerprogramm" target="_blank">Partner Program</a></li>
             <li><a href="/how">So funktioniert’s</a></li>
-            <li><a href="https://careers.marleyspoon.com">Jobs</a></li>
+            <li><a href="https://marleyspoon.com/careers">Jobs</a></li>
             <li><a href="/terms">AGB</a></li>
             <li><a href="/privacy">Datenschutz</a></li>
               <li><a href="/imprint">Impressum</a></li>
-            <li><a href="https://stories.dinnerly.de/ingredients/" target="_blank">Zutatenliste</a></li>
-            <li><a href="https://recycle.dinnerly.de" rel="noopener" target="_blank">Recycling</a></li>
-            <li><a href="http://presse.dinnerly.de/" rel="noopener" target="_blank">Presse</a></li>
+            <li><a href="https://dinnerly.de/zutaten/ingredient-hub" target="_blank">Zutatenliste</a></li>
+            <li><a href="https://dinnerly.de/nachaltigkeit/recycle" rel="noopener" target="_blank">Recycling</a></li>
+            <li><a href="https://dinnerly.de/about/presse" rel="noopener" target="_blank">Presse</a></li>
             
           </ul>
         </div>
@@ -563,6 +564,7 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
               <h4>Hilfe &amp; Kontakt</h4>
               <ul>
                 <li><a href="https://support.dinnerly.com/hc/de?origin=de" target="_blank">Kundenservice</a></li>
+                  <li><a href="https://dinnerly.de/offer/kuendigung" rel="noopener" target="_blank">Abonnement kündigen</a></li>
               </ul>
             </div>
           </div>
@@ -597,7 +599,7 @@ window.gon={};gon.current_brand="dn";gon.current_country="de";gon.current_curren
     <div class="copyright">
       <div class="nui__wrapper nui__row nui__center">
   <span class="copyright__statement nui__col-4 nui__col-6--desktop de">
-    2022 © Marley Spoon AG. Alle Rechte vorbehalten.
+    2023 © Marley Spoon AG. Alle Rechte vorbehalten.
   </span>
 </div>
 

@@ -2,7 +2,7 @@
   "url": "https://pinchofyum.com/instant-pot-noodles",
   "name": "Chili Garlic Instant Pot Noodles",
   "description": "Chili Garlic Instant Pot Noodles - They are sticky, with an umami flavor and a little sweetness. They are gorgeous, because we get fancy with our toppings.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-yoast.jpg",
   "image": [
     {
@@ -20,7 +20,14 @@
   ],
   "author": {
     "name": "Lindsay",
-    "url": "https://pinchofyum.com/about"
+    "description": "A little thing about me: I ♡ FOOD. I used to be a teacher, and now making food and writing about it online is my full-time job. I love talking with people about food, and I'm so glad you're here. Did you make a recipe? Tag @pinchofyum on Instagram so we can find you!",
+    "url": "https://pinchofyum.com/about",
+    "image": "https://pinchofyum.com/wp-content/uploads/Headshot-Main-Bio-Circle.jpg"
+  },
+  "publisher": {
+    "name": "Pinch of Yum",
+    "description": "A food blog with simple and tasty recipes.",
+    "url": "https://pinchofyum.com"
   },
   "prepTime": 5,
   "cookTime": 3,
@@ -74,7 +81,7 @@
     "transFatContent": "0 g"
   },
   "aggregateRating": {
-    "reviewCount": 118,
+    "reviewCount": 121,
     "ratingValue": 4.3
   },
   "video": {
@@ -82,9 +89,5 @@
     "description": "Chili Garlic Instant Pot Noodles – They are sticky, with an umami flavor and a little sweetness. They are gorgeous, because we get fancy with our toppings.",
     "contentUrl": "https://content.jwplatform.com/videos/hx5b0xVZ.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/hx5b0xVZ-720.jpg"
-  },
-  "publisher": {
-    "name": "Pinch of Yum",
-    "url": "https://pinchofyum.com"
   }
 }

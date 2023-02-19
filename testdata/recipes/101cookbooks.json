@@ -2,21 +2,26 @@
   "url": "https://www.101cookbooks.com/blood-orange-gin-sparkler/",
   "name": "Blood Orange Gin Sparkler",
   "description": "The citrus gin cocktail you want to be drinking. It's bright and beautiful - perfect for winter holidays and New Years Eve.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://images.101cookbooks.com/gin_sparkler.jpg?w=680",
   "image": [
     {
-      "url": "https://images.101cookbooks.com/gin_sparkler.jpg?w=680\u0026auto=format"
+      "url": "https://images.101cookbooks.com/gin_sparkler.jpg?w=1200\u0026auto=format"
     },
     {
-      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=1000\u0026auto=format"
+      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=1200\u0026auto=format"
     },
     {
-      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=800\u0026h=800\u0026fp-z=2\u0026fp-y=.5\u0026fp-x=.5\u0026fit=crop\u0026crop=entropy"
+      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=1200\u0026h=1200\u0026fp-z=2\u0026fp-y=.5\u0026fp-x=.5\u0026fit=crop\u0026crop=entropy"
     }
   ],
   "author": {
     "name": "Heidi Swanson"
+  },
+  "publisher": {
+    "name": "101 Cookbooks",
+    "description": "When you own over 100 cookbooks, it is time to stop buying, and start cooking. This site chronicles a cookbook collection, one recipe at a time.",
+    "url": "https://www.101cookbooks.com"
   },
   "prepTime": 5,
   "cookTime": 10,
@@ -54,12 +59,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 8,
-    "ratingValue": 4.25
-  },
-  "publisher": {
-    "name": "101 Cookbooks",
-    "url": "https://www.101cookbooks.com"
+    "ratingCount": 9,
+    "ratingValue": 4.34
   },
   "datePublished": "2022-03-31T11:36:56Z"
 }

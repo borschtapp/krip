@@ -2,8 +2,16 @@
   "url": "https://www.forksoverknives.com/recipes/vegan-pasta-noodles/butternut-mac-and-cheese-broccoli/",
   "name": "Butternut Squash Mac and Cheese with Broccoli",
   "description": "Spiced butternut squash blended with nutritional yeast and a little plant milk makes a delightfully rich and “cheesy” sauce for pasta and broccoli. Pumpkin, acorn squash, or delicata squash will also work in this recipe. To make this recipe gluten-free, chose a whole grain pasta made with rice, corn, and/or quinoa.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.forksoverknives.com/wp-content/uploads/butternut-broccoli-mac-and-cheese-wordpress.jpg",
+  "author": {
+    "name": "Darshana Thacker Wendel",
+    "description": "Darshana Thacker Wendel is a whole-food, plant-based chef and former culinary projects manager for Forks Over Knives. A graduate of the Natural Gourmet Institute, she is the author of Forks Over Knives: Flavor! She created the recipes for Forks Over Knives Family and was a lead recipe contributor to the New York Times bestseller The Forks Over Knives Plan. Her recipes have been published in The Prevent and Reverse Heart Disease Cookbook, Forks Over Knives—The Cookbook, Forks Over Knives: The Plant-Based Way to Health, and LA Yoga magazine online. Visit DarshanasKitchen.com and follow her on Instagram for more."
+  },
+  "publisher": {
+    "name": "Forks Over Knives",
+    "url": "https://www.forksoverknives.com"
+  },
   "prepTime": 30,
   "totalTime": 30,
   "recipeCategory": [
@@ -38,11 +46,7 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 32,
-    "ratingValue": 4.25
-  },
-  "publisher": {
-    "name": "Forks Over Knives",
-    "url": "https://www.forksoverknives.com"
+    "reviewCount": 49,
+    "ratingValue": 4.06
   }
 }

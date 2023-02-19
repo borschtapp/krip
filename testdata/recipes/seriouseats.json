@@ -3,29 +3,17 @@
   "name": "Buttery, Flaky Pie Crust Recipe",
   "description": "A buttery, flaky, tender, and easy pie dough recipe that requires no special equipment, ingredients, or training.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.seriouseats.com/thmb/nSM9cY_NSgXOTRBWo7DdGP4uXn0=/1500x1125/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-13-5b10055034e14bbfb1bfd762097ad1b8.jpg",
-  "image": [
-    {
-      "url": "https://www.seriouseats.com/thmb/xEQqnxQEIMlClhClHQWu0NIefAc=/1500x844/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-13-5b10055034e14bbfb1bfd762097ad1b8.jpg",
-      "width": 1500,
-      "height": 844
-    },
-    {
-      "url": "https://www.seriouseats.com/thmb/RTWR1wy_9HPmOYpfvfIE-mdYP3c=/1500x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-13-5b10055034e14bbfb1bfd762097ad1b8.jpg",
-      "width": 1500,
-      "height": 1125
-    },
-    {
-      "url": "https://www.seriouseats.com/thmb/jeyyPyy3-Z4WkdlfR0AC6O40gpQ=/1125x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-13-5b10055034e14bbfb1bfd762097ad1b8.jpg",
-      "width": 1125,
-      "height": 1125
-    }
-  ],
+  "thumbnailUrl": "https://www.seriouseats.com/thmb/xNY4o_dHNwORzdutYZqOPCUiVOg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__09__20160712-blind-bake-pie-crust-vicky-wasik-10-306bb1237a62413fa754cac8e53db637.jpg",
   "author": {
     "name": "Stella Parks",
     "jobTitle": "Editor Emeritus",
     "description": "Stella Parks is a CIA-trained baking nerd and pastry wizard, dubbed one of America's Best New Pastry Chefs by Food \u0026 Wine. She was the pastry editor at Serious Eats from 2016 to 2019.",
     "url": "https://www.seriouseats.com/stella-parks-5119004"
+  },
+  "publisher": {
+    "name": "Serious Eats",
+    "url": "https://www.seriouseats.com",
+    "logo": "https://www.seriouseats.com/thmb/YfQU2tc6Ask4mMy6oMJDaulMqqE=/320x320/filters:no_upscale():max_bytes(150000):strip_icc()/Serious_Eats_Schema_Logo-30a63d9c07734d35836c8ff2d368419c.png"
   },
   "prepTime": 20,
   "cookTime": 60,
@@ -56,23 +44,23 @@
   "recipeInstructions": [
     {
       "text": "For the Dough: Whisk flour, sugar, and salt together in a medium bowl. Cut butter into cubes no smaller than 1/2 inch, and toss with flour mixture to break up the pieces. With your fingertips, smash each cube flat—that's it! No rubbing or cutting. Stir in water, then knead dough against sides of the bowl until it comes together in a shaggy ball. Dough temperature should register between 65 and 70°F (18 and 21°C); if not, refrigerate briefly before rolling and folding (see note).",
-      "image": "https://www.seriouseats.com/thmb/N0Tj6QN9UYqllBjpJ-_EfRe4u6E=/1500x1125/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__20160608-decorative-pie-crust-vicky-wasik-collage1-9c3eb044c8474a409525cad4c34ce356.jpg"
+      "image": "https://www.seriouseats.com/thmb/WqUhHC5v749k0ePgvDnt2RWtccU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__20160608-decorative-pie-crust-vicky-wasik-collage1-9c3eb044c8474a409525cad4c34ce356.jpg"
     },
     {
       "text": "Make the Layers: On a generously floured work surface, roll dough into a roughly 10- by 15-inch rectangle. Fold the 10-inch sides to the center, then close the newly formed packet like a book. Fold in half once more, bringing the short sides together to create a thick block. Divide in half with a sharp knife or bench scraper. Dough temperature should still be somewhere between 65 and 70°F (18 and 21°C); if not, refrigerate briefly before proceeding (see note).",
-      "image": "https://www.seriouseats.com/thmb/9HQtU6sFUu7ub8pMFpeNC8r_8pE=/1500x1125/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__20160608-decorative-pie-crust-vicky-wasik-collage2-507e31dabbb84ff38f8e98c8f596c0a8.jpg"
+      "image": "https://www.seriouseats.com/thmb/7U6llXdVSNlk0x12R7F1FJMztOc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__20160608-decorative-pie-crust-vicky-wasik-collage2-507e31dabbb84ff38f8e98c8f596c0a8.jpg"
     },
     {
       "text": "For Single-Crusted Pies: Using as much flour as needed, roll one piece into a 14-inch circle; this size allows ample room to line pie plate, with enough overhang to form a generous border. At smaller sizes, dough will fall short, making it difficult to shape edges, and thicker dough will not crisp as intended. Transfer to 9-inch pie plate; dough should be easy to handle, and will not require any special procedures to move. Dust off excess flour with a pastry brush, using it to nestle dough into corners of pan. With scissors or kitchen shears, trim edge so that it overhangs by 1 1/4 inches. Fold overhang over itself to create thick border that sits on top edge of pie plate, not below. Crimp or shape crust as desired. Repeat with remaining dough. Wrap with plastic and refrigerate at least 2 hours and up to overnight. Use as directed in your favorite recipe.",
-      "image": "https://www.seriouseats.com/thmb/W4LSDRgSVLBEN7isk8uXIm8PYos=/1500x1125/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-collage3-e9847e6c688c49d28a7f399fa0971ffb.jpg"
+      "image": "https://www.seriouseats.com/thmb/vTXTDiU5qhiY920RKTF-5pZcdRE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__06__20160608-decorative-pie-crust-vicky-wasik-collage3-e9847e6c688c49d28a7f399fa0971ffb.jpg"
     },
     {
       "text": "For a Double-Crusted Pie: Using as much flour as needed, roll one piece into a 14-inch circle; this size allows ample room to line pie plate, with enough overhang to form a generous border. At smaller sizes, dough will fall short, making it difficult to shape edges, and thicker dough will not crisp as intended. Transfer to 9-inch pie plate; dough should be easy to handle, and will not require any special procedures to move. Dust off excess flour with a pastry brush, using it to nestle dough into corners of pan. With scissors or kitchen shears, trim edge so that it overhangs by 1 1/4 inches. For solid top crust, roll remaining dough as before; for lattice-top pie, roll into a 9- by 15-inch rectangle instead. Transfer to a baking sheet or parchment-lined cutting board. (The parchment will prevent dough from absorbing any savory odors from the board.) Wrap both portions in plastic and refrigerate at least 2 hours and up to overnight. Use as directed in your favorite recipe; after filling pie and sealing crusts together, refrigerate 30 minutes before baking.",
-      "image": "https://www.seriouseats.com/thmb/gYsxE1OAqsX1N7v2UdDqQnCPAIs=/1500x1125/filters:no_upscale()/20160608-decorative-pie-crust-vicky-wasik-f66f3eea2a474769b7b59c1925075bcd.jpg"
+      "image": "https://www.seriouseats.com/thmb/wy7-ikmI5YYFpWhb3QuKrYTz6hg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20160608-decorative-pie-crust-vicky-wasik-f66f3eea2a474769b7b59c1925075bcd.jpg"
     },
     {
       "text": "For a Blind-Baked Pie: Adjust oven rack to lower-middle position and preheat to 350°F (180°C). Line pie shell that has been chilled for at least 2 hours (as outlined in Step 3) with large sheet of aluminum foil, pressing so it conforms to curves of plate. (A second sheet of foil may be needed for full coverage.) Fill to brim with sugar, transfer to a half sheet pan, and bake until fully set and golden around the edges, 60 to 75 minutes. Fold long sides of foil toward middle, gather short sides, and use both hands to carefully transfer sugar to heat-safe bowl. Let sugar cool to room temperature. If needed, continue baking crust a few minutes more to brown along the bottom.",
-      "image": "https://www.seriouseats.com/thmb/l42GdAQg3-3T9cYPPGdH8ZdtbhE=/1500x1125/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__09__20160712-blind-bake-pie-crust-vicky-wasik-10-306bb1237a62413fa754cac8e53db637.jpg"
+      "image": "https://www.seriouseats.com/thmb/xNY4o_dHNwORzdutYZqOPCUiVOg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__09__20160712-blind-bake-pie-crust-vicky-wasik-10-306bb1237a62413fa754cac8e53db637.jpg"
     }
   ],
   "nutrition": {
@@ -89,8 +77,8 @@
     "unsaturatedFatContent": "0 g"
   },
   "aggregateRating": {
-    "ratingCount": 70,
-    "ratingValue": 4.5
+    "ratingCount": 75,
+    "ratingValue": 4.4
   },
   "video": {
     "name": "How to Make an Old-Fashioned All-Butter Pie Crust",
@@ -100,11 +88,6 @@
     "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/dFb0cGgC/poster.jpg?width=720",
     "uploadDate": "2021-04-26T16:29:29.037Z"
   },
-  "publisher": {
-    "name": "Serious Eats",
-    "url": "https://www.seriouseats.com",
-    "logo": "https://www.seriouseats.com/thmb/O7qOTYhS4IAKSKnr4JmNDURwjhw=/320x320/filters:no_upscale():max_bytes(150000):strip_icc()/Serious_Eats_Schema_Logo-033d1e058bdb4c8d9e0ada84a4485482.png"
-  },
-  "dateModified": "2020-11-12T08:19:27-05:00",
+  "dateModified": "2022-09-16T11:44:07.341-04:00",
   "datePublished": "2016-06-27T05:45:00-04:00"
 }

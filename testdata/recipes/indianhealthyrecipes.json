@@ -2,7 +2,7 @@
   "url": "https://www.indianhealthyrecipes.com/banana-cake-recipe/",
   "name": "Banana Cake Recipe",
   "description": "Soft, moist \u0026 fluffy banana cake - Easy to make and tastes delicious. Serve it with milk or as a snack with some melted chocolate drizzled over it.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/12/banana-cake-2.jpg",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Swasthi"
+    "name": "Swasthi",
+    "description": "I’m Swasthi Shreekanth, the recipe developer, food photographer \u0026 food writer behind Swasthi's Recipes. My aim is to help you cook great Indian food with my time-tested recipes. After 2 decades of experience in practical Indian cooking I started this blog to help people cook better \u0026 more often at home. Whether you are a novice or an experienced cook I am sure Swasthi’s Recipes will assist you to enhance your cooking skills. Read more.."
+  },
+  "publisher": {
+    "name": "Swasthi's Recipes",
+    "description": "Authentic Indian Recipes by Swasthi",
+    "url": "https://www.indianhealthyrecipes.com",
+    "logo": "https://www.indianhealthyrecipes.com/wp-content/uploads/2019/06/Swasthis-Recipes-Organization-Logo.png"
   },
   "prepTime": 10,
   "cookTime": 40,
@@ -131,7 +138,7 @@
     "sugarContent": "2 g"
   },
   "aggregateRating": {
-    "ratingCount": 305,
+    "ratingCount": 328,
     "ratingValue": 4.95
   },
   "video": {
@@ -142,10 +149,6 @@
     "contentUrl": "https://www.youtube.com/watch?v=V6U_fGQzQUM",
     "thumbnailUrl": "https://i.ytimg.com/vi/V6U_fGQzQUM/hqdefault.jpg",
     "uploadDate": "2017-08-20T14:47:50Z"
-  },
-  "publisher": {
-    "name": "Swasthi's Recipes",
-    "url": "https://www.indianhealthyrecipes.com"
   },
   "datePublished": "2021-01-18T10:36:00Z"
 }

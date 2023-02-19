@@ -19,6 +19,11 @@
     "name": "reoririna",
     "url": "https://cookpad.com/kitchen/6992401"
   },
+  "publisher": {
+    "name": "クックパッド",
+    "url": "https://cookpad.com",
+    "logo": "https://cookpad.com/assets/logo_cookpad_square.png"
+  },
   "cookTime": 40,
   "recipeCategory": [
     "本格バターチキンカレー"
@@ -61,10 +66,5 @@
     {
       "text": "子供ごはんはこんな感じの盛り付けに♡♥"
     }
-  ],
-  "publisher": {
-    "name": "クックパッド",
-    "url": "https://cookpad.com/",
-    "logo": "https://cookpad.com/assets/logo_cookpad_square.png"
-  }
+  ]
 }

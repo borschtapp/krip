@@ -2,8 +2,8 @@
   "url": "https://www.primaledgehealth.com/no-bake-custard/",
   "name": "No Bake Custard (Keto \u0026 Carnivore-Friendly)",
   "description": "This no bake keto carnivore custard has the same great flavor and silky smooth texture as traditional custard but is less work to make! Make it yourself with just 5 ingredients and 10 minutes of prep time.",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/No-Bake-Keto-Custard-Recipe.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.primaledgehealth.com/wp-content/uploads/2022/08/no-bake-custard-1.jpg",
   "image": [
     {
       "url": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/no-bake-custard-1.jpg"
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Jessica Haggard"
+    "name": "Jessica Haggard",
+    "description": "Jessica Haggard is the creator of Primal Edge Health, where she shares simple, nourishing low-carb, keto, and carnivore diet recipes. She has photographed and authored two best-selling ketogenic cookbooks, The Ketogenic Edge Cookbook and The Carnivore Cookbook.",
+    "url": "https://www.primaledgehealth.com/author/jessica/",
+    "image": "https://www.primaledgehealth.com/wp-content/uploads/2019/07/jessica-circle_small.jpg"
+  },
+  "publisher": {
+    "name": "Primal Edge Health",
+    "description": "Building healthy bodies, families, and communities together",
+    "url": "https://www.primaledgehealth.com"
   },
   "prepTime": 10,
   "totalTime": 70,
@@ -83,10 +91,6 @@
   "aggregateRating": {
     "ratingCount": 3,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Primal Edge Health",
-    "url": "https://www.primaledgehealth.com"
   },
   "datePublished": "2021-03-03T10:08:00Z"
 }

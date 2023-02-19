@@ -2,7 +2,7 @@
   "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/",
   "name": "Almond Flour Peanut Butter Cookies",
   "description": "These peanut butter cookies are sugar free, gluten free, and keto - all while baking up soft and chewy and sweet!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://thatlowcarblife.com/wp-content/uploads/2021/11/thumb-3.jpg",
   "image": [
     {
@@ -22,7 +22,15 @@
     }
   ],
   "author": {
-    "name": "Karly Campbell"
+    "name": "Karly Campbell",
+    "description": "Karly has been an active food blogger for over 10 years. She currently runs two blogs, sharing recipes and bits of life with her community of over 2 million readers each month.",
+    "url": "https://thatlowcarblife.com/author/karly/"
+  },
+  "publisher": {
+    "name": "That Low Carb Life",
+    "description": "It's not a diet, it's a way of life.",
+    "url": "https://thatlowcarblife.com",
+    "logo": "https://thatlowcarblife.com/wp-content/uploads/2021/09/web-res-primary.png"
   },
   "prepTime": 10,
   "cookTime": 9,
@@ -101,11 +109,7 @@
     "unsaturatedFatContent": "7 grams unsaturated fat"
   },
   "aggregateRating": {
-    "reviewCount": 10,
-    "ratingValue": 4.7
-  },
-  "publisher": {
-    "name": "That Low Carb Life",
-    "url": "https://thatlowcarblife.com"
+    "reviewCount": 23,
+    "ratingValue": 4.5
   }
 }

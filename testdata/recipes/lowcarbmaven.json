@@ -2,7 +2,7 @@
   "url": "https://www.lowcarbmaven.com/teriyaki-shrimp-skewers/",
   "name": "Keto Teriyaki Shrimp Skewers (kabobs)",
   "description": "Grill, bake or broil these easy keto teriyaki shrimp skewers for a quick protein packed dinner. The sweet-sticky sauce is sugar-free, gluten-free and flavored with pungent garlic and ginger.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://d104wv11b7o3gc.cloudfront.net/wp-content/uploads/2021/03/keto-teriyaki-shrimp-skewers-1.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Kim Hardesty"
+    "name": "Kim Hardesty",
+    "description": "Kim is a self taught cook with over 30 years experience in the kitchen. She develops and tests low carb and keto recipes in her California home. She began her low carb journey in 2009 and at the urging of friends, started blogging in 2014. Kim shares delicious low carb and keto recipes no one would believe are sugar-free. Her recipes are featured in newsstand publications and on sites all over the internet.",
+    "image": "https://secure.gravatar.com/avatar/7faf8f7e4ec4d7da204396e06e40a3f9?s=96\u0026d=https%3A%2F%2Fwww.lowcarbmaven.com%2Fwp-content%2Fuploads%2F2019%2F11%2Fcropped-tulip-avatar2.png\u0026r=g"
+  },
+  "publisher": {
+    "name": "Low Carb Maven",
+    "description": "low carb recipes people love...",
+    "url": "https://www.lowcarbmaven.com",
+    "logo": "https://www.lowcarbmaven.com/wp-content/uploads/2020/02/LowCard-Main-01-small-1.png"
   },
   "prepTime": 15,
   "cookTime": 10,
@@ -128,10 +136,6 @@
   "aggregateRating": {
     "ratingCount": 2,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Low Carb Maven",
-    "url": "https://www.lowcarbmaven.com"
   },
   "datePublished": "2021-03-15T11:59:59Z"
 }

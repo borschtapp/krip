@@ -14,6 +14,10 @@
   "author": {
     "name": "Purple Carrot"
   },
+  "publisher": {
+    "name": "Based Recipes",
+    "url": "https://www.purplecarrot.com"
+  },
   "prepTime": 30,
   "totalTime": 30,
   "recipeYield": 2,
@@ -53,7 +57,7 @@
   ],
   "nutrition": {
     "calories": "530 cal",
-    "fatContent": "18 g"
+    "fatContent": "18.0 g"
   },
   "datePublished": "2020-05-13T06:56:11.845-04:00"
 }

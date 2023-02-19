@@ -2,7 +2,7 @@
   "url": "https://www.eatingbirdfood.com/curried-shakshuka/",
   "name": "Easy Shakshuka",
   "description": "This easy shakshuka recipe is a healthy one-pan dish with poached eggs in a flavorful tomato sauce. It comes together quickly and can be served any time of the day!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.eatingbirdfood.com/wp-content/uploads/2020/12/Shakshuka-close-up-hero.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Brittany Mullins"
+    "name": "Brittany Mullins",
+    "description": "meet brittany Hey there, I’m Brittany, the creator of Eating Bird Food, holistic nutritionist, health coach and personal trainer. Whether it’s for my meal plans, my favorite recipes or just because you want to feel good, I’m so happy you’re here.",
+    "image": "https://secure.gravatar.com/avatar/3988cb890d86cc73a6c920e1a4392acc?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Eating Bird Food",
+    "description": "Healthy Recipes with Real Food",
+    "url": "https://www.eatingbirdfood.com",
+    "logo": "https://www.eatingbirdfood.com/wp-content/uploads/2021/01/EBF-MainLogo-FINAL-Color-small-1.jpg"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -82,8 +90,8 @@
     "unsaturatedFatContent": "6 g"
   },
   "aggregateRating": {
-    "ratingCount": 47,
-    "ratingValue": 4.37
+    "ratingCount": 52,
+    "ratingValue": 4.43
   },
   "video": {
     "name": "Curried Shakshuka",
@@ -91,10 +99,6 @@
     "contentUrl": "https://content.jwplatform.com/videos/WqDYnY9v.mp4",
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/WqDYnY9v-720.jpg",
     "uploadDate": "2017-12-27T18:23:27Z"
-  },
-  "publisher": {
-    "name": "Eating Bird Food",
-    "url": "https://www.eatingbirdfood.com"
   },
   "datePublished": "2021-01-01T08:00:00Z"
 }

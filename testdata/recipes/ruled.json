@@ -2,13 +2,23 @@
   "url": "https://www.ruled.me/keto-eggwiches/",
   "name": "Keto Eggwiches",
   "description": "Keto eggwiches are easy to make and taste great. Give them a try today. Read on to get the recipe.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://cdn.ruled.me/wp-content/uploads/2022/03/Keto-Eggwiches-Featured.jpg",
   "image": [
     {
       "url": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E"
     }
   ],
+  "author": {
+    "name": "Sarah Shaeffer",
+    "url": "https://www.ruled.me/author/sarah/",
+    "image": "https://secure.gravatar.com/avatar/b796d9bcc8c04350a35c1b282fe6f502?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Ruled Me",
+    "description": "Ruling the Keto Diet \u0026 Getting in Shape - Guides | Recipes | Tips",
+    "url": "https://www.ruled.me"
+  },
   "totalTime": 20,
   "recipeYield": 3,
   "recipeIngredient": [
@@ -46,9 +56,5 @@
   "nutrition": {
     "calories": "547",
     "fatContent": "42.7g"
-  },
-  "publisher": {
-    "name": "Ruled Me",
-    "url": "https://www.ruled.me"
   }
 }

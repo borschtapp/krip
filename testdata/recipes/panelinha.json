@@ -4,9 +4,9 @@
   "description": "Clássico é clássico! Com a técnica certa, o rosbife fica perfeito. Atente para os tempos e as temperaturas. Ele não pode estar gelado e precisa mesmo do descanso depois de assado.",
   "inLanguage": "pt-br",
   "thumbnailUrl": "https://cdn.panelinha.com.br/receita/1569505884207-rosbife.jpg",
-  "recipeYield": 4,
   "publisher": {
     "name": "Panelinha",
     "url": "https://www.panelinha.com.br"
-  }
+  },
+  "recipeYield": 4
 }

@@ -2,7 +2,7 @@
   "url": "https://www.rezeptwelt.de/sonstige-hauptgerichte-rezepte/nudelsalat/mbc1phgz-e2d56-160794-cfcd2-x6yic6yp",
   "name": "Nudelsalat",
   "description": "Nudelsalat, ein Rezept der Kategorie sonstige Hauptgerichte. Mehr Thermomix ® Rezepte auf www.rezeptwelt.de",
-  "inLanguage": "de_DE",
+  "inLanguage": "de-DE",
   "thumbnailUrl": "https://de.rc-cdn.community.thermomix.com/recipeimage/mbc1phgz-e2d56-160794-cfcd2-x6yic6yp/69b775cf-693a-443e-b61e-990e025b3ef5/large/nudelsalat.jpg",
   "image": [
     {
@@ -43,6 +43,10 @@
     "Salz",
     "Pfeffer",
     "300 g Knoblauch, aioli"
+  ],
+  "tool": [
+    "Spatel",
+    "2. Mixtopf TM6"
   ],
   "recipeInstructions": [
     {

@@ -7,12 +7,12 @@
   "author": {
     "name": "kwestiasmaku"
   },
-  "aggregateRating": {
-    "reviewCount": 31,
-    "ratingValue": 4.87
-  },
   "publisher": {
     "name": "Kwestia Smaku",
     "url": "https://www.kwestiasmaku.com"
+  },
+  "aggregateRating": {
+    "reviewCount": 42,
+    "ratingValue": 4.83
   }
 }

@@ -26,7 +26,7 @@
     "Garlic",
     "Salt",
     "Tomatoes",
-    "Sun Dried Tomatoes",
+    "Sun dried tomatoes",
     "Extra virgin olive oil",
     "Salt",
     "Pepper",
@@ -58,8 +58,8 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 53,
-    "ratingValue": 3.08,
+    "ratingCount": 58,
+    "ratingValue": 3.12,
     "bestRating": 5,
     "worstRating": 1
   }

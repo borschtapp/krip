@@ -3,28 +3,16 @@
   "name": "Homemade Doner Kebab",
   "description": "Make a home version of spit-roasted lamb (doner) kebab, served as a sandwich with vegetables and sauce.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.thespruceeats.com/thmb/NRuxY8YJmof92GgShYoUFouVeIo=/2105x2105/filters:fill(auto,1)/aqIMG_1498fsq-5b343910c9e77c001a218bd0.jpg",
-  "image": [
-    {
-      "url": "https://www.thespruceeats.com/thmb/DKGKiOeI7L3iiDtLzOllsoaGksA=/2105x1184/smart/filters:no_upscale()/aqIMG_1498fsq-5b343910c9e77c001a218bd0.jpg",
-      "width": 2105,
-      "height": 1184
-    },
-    {
-      "url": "https://www.thespruceeats.com/thmb/-nB-sqUmkowaYTbV6O0-Ikc-rCw=/2105x1579/smart/filters:no_upscale()/aqIMG_1498fsq-5b343910c9e77c001a218bd0.jpg",
-      "width": 2105,
-      "height": 1579
-    },
-    {
-      "url": "https://www.thespruceeats.com/thmb/Ii4TjrtiQkZ9gbEa6I7R0de0rbA=/2105x2105/smart/filters:no_upscale()/aqIMG_1498fsq-5b343910c9e77c001a218bd0.jpg",
-      "width": 2105,
-      "height": 2105
-    }
-  ],
+  "thumbnailUrl": "https://www.thespruceeats.com/thmb/ao7czXh1afSBamtQnDUilsLD3uc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-hero-01-c14d8b7189df4685a50bae311317f831.jpg",
   "author": {
     "name": "Anita Schecter",
     "description": "Professional recipe developer, food photographer, and blogger with more than a decade of experience creating Middle Eastern recipes.",
     "url": "https://www.thespruceeats.com/anita-schecter-2355287"
+  },
+  "publisher": {
+    "name": "The Spruce Eats",
+    "url": "https://www.thespruceeats.com",
+    "logo": "https://www.thespruceeats.com/thmb/f3m_vtGjmtpclj77cP5o_vmsxBM=/361x109/filters:no_upscale():max_bytes(150000):strip_icc()/thespruceeats2x-a1e29f658c6a4903ad453641f794cb18.png"
   },
   "prepTime": 20,
   "cookTime": 30,
@@ -64,28 +52,28 @@
   ],
   "recipeInstructions": [
     {
-      "text": "Gather the ingredients."
+      "text": "Gather the ingredients.",
+      "image": "https://www.thespruceeats.com/thmb/8ObXWnNje4e3TiYGaXzoSq2DYDw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-01-3b8619e293984e89a7d980d4955e8f3b.jpg"
     },
     {
-      "text": "Preheat the oven to 350 F."
+      "text": "Pre heat the oven to 350 F. In a large bowl, combine the ground lamb, egg, garlic, ground cumin, ground coriander, smoked paprika, dried oregano, salt, and black pepper.",
+      "image": "https://www.thespruceeats.com/thmb/Uq2r9y0ONRQIeFSostT9s0iwqUI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-02-ef9f1276aa4a45fcac9addc44568aa11.jpg"
     },
     {
-      "text": "In a large bowl, combine the ground lamb, egg, garlic, ground cumin, ground coriander, smoked paprika, dried oregano, salt, and black pepper."
+      "text": "Place the mixture into an oiled 9 x 5-inch loaf pan and cook in the oven for approximately 30 minutes or until the top is a light golden brown.",
+      "image": "https://www.thespruceeats.com/thmb/_RahSP5oGwt8aptuwxtcDamBTpw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-03-6a0eb603814142ce8fa1feb8e00f7583.jpg"
     },
     {
-      "text": "Place the mixture into an oiled 9 x 5-inch loaf pan and cook in the oven for approximately 30 minutes or until the top is a light golden brown."
+      "text": "You can slice the loaf immediately if you like but, for best results, cool completely, wrap in aluminum foil, and refrigerate until firm.",
+      "image": "https://www.thespruceeats.com/thmb/RvtdQZEGdxvlUH1zgq0REPsIwTE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-04-98ada6b090fd45b8b56f6163e3c75ab7.jpg"
     },
     {
-      "text": "You can slice the loaf immediately if you like but, for best results, cool completely, wrap in aluminum foil, and refrigerate until firm."
+      "text": "To reheat, add a little olive oil to a large skillet, slice the loaf very thinly and crisp up the slices in the hot pan for a few minutes.",
+      "image": "https://www.thespruceeats.com/thmb/RRte9gP99ZakmmqfKH3N4Oj3Npc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-05-84e395c48e0f492aae6ef520b9fd2b9a.jpg"
     },
     {
-      "text": "To reheat, add a little olive oil to a large skillet, slice the loaf very thinly and crisp up the slices in the hot pan for a few minutes."
-    },
-    {
-      "text": "Assemble the sandwiches with pita, warmed and toasted through. Spread on some tzatziki or tahini sauce, add lettuce, tomato, cucumber, onion, and top with more sauce."
-    },
-    {
-      "text": "Serve and enjoy."
+      "text": "Assemble the sandwiches with pita, warmed and toasted through. Spread on some tzatziki or tahini sauce, add lettuce, tomato, cucumber, onion, and top with more sauce.",
+      "image": "https://www.thespruceeats.com/thmb/ZiUUlc2vjWJCuZ6Uugf4ftcvNf0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-step-06-c0312452b24f4c5bac2f6b391f64a7d6.jpg"
     }
   ],
   "nutrition": {
@@ -102,7 +90,7 @@
     "unsaturatedFatContent": "0 g"
   },
   "aggregateRating": {
-    "ratingCount": 119,
+    "ratingCount": 129,
     "ratingValue": 4
   },
   "video": {
@@ -113,11 +101,6 @@
     "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/LRf920H5/poster.jpg?width=720",
     "uploadDate": "2019-11-04T18:59:26.049Z"
   },
-  "publisher": {
-    "name": "The Spruce Eats",
-    "url": "https://www.thespruceeats.com",
-    "logo": "https://www.thespruceeats.com/thmb/f3m_vtGjmtpclj77cP5o_vmsxBM=/361x109/filters:no_upscale():max_bytes(150000):strip_icc()/thespruceeats2x-a1e29f658c6a4903ad453641f794cb18.png"
-  },
-  "dateModified": "2021-07-10T15:19:15.841-04:00",
+  "dateModified": "2022-12-19T09:13:52.087-05:00",
   "datePublished": "2018-06-28T09:41:05.748-04:00"
 }

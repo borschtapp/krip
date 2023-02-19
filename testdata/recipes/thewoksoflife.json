@@ -2,7 +2,7 @@
   "url": "https://thewoksoflife.com/whole-wheat-mantou/",
   "name": "The Perfect Whole Wheat Mantou Recipe",
   "description": "“Fluffy” and “chewy” are how I like to describe these Whole Wheat Mantou. These are almost always the two words that come to mind when I come across really, really good mantou (Chinese steamed buns). I had my fair share of whole wheat mantou when we lived in Beijing, as they are surprisingly common",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://thewoksoflife.com/wp-content/uploads/2018/01/whole-wheat-mantou-9.jpg",
   "image": [
     {
@@ -19,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Judy"
+    "name": "Judy",
+    "description": "Judy is the mom of The Woks of Life family. Born in Shanghai, she arrived in the U.S. at age 16. Fluent in both English and three separate Chinese dialects, she's our professional menu translator when we're eating our way through China. Dedicated to preserving disappearing recipes and traditions, her specialty is all things traditional, from mooncakes to home-style stir-fries.",
+    "url": "https://thewoksoflife.com/author/jleung/",
+    "image": "https://thewoksoflife.com/wp-content/uploads/2020/10/judy.jpg"
+  },
+  "publisher": {
+    "name": "The Woks of Life",
+    "description": "a culinary genealogy",
+    "url": "https://thewoksoflife.com",
+    "logo": "https://thewoksoflife.com/wp-content/uploads/2019/05/Temporary-Logo-e1556728319201.png"
   },
   "prepTime": 240,
   "cookTime": 30,
@@ -82,10 +91,6 @@
   "aggregateRating": {
     "ratingCount": 11,
     "ratingValue": 4.91
-  },
-  "publisher": {
-    "name": "The Woks of Life",
-    "url": "https://thewoksoflife.com"
   },
   "datePublished": "2018-01-13T15:28:44Z"
 }

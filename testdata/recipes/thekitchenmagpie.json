@@ -2,7 +2,7 @@
   "url": "https://www.thekitchenmagpie.com/salmon-loaf/",
   "name": "Salmon Loaf",
   "description": "Skip the salmon cakes and make this great salmon loaf for dinner instead!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonwhiteplatter.jpg",
   "image": [
     {
@@ -19,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Karlynn Johnston"
+    "name": "Karlynn Johnston",
+    "description": "I’m a busy mom of two, wife \u0026 cookbook author who loves creating fast, fresh meals for my little family on the Canadian prairies. Karlynn Facts: I'm allergic to broccoli. I've never met a cocktail that I didn't like. I would rather burn down my house than clean it. Most of all, I love helping YOU get dinner ready because there's nothing more important than connecting with our loved ones around the dinner table!",
+    "url": "https://www.thekitchenmagpie.com/author/karlynn/",
+    "image": "https://secure.gravatar.com/avatar/34653196b5e69c6569d180a47a8e4484?s=96\u0026r=g"
+  },
+  "publisher": {
+    "name": "The Kitchen Magpie",
+    "description": "Trusted Recipes from my Prairie Kitchen!",
+    "url": "https://www.thekitchenmagpie.com",
+    "logo": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2019/04/default.jpg"
   },
   "prepTime": 10,
   "cookTime": 60,
@@ -84,12 +93,8 @@
     "transFatContent": "1 g"
   },
   "aggregateRating": {
-    "ratingCount": 52,
+    "ratingCount": 78,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "The Kitchen Magpie",
-    "url": "https://www.thekitchenmagpie.com"
   },
   "datePublished": "2021-03-03T04:00:24Z"
 }

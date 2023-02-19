@@ -2,10 +2,16 @@
   "url": "https://www.melskitchencafe.com/licorice-caramels/",
   "name": "Licorice Caramels",
   "description": "You have got to try these homemade licorice caramels! Each bite is a creamy explosion of caramel with a subtle, delicious licorice tingle.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.melskitchencafe.com/wp-content/uploads/2013/12/licorice-caramels3.jpg",
   "author": {
     "name": "Mel"
+  },
+  "publisher": {
+    "name": "Mel's Kitchen Cafe",
+    "description": "Delicious + easy recipes from my kitchen to yours!",
+    "url": "https://www.melskitchencafe.com",
+    "logo": "https://www.melskitchencafe.com/wp-content/uploads/convertkit-logo.png"
   },
   "prepTime": 130,
   "cookTime": 20,
@@ -68,12 +74,8 @@
     "sugarContent": "18 g"
   },
   "aggregateRating": {
-    "ratingCount": 44,
-    "ratingValue": 4.55
-  },
-  "publisher": {
-    "name": "Mel's Kitchen Cafe",
-    "url": "https://www.melskitchencafe.com"
+    "ratingCount": 48,
+    "ratingValue": 4.59
   },
   "datePublished": "2013-12-10T06:00:27Z"
 }

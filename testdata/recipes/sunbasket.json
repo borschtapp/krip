@@ -4,8 +4,11 @@
   "description": "Our custom lemongrass paste transforms simple ingredients into a Thai-inspired noodle salad. It’s refreshing, light, and as inviting to look at as it is to eat.",
   "inLanguage": "en",
   "thumbnailUrl": "https://cdn.sunbasket.com/100408c8-f908-404e-a494-099fad9fed44.jpg",
-  "author": {
-    "name": "Sunbasket"
+  "publisher": {
+    "name": "Sunbasket",
+    "description": "Our meal kit plan delivers healthy recipes and organic \u0026 sustainable ingredients weekly, with menus for your lifestyle.",
+    "url": "https://sunbasket.com",
+    "logo": "https://sunbasket.com/resources/img/logo.svg"
   },
   "cookTime": 15,
   "recipeYield": 2,

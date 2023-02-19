@@ -2,10 +2,18 @@
   "url": "https://ohsweetbasil.com/the-very-best-banana-bread-recipe/",
   "name": "Very Best Banana Bread Recipe",
   "description": "I've made over 100 banana bread recipes for over 3 years in search of the VERY BEST Banana Bread Recipe, and I've finally found it and am ready to share it with you!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://ohsweetbasil.com/wp-content/uploads/the-best-banana-bread-recipe-ohsweetbasil.com-4.jpg",
   "author": {
-    "name": "Sweet Basil"
+    "name": "Sweet Basil",
+    "description": "Lover of all things beautiful, good and delicious. Wife, mother, friend, foodie.",
+    "url": "https://ohsweetbasil.com/author/cc64688/"
+  },
+  "publisher": {
+    "name": "Oh Sweet Basil",
+    "description": "Reinventing Family Dinner",
+    "url": "https://ohsweetbasil.com",
+    "logo": "https://ohsweetbasil.com/wp-content/uploads/logo-2022.svg"
   },
   "prepTime": 5,
   "cookTime": 60,
@@ -85,20 +93,17 @@
     "unsaturatedFatContent": "7 g"
   },
   "aggregateRating": {
-    "ratingCount": 168,
-    "ratingValue": 4.36
+    "ratingCount": 172,
+    "ratingValue": 4.35
   },
   "video": {
     "name": "The very Best Banana Bread",
     "description": "I've made over 100 banana bread recipes for over 3 years in search of the VERY BEST Banana Bread Recipe, and I've finally found it and am ready to share it with you!",
     "duration": "PT84S",
-    "contentUrl": "https://embed.mediavine.com/videos/vruvc6ixevpkbkskne3k",
+    "embedUrl": "https://video.mediavine.com/videos/vruvc6ixevpkbkskne3k.js",
+    "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1517259361/vruvc6ixevpkbkskne3k.mp4",
     "thumbnailUrl": "https://mediavine-res.cloudinary.com/video/upload/s--0czh5nnj--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1517259361/vruvc6ixevpkbkskne3k.jpg",
     "uploadDate": "2018-01-29T20:59:34Z"
-  },
-  "publisher": {
-    "name": "Oh Sweet Basil",
-    "url": "https://ohsweetbasil.com"
   },
   "datePublished": "2018-02-18T02:11:43Z"
 }

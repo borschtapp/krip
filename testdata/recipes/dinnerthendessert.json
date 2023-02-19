@@ -1,25 +1,34 @@
 {
   "url": "https://dinnerthendessert.com/indian-chicken-korma/",
   "name": "Indian Chicken Korma Recipe",
-  "description": "Chicken Korma is a traditional Indian dish that's light and flavorful almond curry made with tomato paste, plenty of spices and cream thats buttery and completely delicious.",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma-FB.jpg",
+  "description": "Chicken Korma is a traditional Indian dish of light, flavorful almond curry made with tomato paste, spices and cream. Buttery and delicious!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma-FB-1.jpg",
   "image": [
     {
-      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma.jpg"
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma1-scaled.jpg"
     },
     {
-      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-500x500.jpg"
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma1-500x500.jpg"
     },
     {
-      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-500x375.jpg"
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma1-500x375.jpg"
     },
     {
-      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-480x270.jpg"
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma1-480x270.jpg"
     }
   ],
   "author": {
-    "name": "Sabrina"
+    "name": "Sabrina Snyder",
+    "jobTitle": "author, blogger",
+    "description": "Sabrina is a professionally trained Private Chef of over 10 years with ServSafe Manager certification in food safety. She creates all the recipes here on Dinner, then Dessert, fueled in no small part by her love for bacon. Sabrina Snyder is a professionally trained personal and private chef of over 10 years who is the creator and developer of all the recipes on Dinner, then Dessert. She is also the author of the upcoming cookbook: Dinner, then Dessert – Satisfying Meals Using Only 3, 5 or 7 Ingredients which is being published by Harper Collins. She started Dinner, then Dessert as a business in her office as a lunch service for her coworkers who admired her lunches before going to culinary school and becoming a full time personal chef and private chef. As a personal chef Sabrina would cook for families one day a week and cook their entire week of dinners. All grocery shopping, cooking and cleaning was done along with instructions on reheating. As a private chef she cooked for private parties and cooked in family homes in the evenings for families on a nightly basis after working as a personal chef during the day. Sabrina has been certified as a ServSafe Manager since 2007 and was a longstanding member of the USPCA Personal Chef Association including being on the board of the Washington DC Chapter of Chefs in the US Personal Chef Association when they won Chapter of the year. As a member of the community of food website creators Sabrina Snyder has spoken at many conferences regarding her experiences as a food writer including the Indulge Food Conference, Everything Food Conference, Haven Food Conference and IACP Annual Food Professionals Conference. Sabrina lives with her family in sunny California.",
+    "url": "https://dinnerthendessert.com/author/v34gwrgr/"
+  },
+  "publisher": {
+    "name": "Dinner, then Dessert",
+    "description": "Chef approved recipes for dinners and desserts.",
+    "url": "https://dinnerthendessert.com",
+    "logo": "https://dinnerthendessert.com/wp-content/uploads/2018/06/dinnerthendessert_logo.vSTACK.png"
   },
   "prepTime": 20,
   "cookTime": 25,
@@ -35,9 +44,9 @@
   ],
   "recipeYield": 4,
   "recipeIngredient": [
-    "6 chicken thighs (boneless and skinless)",
+    "6 chicken thighs (, boneless and skinless)",
     "2 tablespoons tomato paste",
-    "1 tablespoon sized piece of fresh ginger (peeled)",
+    "1 tablespoon fresh ginger (, peeled)",
     "2 cloves garlic",
     "1 tablespoon garam masala",
     "1/4 teaspoon crushed red pepper",
@@ -49,36 +58,49 @@
     "3/4 cup greek yogurt",
     "1 tablespoon canola oil",
     "3 tablespoons butter",
-    "1 yellow onion (diced)",
+    "1 yellow onion (, diced)",
     "1/4 cup heavy cream"
   ],
   "recipeInstructions": [
     {
-      "text": "Cut the chicken thighs into small 1 1/2 to 2 inch chunks and put them in a large bowl."
+      "name": "Cut",
+      "text": "Cut the chicken thighs into small 1 1/2 to 2 inch chunks and put them in a large bowl.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-0"
     },
     {
-      "text": "Add the tomato paste, ginger, garlic, garam masala, crushed red pepper, paprika, cardamom, salt, turmeric and almonds into a food processor on high"
+      "name": "Process",
+      "text": "Add the tomato paste, ginger, garlic, garam masala, crushed red pepper, paprika, cardamom, salt, turmeric and almonds into a food processor on high speed until completely smooth.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-1"
     },
     {
-      "text": "speed until completely smooth."
+      "name": "Mix",
+      "text": "Add the mixture to the bowl with the chicken along with the yogurt and mix well.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-2"
     },
     {
-      "text": "Add the mixture to the bowl with the chicken along with the yogurt and mix well."
+      "name": "Refrigerate",
+      "text": "Cover and refrigerate for1-2 hours.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-3"
     },
     {
-      "text": "Cover and refrigerate for 1-2 hours."
+      "name": "Heat",
+      "text": "Add the canola oil and butter to a large cast iron skillet or heavy skillet on medium high heat.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-4"
     },
     {
-      "text": "Add the canola oil and butter to a large cast iron skillet or heavy skillet on medium high heat."
+      "name": "Cook",
+      "text": "Add the onions and cook for 5-7 minutes, or until just caramelized.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-5"
     },
     {
-      "text": "Add the onions and cook for 5-7 minutes, or until just caramelized."
+      "name": "Cook",
+      "text": "Add in the chicken and cook for 12-15 minutes or until the chicken is cooked through.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-6"
     },
     {
-      "text": "Add in the chicken and cook for 12-15 minutes or until the chicken is cooked through."
-    },
-    {
-      "text": "Add the heavy cream to the skillet and mix well, cooking for an additional 3-4 minutes."
+      "name": "Cook",
+      "text": "Add the heavy cream to the skillet and mix well, cooking for an additional 3-4 minutes.",
+      "url": "https://dinnerthendessert.com/indian-chicken-korma/#wprm-recipe-33823-step-0-7"
     }
   ],
   "nutrition": {
@@ -94,12 +116,17 @@
     "sugarContent": "4 g"
   },
   "aggregateRating": {
-    "ratingCount": 9,
-    "ratingValue": 5
+    "ratingCount": 43,
+    "ratingValue": 4.98
   },
-  "publisher": {
-    "name": "Dinner, then Dessert",
-    "url": "https://dinnerthendessert.com"
+  "video": {
+    "name": "Indian Chicken Korma",
+    "description": "Chicken Korma is a traditional Indian dish that’s light and flavorful almond curry made with tomato paste, plenty of spices and cream thats buttery and completely delicious.",
+    "duration": "PT78S",
+    "embedUrl": "https://video.mediavine.com/videos/hiih5pgl2ipywsg4y5zq.js",
+    "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1636523362/hiih5pgl2ipywsg4y5zq.mp4",
+    "thumbnailUrl": "https://mediavine-res.cloudinary.com/video/upload/s--RNJupLxi--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1636523362/hiih5pgl2ipywsg4y5zq.jpg",
+    "uploadDate": "2021-11-10T07:11:59Z"
   },
-  "datePublished": "2018-04-11T00:05:59Z"
+  "datePublished": "2022-03-14T00:05:00Z"
 }

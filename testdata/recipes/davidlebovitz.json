@@ -2,10 +2,17 @@
   "url": "https://www.davidlebovitz.com/faux-gras-foie-gras-vegetarian-lentil-mushroom-pate-recipe/",
   "name": "Faux Gras",
   "description": "Adapted from Très Green, Très Clean, Très Chic by Rebecca Leffler Lentils double in volume when cooked, so 1 cup (160g) of dried lentils will yield close to the correct amount. They usually take about 20 to 30 minutes to cook until soft, but check the directions on the package for specific guidelines. If avoiding gluten, use tamari instead of soy sauce. For a vegan version, replace the butter with the same quantity of olive oil, for a total of 1/4 cup (60ml) of olive oil. The cognac or brandy is optional, but it does give the faux gras a little je ne sais quoi.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.davidlebovitz.com/wp-content/uploads/2015/06/Faux-Gras-Lentil-Pate-8.jpg",
   "author": {
-    "name": "David"
+    "name": "David",
+    "description": "Pastry chef and cookbook author living in Paris."
+  },
+  "publisher": {
+    "name": "David Lebovitz",
+    "description": "Baking and cooking recipes for everyone",
+    "url": "https://www.davidlebovitz.com",
+    "logo": "https://www.davidlebovitz.com/wp-content/uploads/2019/06/david-leb.png"
   },
   "recipeIngredient": [
     "12 medium-sized (100g, about 1 cup) button mushrooms",
@@ -39,9 +46,5 @@
       "url": "https://www.davidlebovitz.com/faux-gras-foie-gras-vegetarian-lentil-mushroom-pate-recipe/#wprm-recipe-52621-step-0-2"
     }
   ],
-  "publisher": {
-    "name": "David Lebovitz",
-    "url": "https://www.davidlebovitz.com"
-  },
   "datePublished": "2015-07-06T13:25:09Z"
 }

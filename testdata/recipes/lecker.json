@@ -9,6 +9,11 @@
       "url": "https://images.lecker.de/,id=7e976162,b=lecker,w=610,cg=c.jpg"
     }
   ],
+  "publisher": {
+    "name": "lecker.de",
+    "url": "https://www.lecker.de",
+    "logo": "https://www.lecker.de/assets/lecker-logo.png"
+  },
   "cookTime": 25,
   "totalTime": 25,
   "recipeCategory": [
@@ -64,14 +69,10 @@
     "proteinContent": "38"
   },
   "aggregateRating": {
-    "ratingCount": 78,
+    "ratingCount": 96,
     "ratingValue": 4,
     "bestRating": 5,
     "worstRating": 1
-  },
-  "publisher": {
-    "name": "lecker.de",
-    "url": "https://www.lecker.de"
   },
   "dateModified": "2021-12-14T11:25:53+01:00"
 }

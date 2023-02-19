@@ -2,10 +2,17 @@
   "url": "https://nobunplease.com/subway-keto-menu/",
   "name": "Subway Keto Menu | 15+ Low Carb Menu Items",
   "description": "When the mood for a submarine sandwich strikes, reach for my Subway Keto Menu guide to easily choose a low carb option! #nobunplease #keto #lowcarb #lchf",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://nobunplease.com/wp-content/uploads/2020/09/keto-subway-featured.jpg",
+  "author": {
+    "name": "Dom Geracia",
+    "description": "Contributions to No Bun Please by Dom Geracia .",
+    "url": "https://nobunplease.com/author/dominic/",
+    "image": "https://secure.gravatar.com/avatar/912897a3a5e9d10ffa8599b84a6c018d?s=96\u0026amp;d=wp_user_avatar\u0026amp;r=g"
+  },
   "publisher": {
     "name": "No Bun Please",
-    "url": "https://nobunplease.com"
+    "url": "https://nobunplease.com",
+    "logo": "https://nobunplease.com/wp-content/uploads/2021/07/nbp-logo-400x140-2.png"
   }
 }

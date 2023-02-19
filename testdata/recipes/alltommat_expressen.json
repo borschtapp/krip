@@ -1,8 +1,8 @@
 {
-  "url": "https://www.expressen.se/alltommat/recept/briochehamburgerbrod/",
+  "url": "https://alltommat.expressen.se/recept/briochehamburgerbrod/",
   "name": "Brioche-hamburgerbröd",
   "description": "Recept på briochehamburgerbröd. Perfekta hamburgerbröd som är lätt söta och fluffiga. Inkråmet är mjukt och luftigt och tar upp smakerna från en saftig -ham-burgare bra.",
-  "inLanguage": "sv_SE",
+  "inLanguage": "sv-SE",
   "thumbnailUrl": "https://static.cdn-expressen.se/images/8b/46/8b46181ad1eb42e98d7b05cfdf21e0a9/16x9/original.jpg",
   "image": [
     {
@@ -16,7 +16,13 @@
     }
   ],
   "author": {
-    "name": "gunilla von heland"
+    "name": "gunilla von heland",
+    "url": "https://www.expressen.se/av/gunilla-von-heland/",
+    "image": "https://static.cdn-expressen.se/images/34/e9/34e9b4b6f69d486da5cba523c43962b1/16x9/original.jpg"
+  },
+  "publisher": {
+    "name": "Bonnier Magazines \u0026 Brands AB",
+    "url": "https://alltommat.expressen.se"
   },
   "text": "alltom mat",
   "totalTime": 20,
@@ -50,11 +56,7 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 742,
-    "ratingValue": 3.8409703504043127
-  },
-  "publisher": {
-    "name": "Bonnier Magazines \u0026 Brands AB",
-    "url": "https://www.expressen.se"
+    "ratingCount": 829,
+    "ratingValue": 3.8
   }
 }

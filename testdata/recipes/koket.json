@@ -7,6 +7,10 @@
   "author": {
     "name": "Tommy Myllymäki"
   },
+  "publisher": {
+    "name": "Köket.se",
+    "url": "https://www.koket.se"
+  },
   "totalTime": 25,
   "recipeYield": 4,
   "recipeIngredient": [
@@ -43,7 +47,7 @@
     }
   ],
   "aggregateRating": {
-    "ratingCount": 365,
+    "ratingCount": 376,
     "ratingValue": 3.6,
     "bestRating": 5,
     "worstRating": 1
@@ -55,9 +59,5 @@
     "contentUrl": "https://www.tv4play.se/iframe/video/3036821?autoload=true",
     "thumbnailUrl": "https://img.koket.se/standard-mega/myllymakis-toast-skagen-2.jpg",
     "uploadDate": "2014-12-29T05:00:00Z"
-  },
-  "publisher": {
-    "name": "Köket.se",
-    "url": "https://www.koket.se"
   }
 }

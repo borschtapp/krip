@@ -1,124 +1,95 @@
 {
-  "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/",
-  "name": "Sour Cream Chicken Enchiladas",
-  "description": "Sour cream chicken enchiladas bake to golden perfection in just 30 minutes with a sauce that will be your new obsession!!",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.gonnawantseconds.com/wp-content/uploads/2020/01/Sour-Cream-Enchiladas-03.jpg",
+  "url": "https://www.gonnawantseconds.com/white-chicken-enchiladas/",
+  "name": "White Chicken Enchiladas",
+  "description": "Whip up the cheesiest, dreamiest dinner you've ever had with my sensational White Chicken Enchiladas! Guaranteed to please even the pickiest eaters!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.gonnawantseconds.com/wp-content/uploads/2020/09/White-Chicken-Enchiladas-01.jpg",
   "image": [
     {
-      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/01/Sour-Cream-Enchiladas-03-500x500.jpg"
+      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/08/White-Chicken-Enchiladas-01.jpg"
     },
     {
-      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/01/Sour-Cream-Enchiladas-03-500x375.jpg"
+      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/08/White-Chicken-Enchiladas-01-500x500.jpg"
     },
     {
-      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/01/Sour-Cream-Enchiladas-03-480x270.jpg"
+      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/08/White-Chicken-Enchiladas-01-500x375.jpg"
+    },
+    {
+      "url": "https://www.gonnawantseconds.com/wp-content/uploads/2020/08/White-Chicken-Enchiladas-01-480x270.jpg"
     }
   ],
   "author": {
-    "name": "Kathleen"
+    "name": "Kathleen",
+    "description": "I’m a home cook and my favorite place to be is in my kitchen cooking up a storm. I’m also a wife, mother, Bernese Mountain dog lover, friend, daughter, sister, and reluctant exerciser.",
+    "url": "https://www.gonnawantseconds.com/author/food-admin/",
+    "image": "https://secure.gravatar.com/avatar/f6202f5cce19cacd71fcdf70fbebc7a5?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Gonna Want Seconds",
+    "description": "Easy and Delicious Family Fa",
+    "url": "https://www.gonnawantseconds.com",
+    "logo": "https://www.gonnawantseconds.com/wp-content/uploads/2016/10/logo-02-04.png"
   },
   "prepTime": 10,
-  "cookTime": 20,
-  "totalTime": 30,
+  "cookTime": 30,
+  "totalTime": 40,
   "recipeCategory": [
-    "Chicken Dinner",
     "Main Course"
   ],
   "recipeCuisine": [
     "Mexican"
   ],
   "keywords": [
-    "how do I make sour cream chicken enchiladas recipe",
-    "how to make sour cream chicken enchiladas recipe",
-    "Sour Cream Chicken Enchiladas",
-    "Sour Cream Chicken Enchiladas Recipe"
+    "How DO I Make White Chicken Enchiladas Recipe",
+    "How To Make White Chicken Enchiladas Recipe",
+    "White Chicken Enchiladas",
+    "White Chicken Enchiladas Recipe"
   ],
-  "recipeYield": 5,
+  "recipeYield": 4,
   "recipeIngredient": [
-    "2 tablespoons vegetable oil",
-    "1 cup onion, (diced)",
-    "1 package taco seasoning",
-    "1 (10-ounce) can Rotel, (drained)",
-    "1/2 teaspoon salt",
-    "1/2 teaspoon black pepper",
-    "2 cups cooked chicken, (shredded)",
-    "1/2 cups sour cream",
-    "1 cups Monterey jack cheese, (shredded)",
-    "10 (8-inch) flour tortillas",
-    "3 tablespoons butter",
-    "3 tablespoons all-purpose flour",
+    "8-10 small flour tortillas",
+    "3 cups cooked chicken (shredded or chopped)",
+    "3 cups Monterey jack cheese (shredded-divided)",
+    "3 tablespoons unsalted butter",
+    "3 tablespoons flour",
     "2 cups chicken broth",
     "1 cup sour cream",
-    "1 (4-ounce) can chopped green chiles, (drained)",
-    "2 cups Monterey jack cheese, (shredded)",
-    "2 tablespoons chopped cilantro or green onions"
+    "1 (4-ounce can) diced green chilies mild",
+    "2-3 tablespoons green onions (sliced)"
   ],
   "recipeInstructions": [
     {
-      "text": "Preheat oven to 350 degrees. Spray a 9X13 inch baking dish with nonstick cooking spray; set aside",
-      "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-0-0"
+      "text": "Spray a 9 X 13-inch baking dish with cooking spray and set aside. Preheat oven to 350 degrees.",
+      "url": "https://www.gonnawantseconds.com/white-chicken-enchiladas/#wprm-recipe-16129-step-0-0"
     },
     {
-      "name": "Make Filling and Roll:",
-      "itemListElement": [
-        {
-          "text": "Add oil to a large skillet and saute onion until it's translucent and soft. Add taco seasoning, salt, pepper, and Rotel and stir to combine. Add shredded chicken and toss to evenly coat with onion and seasoning mixture. Remove from the heat, cover, and set aside.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-1-0",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-015.jpg"
-        },
-        {
-          "text": "In a medium bowl, stir together 1 cup Monterey Jack and 1/2 cup sour cream until evenly combined.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-1-1",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-017.jpg"
-        },
-        {
-          "text": "Fill tortillas with a layer of the chicken mixture then a layer of the cheese mixture and roll each one and place seam side down, in the prepared pan.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-1-2",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-01.jpg"
-        }
-      ]
+      "text": "In a small bowl, combine chicken and 1 cup of Monterey Jack cheese. Fill tortillas with this mixture and roll each one up then place seam side down in the prepared pan.",
+      "url": "https://www.gonnawantseconds.com/white-chicken-enchiladas/#wprm-recipe-16129-step-0-1"
     },
     {
-      "name": "Make Sauce:",
-      "itemListElement": [
-        {
-          "text": "Melt the butter in a skillet. Sprinkle flour over melted butter and whisk to combine. Cook for 1-2 minutes or until the flour begins to color a little. Remove the skillet from heat and whisk in broth.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-2-0",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-02.jpg"
-        },
-        {
-          "text": "Place back on the heat and cook until the mixture has thickened and is bubbly. Cool sauce for 3-5 minutes. (Don't skip this step- if the sauce is too hot and you add the sour cream it will curdle it-yuck!) Add sour cream and chilies and stir until sauce is smooth and sour cream is completely dissolved.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-2-1",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-04.jpg"
-        },
-        {
-          "text": "Pour sauce over enchiladas and add remaining cheese over top. Bake in preheated oven for 20-25 minutes or until enchiladas are heated through and sauce is bubbly. Turn on the broiler and broil until the top is nicely golden. Garnish with chopped cilantro or green onions and serve.",
-          "url": "https://www.gonnawantseconds.com/sour-cream-chicken-enchiladas/#wprm-recipe-23473-step-2-2",
-          "image": "https://www.gonnawantseconds.com/wp-content/uploads/2020/11/Sour-Cream-Chicken-Enchiladas-07.jpg"
-        }
-      ]
+      "text": "Melt the butter in a skillet. Sprinkle flour over melted butter and whisk to combine. Cook for 1 minute to remove the flour taste. Remove the skillet from heat and whisk in broth. Place back on the heat and cook until the mixture has thickened and is bubbly. Cool sauce for 3-5 minutes. (Don't skip this step- if the sauce is too hot and you add the sour cream it will curdle it-yuck!) Add sour cream and chilies and stir until sauce is smooth and sour cream is completely dissolved.",
+      "url": "https://www.gonnawantseconds.com/white-chicken-enchiladas/#wprm-recipe-16129-step-0-2"
+    },
+    {
+      "text": "Pour sauce over enchiladas and add remaining cheese over top. Bake in preheated oven for 20-25 minutes or until enchiladas are heated through and sauce is bubbly. Turn on the broiler and broil until the top is nicely golden. Top with chopped green onions and serve.",
+      "url": "https://www.gonnawantseconds.com/white-chicken-enchiladas/#wprm-recipe-16129-step-0-3"
     }
   ],
   "nutrition": {
-    "calories": "565 kcal",
-    "servingSize": "1 /5 of the recipe",
-    "carbohydrateContent": "18 g",
-    "cholesterolContent": "114 mg",
-    "fatContent": "47 g",
-    "fiberContent": "3 g",
-    "proteinContent": "20 g",
-    "saturatedFatContent": "30 g",
-    "sodiumContent": "1897 mg",
-    "sugarContent": "7 g"
+    "calories": "897 kcal",
+    "servingSize": "1 /4 of the recipe",
+    "carbohydrateContent": "39 g",
+    "cholesterolContent": "191 mg",
+    "fatContent": "63 g",
+    "fiberContent": "1.5 g",
+    "proteinContent": "45 g",
+    "saturatedFatContent": "33 g",
+    "sodiumContent": "1472 mg",
+    "sugarContent": "5.5 g"
   },
   "aggregateRating": {
-    "ratingCount": 4,
+    "ratingCount": 67,
     "ratingValue": 5
   },
-  "publisher": {
-    "name": "Gonna Want Seconds",
-    "url": "https://www.gonnawantseconds.com"
-  },
-  "datePublished": "2020-11-09T08:00:43Z"
+  "datePublished": "2023-01-12T07:00:02Z"
 }

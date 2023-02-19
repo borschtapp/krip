@@ -17,7 +17,6 @@
     "url": "https://tasty.co",
     "logo": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg"
   },
-  "cookingMethod": "Pan Fry",
   "recipeCategory": [
     "Dinner"
   ],
@@ -113,18 +112,10 @@
       "text": "Enjoy!"
     }
   ],
-  "nutrition": {
-    "calories": "1181 calories",
-    "carbohydrateContent": "79 grams",
-    "fatContent": "56 grams",
-    "fiberContent": "10 grams",
-    "proteinContent": "76 grams",
-    "sugarContent": "20 grams"
-  },
   "aggregateRating": {
-    "ratingCount": 157,
-    "ratingValue": 93,
-    "bestRating": 100
+    "ratingCount": 167,
+    "ratingValue": 4.7,
+    "bestRating": 5
   },
   "video": {
     "name": "Red Wine-Braised Short Ribs With Cashew Cauliflower Mash Recipe by Tasty",

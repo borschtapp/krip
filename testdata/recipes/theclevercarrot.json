@@ -2,8 +2,8 @@
   "url": "https://www.theclevercarrot.com/2017/12/how-to-make-sourdough-cinnamon-rolls-step-by-step-guide/",
   "name": "Soft Sourdough Cinnamon Rolls",
   "description": "These soft, overnight sourdough cinnamon rolls are the perfect weekend or holiday treat! Made with a luscious sweet dough and a not-too-sweet cinnamon filing, they are guaranteed to be a huge hit.",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.theclevercarrot.com/wp-content/uploads/2017/12/How-to-Make-Sourdough-Cinnamon-Rolls-a-step-by-step-guide-13.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.theclevercarrot.com/wp-content/uploads/2017/12/How-to-Make-Sourdough-Cinnamon-Rolls-a-step-by-step-guide-8.jpg",
   "image": [
     {
       "url": "https://www.theclevercarrot.com/wp-content/uploads/2017/12/How-to-Make-Sourdough-Cinnamon-Rolls-a-step-by-step-guide-13-225x225.jpg"
@@ -13,12 +13,24 @@
     },
     {
       "url": "https://www.theclevercarrot.com/wp-content/uploads/2017/12/How-to-Make-Sourdough-Cinnamon-Rolls-a-step-by-step-guide-13-320x180.jpg"
+    },
+    {
+      "url": "https://www.theclevercarrot.com/wp-content/uploads/2017/12/How-to-Make-Sourdough-Cinnamon-Rolls-a-step-by-step-guide-13.jpg"
     }
   ],
   "author": {
     "name": "Emilie Raffa",
     "url": "https://www.theclevercarrot.com/about/"
   },
+  "publisher": {
+    "name": "The Clever Carrot",
+    "description": "Sourdough For Beginners",
+    "url": "https://www.theclevercarrot.com",
+    "logo": "https://www.theclevercarrot.com/wp-content/uploads/2020/03/The-Clever-Carrot-logo.png"
+  },
+  "prepTime": 900,
+  "cookTime": 30,
+  "totalTime": 930,
   "cookingMethod": "Oven-Baked",
   "suitableForDiet": [
     "VegetarianDiet"
@@ -48,7 +60,7 @@
     "300 g (2½ cups) King Arthur all-purpose flour",
     "5 g (1 tsp) fine sea salt",
     "cooking spray or oil, for coating",
-    "28 g (2 tbsp) unsalted butter (see notes below for vatiation)",
+    "28 g (2 tbsp) unsalted butter (see notes below for variation)",
     "100 g (1/2 cup) granulated sugar",
     "3 tsp. ground cinnamon",
     "1 level tbsp. flour",
@@ -188,11 +200,7 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 231,
+    "reviewCount": 281,
     "ratingValue": 4.9
-  },
-  "publisher": {
-    "name": "The Clever Carrot",
-    "url": "https://www.theclevercarrot.com"
   }
 }

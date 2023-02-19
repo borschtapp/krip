@@ -2,7 +2,7 @@
   "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/",
   "name": "Balsamic Watermelon Cucumber Salad",
   "description": "An EASY, healthy, and light salad with watermelon, cucumber, arugula, goat cheese, candied nuts, and drizzled with a homemade balsamic glaze!! A PERFECT summer salad for those days when it's too hot to cook!!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Averie Sunshine"
+    "name": "Averie Sunshine",
+    "description": "Welcome to AverieCooks! Here you’ll find fast and easy recipes that taste amazing and are geared for real life. Nothing fussy or complicated, just awesome tasting dishes everyone loves!",
+    "url": "https://www.averiecooks.com/about/",
+    "image": "https://www.averiecooks.com/wp-content/uploads/2023/01/cropped-averie-cooks-barcelona-crop-96x96.jpg"
+  },
+  "publisher": {
+    "name": "Averie Cooks",
+    "description": "Fast and easy recipes for real life!",
+    "url": "https://www.averiecooks.com"
   },
   "prepTime": 5,
   "cookTime": 15,
@@ -87,9 +95,5 @@
   "aggregateRating": {
     "reviewCount": 8,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Averie Cooks",
-    "url": "https://www.averiecooks.com"
   }
 }

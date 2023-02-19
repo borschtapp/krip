@@ -2,7 +2,7 @@
   "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html",
   "name": "Ham and Egg Crepe Squares",
   "description": "These perfect little packages of sunny side up egg and ham all wrapped up in a soft crepe are a treat for breakfast, lunch or dinner!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.framedcooks.com/wp-content/uploads/2011/02/easy-ham-and-egg-crepes-154.jpg",
   "image": [
     {
@@ -19,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Kate Morgan Jackson"
+    "name": "Kate Morgan Jackson",
+    "description": "Hi there! I’m Kate, and I’m a recipe writer, food photographer and devoted bacon lover. I started Framed Cooks in 2009, and my mission is to create and share family-friendly recipes that make cooking both easy and fun…yes, I said FUN! My kitchen is my happy place, and I want yours to be that place too. And if you make this recipe, I would love you to tag @FramedCooks on Instagram so I can see the deliciousness!",
+    "url": "https://www.framedcooks.com/author/kate",
+    "image": "https://secure.gravatar.com/avatar/febacc0a38e399ed4c166e38efb86b81?s=96\u0026d=https%3A%2F%2Fwww.framedcooks.com%2Fwp-content%2Fthemes%2FFramedCooksV2%2Fimages%2Favatar.png\u0026r=g"
+  },
+  "publisher": {
+    "name": "Framed Cooks",
+    "description": "My life. One recipe at a time.",
+    "url": "https://www.framedcooks.com",
+    "logo": "https://www.framedcooks.com/wp-content/uploads/2019/06/fc-logo-1-e1614369298246.jpg"
   },
   "prepTime": 15,
   "cookTime": 70,
@@ -88,9 +97,5 @@
   "aggregateRating": {
     "reviewCount": 3,
     "ratingValue": 3.7
-  },
-  "publisher": {
-    "name": "Framed Cooks",
-    "url": "https://www.framedcooks.com"
   }
 }

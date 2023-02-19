@@ -2,7 +2,7 @@
   "url": "https://vanillaandbean.com/maple-oat-sourdough-sandwich-bread/",
   "name": "Maple Oat Sourdough Sandwich Bread",
   "description": "**Advanced Prep Required - you'll need a sourdough starter**Lightly sweetened, maple oat sourdough sandwich bread features whole rolled oats and whole wheat flour. It has a soft tender crumb and earthy flavor, ideal for sammies and toast! This recipe is vegetarian and vegan friendly.A Note on HYDRATION - Flours vary in their moisture content from brand to brand. Additionally, local humidity conditions will impact how your dough feels from one batch to another. If the dough feels a bit too dry, try adding a teaspoon of water (more if needed). Too wet? Add more flour, a little at a time (only after the soaker is added). Even if you weigh your ingredients (which I highly recommend), this is not uncommon. As you gain experience in making sourdough, you'll gain a better understanding of how your dough should look and feel.Time above does not include the amount of time for fermentation, shaping and proofing which takes between 8-14 hours, depending on ambient temperature. Use the time as a guide, not as a determining factor._______________________Example Bakers Schedule: Friday-Saturday: feed starter. Saturday night: mix dough and ferment overnight. Sunday morning: shape dough, allow to rise (proof), bake. ________________________Serving size depends on how thick or thin the loaf is sliced. I can get about 12 thick slices or 15-16 thiner slices out of this loaf.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://vanillaandbean.com/wp-content/uploads/2020/06/aaasourdough-20.jpg",
   "image": [
     {
@@ -16,7 +16,14 @@
     }
   ],
   "author": {
-    "name": "Traci York | Vanilla And Bean"
+    "name": "Traci York | Vanilla And Bean",
+    "description": "Sweet and savory vegetarian focusing on sumptuous sweets and seasonal slow food recipes.",
+    "image": "https://secure.gravatar.com/avatar/e85fe53bb798209e780839088e18e6a5?s=96\u0026amp;d=mm\u0026amp;r=g"
+  },
+  "publisher": {
+    "name": "Vanilla And Bean",
+    "url": "https://vanillaandbean.com",
+    "logo": "https://vanillaandbean.com/wp-content/uploads/2020/08/logo-primary.png"
   },
   "cookTime": 50,
   "recipeCategory": [
@@ -102,12 +109,8 @@
     "sugarContent": "50 g"
   },
   "aggregateRating": {
-    "ratingCount": 32,
-    "ratingValue": 4.91
-  },
-  "publisher": {
-    "name": "Vanilla And Bean",
-    "url": "https://vanillaandbean.com"
+    "ratingCount": 41,
+    "ratingValue": 4.93
   },
   "datePublished": "2020-06-12T20:49:54Z"
 }

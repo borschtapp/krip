@@ -2,7 +2,7 @@
   "url": "https://www.thechunkychef.com/family-favorite-baked-mac-and-cheese/",
   "name": "Creamy Homemade Baked Mac and Cheese",
   "description": "This baked mac and cheese is a family favorite recipe, loved by children and adults.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.thechunkychef.com/wp-content/uploads/2018/02/Ultimate-Creamy-Baked-Mac-and-Cheese-feat.jpg",
   "image": [
     {
@@ -18,6 +18,12 @@
       "url": "https://www.thechunkychef.com/wp-content/uploads/2018/02/Ultimate-Creamy-Baked-Mac-and-Cheese-feat-1-440x270.jpg"
     }
   ],
+  "publisher": {
+    "name": "The Chunky Chef",
+    "description": "Comforting Family Recipes",
+    "url": "https://www.thechunkychef.com",
+    "logo": "https://www.thechunkychef.com/wp-content/uploads/2021/03/publisher-logo-680x680-1.jpg"
+  },
   "prepTime": 20,
   "cookTime": 15,
   "totalTime": 35,
@@ -59,7 +65,7 @@
       "url": "https://www.thechunkychef.com/family-favorite-baked-mac-and-cheese/#wprm-recipe-9151-step-0-2"
     },
     {
-      "text": "Melt butter in a large saucepan over MED heat. Sprinkle in flour and whisk to combine. Mixture will look like very wet sand. Cook for approximately 1 minute, whisking often. Slowly pour in about 2 cups or so of the milk/half and half, while whisking constantly, until smooth. Slowly pour in the remaining milk/half and half, while whisking constantly, until combined and smooth.",
+      "text": "Melt butter in a large saucepan over MED heat. Sprinkle in flour and whisk to combine. Mixture will look like very wet sand. Cook for approximately 1 minute, whisking often. Slowly pour in about 2 cups or so of the half and half, while whisking constantly, until smooth. Slowly pour in the remaining half and half and the whole milk, while whisking constantly, until combined and smooth.",
       "url": "https://www.thechunkychef.com/family-favorite-baked-mac-and-cheese/#wprm-recipe-9151-step-0-3"
     },
     {
@@ -92,20 +98,17 @@
     "sugarContent": "3 g"
   },
   "aggregateRating": {
-    "ratingCount": 1852,
-    "ratingValue": 4.81
+    "ratingCount": 2334,
+    "ratingValue": 4.83
   },
   "video": {
     "name": "Mac n Cheese Rec",
     "description": "This baked mac and cheese is a family favorite recipe, loved by both children and adults. My version uses a combination of cheeses for a gloriously cheesy dish!",
     "duration": "PT105S",
-    "contentUrl": "https://embed.mediavine.com/videos/iVcxSy8F4",
+    "embedUrl": "https://video.mediavine.com/videos/iVcxSy8F4.js",
+    "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1616078219/iVcxSy8F4.mp4",
     "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--JmO-8_LT--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1616078221/nijjpdbtgxd0m7cszaiz.jpg",
     "uploadDate": "2018-03-27T00:33:21Z"
-  },
-  "publisher": {
-    "name": "The Chunky Chef",
-    "url": "https://www.thechunkychef.com"
   },
   "datePublished": "2019-09-30T20:49:54Z"
 }

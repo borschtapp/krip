@@ -2,7 +2,7 @@
   "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/",
   "name": "Gooey Chocolate Pudding Cake",
   "description": "This Chocolate Pudding Cake is a very simple, rich chocolate dessert that comes together in just one dish!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4.jpg",
   "image": [
     {
@@ -16,7 +16,16 @@
     }
   ],
   "author": {
-    "name": "Holly Nilsson"
+    "name": "Holly Nilsson",
+    "description": "Holly is a wine and cheese lover, recipe creator, shopping enthusiast and self appointed foodie. Her greatest passion is creating in the kitchen and making deliciously comforting recipes for the everyday home cook!",
+    "url": "https://www.spendwithpennies.com/author/holly/",
+    "image": "https://secure.gravatar.com/avatar/fa4bdeb9d2aa6450536af2064fac2481?s=96\u0026r=g"
+  },
+  "publisher": {
+    "name": "Spend With Pennies",
+    "description": "Easy Recipes, home tips, time savers and more!",
+    "url": "https://www.spendwithpennies.com",
+    "logo": "https://www.spendwithpennies.com/wp-content/uploads/2020/03/icon-spend-with-pennies-1-300x300-1.png"
   },
   "prepTime": 5,
   "cookTime": 30,
@@ -83,12 +92,8 @@
     "sugarContent": "45 g"
   },
   "aggregateRating": {
-    "ratingCount": 94,
-    "ratingValue": 4.89
-  },
-  "publisher": {
-    "name": "Spend With Pennies",
-    "url": "https://www.spendwithpennies.com"
+    "ratingCount": 120,
+    "ratingValue": 4.91
   },
   "datePublished": "2020-05-13T08:00:12Z"
 }

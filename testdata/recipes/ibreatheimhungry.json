@@ -2,7 +2,7 @@
   "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/",
   "name": "Keto Chicken \u0026 Chorizo Sheet Pan Dinner",
   "description": "This Keto Chicken \u0026 Chorizo Sheet Pan Dinner contains just a few low carb ingredients, and is easy to throw together at a moment's notice. Convenient for you, delicious for them!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo4.jpg",
   "image": [
     {
@@ -20,6 +20,12 @@
   ],
   "author": {
     "name": "Mellissa Sevigny"
+  },
+  "publisher": {
+    "name": "I Breathe I'm Hungry",
+    "description": "Easy Keto Recipes, Meal plans and Menu Plans, Low Carb, Paleo, \u0026 Gluten Free Recipes",
+    "url": "https://www.ibreatheimhungry.com",
+    "logo": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/06/logo2.jpg"
   },
   "prepTime": 10,
   "cookTime": 35,
@@ -91,9 +97,5 @@
   "aggregateRating": {
     "reviewCount": 1,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "I Breathe I'm Hungry",
-    "url": "https://www.ibreatheimhungry.com"
   }
 }

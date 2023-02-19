@@ -2,12 +2,9 @@
   "url": "https://www.castironketo.net/blog/keto-jalapeno-popper-casserole-with-chicken/",
   "name": "Keto Jalapeño Popper Casserole with Chicken",
   "description": "Keto Jalapeño Popper Casserole with Chicken! This easy low-carb dinner is made in one pan, a single cast-iron skillet for easy cleanup and minimal mess. Perfectly cheesy and topped with bacon 🥓 YUM!",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole-791x1024.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole.jpg",
   "image": [
-    {
-      "url": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole.jpg"
-    },
     {
       "url": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole-500x500.jpg"
     },
@@ -18,6 +15,11 @@
       "url": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole-480x270.jpg"
     }
   ],
+  "publisher": {
+    "name": "Cast Iron Keto",
+    "description": "Tasty Keto Recipes",
+    "url": "https://www.castironketo.net"
+  },
   "prepTime": 30,
   "cookTime": 15,
   "totalTime": 45,
@@ -80,12 +82,8 @@
     "transFatContent": "1 g"
   },
   "aggregateRating": {
-    "ratingCount": 7,
-    "ratingValue": 4.72
-  },
-  "publisher": {
-    "name": "Cast Iron Keto",
-    "url": "https://www.castironketo.net"
+    "ratingCount": 9,
+    "ratingValue": 4.78
   },
   "datePublished": "2021-01-26T11:35:53Z"
 }

@@ -4,6 +4,10 @@
   "description": "This farro salad boasts delicious contrast from tender chickpeas tossed in a savory-sweet barbecue sauce, crunchy marinated cucumbers, and bites of sweet corn (charred to lightly caramelize the kernels for even more flavor).CLICK FOR RECIPE CARD",
   "inLanguage": "en",
   "thumbnailUrl": "https://media.blueapron.com/recipes/24483/c_main_dish_images/1593115477-32-0038-5165/0819_2PV2_BBQ-Chickpea_4449_CropRight_Web_high_feature.jpg",
+  "publisher": {
+    "name": "Blue Apron",
+    "url": "https://www.blueapron.com"
+  },
   "totalTime": 30,
   "recipeCategory": [
     "Dinner"
@@ -64,11 +68,7 @@
     "calories": "730"
   },
   "aggregateRating": {
-    "ratingCount": 2319,
-    "ratingValue": 4.32
-  },
-  "publisher": {
-    "name": "Blue Apron",
-    "url": "https://www.blueapron.com"
+    "ratingCount": 2363,
+    "ratingValue": 4.31
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://foodinjars.com/recipe/quick-pickled-apple-matchsticks-oxo-chefs-mandoline/",
   "name": "Quick Pickled Apple Matchsticks",
   "description": "I got my first CSA share of the season a week ago, and in addition to the other spring vegetables like snap peas and breakfast radishes, it came with an enormous head of red butter",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://foodinjars.com/wp-content/uploads/2017/06/pickled-apples-for-OXO-mandolin-post-1.jpg",
   "image": [
     {
@@ -18,6 +18,12 @@
   "author": {
     "name": "Marisa McClellan"
   },
+  "publisher": {
+    "name": "Food in Jars",
+    "description": "A blog about canning, pickling, and cooking from scratch.",
+    "url": "https://foodinjars.com",
+    "logo": "https://foodinjars.com/wp-content/uploads/2021/04/Food-in-Jars.png"
+  },
   "recipeIngredient": [
     "1 medium apple",
     "1/2 cup apple cider vinegar",
@@ -31,9 +37,5 @@
       "url": "https://foodinjars.com/recipe/quick-pickled-apple-matchsticks-oxo-chefs-mandoline/#wprm-recipe-24767-step-0-0"
     }
   ],
-  "publisher": {
-    "name": "Food in Jars",
-    "url": "https://foodinjars.com"
-  },
-  "datePublished": "2017-06-10T00:00:00-04:00"
+  "datePublished": "2017-06-10T00:00:00Z"
 }

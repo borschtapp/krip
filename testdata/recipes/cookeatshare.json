@@ -9,6 +9,10 @@
   "author": {
     "name": "CookEatShare Cookbook"
   },
+  "publisher": {
+    "name": "CookEatShare",
+    "url": "https://cookeatshare.com"
+  },
   "recipeIngredient": [
     "4 med. potatoes, pared \u0026 cut lengthwise, in 1/4\" slices",
     "1 lg. carrot, pared \u0026 sliced",

@@ -2,7 +2,7 @@
   "url": "https://eatwhattonight.com/2020/08/ginger-soya-chicken/",
   "name": "Ginger Soya Chicken",
   "description": "Can't imagine we are already in August for year 2020 already. Stepping into the 5th month of the Work-From-Home regime has definitely benefited me much. To be honest, I am getting so used to this WFM thingy that I can't imagine myself waking up at 6ish-am in the mornings anymore, beating the maddening CBD crowds",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://i0.wp.com/eatwhattonight.com/wp-content/uploads/2021/03/cropped-Asset-9@4x-1.png?fit=489%2C279\u0026ssl=1",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Eat What Tonight"
+    "name": "Eat What Tonight",
+    "url": "https://eatwhattonight.com/author/sleepyhead/",
+    "image": "https://secure.gravatar.com/avatar/c374952ac87ce804a7258ad44d0804ef?s=96\u0026d=wp_user_avatar\u0026r=g"
+  },
+  "publisher": {
+    "name": "Eat What Tonight - Singapore Food \u0026 Lifestyle Blog",
+    "description": "Singapore Food \u0026 Lifestyle Blog",
+    "url": "https://eatwhattonight.com",
+    "logo": "https://i0.wp.com/eatwhattonight.com/wp-content/uploads/2021/03/cropped-Asset-9@4x-1.png?fit=489%2C279\u0026ssl=1"
   },
   "prepTime": 30,
   "cookTime": 15,
@@ -88,9 +96,5 @@
     }
   ],
   "nutrition": {},
-  "publisher": {
-    "name": "Eat What Tonight - Singapore Food \u0026 Lifestyle Blog",
-    "url": "https://eatwhattonight.com"
-  },
   "datePublished": "2020-08-04T21:13:04+08:00"
 }

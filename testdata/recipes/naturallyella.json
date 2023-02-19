@@ -2,8 +2,8 @@
   "url": "https://naturallyella.com/black-bean-tacos/",
   "name": "Spiced Black Bean Tacos with Avocado and Goat Cheese",
   "description": "Easy and fresh black bean tacos made from black beans and an easy spice blend then topped with fresh cilantro, avocado, and goat cheese.",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://32lxcujgg9-flywheel.netdna-ssl.com/wp-content/uploads/2017/01/black-bean-tacos-2-667x1000.jpg",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2.jpg",
   "image": [
     {
       "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-225x225.jpg"
@@ -13,13 +13,16 @@
     },
     {
       "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-320x180.jpg"
-    },
-    {
-      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2.jpg"
     }
   ],
   "author": {
-    "name": "Erin Alderson"
+    "name": "Erin Alderson",
+    "url": "https://naturallyella.com/author/erin/"
+  },
+  "publisher": {
+    "name": "Naturally Ella",
+    "description": "California-Inspired Vegetarian Recipes",
+    "url": "https://naturallyella.com"
   },
   "prepTime": 10,
   "cookTime": 10,
@@ -46,14 +49,16 @@
   ],
   "recipeInstructions": [
     {
-      "text": "Place a small pot or skillet over medium-low heat. Add the olive oil followed by the minced garlic. Cook for 1 to 2 minutes, just to until the garlic begins to brown. Place beans and liquid in a pan with the cumin, coriander, garlic powder, and chili powder. Heat over medium-low heat until the majority of the liquid has been absorbed. Taste and add salt as needed."
+      "text": "Place a small pot or skillet over medium-low heat. Add the olive oil followed by the minced garlic. Cook for 1 to 2 minutes, just to until the garlic begins to brown. Place beans and liquid in a pan with the cumin, coriander, garlic powder, and chili powder. Heat over medium-low heat until the majority of the liquid has been absorbed. Taste and add salt as needed.",
+      "url": "https://naturallyella.com/black-bean-tacos/#instruction-step-1"
     },
     {
-      "text": "Heat the tortillas until soft and cut the avocado into slices. Assemble the tacos with ¼ of the bean mixture, a few slices of avocado, a sprinkle of goat cheese, and desired toppings."
+      "text": "Heat the tortillas until soft and cut the avocado into slices. Assemble the tacos with ¼ of the bean mixture, a few slices of avocado, a sprinkle of goat cheese, and desired toppings.",
+      "url": "https://naturallyella.com/black-bean-tacos/#instruction-step-2"
     }
   ],
   "nutrition": {
-    "calories": "677",
+    "calories": "677 calories",
     "carbohydrateContent": "91.6",
     "cholesterolContent": "6.5",
     "fatContent": "25.2",
@@ -65,9 +70,5 @@
   "aggregateRating": {
     "reviewCount": 3,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Naturally.",
-    "url": "https://naturallyella.com"
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://www.cookincanuck.com/nutella-sea-salt-stuffed-sugar-cookie-recipe-oxo-baking-giveaway/",
   "name": "Nutella \u0026 Sea Salt Stuffed Sugar Cookies",
   "description": "You may never go back to your usual sugar cookie recipe after tasting these ones. Stuffed with Nutella and sprinkled with sea salt. Heavenly!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.cookincanuck.com/wp-content/uploads/2015/02/6501336017_9fc5dd5f22-2.jpg",
   "image": [
     {
@@ -20,6 +20,12 @@
   ],
   "author": {
     "name": "Dara Michalski | Cookin' Canuck"
+  },
+  "publisher": {
+    "name": "Cookin Canuck",
+    "description": "Healthy Recipes Food Blog",
+    "url": "https://www.cookincanuck.com",
+    "logo": "https://www.cookincanuck.com/wp-content/uploads/2021/05/Cookin-Canuck-Square-Logo-300x300-1.png"
   },
   "prepTime": 15,
   "cookTime": 13,
@@ -110,10 +116,6 @@
   "aggregateRating": {
     "ratingCount": 1,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Cookin Canuck",
-    "url": "https://www.cookincanuck.com"
   },
   "datePublished": "2011-12-13T03:30:02Z"
 }

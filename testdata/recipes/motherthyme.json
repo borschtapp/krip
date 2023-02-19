@@ -2,7 +2,7 @@
   "url": "https://www.motherthyme.com/2014/01/cinnamon-roll-oatmeal.html",
   "name": "Cinnamon Roll Oatmeal",
   "description": "Creamy oatmeal topped with a cinnamon sugar and a cream cheese glaze for one tasty bowl of Cinnamon Roll Oatmeal you'll definitely enjoy.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.motherthyme.com/wp-content/uploads/2014/01/cinnamonoatmeal1.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Jenn (Mother Thyme)"
+    "name": "Jenn (Mother Thyme)",
+    "url": "https://www.motherthyme.com/author/jennifer-dempsey",
+    "image": "https://secure.gravatar.com/avatar/de77a332895c81acab937c63d45ec56c?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Mother Thyme",
+    "description": "all things home",
+    "url": "https://www.motherthyme.com",
+    "logo": "https://i1.wp.com/www.motherthyme.com/wp-content/uploads/2016/09/MTlogo3.png?fit=660%2C272\u0026ssl=1"
   },
   "prepTime": 15,
   "cookTime": 15,
@@ -85,9 +93,5 @@
   "aggregateRating": {
     "reviewCount": 19,
     "ratingValue": 4.9
-  },
-  "publisher": {
-    "name": "Mother Thyme",
-    "url": "https://www.motherthyme.com"
   }
 }

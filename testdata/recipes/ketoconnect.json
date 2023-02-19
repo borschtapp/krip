@@ -2,7 +2,7 @@
   "url": "https://www.ketoconnect.net/keto-white-chicken-chili/",
   "name": "Keto White Chicken Chili",
   "description": "It is creamy, flavorful and packs a powerful dose of fat and protein to keep you full for longer!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-served-with-bread.jpg",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Matt Gaedke"
+    "name": "Matt Gaedke",
+    "url": "https://www.ketoconnect.net/author/matt/",
+    "image": "https://secure.gravatar.com/avatar/454e0a5c7447eda14740d1b786842f87?s=96\u0026amp;d=mm\u0026amp;r=g"
+  },
+  "publisher": {
+    "name": "KetoConnect",
+    "url": "https://www.ketoconnect.net",
+    "logo": "https://www.ketoconnect.net/wp-content/uploads/2018/10/KC_logo_horizontal_650_150.png"
   },
   "prepTime": 12,
   "cookTime": 18,
@@ -88,12 +95,8 @@
     "unsaturatedFatContent": "5 g"
   },
   "aggregateRating": {
-    "ratingCount": 3,
+    "ratingCount": 16,
     "ratingValue": 4
-  },
-  "publisher": {
-    "name": "KetoConnect",
-    "url": "https://www.ketoconnect.net"
   },
   "datePublished": "2022-02-13T08:00:00Z"
 }

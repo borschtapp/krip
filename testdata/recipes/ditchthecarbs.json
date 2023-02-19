@@ -2,7 +2,7 @@
   "url": "https://www.ditchthecarbs.com/easy-keto-hamburger-buns-almond-flour/",
   "name": "Keto Hamburger Buns Recipe",
   "description": "Bring the bun back to your burger with these easy keto hamburger buns that can bake while you grill.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.ditchthecarbs.com/wp-content/uploads/2021/04/Easy-Keto-Hamburger-Buns-almond-flour-1200x1200-1.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Libby Jenkinson"
+    "name": "Libby Jenkinson",
+    "jobTitle": "Registered Pharmacist, Health Coach, Certificate in Advanced Nutrition",
+    "description": "I'm Libby, a registered pharmacist, Health Coach, Certificate in Advanced Nutrition, mother of 3 and founder of Ditch The Carbs. Ditch The Carbs PRO and Low-Carb Practitioners - 3 of the world's top low-carb websites. My mission is simple. To make low-carb and keto simple and tasty for the whole family."
+  },
+  "publisher": {
+    "name": "Ditch The Carbs",
+    "description": "Easy tasty best low carb and keto recipes for the whole family. Sugar-free, gluten-free.",
+    "url": "https://www.ditchthecarbs.com",
+    "logo": "https://www.ditchthecarbs.com/wp-content/uploads/2021/09/Ditch-The-Carbs-512x512-1.png"
   },
   "prepTime": 5,
   "cookTime": 12,
@@ -101,20 +109,17 @@
     "sugarContent": "1.8 g"
   },
   "aggregateRating": {
-    "ratingCount": 24,
-    "ratingValue": 4.84
+    "ratingCount": 38,
+    "ratingValue": 4.87
   },
   "video": {
     "name": "Keto hamburger buns and rolls",
     "description": "With Keto Hamburger Buns you can start enjoying your burgers with buns again in under 20 minutes for only 4.5g net carbs. These buns are so easy you can toss them together and cook them while grilling your patties! If you have been looking for a dinner roll recipe that is easy to throw together while dinner is cooking then this is the recipe for you!",
     "duration": "PT98S",
-    "contentUrl": "https://embed.mediavine.com/videos/d6zil09v39xrhtnfiaqf",
+    "embedUrl": "https://video.mediavine.com/videos/d6zil09v39xrhtnfiaqf.js",
+    "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/t_original/v1624853187/d6zil09v39xrhtnfiaqf.mp4",
     "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--2sYA80x0--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1624853917/botutammurgoqvun1f3c.jpg",
     "uploadDate": "2021-06-28T04:17:37Z"
-  },
-  "publisher": {
-    "name": "Ditch The Carbs",
-    "url": "https://www.ditchthecarbs.com"
   },
   "datePublished": "2021-09-07T16:00:21Z"
 }

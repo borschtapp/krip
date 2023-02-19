@@ -2,7 +2,7 @@
   "url": "https://www.acouplecooks.com/garlic-butter-shrimp/",
   "name": "Garlic Butter Shrimp (Fast \u0026 Easy Dinner!)",
   "description": "This garlic butter shrimp has HUGE flavor in under 10 minutes! A fast and easy dinner for weeknights or entertaining, it will become your go-to.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-026.jpg",
   "image": [
     {
@@ -20,7 +20,14 @@
   ],
   "author": {
     "name": "Sonja Overhiser",
-    "url": "https://www.acouplecooks.com/about/"
+    "url": "https://www.acouplecooks.com/about/",
+    "image": "https://www.acouplecooks.com/wp-includes/images/blank.gif"
+  },
+  "publisher": {
+    "name": "A Couple Cooks",
+    "description": "Recipes worth repeating.",
+    "url": "https://www.acouplecooks.com",
+    "logo": "https://www.acouplecooks.com/wp-content/uploads/2021/06/social.jpg"
   },
   "prepTime": 5,
   "cookTime": 3,
@@ -80,9 +87,5 @@
     "sodiumContent": "427.1 mg",
     "sugarContent": "0 g",
     "transFatContent": "0 g"
-  },
-  "publisher": {
-    "name": "A Couple Cooks",
-    "url": "https://www.acouplecooks.com"
   }
 }

@@ -7,6 +7,11 @@
   "author": {
     "name": "Sara Foster"
   },
+  "publisher": {
+    "name": "Prime Publishing, LLC.",
+    "url": "https://www.Cookstr.com",
+    "logo": "https://www.primecp.com/wp-content/themes/prime/images/logo.png"
+  },
   "cookingMethod": "braising, stewing",
   "suitableForDiet": [
     "lactose-free",
@@ -56,10 +61,5 @@
     {
       "text": "Cook the noodles according to package directions, drain and toss with a drizzle of olive oil. Chop half of the remaining cilantro (leaves only) and stir into the beef sauce. Pull the stems from the remaining cilantro and discard, reserving the leaves for garnish. Divide the noodles into individual serving bowls and spoon the beef, vegetables and sauce over the noodles. Top with cilantro leaves and toasted coconut and serve warm."
     }
-  ],
-  "publisher": {
-    "name": "Prime Publishing, LLC.",
-    "url": "https://www.Cookstr.com",
-    "logo": "https://www.primecp.com/wp-content/themes/prime/images/logo.png"
-  }
+  ]
 }

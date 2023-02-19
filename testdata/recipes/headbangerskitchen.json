@@ -2,7 +2,7 @@
   "url": "https://headbangerskitchen.com/recipe/keto-omelet-indian-style/",
   "name": "Keto Omelet (Indian Style)",
   "description": "The best Indian egg dish",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://headbangerskitchen.com/wp-content/uploads/2020/11/KETOMASALAOMELET-Vertical.jpg",
   "image": [
     {
@@ -11,6 +11,11 @@
   ],
   "author": {
     "name": "Sahil Makhija"
+  },
+  "publisher": {
+    "name": "Headbanger's Kitchen - Keto All The Way!",
+    "description": "Your one-stop resource for the best low carb and keto recipes on the internet. Make keto tasty again! Plus: Vlogs, blogs and just enough jibber jabber.",
+    "url": "https://headbangerskitchen.com"
   },
   "prepTime": 5,
   "cookTime": 5,
@@ -40,9 +45,5 @@
   "aggregateRating": {
     "ratingCount": 9,
     "ratingValue": 4.33
-  },
-  "publisher": {
-    "name": "Headbanger's Kitchen - Keto All The Way!",
-    "url": "https://headbangerskitchen.com"
   }
 }

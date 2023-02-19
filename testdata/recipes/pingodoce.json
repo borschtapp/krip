@@ -2,8 +2,13 @@
   "url": "https://www.pingodoce.pt/receitas/arroz-de-tamboril/",
   "name": "Arroz de tamboril",
   "description": "Malandrinho, como se quer, saboroso e fresco, graças aos coentros e à hortelã, este arroz de tamboril vai deliciá-lo. Siga a receita e impressione lá em casa.",
-  "inLanguage": "pt_PT",
+  "inLanguage": "pt-PT",
   "thumbnailUrl": "https://www.pingodoce.pt/wp-content/uploads/2016/09/arroz-de-tamboril.jpeg",
+  "publisher": {
+    "name": "Pingo Doce",
+    "url": "https://www.pingodoce.pt",
+    "logo": "https://www.pingodoce.pt/wp-content/uploads/2019/01/logo-pd.jpg"
+  },
   "prepTime": 60,
   "totalTime": 60,
   "keywords": [
@@ -35,12 +40,8 @@
     "calories": "761 calories"
   },
   "aggregateRating": {
-    "ratingCount": 692,
+    "ratingCount": 397,
     "ratingValue": 2,
     "bestRating": 5
-  },
-  "publisher": {
-    "name": "Pingo Doce",
-    "url": "https://www.pingodoce.pt"
   }
 }

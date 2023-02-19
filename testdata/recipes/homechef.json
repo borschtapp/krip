@@ -13,6 +13,11 @@
     "name": "Chef Patrick Le Beau",
     "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Fchef%2Fchef_photo%2F35%2FChefHeadshot11.28.2018_2of2_-8d31a01f913f27590d3f875cda8d2e78.jpg?ixlib=rails-1.1.0\u0026auto=format\u0026blur=250\u0026q=0\u0026w=50\u0026s=e366d5b27590ecefffed44ffb0b9cd34"
   },
+  "publisher": {
+    "name": "Home Chef",
+    "description": "Fresh Ingredient Delivery To Cook At Home",
+    "url": "https://www.homechef.com"
+  },
   "totalTime": 35,
   "recipeYield": 2,
   "recipeIngredient": [
@@ -59,9 +64,5 @@
     "fatContent": "21g",
     "proteinContent": "26g",
     "sodiumContent": "1330mg"
-  },
-  "publisher": {
-    "name": "Home Chef",
-    "url": "https://www.homechef.com"
   }
 }

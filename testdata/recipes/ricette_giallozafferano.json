@@ -7,6 +7,11 @@
   "author": {
     "name": "GialloZafferano"
   },
+  "publisher": {
+    "name": "Ricette di cucina - Le Ricette di GialloZafferano.it",
+    "url": "https://ricette.giallozafferano.it",
+    "logo": "https://www.giallozafferano.it/style/images/logo-giallozafferano.svg"
+  },
   "prepTime": 30,
   "cookTime": 15,
   "totalTime": 45,
@@ -90,12 +95,8 @@
     "sugarContent": "22.3 g"
   },
   "aggregateRating": {
-    "ratingCount": 22,
-    "ratingValue": 3.7,
+    "ratingCount": 25,
+    "ratingValue": 3.8,
     "bestRating": 5
-  },
-  "publisher": {
-    "name": "Ricette di cucina - Le Ricette di GialloZafferano.it",
-    "url": "https://ricette.giallozafferano.it"
   }
 }

@@ -2,13 +2,17 @@
   "url": "https://cavemanketo.com/portobello-pizza/",
   "name": "Portobello Pizza",
   "description": "Just cause you can't eat bread on keto doesn't mean you can't have pizza! Load up the toppings on a Portobello cap and you've got yourself a pizza!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://cavemanketo.com/wp-content/uploads/2014/12/Portobello-Pizza.jpg",
   "image": [
     {
       "url": "https://cavemanketo.com/wp-content/uploads/2014/12/Portobello-Pizza-618x412.jpg"
     }
   ],
+  "publisher": {
+    "name": "Caveman Keto",
+    "url": "https://cavemanketo.com"
+  },
   "prepTime": 10,
   "cookTime": 12,
   "totalTime": 22,
@@ -54,9 +58,5 @@
     "fatContent": "21g",
     "fiberContent": "2g",
     "proteinContent": "19g"
-  },
-  "publisher": {
-    "name": "Caveman Keto",
-    "url": "https://cavemanketo.com"
   }
 }

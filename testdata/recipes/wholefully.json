@@ -2,7 +2,7 @@
   "url": "https://wholefully.com/blue-cornbread/",
   "name": "Blue Cornbread",
   "description": "Blue cornmeal is sweeter and has a better nutritional profile than its yellow and white cousins. Try out blue cornmeal in this moist and tender blue cornbread! Adapted from Daily Garnish.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://wholefully.com/wp-content/uploads/2014/09/IMG_9301.jpg",
   "image": [
     {
@@ -10,7 +10,15 @@
     }
   ],
   "author": {
-    "name": "Cassie Johnston"
+    "name": "Cassie Johnston",
+    "description": "Cassie is the founder and CEO of Wholefully. She's a home cook and wellness junkie with a love of all things healthy living. She lives on a small hobby farm in Southern Indiana with her husband, daughter, two dogs, two cats, and 15 chickens.",
+    "url": "https://wholefully.com/author/backtoherroots/"
+  },
+  "publisher": {
+    "name": "Wholefully",
+    "description": "Fresh Family Meals - Made for Everyday Life",
+    "url": "https://wholefully.com",
+    "logo": "https://wholefully.com/wp-content/uploads/2021/12/wholefully.jpg"
   },
   "prepTime": 10,
   "cookTime": 20,
@@ -77,11 +85,7 @@
     "unsaturatedFatContent": "3 grams unsaturated fat"
   },
   "aggregateRating": {
-    "reviewCount": 26,
+    "reviewCount": 30,
     "ratingValue": 4.3
-  },
-  "publisher": {
-    "name": "Wholefully",
-    "url": "https://wholefully.com"
   }
 }

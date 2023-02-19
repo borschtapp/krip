@@ -2,7 +2,7 @@
   "url": "https://redhousespice.com/char-siu-chinese-bbq-pork/",
   "name": "Easy Char Siu (Chinese BBQ pork, 叉烧)",
   "description": "Aromatic, smoky, savoury \u0026 a little sweet, Cantonese classic dish Char Siu (Chinese BBQ pork) is one of the tastiest ways to roast pork.",
-  "inLanguage": "en_GB",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://redhousespice.com/wp-content/uploads/2020/05/Char-siu-Chinese-BBQ-pork-0-scaled.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Wei Guo"
+    "name": "Wei Guo",
+    "description": "I'm a food blogger sharing easy-to-follow Chinese recipes. I also organize Culinary Tours of China for those who love to discover China first hand through delicious food.",
+    "image": "https://secure.gravatar.com/avatar/6e17f92e9072eb89108878f6e223e999?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Red House Spice",
+    "description": "Chinese Recipe Central",
+    "url": "https://redhousespice.com",
+    "logo": "https://redhousespice.com/wp-content/uploads/2021/03/RHS-logo-1000x1000-1.jpg"
   },
   "prepTime": 5,
   "cookTime": 35,
@@ -120,12 +128,8 @@
     "servingSize": "1 serving"
   },
   "aggregateRating": {
-    "ratingCount": 30,
+    "ratingCount": 64,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Red House Spice",
-    "url": "https://redhousespice.com"
   },
   "datePublished": "2020-05-08T22:26:22Z"
 }

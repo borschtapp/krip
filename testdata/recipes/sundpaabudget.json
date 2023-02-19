@@ -2,7 +2,7 @@
   "url": "https://sundpaabudget.dk/one-pot-pasta-med-kyllingekebab/",
   "name": "One pot pasta med kyllingekebab",
   "description": "Nem og lækker one pot med kyllingekebab (du kan også bruge okse/lam, hvis du hellere vil det).",
-  "inLanguage": "da_DK",
+  "inLanguage": "da-DK",
   "thumbnailUrl": "https://sundpaabudget.dk/wp-content/uploads/2021/08/20210803123141_IMG_0707.jpg",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Britt // Sund på budget"
+    "name": "Britt // Sund på budget",
+    "image": "https://secure.gravatar.com/avatar/5ea9fdb5d434cfce8145587fcc7be23d?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Sund på budget",
+    "description": "Sunde madplaner og opskrifter til det lille budget",
+    "url": "https://sundpaabudget.dk",
+    "logo": "https://sundpaabudget.dk/wp-content/uploads/2020/01/cropped-header-test-3.png"
   },
   "prepTime": 10,
   "cookTime": 20,
@@ -68,12 +75,8 @@
   ],
   "nutrition": {},
   "aggregateRating": {
-    "reviewCount": 35,
+    "reviewCount": 37,
     "ratingValue": 3.9
-  },
-  "publisher": {
-    "name": "Sund på budget",
-    "url": "https://sundpaabudget.dk"
   },
   "datePublished": "2021-08-05T17:56:26+02:00"
 }

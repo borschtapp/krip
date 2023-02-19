@@ -1,9 +1,9 @@
 {
   "url": "https://www.tasteofhome.com/recipes/pressure-cooker-sauerbraten/",
   "name": "Pressure-Cooker Sauerbraten",
-  "description": "One of my all-time favorite German dishes is sauerbraten, but I don't love that it normally takes five to 10 days to make. Using an electric pressure cooker, I think I've captured that same distinctive flavor in less than two hours. —James Schend, Deputy Editor, Taste of Home",
-  "inLanguage": "en_US",
-  "thumbnailUrl": "https://www.tasteofhome.com/wp-content/uploads/2018/08/Pressure-Cooker-Sauerbraten_EXPS_THN18_39243_E06_06_2b-20.jpg",
+  "description": "One of my all-time favorite German dishes is sauerbraten, but I don't love that it normally takes five to 10 days to make. Using an electric pressure cooker, I think I've captured that same distinctive flavor in less than two hours. —James Schend, Dairy Freed",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.tasteofhome.com/wp-content/uploads/2018/08/Pressure-Cooker-Sauerbraten_EXPS_THN18_39243_E06_06_2b-25.jpg",
   "image": [
     {
       "url": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Pressure-Cooker-Sauerbraten_EXPS_THN18_39243_E06_06_2b.jpg"
@@ -15,6 +15,10 @@
       "url": "https://tmbidigitalassetsazure.blob.core.windows.net/toh/GoogleImagesPostCard/Pressure-Cooker-Sauerbraten_EXPS_THN18_39243_E06_06_2b.jpg"
     }
   ],
+  "publisher": {
+    "name": "Taste of Home",
+    "url": "https://www.tasteofhome.com"
+  },
   "prepTime": 20,
   "cookTime": 20,
   "totalTime": 40,
@@ -58,8 +62,8 @@
     "sodiumContent": "436mg sodium"
   },
   "aggregateRating": {
-    "reviewCount": 8,
-    "ratingValue": 4.125,
+    "reviewCount": 9,
+    "ratingValue": 3.7777777,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -69,9 +73,5 @@
     "duration": "P0DT0H1M17S",
     "contentUrl": "https://videodam.tmbi.com/wp-content/uploads/2018/10/DIYD_BLB_39243_080818_H.mp4",
     "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/z7jDBxxN/poster.jpg?width=720"
-  },
-  "publisher": {
-    "name": "Taste of Home",
-    "url": "https://www.tasteofhome.com"
   }
 }

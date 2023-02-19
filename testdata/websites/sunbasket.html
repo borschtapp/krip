@@ -20,12 +20,10 @@
 
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+          crossorigin="anonymous"></script>
 
-  <script src="//cdn.optimizely.com/js/779320009.js"></script>
-    <!-- Intellimize -->
-      <script src="https://intellimize.sunbasket.com/client/117234114.js"></script>
-    <script src="/resources/js/sunbasket.js?v=4.95.6"
+  <script src="/resources/js/sunbasket.js?v=5.21.6"
           type="text/javascript"></script>
   <script id="sunbasket-script-top" type="text/javascript">
     window.sunbasket = window.sunbasket || {};
@@ -101,11 +99,11 @@
           analytics.SNIPPET_VERSION = "4.15.3";
           analytics.load("tjammJyflOTrfU0zTXDUW4dGOLEyQ2lK");
           
-            if (document.referrer.search('https?://(.*)google.([^/?]*)') === 0) {
-              analytics.identify({
-                Organic: 'Organic'
-              });
-            }
+          if (document.referrer.search('https?://(.*)google.([^/?]*)') === 0) {
+            analytics.identify({
+              Organic: 'Organic'
+            });
+          }
           
           var pageData = window.sunbasket.analytics.querystring();
 
@@ -136,7 +134,7 @@
     $(function () {
       $(document).ajaxSend(function (e, xhr, options) {
         if (options.type == "POST" || options.type == "PUT") {
-          xhr.setRequestHeader('X-CSRF-TOKEN', '9c808009-ec56-4af8-bebf-04767cc3ce27');
+          xhr.setRequestHeader('X-CSRF-TOKEN', 'c35482c7-c2c5-4c6e-a3c8-ebb5bd4d10e7');
         }
       });
     });
@@ -206,20 +204,22 @@
 
   <title>Lemongrass-Turkey Salad with Rice Noodles and Pear | Sunbasket</title>
         <link rel="icon" type="image/png" sizes="32x32"
-            href="/favicon-32x32.png?v=4.95.">
+            href="/favicon-32x32.png?v=5.21.">
       <link rel="icon" type="image/png" sizes="16x16"
-            href="/favicon-16x16.png?v=4.95.">
-    <link rel="manifest" href="/manifest.json?v=4.95.6">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=4.95." color="#fbad18">
+            href="/favicon-16x16.png?v=5.21.">
+    <link rel="manifest" href="/manifest.json?v=5.21.6">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=5.21."
+        color="#fbad18">
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" type="text/css"
-        href="/resources/bundle/allCss.css?v=4.95.6"/>
+        href="/resources/bundle/allCss.css?v=5.21.6"/>
 
   
-<link rel='stylesheet' href='/resources/css/explore/explore.css?v=4.95.6'/>
-<link rel='stylesheet' href='/resources/css/recipe.css?v=4.95.6'/>
-<link rel="stylesheet" href="/resources/css/swiper-bundle.min.css?v=4.95.6"/>
+<link rel='stylesheet' href='/resources/css/explore/explore.css?v=5.21.6'/>
+<link rel='stylesheet' href='/resources/css/recipe.css?v=5.21.6'/>
+<link rel='stylesheet' href='/resources/css/recipe-print.css?v=5.21.6' media='print'/>
+<link rel="stylesheet" href="/resources/css/swiper-bundle.min.css?v=5.21.6"/>
 <style type="text/css">.grecaptcha-badge {
     visibility: hidden;
   }</style>
@@ -263,7 +263,7 @@
             <!-- make sure logo goes to correct location -->
             <a id="home-hero" class="navbar-brand hidden-lg hidden-md" href="">
                         <div class="logo-container logged-out">
-                            <img src="/resources/img/logo.svg?v=4.95.">
+                            <img src="/resources/img/logo.svg?v=5.21.">
                                 </div>
                     </a>
                 <ul class="menu-tab-container visible-xs">
@@ -335,7 +335,7 @@
                         <a id="home-hero" class="navbar-brand hidden-xs hidden-sm logo-center "
                            href="">
                             <div class="logo-container logged-out">
-                            <img src="/resources/img/logo.svg?v=4.95.">
+                            <img src="/resources/img/logo.svg?v=5.21.">
                                 </div>
                         </a>
                     </div>
@@ -388,10 +388,10 @@
     if (typeof Sentry !== "undefined") {
       Sentry.init({
         dsn: 'https://74f0149498834aae9208628dad9d42a2@o70926.ingest.sentry.io/1080564',
-        release: '4.95.6',
+        release: '5.21.6',
         integrations: [new Sentry.Integrations.BrowserTracing()],
         tracesSampleRate: 0.2,
-        beforeSend (event, hint) {
+        beforeSend(event, hint) {
           return (hint.originalException === 'Timeout') ? null : event
         },
         denyUrls: [
@@ -440,11 +440,15 @@ $(function() {
   });
 });
 </script>
+<div class="print-logo-container visible-print-block">
+  <img src="/resources/img/logo.svg?v=5.21.">
+</div>
+
 <div class="container">
   <div class="product-content-container">
     <div class="row">
 
-		<div class="col-md-8 col-sm-12 content-left">
+		<div class="col-md-8 col-sm-12 col-print-6 content-left">
 
 			<div class="recipe-image-container">
   <img class="recipe-image" src="//cdn.sunbasket.com/100408c8-f908-404e-a494-099fad9fed44.jpg"
@@ -460,29 +464,37 @@ $(function() {
   </p>
 </div><div class="hidden-xs hidden-sm">
 				<div class="social-and-watch">
-  <div class="social-share-buttons">
-	<a class="social-share-fb btn-facebook btn btn-xs" target="_blank" rel="noreferrer noopener" href="#">
- 	         <span class="icon icon-facebook"></span> Share
+  <div class="social-share-buttons-simple">
+	<a class="print-instructions-button btn btn-xs" onclick="doPrint(); return false;" href="#">
+          <img src="/resources/img/icons/icon-printer.svg?v=5.21."/>
+
+          Print instructions
+        </a>
+
+         <a class="social-share-fb btn-facebook btn btn-xs" target="_blank" rel="noreferrer noopener" href="#">
+ 	         <span class="icon icon-facebook"></span>
  	     </a>
 
  	     <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true" class="PinShare btn-pinterest btn btn-xs">
- 	           <span class="icon icon-pinterest"></span> Save
+ 	           <span class="icon icon-pinterest"></span>
  	       </a>
  	     <a class="twitter-share-button btn-twitter btn btn-xs" href="#" target="_blank" rel="noreferrer noopener">
- 	         <span class="icon icon-twitter"></span> Tweet
+ 	         <span class="icon icon-twitter"></span>
  	     </a>
 	  </div>
 </div>
 
-
-
 <script>
+  function doPrint() {
+    window.print();
+  }
 
-    $(document).ready(function() {
-        $(".social-share-fb").attr("href", "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname +"?offer="));
-        $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?via=sunbasket&text=" + encodeURIComponent(document.title) + "&url=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname));
-    });
+  
 
+  $(document).ready(function() {
+      $(".social-share-fb").attr("href", "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname +"?offer="));
+      $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?via=sunbasket&text=" + encodeURIComponent(document.title) + "&url=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname));
+  });
 </script>
 <div class="instructions-container">
   <h2 class="margin-bottom-xs">Instructions</h2>
@@ -565,10 +577,16 @@ $(function() {
 </div>
 		</div>
 
+        <div class="col-print-6 visible-print-block content-right">
+          <div class="name-container formModule"><h1>Lemongrass-turkey salad with rice noodles and pear</h1></div>
+        </div>
+
+        <div class="clear clearfix visible-print-block"></div>
+
 		<div class="col-md-4 col-sm-12 content-right">
 	        <div class="recipe-info">
 
-				<div class="name-container formModule">
+				<div class="name-container formModule hidden-print">
 					<h1>Lemongrass-turkey salad with rice noodles and pear</h1>
 
 					<div class="main-protein-selector-container">
@@ -578,29 +596,37 @@ $(function() {
 
 				<div class="visible-xs visible-sm">
 					<div class="social-and-watch">
-  <div class="social-share-buttons">
-	<a class="social-share-fb btn-facebook btn btn-xs" target="_blank" rel="noreferrer noopener" href="#">
- 	         <span class="icon icon-facebook"></span> Share
+  <div class="social-share-buttons-simple">
+	<a class="print-instructions-button btn btn-xs" onclick="doPrint(); return false;" href="#">
+          <img src="/resources/img/icons/icon-printer.svg?v=5.21."/>
+
+          Print instructions
+        </a>
+
+         <a class="social-share-fb btn-facebook btn btn-xs" target="_blank" rel="noreferrer noopener" href="#">
+ 	         <span class="icon icon-facebook"></span>
  	     </a>
 
  	     <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true" class="PinShare btn-pinterest btn btn-xs">
- 	           <span class="icon icon-pinterest"></span> Save
+ 	           <span class="icon icon-pinterest"></span>
  	       </a>
  	     <a class="twitter-share-button btn-twitter btn btn-xs" href="#" target="_blank" rel="noreferrer noopener">
- 	         <span class="icon icon-twitter"></span> Tweet
+ 	         <span class="icon icon-twitter"></span>
  	     </a>
 	  </div>
 </div>
 
-
-
 <script>
+  function doPrint() {
+    window.print();
+  }
 
-    $(document).ready(function() {
-        $(".social-share-fb").attr("href", "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname +"?offer="));
-        $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?via=sunbasket&text=" + encodeURIComponent(document.title) + "&url=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname));
-    });
+  
 
+  $(document).ready(function() {
+      $(".social-share-fb").attr("href", "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname +"?offer="));
+      $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?via=sunbasket&text=" + encodeURIComponent(document.title) + "&url=" + encodeURIComponent(location.protocol + '//' + location.host + location.pathname));
+  });
 </script>
 </div>
 
@@ -633,7 +659,7 @@ $(function() {
 		<p><p>Our custom lemongrass paste transforms simple ingredients into a Thai-inspired noodle salad. It&rsquo;s refreshing, light, and as inviting to look at as it is to eat.&nbsp;</p></p>
 	</div>
 </div>
-<div class="button-section button-fixed">
+<div class="button-section button-fixed hidden-print">
 						<h3 class="lead-in">Get delicious recipes with organic produce and clean ingredients delivered</h3>
 						<a class="btn btn-primary btn-block" href="/how-it-works?utm_source=recipe-pages">View our meal plans</a>
 					</div>
@@ -668,7 +694,7 @@ $(function() {
 		  <strong>Calories 760</strong>, <strong>Total Fat</strong> 34g (44% DV), Sat. Fat 6g (30% DV), <i>Trans</i> Fat 0g, <strong>Cholest.</strong> 75mg (25% DV), <strong>Sodium</strong> 900mg (39% DV), <strong>Total Carb.</strong> 87g (32% DV), Fiber 7g (25% DV), Total Sugars 15g (Incl. 8g Added Sugars, 16% DV), <strong>Protein</strong> 31g<br/>
             <b>Contains: </b>
             Fish (anchovy)</p>
-	  <p class="nutrition-disclaimer">Sodium does not include pantry salt; for reference, &frac18; teaspoon kosher salt per serving averages 240mg (10% DV). Not a significant source of trans fat. Packed in a facility that handles all major food allergens* and gluten. *Milk, Eggs, Fish, Crustacean Shellfish, Tree Nuts, Peanuts, Wheat, Soybeans.</p>
+	  <p class="nutrition-disclaimer">Sodium does not include pantry salt; for reference, ⅛; teaspoon kosher salt per serving averages 240mg (10% DV). Not a significant source of trans fat. Packed in a facility that handles all major food allergens* and gluten. </br> </br> *Milk, Eggs, Fish, Crustacean Shellfish, Tree Nuts, Peanuts, Wheat, Soybeans. </p>
   </div>
 </div>
 </div>
@@ -954,6 +980,11 @@ $(function() {
 </div>
 
 <footer>
+      <script type="text/javascript">
+        $(function() {
+          $('#privacy-popover').webuiPopover();
+        });
+      </script>
         <!-- show Footer HTML if not in sign up flow -->
         <div class="footer-links-container">
                 <div class="container main-footer-links">
@@ -1073,10 +1104,10 @@ $(function() {
                                         </p>
                                         <div class="app-icons-container">
                                             <a href="https://itunes.apple.com/us/app/sun-basket-meal-delivery/id1147936531?mt=8" target="_blank" rel="noreferrer noopener">
-                                                <img src="/resources/img/icons/footer/app-store-badge.svg?v=4.95." alt="google play icon">
+                                                <img src="/resources/img/icons/footer/app-store-badge.svg?v=5.21." alt="google play icon">
                                             </a>
                                             <a href="https://play.google.com/store/apps/details?id=com.sunbasket.app&hl=en" target="_blank" rel="noreferrer noopener">
-                                                <img src="/resources/img/icons/footer/google-play.png?v=4.95." alt="google play icon">
+                                                <img src="/resources/img/icons/footer/google-play.png?v=5.21." alt="google play icon">
                                             </a>
                                         </div>
                                     </div>
@@ -1111,21 +1142,26 @@ $(function() {
                 </div>
 
                 <div class="footer-legal">
-                    <p class="legal-text offer-terms-footer hide">
+                    <div class="legal-text offer-terms-footer hide">
                         <span class="terms-exclusions">*Some exclusions may apply.</span>
                         <a class="offer-tooltip-terms-footer underline" href="#" data-placement="top" title data-toggle="tooltip">
                             See Terms
                         </a>
-                    </p>
-                    <p class="legal-text">
-                        &copy; 2021 Sunbasket 4.95.6<span class="margin-left-xs margin-right-xs gray-light">|</span>
+                    </div>
+                    <div class="legal-text">
+                        &copy; 2021 Sunbasket 5.21.6<span class="margin-left-xs margin-right-xs gray-light">|</span>
                         <a class="text-xxs a-gray" target="_blank" rel="noreferrer noopener" href="/terms">
                             Terms
                         </a>
                         <span class="margin-left-xs margin-right-xs gray-light">|</span>
-                        <a class="text-xxs a-gray" target="_blank" rel="noreferrer noopener" href="/privacy">
-                            Privacy
-                        </a>
+                        <a id="privacy-popover" class="text-xxs a-gray" href="#"
+                           data-placement="top">Privacy</a>
+                        <div id="privacy-popover-content" class="webui-popover-content">
+                          <a class='a-black text-sm' rel='noopener noreferrer nofollow' target='_blank' href="/privacy" >Privacy Policy</a>
+                          <hr />
+                          <a class='a-black text-sm' rel='noopener noreferrer nofollow' target='_blank' href='https://privacyportal.onetrust.com/webform/1da21ad1-4f4c-4b37-a773-c3c151b28208/draft/cb2b63c3-cbed-4717-8ebe-45808172123e'>Privacy Request Form</a>
+                        </div>
+
                         <span class="margin-left-xs margin-right-xs gray-light">|</span>
                         <a class="text-xxs a-gray" target="_blank" rel="noreferrer noopener" href="/accessibility">
                             Accessibility
@@ -1134,9 +1170,9 @@ $(function() {
                         <a class="text-xxs a-gray" target="_blank" rel="noreferrer noopener" href="/security">
                             Security
                         </a>
-                    </p>
+                    </div>
 
-                    <p class="legal-text">This site is protected by reCAPTCHA and the Google
+                    <div class="legal-text">This site is protected by reCAPTCHA and the Google
                         <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener" class="a-gray">
                             Privacy Policy
                         </a>
@@ -1145,95 +1181,13 @@ $(function() {
                             Terms of Service
                         </a>
                         apply.
-                    </p>
+                    </div>
                 </div>
             </div>
             </div>
 
-        <script>
-  $(document).ready(function () {
-    
-    const snapsHelpChannelId = '6080707acd80291c3fc6dd7e';
-    const snapsHelpPixelId = 'rJMKgeRIO';
-    const snapsJoinChannelId = '6244ba942a012c298d08a46b';
-    const snapsJoinPixelId = '_VByNRAQ6';
-
-    
-    const pagePath = window.location.pathname;
-    const snapsUserCookies = window.sunbasket.cookies.getAllWithPrefix('snaps_channel_user_');
-    const helpCenterCookie = window.sunbasket.cookies.get('SBServiceCenterVisited');
-    const joinFlowCookie = window.sunbasket.cookies.get('jfChat');
-
-    
-    let snapsFinalChannelId;
-    let snapsFinalPixelId;
-
-
-    for (let [key, value] of Object.entries(snapsUserCookies)) {
-      if (key.startsWith('snaps_channel_user_identified_')) {
-        if (value === 'true') {
-          snapsFinalChannelId = key.split('snaps_channel_user_identified_')[1];
-        }
-      }
-    }
-
-    
-    if(!snapsFinalChannelId) {
-      
-      if (helpCenterCookie || pagePath.includes('help')) {
-        snapsFinalChannelId = snapsHelpChannelId
-      }
-
-      if (joinFlowCookie && pagePath.includes('join')) {
-        snapsFinalChannelId = snapsJoinChannelId;
-      }
-    }
-
-    
-    if (snapsFinalChannelId) {
-      
-      if (snapsFinalChannelId === snapsHelpChannelId) {
-        snapsFinalPixelId = snapsHelpPixelId;
-      } else if (snapsFinalChannelId === snapsJoinChannelId && pagePath.includes('join')) {
-        snapsFinalPixelId = snapsJoinPixelId;
-
-      }
-      
-      if (snapsFinalPixelId) {
-        if ([snapsHelpChannelId, snapsJoinChannelId].includes(snapsFinalChannelId)) {
-          launchChat();
-        }
-      }
-    }
-
-    function launchChat () {
-      !function (e, n, t, s, i, r, a) {
-        e.sp = e._snapsPixel = function () {
-          return e[s].q.push(arguments), e.sp
-        }, e[s].q = [], e[s].initialize = function () {
-          return e[s]
-        }, e[s].trackEvent = e[s], r = n.createElement(t),
-            a = n.getElementsByTagName(t)[0],
-            r.async = 1,
-            r.src = "https://pixel.snapsmedia.io/v5.0.3/sp.js",
-            r.crossOrigin = "anonymous",
-            r.integrity = "sha384-+/+hdrvm55dduRC6fmcZRz5QhdOop+m6xu8Qr4e9rAZiuLvKEN2H4CLRFO7H5fLI",
-            a.parentNode.insertBefore(r, a)
-      }
-
-      (window, document, "script", "_snapsPixel");
-      sp('create', snapsFinalPixelId);
-      sp('plugin:capella', {channelId: snapsFinalChannelId});
-
-      window.setTimeout(function () {
-        let snapsChannelUserCookie = 'snaps_channel_user_' + snapsFinalChannelId;
-        $.post("/snaps/" + snapsChannelUserCookie, function () {
-        });
-      }, 4000);
-    }
-  });
-</script></footer>
-<div class="cookie-consent-banner bg-white hidden">
+        </footer>
+<div class="cookie-consent-banner bg-white">
   <div class="container">
     <div class="row">
       <div class="text-xs line-height-md col-xs-12 col-sm-10">
@@ -1253,7 +1207,6 @@ $(function() {
 
   function OptanonWrapper() {
     if (typeof OneTrust !== 'undefined' && isCookieBannerHidden) {
-      $('.cookie-consent-banner').removeClass('hidden');
       isCookieBannerHidden = 0;
     }
   }
@@ -1261,9 +1214,10 @@ $(function() {
   $('#consentToCookies').on('click', function () {
     OneTrust.AllowAll();
     $('.cookie-consent-banner').addClass('hidden');
+    return false;
   });
 </script>
-<script src="/resources/bundle/commonJs.js?v=4.95.6"></script>
+<script src="/resources/bundle/commonJs.js?v=5.21.6"></script>
         <script src="https://www.google.com/recaptcha/api.js?render=6LePSuQUAAAAAOemOOWD19nvHb41MORnT8psiz41"></script>
 <script type="text/javascript">
     $('#lead_capture_form').on('submit', function (e) {
@@ -1367,7 +1321,7 @@ $(function() {
     <div class="explore-tile">
       <a href="/{{ webUrl }}" class="img-container">
         <img src="{{ imageUrl }}" onload="imgLoaded($(this))" style="display:none">
-        <img src="/resources/img/content/300x200-blank.jpg?v=4.95."
+        <img src="/resources/img/content/300x200-blank.jpg?v=5.21."
              class="white-blank">
       </a>
 
@@ -1853,7 +1807,7 @@ This is a similar-recipe tile template
 </footer>
 
 <script>
-  $(document).ready(function(){
+  $(document).ready(function() {
     // Ready query params in URL
     function getUrlParameter(name) {
       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -1893,10 +1847,10 @@ This is a similar-recipe tile template
 </script>
 
 <!-- Facebook Pixel Code -->
-<img src="https://www.facebook.com/tr?id=673131866129455&ev=ViewContent&content_ids=%5b'1530'%5d&content_type=product">
+<img src="https://www.facebook.com/tr?id=673131866129455&ev=ViewContent&content_ids=%5b'1530'%5d&content_type=product" id="fbPixelImage">
 <!-- End Facebook Pixel Code -->
 
-<script src="/resources/js/swiper-bundle.min.js?v=4.95.6"></script>
+<script src="/resources/js/swiper-bundle.min.js?v=5.21.6"></script>
 
 <script>
   var swiper = new Swiper(".recipeDetailsSwiper", {

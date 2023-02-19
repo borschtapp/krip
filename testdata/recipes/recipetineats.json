@@ -2,7 +2,7 @@
   "url": "https://www.recipetineats.com/vietnamese-caramel-pork/",
   "name": "Vietnamese Caramel Pork",
   "description": "Recipe VIDEO above. \"Thit Kho To\" - Tender pork in a sweet savoury glaze that has quite an intense flavour. Though made using coconut water as the broth, but it doesn't have a coconut flavour at all! It looks so unimpressive right up until the end when it magically transforms into sticky caramelised pork pieces!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.recipetineats.com/wp-content/uploads/2017/10/Vietnamese-Caramel-Pork_-4.jpg",
   "image": [
     {
@@ -19,7 +19,15 @@
     }
   ],
   "author": {
-    "name": "Nagi"
+    "name": "Nagi",
+    "description": "I believe you can make great food with everyday ingredients even if you’re short on time and cost conscious. You just need to cook clever and get creative!",
+    "image": "https://secure.gravatar.com/avatar/400004f5258d5b43d30deed3aa6e9566?s=96\u0026d=https%3A%2F%2Fwww.recipetineats.com%2Fwp-content%2Fthemes%2Fonce-coupled-recipe-tin-eats%2Fassets%2Fimages%2Favatar-guest-temp-cache-bust-duplicate.png\u0026r=g"
+  },
+  "publisher": {
+    "name": "RecipeTin Eats",
+    "description": "Fast Prep, Big Flavours",
+    "url": "https://www.recipetineats.com",
+    "logo": "https://www.recipetineats.com/wp-content/uploads/2019/04/RecipeTinEats_logo_for_Knowledge_Graph_card.png"
   },
   "prepTime": 10,
   "cookTime": 90,
@@ -81,12 +89,8 @@
     "servingSize": "365 g"
   },
   "aggregateRating": {
-    "ratingCount": 138,
+    "ratingCount": 142,
     "ratingValue": 4.93
-  },
-  "publisher": {
-    "name": "RecipeTin Eats",
-    "url": "https://www.recipetineats.com"
   },
   "datePublished": "2017-10-04T15:55:09Z"
 }

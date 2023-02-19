@@ -2,7 +2,7 @@
   "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/",
   "name": "Crockpot Macaroni \u0026 Cheese",
   "description": "Shared Hundreds of Thousands of times this Crockpot Macaroni \u0026 Cheese Recipe is a keeper! Try this delicious homestyle dish today!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-1.jpg",
   "image": [
     {
@@ -19,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Karen McCormick"
+    "name": "Karen McCormick",
+    "description": "Amanda is a busy mom of 3 running her own business, homeschooling, and managing a household. She creates yummy crockpot recipes to help her spend less time in the kitchen and more time doing what she loves.",
+    "url": "https://momswithcrockpots.com/author/amanda/",
+    "image": "https://secure.gravatar.com/avatar/1db1ce66b7558eefa61dab1303527360?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Moms with Crockpots",
+    "description": "Easy Crockpot Recipes for Everyday!",
+    "url": "https://momswithcrockpots.com",
+    "logo": "https://momswithcrockpots.com/wp-content/uploads/2018/07/mwc-favicon-1.png"
   },
   "prepTime": 15,
   "cookTime": 210,
@@ -90,10 +99,6 @@
   "aggregateRating": {
     "ratingCount": 2,
     "ratingValue": 4
-  },
-  "publisher": {
-    "name": "Moms with Crockpots",
-    "url": "https://momswithcrockpots.com"
   },
   "datePublished": "2020-04-22T13:02:00Z"
 }

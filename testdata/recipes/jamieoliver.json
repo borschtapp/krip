@@ -15,6 +15,10 @@
       "url": "https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/large/88_1_1441269331.jpg?tr=w-800,h-450,fo-face"
     }
   ],
+  "publisher": {
+    "name": "Jamie Oliver",
+    "url": "https://www.jamieoliver.com"
+  },
   "totalTime": 40,
   "recipeCategory": [
     "Desserts"
@@ -66,9 +70,5 @@
     "saturatedFatContent": "10.1 g saturated fat",
     "sodiumContent": "0.2 g salt",
     "sugarContent": "24.6 g sugar"
-  },
-  "publisher": {
-    "name": "Jamie Oliver",
-    "url": "https://www.jamieoliver.com"
   }
 }

@@ -2,7 +2,7 @@
   "url": "https://www.zenbelly.com/gingerbread/",
   "name": "Paleo Gingerbread",
   "description": "'Tis the season for Gingerbread. To be honest, I can't remember the last time I had it before I made it for this here bloggy blog. Paleo Gingerbread When I went to start making",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3.jpeg",
   "image": [
     {
@@ -17,7 +17,12 @@
   ],
   "author": {
     "name": "Simone Miller",
-    "url": "http://Simone%20Miller"
+    "image": "https://www.zenbelly.com/wp-content/uploads/2020/08/zenbelly-logo-1-1.png"
+  },
+  "publisher": {
+    "name": "zenbelly",
+    "url": "https://www.zenbelly.com",
+    "logo": "https://www.zenbelly.com/wp-content/uploads/2020/08/zenbelly-logo-1-1.png"
   },
   "prepTime": 10,
   "cookTime": 30,
@@ -68,9 +73,5 @@
   "aggregateRating": {
     "reviewCount": 4,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "zenbelly",
-    "url": "https://www.zenbelly.com"
   }
 }

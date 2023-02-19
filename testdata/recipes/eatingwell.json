@@ -12,7 +12,12 @@
     }
   ],
   "author": {
-    "name": "Carolyn Casner"
+    "name": "Carolyn Casner",
+    "url": "https://www.eatingwell.com/author/carolyn-casner/"
+  },
+  "publisher": {
+    "name": "EatingWell",
+    "url": "https://www.eatingwell.com"
   },
   "totalTime": 30,
   "recipeCategory": [
@@ -57,9 +62,9 @@
     "sugarContent": "4 g"
   },
   "aggregateRating": {
-    "reviewCount": 13,
-    "ratingCount": 13,
-    "ratingValue": 4.23,
+    "reviewCount": 24,
+    "ratingCount": 24,
+    "ratingValue": 4.33,
     "bestRating": 5,
     "worstRating": 1
   },
@@ -70,10 +75,6 @@
     "embedUrl": "https://players.brightcove.net/5118192885001/default_default/index.html?videoId=6307528357112",
     "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F5118192885001%2Fa77e5407-0f3d-42b2-9aa0-7e0b13c61f5e%2F77d7ea97-b2db-49c9-839d-b6d919deace2%2F1280x720%2Fmatch%2Fimage.jpg",
     "uploadDate": "2022-06-09T15:37:45.522Z"
-  },
-  "publisher": {
-    "name": "EatingWell",
-    "url": "https://www.eatingwell.com"
   },
   "datePublished": "2021-09-23T18:20:24Z"
 }

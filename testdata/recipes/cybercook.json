@@ -11,6 +11,10 @@
   "author": {
     "name": "Leticia Obo Andreghetti"
   },
+  "publisher": {
+    "name": "CyberCook",
+    "url": "https://cybercook.com.br"
+  },
   "prepTime": 30,
   "cookTime": 30,
   "totalTime": 30,

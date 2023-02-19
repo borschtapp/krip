@@ -2,17 +2,29 @@
   "url": "https://www.countryliving.com/food-drinks/a32042602/roasted-mushroom-and-bacon-dutch-baby/",
   "name": "Roasted Mushroom and Bacon Dutch Baby",
   "description": "How to make a Roasted Mushroom and Bacon Dutch Baby. Serve a savory German pancake for brunch.",
-  "inLanguage": "en-US",
-  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=0.666xw:1.00xh;0.150xw,0\u0026resize=100:*",
+  "inLanguage": "en-us",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=0.666xw:1.00xh;0.150xw,0\u0026resize=100:*",
   "image": [
     {
-      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/roasted-mushroom-dutch-baby-1586049708.jpg",
-      "width": 2025,
-      "height": 2636
+      "url": "https://hips.hearstapps.com/hmg-prod/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=0.666xw:1.00xh;0.150xw,0\u0026resize=1200:*",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=1xw:0.5761570561456753xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=1xw:0.43211779210925644xh;center,top\u0026resize=1200:*",
+      "width": 1200,
+      "height": 675
     }
   ],
-  "author": {
-    "name": "Erika Dugan"
+  "publisher": {
+    "name": "Country Living",
+    "url": "https://www.countryliving.com",
+    "logo": "https://www.countryliving.com/_assets/design-tokens/countryliving/static/images/logos/logo-jsonld.01b7535.png"
   },
   "totalTime": 70,
   "recipeCategory": [
@@ -30,6 +42,7 @@
   "recipeYield": 4,
   "recipeIngredient": [
     "1 lb. mixed mushrooms (such as cremini, beech, or shiitake), roughly chopped 4 slices bacon, sliced",
+    "4 slices bacon, sliced",
     "3 large eggs",
     "1 clove garlic, chopped",
     "3/4 c. whole milk",
@@ -56,10 +69,10 @@
       "text": "Top with mushroom mixture, scallions, and parsley."
     }
   ],
-  "publisher": {
-    "name": "Country Living",
-    "url": "https://www.countryliving.com/",
-    "logo": "https://assets.hearstapps.com/sites/countryliving/assets/images/logos/logo-jsonld.71888df.png"
-  },
-  "datePublished": "2020-04-05T01:39:57.72321Z"
+  "aggregateRating": {
+    "reviewCount": 2,
+    "ratingValue": 5,
+    "bestRating": 5,
+    "worstRating": 1
+  }
 }

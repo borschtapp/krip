@@ -2,7 +2,7 @@
   "url": "https://www.aspicyperspective.com/banana-cream-pie-recipe/",
   "name": "Banana Cream Pie Recipe",
   "description": "Banana Cream Pie Recipe: piled high with fresh ripe bananas and creamy vanilla filling, then topped with whipped cream and toasted coconut.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2020/11/fluffy-banana-cream-pie-recipe-203.jpg?fit=1200%2C1564\u0026ssl=1",
   "image": [
     {
@@ -19,7 +19,14 @@
     }
   ],
   "author": {
-    "name": "Sommer Collier"
+    "name": "Sommer Collier",
+    "description": "Sharing Recipes, Cooking Tips, and Travel Experiences!"
+  },
+  "publisher": {
+    "name": "A Spicy Perspective",
+    "description": "Easy Gourmet Recipes and Spicy Conversation. Get a fresh take on comfort food, healthy meals, approachable ethnic cuisine, and well as family travel destinations.",
+    "url": "https://www.aspicyperspective.com",
+    "logo": "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2017/02/spicy-logo-1.jpg?fit=2268%2C562\u0026ssl=1"
   },
   "prepTime": 30,
   "cookTime": 10,
@@ -111,8 +118,8 @@
     "sugarContent": "59.2 g"
   },
   "aggregateRating": {
-    "ratingCount": 81,
-    "ratingValue": 4.82
+    "ratingCount": 89,
+    "ratingValue": 4.84
   },
   "video": {
     "name": "Fluffy Banana Cream Pie Recipe",
@@ -121,9 +128,5 @@
     "thumbnailUrl": "https://content.jwplatform.com/thumbs/3ZcRbm2y-720.jpg",
     "uploadDate": "2017-10-30T15:18:33Z"
   },
-  "publisher": {
-    "name": "A Spicy Perspective",
-    "url": "https://www.aspicyperspective.com"
-  },
-  "datePublished": "2022-03-10T01:00:00Z"
+  "datePublished": "2022-09-09T23:00:00Z"
 }

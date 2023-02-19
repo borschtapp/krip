@@ -15,6 +15,11 @@
   "author": {
     "name": "Yasemin Gürsürer"
   },
+  "publisher": {
+    "name": "Yemekcom",
+    "url": "https://yemek.com",
+    "logo": "https://cdn.yemek.com/assets/images/logo.png"
+  },
   "prepTime": 45,
   "cookTime": 40,
   "totalTime": 85,
@@ -77,7 +82,7 @@
     }
   ],
   "aggregateRating": {
-    "reviewCount": 8267,
+    "reviewCount": 8372,
     "ratingCount": 3,
     "ratingValue": 5,
     "bestRating": 5,
@@ -88,10 +93,5 @@
     "description": "Patates ve tavuk ikilisi yeniden bir araya geliyor, güçlerini birleştiriyorlar ve ortaya inanılmaz bir lezzet çıkıyor. Köri soslu patates topları burada!",
     "embedUrl": "https://www.youtube.com/watch?v=81_WYEC1ih0",
     "thumbnailUrl": "https://img.youtube.com/vi/81_WYEC1ih0/default.jpg"
-  },
-  "publisher": {
-    "name": "Yemekcom",
-    "url": "https://yemek.com",
-    "logo": "https://cdn.yemek.com/assets/images/logo.png"
   }
 }

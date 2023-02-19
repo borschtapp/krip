@@ -2,7 +2,7 @@
   "url": "https://lovingitvegan.com/kale-smoothie/",
   "name": "Kale Smoothie",
   "description": "Creamy and smooth kale smoothie with a gorgeous pale green color that tastes like a delicious ice-cold milkshake! Even if you hate greens you will love this smoothie!",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-3.jpg",
   "image": [
     {
@@ -19,7 +19,16 @@
     }
   ],
   "author": {
-    "name": "Alison Andrews"
+    "name": "Alison Andrews",
+    "description": "Hi I'm Alison Andrews, I'm the voice and cook behind Loving It Vegan. I love making delicious vegan food and creating vegan versions of all your old favorites, so that you’ll never feel like you’re missing out. Find out more about me here.",
+    "url": "https://lovingitvegan.com/author/lovingitvegan/",
+    "image": "https://secure.gravatar.com/avatar/156710c38fe18802003dcd9608e24d11?s=96\u0026r=g"
+  },
+  "publisher": {
+    "name": "Loving It Vegan",
+    "description": "Good Vegan Recipes. Made Easy.",
+    "url": "https://lovingitvegan.com",
+    "logo": "https://lovingitvegan.com/wp-content/uploads/2019/05/Logo-Image-Square.png"
   },
   "prepTime": 10,
   "totalTime": 10,
@@ -77,12 +86,8 @@
     "sugarContent": "15.2 g"
   },
   "aggregateRating": {
-    "ratingCount": 15,
+    "ratingCount": 17,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "Loving It Vegan",
-    "url": "https://lovingitvegan.com"
   },
   "datePublished": "2020-06-13T15:44:47Z"
 }

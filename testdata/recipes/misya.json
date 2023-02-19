@@ -7,6 +7,11 @@
   "author": {
     "name": "Flavia Imperatore"
   },
+  "publisher": {
+    "name": "Misya.info",
+    "url": "http://www.misya.info/misya-srl-unipersonale",
+    "logo": "https://www.misya.info/misya-logo.png"
+  },
   "prepTime": 20,
   "cookTime": 15,
   "recipeCategory": [
@@ -65,10 +70,5 @@
     "reviewCount": 43,
     "ratingValue": 4.8,
     "bestRating": 5
-  },
-  "publisher": {
-    "name": "Misya.info",
-    "url": "http://www.misya.info/misya-srl-unipersonale",
-    "logo": "https://www.misya.info/misya-logo.png"
   }
 }

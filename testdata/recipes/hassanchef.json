@@ -3,7 +3,7 @@
   "name": "Chicken lollipop recipe",
   "description": "Chicken lollipop are made from chicken wings. Cut them into lollipop shape and coated with a spicy batter and deep fried till crisp golden. It can be served as masala chicken lollipop, chicken lollipop gravy or dry chicken lollipop.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://1.bp.blogspot.com/-ElM9ids_pYE/XRlZpVs6wLI/AAAAAAAAJPA/a-F5lPPdGisPjHphAL0gxXXbuy-UFsBugCLcBGAs/w1200-h630-p-k-no-nu/IMG_20190629_212341.jpg",
+  "thumbnailUrl": "https://1.bp.blogspot.com/-ElM9ids_pYE/XRlZpVs6wLI/AAAAAAAAJPA/a-F5lPPdGisPjHphAL0gxXXbuy-UFsBugCLcBGAs/w320-h182/IMG_20190629_212341.jpg",
   "image": [
     {
       "url": "https://1.bp.blogspot.com/-ElM9ids_pYE/XRlZpVs6wLI/AAAAAAAAJPA/a-F5lPPdGisPjHphAL0gxXXbuy-UFsBugCLcBGAs/s1600/IMG_20190629_212341.jpg"
@@ -11,6 +11,10 @@
   ],
   "author": {
     "name": "Mobasir hassan"
+  },
+  "publisher": {
+    "name": "hassanchef restaurant style recipes",
+    "url": "https://www.hassanchef.com"
   },
   "prepTime": 15,
   "cookTime": 15,
@@ -178,9 +182,5 @@
     "description": "Chicken lollipop are made from chicken wings. Cut them into lollipop shape and coated with a spicy batter and deep fried till crisp golden. It can be served as masala chicken lollipop, chicken lollipop gravy or dry chicken lollipop.",
     "contentUrl": "https://youtu.be/tmooPhQ-3QY",
     "thumbnailUrl": "https://1.bp.blogspot.com/-ElM9ids_pYE/XRlZpVs6wLI/AAAAAAAAJPA/a-F5lPPdGisPjHphAL0gxXXbuy-UFsBugCLcBGAs/s1600/IMG_20190629_212341.jpg"
-  },
-  "publisher": {
-    "name": "hassanchef restaurant style recipes",
-    "url": "https://www.hassanchef.com"
   }
 }

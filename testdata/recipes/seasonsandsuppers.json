@@ -2,7 +2,7 @@
   "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/",
   "name": "Authentic Canadian Poutine",
   "description": "Authentic Canadian Poutine featuring deep-fried fries, poutine gravy and white cheddar cheese curds all tossed together. Do be careful with deep frying. A proper deep fryer is recommended.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1.jpg",
   "image": [
     {
@@ -16,7 +16,15 @@
     }
   ],
   "author": {
-    "name": "Jennifer"
+    "name": "Jennifer",
+    "description": "Hi! I'm Jennifer, a home-cook of some 30-plus years. I've learned a lot from getting dinner on the table all these years! I hope to share a bit of what I've learned, as well as my favourite recipes. Most importantly though, I love sharing the joy of cooking at home, with simple, delicious and seasonally-inspired recipes. More about me here ...",
+    "url": "https://www.seasonsandsuppers.ca/author/jennifer/"
+  },
+  "publisher": {
+    "name": "Seasons and Suppers",
+    "description": "Simple, seasonal, fresh and delicious recipes",
+    "url": "https://www.seasonsandsuppers.ca",
+    "logo": "https://www.seasonsandsuppers.ca/wp-content/uploads/2020/02/new-logo-1500.png"
   },
   "prepTime": 30,
   "cookTime": 30,
@@ -93,12 +101,8 @@
     "sugarContent": "1 g"
   },
   "aggregateRating": {
-    "ratingCount": 25,
+    "ratingCount": 35,
     "ratingValue": 4.92
-  },
-  "publisher": {
-    "name": "Seasons and Suppers",
-    "url": "https://www.seasonsandsuppers.ca"
   },
   "datePublished": "2014-01-07T08:00:59Z"
 }

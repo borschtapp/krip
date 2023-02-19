@@ -2,7 +2,7 @@
   "url": "https://sweetcsdesigns.com/the-best-easy-air-fryer-french-fries-recipe/",
   "name": "The Best Easy Air Fryer French Fries Recipe",
   "description": "The Best Easy Air Fryer French Fries Recipe - delicious, crispy and crunchy french fries that taste just like your favorite restaurant - but a healthier french fry you can feel good about serving your family.",
-  "inLanguage": "en_US",
+  "inLanguage": "en-US",
   "thumbnailUrl": "https://sweetcsdesigns.com/wp-content/uploads/2021/02/air-fryer-french-fries-Recipe-Picture.jpg",
   "image": [
     {
@@ -19,16 +19,24 @@
     }
   ],
   "author": {
-    "name": "Courtney ODell"
+    "name": "Courtney ODell",
+    "description": "Courtney loves to share great wine, good food, and loves to explore far flung places- all while masting an everyday elegant and easy style. Courtney writes the popular creative lifestyle blog Sweet C’s Designs- a site devoted to delicious everyday recipes, home decor, crafts, DIY inspiration, and photography tips to help make your every day extraordinary. Advertising, media and other inquiries- please contact hello@sweetcsdesigns.com",
+    "url": "https://sweetcsdesigns.com/author/sweetc/"
   },
-  "prepTime": 15,
-  "cookTime": 20,
-  "totalTime": 65,
+  "publisher": {
+    "name": "Sweet Cs Designs",
+    "description": "Easy Recipes, Keto Recipes, One Pot Meals, and Travel Ideas",
+    "url": "https://sweetcsdesigns.com",
+    "logo": "https://sweetcsdesigns.com/wp-content/uploads/2018/10/cropped-swet-cs-designs-logo-color-2.jpg"
+  },
+  "prepTime": 10,
+  "cookTime": 15,
+  "totalTime": 85,
   "suitableForDiet": [
     "GlutenFreeDiet"
   ],
   "recipeCategory": [
-    "Recipes"
+    "Side Dishes"
   ],
   "recipeCuisine": [
     "air fryer"
@@ -84,7 +92,7 @@
       "url": "https://sweetcsdesigns.com/the-best-easy-air-fryer-french-fries-recipe/#mv_create_90_7"
     },
     {
-      "text": "Cook 13 minutes, until crispy and golden brown.",
+      "text": "Cook 15-20 minutes, until crispy and golden brown.",
       "url": "https://sweetcsdesigns.com/the-best-easy-air-fryer-french-fries-recipe/#mv_create_90_8"
     },
     {
@@ -117,7 +125,7 @@
     "unsaturatedFatContent": "6 grams unsaturated fat"
   },
   "aggregateRating": {
-    "reviewCount": 447,
+    "reviewCount": 467,
     "ratingValue": 4.9
   },
   "video": {
@@ -125,11 +133,7 @@
     "description": "The Best Easy Air Fryer French Fries Recipe - delicious, crispy and crunchy french fries that taste just like your favorite restaurant - but a healthier french fry you can feel good about serving your family.",
     "duration": "PT62S",
     "contentUrl": "https://mediavine-res.cloudinary.com/video/upload/bc4wja2ififmjktpi7ci.mp4",
-    "thumbnailUrl": "https://mediavine-res.cloudinary.com/video/upload/s--gTpLnnZd--/ar_16:9,c_fill,f_auto,fl_lossy,q_auto/v1606688723/bc4wja2ififmjktpi7ci.jpg",
-    "uploadDate": "2022-04-06T16:21:43Z"
-  },
-  "publisher": {
-    "name": "Sweet Cs Designs",
-    "url": "https://sweetcsdesigns.com"
+    "thumbnailUrl": "https://mediavine-res.cloudinary.com/image/upload/s--PCMDNggN--/ar_16:9,c_fill,f_auto,fl_lossy,q_auto/v1666299900/njnpgiifmscenpha5eim.jpg",
+    "uploadDate": "2022-12-27T21:58:52Z"
   }
 }
