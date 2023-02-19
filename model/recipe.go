@@ -31,10 +31,10 @@ type HowToStep struct {
 	Video string `json:"video,omitempty"`
 }
 
-// HowToSection a subgrouping of steps in the instructions https://schema.org/HowToSection
+// HowToSection a group of steps in the instructions https://schema.org/HowToSection
 type HowToSection struct {
-	HowToStep
-	Steps []*HowToStep `json:"itemListElement,omitempty"`
+	HowToStep              // because it's optional to have a group, we have to embed `HowToStep` here
+	Steps     []*HowToStep `json:"itemListElement,omitempty"`
 }
 
 // NutritionInformation according to https://schema.org/NutritionInformation
@@ -82,6 +82,8 @@ type VideoObject struct {
 }
 
 // Recipe is the basic struct for the recipe https://schema.org/Recipe
+// Perhaps, I would rename recipeYield, recipeIngredient, recipeInstructions to their aliases,
+// but many websites expect only these names (like Google Search https://developers.google.com/search/docs/appearance/structured-data/recipe)
 type Recipe struct {
 	Url           string                `json:"url,omitempty"`
 	Name          string                `json:"name,omitempty"`
@@ -90,11 +92,12 @@ type Recipe struct {
 	ThumbnailUrl  string                `json:"thumbnailUrl,omitempty"`
 	Images        []*ImageObject        `json:"image,omitempty"`
 	Author        *Person               `json:"author,omitempty"`
+	Publisher     *Organization         `json:"publisher,omitempty"`
 	Text          string                `json:"text,omitempty"`
 	PrepTime      float64               `json:"prepTime,omitempty"`
 	CookTime      float64               `json:"cookTime,omitempty"`
 	TotalTime     float64               `json:"totalTime,omitempty"`
-	Difficulty    string                `json:"difficulty,omitempty"` // alias `educationalLevel` TODO: difficulty is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3130
+	Difficulty    string                `json:"difficulty,omitempty"` // FIXME: `difficulty` is not a part of Recipe schema, it can be `educationalLevel`, but I don't like it https://github.com/schemaorg/schemaorg/issues/3130
 	CookingMethod string                `json:"cookingMethod,omitempty"`
 	Diets         []string              `json:"suitableForDiet,omitempty"`
 	Categories    []string              `json:"recipeCategory,omitempty"`
@@ -102,15 +105,14 @@ type Recipe struct {
 	Keywords      []string              `json:"keywords,omitempty"`
 	Yield         int                   `json:"recipeYield,omitempty"`        // alias `yield`
 	Ingredients   []string              `json:"recipeIngredient,omitempty"`   // alias `supply`
-	Equipment     []string              `json:"recipeEquipment,omitempty"`    // alias `tool` TODO: recipeEquipment is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
+	Equipment     []string              `json:"tool,omitempty"`               // FIXME: `recipeEquipment` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
 	Instructions  []*HowToSection       `json:"recipeInstructions,omitempty"` // alias `step`
-	Notes         []string              `json:"correction,omitempty"`
+	Notes         []string              `json:"correction,omitempty"`         // some notes or advices for the recipe
 	Nutrition     *NutritionInformation `json:"nutrition,omitempty"`
 	Rating        *AggregateRating      `json:"aggregateRating,omitempty"`
 	CommentCount  int                   `json:"commentCount,omitempty"`
 	Video         *VideoObject          `json:"video,omitempty"`
-	Links         []string              `json:"citation,omitempty"`
-	Publisher     *Organization         `json:"publisher,omitempty"`
+	Links         []string              `json:"citation,omitempty"` // maybe not the cleanest name, but we can store additional links here
 	DateModified  *time.Time            `json:"dateModified,omitempty"`
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
 }
