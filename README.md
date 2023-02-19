@@ -1,4 +1,4 @@
-# Krip - Fast and Reliable recipes scraping
+# Krip - Fast and flexible recipes scraping
 
 A Go library for scraping culinary recipes from any website or html file.
 

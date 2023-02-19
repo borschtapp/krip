@@ -8,10 +8,12 @@ github.com/andybalholm/cascadia v1.3.2-0.20220104174750-b91ef208019c h1:oCennVKA
 github.com/andybalholm/cascadia v1.3.2-0.20220104174750-b91ef208019c/go.mod h1:jImtN7DSB/ErpgN7u2thR1y1UB3sk4HIZI32HJO1Dmk=
 github.com/astappiev/fixjson v0.0.0-20220629200359-49a91340faab h1:wfNmNT4kXhCS1pHYyQm1CtMVS5YLxiJdnlmdpAKE55M=
 github.com/astappiev/fixjson v0.0.0-20220629200359-49a91340faab/go.mod h1:/BLEEh9uxgi00+c2DOzMkNTe3Josq/sNT63HvaqRkSY=
+github.com/astappiev/microdata v0.0.0-20230219121312-f1aa6eef1316 h1:zACgXnpwGmXgeQEhFLyy/eg/aXubRiU8GAccWLl71vI=
+github.com/astappiev/microdata v0.0.0-20230219121312-f1aa6eef1316/go.mod h1:wDCK7CkcJIAVdzO6DjvypyJSCxJ387CbNMpW9Oe6xAc=
 github.com/aymerick/douceur v0.2.0 h1:Mv+mAeH1Q+n9Fr+oyamOlAkUNPWPlA8PPGR0QAaYuPk=
 github.com/aymerick/douceur v0.2.0/go.mod h1:wlT5vV2O3h55X9m7iVYN0TBM0NH/MmbLnd30/FjWUq4=
-github.com/borschtapp/krip v0.0.0-20230217223911-c1355837253f h1:WUoRaGUFQBnLat0yoznc/fwRqrrNzlo37y6s2xzarOc=
-github.com/borschtapp/krip v0.0.0-20230217223911-c1355837253f/go.mod h1:6ArUCVDEJIy1HHp0UWOca5TSkxLg5JODMSZXEiApH74=
+github.com/borschtapp/krip v0.0.0-20230219150940-5ec3e691c58e h1:u8itewapekMAXWpNGywyrZIdUI2+vL24pri3RWLGl6o=
+github.com/borschtapp/krip v0.0.0-20230219150940-5ec3e691c58e/go.mod h1:jNQQ7+bQUdMmGePahgSx8m6tvxCS3pAL0p9Mhfm0HAA=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/gofiber/fiber/v2 v2.42.0 h1:Fnp7ybWvS+sjNQsFvkhf4G8OhXswvB6Vee8hM/LyS+8=
 github.com/gofiber/fiber/v2 v2.42.0/go.mod h1:3+SGNjqMh5VQH5Vz2Wdi43zTIV16ktlFd3x3R6O1Zlc=
