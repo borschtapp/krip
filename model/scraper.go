@@ -25,10 +25,3 @@ type DataInput struct {
 
 // Scraper defines a function that fill a recipe from the input data
 type Scraper = func(data *DataInput, r *Recipe) error
-
-// Krip represents an accumulated scraper data
-type Krip struct {
-	Input       *DataInput    `json:"input,omitempty"`
-	Recipe      *Recipe       `json:"recipe,omitempty"`
-	Ingredients []*Ingredient `json:"ingredients,omitempty"`
-}
