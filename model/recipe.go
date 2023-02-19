@@ -17,9 +17,10 @@ type Person struct {
 
 // Organization according to https://schema.org/Organization
 type Organization struct {
-	Name string `json:"name,omitempty"`
-	Url  string `json:"url,omitempty"`
-	Logo string `json:"logo,omitempty"`
+	Name        string `json:"name,omitempty"`
+	Description string `json:"description,omitempty"`
+	Url         string `json:"url,omitempty"`
+	Logo        string `json:"logo,omitempty"`
 }
 
 // HowToStep a step in the instructions https://schema.org/HowToStep
