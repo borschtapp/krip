@@ -1,4 +1,4 @@
-package test
+package testdata
 
 import (
 	"encoding/json"
@@ -20,9 +20,9 @@ var HtmlExt = ".html"
 var JsonExt = ".json"
 var NewExt = ".new"
 
-var TestdataDir = currentPath() + "/testdata/"
-var WebsitesDir = TestdataDir + "websites/"
-var RecipesDir = TestdataDir + "recipes/"
+var PackageDir = currentPath() + "/"
+var WebsitesDir = PackageDir + "websites/"
+var RecipesDir = PackageDir + "recipes/"
 
 func currentPath() string {
 	_, filename, _, _ := runtime.Caller(1)

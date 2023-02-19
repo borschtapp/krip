@@ -11,7 +11,7 @@ import (
 	"golang.org/x/net/html/charset"
 
 	"github.com/borschtapp/krip"
-	"github.com/borschtapp/krip/test"
+	"github.com/borschtapp/krip/testdata"
 	"github.com/borschtapp/krip/utils"
 )
 
@@ -36,8 +36,8 @@ func main() {
 
 func createWebsiteTestdata(recipeUrl string) {
 	alias := utils.HostAlias(recipeUrl)
-	websiteFileName := test.WebsitesDir + alias + test.HtmlExt
-	recipeFileName := test.RecipesDir + alias + test.JsonExt
+	websiteFileName := testdata.WebsitesDir + alias + testdata.HtmlExt
+	recipeFileName := testdata.RecipesDir + alias + testdata.JsonExt
 
 	if _, err := os.Stat(websiteFileName); err == nil {
 		log.Fatal("Testdata already exists for the alias: " + alias)

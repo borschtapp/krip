@@ -12,6 +12,11 @@
   "author": {
     "name": "Crystal Hatch"
   },
+  "publisher": {
+    "name": "Tasty",
+    "url": "https://tasty.co",
+    "logo": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg"
+  },
   "cookingMethod": "Pan Fry",
   "recipeCategory": [
     "Dinner"
@@ -58,7 +63,7 @@
     "1 teaspoon garlic",
     "¼ cup fresh parsley, chopped, for garnish"
   ],
-  "recipeEquipment": [
+  "tool": [
     "Oven Mitts"
   ],
   "recipeInstructions": [
@@ -127,10 +132,5 @@
     "duration": "PT4M19S",
     "contentUrl": "https://vid.tasty.co/output/146781/landscape_480/1569518846",
     "thumbnailUrl": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/236025.jpg?resize=1200:*"
-  },
-  "publisher": {
-    "name": "Tasty",
-    "url": "https://tasty.co",
-    "logo": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/hive/binaries/471926.jpg"
   }
 }

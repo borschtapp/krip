@@ -8,19 +8,19 @@ import (
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
 	"github.com/borschtapp/krip/scraper/common"
-	"github.com/borschtapp/krip/test"
+	"github.com/borschtapp/krip/testdata"
 )
 
 // this website uses comments and new lines inside a json
 func TestKlopotenko(t *testing.T) {
-	test.OptionallyMockRequests(t)
+	testdata.OptionallyMockRequests(t)
 
 	input, err := scraper.UrlInput("https://klopotenko.com/salat-z-buryakom-i-vishneu/")
 	assert.NoError(t, err)
 
 	recipe := &model.Recipe{}
 	assert.NoError(t, common.Scrape(input, recipe))
-	test.AssertRecipe(t, recipe)
+	testdata.AssertRecipe(t, recipe)
 }
 
 func TestKlopotenkoHachapuri(t *testing.T) {

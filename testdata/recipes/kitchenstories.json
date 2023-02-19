@@ -18,6 +18,11 @@
     "url": "http://instagram.com/deepfriedtiger",
     "image": "https://images.kitchenstories.io/userImages/87dbd547-fa83-4022-ba46-1d200c5d5655_11d840a9.jpg"
   },
+  "publisher": {
+    "name": "Kitchen Stories",
+    "url": "https://www.kitchenstories.com",
+    "logo": "https://www.kitchenstories.com/images/ks-logo-2019.52cb693902fc25b0b22c9ee503355ec9.svg"
+  },
   "text": "Have you ever tried matcha? Matcha is ground green tea with an intense green color and a slightly tart flavor. I personally prefer jams to be a little less sweet, so I found matcha the perfect ingredient to give it an exciting upgrade without adding sweetness. The flavors of the subtle tea and the sweet fruit go very well together. If you have any matcha powder left over, you can sprinkle a little on top of your jam-slathered toast to enhance the flavor even more.",
   "prepTime": 20,
   "totalTime": 80,
@@ -64,7 +69,7 @@
     "1 tsp matcha powder",
     "0.33 cup water"
   ],
-  "recipeEquipment": [
+  "tool": [
     "plate (small)",
     "cutting board",
     "knife",
@@ -104,10 +109,5 @@
     "ratingValue": 1,
     "bestRating": 1
   },
-  "commentCount": 11,
-  "publisher": {
-    "name": "Kitchen Stories",
-    "url": "https://www.kitchenstories.com",
-    "logo": "https://www.kitchenstories.com/images/ks-logo-2019.52cb693902fc25b0b22c9ee503355ec9.svg"
-  }
+  "commentCount": 11
 }

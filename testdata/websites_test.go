@@ -1,4 +1,4 @@
-package test
+package testdata
 
 import (
 	"os"
@@ -71,7 +71,7 @@ func TestTestdataFilenames(t *testing.T) {
 }
 
 func updateReadme(domains []string) error {
-	readmeContent, err := os.ReadFile(TestdataDir + "../README.md")
+	readmeContent, err := os.ReadFile(PackageDir + "../README.md")
 	if err != nil {
 		return err
 	}
@@ -91,7 +91,7 @@ func updateReadme(domains []string) error {
 	}
 
 	if string(readmeContent) != newReadme {
-		return os.WriteFile(TestdataDir+"../README.md", []byte(newReadme), 0644)
+		return os.WriteFile(PackageDir+"../README.md", []byte(newReadme), 0644)
 	}
 	return nil
 }

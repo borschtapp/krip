@@ -18,6 +18,10 @@
     "description": "Essen bringt die Menschen zusammen!",
     "image": "https://marleyspoon.com/media/chefs/1204/avatars/medium/avatar-88853286603cef84bb4e7ec8174f6471.png"
   },
+  "publisher": {
+    "name": "Dinnerly",
+    "url": "https://dinnerly.de"
+  },
   "totalTime": 25,
   "difficulty": "easy",
   "suitableForDiet": [
@@ -41,7 +45,7 @@
     "Pflanzenöl",
     "Essig"
   ],
-  "recipeEquipment": [
+  "tool": [
     "mittelgroßer Topf",
     "große Pfanne",
     "Messbecher",
@@ -88,9 +92,5 @@
   },
   "citation": [
     "https://marleyspoon.com/media/pdf/recipe_cards/114391/R-114391_-_K%C3%B6stliches_H%C3%A4hnchen_mit_Erdnusssauce-CV.pdf"
-  ],
-  "publisher": {
-    "name": "Dinnerly",
-    "url": "https://dinnerly.de"
-  }
+  ]
 }

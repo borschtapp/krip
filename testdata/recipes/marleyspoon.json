@@ -18,6 +18,10 @@
     "description": "Ich wurde praktisch als \"Foodie\" geboren: eine meiner ersten Erinnerungen mit 3 Jahren ist, dass ich Angst hatte, die Kindergärtner:innen würden mein Spinatpüree nicht korrekt erhitzen. Meine Besessenheit mit Essen ist nie verschwunden und mein Kochstil ist am besten zu beschreiben als hedonistisch mit Gewissen.",
     "image": "https://marleyspoon.com/media/chefs/1206/avatars/medium/avatar-c3bb10e4a89037b58258369f88a767f2.png"
   },
+  "publisher": {
+    "name": "Marley Spoon",
+    "url": "https://marleyspoon.de"
+  },
   "totalTime": 35,
   "difficulty": "easy",
   "suitableForDiet": [
@@ -47,7 +51,7 @@
     "Olivenöl",
     "Essig"
   ],
-  "recipeEquipment": [
+  "tool": [
     "Backofen und Backrost",
     "Backblech und Backpapier",
     "mittelgroße Pfanne",
@@ -93,9 +97,5 @@
   },
   "citation": [
     "https://marleyspoon.com/media/pdf/recipe_cards/113813/R-113813_-_Glasierte_Veggie-Burger-CV.pdf"
-  ],
-  "publisher": {
-    "name": "Marley Spoon",
-    "url": "https://marleyspoon.de"
-  }
+  ]
 }

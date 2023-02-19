@@ -10,14 +10,14 @@ import (
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
-	"github.com/borschtapp/krip/test"
+	"github.com/borschtapp/krip/testdata"
 )
 
 func main() {
 	var paths = make(map[string]int)
 
-	_ = filepath.Walk(test.WebsitesDir, func(path string, info os.FileInfo, err error) error {
-		if strings.HasSuffix(info.Name(), test.HtmlExt) {
+	_ = filepath.Walk(testdata.WebsitesDir, func(path string, info os.FileInfo, err error) error {
+		if strings.HasSuffix(info.Name(), testdata.HtmlExt) {
 			input, err := scraper.FileInput(path, model.InputOptions{SkipText: true})
 			if err != nil {
 				log.Fatal(err)
@@ -37,5 +37,5 @@ func main() {
 	sort.Strings(lines)
 	text := strings.Join(lines, "\n")
 
-	_ = os.WriteFile(test.TestdataDir+"schema_paths.txt", []byte(text), 0644)
+	_ = os.WriteFile(testdata.PackageDir+"schema_paths.txt", []byte(text), 0644)
 }
