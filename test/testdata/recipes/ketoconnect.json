@@ -1,0 +1,99 @@
+{
+  "url": "https://www.ketoconnect.net/keto-white-chicken-chili/",
+  "name": "Keto White Chicken Chili",
+  "description": "It is creamy, flavorful and packs a powerful dose of fat and protein to keep you full for longer!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-served-with-bread.jpg",
+  "image": [
+    {
+      "url": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-recipe.jpg"
+    },
+    {
+      "url": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-recipe-500x500.jpg"
+    },
+    {
+      "url": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-recipe-500x375.jpg"
+    },
+    {
+      "url": "https://www.ketoconnect.net/wp-content/uploads/2022/02/keto-white-chicken-chili-recipe-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Matt Gaedke"
+  },
+  "prepTime": 12,
+  "cookTime": 18,
+  "totalTime": 30,
+  "recipeCategory": [
+    "Main Dish"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "keto white chicken chili"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "1.5 lbs Precooked Chicken Breast Shredded (Can be baked or boiled)",
+    "1 tbsp Olive Oil",
+    "3 cloves Minced Garlic",
+    "1/2 c Diced Onion",
+    "18 oz Block of Cream Cheese",
+    "4 cups Chicken Broth",
+    "7 oz Can Green Chilis",
+    "1/4 c Heavy Cream",
+    "2 tbsp Cilantro",
+    "1+1/2 tsp Cumin",
+    "1/4 tsp Cayenne",
+    "3/4 tsp Oregano",
+    "3/4 tsp Paprika",
+    "1/2 tsp Pepper",
+    "1 tsp Salt"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Add oil to a pot and sauté the garlic and onions until translucent over medium heat.",
+      "url": "https://www.ketoconnect.net/keto-white-chicken-chili/#wprm-recipe-47462-step-0-0"
+    },
+    {
+      "text": "Pour in the spices and and toast them for 2 minutes with the onions and garlic.",
+      "url": "https://www.ketoconnect.net/keto-white-chicken-chili/#wprm-recipe-47462-step-0-1"
+    },
+    {
+      "text": "Add in the broth and bring to a simmer. Simmer for 15 minutes.",
+      "url": "https://www.ketoconnect.net/keto-white-chicken-chili/#wprm-recipe-47462-step-0-2"
+    },
+    {
+      "text": "Once simmered add in the chicken, chilis, cream cheese, heavy cream, and cilantro.",
+      "url": "https://www.ketoconnect.net/keto-white-chicken-chili/#wprm-recipe-47462-step-0-3"
+    },
+    {
+      "text": "Serve warm with Keto tortilla chips, avocado, limes, and extra cilantro.",
+      "url": "https://www.ketoconnect.net/keto-white-chicken-chili/#wprm-recipe-47462-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "305 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "12 g",
+    "cholesterolContent": "96 mg",
+    "fatContent": "11 g",
+    "fiberContent": "1 g",
+    "proteinContent": "39 g",
+    "saturatedFatContent": "4 g",
+    "sodiumContent": "1829 mg",
+    "sugarContent": "5 g",
+    "transFatContent": "1 g",
+    "unsaturatedFatContent": "5 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 3,
+    "ratingValue": 4
+  },
+  "publisher": {
+    "name": "KetoConnect",
+    "url": "https://www.ketoconnect.net"
+  },
+  "datePublished": "2022-02-13T08:00:00Z"
+}

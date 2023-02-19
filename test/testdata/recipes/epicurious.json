@@ -1,0 +1,79 @@
+{
+  "url": "https://www.epicurious.com/recipes/food/views/ramen-noodle-bowl-with-escarole-and-spicy-tofu-crumbles",
+  "name": "Ramen Noodle Bowl With Escarole and Spicy Tofu Crumbles",
+  "description": "Spicy tofu crumbles, pickled scallions, and roasted garlic chili sauce all come together in this noodle bowl. (Save leftovers to add to grain bowls all week long.)",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/1:1/w_1333,h_1333,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg",
+  "image": [
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/2:1/w_2000,h_1000,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/4:1/w_2000,h_500,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/4:6/w_888,h_1332,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/5:4/w_1665,h_1332,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/6:4/w_1998,h_1332,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/9:4/w_1997,h_887,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/16:9/w_2000,h_1125,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/4:3/w_1776,h_1332,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    },
+    {
+      "url": "https://assets.epicurious.com/photos/568194b8fb9544f72b678fd4/1:1/w_1333,h_1333,c_limit/Ramen-Noodle-Bowl-With-Escarole.jpg"
+    }
+  ],
+  "author": {
+    "name": "Claire Saffitz"
+  },
+  "text": "Give an hour to prepping these components, and thank yourself all week long.",
+  "keywords": [
+    "bon appétit",
+    "noodle",
+    "asian",
+    "tofu",
+    "escarole",
+    "vegetarian",
+    "healthy",
+    "peanut",
+    "web"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "2 (5.5-ounce) servings fresh or dried ramen noodles",
+    "4 cups torn escarole",
+    "3 tablespoons Roasted Garlic Chili Sauce",
+    "Kosher salt",
+    "4 Pickled Scallions",
+    "Spicy Tofu Crumbles, thinly sliced radish, and chopped peanuts (for serving)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Cook noodles according to package directions. During the last minute of cooking, add escarole. Drain and rinse under cold water."
+    },
+    {
+      "text": "Toss noodles, escarole, and chili sauce in a large bowl until coated; season with salt. Divide noodles between bowls. Slice scallions into 1\" pieces and place on top of noodles along with some tofu crumbles, radishes, and peanuts."
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 4,
+    "ratingValue": 4
+  },
+  "publisher": {
+    "name": "Epicurious",
+    "url": "https://www.epicurious.com",
+    "logo": "https://www.epicurious.com/verso/static/epicurious/assets/logo-seo.efde9fc575f00192ccc378f32f362af39d4e81fe.png"
+  },
+  "dateModified": "2016-01-01T14:53:00-05:00",
+  "datePublished": "2016-01-01T14:53:00-05:00"
+}

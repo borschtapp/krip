@@ -1,0 +1,105 @@
+{
+  "url": "https://dinnerthendessert.com/indian-chicken-korma/",
+  "name": "Indian Chicken Korma Recipe",
+  "description": "Chicken Korma is a traditional Indian dish that's light and flavorful almond curry made with tomato paste, plenty of spices and cream thats buttery and completely delicious.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://dinnerthendessert.com/wp-content/uploads/2018/04/Indian-Chicken-Korma-FB.jpg",
+  "image": [
+    {
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma.jpg"
+    },
+    {
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-500x500.jpg"
+    },
+    {
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-500x375.jpg"
+    },
+    {
+      "url": "https://dinnerthendessert.com/wp-content/uploads/2018/03/Chicken-Korma-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Sabrina"
+  },
+  "prepTime": 20,
+  "cookTime": 25,
+  "totalTime": 45,
+  "recipeCategory": [
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "Indian"
+  ],
+  "keywords": [
+    "Indian Chicken Korma"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "6 chicken thighs (boneless and skinless)",
+    "2 tablespoons tomato paste",
+    "1 tablespoon sized piece of fresh ginger (peeled)",
+    "2 cloves garlic",
+    "1 tablespoon garam masala",
+    "1/4 teaspoon crushed red pepper",
+    "1/2 teaspoon paprika",
+    "1 teaspoon ground cardamom",
+    "1/2 teaspoon kosher salt",
+    "1/2 teaspoon turmeric",
+    "1/2 cup almonds",
+    "3/4 cup greek yogurt",
+    "1 tablespoon canola oil",
+    "3 tablespoons butter",
+    "1 yellow onion (diced)",
+    "1/4 cup heavy cream"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Cut the chicken thighs into small 1 1/2 to 2 inch chunks and put them in a large bowl."
+    },
+    {
+      "text": "Add the tomato paste, ginger, garlic, garam masala, crushed red pepper, paprika, cardamom, salt, turmeric and almonds into a food processor on high"
+    },
+    {
+      "text": "speed until completely smooth."
+    },
+    {
+      "text": "Add the mixture to the bowl with the chicken along with the yogurt and mix well."
+    },
+    {
+      "text": "Cover and refrigerate for 1-2 hours."
+    },
+    {
+      "text": "Add the canola oil and butter to a large cast iron skillet or heavy skillet on medium high heat."
+    },
+    {
+      "text": "Add the onions and cook for 5-7 minutes, or until just caramelized."
+    },
+    {
+      "text": "Add in the chicken and cook for 12-15 minutes or until the chicken is cooked through."
+    },
+    {
+      "text": "Add the heavy cream to the skillet and mix well, cooking for an additional 3-4 minutes."
+    }
+  ],
+  "nutrition": {
+    "calories": "682 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "11 g",
+    "cholesterolContent": "210 mg",
+    "fatContent": "55 g",
+    "fiberContent": "3 g",
+    "proteinContent": "36 g",
+    "saturatedFatContent": "17 g",
+    "sodiumContent": "582 mg",
+    "sugarContent": "4 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 9,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Dinner, then Dessert",
+    "url": "https://dinnerthendessert.com"
+  },
+  "datePublished": "2018-04-11T00:05:59Z"
+}

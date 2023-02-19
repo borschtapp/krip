@@ -1,0 +1,88 @@
+{
+  "url": "https://www.acouplecooks.com/garlic-butter-shrimp/",
+  "name": "Garlic Butter Shrimp (Fast \u0026 Easy Dinner!)",
+  "description": "This garlic butter shrimp has HUGE flavor in under 10 minutes! A fast and easy dinner for weeknights or entertaining, it will become your go-to.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-026.jpg",
+  "image": [
+    {
+      "url": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-022-225x225.jpg"
+    },
+    {
+      "url": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-022-260x195.jpg"
+    },
+    {
+      "url": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-022-320x180.jpg"
+    },
+    {
+      "url": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Garlic-Butter-Shrimp-022.jpg"
+    }
+  ],
+  "author": {
+    "name": "Sonja Overhiser",
+    "url": "https://www.acouplecooks.com/about/"
+  },
+  "prepTime": 5,
+  "cookTime": 3,
+  "totalTime": 8,
+  "cookingMethod": "Stovetop",
+  "suitableForDiet": [
+    "GlutenFreeDiet"
+  ],
+  "recipeCategory": [
+    "Main Dish"
+  ],
+  "recipeCuisine": [
+    "Shrimp"
+  ],
+  "keywords": [
+    "Garlic Butter Shrimp"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1 pound large shrimp, deveined (peeled or unpeeled)",
+    "3 garlic cloves",
+    "1/2 teaspoon kosher salt",
+    "3 tablespoons butter",
+    "2 lemon wedges",
+    "Fresh cilantro or parsley, for garnish"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "If frozen, thaw the shrimp (see the notes above).",
+      "url": "https://www.acouplecooks.com/garlic-butter-shrimp/#instruction-step-1"
+    },
+    {
+      "text": "Mince the garlic.",
+      "url": "https://www.acouplecooks.com/garlic-butter-shrimp/#instruction-step-2"
+    },
+    {
+      "text": "Pat the shrimp dry. In a medium bowl, mix the shrimp with the garlic and salt.",
+      "url": "https://www.acouplecooks.com/garlic-butter-shrimp/#instruction-step-3"
+    },
+    {
+      "text": "In a large skillet, heat the butter on medium high heat. Cook the shrimp for 1 to 2 minutes per side until opaque and cooked through, turning them with tongs.",
+      "url": "https://www.acouplecooks.com/garlic-butter-shrimp/#instruction-step-4"
+    },
+    {
+      "text": "Spritz with juice of the lemon wedges and serve immediately.",
+      "url": "https://www.acouplecooks.com/garlic-butter-shrimp/#instruction-step-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "176 calories",
+    "carbohydrateContent": "0.8 g",
+    "cholesterolContent": "205.4 mg",
+    "fatContent": "9.2 g",
+    "fiberContent": "0 g",
+    "proteinContent": "23 g",
+    "saturatedFatContent": "5.5 g",
+    "sodiumContent": "427.1 mg",
+    "sugarContent": "0 g",
+    "transFatContent": "0 g"
+  },
+  "publisher": {
+    "name": "A Couple Cooks",
+    "url": "https://www.acouplecooks.com"
+  }
+}

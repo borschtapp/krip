@@ -1,0 +1,72 @@
+{
+  "url": "https://www.mob.co.uk/recipes/chilli-cheese-paratha",
+  "name": "Chilli Cheese Paratha",
+  "description": "This Indian snack is oozing with molten cheese and chilli garlicky goodness. They will be demolished in seconds, I can promise you that. Seema x",
+  "inLanguage": "en_GB",
+  "thumbnailUrl": "https://mobkitchen-objects.imgix.net/recipes/9K8A6392-2.jpg?auto=format\u0026crop=focalpoint\u0026domain=mobkitchen-objects.imgix.net\u0026fit=crop\u0026fp-x=0.5\u0026fp-y=0.5\u0026h=630\u0026ixlib=php-3.3.1\u0026q=82\u0026w=1200\u0026s=ee498c44c0fcb1398bed0dcedbd4feb6",
+  "image": [
+    {
+      "url": "https://mobkitchen-objects.imgix.net/recipes/9K8A6392-2.jpg?auto=format\u0026crop=focalpoint\u0026domain=mobkitchen-objects.imgix.net\u0026fit=crop\u0026fp-x=0.5\u0026fp-y=0.5\u0026h=827\u0026ixlib=php-3.3.1\u0026q=82\u0026w=1300\u0026s=412bb43eb2623e3afb2bebc5cc73b572"
+    }
+  ],
+  "totalTime": 30,
+  "recipeCategory": [
+    "Munchies",
+    "Comfort",
+    "Speedy"
+  ],
+  "recipeCuisine": [
+    "Indian"
+  ],
+  "keywords": [
+    "chilli cheese paratha",
+    "indian cheese paratha",
+    "indian paratha recipe",
+    "cheese paratha recipe",
+    "chilli cheese paratha recipe",
+    "cheesy paratha recipe"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "200g Plain Flour",
+    "140ml Hot Water",
+    "7 Garlic Cloves",
+    "3 Tsp Chilli Powder",
+    "Handful Of Coriander",
+    "3 Spring Onions",
+    "250g Mozzarella",
+    "250g Cheddar Cheese",
+    "Salt",
+    "Vegetable Oil"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Combine the plain flour, a pinch of salt and hot water (from the kettle) in a bowl and mix with a wooden spoon. Once it is cool enough to handle, knead the dough for 5 minutes until smooth. Pour in a tablespoon of oil and knead through. Cover and rest for 10 minutes"
+    },
+    {
+      "text": "Meanwhile, prepare the garlic chilli oil. Grate the garlic into a small microwaveable bowl with the chilli powder, ¼ teaspoon salt and 2 tablespoons of oil. Microwave for 1 minute to soften and cook the garlic."
+    },
+    {
+      "text": "Roughly chop your coriander and finely slice your spring onions."
+    },
+    {
+      "text": "Divide the dough into quarters, and then the quarters into halves to form eight even balls."
+    },
+    {
+      "text": "Roll two balls into large circles about 2mm thick so they are about the same size. Spread ½ a teaspoon of the chilli garlic paste on to one circle, sprinkle on a handful of shredded mozzarella and shredded cheddar. Sprinkle on your coriander and spring onions, then press a second dough circle on top – you can use some water along the edges to help it stick if you need it too"
+    },
+    {
+      "text": "Heat up a frying pan and pour in a small glug of oil. Slap on the paratha and cook on a high heat on both sides for 2 minutes. Flip using a large spatula."
+    },
+    {
+      "text": "Cut into quarters and serve whilst still hot and oozing with cheese."
+    }
+  ],
+  "nutrition": {
+    "servingSize": "4"
+  },
+  "publisher": {
+    "name": "Mob",
+    "url": "https://www.mob.co.uk"
+  }
+}

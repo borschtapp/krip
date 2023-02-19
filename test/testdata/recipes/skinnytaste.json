@@ -1,0 +1,84 @@
+{
+  "url": "https://www.skinnytaste.com/grilled-chicken-with-spinach-and-melted/",
+  "name": "Grilled Chicken with Spinach and Melted Mozzarella",
+  "description": "Grilled chicken topped with sauteed garlicky spinach, mozzarella and roasted peppers – a quick and easy chicken dish your family will love!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10.jpg",
+  "image": [
+    {
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10-500x500.jpg"
+    },
+    {
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10-500x375.jpg"
+    },
+    {
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Gina"
+  },
+  "prepTime": 2,
+  "cookTime": 15,
+  "totalTime": 17,
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeCuisine": [
+    "Italian"
+  ],
+  "keywords": [
+    "chicken breast recipes",
+    "grilled chicken",
+    "grilled chicken breast",
+    "grilled chicken recipe",
+    "Grilled Chicken with Spinach and Melted Mozzarella"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "24 oz 3 large chicken breasts sliced in half lengthwise to make 6",
+    "kosher salt and pepper to taste",
+    "1 tsp olive oil",
+    "3 cloves garlic (crushed)",
+    "10 oz frozen spinach (drained)",
+    "3 oz shredded part skim mozzarella",
+    "1/2 cup roasted red pepper (sliced in strips (packed in water))",
+    "olive oil spray"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 400°F. Season chicken with salt and pepper. Lightly spray a grill or grill pan with oil. Cook chicken until no longer pink, about 2 to 3 minutes per side.",
+      "url": "https://www.skinnytaste.com/grilled-chicken-with-spinach-and-melted/#wprm-recipe-49950-step-0-0"
+    },
+    {
+      "text": "Heat a skillet over medium heat. Add oil and garlic, sauté a 30 seconds, add spinach, salt and pepper. Cook until heated through, 2 to 3 minutes.",
+      "url": "https://www.skinnytaste.com/grilled-chicken-with-spinach-and-melted/#wprm-recipe-49950-step-0-1",
+      "image": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-2.jpg"
+    },
+    {
+      "text": "Place chicken on a baking sheet, divide spinach evenly between the 6 pieces and place on top. Top each with 1/2 oz mozzarella, roasted peppers and bake until melted, about 3 minutes.",
+      "url": "https://www.skinnytaste.com/grilled-chicken-with-spinach-and-melted/#wprm-recipe-49950-step-0-2"
+    }
+  ],
+  "nutrition": {
+    "calories": "195 kcal",
+    "servingSize": "1 piece",
+    "carbohydrateContent": "3.5 g",
+    "cholesterolContent": "91 mg",
+    "fatContent": "6 g",
+    "fiberContent": "1.5 g",
+    "proteinContent": "31 g",
+    "saturatedFatContent": "2 g",
+    "sodiumContent": "183 mg",
+    "sugarContent": "0.5 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 19,
+    "ratingValue": 4.85
+  },
+  "publisher": {
+    "name": "Skinnytaste",
+    "url": "https://www.skinnytaste.com"
+  },
+  "datePublished": "2020-07-11T18:23:00Z"
+}

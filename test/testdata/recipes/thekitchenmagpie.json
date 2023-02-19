@@ -1,0 +1,95 @@
+{
+  "url": "https://www.thekitchenmagpie.com/salmon-loaf/",
+  "name": "Salmon Loaf",
+  "description": "Skip the salmon cakes and make this great salmon loaf for dinner instead!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonwhiteplatter.jpg",
+  "image": [
+    {
+      "url": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonplate.jpg"
+    },
+    {
+      "url": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonplate-500x500.jpg"
+    },
+    {
+      "url": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonplate-500x375.jpg"
+    },
+    {
+      "url": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2021/02/salmonloafonplate-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Karlynn Johnston"
+  },
+  "prepTime": 10,
+  "cookTime": 60,
+  "recipeCategory": [
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "salmon loaf"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "16 ounces of canned salmon (drained)",
+    "1 cup seasoned fine breadcrumbs",
+    "½ cup onion (finely chopped)",
+    "1 tsp dill weed",
+    "1/2 cup milk",
+    "2 large eggs (beaten)",
+    "1 tablespoon lemon juice",
+    "½ tsp salt",
+    "¼ tsp black pepper"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat your oven to 375 °F. Grease a baking sheet and set aside.",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-0"
+    },
+    {
+      "text": "Drain the salmon well and if desired, remove any skin and bones from the salmon. You can leave them in, some people love those the best! They will bake right in, don't worry.",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-1"
+    },
+    {
+      "text": "Flake the salmon with a fork and then mix with the breadcrumbs, onion, milk, dill, eggs, lemon juice, salt and pepper.",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-2"
+    },
+    {
+      "text": "With clean hands, shape into a loaf on the greased baking sheet.",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-3"
+    },
+    {
+      "text": "Bake for 40-50 minutes OR until nicely browned AND reaches an internal temperature of at least 165 °F.",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-4"
+    },
+    {
+      "text": "Let cool for 5 minutes, then slice and serve. Garnish with fresh parsley and lemon wedges. This is excellent with lemon juice squeezed on top!",
+      "url": "https://www.thekitchenmagpie.com/salmon-loaf/#wprm-recipe-80439-step-0-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "158 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "11 g",
+    "cholesterolContent": "94 mg",
+    "fatContent": "5 g",
+    "fiberContent": "1 g",
+    "proteinContent": "17 g",
+    "saturatedFatContent": "1 g",
+    "sodiumContent": "580 mg",
+    "sugarContent": "1 g",
+    "transFatContent": "1 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 52,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "The Kitchen Magpie",
+    "url": "https://www.thekitchenmagpie.com"
+  },
+  "datePublished": "2021-03-03T04:00:24Z"
+}

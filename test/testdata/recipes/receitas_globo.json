@@ -1,0 +1,83 @@
+{
+  "url": "https://receitas.globo.com/strogonoff-de-frango-simples-4fbe8cc656ec5b3c9801b7e5.ghtml",
+  "name": "Strogonoff de frango",
+  "description": "Como fazer strogonoff de frango simples e fácil: essa receita tradicional leva poucos ingredientes, fica pronta rápido e rende bastante; confira",
+  "inLanguage": "pt_BR",
+  "thumbnailUrl": "https://s2.glbimg.com/AQoIEw0pX6-boDU0s1Y5e-Spzmg=/1200x/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/10183011.jpg",
+  "image": [
+    {
+      "url": "https://s2.glbimg.com/dzbPkEBtEj2x-n18bvn0XRA1SDM=/696x390/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/10183011.jpg",
+      "width": 696,
+      "height": 390
+    }
+  ],
+  "author": {
+    "name": "Alm3"
+  },
+  "totalTime": 50,
+  "cookingMethod": "Cozido",
+  "recipeCategory": [
+    "Aves"
+  ],
+  "recipeCuisine": [
+    "Brasileira"
+  ],
+  "keywords": [
+    "receitas de strogonoff",
+    "receitas com frango",
+    "almoço",
+    "jantar",
+    "natal",
+    "reveillon",
+    "ano-novo",
+    "páscoa",
+    "reunião em família",
+    "reunião com amigos"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "3 colheres de sopa de óleo",
+    "1 tablete de caldo de galinha",
+    "1 quilo de peito de frango em cubos",
+    "2 colheres de sopa de molho de tomate",
+    "2 colheres de sopa de mostarda",
+    "2 colheres de sopa de ketchup",
+    "Champignon a gosto",
+    "1 lata de creme de leite sem soro"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "1. Em uma panela, coloque 3 colheres de sopa de óleo e 1 tablete de caldo de galinha. Espere aquecer para dissolver o tablete."
+    },
+    {
+      "text": "2. Em seguida, adicione 1 quilo de peito de frango em cubos e deixe dourar."
+    },
+    {
+      "text": "3. Depois, acrescente 2 colheres de sopa de molho de tomate, 2 colheres de sopa de mostarda, 2 colheres de sopa de ketchup e champignon a gosto. Misture."
+    },
+    {
+      "text": "4. Desligue o fogo e acrescente 1 lata de creme de leite. Misture novamente."
+    },
+    {
+      "text": "5. Sirva em seguida."
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 10,
+    "ratingValue": 4.9
+  },
+  "video": {
+    "name": "Strogonoff de frango",
+    "description": "Strogonoff de frango",
+    "contentUrl": "https://voddownload01.video.globo.com/c6/99/b6/10183011_b67e3a1aec137c50010e2ff4ef89e2c5b681e016/10183011-360p_300k_h264-c2bf2480-543f-013a-7e07-0242ac11000b.mp4",
+    "thumbnailUrl": "https://s04.video.glbimg.com/x240/10183011.jpg",
+    "uploadDate": "2012-05-24T19:32:22Z"
+  },
+  "publisher": {
+    "name": "RECEITAS - TODA RECEITA COMEÇA NO RECEITAS",
+    "url": "https://receitas.globo.com",
+    "logo": "https://s3.glbimg.com/v1/AUTH_05f06ca986b54d6e9c5df94927ccf7fc/receitas/svgs/svg-logo-completo-roxo.min.svg"
+  },
+  "dateModified": "2022-06-05T13:16:31.192Z",
+  "datePublished": "2012-05-24T19:32:22Z"
+}

@@ -1,0 +1,73 @@
+{
+  "url": "https://www.750g.com/salade-de-carottes-cuites-et-crues-a-l-orange-r201936.htm",
+  "name": "Salade de carottes cuites et crues à l'orange",
+  "description": "La petite salade détox parfaite pour un déjeuner vitaminé au coeur de l'hiver",
+  "inLanguage": "fr_FR",
+  "thumbnailUrl": "https://static.750g.com/images/1200-630/72dcbbdc4c59e14ea2e93632904fc482/salade-de-carottes-cuites-et-crues-a-l-orange.jpg",
+  "image": [
+    {
+      "url": "https://static.750g.com/images/600-600/72dcbbdc4c59e14ea2e93632904fc482/salade-de-carottes-cuites-et-crues-a-l-orange.jpg"
+    }
+  ],
+  "author": {
+    "name": "750g La Table"
+  },
+  "prepTime": 20,
+  "cookTime": 15,
+  "recipeCategory": [
+    "Salades"
+  ],
+  "keywords": [
+    "salade de carottes",
+    "salade de carottes cuites"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "500g de carottes",
+    "3 jus d'orange",
+    "1 c.c de coriandre en grain",
+    "1 branche de thym",
+    "30g d'huile d'olive",
+    "2 oranges",
+    "1 fenouil",
+    "10 cl de vinaigrette citron",
+    "500 g de carottes",
+    "1/4 de botte de coriandre hachée",
+    "Sel",
+    "Piment d'Espelette"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Étape 1: Cuisson des carottes Découpez les carottes en rondelles et faites-les revenir à feu moyen à l'huile d'olive avec les graines de coriandre grossièrement concassées."
+    },
+    {
+      "text": "Déglacez au jus d'orange."
+    },
+    {
+      "text": "Ajoutez la branche de thym ainsi que l'assaisonnement."
+    },
+    {
+      "text": "Laissez cuire avec un couvercle une dizaine de minutes puis laissez refroidir. Étape 2: Préparation de la salade Râpez les carottes."
+    },
+    {
+      "text": "Dans un saladier, mélangez les carottes râpées, les carottes cuites, le fenouil et les oranges en cubes."
+    },
+    {
+      "text": "Ajoutez la vinaigrette et mélangez."
+    },
+    {
+      "text": "Ajoutez la coriandre ciselée et le piment d'espelette."
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 1,
+    "ratingCount": 1,
+    "ratingValue": 4,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "publisher": {
+    "name": "750g",
+    "url": "https://www.750g.com"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "url": "https://marleyspoon.de/menu/113813-glasierte-veggie-burger-mit-roestkartoffeln-und-apfel-gurken-salat",
+  "name": "Glasierte Veggie-Burger mit Röstkartoffeln und Apfel-Gurken-Salat",
+  "description": "Heute gibt’s Burgergenuss auf hohem Niveau: Die saftigen Pattys werden in einer würzig-süßen Glasur gebraten, ehe sie mit eingelegten Gurkenstreifen, pikantem Sriracha-Dip und knackigem Salat mit frisch-fruchtigem Apfel und würzigem Sellerie das Burgerbrötchen zieren. Der Salat fungiert übrigens – schick mit Erdnüssen bestreut – neben knusprigen Ofenkartoffeln auch noch zusätzlich als Beilage. Lass es dir schmecken!",
+  "inLanguage": "de_DE",
+  "thumbnailUrl": "https://marleyspoon.com/media/recipes/113813/main_photos/thumb/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg",
+  "image": [
+    {
+      "url": "https://marleyspoon.com/media/recipes/113813/main_photos/medium/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg"
+    },
+    {
+      "url": "https://marleyspoon.com/media/recipes/113813/main_photos/large/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg"
+    }
+  ],
+  "author": {
+    "name": "Lieke",
+    "knowsAbout": "Ich bin schon immer in Essen verliebt. Mit 3 Jahren hatte ich Angst, meine Kindergärtner:innen würden mein Spinatpüree nicht korrekt erhitzen, mit 9 habe ich mein erstes Soufflé gebacken und kurz bevor ich 10 Jahre alt wurde, habe ich mein erstes 4-Gänge-Menü gekocht (inkl. gerösteter Paprikasuppe, Maisbrot und einem klassischen Schokokuchen). Meine Besessenheit mit Kochen ist nie verschwunden und ich esse mich durch jegliche Küchen. Mein Stil ist am besten zu beschreiben als hedonistisch mit Gewissen. Ich liebe dekadentes Essen in jeglichen Geschmacksrichtungen, aber ich koche auch gerne mit Gemüse – und Gemüse kann auch dekadent sein!",
+    "description": "Ich wurde praktisch als \"Foodie\" geboren: eine meiner ersten Erinnerungen mit 3 Jahren ist, dass ich Angst hatte, die Kindergärtner:innen würden mein Spinatpüree nicht korrekt erhitzen. Meine Besessenheit mit Essen ist nie verschwunden und mein Kochstil ist am besten zu beschreiben als hedonistisch mit Gewissen.",
+    "image": "https://marleyspoon.com/media/chefs/1206/avatars/medium/avatar-c3bb10e4a89037b58258369f88a767f2.png"
+  },
+  "totalTime": 35,
+  "difficulty": "easy",
+  "suitableForDiet": [
+    "veggie"
+  ],
+  "keywords": [
+    "vegetarian",
+    "kid friendly",
+    "optional heat"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "25g Erdnüsse, geröstet \u0026 gesalzen",
+    "2 vegane Burgerpattys",
+    "2 Burgerbrötchen mit Sesam",
+    "1 Päckchen Sriracha-Sauce",
+    "25ml Sojasauce",
+    "2 Stangensellerie",
+    "1 Minigurke",
+    "1 Apfel",
+    "1 Packung festkochende Kartoffeln",
+    "2EL Mayonnaise",
+    "2½TL Honig",
+    "½TL Senf",
+    "Salz",
+    "Zucker",
+    "Olivenöl",
+    "Essig"
+  ],
+  "recipeEquipment": [
+    "Backofen und Backrost",
+    "Backblech und Backpapier",
+    "mittelgroße Pfanne",
+    "Sparschäler"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Kartoffeln rösten",
+      "text": "Den Backofen auf 240°C (220°C Umluft) vorheizen. Die Kartoffeln samt Schale in ca. 1cm breite Spalten schneiden und auf einem mit Backpapier ausgelegten Backblech mit 1EL Olivenöl sowie 1/2TL Salz vermengen. Die Kartoffeln im Ofen auf mittlerer Schiene 20–25Min. goldbraun rösten, zwischendurch einmal wenden.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593685/photos/large/63577_1-802673cf1983cdc9aa552fc7d2c4f1e6.jpeg"
+    },
+    {
+      "name": "Salat zubereiten",
+      "text": "2EL Olivenöl, 1EL hellen Essig, 1/2TL Senf, 1/2TL Honig und 1 kräftige Prise Salz zu einem Dressing verrühren. Den Apfel vierteln, entkernen und in ca. 1cm große Würfel schneiden. Die 1/2 der Gurke ebenfalls in ca. 1cm große Würfel schneiden. Den Sellerie in dünne Scheiben schneiden. Die Apfel- und Gurkenwürfel und den Sellerie mit dem Dressing vermengen.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593686/photos/large/63577_2-b7d1877f7f6f5e2652a9ea21e95a7515.jpeg"
+    },
+    {
+      "name": "Gurkenscheiben einlegen",
+      "text": "Die restliche Gurke mit einem Sparschäler in breite Streifen schneiden. 1EL hellen Essig, 1TL Zucker und 1 kräftigen Prise Salz verrühren, bis sich Zucker und Salz aufgelöst haben. Mit den Gurkenstreifen vermengen und beiseitestellen.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593687/photos/large/63577_3-ff624aca22ce52ee9889f8385e3555a9.jpeg"
+    },
+    {
+      "name": "Glasur und Dip zubereiten",
+      "text": "Die Sojasauce mit 2TL Honig und 1EL hellem Essig verrühren. Getrennt davon die Sriracha-Sauce mit 2EL Mayonnaise verrühren. Tipp: Wenn Kinder mitessen, ggf. weniger Sriracha-Sauce verwenden oder diese separat servieren. Die Burgerbrötchen auf einem Backrost 2–3Min. im Ofen aufbacken.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593688/photos/large/63577_4-ea5579ab3ca3359c97cbcbf52065d944.jpeg"
+    },
+    {
+      "name": "Pattys braten",
+      "text": "Die Pattys in einer mittelgroßen Pfanne mit 1EL Olivenöl bei mittlerer Hitze auf jeder Seite 1–2Min. goldbraun braten. Die Soja-Würzsauce dazugeben, 1–2Min. köcheln lassen und die Pattys in der Glasur wenden, sodass sie vollständig damit bedeckt sind.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593689/photos/large/63577_5-1e57affaeae4c94241da9ddd612f88c6.jpeg"
+    },
+    {
+      "name": "Burger fertigstellen",
+      "text": "Die Brötchen aufschneiden, mit dem Dip bestreichen und nach Geschmack mit den Pattys, den Gurkenstreifen und je ca. 1EL Apfel-Gurken-Salat belegen. Den restlichen Salat mit den Erdnüssen bestreuen und zu den Burgern, den Röstkartoffeln und ggf. übrigen Gurkenstreifen servieren. Ggf. übrigen Dip oder mehr Mayonnaise nach Geschmack dazu reichen.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/593690/photos/large/63577_6-e121d417d5aea01d446241994705dc9d.jpeg"
+    }
+  ],
+  "nutrition": {
+    "calories": "1143kcal",
+    "carbohydrateContent": "103.8g",
+    "fatContent": "68.0g",
+    "proteinContent": "27.8g"
+  },
+  "citation": [
+    "https://marleyspoon.com/media/pdf/recipe_cards/113813/R-113813_-_Glasierte_Veggie-Burger-CV.pdf"
+  ],
+  "publisher": {
+    "name": "Marley Spoon",
+    "url": "https://marleyspoon.de"
+  }
+}

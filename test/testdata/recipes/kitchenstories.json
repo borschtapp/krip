@@ -1,0 +1,113 @@
+{
+  "url": "https://www.kitchenstories.com/en/recipes/special-strawberry-jam-with-matcha",
+  "name": "Special strawberry jam with matcha",
+  "description": "This recipe gives homemade strawberry jam an exciting update: Matcha!",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://images.services.kitchenstories.io/gJdwau5yL9s2g_Hcie1LFsIFlkM=/512x384/images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg",
+  "image": [
+    {
+      "url": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
+  "author": {
+    "name": "Christian Ruß",
+    "jobTitle": "Test Kitchen Manager and Chef",
+    "description": "cook free or die",
+    "url": "http://instagram.com/deepfriedtiger",
+    "image": "https://images.kitchenstories.io/userImages/87dbd547-fa83-4022-ba46-1d200c5d5655_11d840a9.jpg"
+  },
+  "text": "Have you ever tried matcha? Matcha is ground green tea with an intense green color and a slightly tart flavor. I personally prefer jams to be a little less sweet, so I found matcha the perfect ingredient to give it an exciting upgrade without adding sweetness. The flavors of the subtle tea and the sweet fruit go very well together. If you have any matcha powder left over, you can sprinkle a little on top of your jam-slathered toast to enhance the flavor even more.",
+  "prepTime": 20,
+  "totalTime": 80,
+  "difficulty": "easy",
+  "suitableForDiet": [
+    "vegetarian",
+    "vegan",
+    "gluten free",
+    "pescetarian",
+    "lactose free",
+    "alcohol free",
+    "Meatless"
+  ],
+  "recipeCategory": [
+    "Jams \u0026 Marmalades",
+    "Breakfast",
+    "Brunch",
+    "Summer Recipes",
+    "Easter Recipes",
+    "Dessert"
+  ],
+  "recipeCuisine": [
+    "International"
+  ],
+  "keywords": [
+    "Brand Content",
+    "easter",
+    "valentines day",
+    "sweet",
+    "crowd pleaser",
+    "prepare ahead",
+    "comfort food",
+    "brunch",
+    "breakfast",
+    "mothers-day",
+    "sauces and dips",
+    "spring",
+    "summer"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1.75 lbs strawberries",
+    "1.5 cups jam sugar",
+    "1 tsp matcha powder",
+    "0.33 cup water"
+  ],
+  "recipeEquipment": [
+    "plate (small)",
+    "cutting board",
+    "knife",
+    "pot (large)",
+    "cooking spoon",
+    "bowl (small)",
+    "matcha whisk",
+    "4 glass jars"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Place a small plate in the freezer. Wash the strawberries and cut them into quarters. In a large pot, combine the jam sugar and strawberries, stirring until well combined. Let that sit for approx. 1 hr.",
+      "image": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-step-1.jpg"
+    },
+    {
+      "text": "In the meantime, mix the matcha powder with half of the water in a small bowl to make a paste. Gradually stir in the remaining water until everything is well mixed and dissolved. Set aside.",
+      "image": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-step-2.jpg"
+    },
+    {
+      "text": "After the strawberries have rested and there's some juice in the pot, set the pot over medium heat and bring to a simmer. Cook for approx. 5 min., then add the matcha to the pot and continue cooking for approx. 1 min.",
+      "image": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-step-3.jpg"
+    },
+    {
+      "text": "To test whether the jam will set up once it's cooled, place a small spoonful of the hot jam on the \r\n plate from the freezer and hold the plate at an angle. If the mass becomes solid after a short time and you can swipe your finger through the jam leaving an unconnected gap, the test is passed and the jam is ready; if not, continue cooking and repeating the test. Pour the still hot jam into sterilized preserving jars, seal, and let cool. Enjoy!",
+      "image": "https://images.kitchenstories.io/wagtailOriginalImages/R2630-photo-final-1.jpg"
+    }
+  ],
+  "nutrition": {
+    "calories": "359 cal",
+    "servingSize": "1 Servings",
+    "carbohydrateContent": "91 g",
+    "fatContent": "1 g",
+    "proteinContent": "2 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 2,
+    "ratingValue": 1,
+    "bestRating": 1
+  },
+  "commentCount": 11,
+  "publisher": {
+    "name": "Kitchen Stories",
+    "url": "https://www.kitchenstories.com",
+    "logo": "https://www.kitchenstories.com/images/ks-logo-2019.52cb693902fc25b0b22c9ee503355ec9.svg"
+  }
+}

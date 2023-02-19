@@ -1,0 +1,183 @@
+{
+  "id": 114391,
+  "name": "Köstliches Hähnchen mit Erdnusssauce",
+  "subtitle": "in einer Brokkoli-Nudelpfanne",
+  "name_with_subtitle": "Köstliches Hähnchen mit Erdnusssauce in einer Brokkoli-Nudelpfanne",
+  "classic": false,
+  "slug": "114391-koestliches-haehnchen-mit-erdnusssauce-in-einer-brokkoli-nudelpfanne",
+  "variant_id": 98146,
+  "country": "de",
+  "brand": "dn",
+  "description": "Hähnchen mit Erdnusssauce ist ein Klassiker auf den Menüs der Asia-Restaurants. Daran haben wir uns ein Beispiel genommen und das Gericht noch weiter verfeinert: Wir verzichten auf die Panade – die wird in der Sauce sowieso nur pappig – und ergänzen die Nudelpfanne stattdessen mit frischem Brokkoli und ein paar extra Erdnüssen für ganz viel Crunch auf dem Teller. Einfach köstlich – da ist die Pfanne ganz schnell leer …",
+  "meal_type": "meat",
+  "calories": 1043,
+  "difficulty": "easy",
+  "preparation_time": "time_level_4",
+  "product_type": "web",
+  "meal_attributes": [
+    "poultry",
+    "dairy_free"
+  ],
+  "nutrition": {
+    "calories": "1043kcal",
+    "carbs": "111.0g",
+    "proteins": "48.0g",
+    "fat": "45.3g"
+  },
+  "sku": "DE00098238",
+  "recipe_card_url": "https://marleyspoon.com/media/pdf/recipe_cards/114391/R-114391_-_K%C3%B6stliches_H%C3%A4hnchen_mit_Erdnusssauce-CV.pdf",
+  "image": {
+    "thumbnail": "https://marleyspoon.com/media/recipes/114391/main_photos/thumb/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
+    "small": "https://marleyspoon.com/media/recipes/114391/main_photos/small/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
+    "medium": "https://marleyspoon.com/media/recipes/114391/main_photos/medium/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
+    "large": "https://marleyspoon.com/media/recipes/114391/main_photos/large/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
+  },
+  "additional_allergens": [
+    "gluten"
+  ],
+  "steps": [
+    {
+      "position": 0,
+      "title": "Brokkoli zerteilen",
+      "description": "In einem mittelgroßen Topf ausreichend gesalzenes Wasser für die __Nudeln__ zum Kochen bringen. Den __Brokkoli__ in mundgerechte Röschen zerteilen.",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597183/photos/large/75337_1-d308869efc4d5c2ba586f3aa432fd9f0.jpeg"
+    },
+    {
+      "position": 1,
+      "title": "Fleisch braten",
+      "description": "Das __Fleisch__ mit etwas Küchenkrepp trocken tupfen, in ca. 2cm große Würfel schneiden und in einer großen Pfanne mit 1EL Pflanzenöl bei mittlerer bis starker Hitze 3–5Min. braten, bis es rundherum goldbraun ist. Mit je 1 Prise Salz und Pfeffer würzen und in der Pfanne lassen; ggf. bis zur Weiterverwendung vom Herd nehmen.",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597186/photos/large/75337_2-e37bd4eee26a5e798b1d1432a0cea28b.jpeg"
+    },
+    {
+      "position": 2,
+      "title": "Brokkoli \u0026 Nudeln kochen",
+      "description": "Den __Brokkoli__ im Nudelwasser 4–5Min. kochen, aus dem Wasser schöpfen und in einem Sieb mit kaltem Wasser abschrecken. Die __Nudeln__ in das kochende Wasser geben und in 3–5Min. bissfest kochen. In ein Sieb abgießen und kalt abschrecken.",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597188/photos/large/75337_3-10c8deda7238196117cf3f9c1c54b6f0.jpeg"
+    },
+    {
+      "position": 3,
+      "title": "Erdnusssauce zubereiten",
+      "description": "1 Knoblauchzehe schälen, grob schneiden und in ein hohes Gefäß geben. Mit __3/4 der Erdnüsse__, dem __Ketjap Manis__, der __1/2 des Brühgewürzes__, 1TL Mehl, 1EL Pflanzenöl und 1EL hellem Essig ca. 1Min. pürieren, dabei nach und nach 75ml Wasser hinzugeben, bis eine glatte __Sauce__ entsteht. ",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597191/photos/large/75337_4-fc5bd4005ed9dce93a14b9a2db151371.jpeg"
+    },
+    {
+      "position": 4,
+      "title": "Fertigstellen \u0026 servieren",
+      "description": "Die __Erdnusssauce__ zum __Fleisch__ in die Pfanne geben und bei niedriger bis mittlerer Hitze 2–3Min. köcheln lassen, bis die __Sauce__ eindickt. Ggf. mehr Wasser hinzufügen, um die gewünschte Konsistenz zu erhalten. Die __Nudeln__ und den __Brokkoli__ in die Pfanne geben und gründlich untermischen. Die __Nudelpfanne__ mit den __restlichen Erdnüssen__ garniert servieren.",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597192/photos/large/75337_5-2b1c5a23a835b4144b7c7baeeabaa291.jpeg"
+    },
+    {
+      "position": 5,
+      "title": "Scharfe Sauce? Sriracha!",
+      "description": "Die Erdnusssauce ist durch das Ketjap Manis insgesamt eher mild im Geschmack. Man kann das Gericht aber problemlos anschärfen, indem man ein bisschen Sriracha-Sauce darüberträufelt. Das typische Aroma dieser Sauce setzt sich aus Chilischoten, Essig und Knoblauch zusammen und wird mit etwas Zucker abgerundet. Wohl bekomm's!",
+      "photo": "https://marleyspoon.com/media/recipe_card_steps/597194/photos/large/75337_6-6132775c158633bcbe6992917d1dd2b6.jpeg"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "1 Päckchen Hühnerbrühgewürz",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/60997/photos/thumb/ING_spices_chickenbroth-35899262fa86736261bc9766404ef678.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/60997/photos/medium/ING_spices_chickenbroth-35899262fa86736261bc9766404ef678.jpg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 Päckchen Hühnerbrühgewürz"
+    },
+    {
+      "name": "25ml Ketjap Manis",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/60897/photos/thumb/ING_Sauces_Ketjap_Manis-714c38e5c8a0b257d12c41c8b29c0166.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/60897/photos/medium/ING_Sauces_Ketjap_Manis-714c38e5c8a0b257d12c41c8b29c0166.jpg"
+      },
+      "allergens": [
+        "soy"
+      ],
+      "name_with_quantity": "25ml Ketjap Manis"
+    },
+    {
+      "name": "50g Erdnüsse, geröstet \u0026 gesalzen",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/60912/photos/thumb/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/60912/photos/medium/ING_Nuts_Peanuts_Roasted-4796d758e7fce25d6070ff8b75630f6a.jpg"
+      },
+      "allergens": [
+        "peanuts"
+      ],
+      "name_with_quantity": "50g Erdnüsse, geröstet \u0026 gesalzen"
+    },
+    {
+      "name": "1 Packung Hähnchenschenkelfilet",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/61393/photos/thumb/chicken_thigh_boneless_scheria_200g_2x100g_kip_dijfilet_200g_2x100g-931633a1fb7df0e309851e6000202560.jpeg",
+        "medium": "https://marleyspoon.com/media/pantry_items/61393/photos/medium/chicken_thigh_boneless_scheria_200g_2x100g_kip_dijfilet_200g_2x100g-931633a1fb7df0e309851e6000202560.jpeg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 Packung Hähnchenschenkelfilet"
+    },
+    {
+      "name": "1 großer Brokkoli",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/1562/photos/thumb/ING_Veg_Broccoli-49bb88158a75b6c9495e615603ddef56.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/1562/photos/medium/ING_Veg_Broccoli-49bb88158a75b6c9495e615603ddef56.jpg"
+      },
+      "allergens": [],
+      "name_with_quantity": "1 großer Brokkoli"
+    },
+    {
+      "name": "250g breite Mie-Nudeln",
+      "image": {
+        "thumbnail": "https://marleyspoon.com/media/pantry_items/36224/photos/thumb/ING_Pasta_Mie_Noodles-cc9e39dcf656603e5a49eff0812349a4.jpg",
+        "medium": "https://marleyspoon.com/media/pantry_items/36224/photos/medium/ING_Pasta_Mie_Noodles-cc9e39dcf656603e5a49eff0812349a4.jpg"
+      },
+      "allergens": [
+        "gluten"
+      ],
+      "name_with_quantity": "250g breite Mie-Nudeln"
+    }
+  ],
+  "assumed_ingredients": [
+    {
+      "name": "1 Knoblauchzehe"
+    },
+    {
+      "name": "1TL Weizenmehl"
+    },
+    {
+      "name": "Salz und Pfeffer"
+    },
+    {
+      "name": "Pflanzenöl"
+    },
+    {
+      "name": "Essig"
+    }
+  ],
+  "assumed_cooking_utilities": [
+    {
+      "name": "mittelgroßer Topf"
+    },
+    {
+      "name": "große Pfanne"
+    },
+    {
+      "name": "Messbecher"
+    },
+    {
+      "name": "2 Siebe"
+    },
+    {
+      "name": "Stabmixer mit hohem Gefäß"
+    }
+  ],
+  "chef": {
+    "name": "Jessica",
+    "description": "Essen bringt die Menschen zusammen!",
+    "bio": "Mir geht immer das Herz auf, wenn ich sehe wie Leute bei einem Essen zusammenkommen. Das ist der Grund, warum ich es liebe, anderen etwas zum Thema Essen beizubringen oder sie zum Kochen inspirieren kann. Ich hoffe, dass auch die nächsten Generationen solche Traditionen beibehalten und nicht vergessen, dass Liebe durch den Magen geht und die Menschen verbindet.",
+    "image": {
+      "thumbnail": "https://marleyspoon.com/media/chefs/1204/avatars/thumb/avatar-88853286603cef84bb4e7ec8174f6471.png",
+      "medium": "https://marleyspoon.com/media/chefs/1204/avatars/medium/avatar-88853286603cef84bb4e7ec8174f6471.png"
+    },
+    "slug": "jessica"
+  },
+  "cooking_tip": null
+}

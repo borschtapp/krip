@@ -1,0 +1,65 @@
+{
+  "url": "https://www.countryliving.com/food-drinks/a32042602/roasted-mushroom-and-bacon-dutch-baby/",
+  "name": "Roasted Mushroom and Bacon Dutch Baby",
+  "description": "How to make a Roasted Mushroom and Bacon Dutch Baby. Serve a savory German pancake for brunch.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/roasted-mushroom-dutch-baby-1586049708.jpg?crop=0.666xw:1.00xh;0.150xw,0\u0026resize=100:*",
+  "image": [
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/roasted-mushroom-dutch-baby-1586049708.jpg",
+      "width": 2025,
+      "height": 2636
+    }
+  ],
+  "author": {
+    "name": "Erika Dugan"
+  },
+  "totalTime": 70,
+  "recipeCategory": [
+    "brunch",
+    "Mother's Day"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "American",
+    "Mother's Day",
+    "brunch"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1 lb. mixed mushrooms (such as cremini, beech, or shiitake), roughly chopped 4 slices bacon, sliced",
+    "3 large eggs",
+    "1 clove garlic, chopped",
+    "3/4 c. whole milk",
+    "3 tbsp. unsalted butter, melted, divided",
+    "1/2 c. all-purpose flour, spooned and leveled",
+    "2 tbsp. cornstarch",
+    "Kosher salt",
+    "1 tbsp. fresh thyme",
+    "2 oz. fontina or Cheddar cheese, grated (about 1/2 cup)",
+    "1 scallion, thinly sliced",
+    "2 tbsp. chopped flat-leaf parsley"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Set oven racks in middle and upper positions. Preheat oven to 450°F. Place mushrooms and bacon on a rimmed baking sheet. Place on top rack in oven while preheating, and roast, stirring once, until mushrooms are golden brown, 25 to 30 minutes. Place a 10-inch cast-iron skillet on middle rack and heat 15 minutes."
+    },
+    {
+      "text": "Place eggs and garlic in a blender. Process on high until frothy, 45 seconds. With blender running, gradually add milk and 2 tablespoons butter; stop blender. Add flour, cornstarch, and 1/4 teaspoon salt; process 1 minute. Fold in thyme."
+    },
+    {
+      "text": "Carefully add remaining tablespoon butter to heated skillet and swirl to coat. Immediately add batter. Bake until golden brown and puffed, 14 to 16 minutes. Sprinkle with cheese and bake until melted, 3 to 5 minutes."
+    },
+    {
+      "text": "Top with mushroom mixture, scallions, and parsley."
+    }
+  ],
+  "publisher": {
+    "name": "Country Living",
+    "url": "https://www.countryliving.com/",
+    "logo": "https://assets.hearstapps.com/sites/countryliving/assets/images/logos/logo-jsonld.71888df.png"
+  },
+  "datePublished": "2020-04-05T01:39:57.72321Z"
+}

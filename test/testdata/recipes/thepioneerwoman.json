@@ -1,0 +1,68 @@
+{
+  "url": "https://www.thepioneerwoman.com/food-cooking/recipes/a10720/patty-melts/",
+  "name": "Patty Melts",
+  "description": "Who doesn’t love a good old-fashioned patty melt? Here's the easiest way to make one at home that's beyond delicious.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/patty-melt-1597698088.jpg?crop=0.508xw:0.450xh;0.229xw,0.200xh\u0026resize=100:*",
+  "image": [
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/patty-melt-1597698088.jpg",
+      "width": 1800,
+      "height": 2032
+    }
+  ],
+  "author": {
+    "name": "Ree Drummond"
+  },
+  "prepTime": 10,
+  "cookTime": 25,
+  "totalTime": 35,
+  "recipeCategory": [
+    "main dish",
+    "meat"
+  ],
+  "keywords": [
+    "Recipes",
+    "Cooking",
+    "Food"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1 stick butter",
+    "1 whole large onion, halved and sliced",
+    "1 1/2 lb. ground beef",
+    "salt and pepper, to taste",
+    "5 dashes Worcestershire sauce",
+    "8 slices Swiss cheese",
+    "8 slices rye bread"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "In a medium skillet, melt 2 tablespoons of butter over medium-low heat. Throw in the sliced onions and cook slowly for 20 to 25 minutes, stirring occasionally, until the onions are golden brown and soft."
+    },
+    {
+      "text": "In a medium bowl, mix together the ground beef, salt \u0026 pepper, and Worcestershire. Form into 4 patties."
+    },
+    {
+      "text": "Melt 2 tablespoons butter in a separate skillet over medium heat. Cook the patties on both sides until totally done in the middle."
+    },
+    {
+      "text": "Assemble patty melts this way: Slice of bread, slice of cheese, hamburger patty, 1/4 of the cooked onions, another slice of cheese, and another slice of bread. On a clean griddle or in a skillet, melt 2 tablespoons butter and grill the sandwiches over medium heat until golden brown. Remove the sandwiches and add the remaining 2 tablespoons of butter to the skillet. Turn the sandwiches to the skillet, flipping them to the other side. Cook until golden brown and crisp, and until cheese is melted."
+    },
+    {
+      "text": "Slice in half and serve immediately!"
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 4,
+    "ratingValue": 5,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "publisher": {
+    "name": "The Pioneer Woman",
+    "url": "https://www.thepioneerwoman.com/",
+    "logo": "https://assets.hearstapps.com/sites/thepioneerwoman/assets/images/logos/logo-jsonld.f682059.png"
+  },
+  "datePublished": "2012-08-06T13:28:02Z"
+}

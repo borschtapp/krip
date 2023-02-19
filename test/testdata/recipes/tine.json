@@ -1,0 +1,79 @@
+{
+  "url": "https://www.tine.no/oppskrifter/middag-og-hovedretter/kylling-og-fjarkre/rask-kylling-tikka-masala",
+  "name": "Rask kylling tikka masala",
+  "description": "En god og rask oppskrift på en kylling tikka masala. Dette er en rett med små smakseksplosjoner som sender tankene til India.",
+  "inLanguage": "nb_NO",
+  "thumbnailUrl": "https://www.tine.no/_/recipeimage/w_1280%2Ch_720%2Cc_fill%2Cx_764%2Cy_430%2Cg_xy_center/recipeimage/yshftxnhdmojzhelrupo.png",
+  "image": [
+    {
+      "url": "https://www.tine.no/_/recipeimage/w_1080,h_1080,c_fill,x_764,y_430,g_xy_center/recipeimage/yshftxnhdmojzhelrupo.png"
+    },
+    {
+      "url": "https://www.tine.no/_/recipeimage/w_1440,h_1080,c_fill,x_764,y_430,g_xy_center/recipeimage/yshftxnhdmojzhelrupo.png"
+    },
+    {
+      "url": "https://www.tine.no/_/recipeimage/w_1600,h_900,c_fill,x_764,y_430,g_xy_center/recipeimage/yshftxnhdmojzhelrupo.png"
+    }
+  ],
+  "totalTime": 30,
+  "recipeCategory": [
+    "middag"
+  ],
+  "recipeCuisine": [
+    "indisk"
+  ],
+  "keywords": [
+    "kylling"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "4 dl basmatiris",
+    "400 g kyllingfileter",
+    "1 ss TINE® Meierismør til steking",
+    "1 stk paprika",
+    "0.5 dl chili",
+    "3 stk vårløk",
+    "1 ts hvitløksfedd",
+    "1 ss hakket, frisk ingefær",
+    "0.5 dl hakket, frisk koriander",
+    "2 ts garam masala",
+    "3 dl TINE® Lett Crème Fraîche 18 %",
+    "3 ss tomatpuré",
+    "0.5 ts salt",
+    "0.25 ts pepper",
+    "0.5 dl slangeagurk",
+    "3 dl TINE Yoghurt Naturell 3% fett",
+    "0.5 dl frisk mynte",
+    "1 ts hvitløksfedd",
+    "0.5 ts salt",
+    "0.25 ts pepper"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Oppskrift"
+    },
+    {
+      "name": "Tikka masala:"
+    },
+    {
+      "name": "Raita:"
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 400,
+    "ratingValue": 3.9
+  },
+  "commentCount": 35,
+  "video": {
+    "name": "Rask kylling tikka masala",
+    "description": "Hvordan lage den indiske gryten tikka masala? I denne filmen har vi gjort det enkelt for deg.",
+    "embedUrl": "https://www.youtube.com/watch?v=hOgxD4CVRGU",
+    "thumbnailUrl": "https://www.tine.no/_/recipeimage/w_1200,h_675,c_fill,x_764,y_430,g_xy_center/recipeimage/yshftxnhdmojzhelrupo.png"
+  },
+  "publisher": {
+    "name": "TINE",
+    "url": "https://www.tine.no"
+  },
+  "dateModified": "2020-01-06T15:09:44.82Z",
+  "datePublished": "2018-09-05T18:43:37.088Z"
+}

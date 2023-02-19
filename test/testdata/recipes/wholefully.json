@@ -1,0 +1,87 @@
+{
+  "url": "https://wholefully.com/blue-cornbread/",
+  "name": "Blue Cornbread",
+  "description": "Blue cornmeal is sweeter and has a better nutritional profile than its yellow and white cousins. Try out blue cornmeal in this moist and tender blue cornbread! Adapted from Daily Garnish.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://wholefully.com/wp-content/uploads/2014/09/IMG_9301.jpg",
+  "image": [
+    {
+      "url": "https://wholefully.com/wp-content/uploads/2017/06/IMG_9301-150x150.jpg"
+    }
+  ],
+  "author": {
+    "name": "Cassie Johnston"
+  },
+  "prepTime": 10,
+  "cookTime": 20,
+  "totalTime": 30,
+  "suitableForDiet": [
+    "VegetarianDiet"
+  ],
+  "recipeCategory": [
+    "Breads"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "blue cornbread",
+    "what to do with blue corn meal",
+    "how to make blue cornbread",
+    "homemade blue cornbread",
+    "homemade cornbread",
+    "how to make cornbread",
+    "vegetarian cornbread recipe"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "1 cup finely ground blue cornmeal",
+    "3/4 cup all-purpose flour",
+    "1/2 teaspoon baking soda",
+    "1/2 teaspoon salt",
+    "1 cup plain Greek yogurt",
+    "2 eggs",
+    "1/4 cup melted butter",
+    "1/4 cup milk",
+    "2 cups frozen corn kernels"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Preheat oven to 375°. In a medium mixing...",
+      "text": "Preheat oven to 375°. In a medium mixing bowl, whisk together the cornmeal, flour, baking soda and salt, set aside.",
+      "url": "https://wholefully.com/blue-cornbread/#mv_create_84_1"
+    },
+    {
+      "name": "In a small bowl, whisk together the yogurt,...",
+      "text": "In a small bowl, whisk together the yogurt, eggs, butter, and milk. Pour into the cornmeal mixture and stir until just combined—do not overmix. Fold in the corn kernels.",
+      "url": "https://wholefully.com/blue-cornbread/#mv_create_84_2"
+    },
+    {
+      "name": "Pour the batter into a well-seasoned cast iron...",
+      "text": "Pour the batter into a well-seasoned cast iron skillet or a square baking dish. Bake in preheated oven for 15-20 minutes or until the top is golden brown, and a toothpick inserted in the center comes out clean.",
+      "url": "https://wholefully.com/blue-cornbread/#mv_create_84_3"
+    }
+  ],
+  "nutrition": {
+    "calories": "223 calories",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "30 grams carbohydrates",
+    "cholesterolContent": "64 milligrams cholesterol",
+    "fatContent": "8 grams fat",
+    "fiberContent": "2 grams fiber",
+    "proteinContent": "9 grams protein",
+    "saturatedFatContent": "4 grams saturated fat",
+    "sodiumContent": "294 grams sodium",
+    "sugarContent": "3 grams sugar",
+    "transFatContent": "0 grams trans fat",
+    "unsaturatedFatContent": "3 grams unsaturated fat"
+  },
+  "aggregateRating": {
+    "reviewCount": 26,
+    "ratingValue": 4.3
+  },
+  "publisher": {
+    "name": "Wholefully",
+    "url": "https://wholefully.com"
+  }
+}

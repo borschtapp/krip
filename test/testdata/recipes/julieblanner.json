@@ -1,0 +1,86 @@
+{
+  "url": "https://julieblanner.com/basil-lemon-pasta/",
+  "name": "Lemon Basil Pasta",
+  "description": "Light and refreshing Lemon Basil Pasta made with staple ingredients and topped with fresh strips of basil for amazing flavor.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://julieblanner.com/wp-content/uploads/2016/04/lemon-pasta.jpg",
+  "image": [
+    {
+      "url": "https://julieblanner.com/wp-content/uploads/2016/04/basil-lemon-sauce-e1606760377870.jpg"
+    },
+    {
+      "url": "https://julieblanner.com/wp-content/uploads/2016/04/basil-lemon-sauce-e1606760377870-500x500.jpg"
+    },
+    {
+      "url": "https://julieblanner.com/wp-content/uploads/2016/04/basil-lemon-sauce-e1606760377870-500x375.jpg"
+    },
+    {
+      "url": "https://julieblanner.com/wp-content/uploads/2016/04/basil-lemon-sauce-e1606760377870-480x270.jpg"
+    }
+  ],
+  "prepTime": 5,
+  "cookTime": 10,
+  "recipeCategory": [
+    "Entree"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "Lemon Basil",
+    "Lemon Basil Pasta"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "3 tablespoons butter",
+    "1 teaspoon garlic",
+    "½ cup lemon juice",
+    "½ cup white wine",
+    "basil (fresh, sliced thin)",
+    "parmesan (freshly grated)",
+    "1 pound pasta"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Bring a pot of salty water to a boil. Prepare noodles al dente.",
+      "url": "https://julieblanner.com/basil-lemon-pasta/#wprm-recipe-57575-step-0-0"
+    },
+    {
+      "text": "In a medium saucepan over medium heat, melt butter and add garlic. Reduce to medium low heat.",
+      "url": "https://julieblanner.com/basil-lemon-pasta/#wprm-recipe-57575-step-0-1"
+    },
+    {
+      "text": "Add lemon juice and cooking wine, stir until warm.",
+      "url": "https://julieblanner.com/basil-lemon-pasta/#wprm-recipe-57575-step-0-2"
+    },
+    {
+      "text": "Toss with drained pasta.",
+      "url": "https://julieblanner.com/basil-lemon-pasta/#wprm-recipe-57575-step-0-3"
+    },
+    {
+      "text": "Top with parmesan and basil.",
+      "url": "https://julieblanner.com/basil-lemon-pasta/#wprm-recipe-57575-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "352 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "59 g",
+    "cholesterolContent": "15 mg",
+    "fatContent": "7 g",
+    "fiberContent": "2 g",
+    "proteinContent": "10 g",
+    "saturatedFatContent": "4 g",
+    "sodiumContent": "56 mg",
+    "sugarContent": "3 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 17,
+    "ratingValue": 4.95
+  },
+  "publisher": {
+    "name": "Julie Blanner",
+    "url": "https://julieblanner.com"
+  },
+  "datePublished": "2020-04-16T08:21:00Z"
+}

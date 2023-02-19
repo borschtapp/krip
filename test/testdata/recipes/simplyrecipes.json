@@ -1,0 +1,119 @@
+{
+  "url": "https://www.simplyrecipes.com/recipes/one_pot_chicken_and_rice_soup/",
+  "name": "One-Pot Chicken and Rice Soup",
+  "description": "One-Pot Chicken and Rice Soup! Throw bone-in chicken, rice, and vegetables together in a pot and simmer until they're done. It's the easiest soup ever, ready in under an hour.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://www.simplyrecipes.com/thmb/Uny40Q_8ypYmJtF7G7dal7-3qDQ=/2000x1333/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+  "image": [
+    {
+      "url": "https://www.simplyrecipes.com/thmb/SnRhWn7gy6-JXTF6UIEWSzaqG40=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+      "width": 2000,
+      "height": 1125
+    },
+    {
+      "url": "https://www.simplyrecipes.com/thmb/5XUn1ycNHcTAbCk3QY85GL0kkXE=/1777x1333/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+      "width": 1777,
+      "height": 1333
+    },
+    {
+      "url": "https://www.simplyrecipes.com/thmb/rMTPadQOWL-eu59WVqGf9d8quYU=/1333x1333/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+      "width": 1333,
+      "height": 1333
+    }
+  ],
+  "author": {
+    "name": "Aaron Hutcherson",
+    "description": "Aaron has over 10 years recipe development experience for his blog The Hungry Hutch. He has written for NYTimes, Washington Post, Simply Recipes, and others.",
+    "url": "https://www.simplyrecipes.com/aaron-hutcherson-5091796"
+  },
+  "prepTime": 15,
+  "cookTime": 30,
+  "totalTime": 45,
+  "recipeCategory": [
+    "Dinner",
+    "Soup",
+    "1-Pot",
+    "Comfort Food",
+    "Freezer-friendly",
+    "Make-ahead",
+    "Quick and Easy"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "1-Pot",
+    "Comfort Food",
+    "Freezer-friendly",
+    "Make-ahead",
+    "Quick and Easy",
+    "American",
+    "Gluten-Free",
+    "Dinner",
+    "Soup",
+    "Favorite Fall",
+    "Favorite Winter"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "2 bone-in chicken breasts, skin removed (1 to 1 1/2 pounds)",
+    "1 cup long-grain white rice, like basmati",
+    "2 celery ribs, diced small",
+    "2 medium carrots, peeled and diced small",
+    "1 onion, diced small",
+    "2 cloves garlic, peeled but left whole",
+    "1 teaspoon salt, plus more to taste (see Recipe Note)",
+    "1/2 teaspoon ground black pepper",
+    "2 quarts unsalted or low-sodium chicken stock",
+    "Juice of 1/2 lemon (about 3 tablespoons)",
+    "Chopped fresh parsley, for serving"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Assemble the soup and bring to a simmer: Combine the chicken, white rice, celery, carrots, onions, garlic, salt, and pepper in a large pot. Add the chicken stock and bring to a boil over high heat. Once the soup is boiling, reduce the heat to keep the soup at a gentle simmer.",
+      "image": "https://www.simplyrecipes.com/thmb/rcxx83jXbzVTEyMkDWgFNF4GIww=/1200x800/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-1-86e37cc9e3524fea8665017f761e7ac1.jpg"
+    },
+    {
+      "text": "Simmer for about 25 minutes: As the soup simmers, skim off any foam that collects on the surface with a spoon. Continue to simmer until the rice and vegetables are tender, about 25 minutes. Remove the soup from heat."
+    },
+    {
+      "text": "Shred the chicken and make the garlic paste: Remove the chicken and garlic cloves using a slotted spoon or tongs. Transfer the chicken breasts to a bowl and shred with two forks. Discard the bones. Return the shredded chicken to the pot. Smash the garlic cloves into a paste against a cutting board using a fork or the flat of your knife. Stir the paste back into the soup.",
+      "image": "https://www.simplyrecipes.com/thmb/C4CcW_vhpwe6J_u56o84t7S38mM=/1200x800/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-2-ddc4c5f815d242f6809289bcfa4fac37.jpg"
+    },
+    {
+      "text": "Season and serve: Stir the lemon juice into to the soup, and taste. The soup should taste rich, barely salty, and with just a hint of lemon. Add more salt or lemon juice as needed until it tastes good to you. Divide among bowls and sprinkle with some parsley for serving. Leftovers will keep for about a week refrigerated, or up to 3 months frozen. Links: Chicken Noodle Soup here on Simply Recipes, also great for when you are under the weather!"
+    }
+  ],
+  "nutrition": {
+    "calories": "160 kcal",
+    "servingSize": "6 to 8 servings (makes about 3 quarts)",
+    "carbohydrateContent": "10 g",
+    "cholesterolContent": "62 mg",
+    "fatContent": "2 g",
+    "fiberContent": "1 g",
+    "proteinContent": "23 g",
+    "saturatedFatContent": "1 g",
+    "sodiumContent": "878 mg",
+    "sugarContent": "2 g",
+    "unsaturatedFatContent": "0 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 7,
+    "ratingValue": 4.7
+  },
+  "video": {
+    "name": "One-Pot Chicken and Rice Soup",
+    "description": "One-Pot Chicken and Rice Soup! Throw bone-in chicken, rice, and vegetables together in a pot and simmer until they're done. It's the easiest soup ever, ready in under an hour.",
+    "duration": "PT1M",
+    "contentUrl": "https://cdn.jwplayer.com/videos/28e6KvWZ-tXzwfO7V.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/28e6KvWZ/poster.jpg?width=720",
+    "uploadDate": "2021-01-20T22:29:29.631Z"
+  },
+  "publisher": {
+    "name": "Simply Recipes",
+    "url": "https://www.simplyrecipes.com",
+    "logo": "https://www.simplyrecipes.com/thmb/QvixEwCD02s_lnkgkVb6mHwKS7c=/1125x320/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesLogoTransparent-07a297c54b2142ae9c079abb2f0fa639.png"
+  },
+  "dateModified": "2022-02-10T22:23:06.339-05:00",
+  "datePublished": "2017-10-23T05:00:31-04:00"
+}

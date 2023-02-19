@@ -1,0 +1,111 @@
+{
+  "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/",
+  "name": "Almond Flour Peanut Butter Cookies",
+  "description": "These peanut butter cookies are sugar free, gluten free, and keto - all while baking up soft and chewy and sweet!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://thatlowcarblife.com/wp-content/uploads/2021/11/thumb-3.jpg",
+  "image": [
+    {
+      "url": "https://thatlowcarblife.com/wp-content/uploads/2021/11/sugar-free-peanut-butter-cookies-720x405.jpg"
+    },
+    {
+      "url": "https://thatlowcarblife.com/wp-content/uploads/2021/11/sugar-free-peanut-butter-cookies-720x540.jpg"
+    },
+    {
+      "url": "https://thatlowcarblife.com/wp-content/uploads/2021/11/sugar-free-peanut-butter-cookies-720x720.jpg"
+    },
+    {
+      "url": "https://thatlowcarblife.com/wp-content/uploads/2021/11/sugar-free-peanut-butter-cookies-540x720.jpg"
+    },
+    {
+      "url": "https://thatlowcarblife.com/wp-content/uploads/2021/11/sugar-free-peanut-butter-cookies-735x1101.jpg"
+    }
+  ],
+  "author": {
+    "name": "Karly Campbell"
+  },
+  "prepTime": 10,
+  "cookTime": 9,
+  "totalTime": 19,
+  "suitableForDiet": [
+    "GlutenFreeDiet"
+  ],
+  "recipeCategory": [
+    "Cookies and Bars"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "keto peanut butter cookies",
+    "almond flour peanut butter cookies",
+    "gluten free peanut butter cookies"
+  ],
+  "recipeYield": 18,
+  "recipeIngredient": [
+    "1 cup creamy no sugar added peanut butter",
+    "1 cup brown sugar replacement",
+    "1 large egg",
+    "1 teaspoon vanilla",
+    "⅓ cup finely ground almond flour",
+    "1 teaspoon baking soda"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 350 degrees.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_1"
+    },
+    {
+      "name": "Add the peanut butter, brown sugar, egg, and...",
+      "text": "Add the peanut butter, brown sugar, egg, and vanilla to a mixing bowl and beat with an electric mixer until well combined.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_2"
+    },
+    {
+      "name": "Add the almond flour and baking soda and...",
+      "text": "Add the almond flour and baking soda and mix well.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_3"
+    },
+    {
+      "name": "Use a medium cookie scoop to scoop out...",
+      "text": "Use a medium cookie scoop to scoop out 18 balls of dough onto a parchment lined baking sheet.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_4"
+    },
+    {
+      "name": "Use a fork to make a crisscross pattern...",
+      "text": "Use a fork to make a crisscross pattern in each ball of dough.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_5"
+    },
+    {
+      "name": "Bake for 8-9 minutes or until the cookies...",
+      "text": "Bake for 8-9 minutes or until the cookies are set on the edges. Do not overbake.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_6"
+    },
+    {
+      "name": "Allow cookies to cool on the baking sheet...",
+      "text": "Allow cookies to cool on the baking sheet for 10 minutes before transferring to a cooling rack.",
+      "url": "https://thatlowcarblife.com/almond-flour-peanut-butter-cookies/#mv_create_370_7"
+    }
+  ],
+  "nutrition": {
+    "calories": "106 calories",
+    "servingSize": "1 cookie",
+    "carbohydrateContent": "3 grams carbohydrates",
+    "cholesterolContent": "10 milligrams cholesterol",
+    "fatContent": "9 grams fat",
+    "fiberContent": "1 grams fiber",
+    "proteinContent": "4 grams protein",
+    "saturatedFatContent": "1 grams saturated fat",
+    "sodiumContent": "129 milligrams sodium",
+    "sugarContent": "1 grams sugar",
+    "transFatContent": "0 grams trans fat",
+    "unsaturatedFatContent": "7 grams unsaturated fat"
+  },
+  "aggregateRating": {
+    "reviewCount": 10,
+    "ratingValue": 4.7
+  },
+  "publisher": {
+    "name": "That Low Carb Life",
+    "url": "https://thatlowcarblife.com"
+  }
+}

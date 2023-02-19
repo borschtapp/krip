@@ -1,0 +1,91 @@
+{
+  "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/",
+  "name": "Sweet and Smoky Shredded Brussels Sprout Slaw",
+  "description": "This shredded Brussels sprouts salad will have your mouth bursting with flavor. The smoked almonds and salty bacon with the combination of sweet dates, is perfection.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-4.jpg",
+  "image": [
+    {
+      "url": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-5jpg-225x225.jpg"
+    },
+    {
+      "url": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-5jpg-260x195.jpg"
+    },
+    {
+      "url": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-5jpg-320x180.jpg"
+    },
+    {
+      "url": "https://therealfooddietitians.com/wp-content/uploads/2018/04/Sweet-_-Smoky-Brussels-Slaw-5jpg.jpg"
+    }
+  ],
+  "author": {
+    "name": "Jessica Beacom",
+    "url": "https://therealfooddietitians.com/about/"
+  },
+  "prepTime": 20,
+  "totalTime": 20,
+  "recipeCategory": [
+    "Whole30"
+  ],
+  "keywords": [
+    "Shredded Brussels Sprouts"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "1 1/4-1/2 lb. Brussels sprouts, ends trimmed and shredded, about 8 cups (may use pre-shredded, about 2 – 9 oz. bags)",
+    "1 medium shallot, thinly sliced (about ¼ cup; may substitute red onion)",
+    "6 thin strips bacon or 4 thick, crisp-cooked and chopped",
+    "⅓ cup Deglet Noor Dates",
+    "⅓ cup smoked or salted almonds, chopped (for Whole30, use dry roasted almonds)",
+    "1 medium lemon, zested and juiced",
+    "½ small orange, juiced",
+    "1 Deglet Noor Date",
+    "1 garlic clove, peeled",
+    "½ cup avocado oil or olive oil",
+    "½ teaspoon salt",
+    "½ teaspoon dried thyme (or 1 teaspoon fresh thyme)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "To make the dressing, combine all ingredients (lemon juice through thyme) in a small food processor or small blender container. Blend until emulsified and smooth. Set aside or refrigerate until ready to use.",
+      "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/#instruction-step-1"
+    },
+    {
+      "text": "Place shredded Brussels sprouts in a large bowl.",
+      "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/#instruction-step-2"
+    },
+    {
+      "text": "Add shallots, bacon and chopped dates. Toss to combine, using your fingers to separate the dates if they’ve clumped together.",
+      "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/#instruction-step-3"
+    },
+    {
+      "text": "Pour dressing over salad and toss.",
+      "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/#instruction-step-4"
+    },
+    {
+      "text": "Add almonds just before serving and toss well to combine.",
+      "url": "https://therealfooddietitians.com/sweet-and-smoky-brussels-slaw/#instruction-step-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "185 calories",
+    "servingSize": "1/10th recipe (~3/4 cup)",
+    "carbohydrateContent": "11g",
+    "fatContent": "15g",
+    "fiberContent": "3g",
+    "proteinContent": "4g",
+    "saturatedFatContent": "2g",
+    "sodiumContent": "236mg",
+    "sugarContent": "7g"
+  },
+  "video": {
+    "name": "Sweet and Smoky Brussels Slaw",
+    "description": "Change things up this week with this irresistible Sweet and Smoky Brussels Slaw! A Whole30, paleo, gluten-free, dairy-free salad option.",
+    "contentUrl": "https://content.jwplatform.com/videos/6iw7vmhg.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/6iw7vmhg-720.jpg"
+  },
+  "publisher": {
+    "name": "The Real Food Dietitians",
+    "url": "https://therealfooddietitians.com"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "url": "https://www.knorr.com/de/rezepte/gegrillter-halloumi-mit-spargel-und-couscous.html",
+  "name": "Gegrillter Halloumi mit Spargel und Couscous",
+  "description": "Schmeckt nach Urlaub: Mit unserem Rezept für gegrillter Halloumi mit Spargel und Couscous wird’s farbenfroh und köstlich auf dem Teller.",
+  "inLanguage": "de",
+  "image": [
+    {
+      "url": "https://scm-assets.constant.co/scm/unilever/e9dc924f238fa6cc29465942875fe8f0/15deb78e-e3f3-4d91-ae1e-bc41fc59d5ea.jpg",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "prepTime": 20,
+  "cookTime": 10,
+  "totalTime": 30,
+  "cookingMethod": "Grillen",
+  "suitableForDiet": [
+    "vegetarian"
+  ],
+  "recipeCuisine": [
+    "Deutsch"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "500 g grüner Spargel",
+    "1/2 Bund glatte Petersilie",
+    "2 Frühlingszwiebeln",
+    "250 g Cherrytomaten",
+    "250 g Halloumi (Grillkäse)",
+    "1 Zitrone",
+    "200 g Couscous",
+    "3 EL Oliven- oder Pflanzenöl",
+    "Pfeffer",
+    "1 Packung KNORR Sauce Hollandaise flüssig",
+    "Jodsalz"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Spargelstangen am unteren Drittel schälen und die Enden abschneiden. Petersilie klein hacken. Frühlingszwiebeln putzen und in Ringe schneiden. Tomaten vierteln. Halloumi-Käse in 4 Stücke schneiden. Zitrone auspressen."
+    },
+    {
+      "text": "Couscous nach Packungsangabe zubereiten. Etwas abkühlen lassen und 2 EL Öl darunter mischen."
+    },
+    {
+      "text": "Spargelstangen mit dem restlichen Öl bestreichen. Den Grill aufheizen oder eine Bratpfanne verwenden. Spargel ca. 5 Minuten grillen bzw. braten, gelegentlich wenden. Halloumi mit zum Grill geben und unter Wenden den Käse und den Spargel goldbraun grillen. Mit Pfeffer würzen."
+    },
+    {
+      "text": "Inzwischen Knorr Sauce Hollandaise erwärmen. 1 TL Zitronensaft unterrühren. Petersilie, Frühlingszwiebeln und den restlichen Zitronensaft zum Couscous geben und untermischen. Mit Pfeffer und evtl. Salz abschmecken. Tomaten zum Schluss unterheben. Gegrillten Halloumi mit Spargel, Sauce Hollandaise und Couscous-Salat servieren."
+    }
+  ],
+  "nutrition": {
+    "servingSize": "für 4 Portionen"
+  },
+  "publisher": {
+    "name": "knorr",
+    "url": "https://www.knorr.com"
+  }
+}

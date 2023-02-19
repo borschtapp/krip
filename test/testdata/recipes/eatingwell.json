@@ -1,0 +1,79 @@
+{
+  "url": "https://www.eatingwell.com/recipe/7919044/cheesy-ground-beef-cauliflower-casserole/",
+  "name": "Cheesy Ground Beef \u0026 Cauliflower Casserole",
+  "description": "Ground beef and cauliflower combine to create a hearty weeknight casserole that both kids and adults will love. Serve with tortilla chips and sour cream.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?q=60\u0026c=sc\u0026rect=0%2C102%2C2000%2C1102\u0026poi=%5B1160%2C700%5D\u0026w=2000\u0026h=1000\u0026url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F16%2Fcheesy-ground-beef-and-cauliflower-casserole.jpg",
+  "image": [
+    {
+      "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F16%2Fcheesy-ground-beef-and-cauliflower-casserole.jpg",
+      "width": 2000,
+      "height": 2000
+    }
+  ],
+  "author": {
+    "name": "Carolyn Casner"
+  },
+  "totalTime": 30,
+  "recipeCategory": [
+    "Healthy Casserole Recipes"
+  ],
+  "recipeIngredient": [
+    "1 tablespoon extra-virgin olive oil",
+    "½ cup chopped onion",
+    "1 medium green bell pepper, chopped",
+    "1 pound lean ground beef",
+    "3 cups bite-size cauliflower florets",
+    "3 cloves garlic, minced",
+    "2 tablespoons chili powder",
+    "2 teaspoons ground cumin",
+    "1 teaspoon dried oregano",
+    "½ teaspoon salt",
+    "¼ teaspoon ground chipotle",
+    "1 (15 ounce) can no-salt-added petite-diced tomatoes",
+    "2 cups shredded extra-sharp Cheddar cheese",
+    "⅓ cup sliced pickled jalapeños"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Position rack in upper third of oven. Preheat broiler to high."
+    },
+    {
+      "text": "Heat oil in a large oven-safe skillet over medium heat. Add onion and bell pepper; cook, stirring, until softened, about 5 minutes. Add beef and cauliflower; cook, stirring and breaking the beef up into smaller pieces, until it is no longer pink, 5 to 7 minutes. Stir in garlic, chili powder, cumin, oregano, salt and chipotle; cook until fragrant, about 1 minute. Add tomatoes and their juices; bring to a simmer and cook, stirring occasionally, until liquid is reduced and the cauliflower is tender, about 3 minutes more. Remove from heat."
+    },
+    {
+      "text": "Sprinkle cheese over the beef mixture and top with sliced jalapeños. Broil until the cheese is melted and browned in spots, 2 to 3 minutes."
+    }
+  ],
+  "nutrition": {
+    "calories": "351 calories",
+    "carbohydrateContent": "11 g",
+    "cholesterolContent": "86 mg",
+    "fatContent": "23 g",
+    "fiberContent": "3 g",
+    "proteinContent": "26 g",
+    "saturatedFatContent": "11 g",
+    "sodiumContent": "672 mg",
+    "sugarContent": "4 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 13,
+    "ratingCount": 13,
+    "ratingValue": 4.23,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "video": {
+    "name": "Cheesy Ground Beef \u0026 Cauliflower Casserole Recipe",
+    "description": "Searching for new casserole recipes? In this video, learn how to make cheesy casserole with ground beef and cauliflower for a gluten-free dish that everyone will love. Serve as a hearty dinner for your family, or prepare a larger serving for guests!",
+    "duration": "PT1M53.813S",
+    "embedUrl": "https://players.brightcove.net/5118192885001/default_default/index.html?videoId=6307528357112",
+    "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcf-images.us-east-1.prod.boltdns.net%2Fv1%2Fstatic%2F5118192885001%2Fa77e5407-0f3d-42b2-9aa0-7e0b13c61f5e%2F77d7ea97-b2db-49c9-839d-b6d919deace2%2F1280x720%2Fmatch%2Fimage.jpg",
+    "uploadDate": "2022-06-09T15:37:45.522Z"
+  },
+  "publisher": {
+    "name": "EatingWell",
+    "url": "https://www.eatingwell.com"
+  },
+  "datePublished": "2021-09-23T18:20:24Z"
+}

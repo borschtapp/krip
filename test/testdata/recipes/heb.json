@@ -1,0 +1,62 @@
+{
+  "url": "https://www.heb.com/recipe/recipe-item/truffled-spaghetti-squash/1398755977632",
+  "name": "Truffled Spaghetti Squash",
+  "description": "Preheat oven to 400˚F. Cut spaghetti squash in half from top to bottom (lengthwise).,Place the spaghetti squash halves, cut side down onto a sheet pan. Roast for 30-45 minutes or until a knife can pierce the outside of skin easily, like a baked potato.,Once Squash is fully cooked and soft remove it from oven and let it cool for 10 minutes before scooping out meat of squash. In a serving bowl scoop or with a fork scrape out squash and add truffle salt, butter and truffle oil.,Toss all ingredients together until butter is fully melted. Season to taste if needed and serve warm.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://images.heb.com/is/image/HEBGrocery/rcp-small/truffled-spaghetti-squash-recipe.jpg",
+  "image": [
+    {
+      "url": "https://images.heb.com/is/image/HEBGrocery/recipe-hm-large/truffled-spaghetti-squash-recipe.jpg"
+    }
+  ],
+  "author": {
+    "name": "H-E-B"
+  },
+  "prepTime": 20,
+  "cookTime": 40,
+  "totalTime": 60,
+  "recipeCategory": [
+    "Side Dish"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "1 large spaghetti squash",
+    "1 Tsp Sabatino Truffle salt",
+    "4 Tbsp unsalted butter",
+    "1 Tbsp Rustico Truffle Oil"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 400˚F. Cut spaghetti squash in half from top to bottom (lengthwise)."
+    },
+    {
+      "text": "Place the spaghetti squash halves, cut side down onto a sheet pan. Roast for 30-45 minutes or until a knife can pierce the outside of skin easily, like a baked potato."
+    },
+    {
+      "text": "Once Squash is fully cooked and soft remove it from oven and let it cool for 10 minutes before scooping out meat of squash. In a serving bowl scoop or with a fork scrape out squash and add truffle salt, butter and truffle oil."
+    },
+    {
+      "text": "Toss all ingredients together until butter is fully melted. Season to taste if needed and serve warm."
+    }
+  ],
+  "nutrition": {
+    "calories": "100",
+    "carbohydrateContent": "8",
+    "cholesterolContent": "15",
+    "fatContent": "8",
+    "fiberContent": "2",
+    "proteinContent": "1",
+    "saturatedFatContent": "4",
+    "sodiumContent": "100",
+    "sugarContent": "3",
+    "transFatContent": "0.0"
+  },
+  "aggregateRating": {
+    "reviewCount": 8,
+    "ratingValue": 4.8
+  },
+  "publisher": {
+    "name": "H-E-B | No Store Does More",
+    "url": "https://www.heb.com"
+  }
+}

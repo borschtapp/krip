@@ -1,0 +1,90 @@
+{
+  "url": "https://www.delish.com/cooking/recipe-ideas/recipes/a56732/pumpkin-cheesecake-roll-recipe/",
+  "name": "Pumpkin Cheesecake Roll",
+  "description": "Master the art of the Pumpkin Roll with this easy recipe.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg?crop=0.668xw:1.00xh;0.282xw,0\u0026resize=100:*",
+  "image": [
+    {
+      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190814-pumpkin-roll-0046-landscape-pf-1567187755.jpg",
+      "width": 1900,
+      "height": 1267
+    }
+  ],
+  "author": {
+    "name": "Lena Abraham"
+  },
+  "prepTime": 30,
+  "totalTime": 60,
+  "recipeCategory": [
+    "autumn",
+    "Thanksgiving",
+    "baking",
+    "dessert"
+  ],
+  "keywords": [
+    "pumpkin roll",
+    "pumpkin desserts",
+    "fall desserts",
+    "swiss roll",
+    "cream cheese frosting",
+    "thanksgiving desserts",
+    "pumpkin cake"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "Cooking spray",
+    "1 c. granulated sugar",
+    "3/4 c. all-purpose flour",
+    "1/2 tsp. kosher salt",
+    "1 tsp. baking soda",
+    "1/2 tsp. pumpkin spice",
+    "3 large eggs",
+    "2/3 c. pumpkin puree",
+    "Powdered sugar, for rolling",
+    "12 oz. cream cheese, softened",
+    "1 tbsp. butter, melted",
+    "1 tsp. pure vanilla extract",
+    "1 1/4 c. powdered sugar",
+    "1/2 tsp. kosher salt"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 350°. Line a 15” x 10” jelly roll pan with parchment and grease with cooking spray. In a large bowl, combine sugar, flour, salt, baking soda, pumpkin spice, eggs, and pumpkin puree until just combined. Spread into prepared pan and bake until a toothpick inserted in center of cake comes out clean, 15 minutes."
+    },
+    {
+      "text": "Meanwhile, lay out a large kitchen towel on your counter (try to use one with little to no texture) and dust with powdered sugar. When cake is done baking, flip onto kitchen towel and gently peel off parchment paper."
+    },
+    {
+      "text": "Starting at a short end, gently but tightly roll cake into a log. Let cool completely."
+    },
+    {
+      "text": "Meanwhile, make filling: In a large bowl, combine cream cheese, melted butter, vanilla, powdered sugar, and salt. Using a hand mixer, whip until smooth."
+    },
+    {
+      "text": "When cake is cooled, gently unroll (it’s ok if it remains slightly curled) and spread with cream cheese filling. Roll back up and dust with more powdered sugar. Slice and serve."
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 10,
+    "ratingValue": 4.2,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "video": {
+    "name": "Impress Your Friends With This Amazing Pumpkin Roll",
+    "description": "#spiralgoals",
+    "duration": "PT1M2S",
+    "embedUrl": "https://glimmer.hearstapps.com/?id=8b0f5859-eec8-48b1-bad2-7230d6ce3830",
+    "contentUrl": "https://streaming.hearstdigitalstudios.com/df12ad5f-a0a9-44c6-ab62-022a0035c779/video_rover_16x9_1080p_hd_1567108334_55553.mp4",
+    "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-190814-pumpkin-roll-0047-landscape-pf-1567187755.jpg",
+    "uploadDate": "2017-11-15T23:13:02.688285Z"
+  },
+  "publisher": {
+    "name": "Delish",
+    "url": "https://www.delish.com/",
+    "logo": "https://assets.hearstapps.com/sites/delish/assets/images/logos/logo-jsonld.58eed96.png"
+  },
+  "dateModified": "2021-08-02T19:31:00Z",
+  "datePublished": "2017-11-16T15:15:00Z"
+}

@@ -1,0 +1,94 @@
+{
+  "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/",
+  "name": "Gooey Chocolate Pudding Cake",
+  "description": "This Chocolate Pudding Cake is a very simple, rich chocolate dessert that comes together in just one dish!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4.jpg",
+  "image": [
+    {
+      "url": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4-500x500.jpg"
+    },
+    {
+      "url": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4-500x375.jpg"
+    },
+    {
+      "url": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Holly Nilsson"
+  },
+  "prepTime": 5,
+  "cookTime": 30,
+  "totalTime": 35,
+  "recipeCategory": [
+    "Dessert"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "best pudding cake",
+    "chocolate lava cake",
+    "Chocolate Pudding Cake",
+    "easy chocolate pudding cake",
+    "pudding cake"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "¾ cup all-purpose flour",
+    "½ cup sugar",
+    "½ cup unsweetened cocoa powder",
+    "1 ½ teaspoons baking powder",
+    "⅔ cup milk",
+    "2 tablespoons vegetable oil",
+    "1 teaspoon vanilla",
+    "⅔ cup brown sugar (packed)",
+    "¼ cup cocoa powder",
+    "¼ cup miniature semisweet chocolate chips",
+    "1 ¼ cups very hot water"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 350°F.",
+      "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/#wprm-recipe-135714-step-0-0"
+    },
+    {
+      "text": "In a 2 qt casserole dish, combine flour, white sugar, cocoa powder, and baking powder.",
+      "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/#wprm-recipe-135714-step-0-1"
+    },
+    {
+      "text": "Add milk and oil, and vanilla. Stir until well mixed.",
+      "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/#wprm-recipe-135714-step-0-2"
+    },
+    {
+      "text": "In a small bowl, combine brown sugar, cocoa powder and chocolate chips. Sprinkle over cake batter. DO NOT STIR. Pour hot water over top.",
+      "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/#wprm-recipe-135714-step-0-3"
+    },
+    {
+      "text": "Bake for 30-35 minutes or until the top looks cooked. Serve warm (with ice cream if desired).",
+      "url": "https://www.spendwithpennies.com/gooey-chocolate-pudding-cake/#wprm-recipe-135714-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "349 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "65 g",
+    "cholesterolContent": "1 mg",
+    "fatContent": "10 g",
+    "fiberContent": "4 g",
+    "proteinContent": "5 g",
+    "saturatedFatContent": "7 g",
+    "sodiumContent": "25 mg",
+    "sugarContent": "45 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 94,
+    "ratingValue": 4.89
+  },
+  "publisher": {
+    "name": "Spend With Pennies",
+    "url": "https://www.spendwithpennies.com"
+  },
+  "datePublished": "2020-05-13T08:00:12Z"
+}

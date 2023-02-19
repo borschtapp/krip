@@ -1,0 +1,92 @@
+{
+  "url": "https://www.primaledgehealth.com/no-bake-custard/",
+  "name": "No Bake Custard (Keto \u0026 Carnivore-Friendly)",
+  "description": "This no bake keto carnivore custard has the same great flavor and silky smooth texture as traditional custard but is less work to make! Make it yourself with just 5 ingredients and 10 minutes of prep time.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/No-Bake-Keto-Custard-Recipe.jpg",
+  "image": [
+    {
+      "url": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/no-bake-custard-1.jpg"
+    },
+    {
+      "url": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/no-bake-custard-1-500x500.jpg"
+    },
+    {
+      "url": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/no-bake-custard-1-500x375.jpg"
+    },
+    {
+      "url": "https://www.primaledgehealth.com/wp-content/uploads/2021/02/no-bake-custard-1-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Jessica Haggard"
+  },
+  "prepTime": 10,
+  "totalTime": 70,
+  "recipeCategory": [
+    "Desserts"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "10 minutes",
+    "5 ingredients",
+    "carnivore dessert",
+    "carnivore diet dessert",
+    "carnivore-friendly dessert",
+    "keto carnivore",
+    "keto custard",
+    "no bake custard"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "1 tbsp grass-fed beef gelatin",
+    "1¼ cups half and half",
+    "1 tbsp sweetener (optional, see note)",
+    "½ teaspoon vanilla extract",
+    "2 raw egg yolks"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Sprinkle the gelatin over 2 tablespoons of water in a wide, shallow dish. The more surface area to cover, the better. Set aside to thicken.",
+      "url": "https://www.primaledgehealth.com/no-bake-custard/#wprm-recipe-52923-step-0-0"
+    },
+    {
+      "text": "If sweetening: Warm the cream over low heat in a small saucepan on the stovetop. Add the sweetener and stir until it dissolves. Then stir in vanilla.If not sweetening: Add vanilla to half and half in a bowl without heating.",
+      "url": "https://www.primaledgehealth.com/no-bake-custard/#wprm-recipe-52923-step-0-1"
+    },
+    {
+      "text": "Whisk egg yolks into the half and half.",
+      "url": "https://www.primaledgehealth.com/no-bake-custard/#wprm-recipe-52923-step-0-2"
+    },
+    {
+      "text": "Mix in the gelatin. Gently warm liquid over low heat until gelatin dissolves if needed.",
+      "url": "https://www.primaledgehealth.com/no-bake-custard/#wprm-recipe-52923-step-0-3"
+    },
+    {
+      "text": "Divide into individual ramekins or use one single serving dish. Chill in the refrigerator for at least 1 hour until set. Serve cold.",
+      "url": "https://www.primaledgehealth.com/no-bake-custard/#wprm-recipe-52923-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "212 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "5 g",
+    "cholesterolContent": "67 mg",
+    "fatContent": "18 g",
+    "proteinContent": "8 g",
+    "saturatedFatContent": "11 g",
+    "sodiumContent": "69 mg",
+    "sugarContent": "1 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 3,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Primal Edge Health",
+    "url": "https://www.primaledgehealth.com"
+  },
+  "datePublished": "2021-03-03T10:08:00Z"
+}

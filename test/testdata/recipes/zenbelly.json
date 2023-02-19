@@ -1,0 +1,76 @@
+{
+  "url": "https://www.zenbelly.com/gingerbread/",
+  "name": "Paleo Gingerbread",
+  "description": "'Tis the season for Gingerbread. To be honest, I can't remember the last time I had it before I made it for this here bloggy blog. Paleo Gingerbread When I went to start making",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3.jpeg",
+  "image": [
+    {
+      "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3-225x225.jpeg"
+    },
+    {
+      "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3-260x195.jpeg"
+    },
+    {
+      "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3-320x180.jpeg"
+    }
+  ],
+  "author": {
+    "name": "Simone Miller",
+    "url": "http://Simone%20Miller"
+  },
+  "prepTime": 10,
+  "cookTime": 30,
+  "totalTime": 40,
+  "recipeCategory": [
+    "Dessert"
+  ],
+  "recipeYield": 20,
+  "recipeIngredient": [
+    "butter (ghee, or shortening for greasing the pan)",
+    "3 cups almond flour",
+    "1 1/2 cups tapioca starch (plus more for flouring pan)",
+    "1/2 cup coconut flour",
+    "1 1/2 teaspoons baking soda",
+    "2 teaspoons ground ginger",
+    "1 teaspoons ground cinnamon",
+    "1/4 teaspoon ground allspice",
+    "1/4 teaspoon ground cardamom",
+    "1/2 teaspoon finely ground sea salt",
+    "1 cup coconut sugar",
+    "1 cup molasses (use true molasses if you can find it)",
+    "2 teaspoons fresh ginger",
+    "1 cup boiling water",
+    "4 eggs"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat the oven to 350ºF. Grease a 9×13-inch cake pan.",
+      "url": "https://www.zenbelly.com/gingerbread/#instruction-step-1"
+    },
+    {
+      "text": "In a large bowl, whisk together the almond flour, tapioca starch, coconut flour, baking soda, ground ginger, cinnamon, allspice, cardamom, and salt.",
+      "url": "https://www.zenbelly.com/gingerbread/#instruction-step-2"
+    },
+    {
+      "text": "In a medium heat proof bowl, whisk together the coconut sugar, molasses, fresh ginger, and boiling water. Once it’s lukewarm (the molasses and coconut sugar should take the temperature down enough), whisk in the eggs.",
+      "url": "https://www.zenbelly.com/gingerbread/#instruction-step-3"
+    },
+    {
+      "text": "Pour the wet ingredients into the dry ingredients and whisk until there are no lumps.",
+      "url": "https://www.zenbelly.com/gingerbread/#instruction-step-4"
+    },
+    {
+      "text": "Pour into the prepared pan and bake for 28-35 minutes*",
+      "url": "https://www.zenbelly.com/gingerbread/#instruction-step-5"
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 4,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "zenbelly",
+    "url": "https://www.zenbelly.com"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "url": "https://www.innit.com/meal/967/5350/Salads%3A%20Blended-Carrot-Ginger-Dressing%2BAssembled-Broccoli-Beet-Mix%2BSeared-Tofu-Diced%2BOlive-Oil%2BPrepared-Mixed-Greens",
+  "name": "Tofu Mixed Greens Salad with Broccoli Beet Mix \u0026 Carrot Ginger Dressing",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://www.innit.com/meal-service/en-US/images/Meal-Salads%3A%20Blended-Carrot_Ginger_Dressing%2BAssembled-Broccoli_Beet_Mix%2BSeared-Tofu-Diced%2BOlive_Oil%2BPrepared-Mixed_Greens_960x960.png",
+  "image": [
+    {
+      "url": "https://www.innit.com/meal-service/en-US/images/Meal-Salads%3A%20Blended-Carrot_Ginger_Dressing%2BAssembled-Broccoli_Beet_Mix%2BSeared-Tofu-Diced%2BOlive_Oil%2BPrepared-Mixed_Greens_480x480.png"
+    },
+    {
+      "url": "https://www.innit.com/meal-service/en-US/images/Meal-Salads%3A%20Blended-Carrot_Ginger_Dressing%2BAssembled-Broccoli_Beet_Mix%2BSeared-Tofu-Diced%2BOlive_Oil%2BPrepared-Mixed_Greens_640x640.png"
+    }
+  ],
+  "author": {
+    "name": "Innit Inc"
+  },
+  "prepTime": 2,
+  "cookTime": 49,
+  "totalTime": 51,
+  "recipeCategory": [
+    "Salads"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "2 Carrots",
+    "1 piece Ginger",
+    "1/2 Orange",
+    "1 Tbsp Fresh Chives",
+    "2 cups Broccoli",
+    "1 lb Precooked Beets",
+    "2 Tbsp Italian Parsley",
+    "4 cups Spring Mix",
+    "2 packages Extra Firm Tofu",
+    "1 Tbsp Miso Paste",
+    "1/2 tsp Sesame Seed Oil",
+    "1/2 Tbsp Honey",
+    "1 1/4 tsp Kosher Salt",
+    "2/3 cup Olive Oil",
+    "2 pinches Black Pepper",
+    "1/4 cup Rice Wine Vinegar",
+    "1 cup Sunflower Seeds"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Preheat",
+      "itemListElement": [
+        {
+          "text": "Preheat the oven to 425F."
+        },
+        {
+          "text": "Line sheet pan with foil."
+        }
+      ]
+    },
+    {
+      "name": "Sear Tofu",
+      "itemListElement": [
+        {
+          "text": "Drain, pat dry \u0026 prepare tofu."
+        },
+        {
+          "text": "Heat pan on high heat for 2 minutes."
+        },
+        {
+          "text": "Cook for 7 min or until golden brown on all sides, seasoning half way."
+        },
+        {
+          "text": "Remove from pan."
+        }
+      ]
+    },
+    {
+      "name": "Bake Broccoli",
+      "itemListElement": [
+        {
+          "text": "Toss broccoli with oil \u0026 salt."
+        },
+        {
+          "text": "Bake for 22 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Simmer Carrots \u0026 Ginger",
+      "itemListElement": [
+        {
+          "text": "Prepare ingredients."
+        },
+        {
+          "text": "Pre-heat pan. Add all ingredients; cover with water."
+        },
+        {
+          "text": "Cook until soft, about 5 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Blend Dressing Ingredients",
+      "itemListElement": [
+        {
+          "text": "Transfer carrot-ginger mixture to blender."
+        },
+        {
+          "text": "Add orange juice/zest, miso, sesame oil, honey, rice vinegar."
+        },
+        {
+          "text": "Blend until smooth."
+        },
+        {
+          "text": "Let cool in fridge for 10 minutes. Fold in chives \u0026 season."
+        }
+      ]
+    },
+    {
+      "name": "Flavor Beets",
+      "itemListElement": [
+        {
+          "text": "Toss beets in oil. Season with salt, pepper \u0026 parsley."
+        }
+      ]
+    },
+    {
+      "name": "Toast Sunflower Seeds",
+      "itemListElement": [
+        {
+          "text": "Combine ingredients."
+        },
+        {
+          "text": "Toast in oven for 5 - 7 min or until golden brown."
+        }
+      ]
+    },
+    {
+      "name": "Mixed Greens",
+      "itemListElement": [
+        {
+          "text": "Wash greens \u0026 dry."
+        }
+      ]
+    },
+    {
+      "name": "Serve and Enjoy!",
+      "itemListElement": [
+        {
+          "text": "Pair with your favorite music!"
+        }
+      ]
+    }
+  ],
+  "nutrition": {
+    "calories": "800 kcal",
+    "carbohydrateContent": "34 g",
+    "cholesterolContent": "0 mg",
+    "fatContent": "61 g",
+    "fiberContent": "11 g",
+    "proteinContent": "32 g",
+    "saturatedFatContent": "8 g",
+    "sodiumContent": "1040 mg",
+    "sugarContent": "18 g",
+    "unsaturatedFatContent": "53 g"
+  }
+}

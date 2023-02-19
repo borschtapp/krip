@@ -1,0 +1,104 @@
+{
+  "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/",
+  "name": "Authentic Canadian Poutine",
+  "description": "Authentic Canadian Poutine featuring deep-fried fries, poutine gravy and white cheddar cheese curds all tossed together. Do be careful with deep frying. A proper deep fryer is recommended.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1.jpg",
+  "image": [
+    {
+      "url": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1-500x500.jpg"
+    },
+    {
+      "url": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1-500x375.jpg"
+    },
+    {
+      "url": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Jennifer"
+  },
+  "prepTime": 30,
+  "cookTime": 30,
+  "totalTime": 60,
+  "recipeCategory": [
+    "Main Course",
+    "Snack"
+  ],
+  "recipeCuisine": [
+    "Canadian"
+  ],
+  "keywords": [
+    "authentic Canadian poutine",
+    "how to make poutine",
+    "poutine gravy recipe"
+  ],
+  "recipeYield": 3,
+  "recipeIngredient": [
+    "3 Tbsp cornstarch",
+    "2 Tbsp water",
+    "6 Tbsp unsalted butter",
+    "1/4 cup unbleached all purpose flour",
+    "20 oz beef broth",
+    "10 oz chicken broth",
+    "Pepper, to taste",
+    "2 lbs Russet potatoes ((3-4 medium potatoes))",
+    "Peanut or other frying oil",
+    "1 - 1 1/2 cups white cheddar cheese curds ((Or torn chunks of mozzarella cheese would be the closest substitution))"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Prepare the gravy: In a small bowl, dissolve the cornstarch in the water and set aside.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-0"
+    },
+    {
+      "text": "In a large saucepan, melt the butter. Add the flour and cook, stirring regularly, for about 5 minutes, until the mixture turns golden brown.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-1"
+    },
+    {
+      "text": "Add the beef and chicken broth and bring to a boil, stirring with a whisk. Stir in about HALF the cornstarch mixture and simmer for a minute or so. If you'd like your gravy thicker, add a more of the cornstarch mixture, in small increments, as needed, to thicken. Season with pepper. Taste and add additional salt, if necessary, to taste. Make ahead and re-warm or keep warm until your fries are ready.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-2"
+    },
+    {
+      "text": "For Deep-Fried Fries: Prepare your potatoes and cut into 1/2-inch thick sticks. Place into a large bowl and cover completely with cold water. Allow to stand at least one hour or several hours. When ready to cook, heat your oil in your deep fryer or large, wide, heavy cooking pot to 300° F.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-3"
+    },
+    {
+      "text": "Remove the potatoes from the water and place onto a sheet of paper towel. Blot to remove as much excess moisture as possible.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-4"
+    },
+    {
+      "text": "Add your fries to the 300°F oil and cook for 5-8 minutes, just until potatoes are starting to cook but are not yet browned. Remove potatoes from oil and scatter on a wire rack. Increase oil temperature to 375°F Once oil is heated to that temperature, return the potatoes to the fryer and cook until potatoes are golden brown. Remove to a paper towel-lined bowl.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-5"
+    },
+    {
+      "text": "To Prepare Poutine: Add your fried or baked fries to a large, clean bowl. Season lightly with salt while still warm. Add a ladle of hot poutine gravy to the bowl and using tongs, toss the fries in the gravy. Add more gravy, as needed to mostly coat the fries.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-6"
+    },
+    {
+      "text": "Add the cheese curds and toss with the hot fries and gravy. Serve with freshly ground pepper. Serve immediately.",
+      "url": "https://www.seasonsandsuppers.ca/authentic-canadian-poutine-recipe/#wprm-recipe-19847-step-0-7"
+    }
+  ],
+  "nutrition": {
+    "calories": "528 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "70 g",
+    "cholesterolContent": "61 mg",
+    "fatContent": "24 g",
+    "fiberContent": "4 g",
+    "proteinContent": "10 g",
+    "saturatedFatContent": "14 g",
+    "sodiumContent": "1068 mg",
+    "sugarContent": "1 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 25,
+    "ratingValue": 4.92
+  },
+  "publisher": {
+    "name": "Seasons and Suppers",
+    "url": "https://www.seasonsandsuppers.ca"
+  },
+  "datePublished": "2014-01-07T08:00:59Z"
+}

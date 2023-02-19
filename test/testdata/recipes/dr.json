@@ -1,0 +1,54 @@
+{
+  "url": "https://www.dr.dk/mad/opskrift/millionaires-shortbread",
+  "name": "Millionaires’ Shortbread",
+  "description": "Sprød mørdejsbund, et lag smægtende, blød karamel og endelig et lag chokolade. Disse kagesnitter er svære at holde fingrene fra! Del dem med dine kære, eller spis dem allesammen selv og tag konsekvensen med badevægten senere…",
+  "inLanguage": "da_DK",
+  "thumbnailUrl": "https://asset.dr.dk/imagescaler01/http://mad-recipe-pictures-dr-dk.s3.amazonaws.com/prod/recipe/millionaires-shortbread-jpg-1597218581.jpg",
+  "image": [
+    {
+      "url": "https://asset.dr.dk/ImageScaler03/?url=http%3A%2F%2Fmad-recipe-pictures-dr-dk.s3.amazonaws.com%2Fprod%2Frecipe%2Fmillionaires-shortbread-jpg-1597218581.jpg",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "url": "https://asset.dr.dk/ImageScaler03/?url=http%3A%2F%2Fmad-recipe-pictures-dr-dk.s3.amazonaws.com%2Fprod%2Fchef%2Fbrodrene-price-kokke-opskrifter-1491470092.jpg",
+      "width": 940,
+      "height": 530
+    }
+  ],
+  "author": {
+    "name": "Brdr. Price"
+  },
+  "totalTime": 120,
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "130 g mel",
+    "50 g farin",
+    "2 tsk. maizena",
+    "Et nip salt",
+    "120 g smør",
+    "1 spsk. koldt vand",
+    "1 æggeblomme",
+    "1 dåse sød kondenseret mælk",
+    "100 g farin",
+    "100 g smør",
+    "2 spsk. lys sirup",
+    "1 tsk. vanilje ekstrakt",
+    "Et nip salt",
+    "170 g mørk chokolade",
+    "1 stor spsk. smør"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Opskriften giver cirka 16 styks, afhængig af størrelsen.I en foodprocessor kommes mel, farin, maizena og salt. Kør til alt er blandet. Kom smørret ved og kør til det ligner brødkrummer. Tilsæt koldt vand og æggeblomme og kør til dejen lige samler sig. Kom dejen ud på et melet bord og saml den hurtigt. Kom køkkenfilm omkring den og lad den hvile i køleskabet i en times tid. Rul den derpå ud på et melet bord og placer den i bunden af en firkantet bageform (24 x 24 cm.) der er foret med bagepapir. Prik dejen med en gaffel og bag den i en 180 grader varm ovn i ca. 20 minutter."
+    },
+    {
+      "text": "Til karamellen kommes den kondenserede mælk i en gryde sammen med farin, smør, sirup, vanille og salt. Bring massen i kog og lad den koge roligt til den når 110 grader på et sukkertermometer - eller til massen er tyk og gyldenbrun. Hæld karamellem over den stadig lune kagebund. Lad derpå kagen køle helt af. Smelt chokoladen i et vandbad sammen med smørret, bland godt og hæld så chokoladen ovenpå karamellen. Jævn ud med en spatel. Sæt kagen på køl. Tag kagen ud af formen og fjern bagepapiret. Skær kagen i små firkanter som opbevares på køl til de skal serveres."
+    }
+  ],
+  "publisher": {
+    "name": "DR Mad",
+    "url": "https://www.dr.dk"
+  },
+  "datePublished": "2020-08-12T11:48:45Z"
+}

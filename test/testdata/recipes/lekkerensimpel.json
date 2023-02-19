@@ -1,0 +1,57 @@
+{
+  "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/",
+  "name": "Poké bowl met kip",
+  "description": "Een heerlijke poké bowl met kip, avocado, peen julienne en edamame bonen. Een makkelijk gerecht dat in 30 minuten op tafel staat én waarmee je heel goed kunt variëren.",
+  "inLanguage": "nl_NL",
+  "thumbnailUrl": "https://www.lekkerensimpel.com/wp-content/uploads/2022/03/588A2370-1.jpg",
+  "cookTime": 35,
+  "recipeCategory": [
+    "Hoofdgerecht"
+  ],
+  "recipeCuisine": [
+    "Aziatische keuken"
+  ],
+  "keywords": [
+    "bowl",
+    "kip"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "200 gr sushi rijst",
+    "2 el sushi azijn (of 1,5 el rijstazijn, 1 tl suiker en een snuf zout)",
+    "2 krokante kipschnitzels",
+    "1 avocado",
+    "100 gr peen julienne",
+    "0.5 komkommer",
+    "2 el gebakken uitjes",
+    "Japanse mayonaise",
+    "sojasaus"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Begin met het maken van de sushirijst. Wij houden hiervoor dit sushirijst recept aan. Tip: heb je weinig tijd? Gebruik dan pandan rijst in plaats van sushi rijst. Dit is een stuk sneller klaar.",
+      "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/#wprm-recipe-67475-step-0-0"
+    },
+    {
+      "text": "Snijd de avocado en komkommer in plakjes/reepjes.",
+      "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/#wprm-recipe-67475-step-0-1"
+    },
+    {
+      "text": "Giet een scheutje olie in een koekenpan en bak de kipschnitzels volgens de instructies op het pak. Tip: maak ook eens de kipschnitzels zelf. Snijd de kipschnitzels daarna in plakjes.",
+      "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/#wprm-recipe-67475-step-0-2"
+    },
+    {
+      "text": "Verdeel de rijst over twee kommen. Verdeel de komkommer, kip, peen julienne, avocado en gebakken uitjes hier overheen. Als laatste verdeel je wat Japanse mayonaise en sojasaus over het geheel.",
+      "url": "https://www.lekkerensimpel.com/poke-bowl-met-kip/#wprm-recipe-67475-step-0-3"
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 8,
+    "ratingValue": 4.75
+  },
+  "publisher": {
+    "name": "Lekker en Simpel",
+    "url": "https://www.lekkerensimpel.com"
+  },
+  "datePublished": "2022-03-08T06:00:00Z"
+}

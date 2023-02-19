@@ -1,0 +1,88 @@
+{
+  "url": "https://lovingitvegan.com/kale-smoothie/",
+  "name": "Kale Smoothie",
+  "description": "Creamy and smooth kale smoothie with a gorgeous pale green color that tastes like a delicious ice-cold milkshake! Even if you hate greens you will love this smoothie!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-3.jpg",
+  "image": [
+    {
+      "url": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-8.jpg"
+    },
+    {
+      "url": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-8-500x500.jpg"
+    },
+    {
+      "url": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-8-500x375.jpg"
+    },
+    {
+      "url": "https://lovingitvegan.com/wp-content/uploads/2018/08/Kale-Smoothie-8-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Alison Andrews"
+  },
+  "prepTime": 10,
+  "totalTime": 10,
+  "suitableForDiet": [
+    "https://schema.org/VeganDiet"
+  ],
+  "recipeCategory": [
+    "Breakfast",
+    "Drinks"
+  ],
+  "recipeCuisine": [
+    "American",
+    "Vegan"
+  ],
+  "keywords": [
+    "kale smoothie",
+    "smoothies",
+    "vegan kale smoothie"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "1 1/4 cups Soy Milk ((300ml) or Almond Milk)",
+    "2 Frozen Bananas ((200g) previously peeled, broken into quarters and frozen for at least 12 hours)",
+    "1/2 cup Raw Cashews ((75g))",
+    "2 cups Kale ((56g) Torn up, packed)",
+    "4 Medjool Dates (Pitted)",
+    "1 tsp Minced Ginger",
+    "1/8 tsp Cinnamon",
+    "1 Tbsp Lime Juice (freshly squeezed)",
+    "1 cup Ice Cubes"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Add the soy milk to your blender jug and then the frozen bananas, cashews, kale, dates, minced ginger, cinnamon and fresh lime juice. Top with ice cubes.",
+      "url": "https://lovingitvegan.com/kale-smoothie/#wprm-recipe-9766-step-0-0"
+    },
+    {
+      "text": "Blend until very smooth.",
+      "url": "https://lovingitvegan.com/kale-smoothie/#wprm-recipe-9766-step-0-1"
+    },
+    {
+      "text": "Pour out into glasses and serve immediately.",
+      "url": "https://lovingitvegan.com/kale-smoothie/#wprm-recipe-9766-step-0-2"
+    }
+  ],
+  "nutrition": {
+    "calories": "373 kcal",
+    "servingSize": "1 Smoothie",
+    "carbohydrateContent": "42.6 g",
+    "fatContent": "19.5 g",
+    "fiberContent": "4.9 g",
+    "proteinContent": "13.8 g",
+    "saturatedFatContent": "3.7 g",
+    "sodiumContent": "180 mg",
+    "sugarContent": "15.2 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 15,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Loving It Vegan",
+    "url": "https://lovingitvegan.com"
+  },
+  "datePublished": "2020-06-13T15:44:47Z"
+}

@@ -1,0 +1,102 @@
+{
+  "url": "https://www.simplywhisked.com/buffalo-chicken-chili/",
+  "name": "Buffalo Chicken Chili",
+  "description": "This buffalo chicken chili is a hearty, go-to meal that can be ready pretty quickly. The buffalo flavor is the perfect amount of spicy. Make this for your next football game, everyone will love it!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1.jpg",
+  "image": [
+    {
+      "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1-225x225.jpg"
+    },
+    {
+      "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1-260x195.jpg"
+    },
+    {
+      "url": "https://www.simplywhisked.com/wp-content/uploads/2016/02/Buffalo-Chicken-Chili-4-1-320x180.jpg"
+    }
+  ],
+  "author": {
+    "name": "Melissa Belanger",
+    "url": "http://Melissa%20Belanger"
+  },
+  "prepTime": 15,
+  "cookTime": 30,
+  "totalTime": 45,
+  "cookingMethod": "Stovetop",
+  "recipeCategory": [
+    "Soups"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "easy",
+    "dairy free",
+    "egg free",
+    "healthy",
+    "chili",
+    "beans",
+    "buffalo"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "2 tablespoons olive oil",
+    "1 small onion, chopped (about 1 cup)",
+    "2 stalks celery, chopped",
+    "6 garlic cloves, minced",
+    "1 1/2 – 2 pounds ground chicken",
+    "1 cup water (or reduced-sodium broth)",
+    "1 15-ounce can petite diced tomatoes",
+    "2 15-ounce cans chili beans, with sauce",
+    "2 tablespoos chili powder",
+    "2 teaspoons ground cumin",
+    "2 teaspoons paprika",
+    "1 bay leaf",
+    "1 teaspoon salt",
+    "1/2 teaspoon pepper",
+    "1/2 cup buffalo wing sauce"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "In a large stockpot or dutch oven, heat olive oil to medium-high. Add the bell pepper, onion, celery and garlic. Sauté until onions are translucent, about 5 minutes.",
+      "url": "https://www.simplywhisked.com/buffalo-chicken-chili/#instruction-step-1"
+    },
+    {
+      "text": "Add ground chicken. Breaking up the meat as chicken browns, cook until no longer pink, about 5 minutes.",
+      "url": "https://www.simplywhisked.com/buffalo-chicken-chili/#instruction-step-2"
+    },
+    {
+      "text": "Add water, tomatoes, beans, chili powder, cumin, bay leaf, buffalo sauce, and salt \u0026 pepper. Bring to a simmer.",
+      "url": "https://www.simplywhisked.com/buffalo-chicken-chili/#instruction-step-3"
+    },
+    {
+      "text": "Cover and allow chili to cook for at least 15 minutes, simmering to desired thickness.",
+      "url": "https://www.simplywhisked.com/buffalo-chicken-chili/#instruction-step-4"
+    },
+    {
+      "text": "Before serving, remove bay leaf and adjust seasoning with salt \u0026 pepper, to taste.",
+      "url": "https://www.simplywhisked.com/buffalo-chicken-chili/#instruction-step-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "203 calories",
+    "servingSize": "1 bowl",
+    "carbohydrateContent": "8.6 g",
+    "cholesterolContent": "63 mg",
+    "fatContent": "12.2 g",
+    "fiberContent": "1.4 g",
+    "proteinContent": "15.8 g",
+    "saturatedFatContent": "3.3 g",
+    "sodiumContent": "620.6 mg",
+    "sugarContent": "2.5 g",
+    "transFatContent": "0 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 1,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Simply Whisked",
+    "url": "https://www.simplywhisked.com"
+  }
+}

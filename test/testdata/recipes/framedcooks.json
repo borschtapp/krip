@@ -1,0 +1,96 @@
+{
+  "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html",
+  "name": "Ham and Egg Crepe Squares",
+  "description": "These perfect little packages of sunny side up egg and ham all wrapped up in a soft crepe are a treat for breakfast, lunch or dinner!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.framedcooks.com/wp-content/uploads/2011/02/easy-ham-and-egg-crepes-154.jpg",
+  "image": [
+    {
+      "url": "https://www.framedcooks.com/wp-content/uploads/2017/08/1175910236_uTQuN-M-225x225.jpg"
+    },
+    {
+      "url": "https://www.framedcooks.com/wp-content/uploads/2017/08/1175910236_uTQuN-M-260x195.jpg"
+    },
+    {
+      "url": "https://www.framedcooks.com/wp-content/uploads/2017/08/1175910236_uTQuN-M-320x180.jpg"
+    },
+    {
+      "url": "https://www.framedcooks.com/wp-content/uploads/2017/08/1175910236_uTQuN-M.jpg"
+    }
+  ],
+  "author": {
+    "name": "Kate Morgan Jackson"
+  },
+  "prepTime": 15,
+  "cookTime": 70,
+  "totalTime": 85,
+  "cookingMethod": "Stovetop",
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "ham and egg crepe squares",
+    "crepes with eggs inside",
+    "savory crepes",
+    "french ham and cheese crepe",
+    "low carb egg and ham crepes"
+  ],
+  "recipeYield": 9,
+  "recipeIngredient": [
+    "1 cup flour",
+    "1 tablespoon sugar",
+    "1/4 teaspoon salt",
+    "1 1/2 cups milk",
+    "4 large eggs",
+    "3 tablespoons melted butter",
+    "9 thin slices ham",
+    "9 eggs",
+    "Chopped fresh parsley"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Combine flour, sugar, salt, milk, four eggs and the melted butter in a blender and blend on high for 30 seconds. Let the mixture rest for 15 minutes.",
+      "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html#instruction-step-1"
+    },
+    {
+      "text": "Heat a 12 inch non-stick skillet over medium heat and lightly coat with butter. Add 1/3 cup batter and swirl to completely cover skillet. Cook until underside of crepe is very lightly starting to brown, about 2 minutes.",
+      "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html#instruction-step-2"
+    },
+    {
+      "text": "Loosen edge of crepe with spatula and then either using large spatula or your fingers, lift it up and flip it over. Cook another 1-2 minutes and then slide out of skillet onto wax paper. Repeat until all crepes are done. You should have about 9 when you are done.",
+      "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html#instruction-step-3"
+    },
+    {
+      "text": "Preheat oven to 350. Place crepes on a rimmed baking sheet (you can fit 3-4 per sheet). Place ham slice in center of crepe and carefully crack egg onto ham. Fold edges of crepe toward center, using the egg white as a kind of glue. Season with salt and pepper and bake until egg white is set, about 10-12 minutes.",
+      "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html#instruction-step-4"
+    },
+    {
+      "text": "Sprinkle with chopped parsley and serve at once.",
+      "url": "https://www.framedcooks.com/2011/02/ham-and-egg-crepe-squares.html#instruction-step-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "237 calories",
+    "servingSize": "1 crepe square",
+    "carbohydrateContent": "14.6 g",
+    "cholesterolContent": "291.6 mg",
+    "fatContent": "12.4 g",
+    "fiberContent": "0.4 g",
+    "proteinContent": "15.8 g",
+    "saturatedFatContent": "5.3 g",
+    "sodiumContent": "481.4 mg",
+    "sugarContent": "3.8 g",
+    "transFatContent": "0.1 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 3,
+    "ratingValue": 3.7
+  },
+  "publisher": {
+    "name": "Framed Cooks",
+    "url": "https://www.framedcooks.com"
+  }
+}

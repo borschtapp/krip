@@ -1,0 +1,95 @@
+{
+  "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/",
+  "name": "Balsamic Watermelon Cucumber Salad",
+  "description": "An EASY, healthy, and light salad with watermelon, cucumber, arugula, goat cheese, candied nuts, and drizzled with a homemade balsamic glaze!! A PERFECT summer salad for those days when it's too hot to cook!!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5.jpg",
+  "image": [
+    {
+      "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x480.jpg"
+    },
+    {
+      "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x360.jpg"
+    },
+    {
+      "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Averie Sunshine"
+  },
+  "prepTime": 5,
+  "cookTime": 15,
+  "totalTime": 20,
+  "suitableForDiet": [
+    "VegetarianDiet"
+  ],
+  "recipeCategory": [
+    "Sides",
+    "Salads \u0026 Vegetables"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "watermelon cucumber salad",
+    "watermelon goat cheese salad",
+    "watermelon and cucumber salad",
+    "watermelon salad balsamic",
+    "watermelon arugula salad"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "500 millilters balsamic vinegar",
+    "1 cup granulated sugar, divided",
+    "3 cups watermelon, seeded and cubed (I recommend seedless, firm watermelon)",
+    "1 large cucumber or English cucumber, peeled and cubed",
+    "1 cup argula (1 heaping handful)",
+    "1/3 cup goat cheese, crumbled or as desired",
+    "1/3 cup candied nuts, or as desired"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "To a high-sided medium/large kettle (use one bigger...",
+      "text": "To a high-sided medium/large kettle (use one bigger than you think you need), add the vinegar, 1/2 cup sugar, and heat over medium to medium-high until mixture boils and can sustain a fast rolling boil.",
+      "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/#mv_create_1356_1"
+    },
+    {
+      "name": "Boil for about 15 to 20 minutes, or...",
+      "text": "Boil for about 15 to 20 minutes, or until reduced by about 80% and has thickened and is syrupy; stir intermittently and keep an eye on it so it doesn't bubble over.",
+      "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/#mv_create_1356_2"
+    },
+    {
+      "name": "When the sauce looks like it's about halfway...",
+      "text": "When the sauce looks like it's about halfway done, taste the sauce, and if it's too vinegary and bitter for you, add part of or all of the remaining sugar. I personally use almost 1 cup. Sauce will thicken up more as it cools.",
+      "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/#mv_create_1356_3"
+    },
+    {
+      "name": "To a medium bowl, add all the remaining...",
+      "text": "To a medium bowl, add all the remaining ingredients, stir to combine, and drizzle as much of the balsamic reduction as desired.",
+      "url": "https://www.averiecooks.com/balsamic-watermelon-and-cucumber-salad/#mv_create_1356_4"
+    }
+  ],
+  "nutrition": {
+    "calories": "4245 calories",
+    "servingSize": "1",
+    "carbohydrateContent": "812 grams carbohydrates",
+    "cholesterolContent": "17 milligrams cholesterol",
+    "fatContent": "20 grams fat",
+    "fiberContent": "4 grams fiber",
+    "proteinContent": "34 grams protein",
+    "saturatedFatContent": "8 grams saturated fat",
+    "sodiumContent": "1160 milligrams sodium",
+    "sugarContent": "717 grams sugar",
+    "transFatContent": "0 grams trans fat",
+    "unsaturatedFatContent": "12 grams unsaturated fat"
+  },
+  "aggregateRating": {
+    "reviewCount": 8,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Averie Cooks",
+    "url": "https://www.averiecooks.com"
+  }
+}

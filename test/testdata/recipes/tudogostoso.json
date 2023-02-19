@@ -1,0 +1,54 @@
+{
+  "url": "https://www.tudogostoso.com.br/receita/128825-caipirinha-original.html",
+  "name": "Caipirinha - Original",
+  "description": "Receita de Caipirinha - Original. Enviada por Daniela Belizario e demora apenas 5 minutos.",
+  "inLanguage": "pt-BR",
+  "thumbnailUrl": "https://img.itdg.com.br/images/recipes/000/128/825/319875/319875_original.jpg",
+  "image": [
+    {
+      "url": "https://img.itdg.com.br/tdg/images/recipes/000/128/825/319875/319875_original.jpg"
+    }
+  ],
+  "author": {
+    "name": "Daniela Belizario"
+  },
+  "prepTime": 5,
+  "totalTime": 5,
+  "recipeCategory": [
+    "Bebidas"
+  ],
+  "keywords": [
+    "receita de caipirinha - original"
+  ],
+  "recipeYield": 1,
+  "recipeIngredient": [
+    "1 limão grande",
+    "2 colheres de açúcar",
+    "gelo a gosto",
+    "cachaça"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Pegue o limão coloque-o na horizontal e retire as duas pontas, vire-o na vertical e corte-o ao meio, retire os meio (parte branca) do limão e fatie."
+    },
+    {
+      "text": "Coloque o limão fatiado e duas colheres bem cheias de açúcar dentro de um copo próprio para a bebida e com um socador esprema até que saia todo o suco do limão."
+    },
+    {
+      "text": "Coloque pedras de gelo até quase encher o copo (aproximadamente 12 pedras pequenas de gelo) e encha o copo com a cachaça."
+    },
+    {
+      "text": "Mexa bem com uma colher ou coloque em uma coqueteleira e sirva-se!"
+    }
+  ],
+  "nutrition": {},
+  "aggregateRating": {
+    "reviewCount": 19,
+    "ratingValue": 4.5,
+    "bestRating": 5
+  },
+  "publisher": {
+    "name": "TudoGostoso",
+    "url": "https://www.tudogostoso.com.br"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "url": "https://dinnerly.de/menu/114391-koestliches-haehnchen-mit-erdnusssauce-in-einer-brokkoli-nudelpfanne",
+  "name": "Köstliches Hähnchen mit Erdnusssauce in einer Brokkoli-Nudelpfanne",
+  "description": "Hähnchen mit Erdnusssauce ist ein Klassiker auf den Menüs der Asia-Restaurants. Daran haben wir uns ein Beispiel genommen und das Gericht noch weiter verfeinert: Wir verzichten auf die Panade – die wird in der Sauce sowieso nur pappig – und ergänzen die Nudelpfanne stattdessen mit frischem Brokkoli und ein paar extra Erdnüssen für ganz viel Crunch auf dem Teller. Einfach köstlich – da ist die Pfanne ganz schnell leer …",
+  "inLanguage": "de_DE",
+  "thumbnailUrl": "https://marleyspoon.com/media/recipes/114391/main_photos/thumb/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
+  "image": [
+    {
+      "url": "https://marleyspoon.com/media/recipes/114391/main_photos/medium/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
+    },
+    {
+      "url": "https://marleyspoon.com/media/recipes/114391/main_photos/large/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
+    }
+  ],
+  "author": {
+    "name": "Jessica",
+    "knowsAbout": "Mir geht immer das Herz auf, wenn ich sehe wie Leute bei einem Essen zusammenkommen. Das ist der Grund, warum ich es liebe, anderen etwas zum Thema Essen beizubringen oder sie zum Kochen inspirieren kann. Ich hoffe, dass auch die nächsten Generationen solche Traditionen beibehalten und nicht vergessen, dass Liebe durch den Magen geht und die Menschen verbindet.",
+    "description": "Essen bringt die Menschen zusammen!",
+    "image": "https://marleyspoon.com/media/chefs/1204/avatars/medium/avatar-88853286603cef84bb4e7ec8174f6471.png"
+  },
+  "totalTime": 25,
+  "difficulty": "easy",
+  "suitableForDiet": [
+    "meat"
+  ],
+  "keywords": [
+    "poultry",
+    "dairy free"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "1 Päckchen Hühnerbrühgewürz",
+    "25ml Ketjap Manis",
+    "50g Erdnüsse, geröstet \u0026 gesalzen",
+    "1 Packung Hähnchenschenkelfilet",
+    "1 großer Brokkoli",
+    "250g breite Mie-Nudeln",
+    "1 Knoblauchzehe",
+    "1TL Weizenmehl",
+    "Salz und Pfeffer",
+    "Pflanzenöl",
+    "Essig"
+  ],
+  "recipeEquipment": [
+    "mittelgroßer Topf",
+    "große Pfanne",
+    "Messbecher",
+    "2 Siebe",
+    "Stabmixer mit hohem Gefäß"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Brokkoli zerteilen",
+      "text": "In einem mittelgroßen Topf ausreichend gesalzenes Wasser für die Nudeln zum Kochen bringen. Den Brokkoli in mundgerechte Röschen zerteilen.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597183/photos/large/75337_1-d308869efc4d5c2ba586f3aa432fd9f0.jpeg"
+    },
+    {
+      "name": "Fleisch braten",
+      "text": "Das Fleisch mit etwas Küchenkrepp trocken tupfen, in ca. 2cm große Würfel schneiden und in einer großen Pfanne mit 1EL Pflanzenöl bei mittlerer bis starker Hitze 3–5Min. braten, bis es rundherum goldbraun ist. Mit je 1 Prise Salz und Pfeffer würzen und in der Pfanne lassen; ggf. bis zur Weiterverwendung vom Herd nehmen.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597186/photos/large/75337_2-e37bd4eee26a5e798b1d1432a0cea28b.jpeg"
+    },
+    {
+      "name": "Brokkoli \u0026 Nudeln kochen",
+      "text": "Den Brokkoli im Nudelwasser 4–5Min. kochen, aus dem Wasser schöpfen und in einem Sieb mit kaltem Wasser abschrecken. Die Nudeln in das kochende Wasser geben und in 3–5Min. bissfest kochen. In ein Sieb abgießen und kalt abschrecken.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597188/photos/large/75337_3-10c8deda7238196117cf3f9c1c54b6f0.jpeg"
+    },
+    {
+      "name": "Erdnusssauce zubereiten",
+      "text": "1 Knoblauchzehe schälen, grob schneiden und in ein hohes Gefäß geben. Mit 3/4 der Erdnüsse, dem Ketjap Manis, der 1/2 des Brühgewürzes, 1TL Mehl, 1EL Pflanzenöl und 1EL hellem Essig ca. 1Min. pürieren, dabei nach und nach 75ml Wasser hinzugeben, bis eine glatte Sauce entsteht.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597191/photos/large/75337_4-fc5bd4005ed9dce93a14b9a2db151371.jpeg"
+    },
+    {
+      "name": "Fertigstellen \u0026 servieren",
+      "text": "Die Erdnusssauce zum Fleisch in die Pfanne geben und bei niedriger bis mittlerer Hitze 2–3Min. köcheln lassen, bis die Sauce eindickt. Ggf. mehr Wasser hinzufügen, um die gewünschte Konsistenz zu erhalten. Die Nudeln und den Brokkoli in die Pfanne geben und gründlich untermischen. Die Nudelpfanne mit den restlichen Erdnüssen garniert servieren.",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597192/photos/large/75337_5-2b1c5a23a835b4144b7c7baeeabaa291.jpeg"
+    },
+    {
+      "name": "Scharfe Sauce? Sriracha!",
+      "text": "Die Erdnusssauce ist durch das Ketjap Manis insgesamt eher mild im Geschmack. Man kann das Gericht aber problemlos anschärfen, indem man ein bisschen Sriracha-Sauce darüberträufelt. Das typische Aroma dieser Sauce setzt sich aus Chilischoten, Essig und Knoblauch zusammen und wird mit etwas Zucker abgerundet. Wohl bekomm's!",
+      "image": "https://marleyspoon.com/media/recipe_card_steps/597194/photos/large/75337_6-6132775c158633bcbe6992917d1dd2b6.jpeg"
+    }
+  ],
+  "nutrition": {
+    "calories": "1043kcal",
+    "carbohydrateContent": "111.0g",
+    "fatContent": "45.3g",
+    "proteinContent": "48.0g"
+  },
+  "citation": [
+    "https://marleyspoon.com/media/pdf/recipe_cards/114391/R-114391_-_K%C3%B6stliches_H%C3%A4hnchen_mit_Erdnusssauce-CV.pdf"
+  ],
+  "publisher": {
+    "name": "Dinnerly",
+    "url": "https://dinnerly.de"
+  }
+}

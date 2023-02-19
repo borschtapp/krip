@@ -1,0 +1,104 @@
+{
+  "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/",
+  "name": "One-Pan Roasted Chicken, Broccoli \u0026 Sweet Potatoes + Meal Prep",
+  "description": "Healthy one-pan chicken, sweet potatoes, and broccoli oven-roasted to perfection! This quick one-pan dish is packed full of flavor and is GREAT for meal prepping too!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://gimmedelicious.com/wp-content/uploads/2020/02/Healthy-Sheet-Pan-Chicken-Sweet-Potato-and-Broccoli-11.jpg",
+  "image": [
+    {
+      "url": "https://gimmedelicious.com/wp-content/uploads/2020/02/Healthy-Sheet-Pan-Chicken-Sweet-Potato-and-Broccoli-11-500x500.jpg"
+    },
+    {
+      "url": "https://gimmedelicious.com/wp-content/uploads/2020/02/Healthy-Sheet-Pan-Chicken-Sweet-Potato-and-Broccoli-11-500x375.jpg"
+    },
+    {
+      "url": "https://gimmedelicious.com/wp-content/uploads/2020/02/Healthy-Sheet-Pan-Chicken-Sweet-Potato-and-Broccoli-11-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Layla"
+  },
+  "prepTime": 10,
+  "cookTime": 30,
+  "totalTime": 37,
+  "recipeCategory": [
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "baked",
+    "chicken",
+    "easy",
+    "one pan"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "4 medium chicken breasts ((pounded thin))",
+    "2 tablespoons Cajun seasoning ((or taco seasoning))",
+    "2-3 cloves garlic ((minced))",
+    "1 tablespoon lemon juice ((or lime))",
+    "4 cups sweet potatoes ((diced))",
+    "4 cups broccoli florets",
+    "2 tablespoons olive oil",
+    "salt ((to taste))",
+    "pepper ((to taste))"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 425F. Line a baking sheet with foil or parchment paper and set aside.",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-0"
+    },
+    {
+      "text": "Place diced sweet potatoes on a baking sheet, drizzle with a light layer of oil and drizzle of salt \u0026 pepper. Bake for 15 minutes.",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-1"
+    },
+    {
+      "text": "While the sweet potatoes are baking, combine the chicken, seasoning, garlic, olive oil, and lemon juice in a large mixing bowl. Mix until the chicken is fully coated with spices.",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-2"
+    },
+    {
+      "text": "Remove sweet potatoes from the oven and add chicken and broccoli to the same pan (keep sweet potatoes in the pan). If the pan is too small, split them into two pans. Drizzle the broccoli with a light layer of olive oil and salt \u0026 pepper.",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-3"
+    },
+    {
+      "text": "Return sheet pan to the oven and bake another 15 minutes or until the chicken is cooked through. Turn on the broiler to high and broil for 2-3 minutes or until the chicken is golden (optional step).",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-4"
+    },
+    {
+      "text": "To Meal-Prep: allow the chicken to cool for at least 5-10 minutes before cutting. Cut into slices and divide chicken and veggies into 4 meal prep containers. Re-heat in the microwave for 2 minutes on high or until steaming.",
+      "url": "https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/#wprm-recipe-15654-step-0-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "478 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "35 g",
+    "cholesterolContent": "145 mg",
+    "fatContent": "14 g",
+    "fiberContent": "8 g",
+    "proteinContent": "53 g",
+    "saturatedFatContent": "2 g",
+    "sodiumContent": "368 mg",
+    "sugarContent": "8 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 20,
+    "ratingValue": 4.85
+  },
+  "video": {
+    "name": "Sheet Pan Roasted Chicken, Sweet Potatoes, \u0026 Broccoli + Meal Prep",
+    "description": "Full recipe here: https://gimmedelicious.com/chicken-broccoli-sweet-potatoes-meal-prep/ Healthy one-pan chicken, sweet potatoes, and broccoli oven-roasted to perfection! This quick one-pan dish is packed full of flavor and is GREAT for meal prepping too!",
+    "duration": "PT1M30S",
+    "embedUrl": "https://www.youtube.com/embed/u7qA2OtB6uk?feature=oembed",
+    "contentUrl": "https://www.youtube.com/watch?v=u7qA2OtB6uk",
+    "thumbnailUrl": "https://i.ytimg.com/vi/u7qA2OtB6uk/hqdefault.jpg",
+    "uploadDate": "2020-02-07T20:23:26Z"
+  },
+  "publisher": {
+    "name": "Gimme Delicious",
+    "url": "https://gimmedelicious.com"
+  },
+  "datePublished": "2020-02-06T23:21:08Z"
+}

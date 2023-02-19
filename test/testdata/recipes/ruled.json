@@ -1,0 +1,54 @@
+{
+  "url": "https://www.ruled.me/keto-eggwiches/",
+  "name": "Keto Eggwiches",
+  "description": "Keto eggwiches are easy to make and taste great. Give them a try today. Read on to get the recipe.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://cdn.ruled.me/wp-content/uploads/2022/03/Keto-Eggwiches-Featured.jpg",
+  "image": [
+    {
+      "url": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E"
+    }
+  ],
+  "totalTime": 20,
+  "recipeYield": 3,
+  "recipeIngredient": [
+    "6 large egg",
+    "1 tablespoon heavy cream",
+    "4 slice cooked bacon, chopped",
+    "1 cup spinach, chopped",
+    "Salt and pepper to taste",
+    "5 ounce breakfast sausage, cooked",
+    "3 ounce cheddar cheese, sliced"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Measure out and prepare all of the ingredients."
+    },
+    {
+      "text": "In a bowl, combine the eggs, heavy cream, chopped bacon, chopped spinach, salt, and pepper. Mix together until everything is combined well."
+    },
+    {
+      "text": "In a frying pan over medium heat, add oil and an egg ring. This will help to create a perfect circle."
+    },
+    {
+      "text": "Add the mixture into the egg ring until it gets full. Let this cook for about 2 minutes."
+    },
+    {
+      "text": "Remove the egg ring and flip. Let the other side cook for about 1-2 minutes. Repeat this until all of the egg mixture is gone."
+    },
+    {
+      "text": "On top of an egg circle, add the cooked breakfast sausage and a slice of cheese. Top with another egg circle."
+    },
+    {
+      "text": "Serve immediately and enjoy!"
+    }
+  ],
+  "nutrition": {
+    "calories": "547",
+    "fatContent": "42.7g"
+  },
+  "publisher": {
+    "name": "Ruled Me",
+    "url": "https://www.ruled.me"
+  }
+}

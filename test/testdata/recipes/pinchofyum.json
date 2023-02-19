@@ -1,0 +1,90 @@
+{
+  "url": "https://pinchofyum.com/instant-pot-noodles",
+  "name": "Chili Garlic Instant Pot Noodles",
+  "description": "Chili Garlic Instant Pot Noodles - They are sticky, with an umami flavor and a little sweetness. They are gorgeous, because we get fancy with our toppings.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-yoast.jpg",
+  "image": [
+    {
+      "url": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-Recipe-225x225.jpg"
+    },
+    {
+      "url": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-Recipe-260x195.jpg"
+    },
+    {
+      "url": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-Recipe-320x180.jpg"
+    },
+    {
+      "url": "https://pinchofyum.com/wp-content/uploads/Chili-Garlic-Instant-Pot-Noodles-Recipe.jpg"
+    }
+  ],
+  "author": {
+    "name": "Lindsay",
+    "url": "https://pinchofyum.com/about"
+  },
+  "prepTime": 5,
+  "cookTime": 3,
+  "totalTime": 8,
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeCuisine": [
+    "Asian-Inspired"
+  ],
+  "keywords": [
+    "instant pot noodles",
+    "chili garlic noodles",
+    "instant pot asian noodles"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1/2 cup soy sauce",
+    "2 tablespoons brown sugar",
+    "2 tablespoons white vinegar",
+    "1 tablespoon chili garlic paste (more to taste! yumms)",
+    "1 tablespoon olive oil",
+    "2 cups water",
+    "8 oz. uncooked brown rice noodles",
+    "1 lb. raw chicken breasts, cut into small pieces",
+    "2 red bell peppers, sliced thinly",
+    "peanuts, green onions, and/or sesame seeds for garnish"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Instant Pot",
+      "text": "Place all ingredients except red peppers in the Instant Pot (affiliate link). Cook for 3 minutes (manual). Release steam immediately. If you get splatter, pause, or cover with a towel.",
+      "url": "https://pinchofyum.com/instant-pot-noodles#instruction-step-1"
+    },
+    {
+      "name": "After:",
+      "text": "Mix in the red bell peppers and toss very gently, adding a little more water or oil as needed (it will be very sticky). Serve with garnishes – add hot sauce for an extra kick. Says me on every recipe ever. ♡",
+      "url": "https://pinchofyum.com/instant-pot-noodles#instruction-step-2"
+    }
+  ],
+  "nutrition": {
+    "calories": "286 calories",
+    "carbohydrateContent": "38.1 g",
+    "cholesterolContent": "55.2 mg",
+    "fatContent": "5.2 g",
+    "fiberContent": "1.6 g",
+    "proteinContent": "19 g",
+    "saturatedFatContent": "0.8 g",
+    "sodiumContent": "655 mg",
+    "sugarContent": "6.8 g",
+    "transFatContent": "0 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 118,
+    "ratingValue": 4.3
+  },
+  "video": {
+    "name": "Chili Garlic Noodles",
+    "description": "Chili Garlic Instant Pot Noodles – They are sticky, with an umami flavor and a little sweetness. They are gorgeous, because we get fancy with our toppings.",
+    "contentUrl": "https://content.jwplatform.com/videos/hx5b0xVZ.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/hx5b0xVZ-720.jpg"
+  },
+  "publisher": {
+    "name": "Pinch of Yum",
+    "url": "https://pinchofyum.com"
+  }
+}

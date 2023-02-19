@@ -1,0 +1,82 @@
+{
+  "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/",
+  "name": "Cheesy Grown Up SpaghettiOs",
+  "description": "These Cheesy Grown Up SpaghettiOs are just like the version you loved as a kid except fresh and even more yummy. A flavorful blast from the past that you'll love to make and eat!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2.jpg",
+  "image": [
+    {
+      "url": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2t.jpg"
+    },
+    {
+      "url": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2t-500x466.jpg"
+    },
+    {
+      "url": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2t-500x375.jpg"
+    },
+    {
+      "url": "https://picky-palate.com/wp-content/uploads/2013/03/Cheesy-Grown-Up-SpaghettiOs-2t-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Jenny"
+  },
+  "prepTime": 20,
+  "cookTime": 5,
+  "totalTime": 25,
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "homemade spaghettios",
+    "spaghettios recipe"
+  ],
+  "recipeYield": 9,
+  "recipeIngredient": [
+    "1 lb pasta (small and circular)",
+    "1 stick unsalted butter",
+    "45 oz tomato sauce",
+    "1 tbsp dry Ranch Dressing seasoning packet",
+    "2 cups cooked shredded chicken breast",
+    "1/2 tsp freshly ground black pepper",
+    "1 cup cheddar cheese (finely shredded)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Cook pasta according to package directions then drain under cold water to stop cooking.",
+      "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/#wprm-recipe-52946-step-0-0"
+    },
+    {
+      "text": "Melt butter into a large dutch oven or pot over medium heat. Add tomato sauce, stirring to combine.",
+      "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/#wprm-recipe-52946-step-0-1"
+    },
+    {
+      "text": "Add your cooked pasta to the sauce along with the shredded chicken, Ranch seasoning and black pepper. Stir to combine, reduce heat to medium low.",
+      "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/#wprm-recipe-52946-step-0-2"
+    },
+    {
+      "text": "Top with shredded cheese and close lid to melt cheese for 3-5 minutes. Once cheese is melted, serve.",
+      "url": "https://picky-palate.com/cheesy-grown-up-spaghettios/#wprm-recipe-52946-step-0-3"
+    }
+  ],
+  "nutrition": {
+    "calories": "278 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "47 g",
+    "cholesterolContent": "13 mg",
+    "fatContent": "5 g",
+    "fiberContent": "4 g",
+    "proteinContent": "12 g",
+    "saturatedFatContent": "3 g",
+    "sodiumContent": "950 mg",
+    "sugarContent": "7 g"
+  },
+  "publisher": {
+    "name": "Picky Palate",
+    "url": "https://picky-palate.com"
+  },
+  "datePublished": "2018-03-27T00:00:22Z"
+}

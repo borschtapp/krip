@@ -1,0 +1,62 @@
+{
+  "url": "https://www.tasteaholics.com/recipes/dinner/keto-white-chicken-chili-recipe/",
+  "name": "Keto White Chicken Chili",
+  "description": "Macros per serving: • 248 Calories • 21g of Fat • 18g of Protein • 4g of Net Carbs",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.tasteaholics.com/wp-content/uploads/2021/06/White-Chicken-Chili.jpg",
+  "author": {
+    "name": "Amanda Bochain"
+  },
+  "prepTime": 10,
+  "cookTime": 20,
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeYield": 8,
+  "recipeIngredient": [
+    "1 pound boneless, skinless chicken breast ((cubed))",
+    "1 cup chopped white onion",
+    "1 tbsp olive oil",
+    "2 tsp minced garlic",
+    "28 ounces chicken broth",
+    "2 tbsp chopped jalapeño",
+    "1 red bell pepper ((chopped))",
+    "2 tsp ground cumin",
+    "1 tsp adobo seasoning",
+    "1 tsp sriracha",
+    "1 tsp cayenne pepper",
+    "1 cup cream cheese ((softened))",
+    "1 cup shredded Monterey jack cheese"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Add the olive oil to a large pot and heat over medium high heat."
+    },
+    {
+      "text": "Add the chopped chicken breast and chopped onions to the pot and cook the chicken for about 8 minutes, stirring occasionally to brown on all sides."
+    },
+    {
+      "text": "Add the chopped bell pepper and jalapeno to the pot and stir. Cook for another 5 minutes to soften the peppers."
+    },
+    {
+      "text": "Add the cumin, adobo seasoning, sriracha, cayenne, cream cheese and chicken broth and stir."
+    },
+    {
+      "text": "Bring the chili to a boil and then reduce the heat so that the chili is just simmering."
+    },
+    {
+      "text": "Stir in the shredded cheese. Stir well until all the cheese has melted."
+    },
+    {
+      "text": "Divide between bowls and enjoy while hot."
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 3,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Tasteaholics",
+    "url": "https://www.tasteaholics.com"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "url": "https://www.cookinglight.com/recipes/avocado-black-bean-and-charred-tomato-bowl",
+  "name": "Avocado, Black Bean, and Charred Tomato Bowl",
+  "description": "This meatless bowl offers a range of textures and flavors, including cumin-scented black beans, blistered tomatoes, corn, and fresh avocado that are equally good at room temperature. If you don’t have time to stew your own beans, canned unsalted beans work just as well here. Feel free to mix it all together instead of portioning into quadrants. Finish it with a squeeze of lime, if you like.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?q=60\u0026c=sc\u0026poi=face\u0026url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1542730855%2Favocado-black-bean-and-charred-tomato-bowl-detox-book-p28.jpg%3Fitok%3D7dflTpmM",
+  "image": [
+    {
+      "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1542730855%2Favocado-black-bean-and-charred-tomato-bowl-detox-book-p28.jpg%3Fitok%3D7dflTpmM"
+    }
+  ],
+  "totalTime": 10,
+  "recipeYield": 1,
+  "recipeIngredient": [
+    "1/2 cup Savory Stewed Black Beans, warmed",
+    "1 teaspoon olive oil",
+    "1/2 cup grape tomatoes",
+    "1/4 cup fresh corn kernels (from 1 ear)",
+    "1/2 medium-sized ripe avocado, thinly sliced",
+    "1 medium radish, very thinly sliced",
+    "2 tablespoons fresh cilantro leaves",
+    "1/4 teaspoon kosher salt",
+    "1/8 teaspoon black pepper"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Place the black beans in a pile in the corner of a shallow bowl. Heat a small skillet over medium-high. Add the oil to the pan; swirl to coat. Add the tomatoes; cook until charred but not collapsing, about 3 minutes, shaking the pan once to turn the tomatoes. Place the tomatoes next to the beans in the bowl. Add the corn to the pan; cook until heated through, 2 to 3 minutes. Place the corn next to the tomatoes. Add the avocado slices, radish slices, and cilantro to the bowl. Sprinkle with the salt and pepper."
+    }
+  ],
+  "nutrition": {
+    "calories": "428",
+    "carbohydrateContent": "53 g",
+    "fatContent": "19 g",
+    "fiberContent": "17 g",
+    "proteinContent": "17 g",
+    "saturatedFatContent": "3 g",
+    "sodiumContent": "709 mg",
+    "sugarContent": "14 g",
+    "unsaturatedFatContent": "15 g"
+  },
+  "aggregateRating": {
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "publisher": {
+    "name": "Cooking Light",
+    "url": "https://www.cookinglight.com"
+  },
+  "datePublished": "2018-12-04T17:59:21Z"
+}

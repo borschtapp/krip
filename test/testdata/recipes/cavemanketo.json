@@ -1,0 +1,62 @@
+{
+  "url": "https://cavemanketo.com/portobello-pizza/",
+  "name": "Portobello Pizza",
+  "description": "Just cause you can't eat bread on keto doesn't mean you can't have pizza! Load up the toppings on a Portobello cap and you've got yourself a pizza!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://cavemanketo.com/wp-content/uploads/2014/12/Portobello-Pizza.jpg",
+  "image": [
+    {
+      "url": "https://cavemanketo.com/wp-content/uploads/2014/12/Portobello-Pizza-618x412.jpg"
+    }
+  ],
+  "prepTime": 10,
+  "cookTime": 12,
+  "totalTime": 22,
+  "recipeYield": 3,
+  "recipeIngredient": [
+    "3 Portobello Mushrooms",
+    "Drizzle of Olive Oil",
+    "3 tsp Pizza Seasoning",
+    "3 slices of tomato",
+    "9 Spinach leafs",
+    "1.5 Oz Mozzarella",
+    "1.5 Oz Monterey Jack",
+    "1.5 Oz Cheddar Cheese",
+    "12 Pepperonni slices"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat Convection Oven to 450"
+    },
+    {
+      "text": "Wash and destem the Portobello Mushrooms"
+    },
+    {
+      "text": "Place the mushrooms cap side down on a foil lined sheet and drizzle with olive oil"
+    },
+    {
+      "text": "Sprinkle with Pizza seasoning"
+    },
+    {
+      "text": "Layer spinach, tomato, cheese and another round of seasoning"
+    },
+    {
+      "text": "Cook in the convection oven until cheese has melted or around 6 minutes"
+    },
+    {
+      "text": "Add the pepperoni and cook until the pepperoni is crispy"
+    }
+  ],
+  "nutrition": {
+    "calories": "276",
+    "servingSize": "1 Pizza",
+    "carbohydrateContent": "6g",
+    "fatContent": "21g",
+    "fiberContent": "2g",
+    "proteinContent": "19g"
+  },
+  "publisher": {
+    "name": "Caveman Keto",
+    "url": "https://cavemanketo.com"
+  }
+}

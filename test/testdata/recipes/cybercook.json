@@ -1,0 +1,83 @@
+{
+  "url": "https://cybercook.com.br/receitas/aves/strogonoff-de-frango-16644",
+  "name": "Strogonoff de Frango",
+  "description": "Já experimentou essa maravilhosa receita de Strogonoff de Frango da Leticia? No CyberCook você encontra essa e outras receitas. Saiba nessa dica incrível",
+  "inLanguage": "pt-BR",
+  "image": [
+    {
+      "url": "https://img.cybercook.com.br/imagens/receitas/644/strogonoff-de-frango-1.jpg"
+    }
+  ],
+  "author": {
+    "name": "Leticia Obo Andreghetti"
+  },
+  "prepTime": 30,
+  "cookTime": 30,
+  "totalTime": 30,
+  "recipeCategory": [
+    "Aves"
+  ],
+  "keywords": [
+    "Sal",
+    "Receitas de Strogonoff",
+    "Receitas com Caldo",
+    "Peito de Frango",
+    "Creme de Leite",
+    "Caldo de Galinha",
+    "Russa",
+    "Cozinha Internacional",
+    "Receitas Salgadas",
+    "Frango",
+    "Aves",
+    "Pratos principais",
+    "Receitas de Frango Xadrez"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "Molho de tomate 200 gramas",
+    "Cebola 1 unidade",
+    "Alho 2 dentes",
+    "Creme de Leite 1 lata",
+    "Peito de Frango 600 gramas",
+    "Óleo de soja 2 colheres (sopa)",
+    "Sal a gosto",
+    "Pimenta-do-Reino Branca a gosto",
+    "Champignon em conserva 100 gramas"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Primeiro corte o frango em cubinhos."
+    },
+    {
+      "text": "Em uma panela média, coloque o óleo, o alho e a cebola e espere dourar."
+    },
+    {
+      "text": "Depois coloque o frango e o sal e a pimenta a gosto, aqueça até o ponto de fritura."
+    },
+    {
+      "text": "Mexa bem e tampe meia panela para que crie água, espere."
+    },
+    {
+      "text": "Sumir a água e começar a fritura."
+    },
+    {
+      "text": "Quando o frango já tiver dourado, acrescente o molho de tomate e o champignon."
+    },
+    {
+      "text": "Depois coloque a lata de creme de leite e mexa até espalhar, com a mesma lata encha de água."
+    },
+    {
+      "text": "Mexa mais uma vez até misturar e deixe levantar fervura."
+    },
+    {
+      "text": "O strogonoff está pronto para ser servido."
+    }
+  ],
+  "nutrition": {
+    "calories": "485.09"
+  },
+  "aggregateRating": {
+    "ratingCount": 80,
+    "ratingValue": 4
+  }
+}

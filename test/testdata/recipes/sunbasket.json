@@ -1,0 +1,54 @@
+{
+  "url": "https://sunbasket.com/recipe/lemongrass-turkey-salad-with-rice-noodles-and-pear",
+  "name": "Lemongrass-turkey salad with rice noodles and pear",
+  "description": "Our custom lemongrass paste transforms simple ingredients into a Thai-inspired noodle salad. It’s refreshing, light, and as inviting to look at as it is to eat.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://cdn.sunbasket.com/100408c8-f908-404e-a494-099fad9fed44.jpg",
+  "author": {
+    "name": "Sunbasket"
+  },
+  "cookTime": 15,
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "10 ounces ground turkey",
+    "5 ounces flat rice noodles",
+    "Sunbasket lemongrass paste (lemongrass - extra virgin olive oil - garlic - ginger - turmeric)",
+    "3 or 4 organic radishes (about ¼ pound total)",
+    "1 organic Asian or other pear",
+    "4 or 5 sprigs organic fresh mint",
+    "Sunbasket Thai dressing base (maple syrup - lime juice - fish sauce)",
+    "3 ounces organic baby kale or other leafy greens"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Step 1",
+      "text": "Cook the rice noodles"
+    },
+    {
+      "name": "Step 2",
+      "text": "Prep and cook your protein"
+    },
+    {
+      "name": "Step 3",
+      "text": "Prep the remaining ingredients; assemble the salad"
+    },
+    {
+      "name": "Step 4",
+      "text": "Serve"
+    }
+  ],
+  "nutrition": {
+    "calories": "760",
+    "cholesterolContent": "75mg",
+    "fatContent": "34g",
+    "fiberContent": "7g",
+    "proteinContent": "31g",
+    "saturatedFatContent": "6g",
+    "sodiumContent": "900mg",
+    "sugarContent": "15g"
+  },
+  "aggregateRating": {
+    "ratingCount": 1340,
+    "ratingValue": 5
+  }
+}

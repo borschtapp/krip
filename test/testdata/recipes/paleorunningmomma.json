@@ -1,0 +1,103 @@
+{
+  "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/",
+  "name": "Paleo Beef Stroganoff {Whole30, Keto}",
+  "description": "This hearty and savory paleo beef stroganoff is made all in one skillet for a quick, delicious and cozy weeknight meal. It’s Whole30 compliant, low carb and keto and perfect served over sautéed cauliflower rice or your favorite veggie noodles!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9.jpg",
+  "image": [
+    {
+      "url": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9-500x500.jpg"
+    },
+    {
+      "url": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9-500x375.jpg"
+    },
+    {
+      "url": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Michele Rosen"
+  },
+  "prepTime": 10,
+  "cookTime": 30,
+  "recipeCategory": [
+    "Dinner"
+  ],
+  "recipeCuisine": [
+    "Gluten-free",
+    "keto",
+    "Paleo",
+    "Whole30"
+  ],
+  "keywords": [
+    "beef",
+    "dinner",
+    "keto",
+    "low carb",
+    "paleo",
+    "stroganoff",
+    "whole30"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "5 Tbsp ghee (divided)",
+    "1.5 lb top sirloin or tenderloin (thinly sliced into 1/2” x 2” strips)",
+    "1 large onion (thinly sliced)",
+    "Sea salt and black pepper to taste",
+    "8 oz mushrooms (sliced)",
+    "3 cloves garlic (minced)",
+    "2 cups beef broth",
+    "1 Tbsp coconut aminos",
+    "2 Tbsp arrowroot flour (or tapioca)",
+    "Salt to taste and black pepper to taste",
+    "1 cup coconut cream (canned, unsweetened)",
+    "1 Tbsp fresh lemon juice",
+    "1 tsp dijon mustard",
+    "Pinch Sea salt",
+    "Sea salt and black pepper to taste",
+    "Minced parsley (for garnish)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "In a large deep skillet, melt 2 tablespoons of the ghee over medium-high heat.",
+      "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/#wprm-recipe-31920-step-0-0"
+    },
+    {
+      "text": "Add the steak in a single layer, season with salt and pepper, and let it cook for 3 minutes to brown. Flip, and cook on the other side until browned, another 2 minutes. Then remove steak from pan with a slotted spoon, transfer to a plate, and set aside.",
+      "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/#wprm-recipe-31920-step-0-1"
+    },
+    {
+      "text": "Lower the heat to medium and the remaining 3 tablespoons of ghee to the skillet. Once it has melted, add the onions and sauté for about 3 minutes, until soft and fragrant. Add mushrooms and sauté for an additional 5-7 minutes, stirring occasionally, or until the mushrooms are cooked and the onions are soft, then add the garlic and sauté 1 minute, stirring occasionally.",
+      "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/#wprm-recipe-31920-step-0-2"
+    },
+    {
+      "text": "In a bowl or large measuring cup, whisk in together the beef broth, coconut aminos and arrowroot until smooth. Pour the mixture into the skillet and stir well to combine. Simmer for about 5 minutes, stirring occasionally. Meanwhile, in a separate small bowl whisk together the coconut cream, lemon juice, mustard and a pinch of sea salt. Stir the coconut cream mixture plus the cooked steak into the skillet and stir until combined. Taste and season with additional salt and pepper if needed, and cook just long enough to heat through.",
+      "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/#wprm-recipe-31920-step-0-3"
+    },
+    {
+      "text": "Garnish with parsley, if desired, and serve over cauliflower rice or your favorite veggie noodles. Enjoy!",
+      "url": "https://www.paleorunningmomma.com/paleo-beef-stroganoff-whole30-keto/#wprm-recipe-31920-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "422 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "9 g",
+    "cholesterolContent": "99 mg",
+    "fatContent": "31 g",
+    "fiberContent": "2 g",
+    "proteinContent": "29 g",
+    "saturatedFatContent": "22 g",
+    "sodiumContent": "432 mg",
+    "sugarContent": "2 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 69,
+    "ratingValue": 4.51
+  },
+  "publisher": {
+    "name": "The Paleo Running Momma",
+    "url": "https://www.paleorunningmomma.com"
+  },
+  "datePublished": "2020-12-27T07:00:02Z"
+}

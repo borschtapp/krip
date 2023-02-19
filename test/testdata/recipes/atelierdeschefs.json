@@ -1,0 +1,110 @@
+{
+  "url": "https://www.atelierdeschefs.fr/fr/recette/16689-crepe-savoyarde.php",
+  "name": "Crêpe savoyarde",
+  "description": "Une crêpe aux saveurs de la Savoie: des pommes de terre, du lard, de la crème et du fromage à raclette.",
+  "inLanguage": "fr_FR",
+  "thumbnailUrl": "https://www.atelierdeschefs.com/media/recette-e16689-crepe-savoyarde.jpg",
+  "image": [
+    {
+      "url": "https://www.atelierdeschefs.com/media/recette-e16689-crepe-savoyarde.jpg"
+    }
+  ],
+  "author": {
+    "name": "L'atelier des Chefs"
+  },
+  "prepTime": 10,
+  "cookTime": 20,
+  "recipeIngredient": [
+    "Lait 1/2 écrémé: 25 cl",
+    "Beurre doux: 120 g",
+    "Oeuf(s): 1 pièce(s)",
+    "Farine de blé: 70 g",
+    "Farine de sarrasin (blé noir): 55 g",
+    "Sel fin: 8 pincée(s)",
+    "Pomme(s) de terre à chair ferme: 300 g",
+    "Gros sel: 5 g",
+    "Raclette au lait cru: 50 g",
+    "Lardon(s) fumé(s): 100 g",
+    "Crème fraîche épaisse: 50 g",
+    "Moulin à poivre: 6 tour(s)"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Pour la pâte à crêpes",
+      "itemListElement": [
+        {
+          "text": "Pour la pâte à crêpes: dans un bol, réunir les farines et le sel."
+        },
+        {
+          "text": "Casser l’œuf et mélanger grossièrement, puis ajouter progressivement le lait tout en fouettant énergiquement."
+        },
+        {
+          "text": "Faire fondre le beurre, puis l'ajouter à l'appareil."
+        },
+        {
+          "text": "Laisser ensuite reposer au frais pendant 1 h."
+        },
+        {
+          "text": "Réaliser les crêpes sur une crêpière chaude jusqu'à épuisement de la pâte."
+        }
+      ]
+    },
+    {
+      "name": "Pour la garniture",
+      "itemListElement": [
+        {
+          "text": "Préchauffer le four à 180 °C (th."
+        },
+        {
+          "text": "6)."
+        },
+        {
+          "text": "Éplucher les pommes de terre et les couper en rondelles."
+        },
+        {
+          "text": "Les disposer ensuite dans une casserole avec le gros sel, puis les couvrir d'eau."
+        },
+        {
+          "text": "Porter à ébullition, puis cuire les pommes de terre pendant 5 min avant de les égoutter."
+        },
+        {
+          "text": "Dorer les lardons dans une poêle chaude, puis les égoutter sur une feuille de papier absorbant."
+        },
+        {
+          "text": "Couper le fromage en fines tranches."
+        },
+        {
+          "text": "Dans une poêle chaude, faire fondre 10 g de beurre puis réchauffer doucement une crêpe."
+        },
+        {
+          "text": "Disposer ensuite les rondelles de pommes de terre, puis les lardons."
+        },
+        {
+          "text": "Ajouter la crème et une tranche de fromage, saler et poivrer."
+        },
+        {
+          "text": "Enfourner à 180 °C (th."
+        },
+        {
+          "text": "6) jusqu'à ce que le fromage ait fondu."
+        },
+        {
+          "text": "Renouveler l'opération pour les 5 autres crêpes."
+        },
+        {
+          "text": "Servir aussitôt."
+        }
+      ]
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 310,
+    "ratingValue": 3.7,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "publisher": {
+    "name": "https://www.atelierdeschefs.fr",
+    "url": "https://www.atelierdeschefs.fr"
+  }
+}

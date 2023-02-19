@@ -1,0 +1,99 @@
+{
+  "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/",
+  "name": "Keto Chicken \u0026 Chorizo Sheet Pan Dinner",
+  "description": "This Keto Chicken \u0026 Chorizo Sheet Pan Dinner contains just a few low carb ingredients, and is easy to throw together at a moment's notice. Convenient for you, delicious for them!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo4.jpg",
+  "image": [
+    {
+      "url": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo5-225x225.jpg"
+    },
+    {
+      "url": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo5-260x195.jpg"
+    },
+    {
+      "url": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo5-320x180.jpg"
+    },
+    {
+      "url": "https://www.ibreatheimhungry.com/wp-content/uploads/2021/04/chixchorizo5.jpg"
+    }
+  ],
+  "author": {
+    "name": "Mellissa Sevigny"
+  },
+  "prepTime": 10,
+  "cookTime": 35,
+  "totalTime": 45,
+  "cookingMethod": "Baking",
+  "suitableForDiet": [
+    "DiabeticDiet"
+  ],
+  "recipeCategory": [
+    "Keto Sheet Pan Dinner"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "Keto Chicken Sheet Pan Meal",
+    "Chicken \u0026 Chorizo Sheet Pan Meal"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "4 bone-in chicken thighs",
+    "4 links of Mexican chorizo (raw)",
+    "4 cups sliced zucchini (about 1/2 inch thick)",
+    "1 cup cherry tomatoes",
+    "1 tablespoon avocado or olive oil",
+    "1 teaspoon kosher salt (plus more to taste)",
+    "1/4 teaspoon ground black pepper",
+    "1 teaspoon garlic powder",
+    "1/2 teaspoon dried thyme leaves"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat the oven to 400 degrees.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-1"
+    },
+    {
+      "text": "Season the chicken pieces on all sides liberally with salt and pepper.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-2"
+    },
+    {
+      "text": "Evenly distribute the seasoned chicken, chorizo, zucchini, and tomatoes across a large sheet pan.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-3"
+    },
+    {
+      "text": "Drizzle with oil, and sprinkle the veggies with 1 teaspoon kosher salt, 1/4 teaspoon pepper, garlic powder and thyme.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-4"
+    },
+    {
+      "text": "Bake for 35 – 40 minutes, or until the chicken is cooked to an internal temperature of 160 degrees and the skin is crisp and golden brown.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-5"
+    },
+    {
+      "text": "Slice the chorizo into 1/2 inch thick coins, and serve with the chicken and vegetables.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-6"
+    },
+    {
+      "text": "Leftovers can be kept in an airtight container in the refrigerator for up to 5 days.",
+      "url": "https://www.ibreatheimhungry.com/keto-chicken-chorizo-sheet-pan-dinner/#instruction-step-7"
+    }
+  ],
+  "nutrition": {
+    "calories": "589 calories",
+    "servingSize": "1 thigh, 1 link, 3/4 cup veggies",
+    "carbohydrateContent": "7g",
+    "fatContent": "44g",
+    "fiberContent": "2g",
+    "proteinContent": "51g"
+  },
+  "aggregateRating": {
+    "reviewCount": 1,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "I Breathe I'm Hungry",
+    "url": "https://www.ibreatheimhungry.com"
+  }
+}

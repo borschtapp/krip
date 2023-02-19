@@ -1,0 +1,73 @@
+{
+  "url": "https://naturallyella.com/black-bean-tacos/",
+  "name": "Spiced Black Bean Tacos with Avocado and Goat Cheese",
+  "description": "Easy and fresh black bean tacos made from black beans and an easy spice blend then topped with fresh cilantro, avocado, and goat cheese.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://32lxcujgg9-flywheel.netdna-ssl.com/wp-content/uploads/2017/01/black-bean-tacos-2-667x1000.jpg",
+  "image": [
+    {
+      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-225x225.jpg"
+    },
+    {
+      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-260x195.jpg"
+    },
+    {
+      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-320x180.jpg"
+    },
+    {
+      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2.jpg"
+    }
+  ],
+  "author": {
+    "name": "Erin Alderson"
+  },
+  "prepTime": 10,
+  "cookTime": 10,
+  "totalTime": 20,
+  "recipeCategory": [
+    "Main Course"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "2 teaspoons olive oil",
+    "1 clove garlic",
+    "1 cup black beans (with liquid)",
+    "1/2 teaspoon ground cumin",
+    "1/2 teaspoon ground coriander",
+    "1/4 teaspoon chili powder",
+    "Salt (to taste)",
+    "4 corn tortillas",
+    "1 ripe avocado",
+    "1 to 2 ounces goat cheese",
+    "Minced red onion",
+    "Lime wedges",
+    "Hot Sauce",
+    "Cilantro"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Place a small pot or skillet over medium-low heat. Add the olive oil followed by the minced garlic. Cook for 1 to 2 minutes, just to until the garlic begins to brown. Place beans and liquid in a pan with the cumin, coriander, garlic powder, and chili powder. Heat over medium-low heat until the majority of the liquid has been absorbed. Taste and add salt as needed."
+    },
+    {
+      "text": "Heat the tortillas until soft and cut the avocado into slices. Assemble the tacos with ¼ of the bean mixture, a few slices of avocado, a sprinkle of goat cheese, and desired toppings."
+    }
+  ],
+  "nutrition": {
+    "calories": "677",
+    "carbohydrateContent": "91.6",
+    "cholesterolContent": "6.5",
+    "fatContent": "25.2",
+    "fiberContent": "25.2",
+    "proteinContent": "28.6",
+    "sodiumContent": "109.6",
+    "sugarContent": "3.2"
+  },
+  "aggregateRating": {
+    "reviewCount": 3,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Naturally.",
+    "url": "https://naturallyella.com"
+  }
+}

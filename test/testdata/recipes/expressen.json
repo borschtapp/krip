@@ -1,0 +1,60 @@
+{
+  "url": "https://www.expressen.se/alltommat/recept/briochehamburgerbrod/",
+  "name": "Brioche-hamburgerbröd",
+  "description": "Recept på briochehamburgerbröd. Perfekta hamburgerbröd som är lätt söta och fluffiga. Inkråmet är mjukt och luftigt och tar upp smakerna från en saftig -ham-burgare bra.",
+  "inLanguage": "sv_SE",
+  "thumbnailUrl": "https://static.cdn-expressen.se/images/8b/46/8b46181ad1eb42e98d7b05cfdf21e0a9/16x9/original.jpg",
+  "image": [
+    {
+      "url": "https://static.cdn-expressen.se/images/8b/46/8b46181ad1eb42e98d7b05cfdf21e0a9/1x1/1920@80.jpg"
+    },
+    {
+      "url": "https://static.cdn-expressen.se/images/8b/46/8b46181ad1eb42e98d7b05cfdf21e0a9/4x3/1920@80.jpg"
+    },
+    {
+      "url": "https://static.cdn-expressen.se/images/8b/46/8b46181ad1eb42e98d7b05cfdf21e0a9/16x9/1920@80.jpg"
+    }
+  ],
+  "author": {
+    "name": "gunilla von heland"
+  },
+  "text": "alltom mat",
+  "totalTime": 20,
+  "recipeCategory": [
+    "Hamburgare"
+  ],
+  "keywords": [
+    "sections/recept"
+  ],
+  "recipeYield": 12,
+  "recipeIngredient": [
+    "2.5 dl vatten",
+    "0.5 dl mjölk",
+    "25 g jäst",
+    "2.5 msk strösocker",
+    "1 tsk salt",
+    "1 ägg",
+    "7.5 dl vetemjöl",
+    "50 g smör",
+    "1 ägg"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Värm vatten och mjölk till 37°. Rör ut jästen med lite av vätskan och tillsätt socker, salt, ägg och mjöl, spara ca 1/2 dl till utbakning. Arbeta degen i maskin ca 5 min. Klicka ner smöret mot slutet. Låt jäsa övertäckt ca 1 timme."
+    },
+    {
+      "text": "Arbeta degen lätt i maskinen. Ta upp på mjölad arbetsbänk. Dela degen i 12 bitar. Forma bitarna till runda bullar och platta ut dem lätt. Lägg dem på en plåt med bakplåtspapper. Låt jäsa övertäckta ytterligare ca 1 timme. Sätt ugnen på 200°."
+    },
+    {
+      "text": "Pensla bröden med uppvispat ägg och grädda mitt i ugnen ca 15 min. Låt svalna på galler."
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 742,
+    "ratingValue": 3.8409703504043127
+  },
+  "publisher": {
+    "name": "Bonnier Magazines \u0026 Brands AB",
+    "url": "https://www.expressen.se"
+  }
+}

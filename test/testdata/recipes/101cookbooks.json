@@ -1,0 +1,65 @@
+{
+  "url": "https://www.101cookbooks.com/blood-orange-gin-sparkler/",
+  "name": "Blood Orange Gin Sparkler",
+  "description": "The citrus gin cocktail you want to be drinking. It's bright and beautiful - perfect for winter holidays and New Years Eve.",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://images.101cookbooks.com/gin_sparkler.jpg?w=680",
+  "image": [
+    {
+      "url": "https://images.101cookbooks.com/gin_sparkler.jpg?w=680\u0026auto=format"
+    },
+    {
+      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=1000\u0026auto=format"
+    },
+    {
+      "url": "https://images.101cookbooks.com/gin-sparkler-recipe-v.jpg?w=800\u0026h=800\u0026fp-z=2\u0026fp-y=.5\u0026fp-x=.5\u0026fit=crop\u0026crop=entropy"
+    }
+  ],
+  "author": {
+    "name": "Heidi Swanson"
+  },
+  "prepTime": 5,
+  "cookTime": 10,
+  "totalTime": 15,
+  "recipeCategory": [
+    "Drinks"
+  ],
+  "recipeCuisine": [
+    "Cocktail"
+  ],
+  "keywords": [
+    "citrus",
+    "gin"
+  ],
+  "recipeYield": 1,
+  "recipeIngredient": [
+    "2 cups / 480 ml water",
+    "1 cup / 6.5 oz / 185 g sugar",
+    "4 tablespoons (~2 sprigs-worth) fresh rosemary leaves",
+    "1 bay leaf (optional)",
+    "blood oranges",
+    "gin",
+    "ice cubes",
+    "tonic water (or sparkling water)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Combine the water, sugar, rosemary, and bay in a small saucepan over medium heat. Bring to a simmer for 3-5 minutes, or long enough for the sugar to dissolve, stirring occasionally. Remove from the heat and let infuse for 10 minutes. Strain into a jar to cool completely."
+    },
+    {
+      "text": "In the meantime, juice and strain your oranges, you'll need 3 tablespoons / 1.5 ounces of juice for each drink."
+    },
+    {
+      "text": "To make each drink you're going to combine equal parts gin, juice, and tonic water with a bit of syrup and ice. So, its 3 tablespoons / 1 1/2 oz gin, 3 tablespoons / 1 1/2 oz freshly squeezed blood orange juice, and 1-2 teaspoons of the rosemary syrup in each tall glass (I used kolsch glasses here). Stir to combine, fill each glass 2/3 full with ice and top off with 3 tablespoons / 1 1/2 oz tonic water. Stir again and you're set."
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 8,
+    "ratingValue": 4.25
+  },
+  "publisher": {
+    "name": "101 Cookbooks",
+    "url": "https://www.101cookbooks.com"
+  },
+  "datePublished": "2022-03-31T11:36:56Z"
+}

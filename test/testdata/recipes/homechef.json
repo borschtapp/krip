@@ -1,0 +1,67 @@
+{
+  "url": "https://www.homechef.com/meals/prosciutto-and-mushroom-carbonara-standard",
+  "name": "Prosciutto and Mushroom Carbonara with Asiago and peas",
+  "description": "This meal could go by another name: “A cured meat and umami bomb of flavor, all tangled with pasta.” But that's too long a name to go on the recipe card and besides, you already know what we mean when we say “prosciutto” and “mushrooms.” But this pasta also has a creamy lemon-y sauce, not to mention butter and cheese… now we're talking paragraphs, not meal titles.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Fmeal%2Fplated%2F18612%2Fdisplay_5846ProsciuttoandAsiagoCarbonara_Ecomm__1_of_1_-7e576bca3e38185a1acfd06570476d88-7e576bca3e38185a1acfd06570476d88.jpg?ixlib=rails-1.1.0\u0026auto=format\u0026s=7524b92d3df99ea06b266755bb7a20f6",
+  "image": [
+    {
+      "url": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Fmeal%2Fplated%2F18612%2F5846ProsciuttoandAsiagoCarbonara_Ecomm__1_of_1_-7e576bca3e38185a1acfd06570476d88-7e576bca3e38185a1acfd06570476d88.jpg?ixlib=rails-1.1.0\u0026w=600\u0026auto=format\u0026s=8ffa167fc61e45d14b773a3e06cddaf4"
+    }
+  ],
+  "author": {
+    "name": "Chef Patrick Le Beau",
+    "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Fchef%2Fchef_photo%2F35%2FChefHeadshot11.28.2018_2of2_-8d31a01f913f27590d3f875cda8d2e78.jpg?ixlib=rails-1.1.0\u0026auto=format\u0026blur=250\u0026q=0\u0026w=50\u0026s=e366d5b27590ecefffed44ffb0b9cd34"
+  },
+  "totalTime": 35,
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "Info 6 oz. Linguine",
+    "1 Lemon",
+    "4 oz. Cremini Mushrooms",
+    "3 oz. Peas",
+    "2 oz. Prosciutto",
+    "Info 2 oz. Sour Cream",
+    "Info 1 oz. Shredded Asiago Cheese",
+    "Info ⅓ oz. Butter",
+    "2 Garlic Cloves"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Cook the Pasta",
+      "text": "Once water in medium pot is boiling, add pasta and cook until al dente, 10-12 minutes.Reserve 1/2 cup pasta cooking water. Drain pasta in a colander and set aside.While pasta cooks, prepare ingredients.",
+      "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F66203%2F5840ShrimpFlorentinePastaStepsReshoot__3_of_5_-400a0415046ac3becbfd98a4e09c14b0-400a0415046ac3becbfd98a4e09c14b0.jpg?ixlib=rails-1.1.0\u0026w=75\u0026auto=format\u0026blur=100\u0026q=0\u0026s=1f47c01db89b0d5660c3eca52f5711e1"
+    },
+    {
+      "name": "Prepare the Ingredients",
+      "text": "Cut mushrooms into 1/4\" slices.Halve and juice lemon.Mince garlic.",
+      "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F66205%2F_005846.002.01_StepShotsEdit_2_of_4_.jpg?ixlib=rails-1.1.0\u0026w=75\u0026auto=format\u0026blur=100\u0026q=0\u0026s=d05031661c5824aae52a82e200a4ed1b"
+    },
+    {
+      "name": "Crisp the Prosciutto",
+      "text": "Remove prosciutto from refrigerator. Line a plate with a paper towel.Place a large non-stick pan over medium heat and add 1/2 tsp. olive oil. Working in batches, add prosciutto to hot pan in a single layer. Cook until crispy, 1-2 minutes per side.Transfer prosciutto to towel-lined plate. When cool enough to handle, break into bite-sized pieces. Reserve pan; no need to wipe clean.",
+      "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F66207%2F_005846.002.01_StepShotsEdit_3_of_4_.jpg?ixlib=rails-1.1.0\u0026w=75\u0026auto=format\u0026blur=100\u0026q=0\u0026s=6a371685bf49745329ee3c038d0d874d"
+    },
+    {
+      "name": "Cook the Mushrooms",
+      "text": "Return pan used to crisp prosciutto to medium-high heat and add 1 tsp. olive oil.Add mushrooms and a pinch of salt and pepper to hot pan. Stir occasionally until beginning to brown, 3-4 minutes.Add garlic and stir constantly until aromatic, 30-60 seconds.",
+      "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F66210%2F_005846.002.01_StepShotsEdit_4_of_4_.jpg?ixlib=rails-1.1.0\u0026w=75\u0026auto=format\u0026blur=100\u0026q=0\u0026s=df8bd3adace56f5f12a48d207acef31e"
+    },
+    {
+      "name": "Make Sauce and Finish Dish",
+      "text": "Stir pasta, butter, a pinch of salt, and half the reserved pasta cooking water into hot pan until butter is melted. Stir in peas and half the cheese (reserve remaining for garnish) until cheese melts, 30-60 seconds.Remove from burner and stir in sour cream, 2 tsp. lemon juice, half the prosciutto (reserve remaining for garnish), 1/4 tsp. salt, and a pinch of pepper. If sauce is too thick, add additional pasta cooking water, 1 Tbsp. at a time, until desired consistency is reached.Plate dish as pictured on front of card, garnishing with remaining prosciutto and remaining cheese. Bon appétit!",
+      "image": "https://homechef.imgix.net/https%3A%2F%2Fasset.homechef.com%2Fuploads%2Frecipe%2Fimage%2F66214%2F_005846.002.01_StepShotsEdit_1_of_4_.jpg?ixlib=rails-1.1.0\u0026w=75\u0026auto=format\u0026blur=100\u0026q=0\u0026s=577c21d6ec7434dd3c0a9b83ce46fa87"
+    }
+  ],
+  "nutrition": {
+    "calories": "600",
+    "carbohydrateContent": "76g",
+    "fatContent": "21g",
+    "proteinContent": "26g",
+    "sodiumContent": "1330mg"
+  },
+  "publisher": {
+    "name": "Home Chef",
+    "url": "https://www.homechef.com"
+  }
+}

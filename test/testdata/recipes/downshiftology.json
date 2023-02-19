@@ -1,0 +1,103 @@
+{
+  "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/",
+  "name": "Greek Chicken Kabobs",
+  "description": "These greek chicken kabobs are incredibly flavorful and a perfect grilling recipe. Serve this with a homemade tzaztiki sauce!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3.jpg",
+  "image": [
+    {
+      "url": "https://downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3-500x500.jpg"
+    },
+    {
+      "url": "https://downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3-500x375.jpg"
+    },
+    {
+      "url": "https://downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Lisa Bryan"
+  },
+  "prepTime": 30,
+  "cookTime": 25,
+  "totalTime": 55,
+  "recipeCategory": [
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "Greek"
+  ],
+  "keywords": [
+    "easy chicken kabobs",
+    "Greek chicken kabobs"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "1/4 cup olive oil",
+    "2 tablespoons red wine vinegar",
+    "3 tablespoons lemon juice",
+    "1 teaspoon Dijon mustard",
+    "3 garlic cloves (minced)",
+    "1 teaspoon dried oregano",
+    "1/2 teaspoon salt",
+    "1/4 teaspoon black pepper",
+    "1 1/2 pounds boneless skinless chicken breasts (about 3 large chicken breasts, cut into 1 1/2-inch pieces.)",
+    "1 red bell pepper (seeded, cut into 1 1/2-Inch pieces)",
+    "1 yellow bell pepper (seeded, cut into 1 1/2-inch pieces)",
+    "1 red onion (cut into 1 1/2-inch chunks)",
+    "1 zucchini (sliced)"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Make marinade",
+      "text": "To make the marinade, whisk together the olive oil, red wine vinegar, lemon juice, Dijon mustard, minced garlic, dried oregano, salt, and pepper.",
+      "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/#wprm-recipe-44909-step-0-0",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/How-to-Make-Greek-Chicken-Kabobs-1.jpg"
+    },
+    {
+      "name": "Marinate chicken",
+      "text": "Place chicken pieces in a glass dish and pour the marinade over the chicken. Cover and marinate in the fridge for at least one hour.",
+      "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/#wprm-recipe-44909-step-0-1",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/How-to-Make-Greek-Chicken-Kabobs-2.jpg"
+    },
+    {
+      "name": "Thread skewers",
+      "text": "Light a gas or charcoal grill on medium-high heat. Thread the skewers with pieces of red onion, chicken, zucchini, and bell pepper. You can alternate the order.",
+      "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/#wprm-recipe-44909-step-0-2",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/How-to-Make-Greek-Chicken-Kabobs-3.jpg"
+    },
+    {
+      "name": "Grill kabobs",
+      "text": "Place the kabobs on the preheated grill, and cook about 5-7 minutes per side. The kabobs are done when the chicken is cooked through and the vegetables are lightly charred, about 15 minutes.",
+      "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/#wprm-recipe-44909-step-0-3",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/How-to-Make-Greek-Chicken-Kabobs-4.jpg"
+    },
+    {
+      "name": "Serve",
+      "text": "Serve with lemon wedges and tzatziki sauce.",
+      "url": "https://downshiftology.com/recipes/greek-chicken-kabobs/#wprm-recipe-44909-step-0-4",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/How-to-Make-Greek-Chicken-Kabobs-5.jpg"
+    }
+  ],
+  "nutrition": {
+    "calories": "135 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "11 g",
+    "cholesterolContent": "24 mg",
+    "fatContent": "6 g",
+    "fiberContent": "3 g",
+    "proteinContent": "10 g",
+    "saturatedFatContent": "1 g",
+    "sodiumContent": "460 mg",
+    "sugarContent": "6 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 25,
+    "ratingValue": 5
+  },
+  "publisher": {
+    "name": "Downshiftology",
+    "url": "https://downshiftology.com"
+  },
+  "datePublished": "2020-09-24T09:56:54Z"
+}

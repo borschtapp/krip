@@ -1,0 +1,106 @@
+{
+  "url": "//nomnompaleo.com/pineapple-coleslaw",
+  "name": "Pineapple Coleslaw",
+  "description": "This tropical pineapple coleslaw combines crunchy shredded cabbage, juicy pineapple, salty macadamia nuts, and a mayo-free, Asian-inspired dressing. It’s the perfect soy-free, paleo, gluten-free, and Whole30 summer side dish for your favorite grilled main dishes!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://nomnompaleo.com/wp-content/uploads/2022/05/1200-Pineapple-Coleslaw-DSC_7021.jpg",
+  "image": [
+    {
+      "url": "https://nomnompaleo.com/wp-content/uploads/2022/05/1200-Pineapple-Coleslaw-DSC_7021-500x500.jpg"
+    },
+    {
+      "url": "https://nomnompaleo.com/wp-content/uploads/2022/05/1200-Pineapple-Coleslaw-DSC_7021-500x375.jpg"
+    },
+    {
+      "url": "https://nomnompaleo.com/wp-content/uploads/2022/05/1200-Pineapple-Coleslaw-DSC_7021-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Michelle Tam"
+  },
+  "prepTime": 15,
+  "cookTime": 15,
+  "totalTime": 120,
+  "recipeCategory": [
+    "Salad"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "coleslaw",
+    "low carb",
+    "nom nom paleo",
+    "nomnompaleo",
+    "paleo",
+    "pineapple",
+    "Whole30"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "½ cup All-Purpose Stir-Fry Sauce",
+    "1 pound green cabbage (cored, and finely shred)",
+    "1 pound red cabbage (cored, and finely shred)",
+    "1 tablespoon Diamond Crystal kosher salt (or 1½ teaspoons table salt)",
+    "2 medium carrots (peeled and finely sliced)",
+    "1 cup canned pineapple tidbits in 100% pineapple juice (drained)",
+    "¼ cup roasted and salted macadamia nuts ( roughly chopped)",
+    "2 teaspoons toasted sesame seeds",
+    "2 scallions or green onions (thinly sliced)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Shake up a jar of All-Purpose Stir-Fry Sauce or grab it from the refrigerator. This is your easy-peasy pineapple coleslaw dressing!",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-0"
+    },
+    {
+      "text": "Toss the cabbage and salt in a large colander. Leave it for 1 to 4 hours or until the cabbage mixture wilts and liquid is released. The resulting texture should be squeaky and crunchy.",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-1"
+    },
+    {
+      "text": "Rinse the cabbage in the colander to wash off some of the salt. Gently press the cabbage to drain the water and then transfer the cabbage to a clean kitchen towel or paper towels and thoroughly pat dry. You can store the salted, wilted, and drained cabbage in a sealed container in the fridge for up to 24 hours.",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-2"
+    },
+    {
+      "text": "Transfer the cabbage to a large bowl and add the carrots, and pineapple. Pour in the All-Purpose Stir-Fry Sauce and toss well to combine.",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-3"
+    },
+    {
+      "text": "Chill the coleslaw, covered in the refrigerator, for about 30 minutes. (You can skip this step, if you don’t care that the slaw is room temperature.)",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-4"
+    },
+    {
+      "text": "When you are ready to serve the pineapple coleslaw, transfer it to a pretty serving dish. Taste for seasoning, and add more All-Purpose Stir-Fry Sauce if needed.",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-5"
+    },
+    {
+      "text": "Toss in the chopped macadamia nuts, sesame seeds, and sliced scallions. Enjoy!",
+      "url": "https://nomnompaleo.com/pineapple-coleslaw#wprm-recipe-29929-step-0-6"
+    }
+  ],
+  "nutrition": {
+    "calories": "131 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "20 g",
+    "fatContent": "6 g",
+    "fiberContent": "6 g",
+    "proteinContent": "4 g",
+    "sugarContent": "12 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 16,
+    "ratingValue": 4.75
+  },
+  "video": {
+    "name": "Pineapple Coleslaw",
+    "description": "This tropical pineapple coleslaw combines crunchy shredded cabbage, juicy pineapple, salty macadamia nuts, and a mayo-free, Asian-inspired dressing. It’s the perfect soy-free, paleo, gluten-free, and Whole30 summer side dish for your favorite grilled main dishes!",
+    "contentUrl": "https://content.jwplatform.com/videos/MMD6EGVu.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/MMD6EGVu-720.jpg",
+    "uploadDate": "2022-05-30T20:33:13Z"
+  },
+  "publisher": {
+    "name": "Nom Nom Paleo®",
+    "url": "//nomnompaleo.com"
+  },
+  "datePublished": "2022-05-17T00:56:53Z"
+}

@@ -1,0 +1,93 @@
+{
+  "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/",
+  "name": "Chicken Taquitos",
+  "description": "These easy Baked Chicken Taquitos are stuffed with chicken and cheese and make a great appetizer or meal. These homemade taquitos are a family favorite! Plus, learn how to make taquitos you can freeze for later!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1.jpg",
+  "image": [
+    {
+      "url": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1-500x500.jpg"
+    },
+    {
+      "url": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1-500x375.jpg"
+    },
+    {
+      "url": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Maria Lichty"
+  },
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "recipeCategory": [
+    "Appetizer",
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "Mexican"
+  ],
+  "recipeYield": 20,
+  "recipeIngredient": [
+    "2 cups shredded chicken, (we use rotisserie chicken)",
+    "1/2 teaspoon ground cumin",
+    "1/2 teaspoon ground chili powder",
+    "1/2 teaspoon kosher salt",
+    "1/4 teaspoon garlic powder",
+    "1/4 teaspoon paprika",
+    "2 teaspoons fresh lime juice",
+    "1 cup shredded cheddar or Mexican blend cheese",
+    "20 corn tortillas",
+    "Shredded lettuce",
+    "Diced tomatoes",
+    "Guacamole",
+    "Sour Cream",
+    "Chopped Green Onion",
+    "Crumbled Queso Fresco",
+    "Pico de Gallo",
+    "Salsa"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat the oven to 425 degrees F. Spray a large baking sheet with nonstick cooking spray and set aside.",
+      "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/#wprm-recipe-38884-step-0-0"
+    },
+    {
+      "text": "In a medium bowl, combine the shredded chicken with the cumin, chili powder, salt, garlic powder, paprika, and fresh lime juice. Stir until chicken is well coated with the seasonings. Stir in the shredded cheese.",
+      "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/#wprm-recipe-38884-step-0-1"
+    },
+    {
+      "text": "Get two paper towels damp and place two tortillas at a time in between the paper towels. Place in the microwave for 20-30 seconds. Remove from the microwave and roll up the taquitos.",
+      "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/#wprm-recipe-38884-step-0-2"
+    },
+    {
+      "text": "Place a heaping tablespoon of the chicken and cheese mixture in the center of the tortilla and roll it up tightly. Place the taquito, seam side down on the prepared baking sheet. Continue rolling taquitos until the tortillas and filling are gone. You should have about 20 taquitos.",
+      "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/#wprm-recipe-38884-step-0-3"
+    },
+    {
+      "text": "Spray the taquitos generously with nonstick cooking spray. Bake for 15-20 minutes or until taquitos are golden brown and crispy. Remove from the oven and serve warm with desired toppings.",
+      "url": "https://www.twopeasandtheirpod.com/baked-chicken-taquitos/#wprm-recipe-38884-step-0-4"
+    }
+  ],
+  "nutrition": {
+    "calories": "132 kcal",
+    "servingSize": "20 g",
+    "carbohydrateContent": "11 g",
+    "cholesterolContent": "23 mg",
+    "fatContent": "5 g",
+    "fiberContent": "1 g",
+    "proteinContent": "8 g",
+    "saturatedFatContent": "2 g",
+    "sodiumContent": "123 mg"
+  },
+  "aggregateRating": {
+    "ratingCount": 81,
+    "ratingValue": 4.71
+  },
+  "publisher": {
+    "name": "Two Peas \u0026 Their Pod",
+    "url": "https://www.twopeasandtheirpod.com"
+  },
+  "datePublished": "2022-02-01T07:00:00Z"
+}

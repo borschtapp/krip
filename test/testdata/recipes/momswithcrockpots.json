@@ -1,0 +1,99 @@
+{
+  "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/",
+  "name": "Crockpot Macaroni \u0026 Cheese",
+  "description": "Shared Hundreds of Thousands of times this Crockpot Macaroni \u0026 Cheese Recipe is a keeper! Try this delicious homestyle dish today!",
+  "inLanguage": "en_US",
+  "thumbnailUrl": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-1.jpg",
+  "image": [
+    {
+      "url": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-2.jpg"
+    },
+    {
+      "url": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-2-500x500.jpg"
+    },
+    {
+      "url": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-2-500x375.jpg"
+    },
+    {
+      "url": "https://momswithcrockpots.com/wp-content/uploads/2012/01/Crockpot-Macaroni-and-cheese-2-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Karen McCormick"
+  },
+  "prepTime": 15,
+  "cookTime": 210,
+  "totalTime": 225,
+  "recipeCategory": [
+    "Side Dish"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "holiday"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "8 ounce macaroni",
+    "2 teaspoons olive oil",
+    "1 cup evaporated milk",
+    "1/2 cup milk",
+    "1/2 teaspoon salt",
+    "1/4 teaspoon ground black pepper",
+    "2 cups Cheddar cheese (shredded, or a Cheddar blend)",
+    "4 tablespoons butter (melted)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Cook the macaroni following package directions. Drain in a colander and rinse with hot water. Drain well.",
+      "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-0-0"
+    },
+    {
+      "text": "Generously butter the sides and bottom of a 3 1/2- to 4-quart slow cooker (I use about 2 tablespoons of butter).",
+      "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-0-1"
+    },
+    {
+      "text": "Combine the macaroni with the remaining ingredients in the slow cooker and blend well. Cover the slow cooker and cook on LOW for 2 1/2 to 3 1/2 hours, stirring a few times.",
+      "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-0-2"
+    },
+    {
+      "text": "If desired, spoon the cooked macaroni and cheese mixture into a baking dish, sprinkle with a little more cheese, and put under the broiler for a minute or 2, just until cheese is melted.",
+      "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-0-3"
+    },
+    {
+      "text": "When the macaroni and cheese is done, feel free to spoon into a baking dish, top with a little more cheese, and put under the broiler for a minute or two for that \"fresh from the oven\" look.",
+      "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-0-4"
+    },
+    {
+      "name": "Gluten Free",
+      "itemListElement": [
+        {
+          "text": "Use a gluten free pasta",
+          "url": "https://momswithcrockpots.com/slow-cooked-macaroni-cheese/#wprm-recipe-4994-step-1-0"
+        }
+      ]
+    }
+  ],
+  "nutrition": {
+    "calories": "441 kcal",
+    "servingSize": "1 serving",
+    "carbohydrateContent": "34 g",
+    "cholesterolContent": "74 mg",
+    "fatContent": "26 g",
+    "fiberContent": "1 g",
+    "proteinContent": "18 g",
+    "saturatedFatContent": "15 g",
+    "sodiumContent": "551 mg",
+    "sugarContent": "7 g"
+  },
+  "aggregateRating": {
+    "ratingCount": 2,
+    "ratingValue": 4
+  },
+  "publisher": {
+    "name": "Moms with Crockpots",
+    "url": "https://momswithcrockpots.com"
+  },
+  "datePublished": "2020-04-22T13:02:00Z"
+}

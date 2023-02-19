@@ -1,3 +1,7 @@
+# IDE settings
+.idea
+.vscode
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -7,6 +11,10 @@
 
 # Test binary, built with `go test -c`
 *.test
+
+# Project test files
+*.recipe-new.json
+*.new
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
