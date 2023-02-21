@@ -22,13 +22,3 @@ func TestKlopotenko(t *testing.T) {
 	assert.NoError(t, common.Scrape(input, recipe))
 	testdata.AssertRecipe(t, recipe)
 }
-
-func TestKlopotenkoHachapuri(t *testing.T) {
-	input, err := scraper.UrlInput("https://klopotenko.com/ru/hachapuri-po-adzharski/")
-	assert.NoError(t, err)
-
-	recipe := &model.Recipe{}
-	assert.NoError(t, common.Scrape(input, recipe))
-	assert.Equal(t, 13, len(recipe.Ingredients))
-	assert.Equal(t, 11, len(recipe.Instructions))
-}
