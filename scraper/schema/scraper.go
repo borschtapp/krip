@@ -16,12 +16,12 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 	}
 	baseUrl, _ := url.Parse(r.Url)
 
-	recipeSchema := data.Schemas.GetFirstOfType("Recipe", "http://schema.org/Recipe", "https://schema.org/Recipe")
+	recipeSchema := data.Schemas.GetFirstOfSchemaType("Recipe")
 	if recipeSchema != nil {
 		parseRecipe(recipeSchema, r, baseUrl)
 	}
 
-	siteSchema := data.Schemas.GetFirstOfType("WebSite", "http://schema.org/WebSite", "https://schema.org/WebSite")
+	siteSchema := data.Schemas.GetFirstOfSchemaType("WebSite")
 	if siteSchema != nil {
 		parsePublisher(siteSchema, r, baseUrl, false)
 	}
@@ -35,11 +35,11 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 			r.Publisher.Name = utils.CleanupInline(val)
 		}
 	}
-	orgSchema := data.Schemas.GetFirstOfType("Organization", "http://schema.org/Organization", "https://schema.org/Organization")
+	orgSchema := data.Schemas.GetFirstOfSchemaType("Organization")
 	if orgSchema != nil {
 		parsePublisher(orgSchema, r, baseUrl, false)
 	}
-	estSchema := data.Schemas.GetFirstOfType("FoodEstablishment", "http://schema.org/FoodEstablishment", "https://schema.org/FoodEstablishment")
+	estSchema := data.Schemas.GetFirstOfSchemaType("FoodEstablishment")
 	if estSchema != nil {
 		parsePublisher(estSchema, r, baseUrl, false)
 	}
@@ -54,7 +54,7 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 			r.Author.Name = utils.CleanupInline(val)
 		}
 	}
-	personSchema := data.Schemas.GetFirstOfType("Person", "http://schema.org/Person", "https://schema.org/Person")
+	personSchema := data.Schemas.GetFirstOfSchemaType("Person")
 	if personSchema != nil {
 		parseAuthor(personSchema, r, baseUrl, r.Publisher != nil && r.Author != nil && r.Publisher.Name == r.Author.Name)
 	}
@@ -193,7 +193,7 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 
 	if nested, ok := recipeSchema.GetNested("recipeInstructions", "instructions", "step"); ok {
 		for _, item := range nested.Items {
-			if item.IsOfType("HowToStep", "http://schema.org/HowToStep", "https://schema.org/HowToStep") {
+			if item.IsOfSchemaType("HowToStep") {
 				// yummly stores publisher in every step, but not in root of the schema
 				if val, ok := item.GetNestedItem("publisher"); ok {
 					parsePublisher(val, r, baseUrl, true)
@@ -203,7 +203,7 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 				}
 
 				r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(item)})
-			} else if item.IsOfType("HowToSection", "http://schema.org/HowToSection", "https://schema.org/HowToSection") {
+			} else if item.IsOfSchemaType("HowToSection") {
 				section := model.HowToSection{HowToStep: parseHowToStep(item)}
 				if nested, ok := item.GetNested("itemListElement", "ItemListElement"); ok {
 					for _, item := range nested.Items {
@@ -212,7 +212,7 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 					}
 				}
 				r.Instructions = append(r.Instructions, &section)
-			} else if item.IsOfType("ItemList", "http://schema.org/ItemList", "https://schema.org/ItemList") {
+			} else if item.IsOfSchemaType("ItemList") {
 				if nested, ok := item.GetNested("itemListElement", "ItemListElement"); ok {
 					for _, item := range nested.Items {
 						r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(item)})
