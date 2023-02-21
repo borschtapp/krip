@@ -1,15 +1,15 @@
-# Krip - Fast and flexible recipes scraping
+# Krip - Quick, comprehensive and generalized recipes scraping
 
-A Go library for scraping culinary recipes from any website or html file.
+A Go library for scraping culinary recipes from any website or HTML file.
 
 ---
 
-I found it counter logical that Go users use Python for scraping recipes.
-The Python library [recipe-scrapers](https://github.com/hhursev/recipe-scrapers/) is great, but slow and not reliable.
+I found it illogical for Go users to use Python for scraping recipes.
+The Python library [recipe-scrapers](https://github.com/hhursev/recipe-scrapers/) is great, but slow and very limited.
 
-This library includes completely rewritten parsers, slightly inspired by the python library.
-My focus was on speed and flexibility, to cover most of the possible schemas and websites out of the box.
-Still, it supports per-domain customization, if someone doesn't use any schema.
+This library contains completely rewritten parsers that are slightly inspired by the Python library.
+I focused on speed and flexibility to cover most of the possible schemas and websites out of the box and retrives extensive model.
+Still, it supports per-domain customisation in case someone does not use any schema.
 
 _Note:_ WIP, I'm still learning how to use Go. Found it fun, but a difficult to switch after OOP.
 
@@ -43,13 +43,13 @@ fmt.Println(recipe)
 {
   "@id": "https://cooking.nytimes.com/recipes/3783-original-plum-torte",
   "name": "Original Plum Torte",
-  "image": [
-    {
-      "url": "https://static01.nyt.com/images/2019/09/07/dining/plumtorte/plumtorte-articleLarge-v4.jpg"
-    }
-  ],
+  "thumbnailUrl": "https://static01.nyt.com/images/2019/09/07/dining/plumtorte/plumtorte-articleLarge-v4.jpg",
   "author": {
     "name": "Marian Burros"
+  },
+  "publisher": {
+    "name": "NYT Cooking",
+    "url": "https://cooking.nytimes.com"
   },
   "inLanguage": "en-US",
   "description": "The Times published Marian Burros’s recipe for Plum Torte every September from 1983 until 1989, when the editors determined that enough was enough. The recipe was to be printed for the last time that year. “To counter anticipated protests,” Ms. Burros wrote a few years later, “the recipe was printed in larger type than usual with a broken-line border around it to encourage clipping.” It didn’t help. The paper was flooded with angry letters. “The appearance of the recipe, like the torte itself, is bittersweet,” wrote a reader in Tarrytown, N.Y. “Summer is leaving, fall is coming. That's what your annual recipe is all about. Don't be grumpy about it.” We are not! And we pledge that every year, as summer gives way to fall, we will make sure that the recipe is easily available to one and all. The original 1983 recipe called for 1 cup sugar; the 1989 version reduced that to 3/4 cup. We give both options below. Here are \u003ca href=\" http://www.nytimes.com/interactive/2016/09/14/dining/marian-burros-plum-torte-recipe-variations.html\"\u003efive ways to adapt the torte\u003c/a\u003e.",
@@ -109,34 +109,41 @@ fmt.Println(recipe)
   "aggregateRating": {
     "ratingCount": 8717,
     "ratingValue": 5
-  },
-  "publisher": {
-    "name": "NYT Cooking",
-    "url": "https://cooking.nytimes.com"
   }
 }
 ```
 
-## Verified sources
+## Tested on
 
-Can be scraped with good results:
+The scraper contains a test for the source and was able to extract all the important fields, including but not limited to:
+- `url`
+- `name`
+- `inLanguage`
+- `thumbnailUrl`
+- `recipeIngredient`
+- `recipeInstructions`
+- `publisher` (including `name` and `url`)
+
+### For the following websites
+[//]: # (This list is generated automatically, do not edit manually)
 - https://101cookbooks.com
 - https://750g.com
+- https://Cookstr.com
 - https://acouplecooks.com
 - https://allrecipes.com
+- https://alltommat.expressen.se
 - https://amazingribs.com
 - https://ambitiouskitchen.com
 - https://archanaskitchen.com
 - https://aspicyperspective.com
+- https://atelierdeschefs.fr
 - https://averiecooks.com
 - https://baking-sense.com
 - https://bakingmischief.com
 - https://bbc.co.uk
-- https://bbcgoodfood.com
 - https://bettycrocker.com
 - https://bigoven.com
 - https://blueapron.com
-- https://bodybuilding.com
 - https://bonappetit.com
 - https://bowlofdelicious.com
 - https://budgetbytes.com
@@ -145,17 +152,20 @@ Can be scraped with good results:
 - https://cdkitchen.com
 - https://chefkoch.de
 - https://claudia.abril.com.br
+- https://closetcooking.com
 - https://comidinhasdochef.com
 - https://cookieandkate.com
 - https://cookincanuck.com
 - https://cooking.nytimes.com
 - https://cookinglight.com
 - https://cookpad.com
-- https://cookstr.com
 - https://copykat.com
 - https://countryliving.com
+- https://creativecanning.com
+- https://cucchiaio.it
 - https://cuisineaz.com
 - https://damndelicious.net
+- https://davidlebovitz.com
 - https://delish.com
 - https://dinnerly.de
 - https://dinnerthendessert.com
@@ -164,20 +174,23 @@ Can be scraped with good results:
 - https://downshiftology.com
 - https://dr.dk
 - https://eatingbirdfood.com
+- https://eatingwell.com
 - https://eatsmarter.com
 - https://eatwhattonight.com
 - https://elanaspantry.com
 - https://epicurious.com
-- https://expressen.se
 - https://fifteenspatulas.com
-- https://food.com
 - https://food52.com
 - https://foodandwine.com
+- https://foodinjars.com
 - https://foodrepublic.com
+- https://forksoverknives.com
 - https://framedcooks.com
+- https://franzoesischkochen.de
 - https://gimmedelicious.com
 - https://gimmesomeoven.com
 - https://gonnawantseconds.com
+- https://greatbritishchefs.com
 - https://halfbakedharvest.com
 - https://hassanchef.com
 - https://headbangerskitchen.com
@@ -190,6 +203,8 @@ Can be scraped with good results:
 - https://ibreatheimhungry.com
 - https://iheartrecipes.com
 - https://indianhealthyrecipes.com
+- https://innit.com
+- https://inspiralized.com
 - https://jamieoliver.com
 - https://jimcooksfoodgood.com
 - https://joyfoodsunshine.com
@@ -216,15 +231,21 @@ Can be scraped with good results:
 - https://madensverden.dk
 - https://marleyspoon.de
 - https://marmiton.org
+- https://marthastewart.com
+- https://matprat.no
 - https://melskitchencafe.com
 - https://minimalistbaker.com
-- https://misya.info
+- https://misya.info/misya-srl-unipersonale
 - https://mob.co.uk
 - https://momswithcrockpots.com
 - https://motherthyme.com
 - https://mybakingaddiction.com
+- https://mykitchen101.com
+- https://mykitchen101en.com
 - https://myrecipes.com
 - https://naturallyella.com
+- https://nhs.uk
+- https://ninjatestkitchen.eu
 - https://nomnompaleo.com
 - https://nourishedbynutrition.com
 - https://ohsheglows.com
@@ -233,28 +254,29 @@ Can be scraped with good results:
 - https://paleorunningmomma.com
 - https://picky-palate.com
 - https://pinchofyum.com
-- https://practicalselfreliance.com
 - https://primaledgehealth.com
+- https://przepisy.pl
 - https://purelypope.com
 - https://rachlmansfield.com
 - https://rainbowplantlife.com
 - https://realsimple.com
 - https://receitas.globo.com
+- https://recipes.timesofindia.com
 - https://recipetineats.com
 - https://redhousespice.com
 - https://ricette.giallozafferano.it
 - https://ruled.me
 - https://sallysbakingaddiction.com
+- https://saveur.com
 - https://seasonsandsuppers.ca
 - https://seriouseats.com
 - https://simplyquinoa.com
 - https://simplyrecipes.com
-- https://simplywhisked.com
 - https://skinnytaste.com
 - https://southernliving.com
 - https://spendwithpennies.com
-- https://springlane.de
 - https://steamykitchen.com
+- https://sunbasket.com
 - https://sundpaabudget.dk
 - https://sweetcsdesigns.com
 - https://sweetpeasandsaffron.com
@@ -279,12 +301,12 @@ Can be scraped with good results:
 - https://tine.no
 - https://tudogostoso.com.br
 - https://twopeasandtheirpod.com
+- https://valdemarsro.dk
 - https://vanillaandbean.com
 - https://vegolosi.it
 - https://vegrecipesofindia.com
 - https://watchwhatueat.com
 - https://whatsgabycooking.com
-- https://wholefoodsmarket.com
 - https://wholefully.com
 - https://yemek.com
 - https://yummly.com

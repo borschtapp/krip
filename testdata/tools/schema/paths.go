@@ -2,32 +2,27 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"os"
-	"path/filepath"
-	"sort"
-	"strings"
-
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
 	"github.com/borschtapp/krip/testdata"
+	"log"
+	"os"
+	"sort"
+	"strings"
 )
 
 func main() {
 	var paths = make(map[string]int)
 
-	_ = filepath.Walk(testdata.WebsitesDir, func(path string, info os.FileInfo, err error) error {
-		if strings.HasSuffix(info.Name(), testdata.HtmlExt) {
-			input, err := scraper.FileInput(path, model.InputOptions{SkipText: true})
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			if input.Schemas != nil {
-				input.Schemas.GetFirstOfType("Recipe", "http://schema.org/Recipe", "https://schema.org/Recipe").CountPaths("", &paths)
-			}
+	testdata.WalkTestdataWebsites(func(name string, path string) {
+		input, err := scraper.FileInput(path, model.InputOptions{SkipText: true})
+		if err != nil {
+			log.Fatal(err)
 		}
-		return nil
+
+		if input.Schemas != nil {
+			input.Schemas.GetFirstOfSchemaType("Recipe").CountPaths("", &paths)
+		}
 	})
 
 	lines := make([]string, 0, len(paths))

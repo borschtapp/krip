@@ -3,19 +3,16 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/borschtapp/krip"
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
+	"github.com/borschtapp/krip/testdata"
+	"github.com/borschtapp/krip/utils"
 	"golang.org/x/net/html/charset"
 	"io"
 	"log"
 	"net/http"
 	"os"
-	"path/filepath"
-	"strings"
-
-	"github.com/borschtapp/krip"
-	"github.com/borschtapp/krip/testdata"
-	"github.com/borschtapp/krip/utils"
 )
 
 func main() {
@@ -37,17 +34,14 @@ func main() {
 }
 
 func updateAll() {
-	_ = filepath.Walk(testdata.WebsitesDir, func(path string, info os.FileInfo, err error) error {
-		if strings.HasSuffix(info.Name(), testdata.HtmlExt) {
-			input, err := scraper.FileInput(path, model.InputOptions{SkipSchema: true})
-			if err != nil {
-				log.Fatal("Unable to read old testdata: " + err.Error())
-			}
-
-			fmt.Println("Saving " + input.Url)
-			updateTestdata(input.Url)
+	testdata.WalkTestdataWebsites(func(name string, path string) {
+		input, err := scraper.FileInput(path, model.InputOptions{SkipSchema: true})
+		if err != nil {
+			log.Fatal("Unable to read old testdata: " + err.Error())
 		}
-		return nil
+
+		fmt.Println("Saving " + input.Url)
+		updateTestdata(input.Url)
 	})
 }
 

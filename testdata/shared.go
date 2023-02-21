@@ -6,7 +6,9 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"path/filepath"
 	"runtime"
+	"strings"
 	"testing"
 
 	"github.com/jarcoal/httpmock"
@@ -27,6 +29,15 @@ var RecipesDir = PackageDir + "recipes/"
 func currentPath() string {
 	_, filename, _, _ := runtime.Caller(1)
 	return path.Dir(filename)
+}
+
+func WalkTestdataWebsites(fn func(name string, path string)) {
+	_ = filepath.Walk(WebsitesDir, func(path string, info os.FileInfo, err error) error {
+		if strings.HasSuffix(info.Name(), HtmlExt) {
+			fn(info.Name(), path)
+		}
+		return nil
+	})
 }
 
 func AssertRecipe(t *testing.T, recipe *model.Recipe) {
