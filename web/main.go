@@ -2,30 +2,51 @@ package main
 
 import (
 	"embed"
+	"encoding/json"
+	"fmt"
+	"io/fs"
 	"log"
 	"net/http"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/filesystem"
-	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/gofiber/fiber/v2/middleware/recover"
+	"github.com/borschtapp/krip"
 )
 
 //go:embed static/*
 var static embed.FS
 
+func scrapeHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		http.Error(w, "Method is not supported.", http.StatusNotFound)
+		return
+	}
+
+	q := r.URL.Query()
+
+	if q == nil || len(q.Get("url")) == 0 {
+		http.Error(w, "`url` query param is required.", http.StatusBadRequest)
+		return
+	}
+
+	recipe, err := krip.ScrapeUrl(q.Get("url"))
+	if err != nil {
+		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
+	}
+
+	j, _ := json.Marshal(recipe)
+	_, _ = w.Write(j)
+}
+
 func main() {
-	app := fiber.New()
-	app.Use(recover.New())
-	app.Use(logger.New())
+	subFs, err := fs.Sub(static, "static")
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	app.Use("/", filesystem.New(filesystem.Config{
-		Root:       http.FS(static),
-		PathPrefix: "static",
-		Index:      "index.html",
-	}))
+	http.Handle("/", http.FileServer(http.FS(subFs)))
+	http.HandleFunc("/api/v1/scrape", scrapeHandler)
 
-	app.Post("/api/v1/scrape", ScrapeURL)
-
-	log.Fatal(app.Listen(":3000"))
+	fmt.Printf("Starting server at port http://localhost:3000\n")
+	if err := http.ListenAndServe(":3000", nil); err != nil {
+		log.Fatal(err)
+	}
 }
