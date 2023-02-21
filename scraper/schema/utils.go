@@ -25,7 +25,7 @@ func getStringOrItem(val interface{}) (string, *microdata.Item) {
 }
 
 func getStringOrChild(val interface{}, child ...string) (string, bool) {
-	if text, item := getStringOrItem(val); text != "" {
+	if text, item := getStringOrItem(val); len(text) != 0 {
 		return text, true
 	} else if item != nil {
 		return getPropertyString(item, child...)
@@ -55,7 +55,12 @@ func getPropertyString(item *microdata.Item, key ...string) (string, bool) {
 
 func getPropertyInt(item *microdata.Item, key ...string) (int, bool) {
 	if val, ok := item.GetProperty(key...); ok {
-		return utils.FindInt(val), true
+		switch val.(type) {
+		case *microdata.Item:
+			return getPropertyInt(val.(*microdata.Item), "value")
+		default:
+			return utils.FindInt(val), true
+		}
 	}
 
 	return 0, false
@@ -73,7 +78,7 @@ func getPropertiesArray(item *microdata.Item, keys ...string) ([]string, bool) {
 	if values, ok := item.GetProperties(keys...); ok {
 		var arr []string
 		for _, val := range values {
-			if val, ok := val.(string); ok && val != "" {
+			if val, ok := val.(string); ok && len(val) != 0 {
 				arr = append(arr, val)
 			}
 		}
@@ -93,7 +98,7 @@ func getPropertiesKeywords(item *microdata.Item, keys ...string) ([]string, bool
 		}
 
 		for _, text := range values {
-			if text := utils.CleanupInline(text); text != "" {
+			if text := utils.CleanupInline(text); len(text) != 0 {
 				arr = append(arr, text)
 			}
 		}
@@ -105,7 +110,7 @@ func getPropertiesKeywords(item *microdata.Item, keys ...string) ([]string, bool
 }
 
 func getPropertyDuration(item *microdata.Item, key ...string) (time.Duration, bool) {
-	if val, ok := getPropertyString(item, key...); ok && val != "" {
+	if val, ok := getPropertyString(item, key...); ok && len(val) != 0 {
 		if d, err := duration.Parse(utils.RemoveSpaces(val)); err == nil {
 			return d.ToTimeDuration(), true
 		} else if val, ok := utils.ParseDuration(val); ok {

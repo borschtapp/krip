@@ -3,8 +3,8 @@ module github.com/borschtapp/krip
 go 1.20
 
 require (
-	github.com/PuerkitoBio/goquery v1.8.0
-	github.com/astappiev/microdata v0.0.0-20230219121312-f1aa6eef1316
+	github.com/PuerkitoBio/goquery v1.8.1
+	github.com/astappiev/microdata v1.0.0
 	github.com/jarcoal/httpmock v1.3.0
 	github.com/microcosm-cc/bluemonday v1.0.22
 	github.com/sosodev/duration v1.0.1
@@ -15,7 +15,7 @@ require (
 
 require (
 	github.com/andybalholm/cascadia v1.3.2-0.20220104174750-b91ef208019c // indirect
-	github.com/astappiev/fixjson v0.0.0-20220629200359-49a91340faab // indirect
+	github.com/astappiev/fixjson v1.0.0 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gorilla/css v1.0.0 // indirect

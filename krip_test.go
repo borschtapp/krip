@@ -15,6 +15,7 @@ func TestOnlineUrl(t *testing.T) {
 	assert.NoError(t, err)
 
 	assert.NotEmpty(t, recipe.Name)
+	testdata.AssertRecipe(t, recipe)
 }
 
 func TestHtmlFile(t *testing.T) {
