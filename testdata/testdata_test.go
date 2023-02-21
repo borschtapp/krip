@@ -77,15 +77,12 @@ func TestWebsitesOnline(t *testing.T) {
 }
 
 func TestWebsitesProperties(t *testing.T) {
-	MockRequests(t)
 	t.Parallel()
 	t.Skip("TODO: doesn't work for all")
 
 	var domains []string
-	WalkTestdataWebsites(func(name string, path string) {
+	WalkTestdataRecipes(func(name string, recipe model.Recipe) {
 		t.Run(name, func(t *testing.T) {
-			recipe, err := krip.ScrapeFile(path)
-			assert.NoError(t, err)
 			assert.NotEmpty(t, recipe.Url)
 			assert.NotEmpty(t, recipe.Name)
 			assert.NotEmpty(t, recipe.Language)

@@ -40,6 +40,20 @@ func WalkTestdataWebsites(fn func(name string, path string)) {
 	})
 }
 
+func WalkTestdataRecipes(fn func(name string, recipe model.Recipe)) {
+	_ = filepath.Walk(RecipesDir, func(path string, info os.FileInfo, err error) error {
+		if strings.HasSuffix(info.Name(), JsonExt) {
+			recipe := model.Recipe{}
+
+			file, _ := os.ReadFile(path)
+			_ = json.Unmarshal(file, &recipe)
+
+			fn(info.Name(), recipe)
+		}
+		return nil
+	})
+}
+
 func AssertRecipe(t *testing.T, recipe *model.Recipe) {
 	AssertJson(t, recipe, RecipesDir+utils.HostAlias(recipe.Url))
 }
