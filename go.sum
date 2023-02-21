@@ -13,6 +13,8 @@ github.com/astappiev/microdata v0.0.0-20230219121312-f1aa6eef1316 h1:zACgXnpwGmX
 github.com/astappiev/microdata v0.0.0-20230219121312-f1aa6eef1316/go.mod h1:wDCK7CkcJIAVdzO6DjvypyJSCxJ387CbNMpW9Oe6xAc=
 github.com/astappiev/microdata v1.0.0 h1:6zIeadvfvFBLi0tHFeElk+ysi1tGc5yRynbXHav3nQQ=
 github.com/astappiev/microdata v1.0.0/go.mod h1:2l0xGMciuKomEZL4e4+zWdDuYDs3IhX6n4huN4IcevY=
+github.com/astappiev/microdata v1.0.1 h1:FvwgAUlmBcuR9jSXZbZ+s8X2ztcqueo5EyNJYPI7eZg=
+github.com/astappiev/microdata v1.0.1/go.mod h1:2l0xGMciuKomEZL4e4+zWdDuYDs3IhX6n4huN4IcevY=
 github.com/aymerick/douceur v0.2.0 h1:Mv+mAeH1Q+n9Fr+oyamOlAkUNPWPlA8PPGR0QAaYuPk=
 github.com/aymerick/douceur v0.2.0/go.mod h1:wlT5vV2O3h55X9m7iVYN0TBM0NH/MmbLnd30/FjWUq4=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

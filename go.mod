@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
-	github.com/astappiev/microdata v1.0.0
+	github.com/astappiev/microdata v1.0.1
 	github.com/jarcoal/httpmock v1.3.0
 	github.com/microcosm-cc/bluemonday v1.0.22
 	github.com/sosodev/duration v1.0.1
