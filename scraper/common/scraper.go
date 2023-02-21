@@ -29,5 +29,13 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
+	if r.Publisher != nil && len(r.Publisher.Name) == 0 {
+		r.Publisher = nil
+	}
+
+	if r.Author != nil && (len(r.Author.Name) == 0 || (r.Publisher != nil && r.Author.Name == r.Publisher.Name)) {
+		r.Author = nil
+	}
+
 	return nil
 }

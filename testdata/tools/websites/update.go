@@ -20,14 +20,25 @@ import (
 
 func main() {
 	flag.Usage = func() {
-		_, _ = fmt.Fprintf(os.Stderr, "Usage of %s [options]:\n", os.Args[0])
+		_, _ = fmt.Fprintf(os.Stderr, "Usage of %s [options] [url]:\n", os.Args[0])
 		flag.PrintDefaults()
-		_, _ = fmt.Fprint(os.Stderr, "\nUpdate all testdata's website HTML sources. Use to automate some routine.\n")
+		_, _ = fmt.Fprint(os.Stderr, "\nUpdate testdata's website HTML sources. Use to automate some routine.\n")
 	}
 	flag.Parse()
 
+	switch len(flag.Args()) {
+	case 1:
+		recipeUrl := flag.Args()[0]
+		updateTestdata(recipeUrl)
+		fmt.Println("Done, website updated!")
+	default:
+		updateAll()
+	}
+}
+
+func updateAll() {
 	_ = filepath.Walk(testdata.WebsitesDir, func(path string, info os.FileInfo, err error) error {
-		if !info.IsDir() && strings.HasSuffix(info.Name(), testdata.HtmlExt) {
+		if strings.HasSuffix(info.Name(), testdata.HtmlExt) {
 			input, err := scraper.FileInput(path, model.InputOptions{SkipSchema: true})
 			if err != nil {
 				log.Fatal("Unable to read old testdata: " + err.Error())
@@ -72,6 +83,7 @@ func updateTestdata(url string) {
 		return
 	}
 
+	content = []byte(utils.TrimZeroWidthSpaces(string(content))) // remove zero-width spaces, http.DetectContentType() doesn't like them
 	if err = os.WriteFile(websiteFileName, content, 0644); err != nil {
 		log.Println("Unable to create file: " + err.Error())
 		return

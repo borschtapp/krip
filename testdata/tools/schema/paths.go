@@ -23,8 +23,8 @@ func main() {
 				log.Fatal(err)
 			}
 
-			if input.Schema != nil {
-				input.Schema.CountPaths("", &paths)
+			if input.Schemas != nil {
+				input.Schemas.GetFirstOfType("Recipe", "http://schema.org/Recipe", "https://schema.org/Recipe").CountPaths("", &paths)
 			}
 		}
 		return nil

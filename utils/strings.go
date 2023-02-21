@@ -2,6 +2,7 @@ package utils
 
 import (
 	"errors"
+	"fmt"
 	"log"
 	"net/url"
 	"regexp"
@@ -16,6 +17,47 @@ import (
 )
 
 var paragraphsRegex = regexp.MustCompile(`\n\r?\s*\n\r?`)
+
+func IsAbsolute(urlStr string) bool {
+	u, err := url.Parse(urlStr)
+	if err != nil {
+		fmt.Println("Malformed url:", err)
+		return false
+	}
+
+	if u.IsAbs() {
+		return true
+	}
+
+	return false
+}
+
+func ToAbsoluteUrl(base *url.URL, urlStr string) string {
+	if len(urlStr) == 0 || base == nil {
+		return ""
+	}
+
+	u, err := url.Parse(urlStr)
+	if err != nil {
+		fmt.Println("Error parsing url:", err)
+		return ""
+	}
+
+	if u.IsAbs() {
+		return urlStr
+	}
+
+	return base.ResolveReference(u).String()
+}
+
+func RemoveTrailingSlash(urlStr string) string {
+	return strings.TrimSuffix(urlStr, "/")
+}
+
+func CleanupLang(lang string) string {
+	lang = strings.ReplaceAll(lang, "_", "-")
+	return lang
+}
 
 func BaseUrl(urlStr string) string {
 	u, err := url.Parse(urlStr)
@@ -106,6 +148,19 @@ func cleanupCommon(s string) string {
 	s = strings.ReplaceAll(s, " , ", ", ")
 	s = strings.ReplaceAll(s, " : ", ": ")
 	return s
+}
+
+func TrimZeroWidthSpaces(s string) string {
+	return strings.TrimFunc(s, func(r rune) bool {
+		return r == 0x200B || r == 0xFEFF || r == 0x200C || r == 0x200D
+	})
+}
+
+func SplitTitle(title string) []string {
+	splitter := func(r rune) bool {
+		return r == '|' || r == '-' || r == '–'
+	}
+	return strings.FieldsFunc(title, splitter)
 }
 
 func RemoveDoubleSpace(str string) string {

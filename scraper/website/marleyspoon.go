@@ -99,7 +99,7 @@ func ScrapeMarleySpoon(data *model.DataInput, r *model.Recipe) error {
 			return err
 		}
 
-		body, err := utils.ReadUrl(apiUrl, map[string][]string{
+		body, _, err := utils.ReadUrl(apiUrl, map[string][]string{
 			"Accept":        {"application/json"},
 			"Authorization": {apiToken},
 		})
@@ -226,7 +226,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	// in normal scenario, there will be html `lang` tag and language can be retrieved from it
 	if len(r.Language) == 0 && len(data.Country) != 0 {
 		// but using the `country` property, we can guess it
-		r.Language = data.Country
+		r.Language = utils.CleanupLang(data.Country)
 	}
 
 	return nil

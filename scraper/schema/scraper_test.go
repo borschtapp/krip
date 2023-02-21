@@ -16,8 +16,8 @@ func TestSchemaParser(t *testing.T) {
 	data, err := microdata.ParseHTML(strings.NewReader(page), "", "https://www.hellofresh.com/recipes/uk-stir-fried-chinese-beef-5845b40b2e69d7259304d962")
 	assert.NoError(t, err)
 
-	input := model.DataInput{Schema: data.GetFirstOfType("Recipe")}
-	assert.NotEmpty(t, input.Schema)
+	input := model.DataInput{Schemas: data}
+	assert.NotEmpty(t, input.Schemas)
 
 	recipe := &model.Recipe{}
 	assert.NoError(t, Scrape(&input, recipe))

@@ -25,7 +25,7 @@ func TestGetNoInstructions(t *testing.T) {
 	_ = filepath.Walk(WebsitesDir, func(path string, info os.FileInfo, err error) error {
 		assert.NoError(t, err)
 
-		if !info.IsDir() && strings.HasSuffix(info.Name(), HtmlExt) {
+		if strings.HasSuffix(info.Name(), HtmlExt) {
 			t.Run(info.Name(), func(t *testing.T) {
 				recipe, err := krip.ScrapeFile(path)
 				assert.NoError(t, err)

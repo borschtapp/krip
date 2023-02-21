@@ -66,6 +66,7 @@ func MockRequests(t *testing.T) {
 			return httpmock.NewStringResponse(http.StatusInternalServerError, "HttpMock: "+err.Error()), nil
 		} else {
 			response := httpmock.NewBytesResponse(http.StatusOK, data)
+			response.Request = req
 			if req.Header.Get("Accept") == "application/json" {
 				response.Header.Set("Content-Type", "application/json")
 			} else {

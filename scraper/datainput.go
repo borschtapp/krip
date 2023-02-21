@@ -3,14 +3,13 @@ package scraper
 import (
 	"bytes"
 	"errors"
+	"github.com/PuerkitoBio/goquery"
+	"golang.org/x/net/html"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"strings"
-
-	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/net/html"
 
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"
@@ -45,10 +44,11 @@ func FileInput(fileName string, options model.InputOptions) (*model.DataInput, e
 	}
 }
 
-func UrlInput(url string) (i *model.DataInput, err error) {
-	resp, err := utils.ReadUrl(url, map[string][]string{
+func UrlInput(url string) (*model.DataInput, error) {
+	resp, respUrl, err := utils.ReadUrl(url, map[string][]string{
 		"Accept":     {"text/html"},
-		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:101.0) Gecko/20100101 Firefox/101.0"},
+		"Referer":    {"https://www.google.com/"},
+		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"},
 	})
 	if err != nil {
 		return nil, err
@@ -59,7 +59,7 @@ func UrlInput(url string) (i *model.DataInput, err error) {
 		return nil, errors.New("unable to parse html tree: " + err.Error())
 	}
 
-	input, err := NodeInput(root, url, model.InputOptions{})
+	input, err := NodeInput(root, respUrl.String(), model.InputOptions{SkipUrl: true})
 	if err != nil {
 		return nil, err
 	}
@@ -67,26 +67,25 @@ func UrlInput(url string) (i *model.DataInput, err error) {
 	return input, nil
 }
 
-func NodeInput(root *html.Node, url string, options model.InputOptions) (i *model.DataInput, err error) {
+func NodeInput(root *html.Node, url string, options model.InputOptions) (*model.DataInput, error) {
 	doc := goquery.NewDocumentFromNode(root)
 
-	if !options.SkipUrl {
-		if val, ok := doc.Find("link[rel='canonical']").Attr("href"); ok {
+	if !options.SkipUrl { // if we read the page from a file, we need to retrieve an url
+		if val, ok := doc.Find("link[rel='canonical']").Attr("href"); ok && utils.IsAbsolute(val) {
 			url = val
-		} else if val, ok := doc.Find("meta[property='og:url']").Attr("content"); ok {
+		} else if val, ok := doc.Find("meta[property='og:url']").Attr("content"); ok && utils.IsAbsolute(val) {
 			url = val
-		} else if val, ok := doc.Find("link[rel='alternate']").Attr("href"); ok {
+		} else if val, ok := doc.Find("link[rel='alternate']").Attr("href"); ok && utils.IsAbsolute(val) {
 			url = val
 		}
 	}
 
-	var schema *microdata.Item
+	var err error
+	var schemas *microdata.Microdata
 	if !options.SkipSchema {
-		data, err := microdata.ParseNode(root, url)
+		schemas, err = microdata.ParseNode(root, url)
 		if err != nil {
 			log.Println("unable to parse microdata on the page: " + err.Error())
-		} else {
-			schema = data.GetFirstOfType("Recipe", "http://schema.org/Recipe", "https://schema.org/Recipe")
 		}
 	}
 
@@ -94,6 +93,6 @@ func NodeInput(root *html.Node, url string, options model.InputOptions) (i *mode
 		Url:      url,
 		RootNode: root,
 		Document: doc,
-		Schema:   schema,
+		Schemas:  schemas,
 	}, nil
 }
