@@ -88,6 +88,12 @@ func MockRequests(t *testing.T) {
 		data, err := mockResponse(req.URL.String(), req.Header.Get("Accept"))
 
 		if err != nil {
+			// if no file found, try to remove subdomain (required for gousto)
+			req.URL.Host = req.URL.Host[strings.Index(req.URL.Host, ".")+1:]
+			data, err = mockResponse(req.URL.String(), req.Header.Get("Accept"))
+		}
+
+		if err != nil {
 			return httpmock.NewStringResponse(http.StatusInternalServerError, "HttpMock: "+err.Error()), nil
 		} else {
 			response := httpmock.NewBytesResponse(http.StatusOK, data)

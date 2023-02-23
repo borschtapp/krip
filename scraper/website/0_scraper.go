@@ -7,14 +7,16 @@ import (
 )
 
 var scrapers = map[string]model.Scraper{
+	"archanaskitchen":  ScrapeArchanasKitchen,
 	"cookstr":          ScrapeCookstr,
 	"dinnerly":         ScrapeMarleySpoon,
 	"fitmencook":       ScrapeFitMenCook,
+	"gousto":           ScrapeGousto,
 	"kitchenstories":   ScrapeKitchenStories,
 	"marleyspoon":      ScrapeMarleySpoon,
-	"archanaskitchen":  ScrapeArchanasKitchen,
-	"whatsgabycooking": ScrapeWhatsGabyCooking,
 	"mob":              ScrapeMob,
+	"mobile_kptncook":  ScrapeKptnCook,
+	"whatsgabycooking": ScrapeWhatsGabyCooking,
 }
 
 func RegisterScraper(hostname string, fn model.Scraper) {

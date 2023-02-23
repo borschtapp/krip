@@ -141,11 +141,11 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://averiecooks.com
 - https://baking-sense.com
 - https://bakingmischief.com
-- https://bbc.co.uk
+- https://bbc.co.uk/food
 - https://bbcgoodfood.com
 - https://bettybossi.ch
 - https://bettycrocker.com
-- https://biancazapatka.com
+- https://biancazapatka.com/en
 - https://bigoven.com
 - https://blueapron.com
 - https://bodybuilding.com
@@ -201,9 +201,11 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://forktospoon.com
 - https://framedcooks.com
 - https://franzoesischkochen.de
+- https://giallozafferano.it
 - https://gimmedelicious.com
 - https://gimmesomeoven.com
 - https://gonnawantseconds.com
+- https://gousto.co.uk
 - https://greatbritishchefs.com
 - https://halfbakedharvest.com
 - https://handletheheat.com
@@ -257,6 +259,7 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://minimalistbaker.com
 - https://misya.info/misya-srl-unipersonale
 - https://mob.co.uk
+- https://mobile.kptncook.com
 - https://momswithcrockpots.com
 - https://motherthyme.com
 - https://mybakingaddiction.com
@@ -286,7 +289,6 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://recipes.timesofindia.com
 - https://recipetineats.com
 - https://redhousespice.com
-- https://ricette.giallozafferano.it
 - https://ruled.me
 - https://rutgerbakt.nl
 - https://sallysbakingaddiction.com
@@ -310,7 +312,7 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://sunset.com
 - https://sweetcsdesigns.com
 - https://sweetpeasandsaffron.com
-- https://tasteaholics.com
+- https://tasteaholics.gladness.in
 - https://tasteofhome.com
 - https://tastesbetterfromscratch.com
 - https://tastesoflizzyt.com

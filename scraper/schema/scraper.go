@@ -284,13 +284,13 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 			video.Duration = utils.CleanupInline(val)
 		}
 		if val, ok := getPropertyString(item, "embedUrl", "embedURL", "url"); ok {
-			video.EmbedUrl = utils.CleanupInline(val)
+			video.EmbedUrl = utils.ToAbsoluteUrl(baseUrl, val)
 		}
 		if val, ok := getPropertyString(item, "contentURL", "contentUrl"); ok {
-			video.ContentUrl = utils.CleanupInline(val)
+			video.ContentUrl = utils.ToAbsoluteUrl(baseUrl, val)
 		}
 		if val, ok := getPropertyString(item, "thumbnailUrl", "image"); ok {
-			video.ThumbnailUrl = utils.CleanupInline(val)
+			video.ThumbnailUrl = utils.ToAbsoluteUrl(baseUrl, val)
 		}
 		if val, ok := getPropertyString(item, "uploadDate", "datePublished"); ok {
 			if val, err := time.Parse(time.RFC3339, val); err == nil {
