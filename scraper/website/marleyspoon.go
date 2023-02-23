@@ -3,6 +3,7 @@ package website
 import (
 	"encoding/json"
 	"errors"
+	"github.com/sosodev/duration"
 	"regexp"
 	"strings"
 	"time"
@@ -126,7 +127,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	}
 
 	if len(data.PreparationTime) != 0 {
-		r.TotalTime = preparationMap[data.PreparationTime].Minutes()
+		r.TotalTime = duration.Format(preparationMap[data.PreparationTime])
 	}
 
 	// The backend of MarleySpoon always returns ingredients for 2 servings

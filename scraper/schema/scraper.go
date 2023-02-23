@@ -2,6 +2,7 @@ package schema
 
 import (
 	"fmt"
+	"github.com/sosodev/duration"
 	"net/url"
 	"time"
 
@@ -76,15 +77,15 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	}
 
 	if val, ok := getPropertyDuration(recipeSchema, "totalTime", "TotalTime"); ok {
-		r.TotalTime = val.Minutes()
+		r.TotalTime = duration.Format(val)
 	}
 
 	if val, ok := getPropertyDuration(recipeSchema, "cookTime", "CookTime", "performTime"); ok {
-		r.CookTime = val.Minutes()
+		r.CookTime = duration.Format(val)
 	}
 
 	if val, ok := getPropertyDuration(recipeSchema, "prepTime", "PrepTime"); ok {
-		r.PrepTime = val.Minutes()
+		r.PrepTime = duration.Format(val)
 	}
 
 	if val, ok := recipeSchema.GetProperty("recipeYield", "yield"); ok {
