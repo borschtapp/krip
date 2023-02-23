@@ -1,0 +1,47 @@
+{
+  "url": "https://www.ethanchlebowski.com/cooking-techniques-recipes/huevos-rancheros",
+  "name": "Huevos Rancheros",
+  "description": "Huevos rancheros are one of the simplest and most common breakfasts in Mexico, all you have to do is make the salsa ranchera, pair it with some fried tortillas and eggs and it's ready.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "http://static1.squarespace.com/static/5d96a22649af0e131e78ca1c/5da7334443c1e2402d682705/612b89ae464af738b1bb238c/1630243822699/DSC04404.jpg?format=1500w",
+  "image": [
+    {
+      "url": "https://i.imgur.com/hzIuWpU.jpg"
+    }
+  ],
+  "author": {
+    "name": "Ethan Chlebowski"
+  },
+  "publisher": {
+    "name": "Ethan",
+    "url": "https://www.ethanchlebowski.com"
+  },
+  "prepTime": "PT5M",
+  "cookTime": "PT8M",
+  "totalTime": "PT13M",
+  "recipeYield": 1,
+  "recipeIngredient": [
+    "2 small corn tortillas",
+    "2 eggs",
+    "Salsa Ranchera (recipe below)",
+    "Neutral oil for toasting tortillas and cooking eggs",
+    "Chopped Cilantro",
+    "Cotija cheeese or Queso fresco",
+    "Pickled onions",
+    "Seasoned Pinto Beans (recipe below)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Heat the salsa ranchera in the microwave or a pan until warmed through."
+    },
+    {
+      "text": "Set a pan over medium-high heat and add a little bit of oil. Once hot, lightly fry the corn tortillas similar to enchiladas where they are still malleable or until crisp. Drain on a paper towel. Low-calorie option - Spritz with baking spray and toast tortillas under the broiler."
+    },
+    {
+      "text": "In the same pan and oil, fry the eggs sunny side up basting them with oil as needed. Low-calorie option - Poach the eggs in water."
+    },
+    {
+      "text": "Place the cooked eggs over the tortillas and spoon the warmed sauce over the whites. Top with some crumbling cheese and cilantro. Serve with seasoned pintos beans if you would like! Slice the yolk open and mix with the sauce to enjoy."
+    }
+  ]
+}

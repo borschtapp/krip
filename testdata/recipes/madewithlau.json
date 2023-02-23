@@ -1,0 +1,94 @@
+{
+  "url": "https://madewithlau.com/recipes/salt-pepper-tofu",
+  "name": "Salt \u0026 Pepper Tofu (椒鹽豆腐)",
+  "description": "Fragrant deep-fried tofu that'll disappear from the table before you know it!",
+  "thumbnailUrl": "https://cdn.sanity.io/images/2r0kdewr/production/dc812cc86bad81592b8cd0e8ddb246a9c5e9a59e-1000x667.jpg?w=600\u0026q=50",
+  "image": [
+    {
+      "url": "https://madewithlau.com/recipes/undefined"
+    }
+  ],
+  "publisher": {
+    "name": "Made With Lau",
+    "url": "https://madewithlau.com"
+  },
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT30M",
+  "recipeCategory": [
+    "side dish"
+  ],
+  "recipeCuisine": [
+    "Chinese"
+  ],
+  "keywords": [
+    "tofu recipe",
+    "deep fried tofu",
+    "cantonese home cooking",
+    "chinese restaurant recipe"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "16 oz firm tofu",
+    "3 stalks green onion",
+    "2 oz mini bell pepper",
+    "2 cloves garlic",
+    "4 cups boiling water",
+    "1 tsp salt",
+    "0.5 egg",
+    "6 tbsp cornstarch",
+    "16 oz oil",
+    "2 tbsp oil",
+    "1 tbsp garlic salt",
+    "0.25 tsp white pepper"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Cut ingredients",
+      "text": "First, cut to separate the green and the white parts of the green onions. You're only using the firmer, more pungent whites for this dish. Dice the green onion whites.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step1"
+    },
+    {
+      "name": "Cut tofu",
+      "text": "Drain and rinse the firm tofu. Cut the tofu into cubes.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step2"
+    },
+    {
+      "name": "Boil tofu",
+      "text": "Boil hot water in a pot with the heat on high. Add salt and stir to dissolve. When water is boiling, add the tofu cubes. Use chopsticks to shift the tofu around so they’re all fully submerged.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step3"
+    },
+    {
+      "name": "Dry \u0026 coat tofu",
+      "text": "Line a plate with a paper towel or a clean kitchen towel. Transfer the tofu cubes onto the lined plate in an even layer. Lay another towel on top and gently press to remove excess moisture.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step4"
+    },
+    {
+      "name": "Fry tofu",
+      "text": "Add oil to a large pot and set the heat on high.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step5"
+    },
+    {
+      "name": "Stir-fry everything",
+      "text": "Heat a wok on high. Add oil (take this from the deep-frying oil). Before the oil gets too hot (before it starts to shimmer or smoke), add the dried chili and stir immediately. Fry for just 8 seconds to extract the flavor, and then remove them.",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step6"
+    },
+    {
+      "name": "Plate \u0026 serve",
+      "text": "Turn off the heat and plate. Make sure to scoop up all the little bits of vegetables; they're delicious. Enjoy!",
+      "url": "https://madewithlau.com/recipes/salt-pepper-tofu#step7"
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 552,
+    "ratingValue": 5
+  },
+  "video": {
+    "name": "Salt \u0026 Pepper Tofu (椒鹽豆腐)",
+    "description": "Fragrant deep-fried tofu that'll disappear from the table before you know it!",
+    "duration": "PT00H13M11S",
+    "contentUrl": "https://youtu.be/J_men1BU9RQ",
+    "thumbnailUrl": "undefined",
+    "uploadDate": "2022-05-10T23:54:42Z"
+  }
+}

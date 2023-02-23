@@ -13,6 +13,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -25,8 +26,17 @@ func main() {
 
 	switch len(flag.Args()) {
 	case 1:
-		recipeUrl := flag.Args()[0]
-		updateTestdata(recipeUrl)
+		arg := flag.Args()[0]
+		if strings.HasPrefix(arg, "http") {
+			updateTestdata(arg)
+		} else {
+			input, err := scraper.FileInput(testdata.WebsitesDir+arg+testdata.HtmlExt, model.InputOptions{SkipSchema: true})
+			if err != nil {
+				log.Fatal("Unable to read old testdata: " + err.Error())
+			}
+			fmt.Println("Updating " + input.Url)
+			updateTestdata(input.Url)
+		}
 		fmt.Println("Done, website updated!")
 	default:
 		updateAll()

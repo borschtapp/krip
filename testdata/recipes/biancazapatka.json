@@ -1,0 +1,114 @@
+{
+  "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/",
+  "name": "Rice Noodle Salad with Tempeh and Peanut Sauce",
+  "description": "This colorful Tempeh Rice Noodle Salad Bowl recipe is quick and easy to make, super healthy, and incredibly delicious! A vegan banquet of perfectly marinated tempeh with gluten-free rice noodles, crunchy fresh veggies, and the best peanut sauce ever! It’s the perfect bowl of happiness for anyone who’s looking to combine healthy eating with indulgence!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://biancazapatka.com/wp-content/uploads/2022/07/reisnudeln-tempeh-bowl.jpg",
+  "image": [
+    {
+      "url": "https://biancazapatka.com/wp-content/uploads/2022/07/buddha-bowl-sauce.jpg"
+    },
+    {
+      "url": "https://biancazapatka.com/wp-content/uploads/2022/07/buddha-bowl-sauce-500x500.jpg"
+    }
+  ],
+  "publisher": {
+    "name": "Bianca Zapatka",
+    "description": "einfache vegane \u0026 vegetarische Rezepte",
+    "url": "https://biancazapatka.com"
+  },
+  "prepTime": "PT25M",
+  "cookTime": "PT10M",
+  "totalTime": "PT35M",
+  "recipeCategory": [
+    "Lunch \u0026 Dinner",
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "Asian"
+  ],
+  "keywords": [
+    "Asia Noodles",
+    "Asian Food",
+    "Bowl",
+    "Noodle Salad",
+    "Peanut Sauce",
+    "Rice Noodles",
+    "Tempeh",
+    "Vegetables"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "7 oz Tempeh (oder Tofu)",
+    "2 garlic cloves (pressed)",
+    "3 piece of ginger (grated)",
+    "3 tbsp tamari (or soy sauce)",
+    "1 tbsp sesame oil (or peanut oil + more for frying)",
+    "1 tbsp rice vinegar (or other vinegar or lemon/lime juice)",
+    "1 tbsp maple syrup (or other syrup)",
+    "1 tsp sriracha (or chili paste optional to taste)",
+    "7 oz rice noodles (or other noodles or rice or quinoa)",
+    "6 radishes (finely sliced)",
+    "4 mini cucumbers (finely sliced)",
+    "1 red bell pepper (finely sliced)",
+    "2 large carrots (finely sliced)",
+    "2 cups fresh baby spinach",
+    "3-4 spring onions (cut into fine rings)",
+    "1 recipe peanut sauce (or tahini sauce, if nut-free)",
+    "2 tbsp sesame seeds",
+    "4 tbsp roasted peanuts"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Marinated Tempeh",
+      "itemListElement": [
+        {
+          "text": "For the marinade, pour tamari, sesame oil, rice vinegar, maple syrup, and Sriracha into a sealable container. Press in the garlic, grate in the ginger, and stir everything together.",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-1-0"
+        },
+        {
+          "text": "Cut the tempeh into cubes and add them to the marinade. Seal the container and shake well until the tempeh is completely marinated. Then let it marinate for at least 20 minutes (or overnight in the refrigerator).",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-1-1"
+        }
+      ]
+    },
+    {
+      "name": "Noodles \u0026 Veggies",
+      "itemListElement": [
+        {
+          "text": "Meanwhile, prepare and chop the vegetables. Cover the rice noodles with boiling water and set aside, covered, for 10 minutes (or according to package directions). Then drain and rinse with fresh water.",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-2-0"
+        }
+      ]
+    },
+    {
+      "name": "Cook and assemble",
+      "itemListElement": [
+        {
+          "text": "Once the tempeh is marinated, heat about 1-2 tbsp of oil in a frying pan (or wok). Remove the tempeh from the marinade (you can use the remaining marinade to make the peanut sauce) and cook until golden brown from all sides.",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-3-0"
+        },
+        {
+          "text": "Assemble the rice noodles and vegetables in bowls, as shown in the recipe video. Add the tempeh on top and drizzle with peanut sauce. Lastly, garnish with scallions, sesame seeds, and peanuts, and serve with fresh limes on the side.",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-3-1"
+        },
+        {
+          "text": "Enjoy!",
+          "url": "https://biancazapatka.com/en/tempeh-rice-noodle-bowl-in-peanut-sauce/#wprm-recipe-62266-step-3-2"
+        }
+      ]
+    }
+  ],
+  "nutrition": {
+    "calories": "451 kcal",
+    "servingSize": "1 Bowl",
+    "carbohydrateContent": "59.2 g",
+    "fatContent": "17.6 g",
+    "fiberContent": "4.4 g",
+    "proteinContent": "17.6 g",
+    "saturatedFatContent": "3.4 g",
+    "sodiumContent": "779.3 mg",
+    "sugarContent": "5.8 g"
+  },
+  "datePublished": "2022-08-10T11:11:40Z"
+}

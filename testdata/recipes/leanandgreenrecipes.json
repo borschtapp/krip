@@ -1,0 +1,65 @@
+{
+  "url": "https://leanandgreenrecipes.net/recipes/mexican/yellow-squash-taco-casserole/",
+  "name": "Yellow Squash Taco Casserole",
+  "description": "Tip: Recipe makes 5 servings, but casserole can be divided into individual 1 serving portions and freezing for later.",
+  "inLanguage": "en",
+  "thumbnailUrl": "https://leanandgreenrecipes.net/sites/default/files/2021-08/Yellow%20Squash%20Taco%20Casserole.jpg",
+  "author": {
+    "name": "lean.green",
+    "url": "https://leanandgreenrecipes.net/user/76/"
+  },
+  "publisher": {
+    "name": "Lean and Green Recipes",
+    "url": "https://leanandgreenrecipes.net"
+  },
+  "prepTime": "PT15M",
+  "cookTime": "PT25M",
+  "totalTime": "PT40M",
+  "recipeCategory": [
+    "Accompaniment"
+  ],
+  "recipeCuisine": [
+    "Mexican"
+  ],
+  "recipeYield": 5,
+  "recipeIngredient": [
+    "1.25 lbs Lean Ground Beef",
+    "2 cup Yellow Squash",
+    "1.5 tsp Cumin",
+    "1.5 tsp Paprika",
+    "1.5 tsp Chili Powder",
+    "1/8 tsp Cayenne Pepper",
+    "1/2 tsp Salt",
+    "3/4 tsp Garlic Powder",
+    "2 cup Low Fat Cheddar Cheese"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat oven to 350*F."
+    },
+    {
+      "text": "Cook the ground beef. After browning the meat"
+    },
+    {
+      "text": "add the canned Diced tomatoes and seasonings to the ground beef and simmer for 5 minutes."
+    },
+    {
+      "text": "Place the sliced squash to the bottom of a 9 x 13 inch baking pan."
+    },
+    {
+      "text": "Place meat mixture on top of squash"
+    },
+    {
+      "text": "sprinkle grated cheese on top."
+    },
+    {
+      "text": "Bake in preheated oven for about 25 minutes."
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 10,
+    "ratingValue": 3.8,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+}

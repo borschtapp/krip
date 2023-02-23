@@ -1,0 +1,131 @@
+{
+  "url": "https://www.feastingathome.com/tomato-risotto/",
+  "name": "Tomato Risotto with Saffron",
+  "description": "Tomato Risotto with juicy vine-ripened tomatoes, and infused with saffron, can be served as a vegetarian main or side dish, or topped off with smoky shrimp.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://www.feastingathome.com/wp-content/uploads/2020/07/Tomato-Risotto_-19.jpg",
+  "image": [
+    {
+      "url": "https://www.feastingathome.com/wp-content/uploads/2020/07/Tomato-Risotto_-20-225x225.jpg"
+    },
+    {
+      "url": "https://www.feastingathome.com/wp-content/uploads/2020/07/Tomato-Risotto_-20-260x195.jpg"
+    },
+    {
+      "url": "https://www.feastingathome.com/wp-content/uploads/2020/07/Tomato-Risotto_-20-320x180.jpg"
+    },
+    {
+      "url": "https://www.feastingathome.com/wp-content/uploads/2020/07/Tomato-Risotto_-20.jpg"
+    }
+  ],
+  "author": {
+    "name": "Sylvia Fountaine | feasting at home",
+    "description": "Chef and author of the whole-foods recipe blog, Feasting at Home, Sylvia Fountaine is a former restaurant owner and caterer turned full-time food blogger. She currently lives in the Pacific Northwest and shares seasonal, healthy recipes along with tips and tricks from her home kitchen.",
+    "url": "https://www.feastingathome.com/about/",
+    "image": "https://secure.gravatar.com/avatar/aab223bd6eb54ad302794719a6e9fba0?s=96\u0026d=blank\u0026r=g"
+  },
+  "publisher": {
+    "name": "Feasting At Home",
+    "description": "Where healthy meets delicious!",
+    "url": "https://www.feastingathome.com",
+    "logo": "https://www.feastingathome.com/wp-content/uploads/2022/09/default-sharing.jpg"
+  },
+  "prepTime": "PT15M",
+  "cookTime": "PT45M",
+  "totalTime": "PT1H",
+  "cookingMethod": "stovetop",
+  "suitableForDiet": [
+    "VegetarianDiet"
+  ],
+  "recipeCategory": [
+    "vegetarian"
+  ],
+  "recipeCuisine": [
+    "Spanish"
+  ],
+  "keywords": [
+    "tomato risotto",
+    "vegetarian risotto",
+    "shrimp risotto"
+  ],
+  "recipeYield": 4,
+  "recipeIngredient": [
+    "1 lb cherry or grape tomatoes",
+    "1 tablespoon olive oil",
+    "1 white or yellow onion, diced",
+    "2 tablespoons olive oil",
+    "4-6 cloves garlic, rough chopped",
+    "1 teaspoon dried thyme (or 1 tablespoon fresh)",
+    "1 1/2 cups arborio rice or Spanish short-grain rice",
+    "pinch saffron",
+    "1/2 teaspoon salt",
+    "1/2 teaspoon pepper",
+    "1/4 teaspoon smoked paprika",
+    "6-8 cups veggie stock or chicken stock, warmed",
+    "1 tablespoon butter",
+    "1/4 cup grated parmesan",
+    "16 ounces large shrimp -raw, peeled, deveined (or sub a white fish)",
+    "1 tablespoon cumin",
+    "1 tablespoon smoked paprika",
+    "2 teaspoons granulated garlic",
+    "1 teaspoon salt",
+    "oil for searing"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "BLISTER TOMATOES",
+      "text": "In a large skillet, heat oil over medium-high heat. Add tomatoes (whole) and sear, stirring occasionally, until they burst and soften, about 7 minutes. Turn heat off. Chop if extra-large.",
+      "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-1"
+    },
+    {
+      "name": "MAKE RISOTTO",
+      "text": "At the same time, in a large heavy-bottomed pot or dutch oven, heat the olive oil over medium heat and add the onions. Saute until golden about 10-12 minutes. Add garlic and thyme, saute 2 more minutes until fragrant.",
+      "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-2"
+    },
+    {
+      "text": "Add the rice, saute 1 minute, stirring. Add 2 cups warm stock (enough to cover the rice), saffron and smoked paprika, stir and bring to a simmer. Simmer until most of the liquid is absorbed. Add 1 cup broth and the tomatoes and all their juices. Stir until all the liquid is absorbed. Continue adding broth 1 cup at a time, letting the rice absorb it slowly, stirring often over med-low heat, until the rice is plumped, slightly al dente, yet creamy, about 20-25 minutes. You may not need all 8 cups. ( I used 6 3/4).",
+      "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-3"
+    },
+    {
+      "text": "Stir in the butter and parmesan. Season generously with salt, pepper, and optional chili flakes. Taste, adjust salt. If bland, it probably needs more salt.",
+      "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-4"
+    },
+    {
+      "name": "Serve",
+      "text": "as a flavorful side or vegetarian main, garnishing with fresh parsley and lemon zest.",
+      "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-5"
+    },
+    {
+      "name": "Optional Seared Prawns:",
+      "itemListElement": [
+        {
+          "text": "If adding the prawns, mix spices and salt in a bowl. Coat shrimp with the spices. Heat 2-3 tablespoons oil in a skillet (you may need to do this in batches) over medium-high heat, sear each side 2-3 minutes or until cooked through. Top the risotto with the seared prawns.",
+          "url": "https://www.feastingathome.com/tomato-risotto/#instruction-step-6"
+        }
+      ]
+    }
+  ],
+  "nutrition": {
+    "calories": "435 calories",
+    "servingSize": "1 ½ cup serving without shrimp",
+    "carbohydrateContent": "73.1 g",
+    "cholesterolContent": "11.2 mg",
+    "fatContent": "12.1 g",
+    "fiberContent": "2.8 g",
+    "proteinContent": "9 g",
+    "saturatedFatContent": "3.8 g",
+    "sodiumContent": "943.1 mg",
+    "sugarContent": "6.9 g",
+    "transFatContent": "0 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 31,
+    "ratingValue": 4.9
+  },
+  "video": {
+    "name": "Tomato Risotto",
+    "description": "A simple recipe video for Tomato Risotto highlighting juicy, sweet, vine-ripened tomatoes, and infused with saffron. Serve this as a vegetarian main, seasonal side dish, or top it off with smoky, pan-seared shrimp. Vegetarian-adaptable!",
+    "contentUrl": "https://content.jwplatform.com/videos/1jn7bzGY.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/1jn7bzGY-720.jpg"
+  }
+}

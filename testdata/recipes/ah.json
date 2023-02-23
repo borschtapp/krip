@@ -1,0 +1,60 @@
+{
+  "url": "https://www.ah.nl/allerhande/recept/R-R8522/kruidige-groentecalzone",
+  "name": "Kruidige groentecalzone",
+  "description": "Zelf Kruidige groentecalzone maken? Met dit recept van Allerhande zet je een feestje op tafel. Bekijk ingrediënten en bereidingswijze!",
+  "inLanguage": "nl",
+  "thumbnailUrl": "https://static.ah.nl/static/recepten/img_001329_1024x748_JPG.jpg",
+  "image": [
+    {
+      "url": "https://static.ah.nl/static/recepten/img_001329_1224x900_JPG.jpg"
+    }
+  ],
+  "author": {
+    "name": "Albert Heijn"
+  },
+  "publisher": {
+    "name": "Allerhande",
+    "url": "https://www.ah.nl",
+    "logo": "https://static.ah.nl/ah-static/images/logo-allerhande.png"
+  },
+  "totalTime": "PT35M",
+  "suitableForDiet": [
+    "VegetarianDiet"
+  ],
+  "recipeCategory": [
+    "hoofdgerecht"
+  ],
+  "recipeCuisine": [
+    "italiaans"
+  ],
+  "keywords": [
+    "vegetarisch",
+    "oven",
+    "italiaans",
+    "quiche",
+    "hoofdgerecht",
+    "zomer"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "1 kleine rode ui",
+    "1 courgette",
+    "1 rode paprika",
+    "0.5 eetlepel Italiaanse kruiden",
+    "2 eetlepels olijfolie",
+    "2 theelepels knoflookpuree",
+    "1 pakje pizza \u0026 tomato",
+    "1 pakje walnootkaas",
+    "0.5 eetlepel olie om in te vetten"
+  ],
+  "nutrition": {
+    "calories": "850 kcal energie",
+    "carbohydrateContent": "82 g koolhydraten",
+    "fatContent": "50 g vet",
+    "proteinContent": "26 g eiwit"
+  },
+  "aggregateRating": {
+    "ratingCount": 36,
+    "ratingValue": 3.083338
+  }
+}

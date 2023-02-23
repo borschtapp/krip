@@ -1,0 +1,90 @@
+{
+  "url": "https://handletheheat.com/chewy-brownies/",
+  "name": "Best Ever Chewy Brownies",
+  "description": "The BEST Chewy Brownies are just as chewy as the boxed brownies but packed with way more chocolate flavor. One bowl recipe made in less than 1 hour!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1.jpg",
+  "image": [
+    {
+      "url": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1-500x500.jpg"
+    },
+    {
+      "url": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1-500x375.jpg"
+    },
+    {
+      "url": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Tessa Arias",
+    "description": "I share trusted baking recipes your friends will LOVE alongside insights into the science of sweets. I'm a professionally trained chef, cookbook author, and cookie queen. I love to write about all things sweet, carb-y, and homemade. I live in Phoenix, Arizona (hence the blog name!)",
+    "url": "https://handletheheat.com/?page_id=51294/tessaaarias1/",
+    "image": "https://handletheheat.com/wp-content/uploads/2012/05/TESSA0044Square.jpg"
+  },
+  "publisher": {
+    "name": "Handle the Heat",
+    "description": "Delightful homemade baking recipes and kitchen experiments",
+    "url": "https://handletheheat.com"
+  },
+  "prepTime": "PT15M",
+  "cookTime": "PT30M",
+  "totalTime": "PT45M",
+  "recipeCategory": [
+    "Dessert"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "brownies",
+    "chewy brownies"
+  ],
+  "recipeYield": 9,
+  "recipeIngredient": [
+    "5 tablespoons (71 grams) unsalted butter",
+    "1 1/4 cups (249 grams) granulated sugar",
+    "2 large eggs plus 1 egg yolk, (cold)",
+    "1 teaspoon vanilla extract",
+    "1/3 cup vegetable oil",
+    "3/4 cup (75 grams) unsweetened cocoa powder",
+    "1/2 cup (63 grams) all-purpose flour",
+    "1/8 teaspoon baking soda",
+    "1 tablespoon cornstarch",
+    "1/4 teaspoon salt",
+    "3/4 cup (128 grams) semisweet chocolate chips"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Preheat the oven to 325°F. Line a 8 by 8-inch pan with foil or parchment paper and spray with nonstick cooking spray.",
+      "url": "https://handletheheat.com/chewy-brownies/#wprm-recipe-29825-step-0-0"
+    },
+    {
+      "text": "In a microwave safe bowl, add the butter and sugar. Microwave for about 1 minute, or until the butter is melted. Whisk in the eggs, egg yolk, and vanilla. Stir in the oil and cocoa powder.",
+      "url": "https://handletheheat.com/chewy-brownies/#wprm-recipe-29825-step-0-1"
+    },
+    {
+      "text": "With a rubber spatula, stir in the flour, baking soda, cornstarch, and salt until combined. Stir in the chocolate chips.",
+      "url": "https://handletheheat.com/chewy-brownies/#wprm-recipe-29825-step-0-2"
+    },
+    {
+      "text": "Spread the brownie batter evenly into the prepared pan. Place in the oven and bake for 30 minutes, or until the brownies are set and a cake tester inserted into the center has moist crumbs attached. Do not overcook. Let cool completely before cutting and serving.",
+      "url": "https://handletheheat.com/chewy-brownies/#wprm-recipe-29825-step-0-3"
+    },
+    {
+      "text": "Brownies can be stored in an airtight container at room temperature for up to 3 days.",
+      "url": "https://handletheheat.com/chewy-brownies/#wprm-recipe-29825-step-0-4"
+    }
+  ],
+  "aggregateRating": {
+    "ratingCount": 804,
+    "ratingValue": 4.83
+  },
+  "video": {
+    "name": "Best Chewy Brownies",
+    "description": "The BEST Chewy Brownies are just as chewy as the boxed brownies but packed with way more chocolate flavor. One bowl recipe made in less than 1 hour!",
+    "contentUrl": "https://content.jwplatform.com/videos/xJHj5A6k.mp4",
+    "thumbnailUrl": "https://content.jwplatform.com/thumbs/xJHj5A6k-720.jpg",
+    "uploadDate": "2021-03-24T19:19:13Z"
+  },
+  "datePublished": "2017-03-15T03:00:48Z"
+}

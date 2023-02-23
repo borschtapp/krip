@@ -1,0 +1,88 @@
+{
+  "url": "https://forktospoon.com/air-fryer-parmesan-tomatoes/",
+  "name": "Air Fryer Parmesan Tomatoes",
+  "description": "Air Fryer Parmesan Tomatoes are amazing! If you are looking for the perfect summer-baked tomato recipe, this one is the one, and it's so easy to make and so flavorful!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://forktospoon.com/wp-content/uploads/2021/07/Air-Fryer-Parmesan-Tomatoes.jpg",
+  "image": [
+    {
+      "url": "https://forktospoon.com/wp-content/uploads/2021/07/Air-Fryer-Parmesan-Tomatoes-720x720.jpg"
+    },
+    {
+      "url": "https://forktospoon.com/wp-content/uploads/2021/07/Air-Fryer-Parmesan-Tomatoes-720x540.jpg"
+    },
+    {
+      "url": "https://forktospoon.com/wp-content/uploads/2021/07/Air-Fryer-Parmesan-Tomatoes-720x405.jpg"
+    },
+    {
+      "url": "https://forktospoon.com/wp-content/uploads/2021/07/Air-Fryer-Parmesan-Tomatoes-735x616.jpg"
+    }
+  ],
+  "author": {
+    "name": "ForkToSpoon.com",
+    "image": "https://secure.gravatar.com/avatar/8c80a26cb58e128ccfe666a71afdb637?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Fork To Spoon",
+    "description": "Your Guide for Everything Air Fryer and Instant Pot",
+    "url": "https://forktospoon.com",
+    "logo": "https://forktospoon.com/wp-content/uploads/2019/06/logo.png"
+  },
+  "prepTime": "PT10M",
+  "cookTime": "PT10M",
+  "totalTime": "PT20M",
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "AIR FRYER PARMESAN TOMATOES"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "3 tomatoes, cut in half",
+    "1 cup bread crumbs",
+    "¼ cup parmesan cheese",
+    "1 teaspoon minced garlic",
+    "1 tablespoon olive oil",
+    "½ teaspoon dried basil",
+    "½ teaspoon dried parsley",
+    "½ teaspoon dried oregano",
+    "½ teaspoon dried dill",
+    "1 teaspoon salt",
+    "½ teaspoon black pepper"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "In a small mixing bowl, mix the bread...",
+      "text": "In a small mixing bowl, mix the bread crumbs, parmesan cheese, minced garlic, olive oil, basil, parsley, oregano, dill, salt, and black pepper. Mix well.",
+      "url": "https://forktospoon.com/air-fryer-parmesan-tomatoes/#mv_create_950_1"
+    },
+    {
+      "name": "Slice your tomatoes in half, and top with...",
+      "text": "Slice your tomatoes in half, and top with the breadcrumb mixture. Set into the air fryer at 330 degrees F, air fryer sitting for 6 to 10 minutes, or until the tomatoes are perfectly roasted.",
+      "url": "https://forktospoon.com/air-fryer-parmesan-tomatoes/#mv_create_950_2"
+    },
+    {
+      "text": "Plate, serve, and enjoy!",
+      "url": "https://forktospoon.com/air-fryer-parmesan-tomatoes/#mv_create_950_3"
+    }
+  ],
+  "nutrition": {
+    "calories": "122 calories",
+    "servingSize": "1",
+    "carbohydrateContent": "16 grams carbohydrates",
+    "cholesterolContent": "4 milligrams cholesterol",
+    "fatContent": "4 grams fat",
+    "fiberContent": "2 grams fiber",
+    "proteinContent": "4 grams protein",
+    "saturatedFatContent": "1 grams saturated fat",
+    "sodiumContent": "563 grams sodium",
+    "sugarContent": "3 grams sugar",
+    "transFatContent": "0 grams trans fat",
+    "unsaturatedFatContent": "3 grams unsaturated fat"
+  },
+  "aggregateRating": {
+    "reviewCount": 5,
+    "ratingValue": 5
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/",
+  "name": "Vegane Rotkohlsuppe mit Kokosmilch",
+  "description": "Histaminarmes Rezept für eine einfache und cremige vegane Rotkohlsuppe mit Kokosmilch. Low Carb, Glutenfrei.",
+  "inLanguage": "de-DE",
+  "thumbnailUrl": "https://eattolerant.de/wp-content/uploads/2022/01/Vegane-Rotkohlsuppe-13-scaled.jpg",
+  "author": {
+    "name": "Jessica",
+    "image": "https://eattolerant.de/wp-content/uploads/2020/01/Logo_EatTolerant.jpg"
+  },
+  "publisher": {
+    "name": "Eat Tolerant",
+    "description": "histaminarmer alltag ohne verzicht - mit verträglichen rezepten und produkten",
+    "url": "https://eattolerant.de"
+  },
+  "cookTime": "PT40M",
+  "recipeCategory": [
+    "Hauptgericht"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "500 g Rotkohl (Nettogewicht)",
+    "1 kleiner Apfel (z.B. Boskopp)",
+    "200 g Kartoffeln",
+    "1 Zwiebel",
+    "1 kleines Stück Ingwer",
+    "500 ml Gemüsebrühe",
+    "200 ml Kokosmilch",
+    "1 TL Zucker",
+    "20 ml Verjus Sauer",
+    "3 EL Kokosöl"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Die äußeren Blätter vom Rotkohl entfernen, anschließend halbieren, großzügig den Strunk entfernen und in kleine Stücke schneiden.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-0"
+    },
+    {
+      "text": "Den Apfel sowie die Kartoffeln waschen und schälen, ebenfalls in kleine Stücke schneiden.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-1"
+    },
+    {
+      "text": "Die Zwiebel in Würfel schneiden und den Ingwer fein reiben.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-2"
+    },
+    {
+      "text": "Das Kokosöl in einem Top erhitzen, anschließend die Zwiebel und den Rotkohl kurz darin anbraten. Währenddessen mit Salz würzen.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-3"
+    },
+    {
+      "text": "Die Apfel- und Kartoffelstücke zugeben, ebenfalls kurz anbraten.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-4"
+    },
+    {
+      "text": "Die Gemüsebrühe, Kokosmilch und den Ingwer zugeben und die Suppe ca. 25 Minuten köcheln lassen. Kurz vor Ende der Garzeit den Verjus sowie Zucker zugeben. Anschließend fein pürieren und sofort servieren.",
+      "url": "https://eattolerant.de/suppe/vegane-rotkohlsuppe-mit-kokosmilch-histaminarm-glutenfrei-low-carb/#wprm-recipe-11142-step-0-5"
+    }
+  ],
+  "video": {
+    "name": "Vegane und histaminarme Rotkohlsuppe Eat Tolerant",
+    "description": "Vegane und histaminarme Rotkohlsuppe Eat Tolerant",
+    "duration": "PT25S",
+    "contentUrl": "https://eattolerant.de/wp-content/uploads/2022/01/Vegane-Rotkohlsuppe.mp4",
+    "uploadDate": "2022-02-28T16:38:18Z"
+  },
+  "datePublished": "2022-01-12T15:55:27Z"
+}

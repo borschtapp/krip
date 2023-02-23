@@ -1,0 +1,44 @@
+{
+  "url": "https://rutgerbakt.nl/taart-recepten/abrikozenvlaai/",
+  "name": "Abrikozenvlaai",
+  "description": "Met dit recept kun je zelf een heerlijke abrikozenvlaai bakken! Deze vlaai is het lekkerst met verse abrikozen, maar buiten het seizoen kun je die oo",
+  "inLanguage": "nl-NL",
+  "thumbnailUrl": "https://rutgerbakt.nl/wp-content/uploads/2020/04/abrikozenvlaai-scaled-1200x630-c-default.jpg",
+  "image": [
+    {
+      "url": "https://rutgerbakt.nl/wp-content/uploads/2020/04/abrikozenvlaai-scaled-1920x1080-c-default.jpg"
+    }
+  ],
+  "author": {
+    "name": "Rutger",
+    "image": "https://secure.gravatar.com/avatar/0c28b9708ffdb69a116a17038323dd69?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "Rutger Bakt",
+    "description": "Bakken - recepten voor zoet en hartig!",
+    "url": "https://rutgerbakt.nl"
+  },
+  "prepTime": "PT1H30M",
+  "cookTime": "PT30M",
+  "totalTime": "PT2H",
+  "recipeIngredient": [
+    "1 recept vlaaideeg",
+    "1 kilo verse rijpe abrikozen of 750 gr abrikozenhelften, uitgelekt uit blik",
+    "¾ recept banketbakkersroom",
+    "suiker, optioneel, om te bestrooien",
+    "boter, om in te vetten",
+    "bloem, voor het werkblad",
+    "150 gr abrikozenjam",
+    "20 gr amandelschaafsel",
+    "poedersuiker, om te bestuiven"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "Met dit recept kun je zelf een heerlijke abrikozenvlaai bakken! Deze vlaai is het lekkerst met verse abrikozen, maar buiten het seizoen kun je die oo"
+    }
+  ],
+  "aggregateRating": {
+    "reviewCount": 130,
+    "ratingValue": 4
+  }
+}

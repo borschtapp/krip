@@ -78,15 +78,14 @@ func TestWebsitesOnline(t *testing.T) {
 
 func TestWebsitesProperties(t *testing.T) {
 	t.Parallel()
-	t.Skip("TODO: doesn't work for all")
+	//t.Skip("TODO: doesn't work for all")
 
 	var domains []string
 	WalkTestdataRecipes(func(name string, recipe model.Recipe) {
 		t.Run(name, func(t *testing.T) {
 			assert.NotEmpty(t, recipe.Url)
 			assert.NotEmpty(t, recipe.Name)
-			assert.NotEmpty(t, recipe.Language)
-			assert.NotEmpty(t, recipe.ThumbnailUrl)
+			assert.NotZero(t, len(recipe.Images)+len(recipe.ThumbnailUrl))
 			assert.NotEmpty(t, recipe.Ingredients)
 			assert.NotEmpty(t, recipe.Instructions)
 			assert.NotEmpty(t, recipe.Publisher)

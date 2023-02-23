@@ -13,18 +13,6 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 	}
 
 	head := data.Document.Find("head").First()
-	if len(r.Url) == 0 {
-		if val, ok := head.Find("meta[property='og:url']").Attr("content"); ok && utils.IsAbsolute(val) {
-			r.Url = val
-		} else if val, ok := head.Find("link[rel='canonical']").Attr("href"); ok && utils.IsAbsolute(val) {
-			r.Url = val
-		} else if val, ok := head.Find("link[rel='alternate']").Attr("href"); ok && utils.IsAbsolute(val) {
-			r.Url = val
-		} else {
-			r.Url = data.Url
-		}
-	}
-
 	if len(r.Name) == 0 {
 		if val, ok := head.Find("meta[property='og:name']").Attr("content"); ok {
 			r.Name = utils.CleanupInline(val)

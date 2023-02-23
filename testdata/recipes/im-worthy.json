@@ -1,0 +1,104 @@
+{
+  "url": "https://im-worthy.com/almond-flour-pancakes/",
+  "name": "Vegan Almond Flour Pancakes (Fluffy \u0026 Gluten-free)",
+  "description": "These almond flour pancakes are sweet, fluffy and easy to make. They're vegan, gluten-free and can easily be made keto-friendly. Serve with fresh fruit or maple syrup.",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://im-worthy.com/wp-content/uploads/2020/11/Almond-Flour-Pancakes_Blog4.jpg",
+  "image": [
+    {
+      "url": "https://im-worthy.com/wp-content/uploads/2020/11/Almond-Flour-Pancakes_Blog4-500x500.jpg"
+    },
+    {
+      "url": "https://im-worthy.com/wp-content/uploads/2020/11/Almond-Flour-Pancakes_Blog4-500x375.jpg"
+    },
+    {
+      "url": "https://im-worthy.com/wp-content/uploads/2020/11/Almond-Flour-Pancakes_Blog4-480x270.jpg"
+    }
+  ],
+  "author": {
+    "name": "Shana Thomas",
+    "description": "Hey there, I’m Shana Thomas, food photographer, home cook, and writer behind, Im-Worthy.com. Since 2019, my goal has been to inspire you to live energetic and healthy lives with my easy vegan recipes \u0026 wellness tips.",
+    "url": "https://im-worthy.com/author/changeyourlife14/",
+    "image": "https://secure.gravatar.com/avatar/2c1dd40265dfdfced1e69bed4c2b5058?s=96\u0026d=mm\u0026r=g"
+  },
+  "publisher": {
+    "name": "IM-WORTHY",
+    "description": "easy vegan recipes for the heart \u0026 soul",
+    "url": "https://im-worthy.com",
+    "logo": "https://www.im-worthy.com/wp-content/uploads/2018/12/imageedit_52_6027994845.png"
+  },
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
+  "recipeCategory": [
+    "Breakfast",
+    "Brunch",
+    "Main Course"
+  ],
+  "recipeCuisine": [
+    "American"
+  ],
+  "keywords": [
+    "almond flour pancakes",
+    "almond flour recipes",
+    "healthy breakfast pancakes",
+    "healthy Breakfast Recipe",
+    "pancakes with almond flour",
+    "Vegan Almond Flour Pancakes"
+  ],
+  "recipeYield": 2,
+  "recipeIngredient": [
+    "1/2 cup almond flour",
+    "1 cup *oat flour (or use all-purpose flour)",
+    "1/2-1 cup non-dairy milk (plus more, if needed)",
+    "2 tsp baking powder",
+    "1/2 tsp cinnamon (optional) (can sub for vanilla extract)",
+    "pinch of salt",
+    "1 tbsp unsweetened apple sauce or maple syrup (optional)",
+    "1 tsp grapeseed oil (for cooking. Add more, if needed. Can sub for coconut or avocado oil)"
+  ],
+  "recipeInstructions": [
+    {
+      "text": "In separate bowls: mix the wet \u0026 dry ingredients.",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-0"
+    },
+    {
+      "text": "Add the wet ingredients to the dry ingredients and stir until combined. Start with 1/2 cup milk and add more until the batter is slightly lumpy \u0026 creamy. (It should not be runny. If runny, add more oat/all-purpose flour. If too thick, add more non-dairy milk.)",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-1"
+    },
+    {
+      "text": "Let the pancake batter rest for 5 minutes to thicken while you heat the pan according to the next steps below.",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-2"
+    },
+    {
+      "text": "Add the oil to a nonstick pan over medium heat. Once the pan is hot pour the batter into the pan using a 1/4 measuring cup (for easy clean up).",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-3"
+    },
+    {
+      "text": "Cook on each side for about 2-5 minutes (depends on your pan) or until you see little bubbles form on top, then flip and let them cook for another couple of minutes.",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-4"
+    },
+    {
+      "text": "Serve with your favorite toppings. Some suggestions include maple syrup, coconut whip cream, fresh berries, or vegan butter.",
+      "url": "https://im-worthy.com/almond-flour-pancakes/#wprm-recipe-2975-step-0-5"
+    }
+  ],
+  "nutrition": {
+    "calories": "139 kcal",
+    "servingSize": "1 serving"
+  },
+  "aggregateRating": {
+    "ratingCount": 8,
+    "ratingValue": 5
+  },
+  "video": {
+    "name": "Vegan Almond Flour Pancakes | Im-Worthy Recipes",
+    "description": "The best almond flour pancakes. Get the recipe at: https://im-worthy.com/almond-flour-pancakes/ #almondflour #almondflourpancakes #veganpancakes",
+    "duration": "PT16S",
+    "embedUrl": "https://www.youtube.com/embed/yy5oyob8gkE?feature=oembed",
+    "contentUrl": "https://www.youtube.com/watch?v=yy5oyob8gkE",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yy5oyob8gkE/hqdefault.jpg",
+    "uploadDate": "2022-07-30T01:31:24Z"
+  },
+  "datePublished": "2020-11-06T03:13:43Z"
+}

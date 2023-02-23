@@ -1,0 +1,108 @@
+{
+  "url": "https://simple-veganista.com/vegan-jambalaya/",
+  "name": "Vegan Jambalaya",
+  "description": "Made in 1 pot, this easy Louisiana Vegan Jambalaya is loaded with healthy veggies and plant-based protein for a delicious Creole-style rice dish that even the picky eaters will love!",
+  "inLanguage": "en-US",
+  "thumbnailUrl": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5.jpg",
+  "image": [
+    {
+      "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5-225x225.jpg"
+    },
+    {
+      "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5-260x195.jpg"
+    },
+    {
+      "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5-320x180.jpg"
+    }
+  ],
+  "author": {
+    "name": "Julie | The Simple Veganista",
+    "description": "Hi, my name is Julie and I am The Simple Veganista. I love creating healthy, affordable, easy vegan recipes that everyone will love! Find a wide variety of simple, healthy, affordable vegan recipes, from breakfast, lunch and dinner, and everything in between!",
+    "url": "https://simple-veganista.com/about/"
+  },
+  "publisher": {
+    "name": "THE SIMPLE VEGANISTA",
+    "description": "Vegan Recipes Made Easy + Healthy",
+    "url": "https://simple-veganista.com",
+    "logo": "https://simple-veganista.com/wp-content/uploads/2019/07/tsv-signal-one-push-logo-e1563844736155.jpg"
+  },
+  "prepTime": "PT15M",
+  "cookTime": "PT30M",
+  "totalTime": "PT45M",
+  "cookingMethod": "simmer",
+  "recipeCategory": [
+    "Entree"
+  ],
+  "recipeCuisine": [
+    "Creole"
+  ],
+  "recipeYield": 6,
+  "recipeIngredient": [
+    "1 tablespoon olive oil or 1/4 cup water",
+    "1 medium onion, diced",
+    "4 cloves garlic, minced",
+    "3 large bell peppers (green, red \u0026 yellow), seeded and diced",
+    "2 large celery ribs, diced",
+    "2 teaspoons smoked paprika",
+    "1 teaspoon EACH dried thyme + oregano",
+    "1/4 – 1/2 teaspoon cayenne or red pepper flakes",
+    "1 can (14oz) crushed tomatoes",
+    "1 1/2 cups dry long-grain rice (for grain-free see notes)",
+    "1 – 2 bay leaves",
+    "3 1/2 – 4 cups low-sodium vegetable broth",
+    "1 can (14oz) red kidney beans, drained and rinsed",
+    "3 – 4 vegan sausages (about 14 oz), sliced and cooked (or extra can of beans)",
+    "1 teaspoon pink salt, or to taste",
+    "fresh cracked pepper, to taste",
+    "sliced scallions (green onions)",
+    "chopped parsley",
+    "dash of hot sauce (Tabasco, Frank’s, or your favorite)"
+  ],
+  "recipeInstructions": [
+    {
+      "name": "Vegan sausage",
+      "text": "If using plant-based sausage, you’ll want to cook it first. Slice it into bite-size pieces and cook in a skillet with 1 tablespoon oil, over medium heat until browned, about 3 – 5 minutes on each side. Transfer to a small plate lined with a paper napkin to soak up excess oil.",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-1"
+    },
+    {
+      "name": "Saute",
+      "text": "In a large pan, heat oil/water over medium-high heat, add the onion, garlic, celery, and bell peppers, saute for 5 minutes. Add the smoked paprika, thyme, oregano, and cayenne, and saute for 1 minute more.",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-2"
+    },
+    {
+      "name": "Simmer",
+      "text": "Add the crushed tomatoes, rice, bay leaves, and broth, bring to a boil, reduce heat, cover askew, and simmer on low for 20 – 25 minutes, stirring every 7 minutes or so to keep the rice from sticking to the bottom of the pan. In the last 5 minutes, add the beans and/or sausage and continue to cook until warmed through. Remove bay leaves, season with salt and pepper.",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-3"
+    },
+    {
+      "name": "Serve",
+      "text": "Spoon into serving bowls and top with garnish of choice.",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-4"
+    },
+    {
+      "text": "Serves 6 – 8",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-5"
+    },
+    {
+      "name": "Store",
+      "text": "Leftovers can be stored for up to 5 days in the refrigerator. For longer storage, keep in the freezer for up to 2 months. Let thaw before reheating on the stovetop or in the microwave.",
+      "url": "https://simple-veganista.com/vegan-jambalaya/#instruction-step-6"
+    }
+  ],
+  "nutrition": {
+    "calories": "358 calories",
+    "carbohydrateContent": "74 g",
+    "cholesterolContent": "0 mg",
+    "fatContent": "1.9 g",
+    "fiberContent": "10.7 g",
+    "proteinContent": "15.7 g",
+    "saturatedFatContent": "0.5 g",
+    "sodiumContent": "504.5 mg",
+    "sugarContent": "9.4 g",
+    "transFatContent": "0 g"
+  },
+  "aggregateRating": {
+    "reviewCount": 7,
+    "ratingValue": 5
+  }
+}
