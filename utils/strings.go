@@ -3,6 +3,7 @@ package utils
 import (
 	"errors"
 	"fmt"
+	"github.com/sosodev/duration"
 	"log"
 	"net/url"
 	"regexp"
@@ -234,6 +235,13 @@ func ParseDuration(str string) (time.Duration, bool) {
 		duration += time.Duration(minutes) * time.Minute
 	}
 	return duration, true
+}
+
+func ConvertDuration(str string) time.Duration {
+	if d, err := duration.Parse(str); err == nil {
+		return d.ToTimeDuration()
+	}
+	return 0
 }
 
 var numberRegex = regexp.MustCompile("\\d+([.,]\\d+)?")
