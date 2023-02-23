@@ -1,7 +1,7 @@
 package common
 
 import (
-	"errors"
+	"fmt"
 	"github.com/sosodev/duration"
 
 	"github.com/borschtapp/krip/model"
@@ -22,17 +22,17 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 
 	// fill recipe with schema.org/Recipe metadata
 	if err := schema.Scrape(data, r); err != nil {
-		return errors.New("schema error: " + err.Error())
+		fmt.Println("schema error: " + err.Error())
 	}
 
 	// fill recipe with OpenGraph metadata
 	if err := opengraph.Scrape(data, r); err != nil {
-		return errors.New("opengraph error: " + err.Error())
+		fmt.Println("opengraph error: " + err.Error())
 	}
 
 	// fill recipe according to the website scraper implementation
 	if err := website.Scrape(data, r); err != nil {
-		return errors.New("website error: " + err.Error())
+		fmt.Println("website error: " + err.Error())
 	}
 
 	if len(r.Language) == 0 && len(r.Url) != 0 {

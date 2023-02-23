@@ -52,7 +52,7 @@ func ToAbsoluteUrl(base *url.URL, urlStr string) string {
 }
 
 func RemoveTrailingSlash(urlStr string) string {
-	return strings.TrimSuffix(urlStr, "/")
+	return strings.ToLower(strings.TrimSuffix(urlStr, "/"))
 }
 
 func CleanupLang(lang string) string {
