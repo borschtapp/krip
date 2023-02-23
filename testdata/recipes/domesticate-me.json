@@ -30,6 +30,7 @@
   },
   "prepTime": "PT15M",
   "cookTime": "PT45M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Recipes",
     "The Dude Diet",

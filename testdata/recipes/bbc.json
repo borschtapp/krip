@@ -18,6 +18,7 @@
   },
   "prepTime": "PT2H",
   "cookTime": "PT10M",
+  "totalTime": "PT2H10M",
   "suitableForDiet": [
     "http://schema.org/VegetarianDiet"
   ],

@@ -25,8 +25,9 @@
   },
   "text": "Have you ever tried matcha? Matcha is ground green tea with an intense green color and a slightly tart flavor. I personally prefer jams to be a little less sweet, so I found matcha the perfect ingredient to give it an exciting upgrade without adding sweetness. The flavors of the subtle tea and the sweet fruit go very well together. If you have any matcha powder left over, you can sprinkle a little on top of your jam-slathered toast to enhance the flavor even more.",
   "prepTime": "PT20M",
+  "cookTime": "PT1H",
   "totalTime": "PT1H20M",
-  "difficulty": "easy",
+  "educationalLevel": "easy",
   "suitableForDiet": [
     "vegetarian",
     "vegan",

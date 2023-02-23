@@ -30,6 +30,7 @@
     "url": "https://www.primaledgehealth.com"
   },
   "prepTime": "PT10M",
+  "cookTime": "PT1H",
   "totalTime": "PT1H10M",
   "recipeCategory": [
     "Desserts"

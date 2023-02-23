@@ -2,6 +2,7 @@ package common
 
 import (
 	"errors"
+	"github.com/sosodev/duration"
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper/opengraph"
@@ -29,6 +30,11 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
+	normalizeRecipe(r)
+	return nil
+}
+
+func normalizeRecipe(r *model.Recipe) {
 	if r.Publisher != nil && len(r.Publisher.Name) == 0 {
 		r.Publisher = nil
 	}
@@ -37,5 +43,23 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		r.Author = nil
 	}
 
-	return nil
+	if len(r.CookTime) != 0 && len(r.PrepTime) != 0 && len(r.TotalTime) == 0 {
+		r.TotalTime = duration.Format(utils.ConvertDuration(r.CookTime) + utils.ConvertDuration(r.PrepTime))
+	} else if len(r.TotalTime) != 0 && len(r.CookTime) != 0 && len(r.PrepTime) == 0 {
+		prepTime := utils.ConvertDuration(r.TotalTime) - utils.ConvertDuration(r.CookTime)
+		if prepTime > 0 {
+			r.PrepTime = duration.Format(prepTime)
+		}
+	} else if len(r.TotalTime) != 0 && len(r.PrepTime) != 0 && len(r.CookTime) == 0 {
+		cookTime := utils.ConvertDuration(r.TotalTime) - utils.ConvertDuration(r.PrepTime)
+		if cookTime > 0 {
+			r.CookTime = duration.Format(cookTime)
+		}
+	}
+
+	//if len(r.ThumbnailUrl) != 0 && len(r.Images) == 0 {
+	//	r.Images = []*model.ImageObject{{Url: r.ThumbnailUrl}}
+	//} else if len(r.ThumbnailUrl) == 0 && len(r.Images) != 0 {
+	//	r.ThumbnailUrl = r.Images[0].Url
+	//}
 }

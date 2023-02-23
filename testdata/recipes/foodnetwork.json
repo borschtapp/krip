@@ -11,6 +11,7 @@
   },
   "prepTime": "PT15M",
   "cookTime": "PT5M",
+  "totalTime": "PT20M",
   "recipeCuisine": [
     "American"
   ],

@@ -12,6 +12,7 @@
   },
   "prepTime": "PT1H",
   "cookTime": "PT30M",
+  "totalTime": "PT1H30M",
   "recipeCategory": [
     "Fleisch"
   ],

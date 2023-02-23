@@ -26,6 +26,7 @@
   },
   "prepTime": "PT5M",
   "cookTime": "PT10M",
+  "totalTime": "PT15M",
   "recipeCategory": [
     "Entree"
   ],

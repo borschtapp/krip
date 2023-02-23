@@ -32,6 +32,7 @@
   },
   "prepTime": "PT10M",
   "cookTime": "PT1H",
+  "totalTime": "PT1H10M",
   "recipeCategory": [
     "Main Course"
   ],

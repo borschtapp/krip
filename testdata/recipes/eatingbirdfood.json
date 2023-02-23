@@ -31,6 +31,7 @@
   },
   "prepTime": "PT10M",
   "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Lunch/Dinner"
   ],

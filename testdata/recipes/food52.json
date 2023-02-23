@@ -26,6 +26,7 @@
   },
   "prepTime": "P1D",
   "cookTime": "PT1H20M",
+  "totalTime": "P1DT1H20M",
   "recipeCategory": [
     "Dinner"
   ],

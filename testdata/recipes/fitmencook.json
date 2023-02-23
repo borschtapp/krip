@@ -8,6 +8,7 @@
     "name": "FitMenCook"
   },
   "prepTime": "PT5M",
+  "cookTime": "PT30M",
   "totalTime": "PT35M",
   "recipeYield": 5,
   "recipeIngredient": [

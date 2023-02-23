@@ -19,6 +19,7 @@
   },
   "prepTime": "PT5M",
   "cookTime": "PT5M",
+  "totalTime": "PT10M",
   "recipeYield": 1,
   "recipeIngredient": [
     "3 Eggs",
