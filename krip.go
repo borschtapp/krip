@@ -1,25 +1,14 @@
 package krip
 
 import (
-	"errors"
-
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
 	"github.com/borschtapp/krip/scraper/common"
 	"github.com/borschtapp/krip/scraper/website"
-	"github.com/borschtapp/krip/utils"
 )
 
-var scrapers = map[string]model.Scraper{
-	"cookstr":        website.ScrapeCookstr,
-	"dinnerly":       website.ScrapeMarleySpoon,
-	"fitmencook":     website.ScrapeFitMenCook,
-	"kitchenstories": website.ScrapeKitchenStories,
-	"marleyspoon":    website.ScrapeMarleySpoon,
-}
-
 func RegisterScraper(hostname string, fn model.Scraper) {
-	scrapers[hostname] = fn
+	website.RegisterScraper(hostname, fn)
 }
 
 func Scrape(input *model.DataInput) (*model.Recipe, error) {
@@ -27,15 +16,6 @@ func Scrape(input *model.DataInput) (*model.Recipe, error) {
 	if err := common.Scrape(input, recipe); err != nil {
 		return nil, err
 	}
-
-	alias := utils.HostAlias(input.Url)
-	// fill recipe according to the alias scraper implementation
-	if aliasScraper, ok := scrapers[alias]; ok {
-		if err := aliasScraper(input, recipe); err != nil {
-			return nil, errors.New("alias scraper error: " + err.Error())
-		}
-	}
-
 	return recipe, nil
 }
 
