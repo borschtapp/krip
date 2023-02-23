@@ -95,9 +95,9 @@ type Recipe struct {
 	Author        *Person               `json:"author,omitempty"`
 	Publisher     *Organization         `json:"publisher,omitempty"`
 	Text          string                `json:"text,omitempty"`
-	PrepTime      float64               `json:"prepTime,omitempty"`
-	CookTime      float64               `json:"cookTime,omitempty"`
-	TotalTime     float64               `json:"totalTime,omitempty"`
+	PrepTime      string                `json:"prepTime,omitempty"`
+	CookTime      string                `json:"cookTime,omitempty"`
+	TotalTime     string                `json:"totalTime,omitempty"`
 	Difficulty    string                `json:"difficulty,omitempty"` // FIXME: `difficulty` is not a part of Recipe schema, it can be `educationalLevel`, but I don't like it https://github.com/schemaorg/schemaorg/issues/3130
 	CookingMethod string                `json:"cookingMethod,omitempty"`
 	Diets         []string              `json:"suitableForDiet,omitempty"`

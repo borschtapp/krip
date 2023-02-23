@@ -1,6 +1,6 @@
 module github.com/borschtapp/krip
 
-go 1.20
+go 1.18
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
@@ -12,6 +12,8 @@ require (
 	golang.org/x/exp v0.0.0-20230213192124-5e25df0256eb
 	golang.org/x/net v0.7.0
 )
+
+replace github.com/sosodev/duration => github.com/astappiev/duration v1.0.1-format
 
 require (
 	github.com/andybalholm/cascadia v1.3.2-0.20220104174750-b91ef208019c // indirect

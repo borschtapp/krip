@@ -1,6 +1,7 @@
 package website
 
 import (
+	"github.com/sosodev/duration"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -45,7 +46,7 @@ func ScrapeCookstr(data *model.DataInput, r *model.Recipe) error {
 				r.Equipment = strings.Split(value, ", ")
 			} else if label == "Total Time" && value != "" {
 				if val, ok := utils.ParseDuration(value); ok {
-					r.TotalTime = val.Minutes()
+					r.TotalTime = duration.Format(val)
 				}
 			}
 		})

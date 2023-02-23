@@ -1,10 +1,9 @@
 package schema
 
 import (
+	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"
@@ -24,7 +23,7 @@ func TestSchemaParser(t *testing.T) {
 
 	assert.Equal(t, "Rapid Stir-Fried Beef and Broccoli", recipe.Name)
 	assert.Equal(t, "https://img.hellofresh.com/f_auto,fl_lossy,h_300,q_auto,w_450/hellofresh_s3/image/uk-stir-friend-chinese-beef-b5fd1d10.jpg", recipe.ThumbnailUrl)
-	assert.Equal(t, float64(20), recipe.TotalTime)
+	assert.Equal(t, "PT20M", recipe.TotalTime)
 	assert.Equal(t, []string{"Rapid", "Spicy"}, recipe.Keywords)
 	assert.Equal(t, []string{"main course"}, recipe.Categories)
 	assert.Equal(t, []string{"Asian"}, recipe.Cuisines)
