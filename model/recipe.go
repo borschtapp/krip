@@ -98,7 +98,7 @@ type Recipe struct {
 	PrepTime      string                `json:"prepTime,omitempty"`
 	CookTime      string                `json:"cookTime,omitempty"`
 	TotalTime     string                `json:"totalTime,omitempty"`
-	Difficulty    string                `json:"difficulty,omitempty"` // FIXME: `difficulty` is not a part of Recipe schema, it can be `educationalLevel`, but I don't like it https://github.com/schemaorg/schemaorg/issues/3130
+	Difficulty    string                `json:"educationalLevel,omitempty"` // FIXME: `difficulty` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3130
 	CookingMethod string                `json:"cookingMethod,omitempty"`
 	Diets         []string              `json:"suitableForDiet,omitempty"`
 	Categories    []string              `json:"recipeCategory,omitempty"`
