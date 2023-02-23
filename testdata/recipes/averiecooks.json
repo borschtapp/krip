@@ -26,9 +26,9 @@
     "description": "Fast and easy recipes for real life!",
     "url": "https://www.averiecooks.com"
   },
-  "prepTime": 5,
-  "cookTime": 15,
-  "totalTime": 20,
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
   "suitableForDiet": [
     "VegetarianDiet"
   ],

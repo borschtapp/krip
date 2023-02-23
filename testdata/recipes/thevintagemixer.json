@@ -15,9 +15,9 @@
     "name": "Vintage Mixer",
     "url": "https://www.thevintagemixer.com"
   },
-  "prepTime": 15,
-  "cookTime": 20,
-  "totalTime": 35,
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "Dessert"
   ],

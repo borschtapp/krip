@@ -9,8 +9,8 @@
     "description": "TV channel Food Network UK official site with latest shows and thousands of global recipes, British dishes and cooking tips from the experts.",
     "url": "https://foodnetwork.co.uk"
   },
-  "prepTime": 15,
-  "cookTime": 5,
+  "prepTime": "PT15M",
+  "cookTime": "PT5M",
   "recipeCuisine": [
     "American"
   ],

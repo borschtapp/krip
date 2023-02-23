@@ -28,9 +28,9 @@
     "url": "https://cookieandkate.com",
     "logo": "https://cookieandkate.com/images/2017/04/header-google.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 25,
-  "totalTime": 40,
+  "prepTime": "PT15M",
+  "cookTime": "PT25M",
+  "totalTime": "PT40M",
   "cookingMethod": "Stovetop and baked",
   "recipeCategory": [
     "Breakfast"

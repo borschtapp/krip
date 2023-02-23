@@ -11,9 +11,9 @@
     "name": "Vegolosi",
     "url": "https://www.vegolosi.it"
   },
-  "prepTime": 15,
-  "cookTime": 15,
-  "totalTime": 30,
+  "prepTime": "PT15M",
+  "cookTime": "PT15M",
+  "totalTime": "PT30M",
   "recipeYield": 4,
   "recipeIngredient": [
     "250 g tofu al naturale",

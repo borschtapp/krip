@@ -12,9 +12,9 @@
     "name": "The Happy Foodie",
     "url": "https://thehappyfoodie.co.uk"
   },
-  "prepTime": 30,
-  "cookTime": 60,
-  "totalTime": 90,
+  "prepTime": "PT30M",
+  "cookTime": "PT1H",
+  "totalTime": "PT1H30M",
   "recipeCategory": [
     "Dinner",
     "Main Course"

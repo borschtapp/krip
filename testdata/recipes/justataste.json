@@ -24,9 +24,9 @@
     "url": "https://www.justataste.com",
     "logo": "https://www.justataste.com/wp-content/uploads/2020/10/just-a-taste-SQUARE-LOGO.jpg"
   },
-  "prepTime": 30,
-  "cookTime": 25,
-  "totalTime": 55,
+  "prepTime": "PT30M",
+  "cookTime": "PT25M",
+  "totalTime": "PT55M",
   "recipeCategory": [
     "Appetizer",
     "Main Course",

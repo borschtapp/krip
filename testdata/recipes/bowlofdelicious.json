@@ -26,9 +26,9 @@
     "url": "https://www.bowlofdelicious.com",
     "logo": "https://www.bowlofdelicious.com/wp-content/uploads/2021/10/alternate-logo-square-cropped-yoast.jpg"
   },
-  "prepTime": 1,
-  "cookTime": 5,
-  "totalTime": 6,
+  "prepTime": "PT1M",
+  "cookTime": "PT5M",
+  "totalTime": "PT6M",
   "recipeCategory": [
     "Fish"
   ],

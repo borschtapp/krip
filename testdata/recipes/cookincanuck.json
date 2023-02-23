@@ -27,9 +27,9 @@
     "url": "https://www.cookincanuck.com",
     "logo": "https://www.cookincanuck.com/wp-content/uploads/2021/05/Cookin-Canuck-Square-Logo-300x300-1.png"
   },
-  "prepTime": 15,
-  "cookTime": 13,
-  "totalTime": 53,
+  "prepTime": "PT15M",
+  "cookTime": "PT13M",
+  "totalTime": "PT53M",
   "recipeCategory": [
     "Desserts"
   ],

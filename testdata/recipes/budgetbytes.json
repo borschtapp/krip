@@ -27,9 +27,9 @@
     "url": "https://www.budgetbytes.com",
     "logo": "https://www.budgetbytes.com/wp-content/uploads/2020/11/budgetbytes_square_icon_transparent.png"
   },
-  "prepTime": 5,
-  "cookTime": 40,
-  "totalTime": 45,
+  "prepTime": "PT5M",
+  "cookTime": "PT40M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Dinner",
     "Main Course",

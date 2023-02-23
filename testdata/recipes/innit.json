@@ -18,9 +18,9 @@
     "name": "Innit",
     "url": "https://www.innit.com"
   },
-  "prepTime": 2,
-  "cookTime": 49,
-  "totalTime": 51,
+  "prepTime": "PT2M",
+  "cookTime": "PT49M",
+  "totalTime": "PT51M",
   "recipeCategory": [
     "Salads"
   ],

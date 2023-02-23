@@ -12,9 +12,9 @@
     "url": "https://steamykitchen.com",
     "logo": "https://steamykitchen.com/wp-content/uploads/2014/10/SK-logo-100514-JERF1.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "dinner",
     "Main Course"

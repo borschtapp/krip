@@ -27,9 +27,9 @@
     "url": "https://www.spendwithpennies.com",
     "logo": "https://www.spendwithpennies.com/wp-content/uploads/2020/03/icon-spend-with-pennies-1-300x300-1.png"
   },
-  "prepTime": 5,
-  "cookTime": 30,
-  "totalTime": 35,
+  "prepTime": "PT5M",
+  "cookTime": "PT30M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "Dessert"
   ],

@@ -27,9 +27,9 @@
     "url": "https://www.simplywhisked.com",
     "logo": "https://www.simplywhisked.com/wp-content/uploads/2023/01/new-logo-2.png"
   },
-  "prepTime": 15,
-  "cookTime": 30,
-  "totalTime": 45,
+  "prepTime": "PT15M",
+  "cookTime": "PT30M",
+  "totalTime": "PT45M",
   "cookingMethod": "Stovetop",
   "recipeCategory": [
     "Soups"

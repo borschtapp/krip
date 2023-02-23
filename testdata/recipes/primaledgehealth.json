@@ -29,8 +29,8 @@
     "description": "Building healthy bodies, families, and communities together",
     "url": "https://www.primaledgehealth.com"
   },
-  "prepTime": 10,
-  "totalTime": 70,
+  "prepTime": "PT10M",
+  "totalTime": "PT1H10M",
   "recipeCategory": [
     "Desserts"
   ],

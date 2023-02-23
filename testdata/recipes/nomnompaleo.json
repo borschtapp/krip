@@ -25,9 +25,9 @@
     "url": "https://nomnompaleo.com",
     "logo": "https://nomnompaleo.com/wp-content/uploads/2019/05/NNP-LI-Logo2.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 15,
-  "totalTime": 120,
+  "prepTime": "PT15M",
+  "cookTime": "PT15M",
+  "totalTime": "PT2H",
   "recipeCategory": [
     "Salad"
   ],

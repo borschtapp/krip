@@ -27,9 +27,9 @@
     "url": "https://whatsgabycooking.com",
     "logo": "https://whatsgabycooking.com/wp-content/uploads/2021/09/cropped-wgc-logo-small-g.png"
   },
-  "prepTime": 5,
-  "cookTime": 40,
-  "totalTime": 45,
+  "prepTime": "PT5M",
+  "cookTime": "PT40M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Main Course"
   ],

@@ -19,9 +19,9 @@
     "url": "https://www.bodybuilding.com",
     "logo": "https://www.bodybuilding.com/images/icons/bb-logo-clean.png"
   },
-  "prepTime": 15,
-  "cookTime": 60,
-  "totalTime": 75,
+  "prepTime": "PT15M",
+  "cookTime": "PT1H",
+  "totalTime": "PT1H15M",
   "recipeCategory": [
     "Side Dishes",
     "Vegetarian",

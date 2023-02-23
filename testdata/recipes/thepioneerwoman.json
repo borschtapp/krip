@@ -30,9 +30,9 @@
     "url": "https://www.thepioneerwoman.com",
     "logo": "https://www.thepioneerwoman.com/_assets/design-tokens/thepioneerwoman/static/images/logos/logo-jsonld.1dc32aa.png"
   },
-  "prepTime": 10,
-  "cookTime": 25,
-  "totalTime": 35,
+  "prepTime": "PT10M",
+  "cookTime": "PT25M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "main dish",
     "meat"

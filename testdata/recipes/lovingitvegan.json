@@ -30,8 +30,8 @@
     "url": "https://lovingitvegan.com",
     "logo": "https://lovingitvegan.com/wp-content/uploads/2019/05/Logo-Image-Square.png"
   },
-  "prepTime": 10,
-  "totalTime": 10,
+  "prepTime": "PT10M",
+  "totalTime": "PT10M",
   "suitableForDiet": [
     "https://schema.org/VeganDiet"
   ],

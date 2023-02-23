@@ -29,9 +29,9 @@
     "url": "https://sweetcsdesigns.com",
     "logo": "https://sweetcsdesigns.com/wp-content/uploads/2018/10/cropped-swet-cs-designs-logo-color-2.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 15,
-  "totalTime": 85,
+  "prepTime": "PT10M",
+  "cookTime": "PT15M",
+  "totalTime": "PT1H25M",
   "suitableForDiet": [
     "GlutenFreeDiet"
   ],

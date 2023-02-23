@@ -18,8 +18,8 @@
     "name": "Based Recipes",
     "url": "https://www.purplecarrot.com"
   },
-  "prepTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT30M",
+  "totalTime": "PT30M",
   "recipeYield": 2,
   "recipeIngredient": [
     "¾ cup brown lentils",

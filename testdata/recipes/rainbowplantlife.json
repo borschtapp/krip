@@ -29,9 +29,9 @@
     "url": "https://rainbowplantlife.com",
     "logo": "https://rainbowplantlife.com/wp-content/uploads/2021/08/RPL-Logo-SQUARE.png"
   },
-  "prepTime": 35,
-  "cookTime": 45,
-  "totalTime": 60,
+  "prepTime": "PT35M",
+  "cookTime": "PT45M",
+  "totalTime": "PT1H",
   "suitableForDiet": [
     "https://schema.org/VeganDiet"
   ],

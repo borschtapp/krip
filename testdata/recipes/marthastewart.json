@@ -15,8 +15,8 @@
     "name": "Martha Stewart",
     "url": "https://www.marthastewart.com"
   },
-  "prepTime": 25,
-  "totalTime": 25,
+  "prepTime": "PT25M",
+  "totalTime": "PT25M",
   "recipeCategory": [
     "Chicken Breast Recipes"
   ],

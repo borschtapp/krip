@@ -17,8 +17,8 @@
     "description": "Your one-stop resource for the best low carb and keto recipes on the internet. Make keto tasty again! Plus: Vlogs, blogs and just enough jibber jabber.",
     "url": "https://headbangerskitchen.com"
   },
-  "prepTime": 5,
-  "cookTime": 5,
+  "prepTime": "PT5M",
+  "cookTime": "PT5M",
   "recipeYield": 1,
   "recipeIngredient": [
     "3 Eggs",

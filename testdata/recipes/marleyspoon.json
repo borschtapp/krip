@@ -22,7 +22,7 @@
     "name": "Marley Spoon",
     "url": "https://marleyspoon.de"
   },
-  "totalTime": 35,
+  "totalTime": "PT35M",
   "difficulty": "easy",
   "suitableForDiet": [
     "veggie"

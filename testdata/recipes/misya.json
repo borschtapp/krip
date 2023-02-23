@@ -12,8 +12,8 @@
     "url": "http://www.misya.info/misya-srl-unipersonale",
     "logo": "https://www.misya.info/misya-logo.png"
   },
-  "prepTime": 20,
-  "cookTime": 15,
+  "prepTime": "PT20M",
+  "cookTime": "PT15M",
   "recipeCategory": [
     "Dolci"
   ],

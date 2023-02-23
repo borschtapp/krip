@@ -28,9 +28,9 @@
     "url": "https://www.baking-sense.com",
     "logo": "https://www.baking-sense.com/wp-content/uploads/2017/02/logo-new2.jpg"
   },
-  "prepTime": 20,
-  "cookTime": 40,
-  "totalTime": 60,
+  "prepTime": "PT20M",
+  "cookTime": "PT40M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Dessert",
     "Snack"

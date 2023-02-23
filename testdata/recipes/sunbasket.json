@@ -10,7 +10,7 @@
     "url": "https://sunbasket.com",
     "logo": "https://sunbasket.com/resources/img/logo.svg"
   },
-  "cookTime": 15,
+  "cookTime": "PT15M",
   "recipeYield": 2,
   "recipeIngredient": [
     "10 ounces ground turkey",

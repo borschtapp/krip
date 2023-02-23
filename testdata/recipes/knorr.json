@@ -8,9 +8,9 @@
     "name": "knorr",
     "url": "https://www.knorr.com"
   },
-  "prepTime": 20,
-  "cookTime": 10,
-  "totalTime": 30,
+  "prepTime": "PT20M",
+  "cookTime": "PT10M",
+  "totalTime": "PT30M",
   "cookingMethod": "Grillen",
   "suitableForDiet": [
     "vegetarian"

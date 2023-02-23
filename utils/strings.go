@@ -214,7 +214,7 @@ func RemoveNewLines(s string) string {
 	return strings.Join(strings.Fields(s), " ")
 }
 
-var timeRegex = regexp.MustCompile(`(?i)(\D*(?P<hours>[\d.\s/?¼½¾⅓⅔⅕⅖⅗]+)\s*(hours|hour|hrs|hr|h|óra))?(\D*(?P<minutes>[\d.]+)\s*(minutes|minute|mins|min|m|perc))?`)
+var timeRegex = regexp.MustCompile(`(?i)(\D*(?P<days>\d+)\s*(days|D))?(\D*(?P<hours>[\d.\s/?¼½¾⅓⅔⅕⅖⅗]+)\s*(hours|hour|hrs|hr|h|óra))?(\D*(?P<minutes>[\d.]+)\s*(minutes|minute|mins|min|m|perc))?`)
 
 func ParseDuration(str string) (time.Duration, bool) {
 	matches := timeRegex.FindStringSubmatch(str)
@@ -224,10 +224,13 @@ func ParseDuration(str string) (time.Duration, bool) {
 	}
 
 	var duration time.Duration
-	if hours, err := ParseFraction(matches[2]); err == nil && hours > 0 {
+	if days, err := strconv.ParseFloat(matches[2], 32); err == nil && days > 0 {
+		duration += time.Duration(days) * time.Hour * 24
+	}
+	if hours, err := ParseFraction(matches[5]); err == nil && hours > 0 {
 		duration += time.Duration(hours) * time.Hour
 	}
-	if minutes, err := strconv.ParseFloat(matches[5], 32); err == nil && minutes > 0 {
+	if minutes, err := strconv.ParseFloat(matches[8], 32); err == nil && minutes > 0 {
 		duration += time.Duration(minutes) * time.Minute
 	}
 	return duration, true

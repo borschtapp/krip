@@ -40,9 +40,9 @@
     "name": "Cuisine AZ",
     "url": "https://www.cuisineaz.com"
   },
-  "prepTime": 5,
-  "cookTime": 10,
-  "totalTime": 15,
+  "prepTime": "PT5M",
+  "cookTime": "PT10M",
+  "totalTime": "PT15M",
   "recipeCategory": [
     "Viandes"
   ],

@@ -13,8 +13,8 @@
     "name": "MatPrat",
     "url": "https://www.matprat.no"
   },
-  "prepTime": 80,
-  "cookTime": 80,
+  "prepTime": "PT1H20M",
+  "cookTime": "PT1H20M",
   "recipeCategory": [
     "Kyllingfilet",
     "Gryter"

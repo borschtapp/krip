@@ -19,7 +19,7 @@
     "name": "EatingWell",
     "url": "https://www.eatingwell.com"
   },
-  "totalTime": 30,
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Healthy Casserole Recipes"
   ],

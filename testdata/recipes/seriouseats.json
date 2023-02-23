@@ -15,9 +15,9 @@
     "url": "https://www.seriouseats.com",
     "logo": "https://www.seriouseats.com/thmb/YfQU2tc6Ask4mMy6oMJDaulMqqE=/320x320/filters:no_upscale():max_bytes(150000):strip_icc()/Serious_Eats_Schema_Logo-30a63d9c07734d35836c8ff2d368419c.png"
   },
-  "prepTime": 20,
-  "cookTime": 60,
-  "totalTime": 200,
+  "prepTime": "PT20M",
+  "cookTime": "PT1H",
+  "totalTime": "PT3H20M",
   "recipeCategory": [
     "Dessert",
     "Pastry",

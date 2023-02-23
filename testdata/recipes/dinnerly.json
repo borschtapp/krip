@@ -22,7 +22,7 @@
     "name": "Dinnerly",
     "url": "https://dinnerly.de"
   },
-  "totalTime": 25,
+  "totalTime": "PT25M",
   "difficulty": "easy",
   "suitableForDiet": [
     "meat"

@@ -13,9 +13,9 @@
     "name": "L'atelier des Chefs",
     "url": "https://www.atelierdeschefs.fr"
   },
-  "prepTime": 10,
-  "cookTime": 20,
-  "totalTime": 90,
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT1H30M",
   "recipeIngredient": [
     "25 cl Lait 1/2 écrémé",
     "60 g Beurre doux",

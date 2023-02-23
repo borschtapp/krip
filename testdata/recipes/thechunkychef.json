@@ -24,9 +24,9 @@
     "url": "https://www.thechunkychef.com",
     "logo": "https://www.thechunkychef.com/wp-content/uploads/2021/03/publisher-logo-680x680-1.jpg"
   },
-  "prepTime": 20,
-  "cookTime": 15,
-  "totalTime": 35,
+  "prepTime": "PT20M",
+  "cookTime": "PT15M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "Main Course",
     "Side Dish"

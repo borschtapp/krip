@@ -28,9 +28,9 @@
     "url": "https://www.ketoconnect.net",
     "logo": "https://www.ketoconnect.net/wp-content/uploads/2018/10/KC_logo_horizontal_650_150.png"
   },
-  "prepTime": 12,
-  "cookTime": 18,
-  "totalTime": 30,
+  "prepTime": "PT12M",
+  "cookTime": "PT18M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Main Dish"
   ],

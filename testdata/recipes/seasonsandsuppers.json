@@ -26,9 +26,9 @@
     "url": "https://www.seasonsandsuppers.ca",
     "logo": "https://www.seasonsandsuppers.ca/wp-content/uploads/2020/02/new-logo-1500.png"
   },
-  "prepTime": 30,
-  "cookTime": 30,
-  "totalTime": 60,
+  "prepTime": "PT30M",
+  "cookTime": "PT30M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Main Course",
     "Snack"

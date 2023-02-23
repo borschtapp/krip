@@ -32,9 +32,9 @@
     "url": "https://thatlowcarblife.com",
     "logo": "https://thatlowcarblife.com/wp-content/uploads/2021/09/web-res-primary.png"
   },
-  "prepTime": 10,
-  "cookTime": 9,
-  "totalTime": 19,
+  "prepTime": "PT10M",
+  "cookTime": "PT9M",
+  "totalTime": "PT19M",
   "suitableForDiet": [
     "GlutenFreeDiet"
   ],

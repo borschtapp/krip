@@ -27,9 +27,9 @@
     "url": "https://madensverden.dk",
     "logo": "https://madensverden.dk/wp-content/uploads/2021/11/logo-circle.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 15,
-  "totalTime": 30,
+  "prepTime": "PT15M",
+  "cookTime": "PT15M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Dessert"
   ],

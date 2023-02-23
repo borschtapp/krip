@@ -16,8 +16,8 @@
     "name": "750g",
     "url": "https://www.750g.com"
   },
-  "prepTime": 20,
-  "cookTime": 15,
+  "prepTime": "PT20M",
+  "cookTime": "PT15M",
   "recipeCategory": [
     "Salades"
   ],

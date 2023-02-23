@@ -20,9 +20,9 @@
     "url": "https://yemek.com",
     "logo": "https://cdn.yemek.com/assets/images/logo.png"
   },
-  "prepTime": 45,
-  "cookTime": 40,
-  "totalTime": 85,
+  "prepTime": "PT45M",
+  "cookTime": "PT40M",
+  "totalTime": "PT1H25M",
   "recipeCategory": [
     "Tavuk"
   ],

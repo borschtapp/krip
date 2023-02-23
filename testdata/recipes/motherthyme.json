@@ -26,9 +26,9 @@
     "url": "https://www.motherthyme.com",
     "logo": "https://i1.wp.com/www.motherthyme.com/wp-content/uploads/2016/09/MTlogo3.png?fit=660%2C272\u0026ssl=1"
   },
-  "prepTime": 15,
-  "cookTime": 15,
-  "totalTime": 30,
+  "prepTime": "PT15M",
+  "cookTime": "PT15M",
+  "totalTime": "PT30M",
   "recipeYield": 2,
   "recipeIngredient": [
     "1 3/4 cup milk",

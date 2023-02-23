@@ -7,9 +7,9 @@
     "name": "Ninja Test Kitchen",
     "url": "https://ninjatestkitchen.eu"
   },
-  "prepTime": 5,
-  "cookTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT5M",
+  "cookTime": "PT30M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "30 mins or less"
   ],

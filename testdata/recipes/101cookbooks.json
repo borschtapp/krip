@@ -23,9 +23,9 @@
     "description": "When you own over 100 cookbooks, it is time to stop buying, and start cooking. This site chronicles a cookbook collection, one recipe at a time.",
     "url": "https://www.101cookbooks.com"
   },
-  "prepTime": 5,
-  "cookTime": 10,
-  "totalTime": 15,
+  "prepTime": "PT5M",
+  "cookTime": "PT10M",
+  "totalTime": "PT15M",
   "recipeCategory": [
     "Drinks"
   ],

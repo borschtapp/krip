@@ -29,9 +29,9 @@
     "url": "https://www.recipetineats.com",
     "logo": "https://www.recipetineats.com/wp-content/uploads/2019/04/RecipeTinEats_logo_for_Knowledge_Graph_card.png"
   },
-  "prepTime": 10,
-  "cookTime": 90,
-  "totalTime": 100,
+  "prepTime": "PT10M",
+  "cookTime": "PT1H30M",
+  "totalTime": "PT1H40M",
   "recipeCategory": [
     "Main"
   ],

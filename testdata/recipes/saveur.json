@@ -13,6 +13,8 @@
     "name": "Saveur",
     "url": "https://www.saveur.com"
   },
+  "cookTime": "PT4H45M",
+  "totalTime": "PT4H45M",
   "recipeYield": 8,
   "recipeIngredient": [
     "3 cups extra-long white basmati rice (1 lb. 4 oz.)",

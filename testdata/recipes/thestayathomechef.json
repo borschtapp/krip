@@ -19,9 +19,9 @@
     "url": "https://thestayathomechef.com",
     "logo": "https://thestayathomechef.com/wp-content/uploads/2022/12/TSAHC_Words_Horizontal_Skillet_LogoTEAL.png"
   },
-  "prepTime": 5,
-  "cookTime": 15,
-  "totalTime": 20,
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Breakfast"
   ],

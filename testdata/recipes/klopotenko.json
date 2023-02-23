@@ -12,9 +12,9 @@
     "description": "Ещё один сайт на WordPress",
     "url": "https://klopotenko.com"
   },
-  "prepTime": 5,
-  "cookTime": 5,
-  "totalTime": 10,
+  "prepTime": "PT5M",
+  "cookTime": "PT5M",
+  "totalTime": "PT10M",
   "recipeCategory": [
     "Салати",
     "Салати без майонезу",

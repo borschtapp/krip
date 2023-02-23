@@ -8,9 +8,9 @@
     "name": "King Arthur Baking",
     "url": "https://www.kingarthurbaking.com"
   },
-  "prepTime": 25,
-  "cookTime": 15,
-  "totalTime": 160,
+  "prepTime": "PT25M",
+  "cookTime": "PT15M",
+  "totalTime": "PT2H40M",
   "keywords": [
     "Hamburger \u0026 hot dog buns",
     "4th of July"

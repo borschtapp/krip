@@ -30,9 +30,9 @@
     "url": "https://dinnerthendessert.com",
     "logo": "https://dinnerthendessert.com/wp-content/uploads/2018/06/dinnerthendessert_logo.vSTACK.png"
   },
-  "prepTime": 20,
-  "cookTime": 25,
-  "totalTime": 45,
+  "prepTime": "PT20M",
+  "cookTime": "PT25M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Main Course"
   ],

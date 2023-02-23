@@ -29,9 +29,9 @@
     "url": "https://redhousespice.com",
     "logo": "https://redhousespice.com/wp-content/uploads/2021/03/RHS-logo-1000x1000-1.jpg"
   },
-  "prepTime": 5,
-  "cookTime": 35,
-  "totalTime": 40,
+  "prepTime": "PT5M",
+  "cookTime": "PT35M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Main Course"
   ],

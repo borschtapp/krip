@@ -19,9 +19,9 @@
     "url": "https://www.bbcgoodfood.com",
     "logo": "https://images.immediate.co.uk/production/volatile/sites/30/2022/12/cropped-GF-logos2022CMYK-PrintUKONLY10-2-434430d-f5051ed.png?resize=265,70"
   },
-  "prepTime": 15,
-  "cookTime": 20,
-  "totalTime": 50,
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT50M",
   "recipeCategory": [
     "Treat"
   ],

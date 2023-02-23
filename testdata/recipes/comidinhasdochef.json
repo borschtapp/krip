@@ -13,6 +13,9 @@
     "url": "https://comidinhasdochef.com",
     "logo": "https://comidinhasdochef.com/wp-content/themes/comidinhas-do-chef/images/logo-footer.png.webp"
   },
+  "prepTime": "PT0S",
+  "cookTime": "PT0S",
+  "totalTime": "PT0S",
   "suitableForDiet": [
     "https://schema.org/GlutenFreeDiet"
   ],

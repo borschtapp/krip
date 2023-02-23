@@ -7,8 +7,8 @@
   "author": {
     "name": "FitMenCook"
   },
-  "prepTime": 5,
-  "totalTime": 35,
+  "prepTime": "PT5M",
+  "totalTime": "PT35M",
   "recipeYield": 5,
   "recipeIngredient": [
     "1 tablespoon avocado oil (or olive oil)",

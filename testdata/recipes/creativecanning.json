@@ -28,9 +28,9 @@
     "name": "Creative Canning",
     "url": "https://creativecanning.com"
   },
-  "prepTime": 130,
-  "cookTime": 10,
-  "totalTime": 150,
+  "prepTime": "PT2H10M",
+  "cookTime": "PT10M",
+  "totalTime": "PT2H30M",
   "recipeYield": 4,
   "recipeIngredient": [
     "2 cups zucchini, diced (about 3 medium)",

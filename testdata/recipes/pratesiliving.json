@@ -13,9 +13,9 @@
     "name": "Pratesi Living",
     "url": "https://www.pratesiliving.com"
   },
-  "prepTime": 40,
-  "cookTime": 80,
-  "totalTime": 120,
+  "prepTime": "PT40M",
+  "cookTime": "PT1H20M",
+  "totalTime": "PT2H",
   "recipeYield": 8,
   "recipeInstructions": [
     {

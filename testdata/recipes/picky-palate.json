@@ -28,9 +28,9 @@
     "url": "https://picky-palate.com",
     "logo": "https://picky-palate.com/wp-content/uploads/2019/05/pp-logo-t.png"
   },
-  "prepTime": 20,
-  "cookTime": 5,
-  "totalTime": 25,
+  "prepTime": "PT20M",
+  "cookTime": "PT5M",
+  "totalTime": "PT25M",
   "recipeCategory": [
     "Dinner"
   ],

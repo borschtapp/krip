@@ -31,9 +31,9 @@
     "name": "Marmiton",
     "url": "https://www.marmiton.org"
   },
-  "prepTime": 25,
-  "cookTime": 55,
-  "totalTime": 80,
+  "prepTime": "PT25M",
+  "cookTime": "PT55M",
+  "totalTime": "PT1H20M",
   "recipeCategory": [
     "ratatouille"
   ],

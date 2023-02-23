@@ -2,7 +2,9 @@ package website
 
 import (
 	"encoding/json"
+	"github.com/sosodev/duration"
 	"log"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 
@@ -293,10 +295,10 @@ func ScrapeKitchenStories(data *model.DataInput, r *model.Recipe) error {
 			r.Difficulty = ksRecipe.Difficulty
 		}
 		if ksRecipe.Duration.Preparation != 0 {
-			r.PrepTime = float64(ksRecipe.Duration.Preparation)
+			r.PrepTime = duration.Format(time.Duration(ksRecipe.Duration.Preparation) * time.Minute)
 		}
 		if ksRecipe.Duration.Baking != 0 {
-			r.CookTime = float64(ksRecipe.Duration.Baking)
+			r.CookTime = duration.Format(time.Duration(ksRecipe.Duration.Baking) * time.Minute)
 		}
 		if len(ksRecipe.Image.URL) != 0 {
 			r.AddImage(&model.ImageObject{Url: ksRecipe.Image.URL, Height: ksRecipe.Image.Height, Width: ksRecipe.Image.Width})

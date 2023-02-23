@@ -30,9 +30,9 @@
     "url": "https://momswithcrockpots.com",
     "logo": "https://momswithcrockpots.com/wp-content/uploads/2018/07/mwc-favicon-1.png"
   },
-  "prepTime": 15,
-  "cookTime": 210,
-  "totalTime": 225,
+  "prepTime": "PT15M",
+  "cookTime": "PT3H30M",
+  "totalTime": "PT3H45M",
   "recipeCategory": [
     "Side Dish"
   ],

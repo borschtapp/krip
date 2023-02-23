@@ -27,8 +27,8 @@
     "url": "https://inspiralized.com",
     "logo": "https://inspiralized.com/wp-content/uploads/2021/08/inspiralized-main-logo.png"
   },
-  "prepTime": 15,
-  "totalTime": 15,
+  "prepTime": "PT15M",
+  "totalTime": "PT15M",
   "recipeIngredient": [
     "3 tablespoons extra virgin olive oil",
     "3 tablespoons apple cider vinegar",

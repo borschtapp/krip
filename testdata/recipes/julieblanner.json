@@ -24,8 +24,8 @@
     "url": "https://julieblanner.com",
     "logo": "https://julieblanner.com/wp-content/uploads/2018/11/favicon.png"
   },
-  "prepTime": 5,
-  "cookTime": 10,
+  "prepTime": "PT5M",
+  "cookTime": "PT10M",
   "recipeCategory": [
     "Entree"
   ],

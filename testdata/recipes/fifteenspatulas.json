@@ -25,9 +25,9 @@
     "url": "https://www.fifteenspatulas.com",
     "logo": "https://www.fifteenspatulas.com/wp-content/uploads/2016/01/FifteenSpatulas.jpg"
   },
-  "prepTime": 20,
-  "cookTime": 40,
-  "totalTime": 420,
+  "prepTime": "PT20M",
+  "cookTime": "PT40M",
+  "totalTime": "PT7H",
   "suitableForDiet": [
     "https://schema.org/GlutenFreeDiet"
   ],

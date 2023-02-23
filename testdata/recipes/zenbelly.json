@@ -24,9 +24,9 @@
     "url": "https://www.zenbelly.com",
     "logo": "https://www.zenbelly.com/wp-content/uploads/2020/08/zenbelly-logo-1-1.png"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Dessert"
   ],

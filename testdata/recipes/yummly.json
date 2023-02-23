@@ -20,7 +20,7 @@
     "url": "https://www.yummly.com",
     "logo": "https://x.yummlystatic.com/web/yummly.svg"
   },
-  "totalTime": 25,
+  "totalTime": "PT25M",
   "cookingMethod": "Baking",
   "recipeCuisine": [
     "American"

@@ -29,9 +29,9 @@
     "url": "https://iheartrecipes.com",
     "logo": "https://iheartrecipes.com/wp-content/uploads/2019/04/TwitterCover.png"
   },
-  "prepTime": 10,
-  "cookTime": 50,
-  "totalTime": 60,
+  "prepTime": "PT10M",
+  "cookTime": "PT50M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Dessert"
   ],

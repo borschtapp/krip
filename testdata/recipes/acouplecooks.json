@@ -29,9 +29,9 @@
     "url": "https://www.acouplecooks.com",
     "logo": "https://www.acouplecooks.com/wp-content/uploads/2021/06/social.jpg"
   },
-  "prepTime": 5,
-  "cookTime": 3,
-  "totalTime": 8,
+  "prepTime": "PT5M",
+  "cookTime": "PT3M",
+  "totalTime": "PT8M",
   "cookingMethod": "Stovetop",
   "suitableForDiet": [
     "GlutenFreeDiet"

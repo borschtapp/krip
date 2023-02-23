@@ -15,9 +15,9 @@
     "url": "https://nourishedbynutrition.com",
     "logo": "https://nourishedbynutrition.com/wp-content/uploads/2019/06/Logo.png"
   },
-  "prepTime": 10,
-  "cookTime": 25,
-  "totalTime": 35,
+  "prepTime": "PT10M",
+  "cookTime": "PT25M",
+  "totalTime": "PT35M",
   "recipeYield": 4,
   "recipeIngredient": [
     "2 cups shredded cooked chicken breast",

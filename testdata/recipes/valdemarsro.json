@@ -13,8 +13,8 @@
     "url": "https://www.valdemarsro.dk",
     "logo": "https://www.valdemarsro.dk/wp-content/themes/valdemarsro16/assets/img/header-logo.png"
   },
-  "cookTime": 40,
-  "totalTime": 20,
+  "cookTime": "PT40M",
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Bålmad"
   ],

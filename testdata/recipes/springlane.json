@@ -15,9 +15,9 @@
     "name": "Dolci für alle!",
     "url": "https://www.springlane.de"
   },
-  "prepTime": 20,
-  "cookTime": 240,
-  "totalTime": 260,
+  "prepTime": "PT20M",
+  "cookTime": "PT4H",
+  "totalTime": "PT4H20M",
   "recipeCategory": [
     "Awareness",
     "Dessert",

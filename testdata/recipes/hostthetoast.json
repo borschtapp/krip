@@ -27,9 +27,9 @@
     "url": "https://hostthetoast.com",
     "logo": "https://hostthetoast.com/wp-content/uploads/2017/03/HOST-THE-TOAST-horizontal-logo-and-tagline-transparent-FINAL.png"
   },
-  "prepTime": 90,
-  "cookTime": 45,
-  "totalTime": 135,
+  "prepTime": "PT1H30M",
+  "cookTime": "PT45M",
+  "totalTime": "PT2H15M",
   "recipeYield": 12,
   "recipeIngredient": [
     "1/4 cup warm water",

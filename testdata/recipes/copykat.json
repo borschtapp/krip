@@ -26,9 +26,9 @@
     "url": "https://copykat.com",
     "logo": "https://copykat.com/wp-content/uploads/2022/10/CopyKat-CK-Logo-500px.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Main Course"
   ],

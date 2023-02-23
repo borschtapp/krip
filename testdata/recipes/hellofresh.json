@@ -8,7 +8,7 @@
     "name": "HelloFresh",
     "url": "https://www.hellofresh.co.uk"
   },
-  "totalTime": 35,
+  "totalTime": "PT35M",
   "recipeCategory": [
     "main course"
   ],

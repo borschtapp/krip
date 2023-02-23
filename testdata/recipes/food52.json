@@ -24,8 +24,8 @@
     "url": "https://food52.com",
     "logo": "https://food52.com/assets/logo-food52.png"
   },
-  "prepTime": 1440,
-  "cookTime": 80,
+  "prepTime": "P1D",
+  "cookTime": "PT1H20M",
   "recipeCategory": [
     "Dinner"
   ],

@@ -27,9 +27,9 @@
     "url": "https://www.twopeasandtheirpod.com",
     "logo": "https://www.twopeasandtheirpod.com/wp-content/uploads/2020/05/two-peas-and-their-pod-logo-1.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 25,
-  "totalTime": 40,
+  "prepTime": "PT15M",
+  "cookTime": "PT25M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Appetizer",
     "Main Course"

@@ -16,7 +16,7 @@
     "name": "CDKitchen",
     "url": "https://www.cdkitchen.com"
   },
-  "totalTime": 45,
+  "totalTime": "PT45M",
   "recipeYield": 4,
   "recipeIngredient": [
     "2 veal shoulder arm or blade steaks, cut 1 inch thick",

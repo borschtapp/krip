@@ -25,7 +25,7 @@
     "url": "https://vanillaandbean.com",
     "logo": "https://vanillaandbean.com/wp-content/uploads/2020/08/logo-primary.png"
   },
-  "cookTime": 50,
+  "cookTime": "PT50M",
   "recipeCategory": [
     "Bread"
   ],

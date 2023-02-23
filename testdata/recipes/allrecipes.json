@@ -20,9 +20,9 @@
     "url": "https://www.allrecipes.com",
     "logo": "https://www.allrecipes.com/thmb/D7RKdhNOAqTKqelKSPdfS7Zzyfw=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/ar_publisherSchema-d55be7e68f554b629d9f16e5b8a21895.jpg"
   },
-  "prepTime": 30,
-  "cookTime": 150,
-  "totalTime": 195,
+  "prepTime": "PT30M",
+  "cookTime": "PT2H30M",
+  "totalTime": "PT3H15M",
   "recipeYield": 12,
   "recipeIngredient": [
     "1 pound sweet Italian sausage",

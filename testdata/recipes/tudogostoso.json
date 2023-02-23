@@ -16,8 +16,8 @@
     "name": "TudoGostoso",
     "url": "https://www.tudogostoso.com.br"
   },
-  "prepTime": 5,
-  "totalTime": 5,
+  "prepTime": "PT5M",
+  "totalTime": "PT5M",
   "recipeCategory": [
     "Bebidas"
   ],

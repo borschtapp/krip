@@ -26,9 +26,9 @@
     "url": "https://www.simplyquinoa.com",
     "logo": "https://www.simplyquinoa.com/wp-content/uploads/2018/07/logo@2x.png"
   },
-  "prepTime": 5,
-  "cookTime": 15,
-  "totalTime": 20,
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Breakfast"
   ],

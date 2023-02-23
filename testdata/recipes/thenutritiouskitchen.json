@@ -20,9 +20,9 @@
     "url": "https://thenutritiouskitchen.co",
     "logo": "https://thenutritiouskitchen.co/wp-content/uploads/2019/10/The-Nutritious-Kitchen-Logo-1.png"
   },
-  "prepTime": 10,
-  "cookTime": 25,
-  "totalTime": 35,
+  "prepTime": "PT10M",
+  "cookTime": "PT25M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "bars"
   ],

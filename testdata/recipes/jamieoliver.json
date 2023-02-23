@@ -19,7 +19,7 @@
     "name": "Jamie Oliver",
     "url": "https://www.jamieoliver.com"
   },
-  "totalTime": 40,
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Desserts"
   ],

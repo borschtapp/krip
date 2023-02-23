@@ -26,9 +26,9 @@
     "url": "https://sallysbakingaddiction.com",
     "logo": "https://sallysbakingaddiction.com/wp-content/uploads/2022/01/android-chrome-512x512-1.png"
   },
-  "prepTime": 180,
-  "cookTime": 50,
-  "totalTime": 240,
+  "prepTime": "PT3H",
+  "cookTime": "PT50M",
+  "totalTime": "PT4H",
   "cookingMethod": "Baking",
   "recipeCategory": [
     "Bread"

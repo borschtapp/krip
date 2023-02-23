@@ -22,7 +22,7 @@
     "name": "NYT Cooking",
     "url": "https://cooking.nytimes.com"
   },
-  "totalTime": 45,
+  "totalTime": "PT45M",
   "recipeCategory": [
     "snack",
     "crackers and chips",

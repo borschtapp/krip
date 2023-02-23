@@ -16,8 +16,8 @@
     "url": "https://www.food.com",
     "logo": "https://geniuskitchen.sndimg.com/fdc-new/img/FDC-Logo.png"
   },
-  "prepTime": 45,
-  "totalTime": 45,
+  "prepTime": "PT45M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Chicken Breast"
   ],

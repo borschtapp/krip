@@ -30,9 +30,9 @@
     "url": "https://thewoksoflife.com",
     "logo": "https://thewoksoflife.com/wp-content/uploads/2019/05/Temporary-Logo-e1556728319201.png"
   },
-  "prepTime": 240,
-  "cookTime": 30,
-  "totalTime": 270,
+  "prepTime": "PT4H",
+  "cookTime": "PT30M",
+  "totalTime": "PT4H30M",
   "recipeCategory": [
     "Bread"
   ],

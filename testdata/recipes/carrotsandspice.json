@@ -14,8 +14,8 @@
     "url": "http://carrotsandspice.com",
     "logo": "https://i0.wp.com/carrotsandspice.com/wp-content/uploads/2017/08/button.gif?fit=257%2C248"
   },
-  "prepTime": 20,
-  "cookTime": 240,
+  "prepTime": "PT20M",
+  "cookTime": "PT4H",
   "recipeYield": 8,
   "recipeInstructions": [
     {

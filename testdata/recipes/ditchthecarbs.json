@@ -26,9 +26,9 @@
     "url": "https://www.ditchthecarbs.com",
     "logo": "https://www.ditchthecarbs.com/wp-content/uploads/2021/09/Ditch-The-Carbs-512x512-1.png"
   },
-  "prepTime": 5,
-  "cookTime": 12,
-  "totalTime": 17,
+  "prepTime": "PT5M",
+  "cookTime": "PT12M",
+  "totalTime": "PT17M",
   "suitableForDiet": [
     "https://schema.org/DiabeticDiet"
   ],

@@ -9,9 +9,9 @@
     "url": "https://claudia.abril.com.br",
     "logo": "https://claudia.abril.com.br/wp-content/uploads/2016/09/claudia-schema.png?w=240"
   },
-  "prepTime": 30,
-  "cookTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT30M",
+  "cookTime": "PT30M",
+  "totalTime": "PT30M",
   "cookingMethod": "Refogado",
   "recipeCategory": [
     "Carne"

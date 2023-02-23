@@ -14,9 +14,9 @@
     "description": "Reimagined family friendly dishes. Plus pizza.",
     "url": "https://jimcooksfoodgood.com"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Main Dish"
   ],

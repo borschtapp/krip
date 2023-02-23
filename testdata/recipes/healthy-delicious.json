@@ -13,9 +13,9 @@
     "url": "https://www.healthy-delicious.com",
     "logo": "https://www.healthy-delicious.com/wp-content/uploads/2018/12/cropped-cropped-healthy-delicious-logo-update-1-2.png"
   },
-  "prepTime": 15,
-  "cookTime": 45,
-  "totalTime": 60,
+  "prepTime": "PT15M",
+  "cookTime": "PT45M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Chicken Recipes"
   ],

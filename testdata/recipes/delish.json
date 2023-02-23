@@ -33,8 +33,9 @@
     "url": "https://www.delish.com",
     "logo": "https://www.delish.com/_assets/design-tokens/delish/static/images/logos/logo-jsonld.1396ea2.png"
   },
-  "prepTime": 30,
-  "totalTime": 60,
+  "prepTime": "PT30M",
+  "cookTime": "PT0S",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "autumn",
     "Thanksgiving",

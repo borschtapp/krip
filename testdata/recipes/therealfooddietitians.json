@@ -29,8 +29,8 @@
     "url": "https://therealfooddietitians.com",
     "logo": "https://therealfooddietitians.com/wp-content/uploads/2019/05/RFD_Logo_500-x-500px.png"
   },
-  "prepTime": 20,
-  "totalTime": 20,
+  "prepTime": "PT20M",
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Whole30"
   ],

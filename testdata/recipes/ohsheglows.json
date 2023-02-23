@@ -18,9 +18,9 @@
     "url": "https://ohsheglows.com",
     "logo": "https://ohsheglows.com/osg_logo-512x512.png"
   },
-  "prepTime": 10,
-  "cookTime": 12,
-  "totalTime": 22,
+  "prepTime": "PT10M",
+  "cookTime": "PT12M",
+  "totalTime": "PT22M",
   "suitableForDiet": [
     "https://schema.org/GlutenFreeDiet"
   ],

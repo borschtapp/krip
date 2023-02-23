@@ -12,8 +12,8 @@
     "name": "Forks Over Knives",
     "url": "https://www.forksoverknives.com"
   },
-  "prepTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT30M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Pasta \u0026 Noodles"
   ],

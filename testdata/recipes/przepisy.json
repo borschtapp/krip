@@ -11,8 +11,8 @@
     "name": "Przepisy.pl",
     "url": "https://www.przepisy.pl"
   },
-  "prepTime": 40,
-  "totalTime": 40,
+  "prepTime": "PT40M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Placki ziemniaczane"
   ],

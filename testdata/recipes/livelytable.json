@@ -27,9 +27,9 @@
     "url": "https://livelytable.com",
     "logo": "https://livelytable.com/wp-content/uploads/2019/04/logo-white-background.png"
   },
-  "prepTime": 10,
-  "cookTime": 5,
-  "totalTime": 15,
+  "prepTime": "PT10M",
+  "cookTime": "PT5M",
+  "totalTime": "PT15M",
   "cookingMethod": "stovetop",
   "recipeCategory": [
     "main dish"

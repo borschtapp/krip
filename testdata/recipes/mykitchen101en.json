@@ -16,9 +16,9 @@
     "name": "MyKitchen101en.com",
     "url": "https://mykitchen101en.com"
   },
-  "prepTime": 30,
-  "cookTime": 25,
-  "totalTime": 55,
+  "prepTime": "PT30M",
+  "cookTime": "PT25M",
+  "totalTime": "PT55M",
   "recipeCategory": [
     "Dessert",
     "Mini Cakes"

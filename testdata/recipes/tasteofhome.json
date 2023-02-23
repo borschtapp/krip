@@ -19,9 +19,9 @@
     "name": "Taste of Home",
     "url": "https://www.tasteofhome.com"
   },
-  "prepTime": 20,
-  "cookTime": 20,
-  "totalTime": 40,
+  "prepTime": "PT20M",
+  "cookTime": "PT20M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Dinner"
   ],

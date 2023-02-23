@@ -27,9 +27,9 @@
     "url": "https://joyfoodsunshine.com",
     "logo": "https://joyfoodsunshine.com/wp-content/uploads/2017/01/NewLogo.png"
   },
-  "prepTime": 5,
-  "cookTime": 25,
-  "totalTime": 30,
+  "prepTime": "PT5M",
+  "cookTime": "PT25M",
+  "totalTime": "PT30M",
   "suitableForDiet": [
     "https://schema.org/VeganDiet"
   ],

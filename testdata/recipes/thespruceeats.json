@@ -14,9 +14,9 @@
     "url": "https://www.thespruceeats.com",
     "logo": "https://www.thespruceeats.com/thmb/f3m_vtGjmtpclj77cP5o_vmsxBM=/361x109/filters:no_upscale():max_bytes(150000):strip_icc()/thespruceeats2x-a1e29f658c6a4903ad453641f794cb18.png"
   },
-  "prepTime": 20,
-  "cookTime": 30,
-  "totalTime": 140,
+  "prepTime": "PT20M",
+  "cookTime": "PT30M",
+  "totalTime": "PT2H20M",
   "recipeCategory": [
     "Dinner",
     "Entree",

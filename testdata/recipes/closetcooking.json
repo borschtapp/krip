@@ -19,9 +19,9 @@
     "url": "https://www.closetcooking.com",
     "logo": "https://www.closetcooking.com/wp-content/uploads/2018/07/logo192.png"
   },
-  "prepTime": 5,
-  "cookTime": 15,
-  "totalTime": 20,
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "totalTime": "PT20M",
   "recipeYield": 5,
   "recipeIngredient": [
     "1 tablespoon oil",

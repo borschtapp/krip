@@ -16,9 +16,9 @@
     "name": "清闲廚房",
     "url": "https://mykitchen101.com"
   },
-  "prepTime": 30,
-  "cookTime": 25,
-  "totalTime": 55,
+  "prepTime": "PT30M",
+  "cookTime": "PT25M",
+  "totalTime": "PT55M",
   "recipeCategory": [
     "mini cakes"
   ],

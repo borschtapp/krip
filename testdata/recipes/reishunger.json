@@ -19,7 +19,7 @@
     "url": "https://www.reishunger.de",
     "logo": "https://www.reishunger.de/assets/img/logo-hor.svg"
   },
-  "totalTime": 60,
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Hauptgericht"
   ],

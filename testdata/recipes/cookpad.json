@@ -24,7 +24,7 @@
     "url": "https://cookpad.com",
     "logo": "https://cookpad.com/assets/logo_cookpad_square.png"
   },
-  "cookTime": 40,
+  "cookTime": "PT40M",
   "recipeCategory": [
     "本格バターチキンカレー"
   ],

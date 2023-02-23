@@ -11,7 +11,7 @@
     "name": "Great British Chefs",
     "url": "https://www.greatbritishchefs.com"
   },
-  "totalTime": 50,
+  "totalTime": "PT50M",
   "recipeCategory": [
     "Main"
   ],

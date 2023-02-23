@@ -28,9 +28,9 @@
     "url": "https://www.theclevercarrot.com",
     "logo": "https://www.theclevercarrot.com/wp-content/uploads/2020/03/The-Clever-Carrot-logo.png"
   },
-  "prepTime": 900,
-  "cookTime": 30,
-  "totalTime": 930,
+  "prepTime": "PT15H",
+  "cookTime": "PT30M",
+  "totalTime": "PT15H30M",
   "cookingMethod": "Oven-Baked",
   "suitableForDiet": [
     "VegetarianDiet"

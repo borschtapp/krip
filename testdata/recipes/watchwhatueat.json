@@ -30,9 +30,9 @@
     "url": "https://www.watchwhatueat.com",
     "logo": "https://www.watchwhatueat.com/wp-content/uploads/2015/11/WWUE-logo-sub.png"
   },
-  "prepTime": 10,
-  "cookTime": 15,
-  "totalTime": 25,
+  "prepTime": "PT10M",
+  "cookTime": "PT15M",
+  "totalTime": "PT25M",
   "suitableForDiet": [
     "https://schema.org/LowFatDiet"
   ],

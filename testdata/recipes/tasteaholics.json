@@ -15,8 +15,8 @@
     "url": "https://www.tasteaholics.com",
     "logo": "https://www.tasteaholics.com/wp-content/uploads/2018/02/tasteaholics-logo-800px.png"
   },
-  "prepTime": 10,
-  "cookTime": 20,
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
   "recipeCategory": [
     "Dinner"
   ],

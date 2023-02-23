@@ -30,9 +30,9 @@
     "url": "https://ketogasm.com",
     "logo": "https://ketogasm.com/wp-content/uploads/2021/05/Ketogasm-logo-with-emoji.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 60,
-  "totalTime": 75,
+  "prepTime": "PT15M",
+  "cookTime": "PT1H",
+  "totalTime": "PT1H15M",
   "suitableForDiet": [
     "https://schema.org/DiabeticDiet"
   ],

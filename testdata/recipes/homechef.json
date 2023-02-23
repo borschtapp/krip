@@ -18,7 +18,7 @@
     "description": "Fresh Ingredient Delivery To Cook At Home",
     "url": "https://www.homechef.com"
   },
-  "totalTime": 35,
+  "totalTime": "PT35M",
   "recipeYield": 2,
   "recipeIngredient": [
     "Info 6 oz. Linguine",

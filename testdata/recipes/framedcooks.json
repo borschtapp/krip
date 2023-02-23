@@ -30,9 +30,9 @@
     "url": "https://www.framedcooks.com",
     "logo": "https://www.framedcooks.com/wp-content/uploads/2019/06/fc-logo-1-e1614369298246.jpg"
   },
-  "prepTime": 15,
-  "cookTime": 70,
-  "totalTime": 85,
+  "prepTime": "PT15M",
+  "cookTime": "PT1H10M",
+  "totalTime": "PT1H25M",
   "cookingMethod": "Stovetop",
   "recipeCategory": [
     "Dinner"

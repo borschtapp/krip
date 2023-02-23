@@ -25,9 +25,9 @@
     "description": "deliciously easy and healthy recipes made with just the good stuff",
     "url": "https://rachlmansfield.com"
   },
-  "prepTime": 5,
-  "cookTime": 22,
-  "totalTime": 27949695,
+  "prepTime": "PT5M",
+  "cookTime": "PT22M",
+  "totalTime": "P53Y2M3DT16H15M",
   "recipeYield": 9,
   "recipeIngredient": [
     "1 cup tahini*",

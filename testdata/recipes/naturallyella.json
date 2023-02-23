@@ -24,9 +24,9 @@
     "description": "California-Inspired Vegetarian Recipes",
     "url": "https://naturallyella.com"
   },
-  "prepTime": 10,
-  "cookTime": 10,
-  "totalTime": 20,
+  "prepTime": "PT10M",
+  "cookTime": "PT10M",
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Main Course"
   ],

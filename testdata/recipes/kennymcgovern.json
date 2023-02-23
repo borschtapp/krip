@@ -9,9 +9,9 @@
     "description": "Fast food, street food \u0026 more.",
     "url": "https://kennymcgovern.com"
   },
-  "prepTime": 10,
-  "cookTime": 6,
-  "totalTime": 16,
+  "prepTime": "PT10M",
+  "cookTime": "PT6M",
+  "totalTime": "PT16M",
   "recipeCategory": [
     "Appetizer",
     "Side Dish",

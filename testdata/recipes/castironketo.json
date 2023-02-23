@@ -20,9 +20,9 @@
     "description": "Tasty Keto Recipes",
     "url": "https://www.castironketo.net"
   },
-  "prepTime": 30,
-  "cookTime": 15,
-  "totalTime": 45,
+  "prepTime": "PT30M",
+  "cookTime": "PT15M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Main Course"
   ],

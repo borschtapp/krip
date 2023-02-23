@@ -10,7 +10,7 @@
     "name": "KptnCook",
     "url": "https://mobile.kptncook.com"
   },
-  "totalTime": 25,
+  "totalTime": "PT25M",
   "recipeYield": 2,
   "recipeIngredient": [
     "200 g curd cheese",

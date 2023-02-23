@@ -8,8 +8,9 @@
     "name": "Archana's Kitchen",
     "url": "https://www.archanaskitchen.com"
   },
-  "prepTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT30M",
+  "cookTime": "PT0S",
+  "totalTime": "PT30M",
   "recipeCuisine": [
     "Greek"
   ],

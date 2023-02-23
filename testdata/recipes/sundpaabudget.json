@@ -28,9 +28,9 @@
     "url": "https://sundpaabudget.dk",
     "logo": "https://sundpaabudget.dk/wp-content/uploads/2020/01/cropped-header-test-3.png"
   },
-  "prepTime": 10,
-  "cookTime": 20,
-  "totalTime": 30,
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Kylling",
     "One pot"

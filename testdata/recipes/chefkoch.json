@@ -16,9 +16,9 @@
     "name": "Chefkoch.de",
     "url": "https://www.chefkoch.de"
   },
-  "prepTime": 40,
-  "cookTime": 45,
-  "totalTime": 85,
+  "prepTime": "PT40M",
+  "cookTime": "PT45M",
+  "totalTime": "PT1H25M",
   "recipeCategory": [
     "Saucen"
   ],

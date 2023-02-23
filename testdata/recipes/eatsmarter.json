@@ -14,7 +14,7 @@
     "url": "https://eatsmarter.com",
     "logo": "https://eatsmarter.com/sites/all/themes/eatsmarter/logo.png"
   },
-  "totalTime": 20,
+  "totalTime": "PT20M",
   "recipeYield": 4,
   "recipeIngredient": [
     "2 Tbsps slivered almonds",

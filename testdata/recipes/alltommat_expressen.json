@@ -25,7 +25,7 @@
     "url": "https://alltommat.expressen.se"
   },
   "text": "alltom mat",
-  "totalTime": 20,
+  "totalTime": "PT20M",
   "recipeCategory": [
     "Hamburgare"
   ],

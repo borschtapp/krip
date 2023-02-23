@@ -19,7 +19,7 @@
     "name": "MyRecipes",
     "url": "https://www.myrecipes.com"
   },
-  "totalTime": 20,
+  "totalTime": "PT20M",
   "recipeYield": 2,
   "recipeIngredient": [
     "6 ounces bucatini pasta",

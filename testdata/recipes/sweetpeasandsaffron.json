@@ -29,9 +29,9 @@
     "url": "https://sweetpeasandsaffron.com",
     "logo": "https://sweetpeasandsaffron.com/wp-content/uploads/2020/12/sweet-peas-saffron-logo-square.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 15,
-  "totalTime": 25,
+  "prepTime": "PT10M",
+  "cookTime": "PT15M",
+  "totalTime": "PT25M",
   "recipeCategory": [
     "Breakfast"
   ],

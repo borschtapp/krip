@@ -17,8 +17,8 @@
     "url": "https://recipes.timesofindia.com",
     "logo": "https://static.toiimg.com/thumb/65949362.cms?width=600\u0026height=60"
   },
-  "prepTime": 15,
-  "totalTime": 35,
+  "prepTime": "PT15M",
+  "totalTime": "PT35M",
   "recipeCategory": [
     "Side Dishes"
   ],

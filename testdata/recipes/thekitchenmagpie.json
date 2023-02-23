@@ -30,8 +30,8 @@
     "url": "https://www.thekitchenmagpie.com",
     "logo": "https://www.thekitchenmagpie.com/wp-content/uploads/images/2019/04/default.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 60,
+  "prepTime": "PT10M",
+  "cookTime": "PT1H",
   "recipeCategory": [
     "Main Course"
   ],

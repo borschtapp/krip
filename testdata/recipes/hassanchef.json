@@ -16,9 +16,9 @@
     "name": "hassanchef restaurant style recipes",
     "url": "https://www.hassanchef.com"
   },
-  "prepTime": 15,
-  "cookTime": 15,
-  "totalTime": 30,
+  "prepTime": "PT15M",
+  "cookTime": "PT15M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "appetizer"
   ],

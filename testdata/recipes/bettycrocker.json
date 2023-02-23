@@ -16,8 +16,8 @@
     "name": "BettyCrocker.com",
     "url": "https://www.bettycrocker.com"
   },
-  "prepTime": 15,
-  "totalTime": 290,
+  "prepTime": "PT15M",
+  "totalTime": "PT4H50M",
   "recipeCategory": [
     "Dessert"
   ],

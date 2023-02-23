@@ -8,7 +8,7 @@
     "name": "Blue Apron",
     "url": "https://www.blueapron.com"
   },
-  "totalTime": 30,
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Dinner"
   ],

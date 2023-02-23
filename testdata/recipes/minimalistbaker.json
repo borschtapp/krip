@@ -29,8 +29,8 @@
     "url": "https://minimalistbaker.com",
     "logo": "https://minimalistbaker.com/wp-content/uploads/2015/04/logo@2x.png"
   },
-  "prepTime": 40,
-  "totalTime": 40,
+  "prepTime": "PT40M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Appetizer",
     "Dip",

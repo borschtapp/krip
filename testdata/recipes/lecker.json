@@ -14,8 +14,8 @@
     "url": "https://www.lecker.de",
     "logo": "https://www.lecker.de/assets/lecker-logo.png"
   },
-  "cookTime": 25,
-  "totalTime": 25,
+  "cookTime": "PT25M",
+  "totalTime": "PT25M",
   "recipeCategory": [
     "Hauptgericht"
   ],

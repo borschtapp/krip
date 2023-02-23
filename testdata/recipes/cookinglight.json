@@ -13,7 +13,7 @@
     "name": "Cooking Light",
     "url": "https://www.cookinglight.com"
   },
-  "totalTime": 10,
+  "totalTime": "PT10M",
   "recipeYield": 1,
   "recipeIngredient": [
     "1/2 cup Savory Stewed Black Beans, warmed",

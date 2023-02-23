@@ -21,9 +21,9 @@
     "url": "https://elanaspantry.com",
     "logo": "https://elanaspantry.com/wp-content/uploads/2019/07/Elanas-Pantry.png"
   },
-  "prepTime": 15,
-  "cookTime": 1440,
-  "totalTime": 1935,
+  "prepTime": "PT15M",
+  "cookTime": "P1D",
+  "totalTime": "P1DT8H15M",
   "recipeYield": 12,
   "recipeIngredient": [
     "2 cups almonds",

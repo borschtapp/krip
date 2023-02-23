@@ -15,9 +15,9 @@
     "url": "https://ohsweetbasil.com",
     "logo": "https://ohsweetbasil.com/wp-content/uploads/logo-2022.svg"
   },
-  "prepTime": 5,
-  "cookTime": 60,
-  "totalTime": 65,
+  "prepTime": "PT5M",
+  "cookTime": "PT1H",
+  "totalTime": "PT1H5M",
   "recipeCategory": [
     "Yeast Bread Recipes and Quick Bread Recipes"
   ],

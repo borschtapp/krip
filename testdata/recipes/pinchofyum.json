@@ -29,9 +29,9 @@
     "description": "A food blog with simple and tasty recipes.",
     "url": "https://pinchofyum.com"
   },
-  "prepTime": 5,
-  "cookTime": 3,
-  "totalTime": 8,
+  "prepTime": "PT5M",
+  "cookTime": "PT3M",
+  "totalTime": "PT8M",
   "recipeCategory": [
     "Dinner"
   ],

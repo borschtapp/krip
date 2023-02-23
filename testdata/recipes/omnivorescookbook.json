@@ -27,9 +27,9 @@
     "description": "Modern Chinese Recipes",
     "url": "https://omnivorescookbook.com"
   },
-  "prepTime": 15,
-  "cookTime": 10,
-  "totalTime": 25,
+  "prepTime": "PT15M",
+  "cookTime": "PT10M",
+  "totalTime": "PT25M",
   "recipeCategory": [
     "Main"
   ],

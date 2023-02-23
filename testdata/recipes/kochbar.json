@@ -16,8 +16,8 @@
     "name": "kochbar.de",
     "url": "https://www.kochbar.de"
   },
-  "prepTime": 30,
-  "cookTime": 40,
+  "prepTime": "PT30M",
+  "cookTime": "PT40M",
   "recipeCategory": [
     "Mittagstisch",
     "Beilagen",

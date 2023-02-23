@@ -10,7 +10,7 @@
     "url": "https://www.lekkerensimpel.com",
     "logo": "https://www.lekkerensimpel.com/wp-content/uploads/2021/11/1041c.png"
   },
-  "cookTime": 35,
+  "cookTime": "PT35M",
   "recipeCategory": [
     "Hoofdgerecht"
   ],

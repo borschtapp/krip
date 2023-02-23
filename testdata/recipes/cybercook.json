@@ -15,9 +15,9 @@
     "name": "CyberCook",
     "url": "https://cybercook.com.br"
   },
-  "prepTime": 30,
-  "cookTime": 30,
-  "totalTime": 30,
+  "prepTime": "PT30M",
+  "cookTime": "PT30M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Aves"
   ],

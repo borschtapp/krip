@@ -30,9 +30,9 @@
     "url": "https://www.gonnawantseconds.com",
     "logo": "https://www.gonnawantseconds.com/wp-content/uploads/2016/10/logo-02-04.png"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Main Course"
   ],

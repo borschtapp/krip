@@ -26,9 +26,9 @@
     "url": "https://www.tastesoflizzyt.com",
     "logo": "https://www.tastesoflizzyt.com/wp-content/uploads/2022/06/TOLT-LOGO.png"
   },
-  "prepTime": 15,
-  "cookTime": 8,
-  "totalTime": 27,
+  "prepTime": "PT15M",
+  "cookTime": "PT8M",
+  "totalTime": "PT27M",
   "recipeCategory": [
     "Dessert"
   ],

@@ -27,9 +27,9 @@
     "url": "https://tastesbetterfromscratch.com",
     "logo": "https://tastesbetterfromscratch.com/wp-content/uploads/2020/12/Circle-logo.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 40,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Dessert"
   ],

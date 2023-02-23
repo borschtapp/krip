@@ -25,9 +25,9 @@
     "url": "https://www.skinnytaste.com",
     "logo": "https://www.skinnytaste.com/wp-content/uploads/2016/03/logo@2x.png"
   },
-  "prepTime": 2,
-  "cookTime": 15,
-  "totalTime": 17,
+  "prepTime": "PT2M",
+  "cookTime": "PT15M",
+  "totalTime": "PT17M",
   "recipeCategory": [
     "Dinner"
   ],

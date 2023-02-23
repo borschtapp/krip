@@ -26,8 +26,8 @@
     "description": "Run Fast, Eat Clean, Live Messy!",
     "url": "https://www.paleorunningmomma.com"
   },
-  "prepTime": 10,
-  "cookTime": 30,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
   "recipeCategory": [
     "Dinner"
   ],

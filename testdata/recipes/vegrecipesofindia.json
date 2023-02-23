@@ -28,9 +28,9 @@
     "url": "https://www.vegrecipesofindia.com",
     "logo": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/02/DVR-logomark-green.jpg"
   },
-  "prepTime": 120,
-  "cookTime": 120,
-  "totalTime": 240,
+  "prepTime": "PT2H",
+  "cookTime": "PT2H",
+  "totalTime": "PT4H",
   "suitableForDiet": [
     "https://schema.org/VeganDiet"
   ],

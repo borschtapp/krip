@@ -29,9 +29,9 @@
     "url": "https://www.ambitiouskitchen.com",
     "logo": "https://www.ambitiouskitchen.com/wp-content/uploads/2020/05/AK-for-small-sizes.png"
   },
-  "prepTime": 30,
-  "cookTime": 40,
-  "totalTime": 70,
+  "prepTime": "PT30M",
+  "cookTime": "PT40M",
+  "totalTime": "PT1H10M",
   "recipeCategory": [
     "Dinner",
     "Pasta",

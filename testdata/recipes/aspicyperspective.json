@@ -28,9 +28,9 @@
     "url": "https://www.aspicyperspective.com",
     "logo": "https://i0.wp.com/www.aspicyperspective.com/wp-content/uploads/2017/02/spicy-logo-1.jpg?fit=2268%2C562\u0026ssl=1"
   },
-  "prepTime": 30,
-  "cookTime": 10,
-  "totalTime": 40,
+  "prepTime": "PT30M",
+  "cookTime": "PT10M",
+  "totalTime": "PT40M",
   "recipeCategory": [
     "Dessert"
   ],

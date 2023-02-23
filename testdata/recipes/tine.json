@@ -19,7 +19,7 @@
     "name": "TINE",
     "url": "https://www.tine.no"
   },
-  "totalTime": 30,
+  "totalTime": "PT30M",
   "recipeCategory": [
     "middag"
   ],

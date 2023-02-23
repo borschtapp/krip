@@ -10,8 +10,8 @@
     "url": "https://www.franzoesischkochen.de",
     "logo": "https://www.franzoesischkochen.de/wp-content/uploads/2019/01/cropped-testlogoipad1-2.png"
   },
-  "prepTime": 60,
-  "cookTime": 30,
+  "prepTime": "PT1H",
+  "cookTime": "PT30M",
   "recipeCategory": [
     "Fleisch"
   ],

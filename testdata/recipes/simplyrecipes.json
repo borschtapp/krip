@@ -14,9 +14,9 @@
     "url": "https://www.simplyrecipes.com",
     "logo": "https://www.simplyrecipes.com/thmb/QvixEwCD02s_lnkgkVb6mHwKS7c=/1125x320/filters:no_upscale():max_bytes(150000):strip_icc()/SimplyRecipesLogoTransparent-07a297c54b2142ae9c079abb2f0fa639.png"
   },
-  "prepTime": 15,
-  "cookTime": 30,
-  "totalTime": 45,
+  "prepTime": "PT15M",
+  "cookTime": "PT30M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Dinner",
     "Soup",

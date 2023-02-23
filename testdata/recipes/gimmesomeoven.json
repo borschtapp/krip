@@ -25,8 +25,8 @@
     "url": "https://www.gimmesomeoven.com",
     "logo": "https://www.gimmesomeoven.com/wp-content/uploads/2021/09/Logo-square.png"
   },
-  "prepTime": 10,
-  "totalTime": 10,
+  "prepTime": "PT10M",
+  "totalTime": "PT10M",
   "recipeYield": 12,
   "recipeIngredient": [
     "2 bottles Spanish red wine (Rioja wine is most popular)",

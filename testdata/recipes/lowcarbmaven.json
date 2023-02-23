@@ -29,9 +29,9 @@
     "url": "https://www.lowcarbmaven.com",
     "logo": "https://www.lowcarbmaven.com/wp-content/uploads/2020/02/LowCard-Main-01-small-1.png"
   },
-  "prepTime": 15,
-  "cookTime": 10,
-  "totalTime": 30,
+  "prepTime": "PT15M",
+  "cookTime": "PT10M",
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Dinner"
   ],

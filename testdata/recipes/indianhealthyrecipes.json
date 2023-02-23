@@ -28,9 +28,9 @@
     "url": "https://www.indianhealthyrecipes.com",
     "logo": "https://www.indianhealthyrecipes.com/wp-content/uploads/2019/06/Swasthis-Recipes-Organization-Logo.png"
   },
-  "prepTime": 10,
-  "cookTime": 40,
-  "totalTime": 50,
+  "prepTime": "PT10M",
+  "cookTime": "PT40M",
+  "totalTime": "PT50M",
   "recipeCategory": [
     "Dessert / Sweet"
   ],

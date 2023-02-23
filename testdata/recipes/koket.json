@@ -11,7 +11,7 @@
     "name": "Köket.se",
     "url": "https://www.koket.se"
   },
-  "totalTime": 25,
+  "totalTime": "PT25M",
   "recipeYield": 4,
   "recipeIngredient": [
     "1 kg räkor med skal (gärna färska av fin kvalitet)",

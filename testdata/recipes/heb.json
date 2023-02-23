@@ -16,9 +16,9 @@
     "name": "H-E-B | No Store Does More",
     "url": "https://www.heb.com"
   },
-  "prepTime": 20,
-  "cookTime": 40,
-  "totalTime": 60,
+  "prepTime": "PT20M",
+  "cookTime": "PT40M",
+  "totalTime": "PT1H",
   "recipeCategory": [
     "Side Dish"
   ],

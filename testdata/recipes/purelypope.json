@@ -18,8 +18,8 @@
     "description": "A balanced babe dedicated to living pure and living well!",
     "url": "https://purelypope.com"
   },
-  "prepTime": 10,
-  "cookTime": 32,
+  "prepTime": "PT10M",
+  "cookTime": "PT32M",
   "recipeYield": 4,
   "recipeIngredient": [
     "2 cups brussel sprouts, stems removed \u0026 cut in half",

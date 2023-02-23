@@ -19,9 +19,9 @@
     "url": "https://damndelicious.net",
     "logo": "https://s23209.pcdn.co/wp-content/uploads/2022/08/DDLogo.png"
   },
-  "prepTime": 150,
-  "cookTime": 20,
-  "totalTime": 170,
+  "prepTime": "PT2H30M",
+  "cookTime": "PT20M",
+  "totalTime": "PT2H50M",
   "recipeYield": 6,
   "recipeIngredient": [
     "4 tablespoons olive oil (divided)",

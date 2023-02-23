@@ -28,8 +28,8 @@
     "url": "https://domesticate-me.com",
     "logo": "https://domesticate-me.com/wp-content/uploads/2020/03/Domesticate-Me-logo.png"
   },
-  "prepTime": 15,
-  "cookTime": 45,
+  "prepTime": "PT15M",
+  "cookTime": "PT45M",
   "recipeCategory": [
     "Recipes",
     "The Dude Diet",

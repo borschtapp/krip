@@ -12,9 +12,9 @@
     "url": "https://ricette.giallozafferano.it",
     "logo": "https://www.giallozafferano.it/style/images/logo-giallozafferano.svg"
   },
-  "prepTime": 30,
-  "cookTime": 15,
-  "totalTime": 45,
+  "prepTime": "PT30M",
+  "cookTime": "PT15M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Dolci"
   ],

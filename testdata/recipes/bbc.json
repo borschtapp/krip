@@ -16,8 +16,8 @@
     "name": "BBC Food",
     "url": "https://www.bbc.co.uk"
   },
-  "prepTime": 120,
-  "cookTime": 10,
+  "prepTime": "PT2H",
+  "cookTime": "PT10M",
   "suitableForDiet": [
     "http://schema.org/VegetarianDiet"
   ],

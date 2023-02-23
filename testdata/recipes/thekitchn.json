@@ -25,9 +25,9 @@
     "logo": "https://www.thekitchn.com/static/logos/publisher-logo.png"
   },
   "text": "Recipes",
-  "prepTime": 25,
-  "cookTime": 40,
-  "totalTime": 65,
+  "prepTime": "PT25M",
+  "cookTime": "PT40M",
+  "totalTime": "PT1H5M",
   "recipeCategory": [
     "Main dish",
     "Dinner",

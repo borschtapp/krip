@@ -29,8 +29,8 @@
     "url": "https://www.eatingbirdfood.com",
     "logo": "https://www.eatingbirdfood.com/wp-content/uploads/2021/01/EBF-MainLogo-FINAL-Color-small-1.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 30,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
   "recipeCategory": [
     "Lunch/Dinner"
   ],

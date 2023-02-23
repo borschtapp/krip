@@ -25,9 +25,9 @@
     "description": "Making Healthy Cooking Fun and Easy",
     "url": "https://gimmedelicious.com"
   },
-  "prepTime": 10,
-  "cookTime": 30,
-  "totalTime": 37,
+  "prepTime": "PT10M",
+  "cookTime": "PT30M",
+  "totalTime": "PT37M",
   "recipeCategory": [
     "Main Course"
   ],

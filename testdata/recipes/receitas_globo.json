@@ -19,7 +19,7 @@
     "url": "https://receitas.globo.com",
     "logo": "https://s3.glbimg.com/v1/AUTH_05f06ca986b54d6e9c5df94927ccf7fc/receitas/svgs/svg-logo-completo-roxo.min.svg"
   },
-  "totalTime": 50,
+  "totalTime": "PT50M",
   "cookingMethod": "Cozido",
   "recipeCategory": [
     "Aves"

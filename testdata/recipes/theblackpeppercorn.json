@@ -29,9 +29,9 @@
     "url": "https://www.theblackpeppercorn.com",
     "logo": "https://www.theblackpeppercorn.com/wp-content/uploads/2019/08/the-black-peppercorn@2x.png"
   },
-  "prepTime": 45,
-  "cookTime": 120,
-  "totalTime": 165,
+  "prepTime": "PT45M",
+  "cookTime": "PT2H",
+  "totalTime": "PT2H45M",
   "recipeCategory": [
     "Side Dish"
   ],

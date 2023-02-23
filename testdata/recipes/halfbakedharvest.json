@@ -25,9 +25,9 @@
     "url": "https://www.halfbakedharvest.com",
     "logo": "https://www.halfbakedharvest.com/wp-content/uploads/2019/05/half-baked-harvest-square-logo.png"
   },
-  "prepTime": 15,
-  "cookTime": 10,
-  "totalTime": 25,
+  "prepTime": "PT15M",
+  "cookTime": "PT10M",
+  "totalTime": "PT25M",
   "recipeYield": 6,
   "recipeIngredient": [
     "1 pound dry orzo pasta",

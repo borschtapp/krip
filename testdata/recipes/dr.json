@@ -23,7 +23,7 @@
     "name": "DR Mad",
     "url": "https://www.dr.dk"
   },
-  "totalTime": 120,
+  "totalTime": "PT2H",
   "recipeYield": 8,
   "recipeIngredient": [
     "130 g mel",

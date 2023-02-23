@@ -29,9 +29,9 @@
     "url": "https://eatwhattonight.com",
     "logo": "https://i0.wp.com/eatwhattonight.com/wp-content/uploads/2021/03/cropped-Asset-9@4x-1.png?fit=489%2C279\u0026ssl=1"
   },
-  "prepTime": 30,
-  "cookTime": 15,
-  "totalTime": 45,
+  "prepTime": "PT30M",
+  "cookTime": "PT15M",
+  "totalTime": "PT45M",
   "recipeCategory": [
     "Main"
   ],

@@ -9,7 +9,7 @@
     "description": "A food media platform. We share easy \u0026 affordable recipes, stunning food videos, weekly competitions, cooking hacks \u0026 tips and featured articles.",
     "url": "https://www.mob.co.uk"
   },
-  "totalTime": 30,
+  "totalTime": "PT30M",
   "recipeCategory": [
     "Munchies",
     "Comfort",

@@ -31,9 +31,9 @@
     "url": "https://www.mybakingaddiction.com",
     "logo": "https://www.mybakingaddiction.com/wp-content/uploads/2022/03/mybakingaddiction_logo-600px.jpeg"
   },
-  "prepTime": 15,
-  "cookTime": 60,
-  "totalTime": 75,
+  "prepTime": "PT15M",
+  "cookTime": "PT1H",
+  "totalTime": "PT1H15M",
   "recipeCategory": [
     "Bread"
   ],

@@ -20,9 +20,9 @@
     "url": "https://wholefully.com",
     "logo": "https://wholefully.com/wp-content/uploads/2021/12/wholefully.jpg"
   },
-  "prepTime": 10,
-  "cookTime": 20,
-  "totalTime": 30,
+  "prepTime": "PT10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT30M",
   "suitableForDiet": [
     "VegetarianDiet"
   ],

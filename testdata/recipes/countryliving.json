@@ -26,7 +26,9 @@
     "url": "https://www.countryliving.com",
     "logo": "https://www.countryliving.com/_assets/design-tokens/countryliving/static/images/logos/logo-jsonld.01b7535.png"
   },
-  "totalTime": 70,
+  "prepTime": "PT0S",
+  "cookTime": "PT0S",
+  "totalTime": "PT1H10M",
   "recipeCategory": [
     "brunch",
     "Mother's Day"

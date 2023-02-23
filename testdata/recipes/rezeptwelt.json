@@ -12,8 +12,8 @@
   "author": {
     "name": "THERMOMIX ® REZEPT"
   },
-  "cookTime": 15,
-  "totalTime": 15,
+  "cookTime": "PT15M",
+  "totalTime": "PT15M",
   "recipeCategory": [
     "sonstige Hauptgerichte"
   ],

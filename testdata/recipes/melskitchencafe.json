@@ -13,9 +13,9 @@
     "url": "https://www.melskitchencafe.com",
     "logo": "https://www.melskitchencafe.com/wp-content/uploads/convertkit-logo.png"
   },
-  "prepTime": 130,
-  "cookTime": 20,
-  "totalTime": 150,
+  "prepTime": "PT2H10M",
+  "cookTime": "PT20M",
+  "totalTime": "PT2H30M",
   "recipeCategory": [
     "Candy"
   ],

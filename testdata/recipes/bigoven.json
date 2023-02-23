@@ -16,9 +16,9 @@
     "name": "BigOven.com",
     "url": "https://www.bigoven.com"
   },
-  "prepTime": 25,
-  "cookTime": 695,
-  "totalTime": 720,
+  "prepTime": "PT25M",
+  "cookTime": "PT11H35M",
+  "totalTime": "PT12H",
   "recipeCategory": [
     "Bread"
   ],
