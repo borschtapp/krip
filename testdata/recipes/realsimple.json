@@ -3,7 +3,13 @@
   "name": "Classic Cheesecake",
   "description": "Get the recipe for Classic Cheesecake.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.realsimple.com/thmb/OyWqkHucZsWzklIA4ld59Eesj2o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheesecake_300-70617627cf5f4f5eae7f1a11018713ec.jpg",
+  "image": [
+    {
+      "url": "https://www.realsimple.com/thmb/OyWqkHucZsWzklIA4ld59Eesj2o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheesecake_300-70617627cf5f4f5eae7f1a11018713ec.jpg",
+      "width": 300,
+      "height": 357
+    }
+  ],
   "author": {
     "name": "Dawn Perry",
     "description": "Dawn is the author of Ready, Set, Cook; How to Make Good Food With What's on Hand. She served as the food director for Real Simple and has worked in the test kitchens of Everyday Food, Bon Appétit, and the meal kit delivery service Martha \u0026 Marley Spoon. Dawn is the author of Short Stack Editions' Cucumbers and her recipes and writing have been featured in the LA Times, The New York Times, and The Washington Post among other publications. She recently started Superkind Cookies, a premium cookie company shipping treats nationwide. Highlights: * Author of Ready, Set, Cook; How to Make Good Food With What's on Hand. * Former food director for Real Simple * Worked in the test kitchens of Everyday Food, Bon Appétit, and Martha \u0026 Marley Spoon * Recipes and writing have been featured in the LA Times, The New York Times, and The Washington Post",

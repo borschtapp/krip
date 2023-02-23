@@ -30,9 +30,6 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		if item, ok := recipeSchema.GetNestedItem("publisher", "brand"); ok {
 			parsePublisher(item, r, baseUrl, true)
 		} else if val, ok := getPropertyString(recipeSchema, "publisher", "brand"); ok {
-			if r.Publisher == nil {
-				r.Publisher = &model.Organization{}
-			}
 			r.Publisher.Name = utils.CleanupInline(val)
 		}
 	}
@@ -49,9 +46,6 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		if item, ok := recipeSchema.GetNestedItem("author", "creator"); ok {
 			parseAuthor(item, r, baseUrl, true)
 		} else if val, ok := getPropertyString(recipeSchema, "author", "creator"); ok {
-			if r.Author == nil {
-				r.Author = &model.Person{}
-			}
 			r.Author.Name = utils.CleanupInline(val)
 		}
 	}
@@ -118,12 +112,10 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 		}
 	} else if values, ok := getPropertiesArray(recipeSchema, "image"); ok {
 		for _, val := range values {
-			r.AddImage(&model.ImageObject{Url: utils.ToAbsoluteUrl(baseUrl, val)})
+			r.AddImageUrl(utils.ToAbsoluteUrl(baseUrl, val))
 		}
-	}
-
-	if val, ok := getPropertyString(recipeSchema, "thumbnailUrl"); ok {
-		r.ThumbnailUrl = val
+	} else if val, ok := getPropertyString(recipeSchema, "thumbnailUrl"); ok {
+		r.AddImageUrl(utils.ToAbsoluteUrl(baseUrl, val))
 	}
 
 	if item, ok := recipeSchema.GetNestedItem("nutrition"); ok {
@@ -322,9 +314,6 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 }
 
 func parsePublisher(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, override bool) {
-	if r.Publisher == nil {
-		r.Publisher = &model.Organization{}
-	}
 	if val, ok := getPropertyString(item, "name"); ok && (override || len(r.Publisher.Name) == 0) {
 		r.Publisher.Name = utils.CleanupInline(val)
 	}
@@ -340,9 +329,6 @@ func parsePublisher(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, ove
 }
 
 func parseAuthor(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, override bool) {
-	if r.Author == nil {
-		r.Author = &model.Person{}
-	}
 	if val, ok := getPropertyString(item, "name", "Name", "alternateName"); ok && (override || len(r.Author.Name) == 0) {
 		r.Author.Name = utils.CleanupInline(val)
 	}

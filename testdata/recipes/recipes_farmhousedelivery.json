@@ -3,7 +3,11 @@
   "name": "Green Shakshuka - Farmhouse Delivery",
   "description": "Who knew a recipe could get us all excited with just a word? Shakshuka is awfully fun to say, but even more fun when you realize how delicious it is. An easy way to make dinner out of a few Read on!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "http://recipes.farmhousedelivery.com/wp-content/uploads/2020/04/no-blob_clean-handle.jpg",
+  "image": [
+    {
+      "url": "http://recipes.farmhousedelivery.com/wp-content/uploads/2020/04/no-blob_clean-handle.jpg"
+    }
+  ],
   "author": {
     "name": "RecipesFHD",
     "description": "Our mission is to build a strong local food community by connecting our members to the farmers, ranchers and artisans who produce their food. Farmhouse Delivery partners with local farmers and ranchers to deliver the highest-quality, sustainably produced food to directly to your door. We believe that the road to a thriving, healthy local food system is paved with inspiring recipes, the freshest, tastiest food, a return to the family table and a commitment to our local community. We are passionate supporters of the local food movement, and want to make it convenient, affordable, and exciting for people to eat healthy, fresh, seasonal, local food.",
@@ -13,6 +17,6 @@
   "publisher": {
     "name": "Farmhouse Delivery",
     "description": "Recipes",
-    "url": "https://recipes.farmhousedelivery.com"
+    "url": "http://recipes.farmhousedelivery.com"
   }
 }

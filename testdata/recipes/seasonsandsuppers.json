@@ -3,8 +3,10 @@
   "name": "Authentic Canadian Poutine",
   "description": "Authentic Canadian Poutine featuring deep-fried fries, poutine gravy and white cheddar cheese curds all tossed together. Do be careful with deep frying. A proper deep fryer is recommended.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1.jpg",
   "image": [
+    {
+      "url": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1.jpg"
+    },
     {
       "url": "https://www.seasonsandsuppers.ca/wp-content/uploads/2014/01/new-poutine-1-500x500.jpg"
     },

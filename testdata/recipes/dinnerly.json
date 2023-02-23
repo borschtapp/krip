@@ -3,8 +3,13 @@
   "name": "Köstliches Hähnchen mit Erdnusssauce in einer Brokkoli-Nudelpfanne",
   "description": "Hähnchen mit Erdnusssauce ist ein Klassiker auf den Menüs der Asia-Restaurants. Daran haben wir uns ein Beispiel genommen und das Gericht noch weiter verfeinert: Wir verzichten auf die Panade – die wird in der Sauce sowieso nur pappig – und ergänzen die Nudelpfanne stattdessen mit frischem Brokkoli und ein paar extra Erdnüssen für ganz viel Crunch auf dem Teller. Einfach köstlich – da ist die Pfanne ganz schnell leer …",
   "inLanguage": "de-DE",
-  "thumbnailUrl": "https://marleyspoon.com/media/recipes/114391/main_photos/thumb/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg",
   "image": [
+    {
+      "url": "https://s3-eu-west-1.amazonaws.com/images-marleyspoon-production/media/recipes/114391/main_photos/large/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
+    },
+    {
+      "url": "https://marleyspoon.com/media/recipes/114391/main_photos/thumb/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
+    },
     {
       "url": "https://marleyspoon.com/media/recipes/114391/main_photos/medium/kostliches_hahnchen_mit_erdnusssauce-aec165a207e1e770ec3cf00ba3154bfd.jpeg"
     },

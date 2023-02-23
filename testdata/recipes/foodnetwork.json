@@ -3,7 +3,11 @@
   "name": "Chicken Marsala",
   "description": "This mouth-watering recipe is ready in just 20 minutes and the ingredients detailed below can serve up to 4 people.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://foodnetwork.co.uk/images/fallback-facebook.png",
+  "image": [
+    {
+      "url": "https://foodnetwork.co.uk/images/fallback-facebook.png"
+    }
+  ],
   "publisher": {
     "name": "Food Network UK",
     "description": "TV channel Food Network UK official site with latest shows and thousands of global recipes, British dishes and cooking tips from the experts.",

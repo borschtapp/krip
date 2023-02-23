@@ -3,7 +3,6 @@
   "name": "Easy Chipotle Shrimp Tacos",
   "description": "These easy chipotle shrimp tacos with a quick cilantro jalapeño sauce are flavorful, healthy and come together in just 15 minutes! They're perfect for weeknight dinners! (gluten-free)",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://livelytable.com/wp-content/uploads/2017/05/chipotle-shrimp-tacos.jpg",
   "image": [
     {
       "url": "https://livelytable.com/wp-content/uploads/2017/05/chipotle-shrimp-tacos-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://livelytable.com/wp-content/uploads/2017/05/chipotle-shrimp-tacos-320x180.jpg"
+    },
+    {
+      "url": "https://livelytable.com/wp-content/uploads/2017/05/chipotle-shrimp-tacos.jpg"
     }
   ],
   "author": {

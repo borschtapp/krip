@@ -3,7 +3,13 @@
   "name": "Kwame's Pepper Shrimp",
   "description": "Kwame Onwuachi's Pepper Shrimp, a beloved Jamaican street food, has a subtle heat and fragrance from Scothch bonnet chiles and fresh ginger.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.foodandwine.com/thmb/BZ8hhoqmF0B8KlP_pHSEsxjhxnQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pepper-shrimp-FT-RECIPE0920-9b30018088cc419f88c91fa33564075c.jpg",
+  "image": [
+    {
+      "url": "https://www.foodandwine.com/thmb/BZ8hhoqmF0B8KlP_pHSEsxjhxnQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pepper-shrimp-FT-RECIPE0920-9b30018088cc419f88c91fa33564075c.jpg",
+      "width": 1500,
+      "height": 1000
+    }
+  ],
   "author": {
     "name": "Kwame Onwuachi",
     "description": "Kwame Onwuachi is the chef of Tatiana in New York City and competed on Top Chef season 13. In 2019, he was a Food \u0026 Wine Best New Chef, the James Beard Foundation's Rising Star Chef of the Year, and Esquire's Chef of the Year. Kwame's the author of Notes from a Young Black Chef and My America: Recipes from a Young Black Chef .",

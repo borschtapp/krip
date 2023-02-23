@@ -3,7 +3,11 @@
   "name": "Arroz de tamboril",
   "description": "Malandrinho, como se quer, saboroso e fresco, graças aos coentros e à hortelã, este arroz de tamboril vai deliciá-lo. Siga a receita e impressione lá em casa.",
   "inLanguage": "pt-PT",
-  "thumbnailUrl": "https://www.pingodoce.pt/wp-content/uploads/2016/09/arroz-de-tamboril.jpeg",
+  "image": [
+    {
+      "url": "https://www.pingodoce.pt/wp-content/uploads/2016/09/arroz-de-tamboril.jpeg"
+    }
+  ],
   "publisher": {
     "name": "Pingo Doce",
     "url": "https://www.pingodoce.pt",

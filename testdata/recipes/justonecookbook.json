@@ -3,8 +3,10 @@
   "name": "Yaki Onigiri (Grilled Rice Ball)",
   "description": "A favorite at Izakaya restaurants, Yaki Onigiri are Japanese grilled rice balls covered in savory soy sauce. With a crispy crust on the outside and soft sticky rice on the inside, these rice balls are simply irresistible and easy to make at home!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.justonecookbook.com/wp-content/uploads/2020/03/Yaki-Onigiri-Grilled-Rice-Ball-9532-I.jpg",
   "image": [
+    {
+      "url": "https://www.justonecookbook.com/wp-content/uploads/2020/03/Yaki-Onigiri-Grilled-Rice-Ball-9532-I.jpg"
+    },
     {
       "url": "https://www.justonecookbook.com/wp-content/uploads/2020/03/Yaki-Onigiri-Grilled-Rice-Ball-9532-I-500x500.jpg"
     },

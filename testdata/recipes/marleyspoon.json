@@ -3,8 +3,13 @@
   "name": "Glasierte Veggie-Burger mit Röstkartoffeln und Apfel-Gurken-Salat",
   "description": "Heute gibt’s Burgergenuss auf hohem Niveau: Die saftigen Pattys werden in einer würzig-süßen Glasur gebraten, ehe sie mit eingelegten Gurkenstreifen, pikantem Sriracha-Dip und knackigem Salat mit frisch-fruchtigem Apfel und würzigem Sellerie das Burgerbrötchen zieren. Der Salat fungiert übrigens – schick mit Erdnüssen bestreut – neben knusprigen Ofenkartoffeln auch noch zusätzlich als Beilage. Lass es dir schmecken!",
   "inLanguage": "de-DE",
-  "thumbnailUrl": "https://marleyspoon.com/media/recipes/113813/main_photos/thumb/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg",
   "image": [
+    {
+      "url": "https://s3-eu-west-1.amazonaws.com/images-marleyspoon-production/media/recipes/113813/main_photos/large/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg"
+    },
+    {
+      "url": "https://marleyspoon.com/media/recipes/113813/main_photos/thumb/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg"
+    },
     {
       "url": "https://marleyspoon.com/media/recipes/113813/main_photos/medium/veggie_burger_mit_ahornsirupglasur-52496098c98adf7b4a82b8b38fdf14dc.jpeg"
     },

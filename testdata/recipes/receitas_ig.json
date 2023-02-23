@@ -3,7 +3,11 @@
   "name": "Receita de bolo de chocolate fofinho",
   "description": "Esta é a opção perfeita para acompanhar o seu cafezinho!",
   "inLanguage": "pt-BR",
-  "thumbnailUrl": "https://i0.statig.com.br/bancodeimagens/db/da/66/dbda664rvai5qz3ri8g3hjohk.jpg",
+  "image": [
+    {
+      "url": "https://i0.statig.com.br/bancodeimagens/db/da/66/dbda664rvai5qz3ri8g3hjohk.jpg"
+    }
+  ],
   "author": {
     "name": "Guia de Cozinha"
   },

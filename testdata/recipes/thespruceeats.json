@@ -3,7 +3,13 @@
   "name": "Homemade Doner Kebab",
   "description": "Make a home version of spit-roasted lamb (doner) kebab, served as a sandwich with vegetables and sauce.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.thespruceeats.com/thmb/ao7czXh1afSBamtQnDUilsLD3uc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-hero-01-c14d8b7189df4685a50bae311317f831.jpg",
+  "image": [
+    {
+      "url": "https://www.thespruceeats.com/thmb/ao7czXh1afSBamtQnDUilsLD3uc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/doner-kebab-recipe-4171703-hero-01-c14d8b7189df4685a50bae311317f831.jpg",
+      "width": 1500,
+      "height": 1001
+    }
+  ],
   "author": {
     "name": "Anita Schecter",
     "description": "Professional recipe developer, food photographer, and blogger with more than a decade of experience creating Middle Eastern recipes.",

@@ -3,7 +3,13 @@
   "name": "Gegrillter Halloumi mit Spargel und Couscous",
   "description": "Schmeckt nach Urlaub: Mit unserem Rezept für gegrillter Halloumi mit Spargel und Couscous wird’s farbenfroh und köstlich auf dem Teller.",
   "inLanguage": "de",
-  "thumbnailUrl": "https://scm-assets.constant.co/scm/unilever/e9dc924f238fa6cc29465942875fe8f0/0cf43559-cd82-410b-a5f0-898386f4c4c0.jpg",
+  "image": [
+    {
+      "url": "https://scm-assets.constant.co/scm/unilever/e9dc924f238fa6cc29465942875fe8f0/0cf43559-cd82-410b-a5f0-898386f4c4c0.jpg",
+      "width": 800,
+      "height": 800
+    }
+  ],
   "publisher": {
     "name": "knorr",
     "url": "https://www.knorr.com"

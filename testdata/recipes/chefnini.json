@@ -3,7 +3,11 @@
   "name": "Tagliatelles carbonara - chefNini",
   "description": "En France, les pâtes carbonara sont très souvent cuisinées avec des oignons et de la crème liquide. C'est d'ailleurs de cette manière que je les ai",
   "inLanguage": "fr-FR",
-  "thumbnailUrl": "https://static.chefnini.com/wp-content/uploads/2013/09/tagliatelle-carbonara10.jpg",
+  "image": [
+    {
+      "url": "https://static.chefnini.com/wp-content/uploads/2013/09/tagliatelle-carbonara10.jpg"
+    }
+  ],
   "publisher": {
     "name": "chefNini",
     "url": "https://www.chefnini.com",

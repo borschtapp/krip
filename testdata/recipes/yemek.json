@@ -3,10 +3,12 @@
   "name": "Köri Soslu Tavuklu Patates Topları",
   "description": "Patates ve tavuk ikilisi yeniden bir araya geliyor, güçlerini birleştiriyorlar ve ortaya inanılmaz bir lezzet çıkıyor. Köri soslu patates topları burada!",
   "inLanguage": "https://yemek.com/tarif/kori-soslu-tavuklu-patates-toplari/",
-  "thumbnailUrl": "https://cdn.yemek.com/mncrop/600/315/uploads/2020/06/kori-soslu-tavuklu-patates-toplari-yemekcom.jpg",
   "image": [
     {
       "url": "https://cdn.yemek.com/mncrop/300/200/uploads/2020/06/kori-soslu-tavuklu-patates-toplari-yemekcom.jpg"
+    },
+    {
+      "url": "https://cdn.yemek.com/mncrop/600/315/uploads/2020/06/kori-soslu-tavuklu-patates-toplari-yemekcom.jpg"
     },
     {
       "url": "https://cdn.yemek.com/mnresize/940/940/uploads/2020/06/kori-soslu-tavuklu-patates-toplari-yemekcom.jpg"

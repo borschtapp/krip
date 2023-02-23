@@ -3,7 +3,11 @@
   "name": "Pastry Affair | Butterbeer Cupcakes",
   "description": "This is part IV in a mini-series of Harry Potter snacks from the books brought to life ( part I is on Honeydukes treats, part II is all about the cauldron cakes, and part III features every wizard's favorite drink—butterbeer!).\nI confess that Butterbeer Cupcakes aren't actually mentioned",
   "inLanguage": "en-US",
-  "thumbnailUrl": "http://static1.squarespace.com/static/539cc3c1e4b045b6dc9898db/539db3d7e4b0c0f820479f43/539db3d8e4b0c0f82047a828/1517633838288/butterbeercupcakes2.jpg?format=1500w",
+  "image": [
+    {
+      "url": "http://static1.squarespace.com/static/539cc3c1e4b045b6dc9898db/539db3d7e4b0c0f820479f43/539db3d8e4b0c0f82047a828/1517633838288/butterbeercupcakes2.jpg?format=1500w"
+    }
+  ],
   "publisher": {
     "name": "Pastry Affair",
     "description": "Pastry Affair takes a rustic, honest approach to food. There may be a few rough edges, imprecise cuts, and crumbs sprinkled around the table, but that is what makes it feel like home. Designed for the home baker, Pastry Affair features recipes covering everything from cake and cookies to Sunday brunch. It is a space where you will find a generous amount of butter and sugar, photography, and a whole lot of life.",

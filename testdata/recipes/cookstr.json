@@ -3,7 +3,13 @@
   "name": "Thai-Style Pot Roast with Fat Noodles",
   "description": "FOR CARAMELIZED POTATOES, ONIONS AND CARROTS WITH FORK-TENDER BEEF--a traditional pot roast--you don't need me. You need your grandmother, an aunt or that dependable neighbor. They have it down and cloaked in memory. What I can offer is this chuck roast, freshened up with lemongrass, ginger, orange and cilantro. It won't replace what you already know, but it won't disappoint either.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://irepo.primecp.com/2016/03/270751/recipe-27861_ExtraLarge1000_ID-1542085.jpg?v=1542085",
+  "image": [
+    {
+      "url": "https://irepo.primecp.com/2016/03/270751/recipe-27861_ExtraLarge1000_ID-1542085.jpg?v=1542085",
+      "width": 1000,
+      "height": 750
+    }
+  ],
   "author": {
     "name": "Sara Foster"
   },

@@ -7,20 +7,32 @@ import (
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper/opengraph"
 	"github.com/borschtapp/krip/scraper/schema"
+	"github.com/borschtapp/krip/scraper/website"
 	"github.com/borschtapp/krip/utils"
 )
 
 func Scrape(data *model.DataInput, r *model.Recipe) error {
 	r.Url = data.Url
+	if r.Publisher == nil {
+		r.Publisher = &model.Organization{}
+	}
+	if r.Author == nil {
+		r.Author = &model.Person{}
+	}
+
+	// fill recipe with schema.org/Recipe metadata
+	if err := schema.Scrape(data, r); err != nil {
+		return errors.New("schema error: " + err.Error())
+	}
 
 	// fill recipe with OpenGraph metadata
 	if err := opengraph.Scrape(data, r); err != nil {
 		return errors.New("opengraph error: " + err.Error())
 	}
 
-	// fill recipe with schema.org/Recipe metadata
-	if err := schema.Scrape(data, r); err != nil {
-		return errors.New("schema error: " + err.Error())
+	// fill recipe according to the website scraper implementation
+	if err := website.Scrape(data, r); err != nil {
+		return errors.New("website error: " + err.Error())
 	}
 
 	if len(r.Language) == 0 && len(r.Url) != 0 {
@@ -56,10 +68,4 @@ func normalizeRecipe(r *model.Recipe) {
 			r.CookTime = duration.Format(cookTime)
 		}
 	}
-
-	//if len(r.ThumbnailUrl) != 0 && len(r.Images) == 0 {
-	//	r.Images = []*model.ImageObject{{Url: r.ThumbnailUrl}}
-	//} else if len(r.ThumbnailUrl) == 0 && len(r.Images) != 0 {
-	//	r.ThumbnailUrl = r.Images[0].Url
-	//}
 }

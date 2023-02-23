@@ -3,7 +3,11 @@
   "name": "Lemon chicken with artichokes",
   "description": "Lemon chicken with artichokes by the Greek chef Akis Petretzikis. A quick and easy recipe for a hearty lemon chicken with tender artichokes!",
   "inLanguage": "en",
-  "thumbnailUrl": "https://akispetretzikis.com/photos/akisrecipes/15973/aginares-lemonates-me-kotopoulo.jpg",
+  "image": [
+    {
+      "url": "https://akispetretzikis.com/photos/akisrecipes/15973/aginares-lemonates-me-kotopoulo.jpg"
+    }
+  ],
   "publisher": {
     "name": "Akis Petretzikis",
     "url": "https://akispetretzikis.com"

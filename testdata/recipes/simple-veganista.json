@@ -3,7 +3,6 @@
   "name": "Vegan Jambalaya",
   "description": "Made in 1 pot, this easy Louisiana Vegan Jambalaya is loaded with healthy veggies and plant-based protein for a delicious Creole-style rice dish that even the picky eaters will love!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5.jpg",
   "image": [
     {
       "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5-320x180.jpg"
+    },
+    {
+      "url": "https://simple-veganista.com/wp-content/uploads/2022/02/easy-vegan-jambalaya-recipe-5.jpg"
     }
   ],
   "author": {

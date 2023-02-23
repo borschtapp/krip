@@ -2,7 +2,11 @@
   "url": "https://ninjatestkitchen.eu/recipe/vegan-lemon-cupcakes/",
   "name": "Vegan Lemon Cupcakes",
   "inLanguage": "en-UN",
-  "thumbnailUrl": "https://sharkninja-cookingcircle.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/02/23144350/Vegan-Lemon-Cupcakes-2220x1000.jpg",
+  "image": [
+    {
+      "url": "https://sharkninja-cookingcircle.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/02/23144350/Vegan-Lemon-Cupcakes-2220x1000.jpg"
+    }
+  ],
   "publisher": {
     "name": "Ninja Test Kitchen",
     "url": "https://ninjatestkitchen.eu"

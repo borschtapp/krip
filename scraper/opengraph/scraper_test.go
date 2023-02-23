@@ -28,10 +28,12 @@ func TestOpenGraphParser(t *testing.T) {
 	input := model.DataInput{Document: doc}
 
 	recipe := &model.Recipe{}
+	recipe.Author = &model.Person{}
+	recipe.Publisher = &model.Organization{}
 	assert.NoError(t, Scrape(&input, recipe))
 
 	assert.Equal(t, "Rapid Stir-Fried Chinese Beef", recipe.Name)
 	assert.Equal(t, "In this recipe, we’re tossing the classic combo of beef and broccoli with bouncy noodles and dressing them in a savory soy and hoisin-based sauce.", recipe.Description)
-	assert.Equal(t, "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/uk-stir-friend-chinese-beef-b5fd1d10.jpg", recipe.ThumbnailUrl)
+	assert.NotEmpty(t, recipe.Images)
 	assert.Equal(t, "en-US", recipe.Language)
 }

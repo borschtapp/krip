@@ -3,7 +3,13 @@
   "name": "Salsa Verde Chicken Enchiladas",
   "description": "Healthy salsa verde chicken enchiladas made grain-free and dairy-free with cassava flour tortillas and vegan cashew queso. This enchilada recipe uses store-bought salsa verde and cooked shredded chicken for an easy weeknight dinner!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://nourishedbynutrition.com/wp-content/uploads/2020/08/Salsa-Verde-Chicken-Enchiladas-8.jpg",
+  "image": [
+    {
+      "url": "https://nourishedbynutrition.com/wp-content/uploads/2020/08/Salsa-Verde-Chicken-Enchiladas-8.jpg",
+      "width": 1360,
+      "height": 2040
+    }
+  ],
   "author": {
     "name": "Jessica Bippen",
     "url": "https://nourishedbynutrition.com/author/jessica/",

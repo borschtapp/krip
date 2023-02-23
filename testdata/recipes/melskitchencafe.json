@@ -3,7 +3,11 @@
   "name": "Licorice Caramels",
   "description": "You have got to try these homemade licorice caramels! Each bite is a creamy explosion of caramel with a subtle, delicious licorice tingle.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.melskitchencafe.com/wp-content/uploads/2013/12/licorice-caramels3.jpg",
+  "image": [
+    {
+      "url": "https://www.melskitchencafe.com/wp-content/uploads/2013/12/licorice-caramels3.jpg"
+    }
+  ],
   "author": {
     "name": "Mel"
   },

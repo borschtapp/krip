@@ -3,8 +3,10 @@
   "name": "Chicken Taquitos",
   "description": "These easy Baked Chicken Taquitos are stuffed with chicken and cheese and make a great appetizer or meal. These homemade taquitos are a family favorite! Plus, learn how to make taquitos you can freeze for later!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1.jpg",
   "image": [
+    {
+      "url": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1.jpg"
+    },
     {
       "url": "https://www.twopeasandtheirpod.com/wp-content/uploads/2017/03/Baked-Chicken-Taquitos-1-500x500.jpg"
     },

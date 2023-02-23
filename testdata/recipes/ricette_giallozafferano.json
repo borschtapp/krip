@@ -3,13 +3,14 @@
   "name": "Bavarese alle fragole",
   "description": "Il bavarese alle fragole è dessert al cucchiaio fresco, preparato con crema inglese e coulis di fragole, panna montata, latte e zucchero.",
   "inLanguage": "it",
-  "thumbnailUrl": "https://www.giallozafferano.it/images/5-534/Bavarese-alle-fragole_650x433_wm.jpg",
-  "author": {
-    "name": "GialloZafferano"
-  },
+  "image": [
+    {
+      "url": "https://www.giallozafferano.it/images/5-534/Bavarese-alle-fragole_650x433_wm.jpg"
+    }
+  ],
   "publisher": {
-    "name": "Ricette di cucina - Le Ricette di GialloZafferano.it",
-    "url": "https://ricette.giallozafferano.it",
+    "name": "GialloZafferano",
+    "url": "https://www.giallozafferano.it",
     "logo": "https://www.giallozafferano.it/style/images/logo-giallozafferano.svg"
   },
   "prepTime": "PT30M",

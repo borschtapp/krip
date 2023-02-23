@@ -3,7 +3,11 @@
   "name": "Tepsis krumpli céklával és répával Recept képpel - Mindmegette.hu",
   "description": "Készítsd el a Tepsis krumpli céklával és répával kipróbált, bevált receptjét. A Mindmegette.hu receptgyűjteményében mindent megtalálsz.",
   "inLanguage": "hu",
-  "thumbnailUrl": "https://www.mindmegette.hu/images/283/O/tepsis-ceklas.jpg",
+  "image": [
+    {
+      "url": "https://www.mindmegette.hu/images/283/O/tepsis-ceklas.jpg"
+    }
+  ],
   "author": {
     "name": "MME"
   },

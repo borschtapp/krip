@@ -3,8 +3,10 @@
   "name": "Creme Brulee",
   "description": "This Orange Creme Brulee is a twist on the classic creamy custard, with aromatic and flavorful orange throughout. It's a great make ahead dessert!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.fifteenspatulas.com/wp-content/uploads/2019/05/Orange-Creme-Brulee-Fifteen-Spatulas-16.jpg",
   "image": [
+    {
+      "url": "https://www.fifteenspatulas.com/wp-content/uploads/2019/05/Orange-Creme-Brulee-Fifteen-Spatulas-16.jpg"
+    },
     {
       "url": "https://www.fifteenspatulas.com/wp-content/uploads/2019/05/Orange-Creme-Brulee-Fifteen-Spatulas-16-500x500.jpg"
     },

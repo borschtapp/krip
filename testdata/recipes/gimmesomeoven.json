@@ -3,7 +3,6 @@
   "name": "Sangria",
   "description": "Learn how to make authentic Spanish sangria with this easy sangria recipe. It only takes a few minutes to prep, it's easy to customize with your favorite wine and fruit, and it's great for entertaining a crowd!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.gimmesomeoven.com/wp-content/uploads/2019/06/Authentic-Spanish-Sangria-Recipe-3-1.jpg",
   "image": [
     {
       "url": "https://www.gimmesomeoven.com/wp-content/uploads/2019/06/Authentic-Spanish-Sangria-Recipe-3-1-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://www.gimmesomeoven.com/wp-content/uploads/2019/06/Authentic-Spanish-Sangria-Recipe-3-1-320x180.jpg"
+    },
+    {
+      "url": "https://www.gimmesomeoven.com/wp-content/uploads/2019/06/Authentic-Spanish-Sangria-Recipe-3-1.jpg"
     }
   ],
   "author": {

@@ -3,7 +3,6 @@
   "name": "Spiced Black Bean Tacos with Avocado and Goat Cheese",
   "description": "Easy and fresh black bean tacos made from black beans and an easy spice blend then topped with fresh cilantro, avocado, and goat cheese.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2.jpg",
   "image": [
     {
       "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2-320x180.jpg"
+    },
+    {
+      "url": "https://naturallyella.com/wp-content/uploads/2017/01/black-bean-tacos-2.jpg"
     }
   ],
   "author": {

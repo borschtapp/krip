@@ -3,7 +3,11 @@
   "name": "Thai Style Pork Stir-Fry with Veggie Rice",
   "description": "Tonight’s twenty minute recipe is an explosion of fresh flavours and one that you’ll be coming back to time and time again. Stir fried pork is coated in a glossy marinate of ginger, honey, soy sauce, ketjap manis and fresh lime juice and served over a warm and nourishing rice salad. For added texture and flavour, finish off with chopped peanuts, spring a onions and a good squeeze of lime.",
   "inLanguage": "en-GB",
-  "thumbnailUrl": "https://img.hellofresh.com/f_auto,fl_lossy,h_300,q_auto,w_450/hellofresh_s3/image/thai-style-pork-stir-fry-wk-49-d2765576-424d395d.jpg",
+  "image": [
+    {
+      "url": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/thai-style-pork-stir-fry-wk-49-d2765576-424d395d.jpg"
+    }
+  ],
   "publisher": {
     "name": "HelloFresh",
     "url": "https://www.hellofresh.co.uk"

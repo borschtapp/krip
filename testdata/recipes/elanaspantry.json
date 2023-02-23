@@ -3,8 +3,10 @@
   "name": "Paleo Granola",
   "description": "Purely fruit sweetened Paleo Granola made with 7 ingredients --almonds, macadamia nuts, pumpkin seeds, raisins, vanilla, cinnamon and salt.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://elanaspantry.com/wp-content/uploads/2009/07/granola.jpg",
   "image": [
+    {
+      "url": "https://elanaspantry.com/wp-content/uploads/2009/07/granola.jpg"
+    },
     {
       "url": "https://elanaspantry.com/wp-content/uploads/2009/07/granola-500x322.jpg"
     },

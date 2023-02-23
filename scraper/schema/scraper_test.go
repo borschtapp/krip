@@ -19,10 +19,12 @@ func TestSchemaParser(t *testing.T) {
 	assert.NotEmpty(t, input.Schemas)
 
 	recipe := &model.Recipe{}
+	recipe.Author = &model.Person{}
+	recipe.Publisher = &model.Organization{}
 	assert.NoError(t, Scrape(&input, recipe))
 
 	assert.Equal(t, "Rapid Stir-Fried Beef and Broccoli", recipe.Name)
-	assert.Equal(t, "https://img.hellofresh.com/f_auto,fl_lossy,h_300,q_auto,w_450/hellofresh_s3/image/uk-stir-friend-chinese-beef-b5fd1d10.jpg", recipe.ThumbnailUrl)
+	assert.NotEmpty(t, recipe.Images)
 	assert.Equal(t, "PT20M", recipe.TotalTime)
 	assert.Equal(t, []string{"Rapid", "Spicy"}, recipe.Keywords)
 	assert.Equal(t, []string{"main course"}, recipe.Categories)

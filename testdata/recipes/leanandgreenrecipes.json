@@ -3,7 +3,11 @@
   "name": "Yellow Squash Taco Casserole",
   "description": "Tip: Recipe makes 5 servings, but casserole can be divided into individual 1 serving portions and freezing for later.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://leanandgreenrecipes.net/sites/default/files/2021-08/Yellow%20Squash%20Taco%20Casserole.jpg",
+  "image": [
+    {
+      "url": "https://leanandgreenrecipes.net/sites/default/files/2021-08/Yellow%20Squash%20Taco%20Casserole.jpg"
+    }
+  ],
   "author": {
     "name": "lean.green",
     "url": "https://leanandgreenrecipes.net/user/76/"

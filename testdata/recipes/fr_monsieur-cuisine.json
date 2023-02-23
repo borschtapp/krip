@@ -3,5 +3,9 @@
   "name": "Monsieur Cuisine smart",
   "description": "Die smarte Art zu kochen!",
   "inLanguage": "de-DE",
-  "thumbnailUrl": "https://mc-recipe-web-sit.storage.googleapis.com/wp-content/uploads/2021/10/20153440/img-homepage-mc-smart-new2x.jpg"
+  "image": [
+    {
+      "url": "https://mc-recipe-web-sit.storage.googleapis.com/wp-content/uploads/2021/10/20153440/img-homepage-mc-smart-new2x.jpg"
+    }
+  ]
 }

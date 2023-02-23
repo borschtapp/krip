@@ -3,7 +3,6 @@
   "name": "Kruidige groentecalzone",
   "description": "Zelf Kruidige groentecalzone maken? Met dit recept van Allerhande zet je een feestje op tafel. Bekijk ingrediënten en bereidingswijze!",
   "inLanguage": "nl",
-  "thumbnailUrl": "https://static.ah.nl/static/recepten/img_001329_1024x748_JPG.jpg",
   "image": [
     {
       "url": "https://static.ah.nl/static/recepten/img_001329_1224x900_JPG.jpg"
@@ -14,7 +13,7 @@
   },
   "publisher": {
     "name": "Allerhande",
-    "url": "https://www.ah.nl",
+    "url": "https://www.ah.nl/allerhande",
     "logo": "https://static.ah.nl/ah-static/images/logo-allerhande.png"
   },
   "totalTime": "PT35M",

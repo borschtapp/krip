@@ -3,13 +3,15 @@
   "name": "Balsamic Watermelon Cucumber Salad",
   "description": "An EASY, healthy, and light salad with watermelon, cucumber, arugula, goat cheese, candied nuts, and drizzled with a homemade balsamic glaze!! A PERFECT summer salad for those days when it's too hot to cook!!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5.jpg",
   "image": [
     {
       "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x480.jpg"
     },
     {
       "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x360.jpg"
+    },
+    {
+      "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5.jpg"
     },
     {
       "url": "https://www.averiecooks.com/wp-content/uploads/2020/07/watermelonsalad-5-480x270.jpg"

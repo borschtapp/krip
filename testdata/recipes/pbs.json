@@ -3,9 +3,13 @@
   "name": "Easy Chocolate Cake Recipe | Dessert Recipes | PBS Food",
   "description": "This recipe for making a delicious chocolate cake in less than a minute is so simple and undeniably decadent. Try this chocolate cake recipe from PBS.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.pbs.org/food/wp-content/blogs.dir/2/files/2012/02/chocolate-cake640x360.jpg",
+  "image": [
+    {
+      "url": "https://www.pbs.org/food/wp-content/blogs.dir/2/files/2012/02/chocolate-cake640x360.jpg"
+    }
+  ],
   "publisher": {
     "name": "PBS Food",
-    "url": "https://www.pbs.org"
+    "url": "https://www.pbs.org/food"
   }
 }

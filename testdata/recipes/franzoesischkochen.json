@@ -3,7 +3,11 @@
   "name": "Tourte mit Feigen und Confit de canard",
   "description": "Tourte mit Feigen und Confit de canard",
   "inLanguage": "de-DE",
-  "thumbnailUrl": "https://www.franzoesischkochen.de/wp-content/uploads/2020/09/Tourte-confit-de-canard.jpg",
+  "image": [
+    {
+      "url": "https://www.franzoesischkochen.de/wp-content/uploads/2020/09/Tourte-confit-de-canard.jpg"
+    }
+  ],
   "publisher": {
     "name": "Aurélie Bastian",
     "description": "Der Kochblog von Aurélie Bastian - Französisch Kochen und Backen",

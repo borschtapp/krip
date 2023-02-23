@@ -3,7 +3,11 @@
   "name": "German Potato Salad",
   "description": "German Potato Salad",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://jimcooksfoodgood.com/wp-content/uploads/2019/09/1282A83C-D784-4DF4-9623-C580DC9B9840.jpeg",
+  "image": [
+    {
+      "url": "https://jimcooksfoodgood.com/wp-content/uploads/2019/09/1282A83C-D784-4DF4-9623-C580DC9B9840.jpeg"
+    }
+  ],
   "author": {
     "name": "Jim",
     "url": "https://jimcooksfoodgood.com/author/jimjcgf/",

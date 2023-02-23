@@ -3,7 +3,11 @@
   "name": "Pan-seared beef",
   "description": "with sesame drizzle and kimchi fried rice",
   "inLanguage": "en",
-  "thumbnailUrl": "https://woop.co.nz/media/catalog/product/cache/f4f005ad5960ef8c7b8a08a9a3fc244e/b/-/b-pan-seared-beef_s64dydtpoves1rbu.jpg",
+  "image": [
+    {
+      "url": "https://woop.co.nz/media/catalog/product/cache/f4f005ad5960ef8c7b8a08a9a3fc244e/b/-/b-pan-seared-beef_s64dydtpoves1rbu.jpg"
+    }
+  ],
   "publisher": {
     "name": "WOOP!",
     "url": "https://woop.co.nz"

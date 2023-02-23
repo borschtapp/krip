@@ -3,8 +3,10 @@
   "name": "Paleo Beef Stroganoff {Whole30, Keto}",
   "description": "This hearty and savory paleo beef stroganoff is made all in one skillet for a quick, delicious and cozy weeknight meal. It’s Whole30 compliant, low carb and keto and perfect served over sautéed cauliflower rice or your favorite veggie noodles!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9.jpg",
   "image": [
+    {
+      "url": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9.jpg"
+    },
     {
       "url": "https://www.paleorunningmomma.com/wp-content/uploads/2020/12/beef-stroganoff-9-500x500.jpg"
     },

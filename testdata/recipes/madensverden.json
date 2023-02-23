@@ -3,8 +3,10 @@
   "name": "Rabarbertrifli",
   "description": "Rabarbertrifli er en populær dessert, der laves med knuste makroner og flødeskum. Den lækre trifli med rabarber kan laves god tid i forvejen.",
   "inLanguage": "da-DK",
-  "thumbnailUrl": "https://madensverden.dk/wp-content/uploads/2017/08/billederesultat-for-rabarbertrifli.jpg",
   "image": [
+    {
+      "url": "https://madensverden.dk/wp-content/uploads/2017/08/billederesultat-for-rabarbertrifli.jpg"
+    },
     {
       "url": "https://madensverden.dk/wp-content/uploads/2017/08/billederesultat-for-rabarbertrifli-500x500.jpg"
     },

@@ -3,7 +3,6 @@
   "name": "Healthy Flourless Brownies (nut-free + gluten-free)",
   "description": "Healthy Flourless Brownies made with all gluten-free, paleo, nut-free and dairy-free ingredients. No flour needed! These are the best FUDGEY brownies ever!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://rachlmansfield.com/wp-content/uploads/2019/12/B6984237-A840-46A7-93FD-417FAA609A78-scaled.jpg",
   "image": [
     {
       "url": "https://rachlmansfield.com/wp-content/uploads/2019/12/B6984237-A840-46A7-93FD-417FAA609A78-scaled-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://rachlmansfield.com/wp-content/uploads/2019/12/B6984237-A840-46A7-93FD-417FAA609A78-scaled-320x180.jpg"
+    },
+    {
+      "url": "https://rachlmansfield.com/wp-content/uploads/2019/12/B6984237-A840-46A7-93FD-417FAA609A78-scaled.jpg"
     }
   ],
   "author": {

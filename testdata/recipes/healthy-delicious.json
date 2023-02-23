@@ -3,7 +3,11 @@
   "name": "Baked Chicken and Spinach Flautas",
   "description": "Baked flautas stuffed with seasoned, shredded chicken, spinach, and cheese are crispy, but don’t have the greasiness of fried versions. To shred poached chicken easily, put it into the bowl of a stand mixer fitted with the paddle attachment and mix on medium for 45 seconds. Store-bought rotisserie chicken can be substituted for the poached chicken to save time. You might also like Buffalo Chicken Taquitos",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.healthy-delicious.com/wp-content/uploads/2012/03/flautas-1.jpg",
+  "image": [
+    {
+      "url": "https://www.healthy-delicious.com/wp-content/uploads/2012/03/flautas-1.jpg"
+    }
+  ],
   "author": {
     "name": "Lauren Keating",
     "image": "https://www.healthy-delicious.com/wp-content/uploads/2018/12/cropped-cropped-healthy-delicious-logo-update-1-2.png"

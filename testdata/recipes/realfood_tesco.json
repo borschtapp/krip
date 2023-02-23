@@ -3,7 +3,11 @@
   "name": "Roasted Cauliflower Tagine Recipe | Vegetarian Recipes | Tesco Real Food",
   "description": "Bring the taste of North Africa to your midweek dinners with this fragrant spiced tagine. Find more Vegetarian recipes at Tesco Real Food.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://realfood.tesco.com/media/images/146x128-Roasted-cauliflower-tagine-003fc01a-b354-406e-9c56-decb6418410d-0-146x128.jpg",
+  "image": [
+    {
+      "url": "https://realfood.tesco.com/media/images/146x128-Roasted-cauliflower-tagine-003fc01a-b354-406e-9c56-decb6418410d-0-146x128.jpg"
+    }
+  ],
   "publisher": {
     "name": "Tesco Real Food",
     "url": "https://realfood.tesco.com"

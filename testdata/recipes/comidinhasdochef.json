@@ -3,7 +3,11 @@
   "name": "Pernil de Cordeiro com Vinho",
   "description": "Vou ensinar você a fazer uma receita de Pernil de Cordeiro com Vinho de dar água na boca. Essa receita é ideal para uma data comemorativa, como o Natal ou Ano Novo. Ou então um almoço especial em família e até um jantar romântico. Então já deixa ela salva para você arrasar no fim de ano! Tenho certeza que ela vai fazer muito sucesso na sua casa. Essa receita fica muito saborosa, bem temperada e muito macia. Você nunca provou um Pernil de Cordeiro com Vinho com esse sabor! Você quer que o seu Natal ou Ano Novo seja inesquecível? Então prepare essa receita, que não vai ter erro! Todos irão adorar saborear essa delícia com você. Você só precisa separar os ingredientes com antecedência. Ele fica muito gostoso e bem temperado, principalmente com a super dica que vou te ensinar. Então acompanhe comigo o passo a passo dessa receita e já deixa salva para o fim de ano.",
   "inLanguage": "pt-BR",
-  "thumbnailUrl": "https://comidinhasdochef.com/wp-content/uploads/2021/08/Pernil-de-Cordeiro-com-Vinho.jpg",
+  "image": [
+    {
+      "url": "https://comidinhasdochef.com/wp-content/uploads/2021/08/Pernil-de-Cordeiro-com-Vinho.jpg"
+    }
+  ],
   "author": {
     "name": "Pedro Cavalcanti"
   },

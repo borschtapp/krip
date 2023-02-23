@@ -1,10 +1,9 @@
 package opengraph
 
 import (
-	"strings"
-
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
+	"strings"
 )
 
 func Scrape(data *model.DataInput, r *model.Recipe) error {
@@ -29,9 +28,9 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
-	if len(r.ThumbnailUrl) == 0 {
+	if len(r.Images) == 0 {
 		if val, ok := head.Find("meta[property='og:image']").Attr("content"); ok {
-			r.ThumbnailUrl = val
+			r.AddImageUrl(val)
 		}
 	}
 
@@ -45,15 +44,13 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
-	if r.Author == nil {
+	if len(r.Author.Name) == 0 {
 		if val, ok := head.Find("head > meta[name='author']").Attr("content"); ok {
-			r.Author = &model.Person{Name: utils.CleanupInline(val)}
+			r.Author.Name = utils.CleanupInline(val)
 		}
 	}
 
-	if r.Publisher == nil {
-		r.Publisher = &model.Organization{}
-
+	if len(r.Publisher.Name) == 0 {
 		if val, ok := head.Find("meta[property='og:site_name']").Attr("content"); ok && !strings.Contains(val, "http") {
 			r.Publisher.Name = utils.CleanupInline(val)
 		} else if val := head.Find("title").First().Text(); len(val) != 0 {
@@ -61,10 +58,10 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 				r.Publisher.Name = utils.CleanupInline(parts[len(parts)-1])
 			}
 		}
+	}
 
-		if len(r.Publisher.Url) == 0 {
-			r.Publisher.Url = utils.BaseUrl(r.Url)
-		}
+	if len(r.Publisher.Url) == 0 {
+		r.Publisher.Url = utils.BaseUrl(r.Url)
 	}
 
 	return nil

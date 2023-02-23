@@ -3,7 +3,11 @@
   "name": "Cinnamon Swirl Cake Recipe",
   "description": "1 box of Pillsbury™ Cinnamon Swirl Quick Bread",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.pillsburybaking.com/wp-content/uploads/2022/10/Cinnamon-Swirl-QB.png",
+  "image": [
+    {
+      "url": "https://www.pillsburybaking.com/wp-content/uploads/2022/10/Cinnamon-Swirl-QB.png"
+    }
+  ],
   "publisher": {
     "name": "Pillsbury Baking",
     "url": "https://www.pillsburybaking.com"

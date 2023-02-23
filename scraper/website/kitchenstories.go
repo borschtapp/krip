@@ -364,15 +364,8 @@ func ScrapeKitchenStories(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
-	if r.Publisher == nil {
-		r.Publisher = &model.Organization{}
-		r.Publisher.Name = "Kitchen Stories"
-		r.Publisher.Url = "https://www.kitchenstories.com"
-	}
-
-	if len(r.Publisher.Logo) == 0 {
-		r.Publisher.Logo = "https://www.kitchenstories.com/images/ks-logo-2019.52cb693902fc25b0b22c9ee503355ec9.svg"
-	}
-
+	r.Publisher.Name = "Kitchen Stories"
+	r.Publisher.Url = "https://www.kitchenstories.com"
+	r.Publisher.Logo = "https://www.kitchenstories.com/images/ks-logo-2019.52cb693902fc25b0b22c9ee503355ec9.svg"
 	return nil
 }

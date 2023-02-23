@@ -3,7 +3,13 @@
   "name": "One-Pot Chicken and Rice Soup",
   "description": "One-Pot Chicken and Rice Soup! Throw bone-in chicken, rice, and vegetables together in a pot and simmer until they're done. It's the easiest soup ever, ready in under an hour.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.simplyrecipes.com/thmb/IPv95EDDPxwGIzCd4s-GQV5RYrs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+  "image": [
+    {
+      "url": "https://www.simplyrecipes.com/thmb/IPv95EDDPxwGIzCd4s-GQV5RYrs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__09__2017-10-23-ChickenRiceSoup-6-84f5ab39c30e4830bf08b5bb163c5e19.jpg",
+      "width": 1500,
+      "height": 1000
+    }
+  ],
   "author": {
     "name": "Aaron Hutcherson",
     "description": "Aaron has over 10 years recipe development experience for his blog The Hungry Hutch. He has written for NYTimes, Washington Post, Simply Recipes, and others.",

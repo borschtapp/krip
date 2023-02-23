@@ -3,8 +3,10 @@
   "name": "Texas flour tortillas",
   "description": "White bread was forbidden in my household as a child. We only ate whole-grain bread, the coarser, tougher and browner the better. I hated it. Especially since all the other kids brought their sandwiches to",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.homesicktexan.com/wp-content/uploads/2007/03/Flour-tortillas-DSC_0210.jpg",
   "image": [
+    {
+      "url": "https://www.homesicktexan.com/wp-content/uploads/2007/03/Flour-tortillas-DSC_0210.jpg"
+    },
     {
       "url": "https://www.homesicktexan.com/wp-content/uploads/2007/03/Flour-tortillas-DSC_0210-500x500.jpg"
     },

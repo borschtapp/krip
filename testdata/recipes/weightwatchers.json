@@ -3,7 +3,11 @@
   "name": "Kartoffelgulasch",
   "description": "Das Rezept zaubert ein saftiges, würziges Gericht auf den Tisch und schmeckt garantiert.",
   "inLanguage": "de",
-  "thumbnailUrl": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/t_WINE_EXTRALARGE/h7wo0hbnwcleucj30sbw.jpg",
+  "image": [
+    {
+      "url": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/t_WINE_EXTRALARGE/h7wo0hbnwcleucj30sbw.jpg"
+    }
+  ],
   "publisher": {
     "name": "Weight Watchers",
     "url": "https://www.weightwatchers.com"

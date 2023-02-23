@@ -3,8 +3,10 @@
   "name": "The Best Gluten-Free Pancakes",
   "description": "This is the only gluten-free pancake recipe you'll ever need! Customize it with your favorite add-ins and toppings and enjoy the epic pancake breakfast you deserve!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.simplyquinoa.com/wp-content/uploads/2022/05/gluten-free-pancakes-recipe-apple-cinnamon.jpg",
   "image": [
+    {
+      "url": "https://www.simplyquinoa.com/wp-content/uploads/2022/05/gluten-free-pancakes-recipe-apple-cinnamon.jpg"
+    },
     {
       "url": "https://www.simplyquinoa.com/wp-content/uploads/2022/05/gluten-free-pancakes-recipe-apple-cinnamon-500x500.jpg"
     },

@@ -3,7 +3,6 @@
   "name": "Cinnamon Roll Oatmeal",
   "description": "Creamy oatmeal topped with a cinnamon sugar and a cream cheese glaze for one tasty bowl of Cinnamon Roll Oatmeal you'll definitely enjoy.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.motherthyme.com/wp-content/uploads/2014/01/cinnamonoatmeal1.jpg",
   "image": [
     {
       "url": "https://www.motherthyme.com/wp-content/uploads/2014/01/cinnamonoatmeal1-225x225.jpg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://www.motherthyme.com/wp-content/uploads/2014/01/cinnamonoatmeal1-320x180.jpg"
+    },
+    {
+      "url": "https://www.motherthyme.com/wp-content/uploads/2014/01/cinnamonoatmeal1.jpg"
     }
   ],
   "author": {

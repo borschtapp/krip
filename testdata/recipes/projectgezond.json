@@ -3,7 +3,11 @@
   "name": "Boeuf bourguignon | Project Gezond",
   "description": "Deze klassieker vindt zijn oorsprong in de Franse keuken. ‘Rund op bourgondische wijze’ is een vertaling van ‘Boeuf bourguignon’ die niets aan de verbeelding overlaat. Dit recept is dan ook het perfecte antwoord als het weer tijd is voor een potje stoof! Want het is verre van moeilijk om deze ultieme stoofpot te bereiden. Je …",
   "inLanguage": "nl-NL",
-  "thumbnailUrl": "https://www.projectgezond.nl/wp-content/uploads/2021/11/BoeufBourguignon-768x1024.jpg",
+  "image": [
+    {
+      "url": "https://www.projectgezond.nl/wp-content/uploads/2021/11/BoeufBourguignon-768x1024.jpg"
+    }
+  ],
   "author": {
     "name": "Dorien",
     "description": "Lacht als eerste en bovendien veel te hard om haar eigen grappen. Bakt pannenkoeken van poffertjesbeslag. Ze gaat het liefst elke dag bootcampen, hardlopen én mountainbiken. Is bovendien verzot op smoothies en soepen en heeft daardoor een innige band met haar blender.",

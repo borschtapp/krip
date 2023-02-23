@@ -3,7 +3,11 @@
   "name": "Recette cake marbré chocolat - L'atelier de Roxane",
   "description": "Une recette facile, rapide et adorée des enfants: le cake marbré moelleux au chocolat façon Savane. Un cake parfumé à la vanille et au chocolat.",
   "inLanguage": "fr-FR",
-  "thumbnailUrl": "https://www.latelierderoxane.com/blog/wp-content/uploads/img_7067-scaled.jpg",
+  "image": [
+    {
+      "url": "https://www.latelierderoxane.com/blog/wp-content/uploads/img_7067-scaled.jpg"
+    }
+  ],
   "publisher": {
     "name": "L'atelier de Roxane",
     "url": "https://www.latelierderoxane.com"

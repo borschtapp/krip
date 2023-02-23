@@ -3,8 +3,10 @@
   "name": "Best Ever Chewy Brownies",
   "description": "The BEST Chewy Brownies are just as chewy as the boxed brownies but packed with way more chocolate flavor. One bowl recipe made in less than 1 hour!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1.jpg",
   "image": [
+    {
+      "url": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1.jpg"
+    },
     {
       "url": "https://handletheheat.com/wp-content/uploads/2017/03/Chewy-Brownies-Square-1-500x500.jpg"
     },

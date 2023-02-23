@@ -3,7 +3,6 @@
   "name": "Paleo Gingerbread",
   "description": "'Tis the season for Gingerbread. To be honest, I can't remember the last time I had it before I made it for this here bloggy blog. Paleo Gingerbread When I went to start making",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3.jpeg",
   "image": [
     {
       "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3-225x225.jpeg"
@@ -13,6 +12,9 @@
     },
     {
       "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3-320x180.jpeg"
+    },
+    {
+      "url": "https://www.zenbelly.com/wp-content/uploads/2019/01/gingerbread-3.jpeg"
     }
   ],
   "author": {

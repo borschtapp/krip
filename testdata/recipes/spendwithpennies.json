@@ -3,8 +3,10 @@
   "name": "Gooey Chocolate Pudding Cake",
   "description": "This Chocolate Pudding Cake is a very simple, rich chocolate dessert that comes together in just one dish!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4.jpg",
   "image": [
+    {
+      "url": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4.jpg"
+    },
     {
       "url": "https://www.spendwithpennies.com/wp-content/uploads/2013/10/Chocolate-Pudding-Cake-SpendWithPennies-B-4-500x500.jpg"
     },

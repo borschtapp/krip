@@ -3,7 +3,11 @@
   "name": "Bürli de Saint-Gall (St. Galler Bürli) - Bricelet \u0026 Baklava",
   "description": "Bürli de Saint-Gall\nLe Bürli de Saint-Gall est un petit pain en pâte levée, en forme de ballon. Juste avant l’enfournement ils sont accolés par deux et même quelquefois par 4 avec une cuisson très intense car les saint-gallois les apprécient bien cuits...",
   "inLanguage": "fr-FR",
-  "thumbnailUrl": "https://image.over-blog.com/D913ECH_mmWHTy8_qRECetDo6PU=/filters:no_upscale()/image%2F3215825%2F20210816%2Fob_e19375_pain-buerli-6374.jpg",
+  "image": [
+    {
+      "url": "https://image.over-blog.com/D913ECH_mmWHTy8_qRECetDo6PU=/filters:no_upscale()/image%2F3215825%2F20210816%2Fob_e19375_pain-buerli-6374.jpg"
+    }
+  ],
   "author": {
     "name": "Michel"
   },

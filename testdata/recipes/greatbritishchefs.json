@@ -3,7 +3,11 @@
   "name": "Picadillo",
   "description": "This simple picadillo recipe has the perfect balance of sweetness and spice. A pleasing tanginess comes from the addition of vibrant tomatillo salsa for a great depth of flavour.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://media-cdn.greatbritishchefs.com/media/mwtkdmv3/img73858.whqc_1426x713q90.jpg",
+  "image": [
+    {
+      "url": "https://media-cdn.greatbritishchefs.com/media/mwtkdmv3/img73858.whqc_1426x713q90.jpg"
+    }
+  ],
   "author": {
     "name": "GBC Kitchen"
   },

@@ -3,7 +3,11 @@
   "name": "Lean Chili with Plantains",
   "description": "Lean Chili with Plantains Home Hero Top Featured, Home Top Featured, Low Carbs, Meal Prep, Meat, Post-Workout Built in the Kitchen; Sculpted in the Gym.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://fitmencook.wpenginepowered.com/wp-content/uploads/2020/05/chili-with-plantains-chile-con-carne-4.jpg",
+  "image": [
+    {
+      "url": "https://fitmencook.wpenginepowered.com/wp-content/uploads/2020/05/chili-with-plantains-chile-con-carne-4.jpg"
+    }
+  ],
   "author": {
     "name": "FitMenCook"
   },

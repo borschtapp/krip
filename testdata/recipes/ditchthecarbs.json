@@ -3,8 +3,10 @@
   "name": "Keto Hamburger Buns Recipe",
   "description": "Bring the bun back to your burger with these easy keto hamburger buns that can bake while you grill.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.ditchthecarbs.com/wp-content/uploads/2021/04/Easy-Keto-Hamburger-Buns-almond-flour-1200x1200-1.jpg",
   "image": [
+    {
+      "url": "https://www.ditchthecarbs.com/wp-content/uploads/2021/04/Easy-Keto-Hamburger-Buns-almond-flour-1200x1200-1.jpg"
+    },
     {
       "url": "https://www.ditchthecarbs.com/wp-content/uploads/2021/04/Easy-Keto-Hamburger-Buns-almond-flour-1200x1200-1-500x500.jpg"
     },

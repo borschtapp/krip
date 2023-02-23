@@ -3,7 +3,11 @@
   "name": "Vegane Rotkohlsuppe mit Kokosmilch",
   "description": "Histaminarmes Rezept für eine einfache und cremige vegane Rotkohlsuppe mit Kokosmilch. Low Carb, Glutenfrei.",
   "inLanguage": "de-DE",
-  "thumbnailUrl": "https://eattolerant.de/wp-content/uploads/2022/01/Vegane-Rotkohlsuppe-13-scaled.jpg",
+  "image": [
+    {
+      "url": "https://eattolerant.de/wp-content/uploads/2022/01/Vegane-Rotkohlsuppe-13-scaled.jpg"
+    }
+  ],
   "author": {
     "name": "Jessica",
     "image": "https://eattolerant.de/wp-content/uploads/2020/01/Logo_EatTolerant.jpg"

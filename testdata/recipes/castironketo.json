@@ -3,8 +3,10 @@
   "name": "Keto Jalapeño Popper Casserole with Chicken",
   "description": "Keto Jalapeño Popper Casserole with Chicken! This easy low-carb dinner is made in one pan, a single cast-iron skillet for easy cleanup and minimal mess. Perfectly cheesy and topped with bacon 🥓 YUM!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole.jpg",
   "image": [
+    {
+      "url": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole.jpg"
+    },
     {
       "url": "https://www.castironketo.net/wp-content/uploads/2021/01/Keto-Jalapeño-Popper-Casserole-500x500.jpg"
     },

@@ -3,8 +3,10 @@
   "name": "Grilled Chicken with Spinach and Melted Mozzarella",
   "description": "Grilled chicken topped with sauteed garlicky spinach, mozzarella and roasted peppers – a quick and easy chicken dish your family will love!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10.jpg",
   "image": [
+    {
+      "url": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10.jpg"
+    },
     {
       "url": "https://www.skinnytaste.com/wp-content/uploads/2011/03/Grilled-Chicken-with-Spinach-and-Melted-Mozzarella-10-500x500.jpg"
     },

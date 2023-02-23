@@ -3,7 +3,11 @@
   "name": "Beautiful Burger Buns",
   "description": "The following recipe created quite a stir when \"Moomie\" first posted it on our original online community. Baker after baker tried these buns and declared them THE BEST. Soft, vaguely sweet, and golden-yellow from the butter and egg, these simple buns are perfect for burgers (whether beef or plant-based), or any of your favorite sandwich fillings.",
   "inLanguage": "en",
-  "thumbnailUrl": "https://www.kingarthurbaking.com/sites/default/files/2021-08/beautiful-burger-buns.jpg",
+  "image": [
+    {
+      "url": "https://www.kingarthurbaking.com/sites/default/files/2021-08/beautiful-burger-buns.jpg"
+    }
+  ],
   "publisher": {
     "name": "King Arthur Baking",
     "url": "https://www.kingarthurbaking.com"

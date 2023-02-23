@@ -3,7 +3,11 @@
   "name": "Very Best Banana Bread Recipe",
   "description": "I've made over 100 banana bread recipes for over 3 years in search of the VERY BEST Banana Bread Recipe, and I've finally found it and am ready to share it with you!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://ohsweetbasil.com/wp-content/uploads/the-best-banana-bread-recipe-ohsweetbasil.com-4.jpg",
+  "image": [
+    {
+      "url": "https://ohsweetbasil.com/wp-content/uploads/the-best-banana-bread-recipe-ohsweetbasil.com-4.jpg"
+    }
+  ],
   "author": {
     "name": "Sweet Basil",
     "description": "Lover of all things beautiful, good and delicious. Wife, mother, friend, foodie.",

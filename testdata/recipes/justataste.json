@@ -3,8 +3,10 @@
   "name": "Baked Chicken and Cheese Taquitos (Oven or Air Fryer)",
   "description": "Ditch the deep-fryer and forget the freezer aisle in favor of this fast, fresh and family favorite recipe for Baked Chicken and Cheese Taquitos.",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://www.justataste.com/wp-content/uploads/2018/04/baked-air-fryer-cheese-taquitos.jpg",
   "image": [
+    {
+      "url": "https://www.justataste.com/wp-content/uploads/2018/04/baked-air-fryer-cheese-taquitos.jpg"
+    },
     {
       "url": "https://www.justataste.com/wp-content/uploads/2018/04/baked-air-fryer-cheese-taquitos-500x500.jpg"
     },

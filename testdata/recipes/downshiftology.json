@@ -3,8 +3,10 @@
   "name": "Greek Chicken Kabobs",
   "description": "These greek chicken kabobs are incredibly flavorful and a perfect grilling recipe. Serve this with a homemade tzaztiki sauce!",
   "inLanguage": "en-US",
-  "thumbnailUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3.jpg",
   "image": [
+    {
+      "url": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3.jpg"
+    },
     {
       "url": "https://downshiftology.com/wp-content/uploads/2020/09/Greek-Chicken-Kabobs-3-500x500.jpg"
     },

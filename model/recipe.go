@@ -90,7 +90,6 @@ type Recipe struct {
 	Name          string                `json:"name,omitempty"`
 	Description   string                `json:"description,omitempty"`
 	Language      string                `json:"inLanguage,omitempty"`
-	ThumbnailUrl  string                `json:"thumbnailUrl,omitempty"`
 	Images        []*ImageObject        `json:"image,omitempty"`
 	Author        *Person               `json:"author,omitempty"`
 	Publisher     *Organization         `json:"publisher,omitempty"`
@@ -118,11 +117,11 @@ type Recipe struct {
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
 }
 
-func (r *Recipe) AddImage(image *ImageObject) {
-	if r.ThumbnailUrl == image.Url {
-		return // don't add the same image twice
-	}
+func (r *Recipe) AddImageUrl(imageUrl string) {
+	r.AddImage(&ImageObject{Url: imageUrl})
+}
 
+func (r *Recipe) AddImage(image *ImageObject) {
 	for _, vs := range r.Images { // check if already exists
 		if image.Url == vs.Url {
 			if image.Width > 0 {
