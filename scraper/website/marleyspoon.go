@@ -134,10 +134,6 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	// This conclusion is made based on personal observations and available plans https://marleyspoon.com/select-plan
 	r.Yield = 2
 
-	if len(data.Image.Thumbnail) != 0 {
-		r.ThumbnailUrl = data.Image.Thumbnail
-	}
-
 	if len(data.Difficulty) != 0 {
 		r.Difficulty = data.Difficulty
 	}
@@ -149,7 +145,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	}
 
 	if len(data.Image.Thumbnail) != 0 {
-		r.ThumbnailUrl = data.Image.Thumbnail
+		r.AddImage(&model.ImageObject{Url: data.Image.Thumbnail})
 	}
 
 	if len(data.Image.Medium) != 0 {

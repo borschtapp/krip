@@ -70,7 +70,6 @@ func ScrapeCookstr(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
-	r.Publisher = &model.Organization{}
 	r.Publisher.Name = "Cookstr.com"
 	r.Publisher.Url = "https://www.cookstr.com"
 	r.Publisher.Logo = "https://static.primecp.com/site_templates/3001/images/site_logo_sID66.png?v=22222"
