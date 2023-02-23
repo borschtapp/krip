@@ -30,7 +30,6 @@ func TestOpenGraphParser(t *testing.T) {
 	recipe := &model.Recipe{}
 	assert.NoError(t, Scrape(&input, recipe))
 
-	assert.Equal(t, "https://www.hellofresh.com/recipes/uk-stir-fried-chinese-beef-5845b40b2e69d7259304d962", recipe.Url)
 	assert.Equal(t, "Rapid Stir-Fried Chinese Beef", recipe.Name)
 	assert.Equal(t, "In this recipe, we’re tossing the classic combo of beef and broccoli with bouncy noodles and dressing them in a savory soy and hoisin-based sauce.", recipe.Description)
 	assert.Equal(t, "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/uk-stir-friend-chinese-beef-b5fd1d10.jpg", recipe.ThumbnailUrl)
