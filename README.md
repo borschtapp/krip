@@ -1,17 +1,28 @@
-# Krip - Quick, comprehensive and generalized recipes scraping
+# Krip* 🇺🇦
 
-A Go library for scraping culinary recipes from any website or HTML file.
+<p align="center">
+    <a href="https://pkg.go.dev/github.com/borschtapp/krip?tab=doc"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white" alt="godoc" title="godoc"/></a>
+    <a href="https://github.com/borschtapp/krip/tags"><img src="https://img.shields.io/github/v/tag/borschtapp/krip" alt="semver tag" title="semver tag"/></a>
+    <a href="https://goreportcard.com/report/github.com/borschtapp/krip"><img src="https://goreportcard.com/badge/github.com/borschtapp/krip" alt="go report card" title="go report card"/></a>
+    <a href="https://github.com/borschtapp/krip/blob/main/LICENSE"><img src="https://img.shields.io/github/license/borschtapp/krip" alt="license" title="license"/></a>
+</p>
+
+A Go library for fast, comprehensive and generalised scraping of culinary recipes from any website or HTML file.
+
+* _Krip_ is a Ukrainian word for _dill_. The bud of the dill looks like web pages connected by a stem (a reference to the web and graphs).
 
 ---
 
-I found it illogical for Go users to use Python for scraping recipes.
-The Python library [recipe-scrapers](https://github.com/hhursev/recipe-scrapers/) is great, but slow and very limited.
+I started this project as I wanted to build my own recipe keeper and found that there is only one
+library that everyone uses for scraping recipes [recipe-scrapers](https://github.com/hhursev/recipe-scrapers/) written in Python.
+The library is great, but contains lots of scrappers that seem redundant, however, it wasn't able to scrape the recipes I wanted.
+I sent some PullRequests to it, but the language I chose for the project is Go, so I decided to rewrite it in Go.
 
 This library contains completely rewritten parsers that are slightly inspired by the Python library.
-I focused on speed and flexibility to cover most of the possible schemas and websites out of the box and retrives extensive model.
-Still, it supports per-domain customisation in case someone does not use any schema.
+I focused on speed and flexibility to cover most of the possible schemas and websites from the beginning and to retrieve a rich model.
+Still, it supports per-domain customisation in case someone does not use a schema.
 
-_Note:_ WIP, I'm still learning how to use Go. Found it fun, but a difficult to switch after OOP.
+_Note:_ WIP, I am still learning how to use Go. Any hint or advice is welcome.
 
 ## Install
 ```
@@ -19,14 +30,29 @@ go get -u github.com/borschtapp/krip
 ```
 
 ## Features
-- The resulting `Recipe` struct (object) is compatible with [Recipe schema](https://schema.org/Recipe) (see [comments](model/recipe.go))
-- Scrapes any website that uses the recipe schema, even if it is broken
-- Includes parsers for custom domains (sources) that don't use the schema
-- Removes empty, duplicate values and performs some normalization on the fly
+- Parses microdata, opengraph and json-ld schemas
+- Corrects erroneous json in the source code of websites (e.g. `jsonc` with comments or new lines)
+- The resulting `Recipe` struct (object) is compatible with the [https://schema.org/Recipe](https://schema.org/Recipe) schema (see [comments](model/recipe.go))
+- Includes custom parsers for specific websites (domains) that do not use any known recipe schema
+- Removes empty, duplicate values and performs some normalization
+- Command-line tool to scrape recipes from the internet
 - Fast and efficient, thanks Go :)
 
+## Contributing
+Contributions are welcome! Please open an issue or a PR if you have any ideas or found a bug.\
+Most common way to contribute is to add a custom parser for a specific website (if you have trouble, please open an issue and I will help you).
+
+## Implementing custom scrapers
+All you need is to implement a [`Scraper`](model/scraper.go) interface and register it via `krip.RegisterScraper()`.
+
+Take a look at the already implemented custom scrapers:
+- [Custom scraper for `https://fitmencook.com/`](scraper/website/fitmencook.go)
+- [Custom scraper for `https://marleyspoon.com/`](scraper/website/marleyspoon.go)
+- [Custom scraper for `https://kitchenstories.com/`](scraper/website/kitchenstories.go)
+
+
 ### To-Do List
-- [ ] more custom domain parsers, implement all from the python library
+- [ ] more custom parsers, implement all from the python library
 - [ ] allergens support (missing in recipe schema)
 - [ ] parsing of ingredients (missing in recipe schema)
 - [ ] parsing of recipes from text
@@ -34,9 +60,26 @@ go get -u github.com/borschtapp/krip
 
 ## Usage
 
+### Command-line tool
+```bash
+go install github.com/borschtapp/krip/cmd/krip
+krip --help
+krip https://cooking.nytimes.com/recipes/3783-original-plum-torte
+```
+
 ### Scrape recipe from web
 ```go
 recipe, err := krip.ScrapeUrl("https://cooking.nytimes.com/recipes/3783-original-plum-torte")
+if err != nil {
+  // handle err
+}
+
+// Retrieve the recipe data
+name := recipe.Name
+ingredients := recipe.Ingredients
+instructions := recipe.Instructions
+
+// Print the recipe as JSON
 fmt.Println(recipe)
 ```
 ```json
