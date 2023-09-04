@@ -335,6 +335,11 @@ func parseAuthor(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, overri
 	if val, ok := getPropertyString(item, "jobTitle", "JobTitle"); ok && (override || len(r.Author.JobTitle) == 0) {
 		r.Author.JobTitle = utils.CleanupInline(val)
 	}
+	if val, ok := getPropertiesArray(item, "knowsAbout", "KnowsAbout"); ok && (override || len(r.Author.KnowsAbout) == 0) {
+		r.Author.KnowsAbout = val
+	} else if val, ok := getPropertyString(item, "knowsAbout"); ok {
+		r.Author.KnowsAbout = utils.AppendUnique(r.Author.KnowsAbout, utils.CleanupInline(val))
+	}
 	if val, ok := getPropertyString(item, "description", "about"); ok && (override || len(r.Author.Description) == 0) {
 		r.Author.Description = utils.CleanupInline(val)
 	}

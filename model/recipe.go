@@ -7,12 +7,12 @@ import (
 
 // Person according to https://schema.org/Person
 type Person struct {
-	Name        string `json:"name,omitempty"`
-	KnowsAbout  string `json:"knowsAbout,omitempty"`
-	JobTitle    string `json:"jobTitle,omitempty"`
-	Description string `json:"description,omitempty"`
-	Url         string `json:"url,omitempty"`
-	Image       string `json:"image,omitempty"`
+	Name        string   `json:"name,omitempty"`
+	JobTitle    string   `json:"jobTitle,omitempty"`
+	Description string   `json:"description,omitempty"`
+	KnowsAbout  []string `json:"knowsAbout,omitempty"`
+	Url         string   `json:"url,omitempty"`
+	Image       string   `json:"image,omitempty"`
 }
 
 // Organization according to https://schema.org/Organization
