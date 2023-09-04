@@ -206,8 +206,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	if len(data.Chef.Name) != 0 {
 		var author model.Person
 		author.Name = data.Chef.Name
-		author.KnowsAbout = data.Chef.Bio
-		author.Description = data.Chef.Description
+		author.Description = data.Chef.Bio
 		author.Image = data.Chef.Image.Medium
 		r.Author = &author
 	}
