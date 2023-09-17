@@ -9,7 +9,6 @@ retract (
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/astappiev/microdata v1.0.1
-	github.com/jarcoal/httpmock v1.3.1
 	github.com/microcosm-cc/bluemonday v1.0.25
 	github.com/sosodev/duration v1.1.0
 	github.com/stretchr/testify v1.8.4
