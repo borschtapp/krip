@@ -1,29 +1,22 @@
 package krip
 
 import (
-	"github.com/borschtapp/krip/testdata"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
 func TestOnlineUrl(t *testing.T) {
-	t.Skip("Just an example")
+	t.Skip("Just an example of Url scraping")
 
 	var website = "https://www.thepioneerwoman.com/food-cooking/recipes/a11059/restaurant-style-salsa/"
 	recipe, err := ScrapeUrl(website)
 	assert.NoError(t, err)
 
+	assert.NotEmpty(t, recipe.Url)
 	assert.NotEmpty(t, recipe.Name)
-	testdata.AssertRecipe(t, recipe)
-}
-
-func TestHtmlFile(t *testing.T) {
-	t.Skip("Just an example")
-
-	var website = "kitchenstories"
-	recipe, err := ScrapeFile(testdata.WebsitesDir + website + testdata.HtmlExt)
-	assert.NoError(t, err)
-
-	testdata.AssertJson(t, recipe, testdata.RecipesDir+website)
+	assert.NotEmpty(t, recipe.Images)
+	assert.NotEmpty(t, recipe.Ingredients)
+	assert.NotEmpty(t, recipe.Instructions)
+	assert.NotEmpty(t, recipe.Publisher)
 }
