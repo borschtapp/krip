@@ -2,27 +2,9 @@ package utils
 
 import (
 	"testing"
-	"time"
 
 	"github.com/stretchr/testify/assert"
 )
-
-func TestBaseUrl(t *testing.T) {
-	tests := []struct {
-		give string
-		want string
-	}{
-		{"https://example.com/test-page", "https://example.com"},
-		{"https://example.org/test-page", "https://example.org"},
-		{"https://www.example.com.ua/test-page", "https://www.example.com.ua"},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got := BaseUrl(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
 
 func TestCleanup(t *testing.T) {
 	tests := []struct {
@@ -105,118 +87,6 @@ func TestUnquote(t *testing.T) {
 	}
 }
 
-func TestDomainZone(t *testing.T) {
-	tests := []struct {
-		give string
-		want string
-	}{
-		{"https://example.com/test-page", "com"},
-		{"https://example.org/test-page", "org"},
-		{"https://www.example.com.ua/test-page", "ua"},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got := DomainZone(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
-func TestHostAlias(t *testing.T) {
-	tests := []struct {
-		give string
-		want string
-	}{
-		{"https://example.com/test-page", "example"},
-		{"https://example.org/test-page", "example"},
-		{"https://www.example.com.ua/test-page", "example"},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got := HostAlias(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
-func TestHostname(t *testing.T) {
-	tests := []struct {
-		give string
-		want string
-	}{
-		{"example.com", "example.com"},
-		{"https://www.example.com/test-page", "example.com"},
-		{"https://example.com/", "example.com"},
-		{"https://example.com/chicken-broccoli-sweet-potatoes-meal-prep/", "example.com"},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got := Hostname(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
-func TestParseDuration(t *testing.T) {
-	tests := []struct {
-		give   string
-		want   time.Duration
-		wantOk bool
-	}{
-		{"1 hour 5 minutes", time.Duration(65) * time.Minute, true},
-		{"10 minutes", time.Duration(10) * time.Minute, true},
-		{"1 minute", time.Duration(1) * time.Minute, true},
-		{"5 min", time.Duration(5) * time.Minute, true},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got, ok := ParseDuration(tt.give)
-			assert.Equal(t, tt.want, got)
-			assert.Equal(t, tt.wantOk, ok)
-		})
-	}
-}
-
-func TestParseFloat(t *testing.T) {
-	tests := []struct {
-		give    string
-		want    float64
-		wantErr bool
-	}{
-		{"1", 1, false},
-		{"1.256", 1.256, false},
-		{"1,35", 1.35, false},
-		{"0", 0, false},
-		{"test", 0, true},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got, err := ParseFloat(tt.give)
-			assert.Equal(t, tt.want, got)
-			assert.Equal(t, tt.wantErr, err != nil)
-		})
-	}
-}
-
-func TestParseInt(t *testing.T) {
-	tests := []struct {
-		give string
-		want int
-	}{
-		{"123", 123},
-		{"56 ", 56},
-		{"15.25", 0},
-		{"33 test", 0},
-		{"hello world", 0},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got, _ := ParseInt(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
 func TestFindNumber(t *testing.T) {
 	tests := []struct {
 		give string
@@ -236,28 +106,6 @@ func TestFindNumber(t *testing.T) {
 		t.Run(tt.give, func(t *testing.T) {
 			got := FindNumber(tt.give)
 			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
-func TestParseFractions(t *testing.T) {
-	tests := []struct {
-		give    string
-		want    float64
-		wantErr bool
-	}{
-		{"3 ¼", 3.25, false},
-		{"2 1/2", 2.5, false},
-		{"1/2", 0.5, false},
-		{"1/3", 0.3333333333333333, false},
-		{"¾", 0.75, false},
-		{"⅖", 0.4, false},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got, err := ParseFraction(tt.give)
-			assert.Equal(t, tt.want, got)
-			assert.Equal(t, tt.wantErr, err != nil)
 		})
 	}
 }

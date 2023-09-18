@@ -1,5 +1,7 @@
 package utils
 
+import "strings"
+
 var domainLangMap = map[string]string{
 	"ad": "ca-ad",
 	"af": "ps-af",
@@ -117,4 +119,9 @@ func LanguageByDomain(tld string) (string, bool) {
 	}
 
 	return "", false
+}
+
+func CleanupLang(lang string) string {
+	lang = strings.ReplaceAll(lang, "_", "-")
+	return lang
 }

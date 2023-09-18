@@ -2,6 +2,7 @@ package common
 
 import (
 	"fmt"
+
 	"github.com/sosodev/duration"
 
 	"github.com/borschtapp/krip/model"
@@ -56,14 +57,14 @@ func normalizeRecipe(r *model.Recipe) {
 	}
 
 	if len(r.CookTime) != 0 && len(r.PrepTime) != 0 && len(r.TotalTime) == 0 {
-		r.TotalTime = duration.Format(utils.ConvertDuration(r.CookTime) + utils.ConvertDuration(r.PrepTime))
+		r.TotalTime = duration.Format(utils.Parse8601Duration(r.CookTime) + utils.Parse8601Duration(r.PrepTime))
 	} else if len(r.TotalTime) != 0 && len(r.CookTime) != 0 && len(r.PrepTime) == 0 {
-		prepTime := utils.ConvertDuration(r.TotalTime) - utils.ConvertDuration(r.CookTime)
+		prepTime := utils.Parse8601Duration(r.TotalTime) - utils.Parse8601Duration(r.CookTime)
 		if prepTime > 0 {
 			r.PrepTime = duration.Format(prepTime)
 		}
 	} else if len(r.TotalTime) != 0 && len(r.PrepTime) != 0 && len(r.CookTime) == 0 {
-		cookTime := utils.ConvertDuration(r.TotalTime) - utils.ConvertDuration(r.PrepTime)
+		cookTime := utils.Parse8601Duration(r.TotalTime) - utils.Parse8601Duration(r.PrepTime)
 		if cookTime > 0 {
 			r.CookTime = duration.Format(cookTime)
 		}

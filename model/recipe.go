@@ -107,12 +107,11 @@ type Recipe struct {
 	Ingredients   []string              `json:"recipeIngredient,omitempty"`   // alias `supply`
 	Equipment     []string              `json:"tool,omitempty"`               // FIXME: `recipeEquipment` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
 	Instructions  []*HowToSection       `json:"recipeInstructions,omitempty"` // alias `step`
-	Notes         []string              `json:"correction,omitempty"`         // some notes or advices for the recipe
 	Nutrition     *NutritionInformation `json:"nutrition,omitempty"`
 	Rating        *AggregateRating      `json:"aggregateRating,omitempty"`
 	CommentCount  int                   `json:"commentCount,omitempty"`
 	Video         *VideoObject          `json:"video,omitempty"`
-	Links         []string              `json:"citation,omitempty"` // maybe not the cleanest name, but we can store additional links here
+	Links         []string              `json:"sameAs,omitempty"` // maybe not the cleanest name, but we can store additional links here
 	DateModified  *time.Time            `json:"dateModified,omitempty"`
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
 }
