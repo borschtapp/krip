@@ -1,6 +1,6 @@
 package utils
 
-import "golang.org/x/exp/slices"
+import "slices"
 
 func Deduplicate[E comparable](s []E) []E {
 	if len(s) < 2 {
