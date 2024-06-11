@@ -211,14 +211,14 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 		defer res.Body.Close()
 		body, readErr := io.ReadAll(res.Body)
 		if readErr != nil {
-			return errors.New("could not read response body: " + err.Error())
+			return errors.New("could not read response body: " + readErr.Error())
 		}
 
 		if res.StatusCode != 200 {
 			return errors.New("invalid status " + res.Status + ": " + string(body))
 		}
 
-		kptnData := []KptnCookRecipe{}
+		var kptnData []KptnCookRecipe
 		if err := json.Unmarshal(body, &kptnData); err != nil {
 			return err
 		}

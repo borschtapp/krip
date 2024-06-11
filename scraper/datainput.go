@@ -29,7 +29,7 @@ func FileInput(fileName string, options model.InputOptions) (*model.DataInput, e
 	}
 
 	contentType := http.DetectContentType(content)
-	if err == nil && strings.HasPrefix(contentType, "text/html") {
+	if strings.HasPrefix(contentType, "text/html") {
 		root, err := html.Parse(bytes.NewReader(content))
 		if err != nil {
 			return nil, errors.New("unable to parse html tree: " + err.Error())

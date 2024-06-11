@@ -24,7 +24,7 @@ func ReadUrl(url string, headers http.Header) ([]byte, *url.URL, error) {
 		defer res.Body.Close()
 		body, readErr := io.ReadAll(res.Body)
 		if readErr != nil {
-			return nil, nil, errors.New("could not read response body: " + err.Error())
+			return nil, nil, errors.New("could not read response body: " + readErr.Error())
 		}
 
 		if res.StatusCode != 200 {
