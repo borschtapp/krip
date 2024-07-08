@@ -2,14 +2,12 @@ module github.com/borschtapp/krip
 
 go 1.21
 
-retract (
-	v1.0.0 // Published accidentally, should be v0.1.0
-)
+retract v1.0.0 // Published accidentally, should be v0.1.0
 
 require (
 	github.com/PuerkitoBio/goquery v1.9.2
 	github.com/astappiev/microdata v1.0.2
-	github.com/microcosm-cc/bluemonday v1.0.26
+	github.com/microcosm-cc/bluemonday v1.0.27
 	github.com/sosodev/duration v1.3.1
 	github.com/stretchr/testify v1.9.0
 	golang.org/x/net v0.26.0
