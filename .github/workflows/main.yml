@@ -43,16 +43,15 @@ jobs:
         go-version: 'stable'
 
     - name: Build
-      run: cd web && GOOS=linux GOARCH=amd64 go build -o krip_demo
+      run: cd web && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o krip
 
     - name: Copy and run
       uses: mdallasanta/ssh-scp-deploy@v1.2.0
       with:
-        local: './web/krip_demo'
+        local: './web/krip'
         remote: '~/krip'
         host: ${{secrets.DEPLOY_HOST}}
         user: ${{secrets.DEPLOY_USERNAME}}
         key: ${{secrets.DEPLOY_PRIVATE_KEY}}
-        pre_upload: systemctl stop krip --user
-        post_upload: systemctl start krip --user
+        post_upload: docker compose down krip && docker compose up -d --build krip
         ssh_options: -o StrictHostKeyChecking=no
