@@ -5,15 +5,16 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/borschtapp/krip/model"
-	"github.com/borschtapp/krip/utils"
-	"github.com/sosodev/duration"
 	"io"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/utils"
+	"github.com/sosodev/duration"
 )
 
 const kptnKey = "6q7QNKy-oIgk-IMuWisJ-jfN7s6"
@@ -176,7 +177,7 @@ type KptnCookRecipe struct {
 func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	u, err := url.Parse(data.Url)
 	if err != nil {
-		return errors.New("error parsing url: " + err.Error())
+		return fmt.Errorf("error parsing url: %w", err)
 	}
 
 	if lang := u.Query().Get("lang"); lang != "" {
@@ -194,7 +195,7 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	client := http.Client{}
 	req, err := http.NewRequest("POST", "https://mobile.kptncook.com/recipes/search?kptnkey="+kptnKey+"&lang="+r.Language, bodyReader)
 	if err != nil {
-		return errors.New("could not create request: " + err.Error())
+		return fmt.Errorf("could not create request: %w", err)
 	}
 
 	req.Header = map[string][]string{
@@ -204,7 +205,7 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	}
 	res, err := client.Do(req)
 	if err != nil {
-		return errors.New("could not send request: " + err.Error())
+		return fmt.Errorf("could not send request: %w", err)
 	}
 
 	if res.Body != nil {

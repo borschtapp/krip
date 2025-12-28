@@ -3,12 +3,14 @@ package website
 import (
 	"encoding/json"
 	"errors"
-	"github.com/borschtapp/krip/model"
-	"github.com/borschtapp/krip/utils"
-	"github.com/sosodev/duration"
+	"fmt"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/utils"
+	"github.com/sosodev/duration"
 )
 
 type GoustoData struct {
@@ -119,7 +121,7 @@ type GoustoData struct {
 func ScrapeGousto(data *model.DataInput, r *model.Recipe) error {
 	u, err := url.Parse(data.Url)
 	if err != nil {
-		return errors.New("error parsing url: " + err.Error())
+		return fmt.Errorf("error parsing url: %w", err)
 	}
 
 	parts := strings.Split(u.Path, "/")

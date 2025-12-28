@@ -1,9 +1,10 @@
 package schema
 
 import (
-	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"

@@ -2,14 +2,15 @@ package scraper
 
 import (
 	"bytes"
-	"errors"
-	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/net/html"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
+	"golang.org/x/net/html"
 
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"
@@ -19,29 +20,29 @@ import (
 func FileInput(fileName string, options model.InputOptions) (*model.DataInput, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
-		return nil, errors.New("unable to read the file: " + err.Error())
+		return nil, fmt.Errorf("unable to read the file: %w", err)
 	}
 	defer file.Close()
 
 	content, err := io.ReadAll(file)
 	if err != nil {
-		return nil, errors.New("failed to read the file: " + err.Error())
+		return nil, fmt.Errorf("failed to read the file: %w", err)
 	}
 
 	contentType := http.DetectContentType(content)
 	if strings.HasPrefix(contentType, "text/html") {
 		root, err := html.Parse(bytes.NewReader(content))
 		if err != nil {
-			return nil, errors.New("unable to parse html tree: " + err.Error())
+			return nil, fmt.Errorf("unable to parse html tree: %w", err)
 		}
 
 		url := "file://" + strings.ReplaceAll(fileName, "\\", "/")
 		return NodeInput(root, url, options)
-	} else {
-		return &model.DataInput{
-			Text: string(content),
-		}, nil
 	}
+
+	return &model.DataInput{
+		Text: string(content),
+	}, nil
 }
 
 func UrlInput(url string) (*model.DataInput, error) {
@@ -56,7 +57,7 @@ func UrlInput(url string) (*model.DataInput, error) {
 
 	root, err := html.Parse(bytes.NewReader(resp))
 	if err != nil {
-		return nil, errors.New("unable to parse html tree: " + err.Error())
+		return nil, fmt.Errorf("unable to parse html tree: %w", err)
 	}
 
 	input, err := NodeInput(root, respUrl.String(), model.InputOptions{SkipUrl: true})
@@ -70,7 +71,7 @@ func UrlInput(url string) (*model.DataInput, error) {
 func NodeInput(root *html.Node, url string, options model.InputOptions) (*model.DataInput, error) {
 	doc := goquery.NewDocumentFromNode(root)
 
-	if !options.SkipUrl { // if we read the page from a file, we need to retrieve an url
+	if !options.SkipUrl { // if we read the page from a file, we need to retrieve a url
 		if val, ok := doc.Find("link[rel='canonical']").Attr("href"); ok && utils.IsAbsolute(val) {
 			url = val
 		} else if val, ok := doc.Find("meta[property='og:url']").Attr("content"); ok && utils.IsAbsolute(val) {

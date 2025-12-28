@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"errors"
 	"fmt"
 	"math"
 	"strconv"
@@ -43,7 +42,7 @@ func ParseFraction(str string) (float64, error) {
 			str = intSplit[0]
 			frac = intSplit[1]
 		} else if len(intSplit) > 2 {
-			return 0, errors.New("unable to parse fractions from string `" + str + "`: too many spaces")
+			return 0, fmt.Errorf("unable to parse fractions from string `%s`: too many spaces", str)
 		}
 
 		arr := strings.Split(frac, "/")
@@ -52,13 +51,13 @@ func ParseFraction(str string) (float64, error) {
 				if den, err := strconv.ParseFloat(arr[1], 32); err == nil {
 					res += num / den
 				} else {
-					return 0, errors.New("unable to parse fractions from string `" + str + "`: " + err.Error())
+					return 0, fmt.Errorf("unable to parse fractions from string `%s`: %w", str, err)
 				}
 			} else {
-				return 0, errors.New("unable to parse fractions from string `" + str + "`: " + err.Error())
+				return 0, fmt.Errorf("unable to parse fractions from string `%s`: %w", str, err)
 			}
 		} else {
-			return 0, errors.New("unable to parse fractions from string `" + str + "`: too many slashes")
+			return 0, fmt.Errorf("unable to parse fractions from string `%s`: too many slashes", str)
 		}
 	} else if strings.ContainsAny(str, Fractions) {
 		for symbol, value := range fractionsMap {
@@ -73,7 +72,7 @@ func ParseFraction(str string) (float64, error) {
 		if val, err := ParseFloat(str); err == nil {
 			res += val
 		} else {
-			return 0, errors.New("unable to parse fractions from string `" + str + "`: " + err.Error())
+			return 0, fmt.Errorf("unable to parse fractions from string `%s`: %w", str, err)
 		}
 	}
 

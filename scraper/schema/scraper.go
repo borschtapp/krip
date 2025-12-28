@@ -2,9 +2,10 @@ package schema
 
 import (
 	"fmt"
-	"github.com/sosodev/duration"
 	"net/url"
 	"time"
+
+	"github.com/sosodev/duration"
 
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"

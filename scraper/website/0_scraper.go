@@ -1,7 +1,8 @@
 package website
 
 import (
-	"errors"
+	"fmt"
+
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
 )
@@ -27,7 +28,7 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 	alias := utils.HostAlias(data.Url)
 	if aliasScraper, ok := scrapers[alias]; ok {
 		if err := aliasScraper(data, r); err != nil {
-			return errors.New("alias scraper error: " + err.Error())
+			return fmt.Errorf("alias scraper error: %w", err)
 		}
 	}
 	return nil

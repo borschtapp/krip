@@ -1,9 +1,10 @@
 package opengraph
 
 import (
+	"strings"
+
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
-	"strings"
 )
 
 func Scrape(data *model.DataInput, r *model.Recipe) error {

@@ -1,4 +1,4 @@
-# https://docs.github.com/en/enterprise-server@3.10/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates#example-dependabotyml-file
+# https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
 
 version: 2
 updates:

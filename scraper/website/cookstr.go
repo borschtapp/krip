@@ -1,8 +1,9 @@
 package website
 
 import (
-	"github.com/sosodev/duration"
 	"strings"
+
+	"github.com/sosodev/duration"
 
 	"github.com/PuerkitoBio/goquery"
 

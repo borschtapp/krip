@@ -3,10 +3,11 @@ package website
 import (
 	"encoding/json"
 	"errors"
-	"github.com/sosodev/duration"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/sosodev/duration"
 
 	"github.com/PuerkitoBio/goquery"
 
@@ -219,7 +220,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 		r.Links = append(r.Links, data.RecipeCardURL)
 	}
 
-	// in normal scenario, there will be html `lang` tag and language can be retrieved from it
+	// in normal scenario, there will be HTML `lang` tag and language can be retrieved from it
 	if len(r.Language) == 0 && len(data.Country) != 0 {
 		// but using the `country` property, we can guess it
 		r.Language = utils.CleanupLang(data.Country)

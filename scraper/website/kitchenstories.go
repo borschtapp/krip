@@ -2,9 +2,10 @@ package website
 
 import (
 	"encoding/json"
-	"github.com/sosodev/duration"
 	"log"
 	"time"
+
+	"github.com/sosodev/duration"
 
 	"github.com/PuerkitoBio/goquery"
 

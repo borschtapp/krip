@@ -30,8 +30,8 @@ go get -u github.com/borschtapp/krip
 ```
 
 ## Features
-- Parses microdata, opengraph and json-ld schemas
-- Corrects erroneous json in the source code of websites (e.g. `jsonc` with comments or new lines)
+- Parses microdata, OpenGraph and json-ld schemas
+- Corrects erroneous JSON in the source code of websites (e.g. `jsonc` with comments or new lines)
 - The resulting `Recipe` struct (object) is compatible with the [https://schema.org/Recipe](https://schema.org/Recipe) schema (see [comments](model/recipe.go))
 - Includes custom parsers for specific websites (domains) that do not use any known recipe schema
 - Removes empty, duplicate values and performs some normalization
