@@ -7,22 +7,20 @@
     <a href="https://github.com/borschtapp/krip/blob/main/LICENSE"><img src="https://img.shields.io/github/license/borschtapp/krip" alt="license" title="license"/></a>
 </p>
 
-A Go library for fast, comprehensive and generalised scraping of culinary recipes from any website or HTML file.
+**Krip** is a Go library designed for fast, comprehensive, and generalised scraping of culinary recipes from any website or HTML file.
 
-* _Krip_ is a Ukrainian word for _dill_. The bud of the dill looks like web pages connected by a stem (a reference to the web and graphs).
+The project aims to provide a robust solution for extracting structured culinary data from unstructured or semi-structured web pages, normalizing it into a strict Schema.org `Recipe` model.
+
+* _Krip_ is a Ukrainian word for _dill_. The bud of the dill looks like web pages connected to a single database.
 
 ---
 
 I started this project as I wanted to build my own recipe keeper and found that there is only one
 library that everyone uses for scraping recipes [recipe-scrapers](https://github.com/hhursev/recipe-scrapers/) written in Python.
-The library is great, but contains lots of scrappers that seem redundant, however, it wasn't able to scrape the recipes I wanted.
-I sent some PullRequests to it, but the language I chose for the project is Go, so I decided to rewrite it in Go.
+The library is great, but I was naive enough to think that it can be improved.
 
-This library contains completely rewritten parsers that are slightly inspired by the Python library.
 I focused on speed and flexibility to cover most of the possible schemas and websites from the beginning and to retrieve a rich model.
 Still, it supports per-domain customisation in case someone does not use a schema.
-
-_Note:_ WIP, I am still learning how to use Go. Any hint or advice is welcome.
 
 ## Install
 ```
@@ -30,33 +28,11 @@ go get -u github.com/borschtapp/krip
 ```
 
 ## Features
-- Parses microdata, OpenGraph and json-ld schemas
-- Corrects erroneous JSON in the source code of websites (e.g. `jsonc` with comments or new lines)
-- The resulting `Recipe` struct (object) is compatible with the [https://schema.org/Recipe](https://schema.org/Recipe) schema (see [comments](model/recipe.go))
-- Includes custom parsers for specific websites (domains) that do not use any known recipe schema
-- Removes empty, duplicate values and performs some normalization
-- Command-line tool to scrape recipes from the internet
-- Fast and efficient, thanks Go :)
-
-## Contributing
-Contributions are welcome! Please open an issue or a PR if you have any ideas or found a bug.\
-Most common way to contribute is to add a custom parser for a specific website (if you have trouble, please open an issue and I will help you).
-
-## Implementing custom scrapers
-All you need is to implement a [`Scraper`](model/scraper.go) interface and register it via `krip.RegisterScraper()`.
-
-Take a look at the already implemented custom scrapers:
-- [Custom scraper for `https://fitmencook.com/`](scraper/website/fitmencook.go)
-- [Custom scraper for `https://marleyspoon.com/`](scraper/website/marleyspoon.go)
-- [Custom scraper for `https://kitchenstories.com/`](scraper/website/kitchenstories.go)
-
-
-### To-Do List
-- [ ] more custom parsers, implement all from the python library
-- [ ] allergens support (missing in recipe schema)
-- [ ] parsing of ingredients (missing in recipe schema)
-- [ ] parsing of recipes from text
-- [ ] validation and normalisation of units, constants, etc.
+- **Multi-Strategy Extraction**: Combines Microdata, OpenGraph and JSON-LD.
+- **Robust Parsing**: Handles erroneous JSON and sanitises HTML content.
+- **Standardized Output**: Produces `Recipe` structs compatible with [Schema.org/Recipe](https://schema.org/Recipe).
+- **Extensible**: If needed, it's easy to add support for a custom website via the `Scraper` interface.
+- **Performance**: Fast execution with minimal external dependencies.
 
 ## Usage
 
@@ -67,7 +43,7 @@ krip --help
 krip https://cooking.nytimes.com/recipes/3783-original-plum-torte
 ```
 
-### Scrape recipe from web
+### Go library
 ```go
 recipe, err := krip.ScrapeUrl("https://cooking.nytimes.com/recipes/3783-original-plum-torte")
 if err != nil {
@@ -156,9 +132,40 @@ fmt.Println(recipe)
 }
 ```
 
-## Tested on
+## Project Structure
 
-The scraper contains a test for the source and was able to extract all the important fields, including but not limited to:
+- **`cmd/`**: Entry points for the CLI application.
+- **`web/`**: HTTP Web Server implementation.
+- **`krip.go`**: Facade layer and public API.
+- **`model/`**: Domain data structures (`Recipe`, `DataInput`).
+- **`scraper/`**: Core scraping engine.
+    - **`common/`**: Orchestration logic.
+    - **`schema/`**: Schema.org (JSON-LD/Microdata) strategies.
+    - **`opengraph/`**: OpenGraph metadata strategies.
+    - **`website/`**: Site-specific scraper implementations.
+- **`utils/`**: Helper functions for parsing, HTTP, and string manipulation.
+
+## Contributing
+Contributions are welcome! Whether it's adding a new website scraper or improving the core logic.
+
+### Implementing Custom Scrapers
+All you need is to implement a [`Scraper`](model/scraper.go) interface and register it via `krip.RegisterScraper()`.
+
+Take a look at the already implemented custom scrapers:
+- [Custom scraper for `https://fitmencook.com/`](scraper/website/fitmencook.go)
+- [Custom scraper for `https://marleyspoon.com/`](scraper/website/marleyspoon.go)
+- [Custom scraper for `https://kitchenstories.com/`](scraper/website/kitchenstories.go)
+
+1.  Create a new file in `scraper/website/` (e.g., `mysite.go`).
+2.  Implement the `Scraper` function signature: `func(data *model.DataInput, r *model.Recipe) error`.
+3.  Register the scraper in `scraper/website/0_scraper.go`.
+4.  Add test cases in `testdata/`.
+
+## Supported Websites
+
+Below is a list of websites the scraper has been tested against and is known to work correctly.
+
+Which means the scraped recipe contains all the important fields, including but not limited to:
 - `url`
 - `name`
 - `inLanguage`
@@ -167,13 +174,12 @@ The scraper contains a test for the source and was able to extract all the impor
 - `recipeInstructions`
 - `publisher` (including `name` and `url`)
 
-### For the following websites
+The automatically generated list (based on testdata) is as follows:
 [//]: # (This list is generated automatically, do not edit manually)
 - https://101cookbooks.com
 - https://750g.com
 - https://acouplecooks.com
 - https://allrecipes.com
-- https://alltommat.expressen.se
 - https://altonbrown.com
 - https://amazingribs.com
 - https://ambitiouskitchen.com
@@ -190,8 +196,6 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://bettycrocker.com
 - https://biancazapatka.com/en
 - https://bigoven.com
-- https://blueapron.com
-- https://bodybuilding.com
 - https://bonappetit.com
 - https://bowlofdelicious.com
 - https://budgetbytes.com
@@ -199,6 +203,7 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://cavemanketo.com
 - https://cdkitchen.com
 - https://chefkoch.de
+- https://chefnini.com
 - https://claudia.abril.com.br
 - https://closetcooking.com
 - https://comidinhasdochef.com
@@ -209,6 +214,7 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://cookinglight.com
 - https://cookpad.com
 - https://cookstr.com
+- https://cookwell.com
 - https://copykat.com
 - https://countryliving.com
 - https://creativecanning.com
@@ -220,25 +226,23 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://delish.com
 - https://dinnerly.de
 - https://dinnerthendessert.com
-- https://ditchthecarbs.com
 - https://domesticate-me.com
 - https://downshiftology.com
-- https://dr.dk
 - https://eatingbirdfood.com
 - https://eatingwell.com
-- https://eatsmarter.com
 - https://eattolerant.de
-- https://eatwhattonight.com
 - https://elanaspantry.com
 - https://emmikochteinfach.de
 - https://epicurious.com
-- https://ethanchlebowski.com
+- https://expressen.se
 - https://feastingathome.com
 - https://fifteenspatulas.com
+- https://finedininglovers.com
 - https://food.com
 - https://food52.com
 - https://foodandwine.com
 - https://foodinjars.com
+- https://foodnetwork.co.uk
 - https://foodrepublic.com
 - https://forksoverknives.com
 - https://forktospoon.com
@@ -248,13 +252,10 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://gimmedelicious.com
 - https://gimmesomeoven.com
 - https://gonnawantseconds.com
-- https://gousto.co.uk
 - https://greatbritishchefs.com
 - https://halfbakedharvest.com
 - https://handletheheat.com
-- https://hassanchef.com
 - https://headbangerskitchen.com
-- https://healthy-delicious.com
 - https://heb.com
 - https://hellofresh.co.uk
 - https://homechef.com
@@ -293,12 +294,12 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://lowcarbmaven.com
 - https://maangchi.com
 - https://madensverden.dk
-- https://madewithlau.com
 - https://marleyspoon.de
 - https://marmiton.org
 - https://marthastewart.com
 - https://matprat.no
 - https://melskitchencafe.com
+- https://mindmegette.hu
 - https://minimalistbaker.com
 - https://misya.info/misya-srl-unipersonale
 - https://mob.co.uk
@@ -306,20 +307,20 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://momswithcrockpots.com
 - https://motherthyme.com
 - https://mybakingaddiction.com
-- https://mykitchen101.com
-- https://mykitchen101en.com
 - https://myrecipes.com
 - https://naturallyella.com
 - https://nhs.uk
-- https://ninjatestkitchen.eu
 - https://nomnompaleo.com
 - https://nourishedbynutrition.com
 - https://ohsheglows.com
 - https://ohsweetbasil.com
 - https://omnivorescookbook.com
 - https://paleorunningmomma.com
+- https://panelinha.com.br
 - https://picky-palate.com
+- https://pillsburybaking.com
 - https://pinchofyum.com
+- https://pingodoce.pt
 - https://pressureluckcooking.com
 - https://primaledgehealth.com
 - https://przepisy.pl
@@ -335,7 +336,6 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://ruled.me
 - https://rutgerbakt.nl
 - https://sallysbakingaddiction.com
-- https://saveur.com
 - https://seasonsandsuppers.ca
 - https://seriouseats.com
 - https://simple-veganista.com
@@ -367,13 +367,13 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://thehappyfoodie.co.uk
 - https://thekitchenmagpie.com
 - https://thekitchn.com
-- https://thenutritiouskitchen.co
 - https://thepioneerwoman.com
 - https://therealfooddietitians.com
 - https://thespruceeats.com
 - https://thestayathomechef.com
 - https://thevintagemixer.com
 - https://thewoksoflife.com
+- https://thinlicious.com
 - https://tine.no
 - https://tudogostoso.com.br
 - https://twopeasandtheirpod.com
@@ -382,9 +382,10 @@ The scraper contains a test for the source and was able to extract all the impor
 - https://vegolosi.it
 - https://vegrecipesofindia.com
 - https://watchwhatueat.com
-- https://weightwatchers.com
+- https://weightwatchers.com/de
 - https://whatsgabycooking.com
 - https://wholefully.com
+- https://woop.co.nz
 - https://yemek.com
 - https://yummly.com
 - https://zenbelly.com

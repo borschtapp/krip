@@ -50,6 +50,12 @@ func cleanupCommon(s string) string {
 	return s
 }
 
+func TrimZeroWidthSpaces(s string) string {
+	return strings.TrimFunc(s, func(r rune) bool {
+		return r == 0x200B || r == 0xFEFF || r == 0x200C || r == 0x200D
+	})
+}
+
 func SplitTitle(title string) []string {
 	splitter := func(r rune) bool {
 		return r == '|' || r == '-' || r == '–'
