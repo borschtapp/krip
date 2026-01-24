@@ -23,20 +23,24 @@ I focused on speed and flexibility to cover most of the possible schemas and web
 Still, it supports per-domain customisation in case someone does not use a schema.
 
 ## Install
-```
+
+```bash
 go get -u github.com/borschtapp/krip
 ```
 
 ## Features
-- **Multi-Strategy Extraction**: Combines Microdata, OpenGraph and JSON-LD.
-- **Robust Parsing**: Handles erroneous JSON and sanitises HTML content.
-- **Standardized Output**: Produces `Recipe` structs compatible with [Schema.org/Recipe](https://schema.org/Recipe).
-- **Extensible**: If needed, it's easy to add support for a custom website via the `Scraper` interface.
-- **Performance**: Fast execution with minimal external dependencies.
+
+* **Multi-Strategy Extraction**: Combines Microdata, OpenGraph and JSON-LD.
+
+* **Robust Parsing**: Handles erroneous JSON and sanitises HTML content.
+* **Standardized Output**: Produces `Recipe` structs compatible with [Schema.org/Recipe](https://schema.org/Recipe).
+* **Extensible**: If needed, it's easy to add support for a custom website via the `Scraper` interface.
+* **Performance**: Fast execution with minimal external dependencies.
 
 ## Usage
 
 ### Command-line tool
+
 ```bash
 go install github.com/borschtapp/krip/cmd/krip
 krip --help
@@ -44,6 +48,7 @@ krip https://cooking.nytimes.com/recipes/3783-original-plum-torte
 ```
 
 ### Go library
+
 ```go
 recipe, err := krip.ScrapeUrl("https://cooking.nytimes.com/recipes/3783-original-plum-torte")
 if err != nil {
@@ -58,6 +63,7 @@ instructions := recipe.Instructions
 // Print the recipe as JSON
 fmt.Println(recipe)
 ```
+
 ```json
 {
   "@id": "https://cooking.nytimes.com/recipes/3783-original-plum-torte",
@@ -134,45 +140,49 @@ fmt.Println(recipe)
 
 ## Project Structure
 
-- **`cmd/`**: Entry points for the CLI application.
-- **`web/`**: HTTP Web Server implementation.
-- **`krip.go`**: Facade layer and public API.
-- **`model/`**: Domain data structures (`Recipe`, `DataInput`).
-- **`scraper/`**: Core scraping engine.
-    - **`common/`**: Orchestration logic.
-    - **`schema/`**: Schema.org (JSON-LD/Microdata) strategies.
-    - **`opengraph/`**: OpenGraph metadata strategies.
-    - **`website/`**: Site-specific scraper implementations.
-- **`utils/`**: Helper functions for parsing, HTTP, and string manipulation.
+* **`cmd/`**: Entry points for the CLI application.
+* **`web/`**: HTTP Web Server implementation.
+* **`krip.go`**: Facade layer and public API.
+* **`model/`**: Domain data structures (`Recipe`, `DataInput`).
+* **`scraper/`**: Core scraping engine.
+  * **`common/`**: Orchestration logic.
+  * **`schema/`**: Schema.org (JSON-LD/Microdata) strategies.
+  * **`opengraph/`**: OpenGraph metadata strategies.
+  * **`website/`**: Site-specific scraper implementations.
+* **`utils/`**: Helper functions for parsing, HTTP, and string manipulation.
 
 ## Contributing
+
 Contributions are welcome! Whether it's adding a new website scraper or improving the core logic.
 
 ### Implementing Custom Scrapers
+
 All you need is to implement a [`Scraper`](model/scraper.go) interface and register it via `krip.RegisterScraper()`.
 
 Take a look at the already implemented custom scrapers:
-- [Custom scraper for `https://fitmencook.com/`](scraper/website/fitmencook.go)
-- [Custom scraper for `https://marleyspoon.com/`](scraper/website/marleyspoon.go)
-- [Custom scraper for `https://kitchenstories.com/`](scraper/website/kitchenstories.go)
 
-1.  Create a new file in `scraper/website/` (e.g., `mysite.go`).
-2.  Implement the `Scraper` function signature: `func(data *model.DataInput, r *model.Recipe) error`.
-3.  Register the scraper in `scraper/website/0_scraper.go`.
-4.  Add test cases in `testdata/`.
+* [Custom scraper for `https://fitmencook.com/`](scraper/custom/fitmencook.go)
+* [Custom scraper for `https://marleyspoon.com/`](scraper/custom/marleyspoon.go)
+* [Custom scraper for `https://kitchenstories.com/`](scraper/custom/kitchenstories.go)
+
+1. Create a new file in `scraper/custom/` (e.g., `mysite.go`).
+2. Implement the `Scraper` function signature: `func(data *model.DataInput, r *model.Recipe) error`.
+3. Register the scraper in `scraper/custom/0_scraper.go`.
+4. Add test cases in `testdata/`.
 
 ## Supported Websites
 
 Below is a list of websites the scraper has been tested against and is known to work correctly.
 
 Which means the scraped recipe contains all the important fields, including but not limited to:
-- `url`
-- `name`
-- `inLanguage`
-- `thumbnailUrl`
-- `recipeIngredient`
-- `recipeInstructions`
-- `publisher` (including `name` and `url`)
+
+* `url`
+* `name`
+* `inLanguage`
+* `thumbnailUrl`
+* `recipeIngredient`
+* `recipeInstructions`
+* `publisher` (including `name` and `url`)
 
 The automatically generated list (based on testdata) is as follows:
 [//]: # (This list is generated automatically, do not edit manually)

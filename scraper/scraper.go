@@ -1,4 +1,4 @@
-package common
+package scraper
 
 import (
 	"fmt"
@@ -6,9 +6,9 @@ import (
 	"github.com/sosodev/duration"
 
 	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/scraper/custom"
 	"github.com/borschtapp/krip/scraper/opengraph"
 	"github.com/borschtapp/krip/scraper/schema"
-	"github.com/borschtapp/krip/scraper/website"
 	"github.com/borschtapp/krip/utils"
 )
 
@@ -32,7 +32,7 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 	}
 
 	// fill recipe according to the website scraper implementation
-	if err := website.Scrape(data, r); err != nil {
+	if err := custom.Scrape(data, r); err != nil {
 		fmt.Println("website error: " + err.Error())
 	}
 

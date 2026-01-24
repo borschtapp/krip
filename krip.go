@@ -3,17 +3,16 @@ package krip
 import (
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper"
-	"github.com/borschtapp/krip/scraper/common"
-	"github.com/borschtapp/krip/scraper/website"
+	"github.com/borschtapp/krip/scraper/custom"
 )
 
 func RegisterScraper(hostname string, fn model.Scraper) {
-	website.RegisterScraper(hostname, fn)
+	custom.RegisterScraper(hostname, fn)
 }
 
 func Scrape(input *model.DataInput) (*model.Recipe, error) {
 	recipe := &model.Recipe{}
-	if err := common.Scrape(input, recipe); err != nil {
+	if err := scraper.Scrape(input, recipe); err != nil {
 		return nil, err
 	}
 	return recipe, nil

@@ -1,4 +1,4 @@
-package website
+package custom
 
 import (
 	"github.com/PuerkitoBio/goquery"
