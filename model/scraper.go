@@ -22,5 +22,20 @@ type DataInput struct {
 	Schemas  *microdata.Microdata `json:"-"`
 }
 
+// FeedOptions options for feed scraping
+type FeedOptions struct {
+	// When true, only the feed will be scraped, without scraping each entry's url
+	Quick bool
+	// Filter out recipes with fewer than this number of ingredients (0 = no filter)
+	MinIngredients int
+	// When true, filter out recipes without an image
+	RequireImage bool
+	// When true, filter out recipes without instructions
+	RequireInstructions bool
+}
+
 // Scraper defines a function that fill a recipe from the input data
-type Scraper = func(data *DataInput, r *Recipe) error
+type Scraper = func(data *DataInput, recipe *Recipe) error
+
+// FeedScraper defines a function that returns a feed from the input data
+type FeedScraper = func(data *DataInput, feed *Feed) error

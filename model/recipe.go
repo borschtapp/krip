@@ -139,6 +139,30 @@ func (r *Recipe) AddImage(image *ImageObject) {
 	r.Images = append(r.Images, image)
 }
 
+func (r *Recipe) IsEmpty() bool {
+	return len(r.Name) == 0 || len(r.Url) == 0
+}
+
+func (r *Recipe) IsValid() bool {
+	if r.IsEmpty() {
+		return false
+	}
+
+	if len(r.Ingredients) == 0 {
+		return false
+	}
+
+	if len(r.Instructions) == 0 {
+		return false
+	}
+
+	if r.Publisher == nil || len(r.Publisher.Name) == 0 {
+		return false
+	}
+
+	return true
+}
+
 func (r *Recipe) String() string {
 	data, err := json.MarshalIndent(r, "", "  ")
 	if err != nil {

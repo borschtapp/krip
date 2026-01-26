@@ -8,6 +8,7 @@ import (
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/scraper/custom"
 	"github.com/borschtapp/krip/scraper/opengraph"
+	"github.com/borschtapp/krip/scraper/rss"
 	"github.com/borschtapp/krip/scraper/schema"
 	"github.com/borschtapp/krip/utils"
 )
@@ -69,4 +70,75 @@ func normalizeRecipe(r *model.Recipe) {
 			r.CookTime = duration.Format(cookTime)
 		}
 	}
+}
+
+func ScrapeFeed(data *model.DataInput, opts ...model.FeedOptions) (*model.Feed, error) {
+	var opt model.FeedOptions
+	if len(opts) > 0 {
+		opt = opts[0]
+	}
+
+	feed := &model.Feed{
+		Url: data.Url,
+	}
+
+	if err := scrapeEntries(data, feed); err != nil {
+		return nil, err
+	}
+
+	if !opt.Quick {
+		for _, entry := range feed.Entries {
+			if len(entry.Url) == 0 {
+				continue
+			}
+
+			input, err := UrlInput(entry.Url)
+			if err != nil {
+				continue
+			}
+			if err := Scrape(input, entry); err != nil {
+				continue
+			}
+		}
+	}
+
+	feed.Entries = filterEntries(feed.Entries, opt)
+	return feed, nil
+}
+
+func scrapeEntries(data *model.DataInput, feed *model.Feed) error {
+	if err := custom.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		return nil
+	}
+
+	if err := rss.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		return nil
+	}
+
+	if err := schema.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		return nil
+	}
+
+	return fmt.Errorf("no entries found")
+}
+
+func filterEntries(entries []*model.Recipe, opt model.FeedOptions) []*model.Recipe {
+	if opt.MinIngredients == 0 && !opt.RequireImage && !opt.RequireInstructions {
+		return entries
+	}
+
+	filtered := make([]*model.Recipe, 0, len(entries))
+	for _, entry := range entries {
+		if opt.MinIngredients > 0 && len(entry.Ingredients) < opt.MinIngredients {
+			continue
+		}
+		if opt.RequireImage && len(entry.Images) == 0 {
+			continue
+		}
+		if opt.RequireInstructions && len(entry.Instructions) == 0 {
+			continue
+		}
+		filtered = append(filtered, entry)
+	}
+	return filtered
 }

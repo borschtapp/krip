@@ -17,9 +17,13 @@
 <main class="flex-shrink-0">
     <div class="container">
         <form class="input-group my-3">
-            <input type="text" id="urlInput" class="form-control" placeholder="Recipe URL" required="required"
-                   aria-label="Recipe URL" aria-describedby="scrapeBtn">
-            <button class="btn btn-outline-secondary" type="submit" id="scrapeBtn">Scrape</button>
+            <select id="typeSelect" class="form-select" style="max-width: 150px;">
+                <option value="recipe" selected>Recipe</option>
+                <option value="feed">Feed</option>
+            </select>
+            <input type="text" id="urlInput" class="form-control" placeholder="URL" required="required"
+                   aria-label="URL" aria-describedby="scrapeBtn">
+            <button class="btn btn-primary" type="submit" id="scrapeBtn">Scrape</button>
         </form>
 
         <div class="collapse" id="scrapeResult">
@@ -28,7 +32,7 @@
     </div>
 </main>
 
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-light text-center">
     <div class="container">
         <span class="text-muted">Krip &copy; Oleh Astappiev</span>
     </div>
@@ -39,8 +43,12 @@
         e.preventDefault();
         e.stopPropagation();
 
+        const type = document.getElementById('typeSelect').value;
+        const url = document.getElementById('urlInput').value;
+        const endpoint = type === 'feed' ? '/api/v1/feed' : '/api/v1/scrape';
+
         try {
-            const response = await fetch('/api/v1/scrape?' + new URLSearchParams({url: document.getElementById('urlInput').value}), {
+            const response = await fetch(endpoint + '?' + new URLSearchParams({url}), {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'

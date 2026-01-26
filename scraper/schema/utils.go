@@ -12,11 +12,11 @@ import (
 )
 
 func getStringOrItem(val interface{}) (string, *microdata.Item) {
-	switch val.(type) {
+	switch v := val.(type) {
 	case string:
-		return utils.CleanupInline(val.(string)), nil
+		return utils.CleanupInline(v), nil
 	case *microdata.Item:
-		return "", val.(*microdata.Item)
+		return "", v
 	default:
 		log.Printf("unable to process `%s`, unexpected type `%T`\n", val, val)
 	}
@@ -55,9 +55,9 @@ func getPropertyString(item *microdata.Item, key ...string) (string, bool) {
 
 func getPropertyInt(item *microdata.Item, key ...string) (int, bool) {
 	if val, ok := item.GetProperty(key...); ok {
-		switch val.(type) {
+		switch v := val.(type) {
 		case *microdata.Item:
-			return getPropertyInt(val.(*microdata.Item), "value")
+			return getPropertyInt(v, "value")
 		default:
 			return utils.FindInt(val), true
 		}

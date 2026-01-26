@@ -1,4 +1,4 @@
-package schema
+package schema_test
 
 import (
 	"strings"
@@ -7,7 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/astappiev/microdata"
+	"github.com/borschtapp/krip"
 	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/scraper/schema"
 )
 
 func TestSchemaParser(t *testing.T) {
@@ -22,7 +24,7 @@ func TestSchemaParser(t *testing.T) {
 	recipe := &model.Recipe{}
 	recipe.Author = &model.Person{}
 	recipe.Publisher = &model.Organization{}
-	assert.NoError(t, Scrape(&input, recipe))
+	assert.NoError(t, schema.Scrape(&input, recipe))
 
 	assert.Equal(t, "Rapid Stir-Fried Beef and Broccoli", recipe.Name)
 	assert.NotEmpty(t, recipe.Images)
@@ -49,4 +51,34 @@ func TestSchemaParser(t *testing.T) {
 		"4 teaspoon Vegetable Oil",
 		"unit Salt",
 		"unit Pepper"}, recipe.Ingredients)
+}
+
+func TestSchemaOnline(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping online test in short mode")
+	}
+
+	var website = "https://www.hellofresh.com/recipes/rapid-stir-fried-beef-5845b40b2e69d7259304d962"
+	recipe, err := krip.ScrapeUrl(website)
+	assert.NoError(t, err)
+	assert.True(t, recipe.IsValid())
+	t.Log(recipe.String())
+}
+
+func TestSchemaFeedOnline(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping online test in short mode")
+	}
+
+	var website = "https://foodnetwork.co.uk/collections/air-fryer-recipes"
+	feed, err := krip.ScrapeFeedUrl(website)
+	assert.NoError(t, err)
+	assert.NotNil(t, feed)
+
+	assert.NotEmpty(t, feed.Url)
+	assert.NotEmpty(t, feed.Entries)
+	for _, entry := range feed.Entries {
+		assert.False(t, entry.IsEmpty())
+	}
+	t.Log(feed.String())
 }

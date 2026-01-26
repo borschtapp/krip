@@ -37,7 +37,13 @@ func FileInput(fileName string, options model.InputOptions) (*model.DataInput, e
 		}
 
 		url := "file://" + strings.ReplaceAll(fileName, "\\", "/")
-		return NodeInput(root, url, options)
+		input, err := NodeInput(root, url, options)
+		if err != nil {
+			return nil, err
+		}
+
+		input.Text = string(content)
+		return input, nil
 	}
 
 	return &model.DataInput{
@@ -47,9 +53,8 @@ func FileInput(fileName string, options model.InputOptions) (*model.DataInput, e
 
 func UrlInput(url string) (*model.DataInput, error) {
 	resp, respUrl, err := utils.ReadUrl(url, map[string][]string{
-		"Accept":     {"text/html"},
 		"Referer":    {"https://www.google.com/"},
-		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"},
+		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"},
 	})
 	if err != nil {
 		return nil, err
@@ -65,6 +70,7 @@ func UrlInput(url string) (*model.DataInput, error) {
 		return nil, err
 	}
 
+	input.Text = string(resp)
 	return input, nil
 }
 

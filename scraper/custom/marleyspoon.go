@@ -3,6 +3,8 @@ package custom
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
+	"net/url"
 	"regexp"
 	"strings"
 	"time"
@@ -253,4 +255,72 @@ func findApiParams(doc *goquery.Document, canonicalUrl string) (url string, toke
 	}
 
 	return
+}
+
+func ScrapeMarleySpoonFeed(data *model.DataInput, feed *model.Feed) error {
+	if data.Document == nil {
+		return fmt.Errorf("no document found")
+	}
+
+	baseUrl, err := url.Parse(data.Url)
+	if err != nil {
+		return err
+	}
+
+	if !strings.HasPrefix(baseUrl.Path, "/menu") {
+		return fmt.Errorf("not a menu page")
+	}
+
+	publisher := &model.Organization{
+		Name: "Marley Spoon",
+		Url:  utils.BaseUrl(data.Url),
+	}
+
+	// "20-30 Minuten" -> PT30M
+	timePattern := regexp.MustCompile(`(\d+)-(\d+)\s*Minuten`)
+
+	data.Document.Find("a[href*='/menu/']").Each(func(i int, link *goquery.Selection) {
+		href, _ := link.Attr("href")
+		if href == "/menu" || href == "/menu/" || !idPattern.MatchString(href) {
+			return
+		}
+
+		entry := &model.Recipe{
+			Url:       utils.ToAbsoluteUrl(baseUrl, href),
+			Publisher: publisher,
+		}
+
+		titleEl := link.Find(".font-strong.leading-sm")
+		title := strings.TrimSpace(titleEl.Text())
+		subtitle := strings.TrimSpace(titleEl.Next().Text())
+		if subtitle != "" {
+			title += " " + subtitle
+		}
+		entry.Name = utils.CleanupInline(title)
+
+		if src, ok := link.Find("img").Attr("src"); ok {
+			entry.AddImageUrl(utils.ToAbsoluteUrl(baseUrl, src))
+		}
+
+		link.Find("div").Each(func(i int, div *goquery.Selection) {
+			text := strings.TrimSpace(div.Text())
+			if match := timePattern.FindStringSubmatch(text); match != nil {
+				entry.TotalTime = "PT" + match[2] + "M"
+			}
+		})
+
+		if categories := link.Find(".text-neutral-greyDark > div"); categories.Length() > 0 {
+			for _, category := range strings.Split(categories.Text(), "•") {
+				if cat := strings.Join(strings.Fields(category), " "); cat != "" {
+					entry.Categories = append(entry.Categories, cat)
+				}
+			}
+		}
+
+		if entry.Name != "" {
+			feed.AddEntry(entry)
+		}
+	})
+
+	return nil
 }

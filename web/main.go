@@ -30,9 +30,33 @@ func scrapeHandler(w http.ResponseWriter, r *http.Request) {
 	recipe, err := krip.ScrapeUrl(q.Get("url"))
 	if err != nil {
 		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
+		return
 	}
 
 	j, _ := json.Marshal(recipe)
+	_, _ = w.Write(j)
+}
+
+func feedHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "GET" {
+		http.Error(w, "Method is not supported.", http.StatusNotFound)
+		return
+	}
+
+	q := r.URL.Query()
+
+	if q == nil || len(q.Get("url")) == 0 {
+		http.Error(w, "`url` query param is required.", http.StatusBadRequest)
+		return
+	}
+
+	feed, err := krip.ScrapeFeedUrl(q.Get("url"))
+	if err != nil {
+		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	j, _ := json.Marshal(feed)
 	_, _ = w.Write(j)
 }
 
@@ -44,6 +68,7 @@ func main() {
 
 	http.Handle("/", http.FileServer(http.FS(subFs)))
 	http.HandleFunc("/api/v1/scrape", scrapeHandler)
+	http.HandleFunc("/api/v1/feed", feedHandler)
 
 	fmt.Printf("Starting server at port http://localhost:3000\n")
 	if err := http.ListenAndServe(":3000", nil); err != nil {

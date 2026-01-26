@@ -9,14 +9,12 @@ import (
 
 func ScrapeFitMenCook(data *model.DataInput, r *model.Recipe) error {
 	if data.Document != nil {
-		if s := data.Document.Find(".recipe-ingredients h4 strong").First(); len(s.Nodes) != 0 {
-			if val := utils.FindNumber(s.Text()); val > 0 {
-				r.Yield = int(val)
-			}
-		}
-
-		if s := data.Document.Find("div.recipe-ingredients li"); len(s.Nodes) != 0 {
+		if s := data.Document.Find(".fmc_ingredients ul li"); len(s.Nodes) != 0 {
 			s.Each(func(i int, s *goquery.Selection) {
+				if s1 := s.Has("strong"); len(s1.Nodes) != 0 {
+					return
+				}
+
 				text := utils.CleanupInline(s.Text())
 				if text != "" {
 					r.Ingredients = append(r.Ingredients, text)
@@ -24,7 +22,7 @@ func ScrapeFitMenCook(data *model.DataInput, r *model.Recipe) error {
 			})
 		}
 
-		if s := data.Document.Find("div.recipe-steps > ol:first-of-type li"); len(s.Nodes) != 0 {
+		if s := data.Document.Find(".fmc_recipe_steps .fmc_step_content"); len(s.Nodes) != 0 {
 			s.Each(func(i int, s *goquery.Selection) {
 				text := utils.CleanupInline(s.Text())
 				if text != "" {

@@ -25,34 +25,34 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 
 	siteSchema := data.Schemas.GetFirstOfSchemaType("WebSite")
 	if siteSchema != nil {
-		parsePublisher(siteSchema, r, baseUrl, false)
+		parsePublisher(siteSchema, r.Publisher, baseUrl, false)
 	}
 	if recipeSchema != nil {
 		if item, ok := recipeSchema.GetNestedItem("publisher", "brand"); ok {
-			parsePublisher(item, r, baseUrl, true)
+			parsePublisher(item, r.Publisher, baseUrl, true)
 		} else if val, ok := getPropertyString(recipeSchema, "publisher", "brand"); ok {
 			r.Publisher.Name = utils.CleanupInline(val)
 		}
 	}
 	orgSchema := data.Schemas.GetFirstOfSchemaType("Organization")
 	if orgSchema != nil {
-		parsePublisher(orgSchema, r, baseUrl, false)
+		parsePublisher(orgSchema, r.Publisher, baseUrl, false)
 	}
 	estSchema := data.Schemas.GetFirstOfSchemaType("FoodEstablishment")
 	if estSchema != nil {
-		parsePublisher(estSchema, r, baseUrl, false)
+		parsePublisher(estSchema, r.Publisher, baseUrl, false)
 	}
 
 	if recipeSchema != nil {
 		if item, ok := recipeSchema.GetNestedItem("author", "creator"); ok {
-			parseAuthor(item, r, baseUrl, true)
+			parseAuthor(item, r.Author, baseUrl, true)
 		} else if val, ok := getPropertyString(recipeSchema, "author", "creator"); ok {
 			r.Author.Name = utils.CleanupInline(val)
 		}
 	}
 	personSchema := data.Schemas.GetFirstOfSchemaType("Person")
 	if personSchema != nil {
-		parseAuthor(personSchema, r, baseUrl, r.Publisher != nil && r.Author != nil && r.Publisher.Name == r.Author.Name)
+		parseAuthor(personSchema, r.Author, baseUrl, r.Publisher != nil && r.Author != nil && r.Publisher.Name == r.Author.Name)
 	}
 
 	return nil
@@ -84,13 +84,13 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	}
 
 	if val, ok := recipeSchema.GetProperty("recipeYield", "yield"); ok {
-		switch val.(type) {
+		switch v := val.(type) {
 		case string:
-			r.Yield = int(utils.FindNumber(val.(string)))
+			r.Yield = int(utils.FindNumber(v))
 		case float64:
-			r.Yield = int(val.(float64))
+			r.Yield = int(v)
 		default:
-			fmt.Println("unable to parse recipeYield: ", fmt.Sprint(val))
+			fmt.Println("unable to parse recipeYield: ", fmt.Sprint(v))
 		}
 	}
 
@@ -190,10 +190,10 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 			if item.IsOfSchemaType("HowToStep") {
 				// yummly stores publisher in every step, but not in root of the schema
 				if val, ok := item.GetNestedItem("publisher"); ok {
-					parsePublisher(val, r, baseUrl, true)
+					parsePublisher(val, r.Publisher, baseUrl, true)
 				}
 				if val, ok := item.GetNestedItem("author"); ok {
-					parseAuthor(val, r, baseUrl, true)
+					parseAuthor(val, r.Author, baseUrl, true)
 				}
 
 				r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(item)})
@@ -314,41 +314,41 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	}
 }
 
-func parsePublisher(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, override bool) {
-	if val, ok := getPropertyString(item, "name"); ok && (override || len(r.Publisher.Name) == 0) {
-		r.Publisher.Name = utils.CleanupInline(val)
+func parsePublisher(item *microdata.Item, o *model.Organization, baseUrl *url.URL, override bool) {
+	if val, ok := getPropertyString(item, "name"); ok && (override || len(o.Name) == 0) {
+		o.Name = utils.CleanupInline(val)
 	}
-	if val, ok := getPropertyString(item, "url"); ok && (override || len(r.Publisher.Url) == 0) {
-		r.Publisher.Url = utils.RemoveTrailingSlash(val)
+	if val, ok := getPropertyString(item, "url"); ok && (override || len(o.Url) == 0) {
+		o.Url = utils.RemoveTrailingSlash(val)
 	}
-	if val, ok := getPropertyString(item, "description"); ok && (override || len(r.Publisher.Description) == 0) {
-		r.Publisher.Description = utils.CleanupInline(val)
+	if val, ok := getPropertyString(item, "description"); ok && (override || len(o.Description) == 0) {
+		o.Description = utils.CleanupInline(val)
 	}
-	if val, ok := getPropertyStringOrChild(item, "logo", "url"); ok && (override || len(r.Publisher.Logo) == 0) {
-		r.Publisher.Logo = utils.ToAbsoluteUrl(baseUrl, val)
+	if val, ok := getPropertyStringOrChild(item, "logo", "url"); ok && (override || len(o.Logo) == 0) {
+		o.Logo = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 }
 
-func parseAuthor(item *microdata.Item, r *model.Recipe, baseUrl *url.URL, override bool) {
-	if val, ok := getPropertyString(item, "name", "Name", "alternateName"); ok && (override || len(r.Author.Name) == 0) {
-		r.Author.Name = utils.CleanupInline(val)
+func parseAuthor(item *microdata.Item, p *model.Person, baseUrl *url.URL, override bool) {
+	if val, ok := getPropertyString(item, "name", "Name", "alternateName"); ok && (override || len(p.Name) == 0) {
+		p.Name = utils.CleanupInline(val)
 	}
-	if val, ok := getPropertyString(item, "jobTitle", "JobTitle"); ok && (override || len(r.Author.JobTitle) == 0) {
-		r.Author.JobTitle = utils.CleanupInline(val)
+	if val, ok := getPropertyString(item, "jobTitle", "JobTitle"); ok && (override || len(p.JobTitle) == 0) {
+		p.JobTitle = utils.CleanupInline(val)
 	}
-	if val, ok := getPropertiesArray(item, "knowsAbout", "KnowsAbout"); ok && (override || len(r.Author.KnowsAbout) == 0) {
-		r.Author.KnowsAbout = val
+	if val, ok := getPropertiesArray(item, "knowsAbout", "KnowsAbout"); ok && (override || len(p.KnowsAbout) == 0) {
+		p.KnowsAbout = val
 	} else if val, ok := getPropertyString(item, "knowsAbout"); ok {
-		r.Author.KnowsAbout = utils.AppendUnique(r.Author.KnowsAbout, utils.CleanupInline(val))
+		p.KnowsAbout = utils.AppendUnique(p.KnowsAbout, utils.CleanupInline(val))
 	}
-	if val, ok := getPropertyString(item, "description", "about"); ok && (override || len(r.Author.Description) == 0) {
-		r.Author.Description = utils.CleanupInline(val)
+	if val, ok := getPropertyString(item, "description", "about"); ok && (override || len(p.Description) == 0) {
+		p.Description = utils.CleanupInline(val)
 	}
-	if val, ok := getPropertyString(item, "url"); ok && (override || len(r.Author.Url) == 0) {
-		r.Author.Url = utils.ToAbsoluteUrl(baseUrl, val)
+	if val, ok := getPropertyString(item, "url"); ok && (override || len(p.Url) == 0) {
+		p.Url = utils.ToAbsoluteUrl(baseUrl, val)
 	}
-	if val, ok := getPropertyStringOrChild(item, "image", "url"); ok && (override || len(r.Author.Image) == 0) {
-		r.Author.Image = utils.ToAbsoluteUrl(baseUrl, val)
+	if val, ok := getPropertyStringOrChild(item, "image", "url"); ok && (override || len(p.Image) == 0) {
+		p.Image = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 }
 
@@ -376,4 +376,60 @@ func parseHowToStep(item *microdata.Item) model.HowToStep {
 	}
 
 	return step
+}
+
+func ScrapeFeed(data *model.DataInput, feed *model.Feed) error {
+	if data.Schemas == nil {
+		return fmt.Errorf("no schemas found")
+	}
+
+	baseUrl, _ := url.Parse(data.Url)
+
+	// Extracting publisher is kind of easy here
+	publisher := &model.Organization{}
+	if siteSchema := data.Schemas.GetFirstOfSchemaType("WebSite"); siteSchema != nil {
+		parsePublisher(siteSchema, publisher, baseUrl, false)
+	}
+	if orgSchema := data.Schemas.GetFirstOfSchemaType("Organization"); orgSchema != nil {
+		parsePublisher(orgSchema, publisher, baseUrl, false)
+	}
+	if estSchema := data.Schemas.GetFirstOfSchemaType("FoodEstablishment"); estSchema != nil {
+		parsePublisher(estSchema, publisher, baseUrl, false)
+	}
+
+	// Now, let's try to guess where recipes can be hidden
+	for _, item := range data.Schemas.Items {
+		// An ItemList with Recipes (ideal scenario, newer seen that yet)
+		if item.IsOfSchemaType("ItemList") {
+			if nested, ok := item.GetNested("itemListElement"); ok {
+				for _, item := range nested.Items {
+					if item.IsOfSchemaType("Recipe") {
+						recipe := &model.Recipe{Publisher: publisher}
+						parseRecipe(item, recipe, baseUrl)
+						feed.AddEntry(recipe)
+					}
+				}
+			}
+		}
+
+		// Many recipes on the page itself
+		if item.IsOfSchemaType("Recipe") {
+			// A recipe that consists of another recipes, case of https://foodnetwork.co.uk/collections/air-fryer-recipes
+			if nested, ok := item.GetNested("hasPart"); ok {
+				for _, item := range nested.Items {
+					if item.IsOfSchemaType("Recipe") {
+						recipe := &model.Recipe{Publisher: publisher}
+						parseRecipe(item, recipe, baseUrl)
+						feed.AddEntry(recipe)
+					}
+				}
+			} else {
+				recipe := &model.Recipe{Publisher: publisher}
+				parseRecipe(item, recipe, baseUrl)
+				feed.AddEntry(recipe)
+			}
+		}
+	}
+
+	return nil
 }
