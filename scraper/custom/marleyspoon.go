@@ -161,10 +161,10 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 
 	if len(data.Nutrition.Calories) != 0 || len(data.Nutrition.Fat) != 0 || len(data.Nutrition.Carbs) != 0 || len(data.Nutrition.Proteins) != 0 {
 		var nutrition model.NutritionInformation
-		nutrition.Calories = data.Nutrition.Calories
-		nutrition.FatContent = data.Nutrition.Fat
-		nutrition.CarbohydrateContent = data.Nutrition.Carbs
-		nutrition.ProteinContent = data.Nutrition.Proteins
+		nutrition.Calories = utils.FindNumber(data.Nutrition.Calories)
+		nutrition.FatContent = utils.FindNumber(data.Nutrition.Fat)
+		nutrition.CarbohydrateContent = utils.FindNumber(data.Nutrition.Carbs)
+		nutrition.ProteinContent = utils.FindNumber(data.Nutrition.Proteins)
 		r.Nutrition = &nutrition
 	}
 

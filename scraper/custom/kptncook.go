@@ -8,7 +8,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strconv"
 	"strings"
 	"time"
 
@@ -30,10 +29,10 @@ type KptnCookRecipe struct {
 	PreparationTime int    `json:"preparationTime"`
 	CookingTime     int    `json:"cookingTime"`
 	RecipeNutrition struct {
-		Calories     int `json:"calories"`
-		Protein      int `json:"protein"`
-		Fat          int `json:"fat"`
-		Carbohydrate int `json:"carbohydrate"`
+		Calories     float64 `json:"calories"`
+		Protein      float64 `json:"protein"`
+		Fat          float64 `json:"fat"`
+		Carbohydrate float64 `json:"carbohydrate"`
 	} `json:"recipeNutrition"`
 	ActiveTags []string `json:"activeTags"`
 	Steps      []struct {
@@ -251,16 +250,16 @@ func parseKptnData(data *KptnCookRecipe, r *model.Recipe) error {
 
 	r.Nutrition = &model.NutritionInformation{}
 	if data.RecipeNutrition.Fat > 0 {
-		r.Nutrition.FatContent = strconv.Itoa(data.RecipeNutrition.Fat)
+		r.Nutrition.FatContent = data.RecipeNutrition.Fat
 	}
 	if data.RecipeNutrition.Protein > 0 {
-		r.Nutrition.ProteinContent = strconv.Itoa(data.RecipeNutrition.Protein)
+		r.Nutrition.ProteinContent = data.RecipeNutrition.Protein
 	}
 	if data.RecipeNutrition.Calories > 0 {
-		r.Nutrition.Calories = strconv.Itoa(data.RecipeNutrition.Calories)
+		r.Nutrition.Calories = data.RecipeNutrition.Calories
 	}
 	if data.RecipeNutrition.Carbohydrate > 0 {
-		r.Nutrition.CarbohydrateContent = strconv.Itoa(data.RecipeNutrition.Carbohydrate)
+		r.Nutrition.CarbohydrateContent = data.RecipeNutrition.Carbohydrate
 	}
 
 	if len(data.ActiveTags) != 0 {

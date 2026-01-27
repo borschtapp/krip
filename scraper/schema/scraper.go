@@ -126,29 +126,29 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 
 			switch key {
 			case "calories":
-				r.Nutrition.Calories = strVal
+				r.Nutrition.Calories = utils.FindNumber(strVal)
 			case "servingSize":
 				r.Nutrition.ServingSize = strVal
 			case "carbohydrateContent":
-				r.Nutrition.CarbohydrateContent = strVal
+				r.Nutrition.CarbohydrateContent = utils.FindNumber(strVal)
 			case "cholesterolContent":
-				r.Nutrition.CholesterolContent = strVal
+				r.Nutrition.CholesterolContent = utils.FindNumber(strVal)
 			case "fatContent":
-				r.Nutrition.FatContent = strVal
+				r.Nutrition.FatContent = utils.FindNumber(strVal)
 			case "fiberContent":
-				r.Nutrition.FiberContent = strVal
+				r.Nutrition.FiberContent = utils.FindNumber(strVal)
 			case "proteinContent":
-				r.Nutrition.ProteinContent = strVal
+				r.Nutrition.ProteinContent = utils.FindNumber(strVal)
 			case "saturatedFatContent":
-				r.Nutrition.SaturatedFatContent = strVal
+				r.Nutrition.SaturatedFatContent = utils.FindNumber(strVal)
 			case "sodiumContent":
-				r.Nutrition.SodiumContent = strVal
+				r.Nutrition.SodiumContent = utils.FindNumber(strVal)
 			case "sugarContent":
-				r.Nutrition.SugarContent = strVal
+				r.Nutrition.SugarContent = utils.FindNumber(strVal)
 			case "transFatContent":
-				r.Nutrition.TransFatContent = strVal
+				r.Nutrition.TransFatContent = utils.FindNumber(strVal)
 			case "unsaturatedFatContent":
-				r.Nutrition.UnsaturatedFatContent = strVal
+				r.Nutrition.UnsaturatedFatContent = utils.FindNumber(strVal)
 			}
 		}
 	}

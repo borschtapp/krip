@@ -40,18 +40,18 @@ type HowToSection struct {
 
 // NutritionInformation according to https://schema.org/NutritionInformation
 type NutritionInformation struct {
-	Calories              string `json:"calories,omitempty"`              // The number of calories.
-	ServingSize           string `json:"servingSize,omitempty"`           // The serving size, in terms of the number of volume or mass.
-	CarbohydrateContent   string `json:"carbohydrateContent,omitempty"`   // The number of grams of carbohydrates.
-	CholesterolContent    string `json:"cholesterolContent,omitempty"`    // The number of milligrams of cholesterol.
-	FatContent            string `json:"fatContent,omitempty"`            // The number of grams of fat.
-	FiberContent          string `json:"fiberContent,omitempty"`          // The number of grams of fiber.
-	ProteinContent        string `json:"proteinContent,omitempty"`        // The number of grams of protein.
-	SaturatedFatContent   string `json:"saturatedFatContent,omitempty"`   // The number of grams of saturated fat.
-	SodiumContent         string `json:"sodiumContent,omitempty"`         // The number of milligrams of sodium.
-	SugarContent          string `json:"sugarContent,omitempty"`          // The number of grams of sugar.
-	TransFatContent       string `json:"transFatContent,omitempty"`       // The number of grams of trans fat.
-	UnsaturatedFatContent string `json:"unsaturatedFatContent,omitempty"` // The number of grams of unsaturated fat.
+	ServingSize           string  `json:"servingSize,omitempty"`           // The serving size, in terms of the number of volume or mass.
+	Calories              float64 `json:"calories,omitempty"`              // The number of calories.
+	CarbohydrateContent   float64 `json:"carbohydrateContent,omitempty"`   // The number of grams of carbohydrates.
+	CholesterolContent    float64 `json:"cholesterolContent,omitempty"`    // The number of milligrams of cholesterol.
+	FatContent            float64 `json:"fatContent,omitempty"`            // The number of grams of fat.
+	FiberContent          float64 `json:"fiberContent,omitempty"`          // The number of grams of fiber.
+	ProteinContent        float64 `json:"proteinContent,omitempty"`        // The number of grams of protein.
+	SaturatedFatContent   float64 `json:"saturatedFatContent,omitempty"`   // The number of grams of saturated fat.
+	SodiumContent         float64 `json:"sodiumContent,omitempty"`         // The number of milligrams of sodium.
+	SugarContent          float64 `json:"sugarContent,omitempty"`          // The number of grams of sugar.
+	TransFatContent       float64 `json:"transFatContent,omitempty"`       // The number of grams of trans fat.
+	UnsaturatedFatContent float64 `json:"unsaturatedFatContent,omitempty"` // The number of grams of unsaturated fat.
 }
 
 // AggregateRating represents the average rating based on multiple ratings or reviews https://schema.org/AggregateRating
