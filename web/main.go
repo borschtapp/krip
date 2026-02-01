@@ -60,6 +60,11 @@ func feedHandler(w http.ResponseWriter, r *http.Request) {
 	_, _ = w.Write(j)
 }
 
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("OK"))
+}
+
 func main() {
 	subFs, err := fs.Sub(static, "static")
 	if err != nil {
@@ -69,6 +74,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.FS(subFs)))
 	http.HandleFunc("/api/v1/scrape", scrapeHandler)
 	http.HandleFunc("/api/v1/feed", feedHandler)
+	http.HandleFunc("/health", healthHandler)
 
 	fmt.Printf("Starting server at port http://localhost:3000\n")
 	if err := http.ListenAndServe(":3000", nil); err != nil {
