@@ -103,7 +103,7 @@ type Recipe struct {
 	Categories    []string              `json:"recipeCategory,omitempty"`
 	Cuisines      []string              `json:"recipeCuisine,omitempty"`
 	Keywords      []string              `json:"keywords,omitempty"`
-	Yield         int                   `json:"recipeYield,omitempty"`        // alias `yield`
+	Yield         string                `json:"recipeYield,omitempty"`        // alias `yield`
 	Ingredients   []string              `json:"recipeIngredient,omitempty"`   // alias `supply`
 	Equipment     []string              `json:"tool,omitempty"`               // FIXME: `recipeEquipment` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
 	Instructions  []*HowToSection       `json:"recipeInstructions,omitempty"` // alias `step`

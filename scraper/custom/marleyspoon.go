@@ -135,7 +135,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 
 	// The backend of MarleySpoon always returns ingredients for 2 servings
 	// This conclusion is made based on personal observations and available plans https://marleyspoon.com/select-plan
-	r.Yield = 2
+	r.Yield = "2"
 
 	if len(data.Difficulty) != 0 {
 		r.Difficulty = data.Difficulty

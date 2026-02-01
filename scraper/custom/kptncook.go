@@ -301,7 +301,7 @@ func parseKptnData(data *KptnCookRecipe, r *model.Recipe) error {
 	}
 
 	if len(data.Ingredients) != 0 {
-		r.Yield = 1
+		r.Yield = "1"
 		r.Ingredients = []string{}
 		for _, item := range data.Ingredients {
 			if item.Quantity == 0 {

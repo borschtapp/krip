@@ -32,7 +32,7 @@ func TestSchemaParser(t *testing.T) {
 	assert.Equal(t, []string{"Rapid", "Spicy"}, recipe.Keywords)
 	assert.Equal(t, []string{"main course"}, recipe.Categories)
 	assert.Equal(t, []string{"Asian"}, recipe.Cuisines)
-	assert.Equal(t, 2, recipe.Yield)
+	assert.Equal(t, "2", recipe.Yield)
 
 	assert.Len(t, recipe.Instructions, 6)
 	assert.Len(t, recipe.Ingredients, 15)

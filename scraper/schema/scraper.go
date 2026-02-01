@@ -86,9 +86,9 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	if val, ok := recipeSchema.GetProperty("recipeYield", "yield"); ok {
 		switch v := val.(type) {
 		case string:
-			r.Yield = int(utils.FindNumber(v))
+			r.Yield = utils.CleanupInline(v)
 		case float64:
-			r.Yield = int(v)
+			r.Yield = fmt.Sprint(v)
 		default:
 			fmt.Println("unable to parse recipeYield: ", fmt.Sprint(v))
 		}

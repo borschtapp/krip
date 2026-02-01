@@ -2,6 +2,7 @@ package custom
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"time"
 
@@ -320,7 +321,7 @@ func ScrapeKitchenStories(data *model.DataInput, r *model.Recipe) error {
 			r.CommentCount = ksRecipe.UserReactions.CommentsCount
 		}
 		if ksRecipe.Servings.Amount != 0 {
-			r.Yield = ksRecipe.Servings.Amount
+			r.Yield = fmt.Sprint(ksRecipe.Servings.Amount)
 		}
 		if len(ksRecipe.ChefsNote) != 0 {
 			r.Text = ksRecipe.ChefsNote
