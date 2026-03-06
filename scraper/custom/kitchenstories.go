@@ -361,7 +361,7 @@ func ScrapeKitchenStories(data *model.DataInput, r *model.Recipe) error {
 		}
 		if len(ksRecipe.Utensils) != 0 {
 			for _, utensil := range ksRecipe.Utensils {
-				r.Equipment = append(r.Equipment, utensil.Name.Rendered)
+				r.Equipment = append(r.Equipment, &model.HowToTool{Name: utensil.Name.Rendered})
 			}
 		}
 	}

@@ -23,6 +23,27 @@ type Organization struct {
 	Logo        string `json:"logo,omitempty"`
 }
 
+// PropertyValue represents a property-value pair, e.g. an ingredient and its amount https://schema.org/PropertyValue
+type PropertyValue struct {
+	Value         string `json:"value,omitempty"` // The quantitative value of the property, e.g. "2", "1/2", "a pinch"
+	MaxValue      string `json:"maxValue,omitempty"`
+	MinValue      string `json:"minValue,omitempty"`
+	Name          string `json:"name,omitempty"` // The name of the property, e.g. "sugar", "flour", "salt"
+	UnitCode      string `json:"unitCode,omitempty"`
+	UnitText      string `json:"unitText,omitempty"` // The unit of measurement, e.g. "g", "cup", "teaspoon"
+	Image         string `json:"image,omitempty"`
+	Url           string `json:"url,omitempty"`
+	EstimatedCost string `json:"estimatedCost,omitempty"`
+}
+
+// HowToTool represents a tool used in the instructions https://schema.org/HowToTool
+type HowToTool struct {
+	Name     string `json:"name,omitempty"`
+	Url      string `json:"url,omitempty"`
+	Image    string `json:"image,omitempty"`
+	Quantity string `json:"requiredQuantity,omitempty"`
+}
+
 // HowToStep a step in the instructions https://schema.org/HowToStep
 type HowToStep struct {
 	Name  string `json:"name,omitempty"`
@@ -95,23 +116,24 @@ type Recipe struct {
 	Publisher     *Organization         `json:"publisher,omitempty"`
 	Text          string                `json:"text,omitempty"`
 	PrepTime      string                `json:"prepTime,omitempty"`
-	CookTime      string                `json:"cookTime,omitempty"`
+	CookTime      string                `json:"cookTime,omitempty"` // alias `performTime`
 	TotalTime     string                `json:"totalTime,omitempty"`
-	Difficulty    string                `json:"educationalLevel,omitempty"` // FIXME: `difficulty` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3130
+	Difficulty    string                `json:"educationalLevel,omitempty"` // `difficulty` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3130
 	CookingMethod string                `json:"cookingMethod,omitempty"`
 	Diets         []string              `json:"suitableForDiet,omitempty"`
 	Categories    []string              `json:"recipeCategory,omitempty"`
 	Cuisines      []string              `json:"recipeCuisine,omitempty"`
 	Keywords      []string              `json:"keywords,omitempty"`
 	Yield         string                `json:"recipeYield,omitempty"`        // alias `yield`
-	Ingredients   []string              `json:"recipeIngredient,omitempty"`   // alias `supply`
-	Equipment     []string              `json:"tool,omitempty"`               // FIXME: `recipeEquipment` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
+	Ingredients   []*PropertyValue      `json:"recipeIngredient,omitempty"`   // alias `supply`
+	Equipment     []*HowToTool          `json:"tool,omitempty"`               // alias `tool`, `recipeEquipment` is not a part of Recipe schema https://github.com/schemaorg/schemaorg/issues/3132
 	Instructions  []*HowToSection       `json:"recipeInstructions,omitempty"` // alias `step`
 	Nutrition     *NutritionInformation `json:"nutrition,omitempty"`
 	Rating        *AggregateRating      `json:"aggregateRating,omitempty"`
 	CommentCount  int                   `json:"commentCount,omitempty"`
 	Video         *VideoObject          `json:"video,omitempty"`
 	Links         []string              `json:"sameAs,omitempty"` // maybe not the cleanest name, but we can store additional links here
+	EstimatedCost string                `json:"estimatedCost,omitempty"`
 	DateModified  *time.Time            `json:"dateModified,omitempty"`
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
 }

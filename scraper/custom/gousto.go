@@ -190,10 +190,10 @@ func parseGoustoData(data *GoustoData, r *model.Recipe) error {
 	if len(data.Data.Entry.Ingredients) != 0 {
 		r.Yield = "2"
 		for _, item := range data.Data.Entry.Ingredients {
-			r.Ingredients = utils.AppendUnique(r.Ingredients, item.Name)
+			r.Ingredients = utils.AppendUnique(r.Ingredients, &model.PropertyValue{Name: item.Name})
 		}
 		for _, item := range data.Data.Entry.Basics {
-			r.Ingredients = utils.AppendUnique(r.Ingredients, item.Title)
+			r.Ingredients = utils.AppendUnique(r.Ingredients, &model.PropertyValue{Name: item.Title})
 		}
 	}
 

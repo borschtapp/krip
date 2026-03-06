@@ -17,7 +17,7 @@ func ScrapeFitMenCook(data *model.DataInput, r *model.Recipe) error {
 
 				text := utils.CleanupInline(s.Text())
 				if text != "" {
-					r.Ingredients = append(r.Ingredients, text)
+					r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: text})
 				}
 			})
 		}

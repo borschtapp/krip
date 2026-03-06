@@ -164,23 +164,45 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	if values, ok := recipeSchema.GetProperties("recipeIngredient", "ingredients", "supply"); ok {
 		for _, val := range values {
 			if text, item := getStringOrItem(val); len(text) != 0 {
-				r.Ingredients = append(r.Ingredients, text)
+				r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: text})
 			} else if item != nil {
-				if name, ok := getPropertyString(item, "name"); ok {
-					name = utils.CleanupInline(name)
-					if amount, ok := getPropertyString(item, "amount"); ok {
-						name = utils.CleanupInline(amount) + " " + name
-					}
-					r.Ingredients = append(r.Ingredients, name)
+				propValue := &model.PropertyValue{}
+				if val, ok := getPropertyString(item, "name", "item"); ok {
+					propValue.Name = utils.CleanupInline(val)
 				}
+				if val, ok := getPropertyString(item, "amount", "value", "requiredQuantity"); ok {
+					propValue.Value = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "minValue", "MinValue"); ok {
+					propValue.MinValue = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "maxValue", "MaxValue"); ok {
+					propValue.MaxValue = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "unitCode", "UnitCode"); ok {
+					propValue.UnitCode = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "unitText", "UnitText"); ok {
+					propValue.UnitText = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "image", "Image"); ok {
+					propValue.Image = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "url", "Url"); ok {
+					propValue.Url = utils.CleanupInline(val)
+				}
+				if val, ok := getPropertyString(item, "estimatedCost", "EstimatedCost"); ok {
+					propValue.EstimatedCost = utils.CleanupInline(val)
+				}
+				r.Ingredients = append(r.Ingredients, propValue)
 			}
 		}
 	}
 
-	if values, ok := recipeSchema.GetProperties("tool"); ok {
+	if values, ok := recipeSchema.GetProperties("tool", "recipeEquipment"); ok {
 		for _, val := range values {
 			if val, ok := getStringOrChild(val, "name"); ok {
-				r.Equipment = append(r.Equipment, val)
+				r.Equipment = append(r.Equipment, &model.HowToTool{Name: val})
 			}
 		}
 	}
@@ -257,8 +279,16 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 		r.CookingMethod = utils.CleanupInline(val)
 	}
 
+	if val, ok := getPropertyString(recipeSchema, "educationalLevel", "difficulty"); ok {
+		r.Difficulty = utils.CleanupInline(val)
+	}
+
 	if val, ok := getPropertyInt(recipeSchema, "commentCount"); ok {
 		r.CommentCount = val
+	}
+
+	if val, ok := getPropertyString(recipeSchema, "estimatedCost"); ok {
+		r.EstimatedCost = utils.CleanupInline(val)
 	}
 
 	if val, ok := getPropertyString(recipeSchema, "suitableForDiet"); ok {
@@ -271,6 +301,10 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 
 	if values, ok := getPropertiesKeywords(recipeSchema, "keywords", "Keywords"); ok {
 		r.Keywords = values
+	}
+
+	if values, ok := getPropertiesArray(recipeSchema, "sameAs"); ok {
+		r.Links = values
 	}
 
 	if item, ok := recipeSchema.GetNestedItem("video"); ok {

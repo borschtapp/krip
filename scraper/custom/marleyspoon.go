@@ -170,23 +170,27 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 
 	if len(data.Ingredients) != 0 {
 		for _, ingredient := range data.Ingredients {
+			name := ingredient.Name
 			if len(ingredient.NameWithQuantity) != 0 {
-				r.Ingredients = append(r.Ingredients, ingredient.NameWithQuantity)
-			} else {
-				r.Ingredients = append(r.Ingredients, ingredient.Name)
+				name = ingredient.NameWithQuantity
 			}
+
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{
+				Name:  name,
+				Image: ingredient.Image.Medium,
+			})
 		}
 	}
 
 	if len(data.AssumedIngredients) != 0 {
 		for _, ingredient := range data.AssumedIngredients {
-			r.Ingredients = append(r.Ingredients, ingredient.Name)
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: ingredient.Name})
 		}
 	}
 
 	if len(data.AssumedCookingUtilities) != 0 {
 		for _, utility := range data.AssumedCookingUtilities {
-			r.Equipment = append(r.Equipment, utility.Name)
+			r.Equipment = append(r.Equipment, &model.HowToTool{Name: utility.Name})
 		}
 	}
 

@@ -302,13 +302,12 @@ func parseKptnData(data *KptnCookRecipe, r *model.Recipe) error {
 
 	if len(data.Ingredients) != 0 {
 		r.Yield = "1"
-		r.Ingredients = []string{}
 		for _, item := range data.Ingredients {
-			if item.Quantity == 0 {
-				r.Ingredients = append(r.Ingredients, item.Ingredient.UncountableTitle)
-			} else {
-				r.Ingredients = append(r.Ingredients, fmt.Sprintf("%v %s %s", item.MetricQuantity, item.MetricMeasure, item.Ingredient.UncountableTitle))
-			}
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{
+				Name:     item.Ingredient.UncountableTitle,
+				Value:    fmt.Sprint(item.MetricQuantity),
+				UnitText: item.MetricMeasure,
+			})
 		}
 	}
 

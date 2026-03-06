@@ -3,8 +3,9 @@ package custom_test
 import (
 	"testing"
 
-	"github.com/borschtapp/krip"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/borschtapp/krip"
 )
 
 func TestHelloFreshOnline(t *testing.T) {

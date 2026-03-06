@@ -36,7 +36,9 @@ func TestSchemaParser(t *testing.T) {
 
 	assert.Len(t, recipe.Instructions, 6)
 	assert.Len(t, recipe.Ingredients, 15)
-	assert.Equal(t, []string{"12 ounce Beef Sirloin Tips",
+
+	expectedIngredients := []string{
+		"12 ounce Beef Sirloin Tips",
 		"2 unit Scallions",
 		"2 clove Garlic",
 		"1 tablespoon Cornstarch",
@@ -50,7 +52,11 @@ func TestSchemaParser(t *testing.T) {
 		"1 teaspoon Sriracha",
 		"4 teaspoon Vegetable Oil",
 		"unit Salt",
-		"unit Pepper"}, recipe.Ingredients)
+		"unit Pepper",
+	}
+	for i, ingredient := range recipe.Ingredients {
+		assert.Equal(t, expectedIngredients[i], ingredient.Name)
+	}
 }
 
 func TestSchemaOnline(t *testing.T) {
