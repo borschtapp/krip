@@ -11,6 +11,7 @@ var scrapers = map[string]model.Scraper{
 	"dinnerly":        ScrapeMarleySpoon,
 	"fitmencook":      ScrapeFitMenCook,
 	"gousto":          ScrapeGousto,
+	"hellofresh":      ScrapeHelloFresh,
 	"kitchenstories":  ScrapeKitchenStories,
 	"marleyspoon":     ScrapeMarleySpoon,
 	"mobile_kptncook": ScrapeKptnCook,
