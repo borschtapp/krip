@@ -61,6 +61,8 @@ func ScrapeFeedUrl(url string, opts ...model.FeedOptions) (*model.Feed, error) {
 
 type Person = model.Person
 type Organization = model.Organization
+type PropertyValue = model.PropertyValue
+type HowToTool = model.HowToTool
 type HowToStep = model.HowToStep
 type HowToSection = model.HowToSection
 type NutritionInformation = model.NutritionInformation
