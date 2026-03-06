@@ -72,9 +72,9 @@ func main() {
 	}
 
 	http.Handle("/", http.FileServer(http.FS(subFs)))
+	http.HandleFunc("/_health", healthHandler)
 	http.HandleFunc("/api/v1/scrape", scrapeHandler)
 	http.HandleFunc("/api/v1/feed", feedHandler)
-	http.HandleFunc("/health", healthHandler)
 
 	fmt.Printf("Starting server at port http://localhost:3000\n")
 	if err := http.ListenAndServe(":3000", nil); err != nil {
