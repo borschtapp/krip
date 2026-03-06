@@ -116,12 +116,12 @@ func RemoveNewLines(s string) string {
 
 var numberRegex = regexp.MustCompile("\\d+([.,]\\d+)?")
 
-func FindNumber(str string) float64 {
+func FindNumber(str string) *float64 {
 	groups := numberRegex.FindAllString(str, 1)
 	for _, group := range groups {
 		if i, err := ParseFloat(group); err == nil {
-			return i
+			return &i
 		}
 	}
-	return 0
+	return nil
 }

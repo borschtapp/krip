@@ -1,6 +1,6 @@
 module github.com/borschtapp/krip
 
-go 1.25.0
+go 1.26.0
 
 retract [v1.0.0, v1.3.9] // broken semver, minor versions includes breaking changes
 

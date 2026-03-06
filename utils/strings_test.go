@@ -90,17 +90,17 @@ func TestUnquote(t *testing.T) {
 func TestFindNumber(t *testing.T) {
 	tests := []struct {
 		give string
-		want float64
+		want *float64
 	}{
-		{"8-10 servings", 8},
-		{"123", 123},
-		{"123.25", 123.25},
-		{"this is decimal 123.25", 123.25},
-		{"33 test", 33},
-		{"this is 15 inside text", 15},
-		{"use only first number 12", 12},
-		{"use only 1 st number 12", 1},
-		{"hello world", 0},
+		{"8-10 servings", new(8.0)},
+		{"123", new(123.0)},
+		{"123.25", new(123.25)},
+		{"this is decimal 123.25", new(123.25)},
+		{"33 test", new(33.0)},
+		{"this is 15 inside text", new(15.0)},
+		{"use only first number 12", new(12.0)},
+		{"use only 1 st number 12", new(1.0)},
+		{"hello world", nil},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {

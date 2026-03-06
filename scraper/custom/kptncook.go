@@ -250,16 +250,16 @@ func parseKptnData(data *KptnCookRecipe, r *model.Recipe) error {
 
 	r.Nutrition = &model.NutritionInformation{}
 	if data.RecipeNutrition.Fat > 0 {
-		r.Nutrition.FatContent = data.RecipeNutrition.Fat
+		r.Nutrition.FatContent = &data.RecipeNutrition.Fat
 	}
 	if data.RecipeNutrition.Protein > 0 {
-		r.Nutrition.ProteinContent = data.RecipeNutrition.Protein
+		r.Nutrition.ProteinContent = &data.RecipeNutrition.Protein
 	}
 	if data.RecipeNutrition.Calories > 0 {
-		r.Nutrition.Calories = data.RecipeNutrition.Calories
+		r.Nutrition.Calories = &data.RecipeNutrition.Calories
 	}
 	if data.RecipeNutrition.Carbohydrate > 0 {
-		r.Nutrition.CarbohydrateContent = data.RecipeNutrition.Carbohydrate
+		r.Nutrition.CarbohydrateContent = &data.RecipeNutrition.Carbohydrate
 	}
 
 	if len(data.ActiveTags) != 0 {
