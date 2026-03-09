@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/url"
+	"strconv"
 	"strings"
 	"time"
 
@@ -132,16 +133,8 @@ type recipeNextData struct {
 						Type string `json:"type"`
 						Name string `json:"name"`
 					} `json:"utensils"`
-					Cuisines []struct {
-						Country   string `json:"country"`
-						Locale    string `json:"locale"`
-						Name      string `json:"name"`
-						Slug      string `json:"slug"`
-						Type      string `json:"type"`
-						ID        string `json:"id"`
-						CuisineID string `json:"cuisineId"`
-					} `json:"cuisines"`
-					CreatedAt    time.Time `json:"createdAt"`
+					Cuisines     json.RawMessage `json:"cuisines"`
+					CreatedAt    time.Time       `json:"createdAt"`
 					AllergensNew []struct {
 						Slug             string `json:"slug"`
 						IconPath         string `json:"iconPath"`
@@ -225,8 +218,104 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 
 	recipe := nextDataObj.Props.PageProps.SsrPayload.Recipe
 	imgBaseUrl := "https://media.hellofresh.com"
+	imgRecipePrefix := "/w_1200,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3"
 	imgStepPrefix := "/w_750,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3"
 	imgIngredientPrefix := "/w_256,q_auto,f_auto,c_limit,fl_lossy/hellofresh_s3"
+
+	if recipe.ImagePath != "" {
+		r.Images = make([]*model.ImageObject, 0, 1)
+		r.AddImageUrl(imgBaseUrl + imgRecipePrefix + recipe.ImagePath)
+	}
+
+	if recipe.LanguageCode != "" && r.Language == "" {
+		r.Language = recipe.LanguageCode
+	}
+
+	if recipe.Difficulty > 0 && r.Difficulty == "" {
+		r.Difficulty = strconv.Itoa(recipe.Difficulty)
+	}
+
+	if len(recipe.Label) > 0 {
+		for _, l := range recipe.Label {
+			if l.ShowToCustomer && l.Name != "" {
+				r.Keywords = append(r.Keywords, l.Name)
+			}
+		}
+	}
+
+	if len(recipe.Yields) > 0 && r.Yield == "" {
+		r.Yield = fmt.Sprint(recipe.Yields[0].Yields)
+	}
+
+	if len(recipe.Tags) > 0 && len(r.Categories) == 0 {
+		for _, tag := range recipe.Tags {
+			if tag.DisplayLabel && tag.Name != "" {
+				r.Categories = append(r.Categories, tag.Name)
+			}
+		}
+	}
+
+	if len(recipe.Utensils) > 0 {
+		r.Equipment = make([]*model.HowToTool, 0, len(recipe.Utensils))
+		for _, u := range recipe.Utensils {
+			r.Equipment = append(r.Equipment, &model.HowToTool{Name: u.Name})
+		}
+	}
+
+	if recipe.AggregateRating > 0 && r.Rating == nil {
+		r.Rating = &model.AggregateRating{
+			RatingValue: recipe.AggregateRating,
+			RatingCount: recipe.AggregateRatingsCount,
+		}
+	}
+
+	if len(recipe.Nutrition) > 0 {
+		if r.Nutrition == nil {
+			r.Nutrition = &model.NutritionInformation{}
+		}
+		if recipe.ServingSize > 0 {
+			r.Nutrition.ServingSize = fmt.Sprintf("%d g", recipe.ServingSize)
+		}
+		for _, n := range recipe.Nutrition {
+			val := n.Amount
+			switch n.Type {
+			case "57b42a48b7e8697d4b305304": // calories (kcal)
+				r.Nutrition.Calories = &val
+			case "57b42a48b7e8697d4b305307": // fat
+				r.Nutrition.FatContent = &val
+			case "57b42a48b7e8697d4b305308": // saturated fat
+				r.Nutrition.SaturatedFatContent = &val
+			case "57b42a48b7e8697d4b305305": // carbohydrates
+				r.Nutrition.CarbohydrateContent = &val
+			case "57b42a48b7e8697d4b305306": // sugar
+				r.Nutrition.SugarContent = &val
+			case "57b42a48b7e8697d4b30530a": // fiber
+				r.Nutrition.FiberContent = &val
+			case "57b42a48b7e8697d4b305309": // protein
+				r.Nutrition.ProteinContent = &val
+			case "57b42a48b7e8697d4b30530b": // salt (g) — HelloFresh mislabels this as sodiumContent in JSON-LD
+				r.Nutrition.SaltContent = &val
+				r.Nutrition.SodiumContent = nil
+			case "652d4d58ce1a3c29bd168c82": // potassium (mg)
+				r.Nutrition.PotassiumContent = &val
+			case "652d4d6bce1a3c29bd168c84": // calcium (mg)
+				r.Nutrition.CalciumContent = &val
+			case "652d4d7bce1a3c29bd168c86": // iron (mg)
+				r.Nutrition.IronContent = &val
+			}
+		}
+	}
+
+	if recipe.CardLink != "" {
+		r.Links = append(r.Links, recipe.CardLink)
+	}
+
+	if !recipe.CreatedAt.IsZero() && r.DatePublished == nil {
+		r.DatePublished = &recipe.CreatedAt
+	}
+	if !recipe.UpdatedAt.IsZero() && r.DateModified == nil {
+		r.DateModified = &recipe.UpdatedAt
+	}
 
 	if len(recipe.Steps) > 0 {
 		r.Instructions = make([]*model.HowToSection, 0, len(recipe.Steps))
@@ -242,11 +331,33 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 		}
 	}
 
+	if len(recipe.Cuisines) > 0 && len(r.Cuisines) == 0 {
+		// cuisines can be a plain string, []string, or []{"name":...} objects
+		var strVal string
+		var strSlice []string
+		var objSlice []struct {
+			Name string `json:"name"`
+		}
+		if json.Unmarshal(recipe.Cuisines, &strVal) == nil {
+			r.Cuisines = []string{strVal}
+		} else if json.Unmarshal(recipe.Cuisines, &strSlice) == nil {
+			r.Cuisines = strSlice
+		} else if json.Unmarshal(recipe.Cuisines, &objSlice) == nil {
+			for _, c := range objSlice {
+				if c.Name != "" {
+					r.Cuisines = append(r.Cuisines, c.Name)
+				}
+			}
+		}
+	}
+
 	if len(recipe.Ingredients) > 0 {
 		r.Ingredients = make([]*model.PropertyValue, 0, len(recipe.Ingredients))
 		for _, ing := range recipe.Ingredients {
 			propValue := &model.PropertyValue{}
 			propValue.Name = utils.CleanupInline(ing.Name)
+			propValue.Category = ing.Type
+			propValue.Pantry = !ing.Shipped
 
 			if ing.ImagePath != "" {
 				propValue.Image = imgBaseUrl + imgIngredientPrefix + ing.ImagePath
@@ -255,13 +366,41 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 			if len(recipe.Yields) > 0 {
 				for _, yieldIng := range recipe.Yields[0].Ingredients {
 					if yieldIng.ID == ing.ID {
-						propValue.Value = fmt.Sprint(yieldIng.Amount)
+						propValue.Value = strconv.FormatFloat(yieldIng.Amount, 'f', -1, 64)
 						propValue.UnitText = yieldIng.Unit
+						if yieldIng.Amount > 0 && yieldIng.Unit != "" {
+							propValue.Description = propValue.Value + " " + yieldIng.Unit + " " + propValue.Name
+						} else if yieldIng.Amount > 0 {
+							propValue.Description = propValue.Value + " " + propValue.Name
+						}
 						break
 					}
 				}
 			}
+
+			for _, a := range ing.AllergensNew {
+				if a.TriggersTracesOf {
+					continue // skip meta-allergen entries
+				}
+				propValue.Allergens = append(propValue.Allergens, &model.Allergen{
+					Name:     a.Name,
+					TracesOf: a.TracesOf,
+				})
+			}
+
 			r.Ingredients = append(r.Ingredients, propValue)
+		}
+	}
+
+	if len(recipe.AllergensNew) > 0 {
+		for _, a := range recipe.AllergensNew {
+			if a.TriggersTracesOf {
+				continue
+			}
+			r.Allergens = append(r.Allergens, &model.Allergen{
+				Name:     a.Name,
+				TracesOf: a.TracesOf,
+			})
 		}
 	}
 

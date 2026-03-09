@@ -23,17 +23,28 @@ type Organization struct {
 	Logo        string `json:"logo,omitempty"`
 }
 
+type Allergen struct {
+	Name        string `json:"name,omitempty"`
+	Description string `json:"description,omitempty"`
+	TracesOf    bool   `json:"tracesOf,omitempty"`
+}
+
 // PropertyValue represents a property-value pair, e.g. an ingredient and its amount https://schema.org/PropertyValue
 type PropertyValue struct {
-	Value         string `json:"value,omitempty"` // The quantitative value of the property, e.g. "2", "1/2", "a pinch"
-	MaxValue      string `json:"maxValue,omitempty"`
-	MinValue      string `json:"minValue,omitempty"`
-	Name          string `json:"name,omitempty"` // The name of the property, e.g. "sugar", "flour", "salt"
-	UnitCode      string `json:"unitCode,omitempty"`
-	UnitText      string `json:"unitText,omitempty"` // The unit of measurement, e.g. "g", "cup", "teaspoon"
-	Image         string `json:"image,omitempty"`
-	Url           string `json:"url,omitempty"`
-	EstimatedCost string `json:"estimatedCost,omitempty"`
+	Value       string `json:"value,omitempty"` // The quantitative value of the property, e.g. "2", "1/2", "a pinch"
+	MaxValue    string `json:"maxValue,omitempty"`
+	MinValue    string `json:"minValue,omitempty"`
+	UnitText    string `json:"unitText,omitempty"` // The unit of measurement, e.g. "g", "cup", "teaspoon"
+	UnitCode    string `json:"unitCode,omitempty"`
+	Name        string `json:"name,omitempty"` // The name of the property, e.g. "sugar", "flour", "salt"
+	Image       string `json:"image,omitempty"`
+	Url         string `json:"url,omitempty"`
+	Description string `json:"description,omitempty"`
+	// extra fields not covered by schema.org
+	Category      string      `json:"category,omitempty"`
+	Pantry        bool        `json:"pantry,omitempty"`
+	EstimatedCost string      `json:"estimatedCost,omitempty"`
+	Allergens     []*Allergen `json:"allergens,omitempty"`
 }
 
 // HowToTool represents a tool used in the instructions https://schema.org/HowToTool
@@ -73,6 +84,11 @@ type NutritionInformation struct {
 	SugarContent          *float64 `json:"sugarContent,omitempty"`          // The number of grams of sugar.
 	TransFatContent       *float64 `json:"transFatContent,omitempty"`       // The number of grams of trans fat.
 	UnsaturatedFatContent *float64 `json:"unsaturatedFatContent,omitempty"` // The number of grams of unsaturated fat.
+	// other minerals commonly found in recipes, not covered by schema.org
+	SaltContent      *float64 `json:"saltContent,omitempty"`      // The number of grams of salt.
+	IronContent      *float64 `json:"ironContent,omitempty"`      // The number of milligrams of iron.
+	PotassiumContent *float64 `json:"potassiumContent,omitempty"` // The number of milligrams of potassium.
+	CalciumContent   *float64 `json:"calciumContent,omitempty"`   // The number of milligrams of calcium.
 }
 
 // AggregateRating represents the average rating based on multiple ratings or reviews https://schema.org/AggregateRating
@@ -134,6 +150,7 @@ type Recipe struct {
 	Video         *VideoObject          `json:"video,omitempty"`
 	Links         []string              `json:"sameAs,omitempty"` // maybe not the cleanest name, but we can store additional links here
 	EstimatedCost string                `json:"estimatedCost,omitempty"`
+	Allergens     []*Allergen           `json:"allergens,omitempty"` // not a part of Recipe schema
 	DateModified  *time.Time            `json:"dateModified,omitempty"`
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
 }
