@@ -2,12 +2,20 @@ package model
 
 import (
 	"context"
+	"io"
 	"net/http"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astappiev/microdata"
 	"golang.org/x/net/html"
 )
+
+// HTTPClient is an interface that allows http.Client or safeurl.Client to be used interchangeably.
+type HTTPClient interface {
+	Do(req *http.Request) (*http.Response, error)
+	Get(url string) (*http.Response, error)
+	Post(url, contentType string, body io.Reader) (*http.Response, error)
+}
 
 // RequestOptions holds reusable HTTP configuration for all requests in a scrape session.
 type RequestOptions struct {
@@ -16,7 +24,7 @@ type RequestOptions struct {
 	// Headers to merge with defaults. Custom values take priority.
 	Headers http.Header
 	// HttpClient to use. If nil, a default 30s-timeout client is used.
-	HttpClient *http.Client
+	HttpClient HTTPClient
 }
 
 // ScrapeOptions options for scraping a recipe
