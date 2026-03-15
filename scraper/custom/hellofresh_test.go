@@ -14,7 +14,7 @@ func TestHelloFreshOnline(t *testing.T) {
 	}
 
 	var website = "https://www.hellofresh.de/recipes/gnocchi-salat-mit-selbst-gemachtem-caesar-dressing-65144891aab557d393d8c000"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())
@@ -26,7 +26,7 @@ func TestHelloFreshFeedOnline(t *testing.T) {
 	}
 
 	var website = "https://www.hellofresh.de/menus"
-	feed, err := krip.ScrapeFeedUrl(website)
+	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{})
 	assert.NoError(t, err)
 	assert.NotNil(t, feed)
 

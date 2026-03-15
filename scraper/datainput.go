@@ -17,7 +17,7 @@ import (
 	"github.com/borschtapp/krip/utils"
 )
 
-func FileInput(fileName string, options model.InputOptions) (*model.DataInput, error) {
+func FileInput(fileName string, options model.ScrapeOptions) (*model.DataInput, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, fmt.Errorf("unable to read the file: %w", err)
@@ -43,19 +43,18 @@ func FileInput(fileName string, options model.InputOptions) (*model.DataInput, e
 		}
 
 		input.Text = string(content)
+		input.RequestOptions = options.RequestOptions
 		return input, nil
 	}
 
 	return &model.DataInput{
-		Text: string(content),
+		Text:           string(content),
+		RequestOptions: options.RequestOptions,
 	}, nil
 }
 
-func UrlInput(url string) (*model.DataInput, error) {
-	resp, respUrl, err := utils.ReadUrl(url, map[string][]string{
-		"Referer":    {"https://www.google.com/"},
-		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"},
-	})
+func UrlInput(url string, options model.ScrapeOptions) (*model.DataInput, error) {
+	resp, respUrl, err := utils.ExecuteRequest(utils.RequestConfig{URL: url}, options.RequestOptions)
 	if err != nil {
 		return nil, err
 	}
@@ -65,19 +64,20 @@ func UrlInput(url string) (*model.DataInput, error) {
 		return nil, fmt.Errorf("unable to parse html tree: %w", err)
 	}
 
-	input, err := NodeInput(root, respUrl.String(), model.InputOptions{SkipUrl: true})
+	input, err := NodeInput(root, respUrl.String(), model.ScrapeOptions{SkipMetaUrl: true})
 	if err != nil {
 		return nil, err
 	}
 
 	input.Text = string(resp)
+	input.RequestOptions = options.RequestOptions
 	return input, nil
 }
 
-func NodeInput(root *html.Node, url string, options model.InputOptions) (*model.DataInput, error) {
+func NodeInput(root *html.Node, url string, options model.ScrapeOptions) (*model.DataInput, error) {
 	doc := goquery.NewDocumentFromNode(root)
 
-	if !options.SkipUrl { // if we read the page from a file, we need to retrieve a url
+	if !options.SkipMetaUrl { // if we read the page from a file, we need to retrieve a url
 		if val, ok := doc.Find("link[rel='canonical']").Attr("href"); ok && utils.IsAbsolute(val) {
 			url = val
 		} else if val, ok := doc.Find("meta[property='og:url']").Attr("content"); ok && utils.IsAbsolute(val) {
@@ -89,7 +89,7 @@ func NodeInput(root *html.Node, url string, options model.InputOptions) (*model.
 
 	var err error
 	var schemas *microdata.Microdata
-	if !options.SkipSchema {
+	if !options.SkipMicrodata {
 		schemas, err = microdata.ParseNode(root, url)
 		if err != nil {
 			log.Println("unable to parse microdata on the page: " + err.Error())

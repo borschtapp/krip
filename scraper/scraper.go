@@ -72,12 +72,7 @@ func normalizeRecipe(r *model.Recipe) {
 	}
 }
 
-func ScrapeFeed(data *model.DataInput, opts ...model.FeedOptions) (*model.Feed, error) {
-	var opt model.FeedOptions
-	if len(opts) > 0 {
-		opt = opts[0]
-	}
-
+func ScrapeFeed(data *model.DataInput, options model.FeedOptions) (*model.Feed, error) {
 	feed := &model.Feed{
 		Url: data.Url,
 	}
@@ -86,13 +81,13 @@ func ScrapeFeed(data *model.DataInput, opts ...model.FeedOptions) (*model.Feed, 
 		return nil, err
 	}
 
-	if !opt.Quick {
+	if !options.Quick {
 		for _, entry := range feed.Entries {
 			if len(entry.Url) == 0 {
 				continue
 			}
 
-			input, err := UrlInput(entry.Url)
+			input, err := UrlInput(entry.Url, options.ScrapeOptions)
 			if err != nil {
 				continue
 			}
@@ -102,7 +97,7 @@ func ScrapeFeed(data *model.DataInput, opts ...model.FeedOptions) (*model.Feed, 
 		}
 	}
 
-	feed.Entries = filterEntries(feed.Entries, opt)
+	feed.Entries = filterEntries(feed.Entries, options)
 	return feed, nil
 }
 

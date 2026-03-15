@@ -24,13 +24,13 @@ func main() {
 		targetUrl := flag.Args()[0]
 
 		if *feedFlag {
-			feed, err := krip.ScrapeFeedUrl(targetUrl)
+			feed, err := krip.ScrapeFeedUrl(targetUrl, krip.FeedOptions{})
 			if err != nil {
 				log.Fatal("Unable to scrape feed: " + err.Error())
 			}
 			fmt.Println(feed)
 		} else {
-			recipe, err := krip.ScrapeUrl(targetUrl)
+			recipe, err := krip.ScrapeUrl(targetUrl, krip.ScrapeOptions{})
 			if err != nil {
 				log.Fatal("Unable to scrape target: " + err.Error())
 			}

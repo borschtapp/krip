@@ -13,7 +13,7 @@ func TestKitchenStoriesOnline(t *testing.T) {
 	}
 
 	var website = "https://www.kitchenstories.com/de/rezepte/pochierter-kabeljau-in-tomatensosse"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())

@@ -27,7 +27,7 @@ func scrapeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	recipe, err := krip.ScrapeUrl(q.Get("url"))
+	recipe, err := krip.ScrapeUrl(q.Get("url"), krip.ScrapeOptions{})
 	if err != nil {
 		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
 		return
@@ -50,7 +50,7 @@ func feedHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	feed, err := krip.ScrapeFeedUrl(q.Get("url"))
+	feed, err := krip.ScrapeFeedUrl(q.Get("url"), krip.FeedOptions{})
 	if err != nil {
 		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
 		return

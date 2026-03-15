@@ -14,6 +14,7 @@ func RegisterFeedScraper(hostname string, fn model.FeedScraper) {
 	custom.RegisterFeedScraper(hostname, fn)
 }
 
+// Scrape scrapes a recipe from the input
 func Scrape(input *model.DataInput) (*model.Recipe, error) {
 	recipe := &model.Recipe{}
 	if err := scraper.Scrape(input, recipe); err != nil {
@@ -23,8 +24,8 @@ func Scrape(input *model.DataInput) (*model.Recipe, error) {
 }
 
 // ScrapeFile reads content and scrapes a recipe from the file
-func ScrapeFile(fileName string) (*model.Recipe, error) {
-	input, err := scraper.FileInput(fileName, model.InputOptions{})
+func ScrapeFile(fileName string, options model.ScrapeOptions) (*model.Recipe, error) {
+	input, err := scraper.FileInput(fileName, options)
 	if err != nil {
 		return nil, err
 	}
@@ -33,8 +34,8 @@ func ScrapeFile(fileName string) (*model.Recipe, error) {
 }
 
 // ScrapeUrl retrieves and scrapes a recipe from the url
-func ScrapeUrl(url string) (*model.Recipe, error) {
-	input, err := scraper.UrlInput(url)
+func ScrapeUrl(url string, options model.ScrapeOptions) (*model.Recipe, error) {
+	input, err := scraper.UrlInput(url, options)
 	if err != nil {
 		return nil, err
 	}
@@ -43,18 +44,18 @@ func ScrapeUrl(url string) (*model.Recipe, error) {
 }
 
 // ScrapeFeed scrapes a feed of recipes from the input
-func ScrapeFeed(input *model.DataInput, opts ...model.FeedOptions) (*model.Feed, error) {
-	return scraper.ScrapeFeed(input, opts...)
+func ScrapeFeed(input *model.DataInput, options model.FeedOptions) (*model.Feed, error) {
+	return scraper.ScrapeFeed(input, options)
 }
 
 // ScrapeFeedUrl retrieves and scrapes a feed of recipes from the url
-func ScrapeFeedUrl(url string, opts ...model.FeedOptions) (*model.Feed, error) {
-	input, err := scraper.UrlInput(url)
+func ScrapeFeedUrl(url string, options model.FeedOptions) (*model.Feed, error) {
+	input, err := scraper.UrlInput(url, options.ScrapeOptions)
 	if err != nil {
 		return nil, err
 	}
 
-	return ScrapeFeed(input, opts...)
+	return ScrapeFeed(input, options)
 }
 
 // Exported types below
@@ -72,8 +73,9 @@ type VideoObject = model.VideoObject
 type Recipe = model.Recipe
 type Feed = model.Feed
 
-type InputOptions = model.InputOptions
-type DataInput = model.DataInput
+type RequestOptions = model.RequestOptions
+type ScrapeOptions = model.ScrapeOptions
 type FeedOptions = model.FeedOptions
+type DataInput = model.DataInput
 type Scraper = model.Scraper
 type FeedScraper = model.FeedScraper

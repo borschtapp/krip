@@ -3,9 +3,7 @@ package custom
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"fmt"
-	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -188,44 +186,26 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	parts := strings.Split(u.Path, "/")
 	recipeId := parts[len(parts)-1]
 
-	jsonBody := []byte(`[{"uid": "` + recipeId + `"}]`)
-	bodyReader := bytes.NewReader(jsonBody)
-
-	client := http.Client{}
-	req, err := http.NewRequest("POST", "https://mobile.kptncook.com/recipes/search?kptnkey="+kptnKey+"&lang="+r.Language, bodyReader)
+	resp, _, err := utils.ExecuteRequest(utils.RequestConfig{
+		Method: "POST",
+		URL:    "https://mobile.kptncook.com/recipes/search?kptnkey=" + kptnKey + "&lang=" + r.Language,
+		Body:   bytes.NewReader([]byte(`[{"uid": "` + recipeId + `"}]`)),
+		Headers: http.Header{
+			"Content-Type": []string{"application/json"},
+			"Accept":       []string{"application/json"},
+		},
+	}, data.RequestOptions)
 	if err != nil {
-		return fmt.Errorf("could not create request: %w", err)
+		return err
 	}
 
-	req.Header = map[string][]string{
-		"Content-Type": {"application/json"},
-		"Accept":       {"application/json"},
-		"User-Agent":   {"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"},
-	}
-	res, err := client.Do(req)
-	if err != nil {
-		return fmt.Errorf("could not send request: %w", err)
+	var kptnData []KptnCookRecipe
+	if err := json.Unmarshal(resp, &kptnData); err != nil {
+		return err
 	}
 
-	if res.Body != nil {
-		defer res.Body.Close()
-		body, readErr := io.ReadAll(res.Body)
-		if readErr != nil {
-			return errors.New("could not read response body: " + readErr.Error())
-		}
-
-		if res.StatusCode != 200 {
-			return errors.New("invalid status " + res.Status + ": " + string(body))
-		}
-
-		var kptnData []KptnCookRecipe
-		if err := json.Unmarshal(body, &kptnData); err != nil {
-			return err
-		}
-
-		if err := parseKptnData(&kptnData[0], r); err != nil {
-			return err
-		}
+	if err := parseKptnData(&kptnData[0], r); err != nil {
+		return err
 	}
 
 	return nil

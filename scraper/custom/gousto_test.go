@@ -13,7 +13,7 @@ func TestGoustoOnline(t *testing.T) {
 	}
 
 	var website = "https://www.gousto.co.uk/cookbook/beef-recipes/simply-perfect-beef-spag-bol"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())

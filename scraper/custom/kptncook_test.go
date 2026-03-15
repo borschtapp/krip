@@ -13,7 +13,7 @@ func TestKptnCookOnline(t *testing.T) {
 	}
 
 	var website = "https://mobile.kptncook.com/recipe/pinterest/Low-Carb-Flammkuchen%20mit%20Serranoschinken%20&amp;%20Frischk%C3%A4se/315c3c32"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())

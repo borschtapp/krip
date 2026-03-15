@@ -10,7 +10,7 @@ func TestOnlineUrl(t *testing.T) {
 	t.Skip("Just an example of Url scraping")
 
 	var website = "https://www.thepioneerwoman.com/food-cooking/recipes/a11059/restaurant-style-salsa/"
-	recipe, err := ScrapeUrl(website)
+	recipe, err := ScrapeUrl(website, ScrapeOptions{})
 	assert.NoError(t, err)
 
 	assert.NotEmpty(t, recipe.Url)

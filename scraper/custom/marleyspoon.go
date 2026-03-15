@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 	"net/url"
 	"regexp"
 	"strings"
@@ -103,20 +104,23 @@ func ScrapeMarleySpoon(data *model.DataInput, r *model.Recipe) error {
 			return err
 		}
 
-		body, _, err := utils.ReadUrl(apiUrl, map[string][]string{
-			"Accept":        {"application/json"},
-			"Authorization": {apiToken},
-		})
+		body, _, err := utils.ExecuteRequest(utils.RequestConfig{
+			URL: apiUrl,
+			Headers: http.Header{
+				"Accept":        []string{"application/json"},
+				"Authorization": []string{apiToken},
+			},
+		}, data.RequestOptions)
 		if err != nil {
 			return err
 		}
 
-		data := MarleySpoonData{}
-		if err := json.Unmarshal(body, &data); err != nil {
+		marleySpoonData := MarleySpoonData{}
+		if err := json.Unmarshal(body, &marleySpoonData); err != nil {
 			return err
 		}
 
-		if err := parseData(&data, r); err != nil {
+		if err := parseData(&marleySpoonData, r); err != nil {
 			return err
 		}
 	}

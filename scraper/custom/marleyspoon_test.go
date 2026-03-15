@@ -17,7 +17,7 @@ func TestMarleySpoonOnline(t *testing.T) {
 	}
 
 	var website = "https://marleyspoon.de/menu/516754-vegetarisches-bibimbap-mit-spiegelei-und-kimchi"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())

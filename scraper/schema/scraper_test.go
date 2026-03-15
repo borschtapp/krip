@@ -65,7 +65,7 @@ func TestSchemaOnline(t *testing.T) {
 	}
 
 	var website = "https://www.hellofresh.com/recipes/rapid-stir-fried-beef-5845b40b2e69d7259304d962"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())
@@ -77,7 +77,7 @@ func TestSchemaFeedOnline(t *testing.T) {
 	}
 
 	var website = "https://foodnetwork.co.uk/collections/air-fryer-recipes"
-	feed, err := krip.ScrapeFeedUrl(website)
+	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{})
 	assert.NoError(t, err)
 	assert.NotNil(t, feed)
 

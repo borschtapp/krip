@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 	"net/url"
 	"strings"
 	"time"
@@ -127,10 +128,12 @@ func ScrapeGousto(data *model.DataInput, r *model.Recipe) error {
 	parts := strings.Split(u.Path, "/")
 	recipeId := parts[len(parts)-1]
 
-	body, _, err := utils.ReadUrl("https://production-api.gousto.co.uk/cmsreadbroker/v1/recipe/"+recipeId, map[string][]string{
-		"Accept":     {"application/json"},
-		"User-Agent": {"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"},
-	})
+	body, _, err := utils.ExecuteRequest(utils.RequestConfig{
+		URL: "https://production-api.gousto.co.uk/cmsreadbroker/v1/recipe/" + recipeId,
+		Headers: http.Header{
+			"Accept": []string{"application/json"},
+		},
+	}, data.RequestOptions)
 	if err != nil {
 		return err
 	}

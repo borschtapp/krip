@@ -13,7 +13,7 @@ func TestGitMenCookOnline(t *testing.T) {
 	}
 
 	var website = "https://fitmencook.com/recipes/healthy-chili-recipe/"
-	recipe, err := krip.ScrapeUrl(website)
+	recipe, err := krip.ScrapeUrl(website, krip.ScrapeOptions{})
 	assert.NoError(t, err)
 	assert.True(t, recipe.IsValid())
 	t.Log(recipe.String())
