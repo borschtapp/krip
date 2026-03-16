@@ -201,8 +201,26 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 
 	if values, ok := recipeSchema.GetProperties("tool", "recipeEquipment"); ok {
 		for _, val := range values {
-			if val, ok := getStringOrChild(val, "name"); ok {
-				r.Equipment = append(r.Equipment, &model.HowToTool{Name: val})
+			if text, item := getStringOrItem(val); len(text) != 0 {
+				r.Equipment = append(r.Equipment, &model.HowToTool{Name: text})
+			} else if item != nil {
+				tool := &model.HowToTool{}
+				if val, ok := getPropertyString(item, "name", "item"); ok {
+					tool.Name = val
+				}
+				if val, ok := getPropertyString(item, "description", "Description"); ok {
+					tool.Description = val
+				}
+				if val, ok := getPropertyString(item, "url", "Url"); ok {
+					tool.Url = val
+				}
+				if val, ok := getPropertyString(item, "image", "Image"); ok {
+					tool.Image = val
+				}
+				if val, ok := getPropertyString(item, "requiredQuantity", "amount", "value"); ok {
+					tool.Quantity = val
+				}
+				r.Equipment = append(r.Equipment, tool)
 			}
 		}
 	}

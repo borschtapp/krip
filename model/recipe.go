@@ -49,10 +49,11 @@ type PropertyValue struct {
 
 // HowToTool represents a tool used in the instructions https://schema.org/HowToTool
 type HowToTool struct {
-	Name     string `json:"name,omitempty"`
-	Url      string `json:"url,omitempty"`
-	Image    string `json:"image,omitempty"`
-	Quantity string `json:"requiredQuantity,omitempty"`
+	Name        string `json:"name,omitempty"`
+	Description string `json:"description,omitempty"`
+	Url         string `json:"url,omitempty"`
+	Image       string `json:"image,omitempty"`
+	Quantity    string `json:"requiredQuantity,omitempty"`
 }
 
 // HowToStep a step in the instructions https://schema.org/HowToStep
