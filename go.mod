@@ -5,7 +5,7 @@ go 1.26.0
 retract [v1.0.0, v1.3.9] // broken semver, minor versions includes breaking changes
 
 require (
-	github.com/PuerkitoBio/goquery v1.11.0
+	github.com/PuerkitoBio/goquery v1.12.0
 	github.com/astappiev/microdata v1.0.2
 	github.com/microcosm-cc/bluemonday v1.0.27
 	github.com/mmcdole/gofeed v1.3.0
