@@ -1,6 +1,10 @@
 # IDE settings
 .idea
 .vscode
+.agents
+.claude
+AGENTS.md
+CLAUDE.md
 
 # Binaries for programs and plugins
 *.exe

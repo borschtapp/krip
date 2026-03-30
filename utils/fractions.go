@@ -35,6 +35,7 @@ func ParseFraction(str string) (float64, error) {
 
 	str = strings.TrimSpace(str)
 	if strings.Contains(str, "/") {
+		original := str
 		intSplit := strings.Split(str, " ")
 		str = ""
 		frac := intSplit[0]
@@ -42,13 +43,16 @@ func ParseFraction(str string) (float64, error) {
 			str = intSplit[0]
 			frac = intSplit[1]
 		} else if len(intSplit) > 2 {
-			return 0, fmt.Errorf("unable to parse fractions from string `%s`: too many spaces", str)
+			return 0, fmt.Errorf("unable to parse fractions from string `%s`: too many spaces", original)
 		}
 
 		arr := strings.Split(frac, "/")
 		if len(arr) == 2 {
-			if num, err := strconv.ParseFloat(arr[0], 32); err == nil {
-				if den, err := strconv.ParseFloat(arr[1], 32); err == nil {
+			if num, err := strconv.ParseFloat(arr[0], 64); err == nil {
+				if den, err := strconv.ParseFloat(arr[1], 64); err == nil {
+					if den == 0 {
+						return 0, fmt.Errorf("unable to parse fractions from string `%s`: division by zero", original)
+					}
 					res += num / den
 				} else {
 					return 0, fmt.Errorf("unable to parse fractions from string `%s`: %w", str, err)

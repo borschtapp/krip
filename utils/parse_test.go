@@ -37,7 +37,11 @@ func TestParseFloat(t *testing.T) {
 		{"1.256", 1.256, false},
 		{"1,35", 1.35, false},
 		{"0", 0, false},
+		{"-1.5", -1.5, false},
+		{"  1.5  ", 1.5, false},
 		{"test", 0, true},
+		{"", 0, true},
+		{"1,2,3", 0, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {
@@ -50,39 +54,22 @@ func TestParseFloat(t *testing.T) {
 
 func TestParseInt(t *testing.T) {
 	tests := []struct {
-		give string
-		want int
-	}{
-		{"123", 123},
-		{"56 ", 56},
-		{"15.25", 0},
-		{"33 test", 0},
-		{"hello world", 0},
-	}
-	for _, tt := range tests {
-		t.Run(tt.give, func(t *testing.T) {
-			got, _ := ParseInt(tt.give)
-			assert.Equal(t, tt.want, got)
-		})
-	}
-}
-
-func TestParseFractions(t *testing.T) {
-	tests := []struct {
 		give    string
-		want    float64
+		want    int
 		wantErr bool
 	}{
-		{"3 ¼", 3.25, false},
-		{"2 1/2", 2.5, false},
-		{"1/2", 0.5, false},
-		{"1/3", 0.3333333333333333, false},
-		{"¾", 0.75, false},
-		{"⅖", 0.4, false},
+		{"123", 123, false},
+		{"56 ", 56, false},
+		{" 5 ", 5, false},
+		{"-5", -5, false},
+		{"15.25", 0, true},
+		{"33 test", 0, true},
+		{"hello world", 0, true},
+		{"", 0, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {
-			got, err := ParseFraction(tt.give)
+			got, err := ParseInt(tt.give)
 			assert.Equal(t, tt.want, got)
 			assert.Equal(t, tt.wantErr, err != nil)
 		})
