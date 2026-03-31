@@ -4,14 +4,16 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestOnlineUrl(t *testing.T) {
-	t.Skip("Just an example of Url scraping")
-
+	if testing.Short() {
+		t.Skip("skipping online test in short mode")
+	}
 	var website = "https://www.thepioneerwoman.com/food-cooking/recipes/a11059/restaurant-style-salsa/"
 	recipe, err := ScrapeUrl(website, ScrapeOptions{})
-	assert.NoError(t, err)
+	require.NoError(t, err)
 
 	assert.NotEmpty(t, recipe.Url)
 	assert.NotEmpty(t, recipe.Name)

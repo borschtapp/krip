@@ -9,6 +9,7 @@ import (
 )
 
 func IsAbsolute(urlStr string) bool {
+	urlStr = strings.TrimSpace(urlStr)
 	u, err := url.Parse(urlStr)
 	if err != nil {
 		fmt.Println("Malformed url:", err)
@@ -23,6 +24,7 @@ func IsAbsolute(urlStr string) bool {
 }
 
 func ToAbsoluteUrl(base *url.URL, urlStr string) string {
+	urlStr = strings.TrimSpace(urlStr)
 	if len(urlStr) == 0 || base == nil {
 		return ""
 	}
