@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"fmt"
+	"log"
 	"net/url"
 	"strings"
 
@@ -12,7 +12,7 @@ func IsAbsolute(urlStr string) bool {
 	urlStr = strings.TrimSpace(urlStr)
 	u, err := url.Parse(urlStr)
 	if err != nil {
-		fmt.Println("Malformed url:", err)
+		log.Println("Malformed url:", err)
 		return false
 	}
 
@@ -31,7 +31,7 @@ func ToAbsoluteUrl(base *url.URL, urlStr string) string {
 
 	u, err := url.Parse(urlStr)
 	if err != nil {
-		fmt.Println("Error parsing url:", err)
+		log.Println("Error parsing url:", err)
 		return ""
 	}
 
@@ -81,6 +81,14 @@ func DomainZone(urlStr string) string {
 
 	hostParts := strings.Split(strings.ToLower(u.Hostname()), ".")
 	return hostParts[len(hostParts)-1]
+}
+
+func UrlMatchesPathPattern(rawUrl, pattern string) bool {
+	u, err := url.Parse(rawUrl)
+	if err != nil {
+		return false
+	}
+	return strings.HasPrefix(u.Path, pattern)
 }
 
 func HostAlias(urlStr string) string {

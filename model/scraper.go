@@ -27,28 +27,56 @@ type RequestOptions struct {
 	HttpClient HTTPClient
 }
 
+// RecipeFilter holds optional criteria for filtering recipes beyond basic validity.
+type RecipeFilter struct {
+	// Whether to accept recipes without images.
+	OptionalImage bool
+	// Whether to accept recipes without a publisher.
+	OptionalPublisher bool
+	// Whether to accept recipes without ingredients.
+	OptionalIngredients bool
+	// When set, recipes with fewer than these many ingredients are rejected.
+	// Useful to skip prepared/frozen food recipes, which usually have very few ingredients.
+	MinIngredients int
+	// Whether to accept recipes without instructions.
+	OptionalInstructions bool
+}
+
 // ScrapeOptions options for scraping a recipe
 type ScrapeOptions struct {
 	RequestOptions
+	RecipeFilter
 
 	// When true, skip scraping the URL from meta tags and rely on the input URL.
 	SkipMetaUrl bool
 	// When true, skip parsing microdata and rely on other sources. It is a main source of data.
 	SkipMicrodata bool
+	// When true, skip parsing schemas and rely on other sources.
+	SkipSchemaScraper bool
+	// When true, skip parsing opengraph and rely on other sources.
+	SkipOpenGraphScraper bool
+	// When true, skip parsing custom scrapers and rely on other sources.
+	SkipCustomScrapers bool
 }
 
 // FeedOptions options for feed scraping
 type FeedOptions struct {
 	ScrapeOptions
 
-	// When true, only the feed will be scraped, without scraping each entry's url
-	Quick bool
-	// Filter out recipes with fewer than this number of ingredients (0 = no filter)
-	MinIngredients int
-	// When true, filter out recipes without an image
-	RequireImage bool
-	// When true, filter out recipes without instructions
-	RequireInstructions bool
+	// When true, skip parsing feed meta tags and rely on other sources.
+	SkipFeedMeta bool
+	// When true, skip parsing RSS feeds and rely on other sources.
+	SkipRSSScraper bool
+	// When true, only the feed will be scraped without scraping each entry separately. Useful for quick runs.
+	SkipEntriesScrape bool
+	// When true, skip the universal discovery strategy.
+	SkipDiscoveryScraper bool
+	// AllowDiscoverySampling fetches 2–3 candidate URLs to confirm they are recipe pages.
+	// Disabled by default; enabling adds extra HTTP requests but validates low-confidence results.
+	AllowDiscoverySampling bool
+	// Discovered, if non-nil, skips discovery and reuses previously discovered container/feed.
+	// Populate from a previously returned Feed.Discovered value.
+	Discovered *DiscoveredFeed
 }
 
 // DataInput represents the input data for the scraper

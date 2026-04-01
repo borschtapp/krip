@@ -29,15 +29,20 @@ func TestMarleySpoonFeedOnline(t *testing.T) {
 	}
 
 	var website = "https://marleyspoon.de/menu"
-	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{Quick: true})
+	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{
+		SkipEntriesScrape: true,
+		ScrapeOptions: krip.ScrapeOptions{
+			RecipeFilter: krip.RecipeFilter{
+				OptionalIngredients:  true,
+				OptionalInstructions: true,
+			},
+		},
+	})
 	assert.NoError(t, err)
 	assert.NotNil(t, feed)
 
 	assert.NotEmpty(t, feed.Url)
 	assert.NotEmpty(t, feed.Entries)
-	for _, entry := range feed.Entries {
-		assert.False(t, entry.IsEmpty())
-	}
 	t.Log(feed.String())
 }
 

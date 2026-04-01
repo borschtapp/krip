@@ -2,6 +2,7 @@ package schema
 
 import (
 	"fmt"
+	"log"
 	"net/url"
 	"time"
 
@@ -90,7 +91,7 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 		case float64:
 			r.Yield = fmt.Sprint(v)
 		default:
-			fmt.Println("unable to parse recipeYield: ", fmt.Sprint(v))
+			log.Println("unable to parse recipeYield: ", fmt.Sprint(v))
 		}
 	}
 
@@ -253,7 +254,7 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 					}
 				}
 			} else {
-				fmt.Println("unknown instruction type: ", fmt.Sprint(item.Types))
+				log.Println("unknown instruction type: ", fmt.Sprint(item.Types))
 			}
 		}
 	} else if values, ok := getPropertiesArray(recipeSchema, "recipeInstructions", "instructions"); ok {

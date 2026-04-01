@@ -2,6 +2,7 @@ package model
 
 import (
 	"encoding/json"
+	"fmt"
 	"time"
 )
 
@@ -161,6 +162,10 @@ func (r *Recipe) AddImageUrl(imageUrl string) {
 }
 
 func (r *Recipe) AddImage(image *ImageObject) {
+	if len(image.Url) == 0 {
+		return
+	}
+
 	for _, vs := range r.Images { // check if already exists
 		if image.Url == vs.Url {
 			if image.Width > 0 {
@@ -179,28 +184,36 @@ func (r *Recipe) AddImage(image *ImageObject) {
 	r.Images = append(r.Images, image)
 }
 
-func (r *Recipe) IsEmpty() bool {
-	return len(r.Name) == 0 || len(r.Url) == 0
+func (r *Recipe) IsValid() bool {
+	return r.Validate(RecipeFilter{}) == nil
 }
 
-func (r *Recipe) IsValid() bool {
-	if r.IsEmpty() {
-		return false
+func (r *Recipe) Validate(filter RecipeFilter) error {
+	if len(r.Name) == 0 || len(r.Url) == 0 {
+		return fmt.Errorf("recipe has no name or url")
 	}
 
-	if len(r.Ingredients) == 0 {
-		return false
+	if !filter.OptionalImage && len(r.Images) == 0 {
+		return fmt.Errorf("recipe has no images")
 	}
 
-	if len(r.Instructions) == 0 {
-		return false
+	if !filter.OptionalPublisher && (r.Publisher == nil || len(r.Publisher.Name) == 0) {
+		return fmt.Errorf("recipe has no publisher")
 	}
 
-	if r.Publisher == nil || len(r.Publisher.Name) == 0 {
-		return false
+	if !filter.OptionalIngredients && len(r.Ingredients) == 0 {
+		return fmt.Errorf("recipe has no ingredients")
 	}
 
-	return true
+	if filter.MinIngredients > 0 && len(r.Ingredients) < filter.MinIngredients {
+		return fmt.Errorf("recipe has too few ingredients (%d < %d)", len(r.Ingredients), filter.MinIngredients)
+	}
+
+	if !filter.OptionalInstructions && len(r.Instructions) == 0 {
+		return fmt.Errorf("recipe has no instructions")
+	}
+
+	return nil
 }
 
 func (r *Recipe) String() string {

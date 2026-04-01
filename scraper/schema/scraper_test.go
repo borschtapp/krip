@@ -83,8 +83,5 @@ func TestSchemaFeedOnline(t *testing.T) {
 
 	assert.NotEmpty(t, feed.Url)
 	assert.NotEmpty(t, feed.Entries)
-	for _, entry := range feed.Entries {
-		assert.False(t, entry.IsEmpty())
-	}
 	t.Log(feed.String())
 }

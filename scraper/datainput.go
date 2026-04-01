@@ -22,7 +22,9 @@ func FileInput(fileName string, options model.ScrapeOptions) (*model.DataInput, 
 	if err != nil {
 		return nil, fmt.Errorf("unable to read the file: %w", err)
 	}
-	defer file.Close()
+	defer func() {
+		_ = file.Close()
+	}()
 
 	content, err := io.ReadAll(file)
 	if err != nil {

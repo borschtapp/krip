@@ -22,3 +22,16 @@ func TestOnlineUrl(t *testing.T) {
 	assert.NotEmpty(t, recipe.Instructions)
 	assert.NotEmpty(t, recipe.Publisher)
 }
+
+func TestFeedOnline(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping online test in short mode")
+	}
+	var website = "https://klopotenko.com"
+	feed, err := ScrapeFeedUrl(website, FeedOptions{})
+	require.NoError(t, err)
+
+	assert.NotEmpty(t, feed.Url)
+	assert.NotEmpty(t, feed.Publisher)
+	assert.NotEmpty(t, feed.Entries)
+}

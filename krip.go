@@ -15,9 +15,9 @@ func RegisterFeedScraper(hostname string, fn model.FeedScraper) {
 }
 
 // Scrape scrapes a recipe from the input
-func Scrape(input *model.DataInput) (*model.Recipe, error) {
+func Scrape(input *model.DataInput, options model.ScrapeOptions) (*model.Recipe, error) {
 	recipe := &model.Recipe{}
-	if err := scraper.Scrape(input, recipe); err != nil {
+	if err := scraper.Scrape(input, recipe, options); err != nil {
 		return nil, err
 	}
 	return recipe, nil
@@ -25,37 +25,41 @@ func Scrape(input *model.DataInput) (*model.Recipe, error) {
 
 // ScrapeFile reads content and scrapes a recipe from the file
 func ScrapeFile(fileName string, options model.ScrapeOptions) (*model.Recipe, error) {
-	input, err := scraper.FileInput(fileName, options)
+	dataInput, err := scraper.FileInput(fileName, options)
 	if err != nil {
 		return nil, err
 	}
 
-	return Scrape(input)
+	return Scrape(dataInput, options)
 }
 
 // ScrapeUrl retrieves and scrapes a recipe from the url
 func ScrapeUrl(url string, options model.ScrapeOptions) (*model.Recipe, error) {
-	input, err := scraper.UrlInput(url, options)
+	dataInput, err := scraper.UrlInput(url, options)
 	if err != nil {
 		return nil, err
 	}
 
-	return Scrape(input)
+	return Scrape(dataInput, options)
 }
 
 // ScrapeFeed scrapes a feed of recipes from the input
 func ScrapeFeed(input *model.DataInput, options model.FeedOptions) (*model.Feed, error) {
-	return scraper.ScrapeFeed(input, options)
+	feed := &model.Feed{}
+	if err := scraper.ScrapeFeed(input, feed, options); err != nil {
+		return nil, err
+	}
+	return feed, nil
 }
 
 // ScrapeFeedUrl retrieves and scrapes a feed of recipes from the url
 func ScrapeFeedUrl(url string, options model.FeedOptions) (*model.Feed, error) {
-	input, err := scraper.UrlInput(url, options.ScrapeOptions)
+	dataInput, err := scraper.UrlInput(url, options.ScrapeOptions)
 	if err != nil {
 		return nil, err
 	}
 
-	return ScrapeFeed(input, options)
+	return ScrapeFeed(dataInput, options)
 }
 
 // Exported types below
@@ -74,8 +78,11 @@ type Recipe = model.Recipe
 type Feed = model.Feed
 
 type RequestOptions = model.RequestOptions
+type RecipeFilter = model.RecipeFilter
 type ScrapeOptions = model.ScrapeOptions
 type FeedOptions = model.FeedOptions
 type DataInput = model.DataInput
 type Scraper = model.Scraper
 type FeedScraper = model.FeedScraper
+type DiscoveredFeed = model.DiscoveredFeed
+type DiscoverySource = model.DiscoverySource

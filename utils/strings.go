@@ -42,7 +42,7 @@ func cleanupCommon(s string) string {
 	s = html.UnescapeString(s)
 	s = strings.TrimSpace(s)
 	s = strings.ReplaceAll(s, " ", " ")
-	s = strings.ReplaceAll(s, "­", "-")
+	s = strings.ReplaceAll(s, "\u00ad", "-")
 	s = Unquote(s)
 	s = RemoveDoubleSpace(s)
 	s = strings.ReplaceAll(s, " , ", ", ")
@@ -57,10 +57,18 @@ func TrimZeroWidthSpaces(s string) string {
 }
 
 func SplitTitle(title string) []string {
-	splitter := func(r rune) bool {
-		return r == '|' || r == '-' || r == '–'
+	title = strings.ReplaceAll(title, " - ", "|")
+	title = strings.ReplaceAll(title, " – ", "|")
+	parts := strings.Split(title, "|")
+
+	var result []string
+	for _, p := range parts {
+		cleaned := CleanupInline(p)
+		if cleaned != "" {
+			result = append(result, cleaned)
+		}
 	}
-	return strings.FieldsFunc(title, splitter)
+	return result
 }
 
 func RemoveDoubleSpace(str string) string {
@@ -114,7 +122,14 @@ func RemoveNewLines(s string) string {
 	return strings.Join(strings.Fields(s), " ")
 }
 
-var numberRegex = regexp.MustCompile("\\d+([.,]\\d+)?")
+func Coalesce(dst, src string) string {
+	if len(dst) == 0 {
+		return src
+	}
+	return dst
+}
+
+var numberRegex = regexp.MustCompile(`\d+([.,]\d+)?`)
 
 func FindNumber(str string) *float64 {
 	groups := numberRegex.FindAllString(str, 1)

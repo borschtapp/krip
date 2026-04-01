@@ -158,3 +158,28 @@ second paragraph`, []string{"test paragraph", "second paragraph"}},
 		})
 	}
 }
+
+func TestSplitTitle(t *testing.T) {
+	tests := []struct {
+		give string
+		want []string
+	}{
+		{"", []string{}},
+		{"Recipe Title | Website", []string{"Recipe Title", "Website"}},
+		{"Recipe Title || Website", []string{"Recipe Title", "Website"}},
+		{"Recipe Name - Blog Name", []string{"Recipe Name", "Blog Name"}},
+		{"Title – Site", []string{"Title", "Site"}},
+		{"Just a title", []string{"Just a title"}},
+		{"Grillat kött med lime -och chilismör | Recept - Coop", []string{"Grillat kött med lime -och chilismör", "Recept", "Coop"}},
+		{"Butter chicken | Oppskrift og video - Matprat", []string{"Butter chicken", "Oppskrift og video", "Matprat"}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.give, func(t *testing.T) {
+			got := SplitTitle(tt.give)
+			if len(tt.want) == 0 && len(got) == 0 {
+				return
+			}
+			assert.Equal(t, tt.want, got)
+		})
+	}
+}
