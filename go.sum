@@ -2,10 +2,10 @@ github.com/PuerkitoBio/goquery v1.12.0 h1:pAcL4g3WRXekcB9AU/y1mbKez2dbY2AajVhtkO
 github.com/PuerkitoBio/goquery v1.12.0/go.mod h1:802ej+gV2y7bbIhOIoPY5sT183ZW0YFofScC4q/hIpQ=
 github.com/andybalholm/cascadia v1.3.3 h1:AG2YHrzJIm4BZ19iwJ/DAua6Btl3IwJX+VI4kktS1LM=
 github.com/andybalholm/cascadia v1.3.3/go.mod h1:xNd9bqTn98Ln4DwST8/nG+H0yuB8Hmgu1YHNnWw0GeA=
-github.com/astappiev/fixjson v1.0.1 h1:wVbPp8OFOWcTf+Hh53Yj1LJ3yOaUJUqk+s0ZDszheYE=
-github.com/astappiev/fixjson v1.0.1/go.mod h1:i11weCUtOvIzJd3jbgalbxL98LJ44IyYCmov7SyIubI=
-github.com/astappiev/microdata v1.0.2 h1:Y4uwzTBp4dKeuazpfNDE+sKp9X/T30/LTp3dQ/lCK2g=
-github.com/astappiev/microdata v1.0.2/go.mod h1:RYRq30ZQIC8WNq818MOKefM95upihLh2oxN/WarIjAU=
+github.com/astappiev/fixjson v1.1.0 h1:oAbIiBhY7pwoyyRsfWZib0lF1bRd+0mEM2CE6ew2xcg=
+github.com/astappiev/fixjson v1.1.0/go.mod h1:TcmREAaiHHYs7DWCMTSXoxDpeZYz1+E44ZVAh3TrWIQ=
+github.com/astappiev/microdata v1.1.0 h1:d4fFC9EP5N97tMFZIiVyv/LcWTA5JZltDHRPVNycJHE=
+github.com/astappiev/microdata v1.1.0/go.mod h1:lmleyrLJ19CAScP6Wcu4Gg7isETpMs0Fp9tUq1xNuKs=
 github.com/aymerick/douceur v0.2.0 h1:Mv+mAeH1Q+n9Fr+oyamOlAkUNPWPlA8PPGR0QAaYuPk=
 github.com/aymerick/douceur v0.2.0/go.mod h1:wlT5vV2O3h55X9m7iVYN0TBM0NH/MmbLnd30/FjWUq4=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=

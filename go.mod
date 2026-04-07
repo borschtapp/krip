@@ -6,7 +6,7 @@ retract [v1.0.0, v1.3.9] // broken semver, minor versions includes breaking chan
 
 require (
 	github.com/PuerkitoBio/goquery v1.12.0
-	github.com/astappiev/microdata v1.0.2
+	github.com/astappiev/microdata v1.1.0
 	github.com/microcosm-cc/bluemonday v1.0.27
 	github.com/mmcdole/gofeed v1.3.0
 	github.com/sosodev/duration v1.4.0
@@ -16,7 +16,7 @@ require (
 
 require (
 	github.com/andybalholm/cascadia v1.3.3 // indirect
-	github.com/astappiev/fixjson v1.0.1 // indirect
+	github.com/astappiev/fixjson v1.1.0 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
