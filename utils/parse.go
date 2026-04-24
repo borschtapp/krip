@@ -13,21 +13,27 @@ import (
 
 var timeRegex = regexp.MustCompile(`(?i)(\D*(?P<days>\d+)\s*(days|D))?(\D*(?P<hours>[\d.\s/?¼½¾⅓⅔⅕⅖⅗]+)\s*(hours|hour|hrs|hr|h|óra))?(\D*(?P<minutes>[\d.]+)\s*(minutes|minute|mins|min|m|perc))?`)
 
+var (
+	idxDays    = timeRegex.SubexpIndex("days")
+	idxHours   = timeRegex.SubexpIndex("hours")
+	idxMinutes = timeRegex.SubexpIndex("minutes")
+)
+
 func ParseDuration(str string) (time.Duration, bool) {
 	matches := timeRegex.FindStringSubmatch(str)
 	if len(matches) == 0 {
-		log.Println("unable to parse duration from string: " + str)
+		log.Printf("ParseDuration: unable to parse duration from string: %s", str)
 		return 0, false
 	}
 
 	var d time.Duration
-	if days, err := strconv.ParseFloat(matches[2], 32); err == nil && days > 0 {
+	if days, err := strconv.ParseFloat(matches[idxDays], 32); err == nil && days > 0 {
 		d += time.Duration(days) * time.Hour * 24
 	}
-	if hours, err := ParseFraction(matches[5]); err == nil && hours > 0 {
+	if hours, err := ParseFraction(matches[idxHours]); err == nil && hours > 0 {
 		d += time.Duration(hours) * time.Hour
 	}
-	if minutes, err := strconv.ParseFloat(matches[8], 32); err == nil && minutes > 0 {
+	if minutes, err := strconv.ParseFloat(matches[idxMinutes], 32); err == nil && minutes > 0 {
 		d += time.Duration(minutes) * time.Minute
 	}
 	return d, true
@@ -40,12 +46,18 @@ func Parse8601Duration(str string) time.Duration {
 	return 0
 }
 
+func ParseRFC3339(str string) (*time.Time, bool) {
+	if t, err := time.Parse(time.RFC3339, str); err == nil {
+		return &t, true
+	}
+	return nil, false
+}
+
 func ParseInt(str string) (int, error) {
 	str = strings.TrimSpace(str)
 	if i, err := strconv.Atoi(str); err == nil {
 		return i, nil
 	}
-
 	return 0, errors.New("unable to parse int from string: " + str)
 }
 
@@ -54,6 +66,5 @@ func ParseFloat(str string) (float64, error) {
 	if i, err := strconv.ParseFloat(str, 64); err == nil {
 		return i, nil
 	}
-
 	return 0, errors.New("unable to parse float from string: " + str)
 }

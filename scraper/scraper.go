@@ -224,16 +224,8 @@ func validateDiscoverySample(entries []*model.Recipe, options model.FeedOptions)
 	if n == 0 {
 		return false
 	}
-	// Build a deduplicated index set — when n < 3 some of {0, n/2, n-1}
-	// collapse to the same value, and we'd fetch the same URL multiple times.
-	seen := map[int]struct{}{}
-	indices := make([]int, 0, 3)
-	for _, i := range []int{0, n / 2, n - 1} {
-		if _, ok := seen[i]; !ok {
-			seen[i] = struct{}{}
-			indices = append(indices, i)
-		}
-	}
+	// {0, n/2, n-1} can collapse when n < 3; deduplicate so we don't fetch the same URL twice.
+	indices := utils.Deduplicate([]int{0, n / 2, n - 1})
 
 	hits := 0
 	tried := 0

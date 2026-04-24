@@ -14,53 +14,56 @@ import (
 //go:embed static/*
 var static embed.FS
 
-func scrapeHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != "GET" {
-		http.Error(w, "Method is not supported.", http.StatusNotFound)
+func writeJSON(w http.ResponseWriter, v any) {
+	w.Header().Set("Content-Type", "application/json")
+	j, err := json.Marshal(v)
+	if err != nil {
+		http.Error(w, "JSON encoding error: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
+	_, _ = w.Write(j)
+}
 
-	q := r.URL.Query()
-
-	if q == nil || len(q.Get("url")) == 0 {
+func requireURL(w http.ResponseWriter, r *http.Request) (string, bool) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method is not supported.", http.StatusMethodNotAllowed)
+		return "", false
+	}
+	u := r.URL.Query().Get("url")
+	if u == "" {
 		http.Error(w, "`url` query param is required.", http.StatusBadRequest)
+		return "", false
+	}
+	return u, true
+}
+
+func scrapeHandler(w http.ResponseWriter, r *http.Request) {
+	u, ok := requireURL(w, r)
+	if !ok {
 		return
 	}
-
-	recipe, err := krip.ScrapeUrl(q.Get("url"), krip.ScrapeOptions{})
+	recipe, err := krip.ScrapeUrl(u, krip.ScrapeOptions{})
 	if err != nil {
 		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-
-	j, _ := json.Marshal(recipe)
-	_, _ = w.Write(j)
+	writeJSON(w, recipe)
 }
 
 func feedHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != "GET" {
-		http.Error(w, "Method is not supported.", http.StatusNotFound)
+	u, ok := requireURL(w, r)
+	if !ok {
 		return
 	}
-
-	q := r.URL.Query()
-
-	if q == nil || len(q.Get("url")) == 0 {
-		http.Error(w, "`url` query param is required.", http.StatusBadRequest)
-		return
-	}
-
-	feed, err := krip.ScrapeFeedUrl(q.Get("url"), krip.FeedOptions{})
+	feed, err := krip.ScrapeFeedUrl(u, krip.FeedOptions{})
 	if err != nil {
 		http.Error(w, "Scrape error: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
-
-	j, _ := json.Marshal(feed)
-	_, _ = w.Write(j)
+	writeJSON(w, feed)
 }
 
-func healthHandler(w http.ResponseWriter, r *http.Request) {
+func healthHandler(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	_, _ = w.Write([]byte("OK"))
 }

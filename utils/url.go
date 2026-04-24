@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"log"
 	"net/url"
 	"strings"
 
@@ -9,36 +8,22 @@ import (
 )
 
 func IsAbsolute(urlStr string) bool {
-	urlStr = strings.TrimSpace(urlStr)
-	u, err := url.Parse(urlStr)
-	if err != nil {
-		log.Println("Malformed url:", err)
-		return false
-	}
-
-	if u.IsAbs() {
-		return true
-	}
-
-	return false
+	u, err := url.Parse(strings.TrimSpace(urlStr))
+	return err == nil && u.IsAbs()
 }
 
 func ToAbsoluteUrl(base *url.URL, urlStr string) string {
 	urlStr = strings.TrimSpace(urlStr)
-	if len(urlStr) == 0 || base == nil {
+	if urlStr == "" || base == nil {
 		return ""
 	}
-
 	u, err := url.Parse(urlStr)
 	if err != nil {
-		log.Println("Error parsing url:", err)
 		return ""
 	}
-
 	if u.IsAbs() {
 		return urlStr
 	}
-
 	return base.ResolveReference(u).String()
 }
 
@@ -51,7 +36,6 @@ func BaseUrl(urlStr string) string {
 	if err != nil {
 		return ""
 	}
-
 	u.Path = ""
 	u.RawQuery = ""
 	u.Fragment = ""
@@ -62,7 +46,6 @@ func Hostname(urlStr string) string {
 	if !strings.Contains(urlStr, "/") {
 		return urlStr
 	}
-
 	u, err := url.Parse(urlStr)
 	if err != nil {
 		return ""
@@ -78,9 +61,8 @@ func DomainZone(urlStr string) string {
 	if err != nil {
 		return ""
 	}
-
-	hostParts := strings.Split(strings.ToLower(u.Hostname()), ".")
-	return hostParts[len(hostParts)-1]
+	parts := strings.Split(strings.ToLower(u.Hostname()), ".")
+	return parts[len(parts)-1]
 }
 
 func UrlMatchesPathPattern(rawUrl, pattern string) bool {
@@ -94,14 +76,14 @@ func UrlMatchesPathPattern(rawUrl, pattern string) bool {
 func HostAlias(urlStr string) string {
 	alias := Hostname(urlStr)
 
-	// remove public domain
+	// remove public suffix (e.g. ".com", ".co.uk")
 	suffix, _ := publicsuffix.PublicSuffix(alias)
 	alias = strings.TrimSuffix(alias, "."+suffix)
 
-	// remove common prefixes
+	// remove common API subdomain prefix
 	alias = strings.TrimPrefix(alias, "api.")
 
-	// replace dots with underscores
+	// replace dots with underscores for map key safety
 	alias = strings.ReplaceAll(alias, ".", "_")
 	return alias
 }

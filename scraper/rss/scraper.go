@@ -53,7 +53,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed) error {
 			}
 		}
 
-		feed.Entries = append(feed.Entries, entry)
+		feed.AddEntry(entry)
 	}
 
 	return nil

@@ -11,27 +11,31 @@ import (
 
 var paragraphsRegex = regexp.MustCompile(`\n\r?\s*\n\r?`)
 
+var (
+	ugcPolicy    = bluemonday.UGCPolicy()
+	strictPolicy = bluemonday.StrictPolicy()
+)
+
 func Cleanup(s string) string {
-	s = bluemonday.UGCPolicy().Sanitize(s)
+	s = ugcPolicy.Sanitize(s)
 	s = cleanupCommon(s)
 
-	var res string
-	lines := strings.Split(s, "\n")
-	for _, line := range lines {
+	var b strings.Builder
+	for line := range strings.SplitSeq(s, "\n") {
 		line = strings.TrimSpace(line)
-		if len(line) == 0 {
+		if line == "" {
 			continue
 		}
-		if len(res) > 0 {
-			res += "\n"
+		if b.Len() > 0 {
+			b.WriteByte('\n')
 		}
-		res += line
+		b.WriteString(line)
 	}
-	return res
+	return b.String()
 }
 
 func CleanupInline(s string) string {
-	s = bluemonday.StrictPolicy().Sanitize(s)
+	s = strictPolicy.Sanitize(s)
 	s = cleanupCommon(s)
 	s = strings.Trim(s, ",;")
 	s = RemoveNewLines(s)

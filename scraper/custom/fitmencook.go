@@ -8,29 +8,24 @@ import (
 )
 
 func ScrapeFitMenCook(data *model.DataInput, r *model.Recipe) error {
-	if data.Document != nil {
-		if s := data.Document.Find(".fmc_ingredients ul li"); len(s.Nodes) != 0 {
-			s.Each(func(i int, s *goquery.Selection) {
-				if s1 := s.Has("strong"); len(s1.Nodes) != 0 {
-					return
-				}
-
-				text := utils.CleanupInline(s.Text())
-				if text != "" {
-					r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: text})
-				}
-			})
-		}
-
-		if s := data.Document.Find(".fmc_recipe_steps .fmc_step_content"); len(s.Nodes) != 0 {
-			s.Each(func(i int, s *goquery.Selection) {
-				text := utils.CleanupInline(s.Text())
-				if text != "" {
-					r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: model.HowToStep{Text: text}})
-				}
-			})
-		}
+	if data.Document == nil {
+		return nil
 	}
+
+	data.Document.Find(".fmc_ingredients ul li").Each(func(_ int, s *goquery.Selection) {
+		if s.Has("strong").Length() > 0 {
+			return // skip section headers
+		}
+		if text := utils.CleanupInline(s.Text()); text != "" {
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: text})
+		}
+	})
+
+	data.Document.Find(".fmc_recipe_steps .fmc_step_content").Each(func(_ int, s *goquery.Selection) {
+		if text := utils.CleanupInline(s.Text()); text != "" {
+			r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: model.HowToStep{Text: text}})
+		}
+	})
 
 	return nil
 }

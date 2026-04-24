@@ -222,6 +222,10 @@ func parseSitemap(body []byte) ([]string, bool, error) {
 	}
 }
 
+// recipeKeywords is the canonical list of recipe-related keywords used for
+// both URL path pattern matching and sitemap index prioritisation.
+var recipeKeywords = []string{"recipe", "cook", "food", "dish", "meal"}
+
 // recipePathPatterns matches URL paths that likely point to recipe pages.
 var recipePathPatterns = []*regexp.Regexp{
 	regexp.MustCompile(`(?i)/recipes?/`),
@@ -251,7 +255,7 @@ func filterRecipeLocs(locs []string) []string {
 
 func containsRecipeKeyword(s string) bool {
 	lower := strings.ToLower(s)
-	for _, kw := range []string{"recipe", "cook", "food", "dish", "meal"} {
+	for _, kw := range recipeKeywords {
 		if strings.Contains(lower, kw) {
 			return true
 		}
