@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+  Synthetic page that exercises lazy-load image detection across all supported
+  data-* attributes at integration level.
+
+  The imgSrc() function checks attributes in priority order:
+    src → data-src → data-lazy-src → data-lazy → srcset
+
+  This page deliberately omits the "src" attribute from every <img> so only
+  the lazy-load fallback path is exercised.  Each list item uses a different
+  lazy-load attribute so all code paths are covered in a single ScrapeFeed run:
+
+    items 1–3  →  data-src
+    items 4–6  →  data-lazy-src
+    items 7–9  →  srcset
+    item  10   →  data-lazy
+
+  The discovery pipeline must detect all 10 images and populate entry.Images
+  for each entry, proving that lazy-load images count toward imageDensityScore.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Recipes | LazyLoadSite</title>
+</head>
+<body>
+
+<!-- Navigation (excluded) -->
+<nav>
+  <a href="/about">About</a>
+  <a href="/blog">Blog</a>
+</nav>
+
+<main>
+  <ul class="recipe-list">
+
+    <!-- Items 1–3: data-src -->
+    <li>
+      <a href="/recipes/avocado-toast-with-poached-eggs">
+        <img data-src="/img/avocado-toast.jpg" alt="Avocado Toast"/>
+        <span>Avocado Toast with Poached Eggs</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/banana-oat-overnight-porridge">
+        <img data-src="/img/overnight-oats.jpg" alt="Overnight Oats"/>
+        <span>Banana Oat Overnight Porridge</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/greek-yogurt-berry-parfait">
+        <img data-src="/img/yogurt-parfait.jpg" alt="Yogurt Parfait"/>
+        <span>Greek Yogurt Berry Parfait</span>
+      </a>
+    </li>
+
+    <!-- Items 4–6: data-lazy-src -->
+    <li>
+      <a href="/recipes/spinach-feta-stuffed-peppers">
+        <img data-lazy-src="/img/stuffed-peppers.jpg" alt="Stuffed Peppers"/>
+        <span>Spinach Feta Stuffed Peppers</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/tomato-basil-bruschetta">
+        <img data-lazy-src="/img/bruschetta.jpg" alt="Bruschetta"/>
+        <span>Tomato Basil Bruschetta</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/roasted-red-pepper-hummus">
+        <img data-lazy-src="/img/red-pepper-hummus.jpg" alt="Red Pepper Hummus"/>
+        <span>Roasted Red Pepper Hummus</span>
+      </a>
+    </li>
+
+    <!-- Items 7–9: srcset (no src, no data-*) -->
+    <li>
+      <a href="/recipes/wild-mushroom-risotto">
+        <img srcset="/img/risotto-400.jpg 400w, /img/risotto-800.jpg 800w" alt="Mushroom Risotto"/>
+        <span>Wild Mushroom Risotto</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/garlic-butter-prawn-linguine">
+        <img srcset="/img/prawn-linguine-400.jpg 400w, /img/prawn-linguine-800.jpg 800w" alt="Prawn Linguine"/>
+        <span>Garlic Butter Prawn Linguine</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="/recipes/caramelised-onion-goats-cheese-tart">
+        <img srcset="/img/cheese-tart-400.jpg 400w, /img/cheese-tart-800.jpg 800w" alt="Cheese Tart"/>
+        <span>Caramelised Onion Goats Cheese Tart</span>
+      </a>
+    </li>
+
+    <!-- Item 10: data-lazy -->
+    <li>
+      <a href="/recipes/chocolate-lava-cake">
+        <img data-lazy="/img/lava-cake.jpg" alt="Chocolate Lava Cake"/>
+        <span>Chocolate Lava Cake</span>
+      </a>
+    </li>
+
+  </ul>
+</main>
+
+<!-- Footer (excluded) -->
+<footer>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+</footer>
+
+</body>
+</html>

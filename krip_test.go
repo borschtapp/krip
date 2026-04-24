@@ -28,7 +28,7 @@ func TestFeedOnline(t *testing.T) {
 		t.Skip("skipping online test in short mode")
 	}
 	var website = "https://klopotenko.com"
-	feed, err := ScrapeFeedUrl(website, FeedOptions{})
+	feed, err := ScrapeFeedUrl(website, FeedOptions{DiscoverySampleSize: 3})
 	require.NoError(t, err)
 
 	assert.NotEmpty(t, feed.Url)

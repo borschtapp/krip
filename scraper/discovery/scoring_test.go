@@ -1,6 +1,7 @@
 package discovery
 
 import (
+	"fmt"
 	"net/url"
 	"strings"
 	"testing"
@@ -19,6 +20,16 @@ func mustParseURLs(t *testing.T, strs []string) []*url.URL {
 		u, err := url.Parse(s)
 		require.NoError(t, err)
 		out = append(out, u)
+	}
+	return out
+}
+
+// dummyKeys builds n distinct URL key strings for use in scoring function tests
+// that don't need real URL values (each link gets a unique path so no dedup occurs).
+func dummyKeys(n int) []string {
+	out := make([]string, n)
+	for i := range out {
+		out[i] = fmt.Sprintf("https://example.com/r/%d", i+1)
 	}
 	return out
 }
@@ -89,7 +100,7 @@ func TestImageDensityScore(t *testing.T) {
 		links = append(links, s)
 	})
 
-	score := imageDensityScore(links)
+	score := imageDensityScore(links, dummyKeys(len(links)))
 	assert.InDelta(t, 2.0/3.0, score, 0.01)
 }
 
@@ -106,7 +117,7 @@ func TestTextQualityScore_RecipeTitles(t *testing.T) {
 		links = append(links, s)
 	})
 
-	score := textQualityScore(links)
+	score := textQualityScore(links, dummyKeys(len(links)))
 	// 2 good titles (3-8 words = 1.0 each), 1 bad (1 word = 0.5) → avg = (1+1+0.5)/3 ≈ 0.83
 	assert.Greater(t, score, 0.7)
 }
@@ -152,7 +163,6 @@ func TestScoreURLConsistency_DepthIndependent(t *testing.T) {
 	assert.InDelta(t, 0.5, shallowScore, 0.01, "shallow path should score 0.5")
 
 	// Deep path: 1-segment prefix on 4-segment URLs → also 1/(1+1) = 0.5
-	// (old formula: 1/4 = 0.25, penalising deep paths unfairly)
 	deep := mustParseURLs(t, []string{
 		"https://example.com/recipes/main/pasta/weeknight",
 		"https://example.com/recipes/side/salad/summer",
@@ -162,7 +172,6 @@ func TestScoreURLConsistency_DepthIndependent(t *testing.T) {
 }
 
 func TestImageDensityScore_SiblingImage(t *testing.T) {
-	// Images are siblings of <a> inside <li>, not children of <a>
 	const html = `<html><body>
 		<ul>
 			<li><img src="/i/1.jpg"><a href="/r/1">Recipe One</a></li>
@@ -177,12 +186,11 @@ func TestImageDensityScore_SiblingImage(t *testing.T) {
 		links = append(links, s)
 	})
 
-	score := imageDensityScore(links)
+	score := imageDensityScore(links, dummyKeys(len(links)))
 	assert.InDelta(t, 1.0, score, 0.01, "sibling images in <li> should be detected")
 }
 
 func TestImageDensityScore_NonWrapperParentIgnored(t *testing.T) {
-	// Images are elsewhere on the page, not in <li> wrapper — should NOT be counted
 	const html = `<html><body>
 		<img src="/header.jpg">
 		<a href="/r/1">Recipe One</a>
@@ -196,12 +204,11 @@ func TestImageDensityScore_NonWrapperParentIgnored(t *testing.T) {
 		links = append(links, s)
 	})
 
-	score := imageDensityScore(links)
+	score := imageDensityScore(links, dummyKeys(len(links)))
 	assert.InDelta(t, 0.0, score, 0.01, "page-level images should not leak into link density score")
 }
 
 func TestCollectGroups_ExternalLinksExcluded(t *testing.T) {
-	// SSRF/pollution: a link whose host looks like the page host (prefix match) but isn't
 	const html = `<html><body><main><ul>
 		<li><a href="/recipes/pasta">Pasta</a></li>
 		<li><a href="/recipes/chicken">Chicken</a></li>
@@ -290,8 +297,142 @@ func TestReplayDOMScoring_UsesSelector(t *testing.T) {
 	}
 }
 
+func TestMergeSiblingGroups_CollapsesRecipeTiles(t *testing.T) {
+	const html = `<html><body><main><section>
+		<div><a href="/recipes/pasta">Creamy Pasta Bake</a></div>
+		<div><a href="/recipes/chicken">Roast Chicken Dinner</a></div>
+		<div><a href="/recipes/salad">Summer Salad Bowl</a></div>
+		<div><a href="/recipes/soup">Tomato Basil Soup</a></div>
+	</section></main></body></html>`
+
+	doc := parseDocument(t, html)
+	base, _ := url.Parse("https://example.com/recipes")
+	groups := collectGroups(doc, base)
+
+	require.Greater(t, len(groups), 1, "sibling divs should form separate groups before merge")
+
+	mergeSiblingGroups(groups)
+
+	// Find the group with the most links — it should hold all 4.
+	maxLinks := 0
+	for _, g := range groups {
+		if len(g.links) > maxLinks {
+			maxLinks = len(g.links)
+		}
+	}
+	assert.Equal(t, 4, maxLinks, "merged group should contain all sibling links")
+}
+
+func TestMergeSiblingGroups_PreservesDistinctContainers(t *testing.T) {
+	const html = `<html><body><main>
+		<ul>
+			<li><a href="/recipes/pasta">Pasta</a></li>
+			<li><a href="/recipes/chicken">Chicken</a></li>
+			<li><a href="/recipes/salad">Salad</a></li>
+		</ul>
+		<aside>
+			<a href="/other/a">Other A</a>
+			<a href="/other/b">Other B</a>
+			<a href="/other/c">Other C</a>
+		</aside>
+	</main></body></html>`
+
+	doc := parseDocument(t, html)
+	base, _ := url.Parse("https://example.com/recipes")
+	groups := collectGroups(doc, base)
+	countBefore := len(groups)
+	require.GreaterOrEqual(t, countBefore, 2, "should start with at least two distinct groups")
+
+	mergeSiblingGroups(groups)
+
+	assert.Equal(t, countBefore, len(groups), "unrelated containers should not be merged together")
+}
+
+func TestPickSampleURLs_EvenSpread(t *testing.T) {
+	urls := []string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"}
+	got := pickSampleURLs(urls, 3)
+	assert.Len(t, got, 3)
+	assert.Equal(t, "a", got[0], "first sample should be first URL")
+	assert.Equal(t, "j", got[2], "last sample should be last URL")
+}
+
+func TestPickSampleURLs_EdgeCases(t *testing.T) {
+	assert.Nil(t, pickSampleURLs(nil, 3))
+	assert.Nil(t, pickSampleURLs([]string{"a", "b"}, 0))
+	assert.Equal(t, []string{"a"}, pickSampleURLs([]string{"a"}, 5))
+	got := pickSampleURLs([]string{"a", "b", "c"}, 10)
+	assert.Equal(t, []string{"a", "b", "c"}, got, "requesting more than len returns all URLs")
+}
+
+func TestApplyGroupValidation_PreservesStubImageWhenScrapedHasNone(t *testing.T) {
+	stubURL := "https://example.com/recipes/pasta"
+	byUrl := map[string]*model.Recipe{
+		stubURL: {
+			Url:    stubURL,
+			Name:   "Creamy Pasta",
+			Images: []*model.ImageObject{{Url: "https://example.com/img/pasta.jpg"}},
+		},
+	}
+
+	// Validator confirms the URL but the scraped page returned no images.
+	validate := func(_ []string) []*model.Recipe {
+		return []*model.Recipe{{Url: stubURL, Name: "Creamy Pasta Bake"}}
+	}
+
+	validCount, sampleCount := applyGroupValidation(byUrl, []string{stubURL}, validate, 1)
+	assert.Equal(t, 1, validCount)
+	assert.Equal(t, 1, sampleCount)
+
+	entry := byUrl[stubURL]
+	assert.Equal(t, "Creamy Pasta Bake", entry.Name, "scraped name should replace stub name")
+	require.NotEmpty(t, entry.Images, "stub image must be preserved when scraped recipe has none")
+	assert.Equal(t, "https://example.com/img/pasta.jpg", entry.Images[0].Url)
+}
+
+func TestApplyGroupValidation_PreservesStubNameWhenScrapedHasNone(t *testing.T) {
+	stubURL := "https://example.com/recipes/pasta"
+	byUrl := map[string]*model.Recipe{
+		stubURL: {Url: stubURL, Name: "Pasta From Link Text"},
+	}
+
+	// Validator confirms the URL but the scraped page returned no name.
+	validate := func(_ []string) []*model.Recipe {
+		return []*model.Recipe{{Url: stubURL}}
+	}
+
+	applyGroupValidation(byUrl, []string{stubURL}, validate, 1)
+
+	assert.Equal(t, "Pasta From Link Text", byUrl[stubURL].Name,
+		"stub name must be preserved when scraped recipe has no name")
+}
+
+func TestApplyGroupValidation_OnlyMergesConfirmedEntries(t *testing.T) {
+	urls := []string{
+		"https://example.com/a",
+		"https://example.com/b",
+		"https://example.com/c",
+	}
+	byUrl := map[string]*model.Recipe{
+		urls[0]: {Url: urls[0], Name: "Alpha"},
+		urls[1]: {Url: urls[1], Name: "Beta"},
+		urls[2]: {Url: urls[2], Name: "Gamma"},
+	}
+
+	// Validator confirms only the middle URL.
+	validate := func(_ []string) []*model.Recipe {
+		return []*model.Recipe{{Url: urls[1], Name: "Beta Confirmed"}}
+	}
+
+	validCount, sampleCount := applyGroupValidation(byUrl, urls, validate, 3)
+	assert.Equal(t, 1, validCount)
+	assert.Equal(t, 3, sampleCount)
+
+	assert.Equal(t, "Alpha", byUrl[urls[0]].Name, "non-confirmed stub must be unchanged")
+	assert.Equal(t, "Beta Confirmed", byUrl[urls[1]].Name, "confirmed entry must have merged data")
+	assert.Equal(t, "Gamma", byUrl[urls[2]].Name, "non-confirmed stub must be unchanged")
+}
+
 func TestReplayDOMScoring_SelectorGone_ReturnsError(t *testing.T) {
-	// Page no longer has the originally discovered container.
 	const htmlPage = `<html><body><div><a href="/recipes/pasta">Pasta</a></div></body></html>`
 
 	doc := parseDocument(t, htmlPage)

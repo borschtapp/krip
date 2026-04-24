@@ -16,6 +16,10 @@ import (
 	"github.com/borschtapp/krip/utils"
 )
 
+// maxEntriesForScrape is the default cap for individual entry scraping per feed.
+// Entries beyond this index are kept as stub entries (URL only).
+const maxEntriesForScrape = 20
+
 func Scrape(data *model.DataInput, r *model.Recipe, options model.ScrapeOptions) error {
 	r.Url = data.Url
 	if r.Publisher == nil {
@@ -28,21 +32,21 @@ func Scrape(data *model.DataInput, r *model.Recipe, options model.ScrapeOptions)
 	if !options.SkipSchemaScraper {
 		// fill recipe with schema.org/Recipe metadata
 		if err := schema.Scrape(data, r); err != nil {
-			log.Println("schema error: " + err.Error())
+			log.Printf("schema error: %v", err)
 		}
 	}
 
 	if !options.SkipOpenGraphScraper {
 		// fill recipe with OpenGraph metadata
 		if err := opengraph.Scrape(data, r); err != nil {
-			log.Println("OpenGraph error: " + err.Error())
+			log.Printf("OpenGraph error: %v", err)
 		}
 	}
 
 	if !options.SkipCustomScrapers {
 		// fill recipe according to the website scraper implementation
 		if err := custom.Scrape(data, r); err != nil {
-			log.Println("website error: " + err.Error())
+			log.Printf("website error: %v", err)
 		}
 	}
 
@@ -65,7 +69,7 @@ func normalizeRecipe(r *model.Recipe) {
 		r.Author = nil
 	}
 
-	// clean up the title, remove publisher from it
+	// Remove publisher from the title.
 	if r.Name != "" {
 		parts := utils.SplitTitle(r.Name)
 		if len(parts) > 1 && r.Publisher != nil && slices.Contains(parts, r.Publisher.Name) {
@@ -101,24 +105,43 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 
 	if !options.SkipFeedMeta {
 		if err := opengraph.ScrapeFeed(data, feed); err != nil {
-			log.Println("OpenGraph error: " + err.Error())
+			log.Printf("feed: OpenGraph error: %v", err)
 		}
 	}
 
-	if err := findEntries(data, feed, options); err != nil {
+	scrapedURLs := make(map[string]bool)
+	if err := findEntries(data, feed, options, scrapedURLs); err != nil {
 		return err
 	}
 
+	log.Printf("feed: %d entries found from %s", len(feed.Entries), feed.Url)
+	limit := options.MaxEntriesForScrape
+	switch {
+	case limit == 0:
+		limit = maxEntriesForScrape
+	case limit < 0:
+		limit = len(feed.Entries)
+	}
+
 	if !options.SkipEntriesScrape {
-		for _, entry := range feed.Entries {
-			if entry.Url == "" {
+		log.Println("feed: scraping individual entries for more complete data")
+		toScrape := feed.Entries
+		if len(feed.Entries) > limit {
+			toScrape = feed.Entries[:limit]
+			log.Printf("feed: scraping top %d of %d entries; the rest remain as stubs", limit, len(feed.Entries))
+		}
+
+		for _, entry := range toScrape {
+			if entry.Url == "" || scrapedURLs[entry.Url] {
 				continue
 			}
 
+			scrapedURLs[entry.Url] = true
 			dataInput, err := UrlInput(entry.Url, options.ScrapeOptions)
 			if err != nil {
 				continue
 			}
+
 			if err := Scrape(dataInput, entry, options.ScrapeOptions); err != nil {
 				continue
 			}
@@ -131,12 +154,12 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 
 	if len(feed.Entries) < initialCount {
 		discarded := initialCount - len(feed.Entries)
-		log.Printf("filtered out %d (out of %d) entries that did not pass validation", discarded, initialCount)
+		log.Printf("feed: filtered out %d (out of %d) entries that did not pass validation", discarded, initialCount)
 
-		// If more than 30% were discarded, the source likely mixes recipes with unrelated pages.
+		// If many entries were discarded, try to find a URL pattern.
 		if len(feed.Entries) > 0 && discarded*100/initialCount > 30 {
 			if pattern, matched := discovery.RefineByUrlPattern(originalEntries, feed.Entries); pattern != "" {
-				log.Printf("url pattern found %q: %d total candidates, %d matches pattern, %d validated before", pattern, initialCount, matched, len(feed.Entries))
+				log.Printf("feed: url pattern found %q: %d total candidates, %d matches pattern, %d validated before", pattern, initialCount, matched, len(feed.Entries))
 
 				if feed.Discovered != nil && feed.Discovered.UrlPattern == "" {
 					feed.Discovered.UrlPattern = pattern
@@ -149,12 +172,12 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 	return nil
 }
 
-func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOptions) error {
+func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOptions, scrapedURLs map[string]bool) error {
 	// Fast path: caller already has a DiscoveredFeed from a previous run.
 	if options.Discovered != nil {
 		if err := discovery.ReplayDiscovered(data, feed, options.Discovered); err != nil {
 			feed.Discovered = nil
-			log.Println("discovery replay error: " + err.Error())
+			log.Printf("feed: discovery replay error: %v", err)
 		} else if len(feed.Entries) > 0 {
 			feed.Discovered = options.Discovered
 			return nil
@@ -175,22 +198,51 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 
 	if !options.SkipSchemaScraper {
 		if err := schema.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
-			return nil
+			if len(feed.Entries) == 1 && !feed.Entries[0].IsValid() {
+				// Single invalid entry is likely a category page
+				feed.Entries = nil
+			} else {
+				return nil
+			}
 		}
 	}
 
+	// Try universal discovery: DOM scoring, RSS link, then sitemap.
 	if !options.SkipDiscoveryScraper {
-		if err := discovery.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
-			// Validate low-confidence DOM container results by sampling 2–3 candidate URLs.
-			// Returns error early to avoid scraping all links individually.
-			if options.AllowDiscoverySampling &&
-				feed.Discovered != nil &&
-				feed.Discovered.Source == discovery.SourceDOMContainer &&
-				feed.Discovered.ConfidenceScore < discovery.AcceptThreshold {
-				if !validateDiscoverySample(feed.Entries, options) {
-					feed.Entries = nil
-					feed.Discovered = nil
-					return errors.New("discovery: sampling validation failed (probably there are no recipes on the page)")
+		// prescraped holds confirmed recipes from group validation sampling.
+		// It is populated inside the closure and read after ScrapeFeed returns,
+		// so we only mark URLs that ended up in the committed group.
+		var prescraped map[string]*model.Recipe
+		sampling := discovery.SamplingOptions{}
+		if options.DiscoverySampleSize > 0 {
+			prescraped = make(map[string]*model.Recipe)
+			sampling = discovery.SamplingOptions{
+				SampleSize: options.DiscoverySampleSize,
+				Validator: func(urls []string) []*model.Recipe {
+					var confirmed []*model.Recipe
+					for _, u := range urls {
+						dataInput, err := UrlInput(u, options.ScrapeOptions)
+						if err != nil {
+							continue
+						}
+						r := &model.Recipe{Url: u}
+						_ = Scrape(dataInput, r, options.ScrapeOptions)
+						if r.Validate(options.RecipeFilter) == nil {
+							prescraped[u] = r
+							confirmed = append(confirmed, r)
+						}
+					}
+					return confirmed
+				},
+			}
+		}
+
+		if err := discovery.ScrapeFeed(data, feed, sampling); err == nil && len(feed.Entries) > 0 {
+			if prescraped != nil {
+				for _, e := range feed.Entries {
+					if _, ok := prescraped[e.Url]; ok {
+						scrapedURLs[e.Url] = true
+					}
 				}
 			}
 			return nil
@@ -215,38 +267,4 @@ func normalizeFeed(feed *model.Feed) {
 	if feed.Publisher != nil && feed.Publisher.Name == "" {
 		feed.Publisher = nil
 	}
-}
-
-// validateDiscoverySample fetches up to 3 candidate URLs (spread across the list)
-// and returns true if more than half yield a non-empty recipe.
-func validateDiscoverySample(entries []*model.Recipe, options model.FeedOptions) bool {
-	n := len(entries)
-	if n == 0 {
-		return false
-	}
-	// {0, n/2, n-1} can collapse when n < 3; deduplicate so we don't fetch the same URL twice.
-	indices := utils.Deduplicate([]int{0, n / 2, n - 1})
-
-	hits := 0
-	tried := 0
-	for _, i := range indices {
-		if i >= n || entries[i].Url == "" {
-			continue
-		}
-
-		dataInput, err := UrlInput(entries[i].Url, options.ScrapeOptions)
-		if err != nil {
-			continue
-		}
-
-		r := &model.Recipe{}
-		_ = Scrape(dataInput, r, options.ScrapeOptions)
-		tried++
-
-		if err := r.Validate(options.RecipeFilter); err == nil {
-			hits++
-		}
-	}
-
-	return tried > 0 && hits*2 > tried
 }

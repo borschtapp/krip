@@ -34,3 +34,18 @@ func TestHelloFreshFeedOnline(t *testing.T) {
 	assert.NotEmpty(t, feed.Entries)
 	t.Log(feed.String())
 }
+
+func TestHelloFreshCategoryOnline(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping online test in short mode")
+	}
+
+	var website = "https://www.hellofresh.de/recipes/fusions-rezepte"
+	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{})
+	assert.NoError(t, err)
+	assert.NotNil(t, feed)
+
+	assert.NotEmpty(t, feed.Url)
+	assert.NotEmpty(t, feed.Entries)
+	t.Log(feed.String())
+}

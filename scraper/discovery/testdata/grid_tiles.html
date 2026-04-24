@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+  Synthetic page that replicates the three DOM patterns of a category page:
+
+  1. DEEP TILE NESTING — recipe tiles are siblings inside a grid container but
+     each tile is wrapped in an extra inner <div>:
+
+       <div.grid>
+         <div.tile>          ← nth-of-type(N), varies per tile
+           <div.tile-inner>  ← nth-of-type(1), constant
+             <a href="/recipes/…">
+
+     At keyDepth=4 the container key for each tile is:
+       "body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(N) > div:nth-of-type(1)"
+     The varying position is second-to-last, so the sibling-merge must strip TWO
+     levels to find the common ancestor "body:nth-of-type(1) > div:nth-of-type(1)".
+
+  2. SSR STYLE INJECTION — each <a> contains a <style> element injected by a
+     server-side rendering framework (Next.js / styled-components pattern).
+     linkVisibleText() must remove it before computing textQualityScore.
+
+  3. PIPE-SEPARATED METADATA — the <a> contains the recipe title followed by
+     cooking metadata separated with "|".  The full text is >12 words, so the
+     segment-based textQualityScore must split on "|" and score the title part.
+
+  COMPETING GROUP — a category carousel section uses the same sibling-div
+  pattern but with short category names and no images, so it should score lower
+  than the recipe grid and not be selected as the winning container.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Fusion Recipes | CookBook</title>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     Navigation (must be excluded by the exclusion selector)
+     ═══════════════════════════════════════════════════════ -->
+<nav>
+  <a href="/about">About</a>
+  <a href="/recipes">All Recipes</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════
+     Category carousel — sibling-div pattern, but short names, no
+     images.  Forms a competing group after sibling-merge but should
+     score lower than the recipe grid.
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page-content">
+  <div class="category-row">
+    <div class="cat-tile"><a href="/recipes/italian">Italian</a></div>
+    <div class="cat-tile"><a href="/recipes/asian">Asian</a></div>
+    <div class="cat-tile"><a href="/recipes/mexican">Mexican</a></div>
+    <div class="cat-tile"><a href="/recipes/french">French</a></div>
+    <div class="cat-tile"><a href="/recipes/greek">Greek</a></div>
+    <div class="cat-tile"><a href="/recipes/indian">Indian</a></div>
+    <div class="cat-tile"><a href="/recipes/japanese">Japanese</a></div>
+    <div class="cat-tile"><a href="/recipes/thai">Thai</a></div>
+    <div class="cat-tile"><a href="/recipes/spanish">Spanish</a></div>
+    <div class="cat-tile"><a href="/recipes/moroccan">Moroccan</a></div>
+    <div class="cat-tile"><a href="/recipes/korean">Korean</a></div>
+    <div class="cat-tile"><a href="/recipes/chinese">Chinese</a></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       Recipe grid — the target container.
+       Pattern: grid > tile:nth(N) > tile-inner:nth(1) > <a>
+       Each <a> has a <style> injection and "|"-separated metadata.
+       ══════════════════════════════════════════════════════════════ -->
+  <div class="recipe-grid">
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/spaghetti-carbonara-with-pancetta-5a1b2c3d4e5f">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/carbonara.jpg" alt="Spaghetti Carbonara"/>
+          <span class="title">Spaghetti Carbonara with Pancetta</span>
+          <span class="meta">25 Min | Easy | 620 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/thai-green-curry-with-jasmine-rice-6b2c3d4e5f6a">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/thai-curry.jpg" alt="Thai Green Curry"/>
+          <span class="title">Thai Green Curry with Jasmine Rice</span>
+          <span class="meta">35 Min | Medium | 540 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/roasted-salmon-with-lemon-herb-crust-7c3d4e5f6a7b">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/salmon.jpg" alt="Roasted Salmon"/>
+          <span class="title">Roasted Salmon with Lemon Herb Crust</span>
+          <span class="meta">20 Min | Easy | 480 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/smoky-black-bean-tacos-with-avocado-8d4e5f6a7b8c">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/tacos.jpg" alt="Black Bean Tacos"/>
+          <span class="title">Smoky Black Bean Tacos with Avocado</span>
+          <span class="meta">30 Min | Easy | 510 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/mushroom-risotto-with-truffle-oil-9e5f6a7b8c9d">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/risotto.jpg" alt="Mushroom Risotto"/>
+          <span class="title">Mushroom Risotto with Truffle Oil</span>
+          <span class="meta">45 Min | Hard | 680 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/greek-chicken-souvlaki-with-tzatziki-af6a7b8c9d0e">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/souvlaki.jpg" alt="Chicken Souvlaki"/>
+          <span class="title">Greek Chicken Souvlaki with Tzatziki</span>
+          <span class="meta">40 Min | Medium | 560 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/veggie-pad-thai-with-tofu-and-peanuts-bg7b8c9d0e1f">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/pad-thai.jpg" alt="Veggie Pad Thai"/>
+          <span class="title">Veggie Pad Thai with Tofu and Peanuts</span>
+          <span class="meta">25 Min | Easy | 490 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/slow-cooked-moroccan-lamb-tagine-ch8c9d0e1f2a">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/tagine.jpg" alt="Moroccan Lamb Tagine"/>
+          <span class="title">Slow Cooked Moroccan Lamb Tagine</span>
+          <span class="meta">120 Min | Hard | 720 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/crispy-korean-fried-chicken-di9d0e1f2a3b">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/fried-chicken.jpg" alt="Korean Fried Chicken"/>
+          <span class="title">Crispy Korean Fried Chicken</span>
+          <span class="meta">50 Min | Medium | 640 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/french-onion-soup-with-gruyere-ej0e1f2a3b4c">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/onion-soup.jpg" alt="French Onion Soup"/>
+          <span class="title">French Onion Soup with Gruyere</span>
+          <span class="meta">60 Min | Medium | 430 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/spicy-indian-chickpea-curry-fk1f2a3b4c5d">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/chickpea-curry.jpg" alt="Indian Chickpea Curry"/>
+          <span class="title">Spicy Indian Chickpea Curry</span>
+          <span class="meta">35 Min | Medium | 470 kcal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="recipe-tile">
+      <div class="tile-inner">
+        <a href="/recipes/japanese-miso-ramen-with-soft-egg-gl2a3b4c5d6e">
+          <style>.sc-card{position:relative;display:block}</style>
+          <img src="/img/ramen.jpg" alt="Miso Ramen"/>
+          <span class="title">Japanese Miso Ramen with Soft Egg</span>
+          <span class="meta">45 Min | Medium | 590 kcal</span>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /recipe-grid -->
+</div><!-- /page-content -->
+
+<!-- ════════════════════════════
+     Footer (must be excluded)
+     ════════════════════════════ -->
+<footer>
+  <a href="/privacy">Privacy Policy</a>
+  <a href="/terms">Terms of Use</a>
+  <a href="/sitemap">Sitemap</a>
+</footer>
+
+</body>
+</html>

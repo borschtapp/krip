@@ -2,6 +2,7 @@ package discovery
 
 import (
 	"fmt"
+	"log"
 	"net/url"
 
 	"github.com/borschtapp/krip/model"
@@ -14,30 +15,57 @@ const (
 	SourceDOMContainer model.DiscoverySource = "dom-container"
 )
 
-// ScrapeFeed runs the universal discovery pipeline against the given DataInput.
-// On success, feed.Entries will contain stub recipes (Url only) and feed.Discovered will describe how they were found.
-func ScrapeFeed(data *model.DataInput, feed *model.Feed) error {
-	// First, try if there is an RSS/Atom <link rel="alternate"> in the page <head>.
-	if d, err := tryRSSLink(data, feed); err == nil && d != nil {
-		feed.Discovered = d
-		return nil
-	}
+// GroupValidator samples a slice of candidate URLs and returns the subset that are
+// confirmed recipe pages (already scraped, ready to merge into feed entries).
+type GroupValidator func(urls []string) []*model.Recipe
 
+// SamplingOptions configures optional URL validation during DOM discovery.
+// The zero value disables sampling entirely.
+type SamplingOptions struct {
+	// Validator is called with a sample of candidate URLs; nil disables validation.
+	Validator GroupValidator
+	// SampleSize is the number of URLs to sample per candidate group; 0 disables sampling.
+	SampleSize int
+}
+
+// ScrapeFeed runs the discovery pipeline against the given DataInput.
+// On success, feed.Entries will contain stub recipes (Url only) and feed.Discovered will describe how they were found.
+// When sampling.Validator is set, it is called with a sample of URLs from each DOM candidate group before committing it.
+// Groups where fewer than half the sampled URLs are recipes are skipped; the next-best group is tried instead.
+func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOptions) error {
 	baseUrl, err := url.Parse(data.Url)
 	if err != nil {
 		return fmt.Errorf("discovery: invalid base URL: %w", err)
 	}
 
-	// Stage 1: DOM container scoring (zero extra requests)
-	if d, err := tryDOMScoring(data, feed, baseUrl); err == nil && d != nil {
+	// Stage 0: DOM container scoring (no extra requests, optionally for validation)
+	log.Println("discovery: trying DOM container scoring")
+	if d, err := tryDOMScoring(data, feed, baseUrl, sampling); err == nil && d != nil {
 		feed.Discovered = d
+		log.Printf("discovery: DOM container found with confidence score %.4f", d.ConfidenceScore)
 		return nil
+	} else if err != nil {
+		log.Printf("discovery: DOM container scoring error: %v", err)
+	}
+
+	// Stage 1: RSS/Atom <link rel="alternate"> feed (from the page <head>, 1 extra request)
+	log.Println("discovery: trying RSS/Atom link in page head")
+	if d, err := tryRSSLink(data, feed); err == nil && d != nil {
+		feed.Discovered = d
+		log.Println("discovery: RSS/Atom link found")
+		return nil
+	} else if err != nil {
+		log.Printf("discovery: RSS/Atom link error: %v", err)
 	}
 
 	// Stage 2: Sitemap (1–3 extra requests)
+	log.Println("discovery: trying sitemap")
 	if d, err := trySitemap(data, feed, baseUrl, data.RequestOptions); err == nil && d != nil {
 		feed.Discovered = d
+		log.Println("discovery: sitemap found")
 		return nil
+	} else if err != nil {
+		log.Printf("discovery: sitemap error: %v", err)
 	}
 
 	return fmt.Errorf("discovery: no entries found")

@@ -1,9 +1,12 @@
 package scraper
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"golang.org/x/net/html"
 
 	"github.com/borschtapp/krip/model"
 )
@@ -77,8 +80,37 @@ func TestValidateDiscoverySample_StrictMajority(t *testing.T) {
 	}
 
 	for _, tc := range tests {
-		// Simulate the majority check directly (the formula, not the network call)
+		// Check majority.
 		got := tc.tried > 0 && tc.hits*2 > tc.tried
 		assert.Equal(t, tc.want, got, "tried=%d hits=%d", tc.tried, tc.hits)
+	}
+}
+
+func TestFindEntries_SingleInvalidSchemaEntryFallsThrough(t *testing.T) {
+	const rawHTML = `<!DOCTYPE html><html><head>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Recipe","name":"Carbonara","url":"https://example.com/pasta"}
+</script>
+</head><body><main><ul>
+  <li><a href="/recipes/pasta"><img src="/img/pasta.jpg"><span>Creamy Pasta</span></a></li>
+  <li><a href="/recipes/chicken"><img src="/img/chicken.jpg"><span>Roast Chicken</span></a></li>
+  <li><a href="/recipes/salad"><img src="/img/salad.jpg"><span>Summer Salad</span></a></li>
+  <li><a href="/recipes/soup"><img src="/img/soup.jpg"><span>Tomato Soup</span></a></li>
+</ul></main></body></html>`
+
+	root, err := html.Parse(strings.NewReader(rawHTML))
+	require.NoError(t, err)
+	data, err := NodeInput(root, "https://example.com/recipes", model.ScrapeOptions{SkipMetaUrl: true})
+	require.NoError(t, err)
+
+	feed := &model.Feed{}
+	scrapedURLs := map[string]bool{}
+	err = findEntries(data, feed, model.FeedOptions{}, scrapedURLs)
+	require.NoError(t, err, "should succeed by falling through to discovery")
+
+	// Discovery must find the <ul> entries, not the schema stub.
+	assert.Greater(t, len(feed.Entries), 1, "should find multiple entries via DOM discovery, not just the schema stub")
+	for _, e := range feed.Entries {
+		assert.NotEqual(t, "https://example.com/pasta", e.Url, "schema stub URL must not appear")
 	}
 }

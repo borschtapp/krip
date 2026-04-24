@@ -17,28 +17,28 @@ type HTTPClient interface {
 	Post(url, contentType string, body io.Reader) (*http.Response, error)
 }
 
-// RequestOptions holds reusable HTTP configuration for all requests in a scrape session.
+// RequestOptions holds reusable HTTP configuration for a scrape session.
 type RequestOptions struct {
-	// Context for cancellation. If nil, context.Background() is used.
+	// Cancellation context; defaults to context.Background().
 	Context context.Context
-	// Headers to merge with defaults. Custom values take priority.
+	// Headers merged with defaults; custom values take priority.
 	Headers http.Header
-	// HttpClient to use. If nil, a default 30s-timeout client is used.
+	// HTTP client to use; defaults to a 30s-timeout client.
 	HttpClient HTTPClient
 }
 
-// RecipeFilter holds optional criteria for filtering recipes beyond basic validity.
+// RecipeFilter holds optional criteria for filtering recipes.
 type RecipeFilter struct {
-	// Whether to accept recipes without images.
+	// Accept recipes without images.
 	OptionalImage bool
-	// Whether to accept recipes without a publisher.
+	// Accept recipes without a publisher.
 	OptionalPublisher bool
-	// Whether to accept recipes without ingredients.
+	// Accept recipes without ingredients.
 	OptionalIngredients bool
-	// When set, recipes with fewer than these many ingredients are rejected.
-	// Useful to skip prepared/frozen food recipes, which usually have very few ingredients.
+	// Reject recipes with fewer than this many ingredients; 0 = disabled.
+	// Useful to filter out prepared/frozen food recipes.
 	MinIngredients int
-	// Whether to accept recipes without instructions.
+	// Accept recipes without instructions.
 	OptionalInstructions bool
 }
 
@@ -47,15 +47,15 @@ type ScrapeOptions struct {
 	RequestOptions
 	RecipeFilter
 
-	// When true, skip scraping the URL from meta tags and rely on the input URL.
+	// Skip scraping the URL from meta tags; uses the input URL instead.
 	SkipMetaUrl bool
-	// When true, skip parsing microdata and rely on other sources. It is a main source of data.
+	// Skip parsing microdata (primary data source, used by schema and OpenGraph scrapers).
 	SkipMicrodata bool
-	// When true, skip parsing schemas and rely on other sources.
+	// Skip parsing schemas.
 	SkipSchemaScraper bool
-	// When true, skip parsing opengraph and rely on other sources.
+	// Skip parsing OpenGraph tags.
 	SkipOpenGraphScraper bool
-	// When true, skip parsing custom scrapers and rely on other sources.
+	// Skip custom scrapers.
 	SkipCustomScrapers bool
 }
 
@@ -63,19 +63,21 @@ type ScrapeOptions struct {
 type FeedOptions struct {
 	ScrapeOptions
 
-	// When true, skip parsing feed meta tags and rely on other sources.
+	// Skip parsing feed meta tags.
 	SkipFeedMeta bool
-	// When true, skip parsing RSS feeds and rely on other sources.
+	// Skip parsing RSS feeds.
 	SkipRSSScraper bool
-	// When true, only the feed will be scraped without scraping each entry separately. Useful for quick runs.
-	SkipEntriesScrape bool
-	// When true, skip the universal discovery strategy.
+	// Skip the universal discovery strategy.
 	SkipDiscoveryScraper bool
-	// AllowDiscoverySampling fetches 2–3 candidate URLs to confirm they are recipe pages.
-	// Disabled by default; enabling adds extra HTTP requests but validates low-confidence results.
-	AllowDiscoverySampling bool
-	// Discovered, if non-nil, skips discovery and reuses previously discovered container/feed.
-	// Populate from a previously returned Feed.Discovered value.
+	// If > 0, sample up to this many URLs per candidate group during DOM discovery.
+	// Failed groups are skipped; confirmed entries are not re-fetched later.
+	DiscoverySampleSize int
+	// Skip scraping individual entries; useful for quick runs.
+	SkipEntriesScrape bool
+	// Max entries to scrape individually; 0 = default (20), negative = no cap.
+	MaxEntriesForScrape int
+	// If non-nil, skip discovery and reuse a previously discovered container/feed.
+	// Populate from a prior Feed.Discovered value.
 	Discovered *DiscoveredFeed
 }
 

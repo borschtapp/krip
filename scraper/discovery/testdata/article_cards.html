@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  Synthetic page that exercises the article-card layout common on food blogs
+  and CMS-driven recipe sites (WordPress, Ghost, etc.).
+
+  Patterns exercised:
+
+  1. ARTICLE SIBLING MERGE — each recipe is a top-level <article> child of a
+     <section>.  At keyDepth=4 each article gets its own group key because
+     their nth-of-type index differs.  mergeSiblingGroups must strip ONE level
+     to find the shared section ancestor and merge them.
+
+  2. LAZY-LOAD IMAGES (data-src) — the <img> elements carry no "src" attribute.
+     imgSrc() must fall back to "data-src" to detect image presence.
+
+  3. BULLET-SEPARATED METADATA — the visible text inside each <a> is
+     "Recipe Title • XX min • Difficulty".  The full string exceeds 8 words, so
+     textQualityScore must split on "•" and score the title segment separately.
+
+  4. COMPETING SIDEBAR — a .sidebar div contains category links that also share
+     a common URL prefix.  Because .sidebar matches the exclusionSelector it
+     must be entirely excluded from group scoring.
+
+  5. SEMANTIC BONUS — the merged group's tag is "article" which returns 1.0 from
+     semanticBonus(), giving it an advantage over any competing div group.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Latest Recipes | FoodBlog</title>
+</head>
+<body>
+
+<!-- Navigation (excluded by exclusionSelector) -->
+<nav>
+  <a href="/about">About</a>
+  <a href="/recipes">Recipes</a>
+  <a href="/contact">Contact</a>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- Sidebar (excluded via .sidebar class in exclusionSelector) -->
+  <aside class="sidebar">
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="/category/italian">Italian</a></li>
+      <li><a href="/category/asian">Asian</a></li>
+      <li><a href="/category/vegan">Vegan</a></li>
+      <li><a href="/category/quick">Quick Meals</a></li>
+      <li><a href="/category/baking">Baking</a></li>
+    </ul>
+  </aside>
+
+  <!-- Recipe listing — target container.
+       Pattern: section > article:nth(N) > a
+       mergeSiblingGroups strips ONE level → merged key = section ancestor. -->
+  <section class="recipe-listing">
+
+    <article class="recipe-card">
+      <a href="/recipes/creamy-tuscan-chicken-pasta">
+        <img data-src="/img/tuscan-chicken.jpg" alt="Tuscan Chicken Pasta"/>
+        <h3>Creamy Tuscan Chicken Pasta</h3>
+        <span class="meta">35 min • Easy • 620 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/roasted-butternut-squash-soup">
+        <img data-src="/img/squash-soup.jpg" alt="Butternut Squash Soup"/>
+        <h3>Roasted Butternut Squash Soup</h3>
+        <span class="meta">50 min • Easy • 340 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/honey-garlic-glazed-salmon">
+        <img data-src="/img/glazed-salmon.jpg" alt="Honey Garlic Salmon"/>
+        <h3>Honey Garlic Glazed Salmon</h3>
+        <span class="meta">20 min • Easy • 480 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/spicy-lentil-and-tomato-stew">
+        <img data-src="/img/lentil-stew.jpg" alt="Lentil Tomato Stew"/>
+        <h3>Spicy Lentil and Tomato Stew</h3>
+        <span class="meta">45 min • Medium • 390 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/classic-beef-bourguignon">
+        <img data-src="/img/beef-bourguignon.jpg" alt="Beef Bourguignon"/>
+        <h3>Classic Beef Bourguignon</h3>
+        <span class="meta">180 min • Hard • 710 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/baked-lemon-herb-chicken-thighs">
+        <img data-src="/img/herb-chicken.jpg" alt="Lemon Herb Chicken"/>
+        <h3>Baked Lemon Herb Chicken Thighs</h3>
+        <span class="meta">40 min • Easy • 520 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/vegetable-thai-green-curry">
+        <img data-src="/img/thai-green-veg.jpg" alt="Vegetable Thai Green Curry"/>
+        <h3>Vegetable Thai Green Curry</h3>
+        <span class="meta">30 min • Medium • 410 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/slow-roasted-pork-shoulder-tacos">
+        <img data-src="/img/pork-tacos.jpg" alt="Pork Shoulder Tacos"/>
+        <h3>Slow Roasted Pork Shoulder Tacos</h3>
+        <span class="meta">240 min • Medium • 680 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/mushroom-and-spinach-frittata">
+        <img data-src="/img/frittata.jpg" alt="Mushroom Spinach Frittata"/>
+        <h3>Mushroom and Spinach Frittata</h3>
+        <span class="meta">25 min • Easy • 310 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/pan-seared-duck-breast-cherry-sauce">
+        <img data-src="/img/duck-breast.jpg" alt="Duck Breast Cherry Sauce"/>
+        <h3>Pan Seared Duck Breast Cherry Sauce</h3>
+        <span class="meta">35 min • Hard • 590 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/smoky-chickpea-and-chorizo-stew">
+        <img data-src="/img/chickpea-chorizo.jpg" alt="Chickpea Chorizo Stew"/>
+        <h3>Smoky Chickpea and Chorizo Stew</h3>
+        <span class="meta">40 min • Easy • 530 kcal</span>
+      </a>
+    </article>
+
+    <article class="recipe-card">
+      <a href="/recipes/japanese-teriyaki-tofu-bowls">
+        <img data-src="/img/teriyaki-tofu.jpg" alt="Teriyaki Tofu Bowls"/>
+        <h3>Japanese Teriyaki Tofu Bowls</h3>
+        <span class="meta">25 min • Easy • 440 kcal</span>
+      </a>
+    </article>
+
+  </section>
+
+</div><!-- /page-wrapper -->
+
+<!-- Footer (excluded by exclusionSelector) -->
+<footer>
+  <a href="/privacy">Privacy Policy</a>
+  <a href="/terms">Terms of Use</a>
+</footer>
+
+</body>
+</html>
