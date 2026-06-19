@@ -156,10 +156,3 @@ func TestMaybeDecompress_PlainData(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, data, result)
 }
-
-func TestContainsRecipeKeyword(t *testing.T) {
-	assert.True(t, containsRecipeKeyword("https://example.com/recipe-sitemap.xml"))
-	assert.True(t, containsRecipeKeyword("https://example.com/food-sitemap.xml"))
-	assert.False(t, containsRecipeKeyword("https://example.com/page-sitemap.xml"))
-	assert.False(t, containsRecipeKeyword("https://example.com/sitemap.xml"))
-}

@@ -237,7 +237,13 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 			}
 		}
 
-		if err := discovery.ScrapeFeed(data, feed, sampling); err == nil && len(feed.Entries) > 0 {
+		scoring := discovery.ScoringOptions{
+			AcceptThreshold: options.DOMAcceptThreshold,
+			SampleThreshold: options.DOMSampleThreshold,
+			MinGroupSize:    options.DOMMinGroupSize,
+			MaxGroupsCheck:  options.DOMMaxGroupsCheck,
+		}
+		if err := discovery.ScrapeFeed(data, feed, sampling, scoring); err == nil && len(feed.Entries) > 0 {
 			if prescraped != nil {
 				for _, e := range feed.Entries {
 					if _, ok := prescraped[e.Url]; ok {

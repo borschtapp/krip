@@ -7,6 +7,8 @@ import (
 	"io/fs"
 	"log"
 	"net/http"
+	"net/url"
+	"strings"
 
 	"github.com/borschtapp/krip"
 )
@@ -32,6 +34,16 @@ func requireURL(w http.ResponseWriter, r *http.Request) (string, bool) {
 	u := r.URL.Query().Get("url")
 	if u == "" {
 		http.Error(w, "`url` query param is required.", http.StatusBadRequest)
+		return "", false
+	}
+	parsed, err := url.Parse(u)
+	if err != nil {
+		http.Error(w, "`url` is not a valid URL.", http.StatusBadRequest)
+		return "", false
+	}
+	scheme := strings.ToLower(parsed.Scheme)
+	if scheme != "http" && scheme != "https" {
+		http.Error(w, "`url` must use http or https scheme.", http.StatusBadRequest)
 		return "", false
 	}
 	return u, true

@@ -49,7 +49,7 @@ func TestScrapeFeed_DOMContainer(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 
 	assert.NotEmpty(t, feed.Entries)
@@ -116,7 +116,7 @@ func TestScrapeFeed_ExcludesNavLinks(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 
 	for _, entry := range feed.Entries {
@@ -170,7 +170,7 @@ func TestScrapeFeed_MetadataExtracted(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 	require.NotEmpty(t, feed.Entries)
 
@@ -196,7 +196,7 @@ func TestScrapeFeed_SiblingImageExtracted(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 	require.NotEmpty(t, feed.Entries)
 
@@ -210,7 +210,7 @@ func TestScrapeFeed_EmptyDocument(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: nil}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	assert.Error(t, err)
 	assert.Empty(t, feed.Entries)
 }
@@ -237,7 +237,7 @@ func TestScrapeFeed_ScoreThreshold(t *testing.T) {
 		doc := parseDocument(t, makeRecipeList(8))
 		data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 		feed := &model.Feed{}
-		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 		require.NoError(t, err)
 		assert.NotEmpty(t, feed.Entries)
 	})
@@ -252,7 +252,7 @@ func TestScrapeFeed_ScoreThreshold(t *testing.T) {
 		doc := parseDocument(t, html)
 		data := &model.DataInput{Url: "https://example.com", Document: doc}
 		feed := &model.Feed{}
-		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 		assert.Error(t, err, "low-quality container should be rejected")
 	})
 }
@@ -285,7 +285,7 @@ func TestScrapeFeed_ImageDensityTiebreaker(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 
 	// All winning entries should come from the with-images section
@@ -311,7 +311,7 @@ func TestScrapeFeed_ArticleCardsPattern(t *testing.T) {
 	}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "ScrapeFeed should succeed on the article-card page")
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -360,7 +360,7 @@ func TestScrapeFeed_LazyLoadImages(t *testing.T) {
 	}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -414,7 +414,7 @@ func TestScrapeFeed_BulletSeparatedMetadata(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "bullet-separated metadata should not prevent discovery")
 	assert.NotEmpty(t, feed.Entries)
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -435,7 +435,7 @@ func TestScrapeFeed_MinGroupSizeBoundary(t *testing.T) {
 		data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 		feed := &model.Feed{}
 
-		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 		require.NoError(t, err, "group of exactly 3 links should pass minGroupSize filter")
 		assert.Len(t, feed.Entries, 3)
 	})
@@ -450,9 +450,40 @@ func TestScrapeFeed_MinGroupSizeBoundary(t *testing.T) {
 		data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
 		feed := &model.Feed{}
 
-		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 		assert.Error(t, err, "group of 2 links should be filtered out — below minGroupSize=3")
 		assert.Empty(t, feed.Entries)
+	})
+}
+
+// TestScrapeFeed_ScoringOptionsOverride verifies that a non-default ScoringOptions
+// actually changes the outcome: a 2-link group that the default minGroupSize (3)
+// rejects is accepted once the caller lowers MinGroupSize to 2.
+func TestScrapeFeed_ScoringOptionsOverride(t *testing.T) {
+	const html = `<!DOCTYPE html><html><body><main><ul>
+		<li><a href="/recipes/pasta"><img src="/img/pasta.jpg"><span>Creamy Pasta Bake</span></a></li>
+		<li><a href="/recipes/chicken"><img src="/img/chicken.jpg"><span>Roast Chicken Dinner</span></a></li>
+	</ul></main></body></html>`
+
+	t.Run("rejected with default thresholds", func(t *testing.T) {
+		doc := parseDocument(t, html)
+		data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
+		feed := &model.Feed{}
+
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
+		assert.Error(t, err, "2-link group is below the default minGroupSize of 3")
+		assert.Empty(t, feed.Entries)
+	})
+
+	t.Run("accepted with MinGroupSize override", func(t *testing.T) {
+		doc := parseDocument(t, html)
+		data := &model.DataInput{Url: "https://example.com/recipes", Document: doc}
+		feed := &model.Feed{}
+
+		err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{MinGroupSize: 2})
+		require.NoError(t, err, "lowering MinGroupSize to 2 should let the 2-link group through")
+		assert.Len(t, feed.Entries, 2)
+		assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
 	})
 }
 
@@ -514,7 +545,7 @@ func TestScrapeFeed_RootLevelSlugs(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "ScrapeFeed should succeed on root-level slug layout")
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -568,7 +599,7 @@ func TestScrapeFeed_ValidationAcceptsMajority(t *testing.T) {
 		return out
 	}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 2})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 2}, discovery.ScoringOptions{})
 	require.NoError(t, err)
 	assert.Equal(t, 1, calls, "validator should be called exactly once for the winning group")
 	assert.NotEmpty(t, feed.Entries)
@@ -599,7 +630,7 @@ func TestScrapeFeed_ValidationFallback(t *testing.T) {
 		return []*model.Recipe{{Url: urls[0]}}
 	}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 3})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 3}, discovery.ScoringOptions{})
 	require.NoError(t, err, "best-effort fallback should succeed when at least one URL is confirmed")
 	assert.NotEmpty(t, feed.Entries)
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -621,7 +652,7 @@ func TestScrapeFeed_ValidationRejectsAllGroups(t *testing.T) {
 
 	validator := func(urls []string) []*model.Recipe { return nil }
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 3})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{Validator: validator, SampleSize: 3}, discovery.ScoringOptions{})
 	assert.Error(t, err, "should fail when no group has any confirmed URLs")
 	assert.Empty(t, feed.Entries)
 }
@@ -651,7 +682,7 @@ func TestScrapeFeed_GridTilePattern(t *testing.T) {
 	}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "ScrapeFeed should succeed on the grid-tile page")
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source,
@@ -769,7 +800,7 @@ func TestScrapeFeed_SmallRecipeCardsInSection(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "ScrapeFeed should discover the recipe section, not fail")
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)
@@ -880,7 +911,7 @@ func TestScrapeFeed_IngredientSectionNoise(t *testing.T) {
 	data := &model.DataInput{Url: "https://example.com/", Document: doc}
 	feed := &model.Feed{}
 
-	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{})
+	err := discovery.ScrapeFeed(data, feed, discovery.SamplingOptions{}, discovery.ScoringOptions{})
 	require.NoError(t, err, "ScrapeFeed should succeed and pick a recipe-card group, not ingredients")
 
 	assert.Equal(t, discovery.SourceDOMContainer, feed.Discovered.Source)

@@ -28,11 +28,24 @@ type SamplingOptions struct {
 	SampleSize int
 }
 
+// ScoringOptions tunes the DOM heuristic scoring thresholds.
+// Zero values fall back to the package-level defaults.
+type ScoringOptions struct {
+	// AcceptThreshold overrides the confidence score above which a group is accepted without sampling.
+	AcceptThreshold float64
+	// SampleThreshold overrides the confidence score above which sampling is required.
+	SampleThreshold float64
+	// MinGroupSize overrides the minimum number of links a container group must have.
+	MinGroupSize int
+	// MaxGroupsCheck overrides the maximum number of candidate groups to validate via sampling.
+	MaxGroupsCheck int
+}
+
 // ScrapeFeed runs the discovery pipeline against the given DataInput.
 // On success, feed.Entries will contain stub recipes (Url only) and feed.Discovered will describe how they were found.
 // When sampling.Validator is set, it is called with a sample of URLs from each DOM candidate group before committing it.
 // Groups where fewer than half the sampled URLs are recipes are skipped; the next-best group is tried instead.
-func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOptions) error {
+func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOptions, scoring ScoringOptions) error {
 	baseUrl, err := url.Parse(data.Url)
 	if err != nil {
 		return fmt.Errorf("discovery: invalid base URL: %w", err)
@@ -40,7 +53,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOption
 
 	// Stage 0: DOM container scoring (no extra requests, optionally for validation)
 	log.Println("discovery: trying DOM container scoring")
-	if d, err := tryDOMScoring(data, feed, baseUrl, sampling); err == nil && d != nil {
+	if d, err := tryDOMScoring(data, feed, baseUrl, sampling, scoring); err == nil && d != nil {
 		feed.Discovered = d
 		log.Printf("discovery: DOM container found with confidence score %.4f", d.ConfidenceScore)
 		return nil

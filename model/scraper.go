@@ -79,6 +79,17 @@ type FeedOptions struct {
 	// If non-nil, skip discovery and reuse a previously discovered container/feed.
 	// Populate from a prior Feed.Discovered value.
 	Discovered *DiscoveredFeed
+
+	// DOM discovery tuning. Zero values fall back to built-in defaults.
+
+	// Confidence score above which a DOM container is accepted without sampling (default 0.70).
+	DOMAcceptThreshold float64
+	// Confidence score above which a DOM container requires sampling before acceptance (default 0.55).
+	DOMSampleThreshold float64
+	// Minimum number of links a DOM container group must have (default 3).
+	DOMMinGroupSize int
+	// Maximum number of candidate DOM groups to validate via sampling (default 3).
+	DOMMaxGroupsCheck int
 }
 
 // DataInput represents the input data for the scraper

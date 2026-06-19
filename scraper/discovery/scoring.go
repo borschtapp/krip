@@ -16,12 +16,29 @@ import (
 )
 
 const (
-	keyDepth        = 4    // ancestor levels used to build containerKey
-	minGroupSize    = 3    // groups smaller than this are ignored
-	sampleThreshold = 0.55 // accept only with sampling
-	// AcceptThreshold is the confidence score above which results are accepted without sampling.
-	AcceptThreshold = 0.70
+	keyDepth            = 4    // ancestor levels used to build containerKey
+	minGroupSize        = 3    // groups smaller than this are ignored
+	sampleThreshold     = 0.55 // accept only with sampling
+	acceptThreshold     = 0.70 // confidence score above which results are accepted without sampling
+	maxGroupsToValidate = 3    // caps the number of candidate groups to check
 )
+
+// resolve returns a copy of s with package defaults filled in for any unset (zero-valued) field.
+func (s ScoringOptions) resolve() ScoringOptions {
+	if s.AcceptThreshold == 0 {
+		s.AcceptThreshold = acceptThreshold
+	}
+	if s.SampleThreshold == 0 {
+		s.SampleThreshold = sampleThreshold
+	}
+	if s.MinGroupSize == 0 {
+		s.MinGroupSize = minGroupSize
+	}
+	if s.MaxGroupsCheck == 0 {
+		s.MaxGroupsCheck = maxGroupsToValidate
+	}
+	return s
+}
 
 // exclusionSelector matches non-content zones to ignore.
 const exclusionSelector = "nav, header, footer, [role=navigation], [role=banner], [role=contentinfo], .sidebar, #sidebar, .nav, #nav, .header, #header, .footer, #footer"
@@ -100,19 +117,18 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 	return nil
 }
 
-// maxGroupsToValidate caps the number of candidate groups to check.
-const maxGroupsToValidate = 3
-
 // tryDOMScoring finds and validates the best-scoring container of recipe links.
-func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sampling SamplingOptions) (*model.DiscoveredFeed, error) {
+func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sampling SamplingOptions, scoring ScoringOptions) (*model.DiscoveredFeed, error) {
 	if data.Document == nil {
 		return nil, fmt.Errorf("discovery: no document")
 	}
 
+	sc := scoring.resolve()
+
 	groups := collectGroups(data.Document, baseUrl)
 	mergeSiblingGroups(groups)
 	for k, g := range groups {
-		if len(g.links) < minGroupSize {
+		if len(g.links) < sc.MinGroupSize {
 			delete(groups, k)
 		}
 	}
@@ -121,11 +137,11 @@ func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sa
 	}
 
 	ranked := rankGroups(groups)
-	if ranked[0].score < sampleThreshold {
+	if ranked[0].score < sc.SampleThreshold {
 		return nil, fmt.Errorf("discovery: best container score %.2f below threshold", ranked[0].score)
 	}
 
-	sg, byUrl, urls, err := selectBestGroup(ranked, baseUrl, sampling)
+	sg, byUrl, urls, err := selectBestGroup(ranked, baseUrl, sampling, sc)
 	if err != nil {
 		return nil, err
 	}
@@ -138,7 +154,7 @@ func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sa
 
 // selectBestGroup iterates ranked candidates, optionally validates each, and returns
 // the best group together with its deduplicated entry map and URL slice.
-func selectBestGroup(ranked []scoredGroup, baseUrl *url.URL, sampling SamplingOptions) (scoredGroup, map[string]*model.Recipe, []string, error) {
+func selectBestGroup(ranked []scoredGroup, baseUrl *url.URL, sampling SamplingOptions, sc ScoringOptions) (scoredGroup, map[string]*model.Recipe, []string, error) {
 	type fallbackCandidate struct {
 		byUrl      map[string]*model.Recipe
 		urls       []string
@@ -148,11 +164,18 @@ func selectBestGroup(ranked []scoredGroup, baseUrl *url.URL, sampling SamplingOp
 	var best *fallbackCandidate
 
 	for i, sg := range ranked {
-		if sg.score < sampleThreshold || (sampling.Validator != nil && i >= maxGroupsToValidate) {
+		if sg.score < sc.SampleThreshold || (sampling.Validator != nil && i >= sc.MaxGroupsCheck) {
 			break
 		}
 
 		byUrl, urls := buildGroupEntries(sg.group, baseUrl)
+
+		// High-confidence groups bypass sampling only when no validator is configured.
+		// When the caller explicitly provides a validator, we always run it.
+		if sg.score >= sc.AcceptThreshold && sampling.Validator == nil {
+			return sg, byUrl, urls, nil
+		}
+
 		validCount, sampleCount := applyGroupValidation(byUrl, urls, sampling.Validator, sampling.SampleSize)
 
 		if sampleCount == 0 || validCount*2 > sampleCount {

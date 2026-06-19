@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func FindInt(val interface{}) int {
+func FindInt(val any) int {
 	switch v := val.(type) {
 	case int:
 		return v
@@ -23,7 +23,7 @@ func FindInt(val interface{}) int {
 	return 0
 }
 
-func FindFloat(val interface{}) float64 {
+func FindFloat(val any) float64 {
 	switch v := val.(type) {
 	case int:
 		return float64(v)

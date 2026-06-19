@@ -8,7 +8,6 @@ import (
 	"io"
 	"net/url"
 	"regexp"
-	"strings"
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
@@ -119,7 +118,7 @@ func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string
 	// Sort: recipe-keyword children first
 	var preferred, rest []string
 	for _, loc := range indexLocs {
-		if containsRecipeKeyword(loc) {
+		if recipePathPattern.MatchString(loc) {
 			preferred = append(preferred, loc)
 		} else {
 			rest = append(rest, loc)
@@ -222,18 +221,9 @@ func parseSitemap(body []byte) ([]string, bool, error) {
 	}
 }
 
-// recipeKeywords is the canonical list of recipe-related keywords used for
-// both URL path pattern matching and sitemap index prioritisation.
-var recipeKeywords = []string{"recipe", "cook", "food", "dish", "meal"}
-
-// recipePathPatterns matches URL paths that likely point to recipe pages.
-var recipePathPatterns = []*regexp.Regexp{
-	regexp.MustCompile(`(?i)/recipes?/`),
-	regexp.MustCompile(`(?i)/cook/`),
-	regexp.MustCompile(`(?i)/food/`),
-	regexp.MustCompile(`(?i)/dish/`),
-	regexp.MustCompile(`(?i)/meal/`),
-}
+// recipePathPattern matches recipe-related keywords in URLs.
+// Used both to filter individual recipe page URLs and to prioritise sitemap index children.
+var recipePathPattern = regexp.MustCompile(`(?i)(recipes?|cook|food|dish|meal|recettes?|cuisine|rezepte?|kochen|gerichte?|recetas?|cocina|platos?|receitas?|cozinha|pratos?|ricette?|cucina|piatti|recepty?|przepisy?|dania?)`)
 
 func filterRecipeLocs(locs []string) []string {
 	seen := map[string]struct{}{}
@@ -243,24 +233,11 @@ func filterRecipeLocs(locs []string) []string {
 			continue
 		}
 		seen[loc] = struct{}{}
-		for _, pat := range recipePathPatterns {
-			if pat.MatchString(loc) {
-				filtered = append(filtered, loc)
-				break
-			}
+		if recipePathPattern.MatchString(loc) {
+			filtered = append(filtered, loc)
 		}
 	}
 	return filtered
-}
-
-func containsRecipeKeyword(s string) bool {
-	lower := strings.ToLower(s)
-	for _, kw := range recipeKeywords {
-		if strings.Contains(lower, kw) {
-			return true
-		}
-	}
-	return false
 }
 
 // maxDecompressBytes is the upper bound for decompressed sitemap content.
