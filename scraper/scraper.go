@@ -218,18 +218,30 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 			prescraped = make(map[string]*model.Recipe)
 			sampling = discovery.SamplingOptions{
 				SampleSize: options.DiscoverySampleSize,
+				// Fetches URLs one at a time and stops as soon as the accept/reject
+				// verdict used by discovery's selectBestGroup (hits*2 > n) is
+				// mathematically decided, so the remaining sample doesn't need to be
+				// fetched. n stays the full requested sample size regardless of how
+				// many were actually tried, matching applyGroupValidation's sampleCount.
 				Validator: func(urls []string) []*model.Recipe {
+					n := len(urls)
 					var confirmed []*model.Recipe
+					tried := 0
 					for _, u := range urls {
+						tried++
 						dataInput, err := UrlInput(u, options.ScrapeOptions)
-						if err != nil {
-							continue
+						if err == nil {
+							r := &model.Recipe{Url: u}
+							_ = Scrape(dataInput, r, options.ScrapeOptions)
+							if r.Validate(options.RecipeFilter) == nil {
+								prescraped[u] = r
+								confirmed = append(confirmed, r)
+							}
 						}
-						r := &model.Recipe{Url: u}
-						_ = Scrape(dataInput, r, options.ScrapeOptions)
-						if r.Validate(options.RecipeFilter) == nil {
-							prescraped[u] = r
-							confirmed = append(confirmed, r)
+
+						hits := len(confirmed)
+						if hits*2 > n || (tried-hits) >= (n+1)/2 {
+							break
 						}
 					}
 					return confirmed

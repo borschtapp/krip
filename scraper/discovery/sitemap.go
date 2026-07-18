@@ -8,6 +8,8 @@ import (
 	"io"
 	"net/url"
 	"regexp"
+	"strings"
+	"sync"
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
@@ -38,11 +40,15 @@ func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredF
 		locs, _ = followSitemapIndex(locs, data.RequestOptions)
 	}
 
+	// filterRecipeLocs already de-duplicates by loc, and feed is known-empty here
+	// (replay is the first entry-finding stage), so appending directly is
+	// equivalent to feed.AddEntry but skips its per-call O(len(feed.Entries)) scan
+	// — significant when a sitemap yields thousands of locs.
 	for _, loc := range filterRecipeLocs(locs) {
 		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(loc, d.UrlPattern) {
 			continue
 		}
-		feed.AddEntry(&model.Recipe{Url: loc})
+		feed.Entries = append(feed.Entries, &model.Recipe{Url: loc})
 	}
 
 	return nil
@@ -81,8 +87,12 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 		}
 
 		prefix := UrlPathPattern(recipeLocs)
+		// recipeLocs is already unique (filterRecipeLocs dedupes) and feed starts
+		// empty, so appending directly avoids AddEntry's O(len(feed.Entries)) scan
+		// per loc — this loop is exactly the "tens of thousands of locs" case §13
+		// of discovery-ideas.md calls out as quadratic.
 		for _, loc := range recipeLocs {
-			feed.AddEntry(&model.Recipe{Url: loc})
+			feed.Entries = append(feed.Entries, &model.Recipe{Url: loc})
 		}
 		return &model.DiscoveredFeed{
 			Source:     SourceSitemap,
@@ -97,19 +107,61 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 // sitemapCandidates returns sitemap URLs to probe, in priority order.
 func sitemapCandidates(data *model.DataInput, baseUrl *url.URL) []string {
 	var candidates []string
+	seen := make(map[string]struct{})
+
+	addCandidate := func(u string) {
+		if u == "" {
+			return
+		}
+		if _, dup := seen[u]; !dup {
+			seen[u] = struct{}{}
+			candidates = append(candidates, u)
+		}
+	}
 
 	if data.Document != nil {
 		if href, exists := data.Document.Find(`link[rel="sitemap"]`).First().Attr("href"); exists && href != "" {
-			candidates = append(candidates, utils.ToAbsoluteUrl(baseUrl, href))
+			addCandidate(utils.ToAbsoluteUrl(baseUrl, href))
 		}
 	}
 
 	base := utils.BaseUrl(baseUrl.String())
-	candidates = append(candidates,
-		base+"/sitemap_index.xml",
-		base+"/sitemap.xml",
-	)
+	for _, u := range robotsSitemaps(base, data.RequestOptions) {
+		addCandidate(u)
+	}
+
+	addCandidate(base + "/sitemap_index.xml")
+	addCandidate(base + "/sitemap.xml")
+
 	return candidates
+}
+
+// robotsSitemaps fetches robots.txt and returns any "Sitemap:" directive URLs.
+// robots.txt is the canonical registry for non-standard sitemap locations
+// (/sitemap-index.xml, /wp-sitemap.xml, /sitemap/sitemap.xml, ...) that the
+// hardcoded guesses below miss entirely; probing it turns what would otherwise be
+// wasted failed probes plus a missed feed into one small extra request.
+func robotsSitemaps(base string, opts model.RequestOptions) []string {
+	body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: base + "/robots.txt"}, opts)
+	if err != nil {
+		return nil
+	}
+
+	const directive = "sitemap:"
+	var sitemaps []string
+	for _, line := range strings.Split(string(body), "\n") {
+		line = strings.TrimSpace(line)
+		if idx := strings.IndexByte(line, '#'); idx >= 0 {
+			line = strings.TrimSpace(line[:idx])
+		}
+		if len(line) <= len(directive) || !strings.EqualFold(line[:len(directive)], directive) {
+			continue
+		}
+		if u := strings.TrimSpace(line[len(directive):]); u != "" {
+			sitemaps = append(sitemaps, u)
+		}
+	}
+	return sitemaps
 }
 
 // followSitemapIndex fetches child sitemaps from an index, returning all their locs.
@@ -118,7 +170,7 @@ func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string
 	// Sort: recipe-keyword children first
 	var preferred, rest []string
 	for _, loc := range indexLocs {
-		if recipePathPattern.MatchString(loc) {
+		if matchesRecipePath(loc) {
 			preferred = append(preferred, loc)
 		} else {
 			rest = append(rest, loc)
@@ -128,18 +180,33 @@ func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string
 
 	limit := min(3, len(ordered))
 
+	// Selection (which children to fetch, and in what preference order) already
+	// happened above; fetching those <= 3 children concurrently only shortens wall
+	// time; it does not change which sitemaps get fetched. Merge order below still
+	// follows the original preference order for determinism.
+	results := make([][]string, limit)
+	var wg sync.WaitGroup
+	for i, childUrl := range ordered[:limit] {
+		wg.Add(1)
+		go func(i int, childUrl string) {
+			defer wg.Done()
+			body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
+			if err != nil {
+				return
+			}
+			body, _ = maybeDecompress(body)
+			locs, isIndex, err := parseSitemap(body)
+			if err != nil || isIndex {
+				return
+			}
+			results[i] = locs
+		}(i, childUrl)
+	}
+	wg.Wait()
+
 	seen := map[string]struct{}{}
 	var allLocs []string
-	for _, childUrl := range ordered[:limit] {
-		body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
-		if err != nil {
-			continue
-		}
-		body, _ = maybeDecompress(body)
-		locs, isIndex, err := parseSitemap(body)
-		if err != nil || isIndex {
-			continue
-		}
+	for _, locs := range results {
 		for _, loc := range locs {
 			if _, dup := seen[loc]; !dup {
 				seen[loc] = struct{}{}
@@ -221,9 +288,22 @@ func parseSitemap(body []byte) ([]string, bool, error) {
 	}
 }
 
-// recipePathPattern matches recipe-related keywords in URLs.
+// recipePathPattern matches recipe-related keywords in a URL path.
 // Used both to filter individual recipe page URLs and to prioritise sitemap index children.
 var recipePathPattern = regexp.MustCompile(`(?i)(recipes?|cook|food|dish|meal|recettes?|cuisine|rezepte?|kochen|gerichte?|recetas?|cocina|platos?|receitas?|cozinha|pratos?|ricette?|cucina|piatti|recepty?|przepisy?|dania?)`)
+
+// matchesRecipePath matches recipePathPattern against the URL path only, not the
+// whole URL. Matching the whole URL would make every loc on a host like
+// "recipes.example.com" or "mycookingblog.com" match regardless of its path,
+// silently turning the recipe filter into a no-op on exactly the sites this
+// keyword list targets.
+func matchesRecipePath(rawUrl string) bool {
+	u, err := url.Parse(rawUrl)
+	if err != nil {
+		return false
+	}
+	return recipePathPattern.MatchString(u.Path)
+}
 
 func filterRecipeLocs(locs []string) []string {
 	seen := map[string]struct{}{}
@@ -233,7 +313,7 @@ func filterRecipeLocs(locs []string) []string {
 			continue
 		}
 		seen[loc] = struct{}{}
-		if recipePathPattern.MatchString(loc) {
+		if matchesRecipePath(loc) {
 			filtered = append(filtered, loc)
 		}
 	}

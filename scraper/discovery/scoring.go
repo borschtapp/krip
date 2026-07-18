@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/andybalholm/cascadia"
 	"golang.org/x/net/html"
 
 	"github.com/borschtapp/krip/model"
@@ -43,6 +44,16 @@ func (s ScoringOptions) resolve() ScoringOptions {
 // exclusionSelector matches non-content zones to ignore.
 const exclusionSelector = "nav, header, footer, [role=navigation], [role=banner], [role=contentinfo], .sidebar, #sidebar, .nav, #nav, .header, #header, .footer, #footer"
 
+// Selectors below are compiled once at package init instead of per-call: goquery's
+// string-based Find/ParentsFiltered recompile their selector via cascadia on every
+// invocation, which is significant when called once per link on link-heavy pages.
+var (
+	exclusionMatcher   = cascadia.MustCompile(exclusionSelector)
+	linkMatcher        = cascadia.MustCompile("a[href]")
+	imgMatcher         = cascadia.MustCompile("img")
+	styleScriptMatcher = cascadia.MustCompile("style, script")
+)
+
 // imgSrcAttrs lists attributes that may hold an image URL, including lazy-load variants.
 var imgSrcAttrs = []string{"src", "data-src", "data-lazy-src", "data-lazy", "srcset"}
 
@@ -58,11 +69,11 @@ func imgSrc(sel *goquery.Selection) string {
 
 // linkImg returns the <img> nearest to a link, checking inside <a> and its immediate parent.
 func linkImg(a *goquery.Selection) *goquery.Selection {
-	img := a.Find("img").First()
+	img := a.FindMatcher(imgMatcher).First()
 	if img.Length() == 0 {
 		parent := a.Parent()
 		if n := parent.Get(0); n != nil && singleLinkWrappers[n.Data] {
-			img = parent.Find("img").First()
+			img = parent.FindMatcher(imgMatcher).First()
 		}
 	}
 	return img
@@ -86,8 +97,16 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 	}
 
 	if d.Selector == "" {
+		seen := map[string]struct{}{}
 		for _, u := range extractFromPattern(data, baseUrl, d.UrlPattern) {
-			feed.AddEntry(&model.Recipe{Url: u})
+			if _, dup := seen[u]; dup {
+				continue
+			}
+			seen[u] = struct{}{}
+			// feed is known-empty here (replay is always the first entry-finding
+			// stage), so a plain append is equivalent to AddEntry's dedup-and-append
+			// but skips its O(len(feed.Entries)) scan on every call.
+			feed.Entries = append(feed.Entries, &model.Recipe{Url: u})
 		}
 		return nil
 	}
@@ -98,7 +117,7 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 	}
 
 	seen := map[string]struct{}{}
-	container.Find("a[href]").Each(func(_ int, s *goquery.Selection) {
+	container.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		abs := utils.ToAbsoluteUrl(baseUrl, href)
 		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(abs, d.UrlPattern) {
@@ -108,7 +127,7 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 			return
 		}
 		seen[abs] = struct{}{}
-		feed.AddEntry(&model.Recipe{Url: abs})
+		feed.Entries = append(feed.Entries, &model.Recipe{Url: abs})
 	})
 
 	if len(feed.Entries) == 0 {
@@ -136,7 +155,7 @@ func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sa
 		return nil, fmt.Errorf("discovery: no candidate containers found")
 	}
 
-	ranked := rankGroups(groups)
+	ranked := rankGroups(groups, sc.SampleThreshold)
 	if ranked[0].score < sc.SampleThreshold {
 		return nil, fmt.Errorf("discovery: best container score %.2f below threshold", ranked[0].score)
 	}
@@ -207,11 +226,14 @@ func makeDiscoveredFeed(sg scoredGroup, urls []string) *model.DiscoveredFeed {
 }
 
 // buildGroupEntries creates a deduplicated map of recipes from a group's links.
+// Reuses the absolute URLs already resolved by collectGroups (group.urls, parallel
+// to group.links) instead of re-reading href and re-resolving it: besides the
+// duplicate work, re-resolving via a different code path could normalize slightly
+// differently and let the same URL land under two different dedup keys.
 func buildGroupEntries(group *containerGroup, baseUrl *url.URL) (byUrl map[string]*model.Recipe, urls []string) {
 	byUrl = make(map[string]*model.Recipe, len(group.links))
-	for _, a := range group.links {
-		href, _ := a.Attr("href")
-		abs := utils.ToAbsoluteUrl(baseUrl, href)
+	for i, a := range group.links {
+		abs := group.urls[i].String()
 		entry, seen := byUrl[abs]
 		if !seen {
 			urls = append(urls, abs)
@@ -265,7 +287,7 @@ func extractFromPattern(data *model.DataInput, baseUrl *url.URL, pattern string)
 	}
 
 	var urls []string
-	data.Document.Find("a[href]").Each(func(_ int, s *goquery.Selection) {
+	data.Document.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		abs := utils.ToAbsoluteUrl(baseUrl, href)
 		if utils.UrlMatchesPathPattern(abs, pattern) {
@@ -275,9 +297,28 @@ func extractFromPattern(data *model.DataInput, baseUrl *url.URL, pattern string)
 	return urls
 }
 
-// isExcluded returns true if the selection is within an ignored zone.
-func isExcluded(s *goquery.Selection) bool {
-	return s.ParentsFiltered(exclusionSelector).Length() > 0
+// excludedNodeSet returns the set of nodes matching exclusionSelector, computed
+// once per document. isExcludedNode then tests ancestry with O(depth) map lookups
+// instead of re-running the exclusion selector for every link's ancestor chain.
+func excludedNodeSet(doc *goquery.Document) map[*html.Node]struct{} {
+	matches := doc.FindMatcher(exclusionMatcher)
+	set := make(map[*html.Node]struct{}, matches.Length())
+	matches.Each(func(_ int, s *goquery.Selection) {
+		if n := s.Get(0); n != nil {
+			set[n] = struct{}{}
+		}
+	})
+	return set
+}
+
+// isExcludedNode returns true if n is inside an ignored zone (per excluded).
+func isExcludedNode(n *html.Node, excluded map[*html.Node]struct{}) bool {
+	for p := n.Parent; p != nil; p = p.Parent {
+		if _, bad := excluded[p]; bad {
+			return true
+		}
+	}
+	return false
 }
 
 // singleLinkWrappers are tags that typically wrap a single <a>.
@@ -331,25 +372,39 @@ func effectiveParent(a *goquery.Selection) (*goquery.Selection, string) {
 	return p, ""
 }
 
+// nonEntryHrefPrefixes are schemes that can never be recipe entry links; rejecting
+// them before url.Parse avoids paying parse + resolve cost on nav chrome like
+// "mailto:contact@..." or "javascript:void(0)" links.
+var nonEntryHrefPrefixes = []string{"mailto:", "tel:", "javascript:"}
+
 // collectGroups scans the document for links and groups them by containerKey.
 func collectGroups(doc *goquery.Document, baseUrl *url.URL) map[string]*containerGroup {
+	excluded := excludedNodeSet(doc)
+	nthCache := make(map[*html.Node]int)
 	groups := make(map[string]*containerGroup)
-	doc.Find("a[href]").Each(func(_ int, s *goquery.Selection) {
+
+	doc.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		if href == "" || strings.HasPrefix(href, "#") {
 			return
+		}
+		for _, p := range nonEntryHrefPrefixes {
+			if strings.HasPrefix(href, p) {
+				return
+			}
 		}
 		u, err := url.Parse(href)
 		if err != nil {
 			return
 		}
 		absURL := baseUrl.ResolveReference(u)
+		absURL.Fragment = "" // "/recipe" and "/recipe#comments" are the same entry
 		// Skip external links and the page itself.
 		if absURL.Host != baseUrl.Host ||
 			(absURL.Path == baseUrl.Path && absURL.RawQuery == baseUrl.RawQuery) {
 			return
 		}
-		if isExcluded(s) {
+		if n := s.Get(0); n == nil || isExcludedNode(n, excluded) {
 			return
 		}
 
@@ -357,7 +412,7 @@ func collectGroups(doc *goquery.Document, baseUrl *url.URL) map[string]*containe
 		if parent.Length() == 0 {
 			return
 		}
-		key := containerKey(parent, keyDepth)
+		key := containerKeyCached(parent, keyDepth, nthCache)
 
 		if g, ok := groups[key]; ok {
 			g.links = append(g.links, s)
@@ -479,10 +534,12 @@ type scoredGroup struct {
 }
 
 // rankGroups returns all groups sorted by descending heuristic score.
-func rankGroups(groups map[string]*containerGroup) []scoredGroup {
+// pruneThreshold is the resolved SampleThreshold: groups that cannot possibly
+// reach it are scored without the expensive image/text subtree scans (see score).
+func rankGroups(groups map[string]*containerGroup, pruneThreshold float64) []scoredGroup {
 	ranked := make([]scoredGroup, 0, len(groups))
 	for _, g := range groups {
-		ranked = append(ranked, scoredGroup{g, score(g)})
+		ranked = append(ranked, scoredGroup{g, score(g, pruneThreshold)})
 	}
 	slices.SortFunc(ranked, func(a, b scoredGroup) int {
 		if a.score > b.score {
@@ -539,13 +596,25 @@ func deduplicateGroupURLs(g *containerGroup) (keys []string, uniq []*url.URL) {
 // because many recipe sites use root-level slugs that share no common prefix,
 // while content-taxonomy sections (ingredients, categories) may have a prefix but
 // contain non-recipe content. Long descriptive titles are a stronger recipe signal.
-func score(g *containerGroup) float64 {
+//
+// Branch-and-bound: image density and text quality (0.25 each, 0.50 combined) are
+// the only components that require subtree scans (linkImg/linkVisibleText walk
+// every link's DOM). The other three are free (URLs are already resolved; count
+// and tag are plain fields). If the free components plus the maximum possible 0.50
+// still can't reach pruneThreshold, the group can never be a candidate regardless
+// of its image/text score, so the scan is skipped. On nav-heavy pages most groups
+// (nav/footer clusters: poor URL consistency, tiny counts) are pruned this way.
+func score(g *containerGroup, pruneThreshold float64) float64 {
 	keys, uniq := deduplicateGroupURLs(g)
-	return 0.30*urlConsistencyScore(uniq) +
-		0.25*imageDensityScore(g.links, keys) +
-		0.25*textQualityScore(g.links, keys) +
+	partial := 0.30*urlConsistencyScore(uniq) +
 		0.10*countScore(len(uniq)) +
 		0.10*semanticBonus(g.tag)
+	if partial+0.50 < pruneThreshold {
+		return partial
+	}
+	return partial +
+		0.25*imageDensityScore(g.links, keys) +
+		0.25*textQualityScore(g.links, keys)
 }
 
 // urlConsistencyScore measures how uniform the hrefs are (common path prefix).
@@ -615,11 +684,11 @@ func imageDensityScore(links []*goquery.Selection, keys []string) float64 {
 
 // linkVisibleText returns link text, excluding SSR-injected <style> or <script>.
 func linkVisibleText(a *goquery.Selection) string {
-	if a.Find("style, script").Length() == 0 {
+	if a.FindMatcher(styleScriptMatcher).Length() == 0 {
 		return strings.TrimSpace(a.Text())
 	}
 	clone := a.Clone()
-	clone.Find("style, script").Remove()
+	clone.FindMatcher(styleScriptMatcher).Remove()
 	return strings.TrimSpace(clone.Text())
 }
 
@@ -691,6 +760,15 @@ func semanticBonus(tag string) float64 {
 // containerKey builds a structural path string by walking up to depth ancestors.
 // Example: "main:nth-of-type(1) > ul:nth-of-type(1)"
 func containerKey(sel *goquery.Selection, depth int) string {
+	return containerKeyCached(sel, depth, make(map[*html.Node]int))
+}
+
+// containerKeyCached is containerKey with the nth-of-type index cache threaded
+// through. On a page with k sibling tiles, plain sibling counting pays O(i) per
+// tile i (O(k^2) total); nthOfType instead fills the cache for every sibling in
+// one forward pass the first time any of them is asked for, so the group's cost
+// is amortized to O(k).
+func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.Node]int) string {
 	if depth == 0 || sel.Length() == 0 {
 		return ""
 	}
@@ -699,24 +777,38 @@ func containerKey(sel *goquery.Selection, depth int) string {
 		return ""
 	}
 
-	tag := n.Data
-	idx := 1
-	for sib := n.PrevSibling; sib != nil; sib = sib.PrevSibling {
-		if sib.Type == html.ElementNode && sib.Data == tag {
-			idx++
-		}
-	}
-	part := fmt.Sprintf("%s:nth-of-type(%d)", tag, idx)
+	part := fmt.Sprintf("%s:nth-of-type(%d)", n.Data, nthOfType(n, nthCache))
 
 	parent := sel.Parent()
 	if parent.Length() == 0 {
 		return part
 	}
-	parentKey := containerKey(parent, depth-1)
+	parentKey := containerKeyCached(parent, depth-1, nthCache)
 	if parentKey == "" {
 		return part
 	}
 	return parentKey + " > " + part
+}
+
+// nthOfType returns n's 1-based index among same-tag siblings, caching every
+// sibling's index on first use so a k-sibling container is walked once, not k times.
+func nthOfType(n *html.Node, cache map[*html.Node]int) int {
+	if idx, ok := cache[n]; ok {
+		return idx
+	}
+	if n.Parent == nil {
+		cache[n] = 1
+		return 1
+	}
+	counts := make(map[string]int)
+	for c := n.Parent.FirstChild; c != nil; c = c.NextSibling {
+		if c.Type != html.ElementNode {
+			continue
+		}
+		counts[c.Data]++
+		cache[c] = counts[c.Data]
+	}
+	return cache[n]
 }
 
 // UrlPathPattern returns the common path prefix of URLs as a string.

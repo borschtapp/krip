@@ -73,6 +73,29 @@ func TestFilterRecipeLocs_Dedup(t *testing.T) {
 	assert.Len(t, filtered, 2)
 }
 
+// TestFilterRecipeLocs_HostKeywordNotPath guards against matching the whole URL
+// (including hostname). Sites like recipes.example.com or mycookingblog.com would
+// otherwise match on every single loc regardless of path, defeating the filter.
+func TestFilterRecipeLocs_HostKeywordNotPath(t *testing.T) {
+	locs := []string{
+		"https://recipes.example.com/about-us",
+		"https://recipes.example.com/contact",
+		"https://mycookingblog.com/privacy-policy",
+		"https://recipes.example.com/recipes/pasta",
+	}
+
+	filtered := filterRecipeLocs(locs)
+	assert.Equal(t, []string{"https://recipes.example.com/recipes/pasta"}, filtered,
+		"only the loc whose PATH contains a recipe keyword should match, not ones matching only via hostname")
+}
+
+func TestMatchesRecipePath_PathOnly(t *testing.T) {
+	assert.True(t, matchesRecipePath("https://example.com/recipes/pasta"))
+	assert.False(t, matchesRecipePath("https://recipes.example.com/about"),
+		"hostname keyword must not count as a path match")
+	assert.False(t, matchesRecipePath("://not a url"))
+}
+
 func TestCommonPathPrefix(t *testing.T) {
 	tests := []struct {
 		name     string

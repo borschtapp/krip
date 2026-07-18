@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Go
         uses: actions/setup-go@v6
@@ -23,6 +23,11 @@ jobs:
 
       - name: Go vet
         run: go vet ./...
+
+      - name: Run Golint
+        uses: golangci/golangci-lint-action@v9
+        with:
+          version: latest
 
       - name: Test
         run: go test -short ./...
