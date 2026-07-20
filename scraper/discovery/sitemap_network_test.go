@@ -45,7 +45,7 @@ func TestRobotsSitemaps_NoRobotsTxt(t *testing.T) {
 func TestSitemapCandidates_IncludesRobotsTxtSitemap(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/robots.txt" {
-			fmt.Fprintf(w, "Sitemap: http://%s/from-robots.xml\n", r.Host)
+			_, _ = fmt.Fprintf(w, "Sitemap: http://%s/from-robots.xml\n", r.Host)
 			return
 		}
 		w.WriteHeader(http.StatusNotFound)
@@ -70,7 +70,7 @@ func TestSitemapCandidates_Deduplicates(t *testing.T) {
 	var server *httptest.Server
 	server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/robots.txt" {
-			fmt.Fprintf(w, "Sitemap: %s/sitemap.xml\n", server.URL)
+			_, _ = fmt.Fprintf(w, "Sitemap: %s/sitemap.xml\n", server.URL)
 			return
 		}
 		w.WriteHeader(http.StatusNotFound)
@@ -171,11 +171,11 @@ func TestFollowSitemapIndex_NestedIndexRecursion(t *testing.T) {
 		switch r.URL.Path {
 		case "/nested-index.xml":
 			// returns a sitemap index pointing to leaf-a and leaf-b
-			_, _ = w.Write([]byte(fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+			_, _ = fmt.Fprintf(w, `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>http://%s/leaf-a.xml</loc></sitemap>
   <sitemap><loc>http://%s/leaf-b.xml</loc></sitemap>
-</sitemapindex>`, r.Host, r.Host)))
+</sitemapindex>`, r.Host, r.Host)
 		case "/leaf-a.xml":
 			_, _ = w.Write(urlsetXML("https://example.com/recipes/a1"))
 		case "/leaf-b.xml":
@@ -216,15 +216,15 @@ func TestFollowSitemapIndex_NestedIndexRecursionLimit(t *testing.T) {
 		atomic.AddInt32(&requests, 1)
 		switch r.URL.Path {
 		case "/nested-index-1.xml":
-			_, _ = w.Write([]byte(fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+			_, _ = fmt.Fprintf(w, `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>http://%s/nested-index-2.xml</loc></sitemap>
-</sitemapindex>`, r.Host)))
+</sitemapindex>`, r.Host)
 		case "/nested-index-2.xml":
-			_, _ = w.Write([]byte(fmt.Sprintf(`<?xml version="1.0" encoding="UTF-8"?>
+			_, _ = fmt.Fprintf(w, `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>http://%s/leaf.xml</loc></sitemap>
-</sitemapindex>`, r.Host)))
+</sitemapindex>`, r.Host)
 		case "/leaf.xml":
 			_, _ = w.Write(urlsetXML("https://example.com/recipes/leaf"))
 		default:

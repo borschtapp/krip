@@ -36,7 +36,7 @@ func TestFindEntries_AdaptiveSampling_StopsEarlyOnMajority(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if strings.HasPrefix(r.URL.Path, "/recipes/") {
 			atomic.AddInt32(&entryRequests, 1)
-			fmt.Fprintf(w, validRecipePage, "Recipe at "+r.URL.Path)
+			_, _ = fmt.Fprintf(w, validRecipePage, "Recipe at "+r.URL.Path)
 			return
 		}
 		w.WriteHeader(http.StatusNotFound)
