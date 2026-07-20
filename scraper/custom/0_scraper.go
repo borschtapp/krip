@@ -56,7 +56,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed) (err error) {
 	alias := utils.HostAlias(data.Url)
 	fn, ok := feedScrapers[alias]
 	if !ok {
-		return fmt.Errorf("feed scraper not found for %s", alias)
+		return nil
 	}
 	defer recoverPanic("custom feed scraper", alias, &err)
 	if err = fn(data, feed); err != nil {

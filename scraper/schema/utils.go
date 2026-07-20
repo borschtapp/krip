@@ -11,7 +11,7 @@ import (
 	"github.com/borschtapp/krip/utils"
 )
 
-func getStringOrItem(val interface{}) (string, *microdata.Item) {
+func getStringOrItem(val any) (string, *microdata.Item) {
 	switch v := val.(type) {
 	case string:
 		return utils.CleanupInline(v), nil
@@ -24,18 +24,13 @@ func getStringOrItem(val interface{}) (string, *microdata.Item) {
 	return "", nil
 }
 
-func getStringOrChild(val interface{}, child ...string) (string, bool) {
-	if text, item := getStringOrItem(val); len(text) != 0 {
-		return text, true
-	} else if item != nil {
-		return getPropertyString(item, child...)
-	}
-	return "", false
-}
-
 func getPropertyStringOrChild(item *microdata.Item, key string, child ...string) (string, bool) {
 	if val, ok := item.GetProperty(key); ok {
-		return getStringOrChild(val, child...)
+		if text, nested := getStringOrItem(val); len(text) != 0 {
+			return text, true
+		} else if nested != nil {
+			return getPropertyString(nested, child...)
+		}
 	}
 
 	return "", false

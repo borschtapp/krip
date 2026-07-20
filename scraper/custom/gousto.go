@@ -125,7 +125,7 @@ func ScrapeGousto(data *model.DataInput, r *model.Recipe) error {
 		return fmt.Errorf("error parsing url: %w", err)
 	}
 
-	parts := strings.Split(u.Path, "/")
+	parts := strings.Split(strings.Trim(u.Path, "/"), "/")
 	recipeId := parts[len(parts)-1]
 
 	body, _, err := utils.ExecuteRequest(utils.RequestConfig{

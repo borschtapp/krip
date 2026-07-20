@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 	"slices"
+	"strings"
 
 	"github.com/sosodev/duration"
 
@@ -74,7 +75,7 @@ func normalizeRecipe(r *model.Recipe) {
 		parts := utils.SplitTitle(r.Name)
 		if len(parts) > 1 && r.Publisher != nil && slices.Contains(parts, r.Publisher.Name) {
 			parts = slices.DeleteFunc(parts, func(p string) bool {
-				return p == r.Publisher.Name
+				return strings.EqualFold(p, r.Publisher.Name)
 			})
 
 			if len(parts) > 0 {
@@ -132,6 +133,9 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 		}
 
 		for _, entry := range toScrape {
+			if options.ContextDone() {
+				break
+			}
 			if entry.Url == "" || scrapedURLs[entry.Url] {
 				continue
 			}
@@ -150,7 +154,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 
 	initialCount := len(feed.Entries)
 	originalEntries := feed.Entries
-	feed.Entries = filterEntries(feed.Entries, options)
+	feed.Entries = filterEntries(feed.Entries, options, scrapedURLs)
 
 	if len(feed.Entries) < initialCount {
 		discarded := initialCount - len(feed.Entries)
@@ -185,7 +189,9 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 	}
 
 	if !options.SkipCustomScrapers {
-		if err := custom.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		if err := custom.ScrapeFeed(data, feed); err != nil {
+			log.Printf("custom feed scraper error: %v", err)
+		} else if len(feed.Entries) > 0 {
 			return nil
 		}
 	}
@@ -228,6 +234,9 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 					var confirmed []*model.Recipe
 					tried := 0
 					for _, u := range urls {
+						if options.ContextDone() {
+							break
+						}
 						tried++
 						dataInput, err := UrlInput(u, options.ScrapeOptions)
 						if err == nil {
@@ -270,9 +279,13 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 	return errors.New("no entries found")
 }
 
-func filterEntries(entries []*model.Recipe, opt model.FeedOptions) []*model.Recipe {
+func filterEntries(entries []*model.Recipe, opt model.FeedOptions, scrapedURLs map[string]bool) []*model.Recipe {
 	filtered := make([]*model.Recipe, 0, len(entries))
 	for _, entry := range entries {
+		if scrapedURLs != nil && entry.Url != "" && !scrapedURLs[entry.Url] {
+			filtered = append(filtered, entry)
+			continue
+		}
 		if err := entry.Validate(opt.RecipeFilter); err != nil {
 			continue
 		}

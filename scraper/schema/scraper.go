@@ -126,10 +126,10 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 	}
 
 	if val, ok := getPropertyString(recipeSchema, "datePublished", "dateCreated"); ok {
-		r.DatePublished, _ = utils.ParseRFC3339(val)
+		r.DatePublished, _ = utils.ParseDate(val)
 	}
 	if val, ok := getPropertyString(recipeSchema, "dateModified"); ok {
-		r.DateModified, _ = utils.ParseRFC3339(val)
+		r.DateModified, _ = utils.ParseDate(val)
 	}
 
 	parseRecipeImages(recipeSchema, r, baseUrl)
@@ -175,33 +175,28 @@ func parseRecipeNutrition(item *microdata.Item, r *model.Recipe) {
 	}
 
 	r.Nutrition = &model.NutritionInformation{}
+	nutritionFields := map[string]**float64{
+		"calories":              &r.Nutrition.Calories,
+		"carbohydrateContent":   &r.Nutrition.CarbohydrateContent,
+		"cholesterolContent":    &r.Nutrition.CholesterolContent,
+		"fatContent":            &r.Nutrition.FatContent,
+		"fiberContent":          &r.Nutrition.FiberContent,
+		"proteinContent":        &r.Nutrition.ProteinContent,
+		"saturatedFatContent":   &r.Nutrition.SaturatedFatContent,
+		"sodiumContent":         &r.Nutrition.SodiumContent,
+		"sugarContent":          &r.Nutrition.SugarContent,
+		"transFatContent":       &r.Nutrition.TransFatContent,
+		"unsaturatedFatContent": &r.Nutrition.UnsaturatedFatContent,
+	}
 	for key, val := range nutrition.Properties {
+		if len(val) == 0 {
+			continue
+		}
 		strVal := fmt.Sprint(val[0])
-		switch key {
-		case "calories":
-			r.Nutrition.Calories = utils.FindNumber(strVal)
-		case "servingSize":
+		if key == "servingSize" {
 			r.Nutrition.ServingSize = strVal
-		case "carbohydrateContent":
-			r.Nutrition.CarbohydrateContent = utils.FindNumber(strVal)
-		case "cholesterolContent":
-			r.Nutrition.CholesterolContent = utils.FindNumber(strVal)
-		case "fatContent":
-			r.Nutrition.FatContent = utils.FindNumber(strVal)
-		case "fiberContent":
-			r.Nutrition.FiberContent = utils.FindNumber(strVal)
-		case "proteinContent":
-			r.Nutrition.ProteinContent = utils.FindNumber(strVal)
-		case "saturatedFatContent":
-			r.Nutrition.SaturatedFatContent = utils.FindNumber(strVal)
-		case "sodiumContent":
-			r.Nutrition.SodiumContent = utils.FindNumber(strVal)
-		case "sugarContent":
-			r.Nutrition.SugarContent = utils.FindNumber(strVal)
-		case "transFatContent":
-			r.Nutrition.TransFatContent = utils.FindNumber(strVal)
-		case "unsaturatedFatContent":
-			r.Nutrition.UnsaturatedFatContent = utils.FindNumber(strVal)
+		} else if field, ok := nutritionFields[key]; ok {
+			*field = utils.FindNumber(strVal)
 		}
 	}
 }
@@ -213,35 +208,35 @@ func parseRecipeIngredients(item *microdata.Item, r *model.Recipe) {
 	}
 
 	for _, val := range values {
-		if text, ingredient := getStringOrItem(val); len(text) != 0 {
+		if text, nested := getStringOrItem(val); len(text) != 0 {
 			r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: text})
-		} else if ingredient != nil {
+		} else if nested != nil {
 			prop := &model.PropertyValue{}
-			if val, ok := getPropertyString(ingredient, "name", "item"); ok {
+			if val, ok := getPropertyString(nested, "name", "item"); ok {
 				prop.Name = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "amount", "value", "requiredQuantity"); ok {
+			if val, ok := getPropertyString(nested, "amount", "value", "requiredQuantity"); ok {
 				prop.Value = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "minValue", "MinValue"); ok {
+			if val, ok := getPropertyString(nested, "minValue", "MinValue"); ok {
 				prop.MinValue = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "maxValue", "MaxValue"); ok {
+			if val, ok := getPropertyString(nested, "maxValue", "MaxValue"); ok {
 				prop.MaxValue = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "unitCode", "UnitCode"); ok {
+			if val, ok := getPropertyString(nested, "unitCode", "UnitCode"); ok {
 				prop.UnitCode = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "unitText", "UnitText"); ok {
+			if val, ok := getPropertyString(nested, "unitText", "UnitText"); ok {
 				prop.UnitText = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "image", "Image"); ok {
+			if val, ok := getPropertyString(nested, "image", "Image"); ok {
 				prop.Image = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "url", "Url"); ok {
+			if val, ok := getPropertyString(nested, "url", "Url"); ok {
 				prop.Url = utils.CleanupInline(val)
 			}
-			if val, ok := getPropertyString(ingredient, "estimatedCost", "EstimatedCost"); ok {
+			if val, ok := getPropertyString(nested, "estimatedCost", "EstimatedCost"); ok {
 				prop.EstimatedCost = utils.CleanupInline(val)
 			}
 			r.Ingredients = append(r.Ingredients, prop)
@@ -256,23 +251,23 @@ func parseRecipeEquipment(item *microdata.Item, r *model.Recipe) {
 	}
 
 	for _, val := range values {
-		if text, equipment := getStringOrItem(val); len(text) != 0 {
+		if text, nested := getStringOrItem(val); len(text) != 0 {
 			r.Equipment = append(r.Equipment, &model.HowToTool{Name: text})
-		} else if equipment != nil {
+		} else if nested != nil {
 			tool := &model.HowToTool{}
-			if val, ok := getPropertyString(equipment, "name", "item"); ok {
+			if val, ok := getPropertyString(nested, "name", "item"); ok {
 				tool.Name = val
 			}
-			if val, ok := getPropertyString(equipment, "description", "Description"); ok {
+			if val, ok := getPropertyString(nested, "description", "Description"); ok {
 				tool.Description = val
 			}
-			if val, ok := getPropertyString(equipment, "url", "Url"); ok {
+			if val, ok := getPropertyString(nested, "url", "Url"); ok {
 				tool.Url = val
 			}
-			if val, ok := getPropertyString(equipment, "image", "Image"); ok {
+			if val, ok := getPropertyString(nested, "image", "Image"); ok {
 				tool.Image = val
 			}
-			if val, ok := getPropertyString(equipment, "requiredQuantity", "amount", "value"); ok {
+			if val, ok := getPropertyString(nested, "requiredQuantity", "amount", "value"); ok {
 				tool.Quantity = val
 			}
 			r.Equipment = append(r.Equipment, tool)
@@ -375,7 +370,7 @@ func parseRecipeVideo(item *microdata.Item, r *model.Recipe, baseUrl *url.URL) {
 		video.ThumbnailUrl = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 	if val, ok := getPropertyString(videoItem, "uploadDate", "datePublished"); ok {
-		video.UploadDate, _ = utils.ParseRFC3339(val)
+		video.UploadDate, _ = utils.ParseDate(val)
 	}
 	r.Video = video
 }

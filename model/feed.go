@@ -38,7 +38,7 @@ type Feed struct {
 // AddEntry adds a recipe to the feed if it does not already exist
 func (f *Feed) AddEntry(entry *Recipe) bool {
 	for _, e := range f.Entries {
-		if (len(entry.Url) > 0 && e.Url == entry.Url) || (len(entry.Name) > 0 && e.Name == entry.Name) {
+		if len(entry.Url) > 0 && e.Url == entry.Url {
 			return false
 		}
 	}

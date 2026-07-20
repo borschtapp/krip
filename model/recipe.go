@@ -2,6 +2,7 @@ package model
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"time"
 )
@@ -188,29 +189,38 @@ func (r *Recipe) IsValid() bool {
 	return r.Validate(RecipeFilter{}) == nil
 }
 
+var (
+	ErrNoNameOrUrl       = errors.New("recipe has no name or url")
+	ErrNoImages          = errors.New("recipe has no images")
+	ErrNoPublisher       = errors.New("recipe has no publisher")
+	ErrNoIngredients     = errors.New("recipe has no ingredients")
+	ErrTooFewIngredients = errors.New("recipe has too few ingredients")
+	ErrNoInstructions    = errors.New("recipe has no instructions")
+)
+
 func (r *Recipe) Validate(filter RecipeFilter) error {
 	if len(r.Name) == 0 || len(r.Url) == 0 {
-		return fmt.Errorf("recipe has no name or url")
+		return ErrNoNameOrUrl
 	}
 
 	if !filter.OptionalImage && len(r.Images) == 0 {
-		return fmt.Errorf("recipe has no images")
+		return ErrNoImages
 	}
 
 	if !filter.OptionalPublisher && (r.Publisher == nil || len(r.Publisher.Name) == 0) {
-		return fmt.Errorf("recipe has no publisher")
+		return ErrNoPublisher
 	}
 
 	if !filter.OptionalIngredients && len(r.Ingredients) == 0 {
-		return fmt.Errorf("recipe has no ingredients")
+		return ErrNoIngredients
 	}
 
 	if filter.MinIngredients > 0 && len(r.Ingredients) < filter.MinIngredients {
-		return fmt.Errorf("recipe has too few ingredients (%d < %d)", len(r.Ingredients), filter.MinIngredients)
+		return fmt.Errorf("%w (%d < %d)", ErrTooFewIngredients, len(r.Ingredients), filter.MinIngredients)
 	}
 
 	if !filter.OptionalInstructions && len(r.Instructions) == 0 {
-		return fmt.Errorf("recipe has no instructions")
+		return ErrNoInstructions
 	}
 
 	return nil

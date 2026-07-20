@@ -78,6 +78,10 @@ func TestUnquote(t *testing.T) {
 		{`"hello "test" world`, `hello "test" world`},
 		{`"hello world`, `hello world`},
 		{`hello world"`, `hello world`},
+		{`“hello world”`, `hello world`},
+		{`«hello world»`, `hello world`},
+		{`“Fluffy” and “chewy” are how I like to describe these Whole Wheat Mantou.`, `“Fluffy” and “chewy” are how I like to describe these Whole Wheat Mantou.`},
+		{"«quoted» something «quoted»", "«quoted» something «quoted»"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {
@@ -172,6 +176,9 @@ func TestSplitTitle(t *testing.T) {
 		{"Just a title", []string{"Just a title"}},
 		{"Grillat kött med lime -och chilismör | Recept - Coop", []string{"Grillat kött med lime -och chilismör", "Recept", "Coop"}},
 		{"Butter chicken | Oppskrift og video - Matprat", []string{"Butter chicken", "Oppskrift og video", "Matprat"}},
+		{"Recipe Name — Blog Name", []string{"Recipe Name", "Blog Name"}},
+		{"Recipe Name • Blog Name", []string{"Recipe Name", "Blog Name"}},
+		{"Recipe Name :: Blog Name", []string{"Recipe Name", "Blog Name"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {

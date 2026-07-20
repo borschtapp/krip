@@ -1,6 +1,7 @@
 package opengraph
 
 import (
+	"cmp"
 	"strings"
 
 	"github.com/borschtapp/krip/model"
@@ -69,16 +70,22 @@ func Scrape(data *model.DataInput, r *model.Recipe) error {
 		return nil
 	}
 
-	r.Name = utils.Coalesce(r.Name, meta.name)
-	r.Description = utils.Coalesce(r.Description, meta.description)
-	r.Language = utils.Coalesce(r.Language, meta.language)
+	r.Name = cmp.Or(r.Name, meta.name)
+	r.Description = cmp.Or(r.Description, meta.description)
+	r.Language = cmp.Or(r.Language, meta.language)
 	if len(r.Images) == 0 && len(meta.imageURL) != 0 {
 		r.AddImageUrl(meta.imageURL)
 	}
 
-	r.Author.Name = utils.Coalesce(r.Author.Name, meta.authorName)
-	r.Publisher.Name = utils.Coalesce(r.Publisher.Name, meta.publisherName)
-	r.Publisher.Url = utils.Coalesce(r.Publisher.Url, utils.BaseUrl(data.Url))
+	if r.Author == nil {
+		r.Author = &model.Person{}
+	}
+	if r.Publisher == nil {
+		r.Publisher = &model.Organization{}
+	}
+	r.Author.Name = cmp.Or(r.Author.Name, meta.authorName)
+	r.Publisher.Name = cmp.Or(r.Publisher.Name, meta.publisherName)
+	r.Publisher.Url = cmp.Or(r.Publisher.Url, utils.BaseUrl(data.Url))
 	return nil
 }
 
@@ -88,14 +95,17 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed) error {
 		return nil
 	}
 
-	feed.Name = utils.Coalesce(feed.Name, meta.name)
-	feed.Description = utils.Coalesce(feed.Description, meta.description)
-	feed.Language = utils.Coalesce(feed.Language, meta.language)
+	feed.Name = cmp.Or(feed.Name, meta.name)
+	feed.Description = cmp.Or(feed.Description, meta.description)
+	feed.Language = cmp.Or(feed.Language, meta.language)
 	if len(feed.Images) == 0 && len(meta.imageURL) != 0 {
 		feed.Images = []*model.ImageObject{{Url: meta.imageURL}}
 	}
 
-	feed.Publisher.Name = utils.Coalesce(feed.Publisher.Name, meta.publisherName)
-	feed.Publisher.Url = utils.Coalesce(feed.Publisher.Url, utils.BaseUrl(data.Url))
+	if feed.Publisher == nil {
+		feed.Publisher = &model.Organization{}
+	}
+	feed.Publisher.Name = cmp.Or(feed.Publisher.Name, meta.publisherName)
+	feed.Publisher.Url = cmp.Or(feed.Publisher.Url, utils.BaseUrl(data.Url))
 	return nil
 }

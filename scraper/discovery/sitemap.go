@@ -3,13 +3,15 @@ package discovery
 import (
 	"bytes"
 	"compress/gzip"
+	"context"
 	"encoding/xml"
 	"fmt"
 	"io"
 	"net/url"
 	"regexp"
 	"strings"
-	"sync"
+
+	"golang.org/x/net/html/charset"
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
@@ -18,6 +20,15 @@ import (
 func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed) error {
 	if d.Selector == "" {
 		return fmt.Errorf("sitemap source has no URL")
+	}
+
+	baseUrl, err := url.Parse(data.Url)
+	if err != nil {
+		return err
+	}
+	sitemapUrl, err := url.Parse(d.Selector)
+	if err != nil || sitemapUrl.Host != baseUrl.Host {
+		return fmt.Errorf("sitemap source points to an external host")
 	}
 
 	body, _, err := utils.ExecuteRequest(
@@ -59,6 +70,9 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 	candidates := sitemapCandidates(data, baseUrl)
 
 	for _, sitemapUrl := range candidates {
+		if opts.ContextDone() {
+			break
+		}
 		body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: sitemapUrl}, opts)
 		if err != nil {
 			continue
@@ -113,6 +127,10 @@ func sitemapCandidates(data *model.DataInput, baseUrl *url.URL) []string {
 		if u == "" {
 			return
 		}
+		parsed, err := url.Parse(u)
+		if err != nil || parsed.Host != baseUrl.Host {
+			return
+		}
 		if _, dup := seen[u]; !dup {
 			seen[u] = struct{}{}
 			candidates = append(candidates, u)
@@ -149,7 +167,7 @@ func robotsSitemaps(base string, opts model.RequestOptions) []string {
 
 	const directive = "sitemap:"
 	var sitemaps []string
-	for _, line := range strings.Split(string(body), "\n") {
+	for line := range strings.SplitSeq(string(body), "\n") {
 		line = strings.TrimSpace(line)
 		if idx := strings.IndexByte(line, '#'); idx >= 0 {
 			line = strings.TrimSpace(line[:idx])
@@ -167,9 +185,14 @@ func robotsSitemaps(base string, opts model.RequestOptions) []string {
 // followSitemapIndex fetches child sitemaps from an index, returning all their locs.
 // Prefers children whose URL contains recipe-related keywords; fetches at most 3.
 func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string, error) {
+	budget := 3
+	return followSitemapRecursive(indexLocs, opts, &budget, 0)
+}
+
+func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *int, depth int) ([]string, error) {
 	// Sort: recipe-keyword children first
 	var preferred, rest []string
-	for _, loc := range indexLocs {
+	for _, loc := range locs {
 		if matchesRecipePath(loc) {
 			preferred = append(preferred, loc)
 		} else {
@@ -178,43 +201,51 @@ func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string
 	}
 	ordered := append(preferred, rest...)
 
-	limit := min(3, len(ordered))
-
-	// Selection (which children to fetch, and in what preference order) already
-	// happened above; fetching those <= 3 children concurrently only shortens wall
-	// time; it does not change which sitemaps get fetched. Merge order below still
-	// follows the original preference order for determinism.
-	results := make([][]string, limit)
-	var wg sync.WaitGroup
-	for i, childUrl := range ordered[:limit] {
-		wg.Add(1)
-		go func(i int, childUrl string) {
-			defer wg.Done()
-			body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
-			if err != nil {
-				return
-			}
-			body, _ = maybeDecompress(body)
-			locs, isIndex, err := parseSitemap(body)
-			if err != nil || isIndex {
-				return
-			}
-			results[i] = locs
-		}(i, childUrl)
-	}
-	wg.Wait()
-
-	seen := map[string]struct{}{}
 	var allLocs []string
-	for _, locs := range results {
-		for _, loc := range locs {
-			if _, dup := seen[loc]; !dup {
-				seen[loc] = struct{}{}
-				allLocs = append(allLocs, loc)
+
+	for _, childUrl := range ordered {
+		if *budget <= 0 {
+			break
+		}
+
+		parsed, err := url.Parse(childUrl)
+		if err != nil {
+			continue
+		}
+		ctx := opts.Context
+		if ctx == nil {
+			ctx = context.Background()
+		}
+		if utils.IsPrivateOrLoopbackHost(ctx, parsed.Hostname()) {
+			continue
+		}
+
+		*budget--
+
+		body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
+		if err != nil {
+			continue
+		}
+		body, _ = maybeDecompress(body)
+		childLocs, isIndex, err := parseSitemap(body)
+		if err != nil {
+			continue
+		}
+
+		if isIndex {
+			if depth >= 1 {
+				continue
 			}
+			nestedLocs, err := followSitemapRecursive(childLocs, opts, budget, depth+1)
+			if err == nil {
+				allLocs = append(allLocs, nestedLocs...)
+			}
+		} else {
+			allLocs = append(allLocs, childLocs...)
 		}
 	}
-	return allLocs, nil
+
+	return utils.Deduplicate(allLocs), nil
 }
 
 // XML structs for stdlib sitemap parsing.
@@ -241,6 +272,7 @@ type sitemapIndexXML struct {
 // into the appropriate struct once (avoiding the previous double-unmarshal).
 func parseSitemap(body []byte) ([]string, bool, error) {
 	dec := xml.NewDecoder(bytes.NewReader(body))
+	dec.CharsetReader = charset.NewReaderLabel
 	// Advance to the first start element (skipping processing instructions etc.)
 	for {
 		tok, err := dec.Token()

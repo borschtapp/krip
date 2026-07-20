@@ -2,7 +2,6 @@ package model
 
 import (
 	"context"
-	"io"
 	"net/http"
 
 	"github.com/PuerkitoBio/goquery"
@@ -13,8 +12,6 @@ import (
 // HTTPClient is an interface that allows http.Client or safeurl.Client to be used interchangeably.
 type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
-	Get(url string) (*http.Response, error)
-	Post(url, contentType string, body io.Reader) (*http.Response, error)
 }
 
 // RequestOptions holds reusable HTTP configuration for a scrape session.
@@ -25,6 +22,12 @@ type RequestOptions struct {
 	Headers http.Header
 	// HTTP client to use; defaults to a 30s-timeout client.
 	HttpClient HTTPClient
+}
+
+// ContextDone reports whether Context is set and has already been cancelled
+// or timed out, so callers can bail out of a loop before doing more work.
+func (o RequestOptions) ContextDone() bool {
+	return o.Context != nil && o.Context.Err() != nil
 }
 
 // RecipeFilter holds optional criteria for filtering recipes.
@@ -45,7 +48,6 @@ type RecipeFilter struct {
 // ScrapeOptions options for scraping a recipe
 type ScrapeOptions struct {
 	RequestOptions
-	RecipeFilter
 
 	// Skip scraping the URL from meta tags; uses the input URL instead.
 	SkipMetaUrl bool
@@ -62,6 +64,7 @@ type ScrapeOptions struct {
 // FeedOptions options for feed scraping
 type FeedOptions struct {
 	ScrapeOptions
+	RecipeFilter
 
 	// Skip parsing feed meta tags.
 	SkipFeedMeta bool

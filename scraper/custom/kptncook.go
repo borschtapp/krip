@@ -14,6 +14,7 @@ import (
 	"github.com/sosodev/duration"
 )
 
+// kptnKey is a public mobile-app key used by KptnCook and is not a leaked secret.
 const kptnKey = "6q7QNKy-oIgk-IMuWisJ-jfN7s6"
 
 type KptnCookRecipe struct {

@@ -54,13 +54,17 @@ func ExecuteRequest(config RequestConfig, options model.RequestOptions) ([]byte,
 	}
 	defer func() { _ = res.Body.Close() }()
 
-	body, err := io.ReadAll(res.Body)
+	body, err := io.ReadAll(io.LimitReader(res.Body, 10*1024*1024))
 	if err != nil {
 		return nil, nil, fmt.Errorf("could not read response body: %w", err)
 	}
 
-	if res.StatusCode != 200 {
-		return nil, nil, fmt.Errorf("invalid status %d %s: %s", res.StatusCode, res.Status, string(body))
+	if res.StatusCode/100 != 2 {
+		errBody := string(body)
+		if len(errBody) > 500 {
+			errBody = errBody[:500] + "..."
+		}
+		return nil, nil, fmt.Errorf("invalid status %d %s: %s", res.StatusCode, res.Status, errBody)
 	}
 
 	return body, res.Request.URL, nil
@@ -69,10 +73,10 @@ func ExecuteRequest(config RequestConfig, options model.RequestOptions) ([]byte,
 func mergeHeaders(base, extra http.Header) http.Header {
 	merged := make(http.Header)
 	for k, v := range base {
-		merged[k] = v
+		merged[k] = append([]string(nil), v...)
 	}
 	for k, v := range extra {
-		merged[k] = v
+		merged[k] = append([]string(nil), v...)
 	}
 	return merged
 }

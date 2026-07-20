@@ -37,7 +37,7 @@ func FindFloat(val any) float64 {
 			return f
 		}
 	default:
-		log.Printf("FindFloat32: unexpected type %T of val: %v\n", val, val)
+		log.Printf("FindFloat: unexpected type %T of val: %v\n", val, val)
 	}
 
 	return 0

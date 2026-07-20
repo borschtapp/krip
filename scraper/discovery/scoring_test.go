@@ -311,7 +311,7 @@ func TestMergeSiblingGroups_CollapsesRecipeTiles(t *testing.T) {
 
 	require.Greater(t, len(groups), 1, "sibling divs should form separate groups before merge")
 
-	mergeSiblingGroups(groups)
+	mergeSiblingGroups(groups, ScoringOptions{})
 
 	// Find the group with the most links — it should hold all 4.
 	maxLinks := 0
@@ -321,6 +321,43 @@ func TestMergeSiblingGroups_CollapsesRecipeTiles(t *testing.T) {
 		}
 	}
 	assert.Equal(t, 4, maxLinks, "merged group should contain all sibling links")
+}
+
+func TestMergeSiblingGroups_RespectsMinGroupSizeOverride(t *testing.T) {
+	const html = `<html><body><main><section>
+		<div><a href="/recipes/pasta">Creamy Pasta Bake</a></div>
+		<div><a href="/recipes/chicken">Roast Chicken Dinner</a></div>
+		<div><a href="/recipes/salad">Summer Salad Bowl</a></div>
+		<div><a href="/recipes/soup">Tomato Basil Soup</a></div>
+	</section></main></body></html>`
+
+	// 1. With MinGroupSize set to 5 (greater than 4 links), no merge should occur.
+	{
+		doc := parseDocument(t, html)
+		base, _ := url.Parse("https://example.com/recipes")
+		groups := collectGroups(doc, base)
+		countBefore := len(groups)
+		require.Equal(t, 4, countBefore)
+
+		mergeSiblingGroups(groups, ScoringOptions{MinGroupSize: 5})
+		assert.Equal(t, countBefore, len(groups), "should not merge when candidate sibling groups are fewer than MinGroupSize")
+	}
+
+	// 2. With MinGroupSize set to 3 (less than or equal to 4 links), merging should occur.
+	{
+		doc := parseDocument(t, html)
+		base, _ := url.Parse("https://example.com/recipes")
+		groups := collectGroups(doc, base)
+
+		mergeSiblingGroups(groups, ScoringOptions{MinGroupSize: 3})
+		maxLinks := 0
+		for _, g := range groups {
+			if len(g.links) > maxLinks {
+				maxLinks = len(g.links)
+			}
+		}
+		assert.Equal(t, 4, maxLinks, "should merge when candidate sibling groups are at least MinGroupSize")
+	}
 }
 
 func TestMergeSiblingGroups_PreservesDistinctContainers(t *testing.T) {
@@ -343,7 +380,7 @@ func TestMergeSiblingGroups_PreservesDistinctContainers(t *testing.T) {
 	countBefore := len(groups)
 	require.GreaterOrEqual(t, countBefore, 2, "should start with at least two distinct groups")
 
-	mergeSiblingGroups(groups)
+	mergeSiblingGroups(groups, ScoringOptions{})
 
 	assert.Equal(t, countBefore, len(groups), "unrelated containers should not be merged together")
 }
@@ -362,6 +399,28 @@ func TestPickSampleURLs_EdgeCases(t *testing.T) {
 	assert.Equal(t, []string{"a"}, pickSampleURLs([]string{"a"}, 5))
 	got := pickSampleURLs([]string{"a", "b", "c"}, 10)
 	assert.Equal(t, []string{"a", "b", "c"}, got, "requesting more than len returns all URLs")
+}
+
+func TestPickSampleURLs_NoUnderSampling(t *testing.T) {
+	for length := 2; length <= 100; length++ {
+		urls := make([]string, length)
+		for i := range urls {
+			urls[i] = fmt.Sprintf("url-%d", i)
+		}
+		for n := 1; n < length; n++ {
+			got := pickSampleURLs(urls, n)
+			assert.Len(t, got, n, "should return exactly n elements for length %d and n %d", length, n)
+
+			// Verify uniqueness.
+			seen := make(map[string]bool)
+			for _, u := range got {
+				if seen[u] {
+					t.Fatalf("duplicate URL %s found in sample for length %d and n %d", u, length, n)
+				}
+				seen[u] = true
+			}
+		}
+	}
 }
 
 func TestApplyGroupValidation_PreservesStubImageWhenScrapedHasNone(t *testing.T) {

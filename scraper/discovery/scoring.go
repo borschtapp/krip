@@ -1,6 +1,7 @@
 package discovery
 
 import (
+	"cmp"
 	"fmt"
 	"log"
 	"math"
@@ -145,7 +146,7 @@ func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sa
 	sc := scoring.resolve()
 
 	groups := collectGroups(data.Document, baseUrl)
-	mergeSiblingGroups(groups)
+	mergeSiblingGroups(groups, sc)
 	for k, g := range groups {
 		if len(g.links) < sc.MinGroupSize {
 			delete(groups, k)
@@ -381,6 +382,7 @@ var nonEntryHrefPrefixes = []string{"mailto:", "tel:", "javascript:"}
 func collectGroups(doc *goquery.Document, baseUrl *url.URL) map[string]*containerGroup {
 	excluded := excludedNodeSet(doc)
 	nthCache := make(map[*html.Node]int)
+	keyCache := make(map[keyCacheKey]string)
 	groups := make(map[string]*containerGroup)
 
 	doc.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
@@ -412,7 +414,7 @@ func collectGroups(doc *goquery.Document, baseUrl *url.URL) map[string]*containe
 		if parent.Length() == 0 {
 			return
 		}
-		key := containerKeyCached(parent, keyDepth, nthCache)
+		key := containerKeyCached(parent, keyDepth, nthCache, keyCache)
 
 		if g, ok := groups[key]; ok {
 			g.links = append(g.links, s)
@@ -441,8 +443,9 @@ type viableCandidate struct {
 // To handle multi-level wrapping (e.g. grid > tile:nth(N) > inner:nth(1) > <a>),
 // the function tries all possible strip depths (1 to keyDepth-1). It always
 // prefers the DEEPEST (most specific) common ancestor that has at least
-// minGroupSize sibling child groups, so over-merging is minimised.
-func mergeSiblingGroups(groups map[string]*containerGroup) {
+// sc.MinGroupSize sibling child groups, so over-merging is minimised.
+func mergeSiblingGroups(groups map[string]*containerGroup, sc ScoringOptions) {
+	sc = sc.resolve()
 	// candidateAncestor represents a proposed merge: a common ancestor prefix
 	// and the set of child group keys that would be merged under it.
 	type candidateAncestor struct {
@@ -481,7 +484,7 @@ func mergeSiblingGroups(groups map[string]*containerGroup) {
 	for _, c := range prefixToCandidate {
 		// Deduplicate child keys (a group may have been registered at multiple depths).
 		uniqueKeys := utils.Deduplicate(c.keys)
-		if len(uniqueKeys) >= minGroupSize {
+		if len(uniqueKeys) >= sc.MinGroupSize {
 			viable = append(viable, viableCandidate{c.prefix, c.childTag, uniqueKeys})
 		}
 	}
@@ -505,7 +508,7 @@ func mergeSiblingGroups(groups map[string]*containerGroup) {
 				pendingKeys = append(pendingKeys, k)
 			}
 		}
-		if len(pendingKeys) < minGroupSize {
+		if len(pendingKeys) < sc.MinGroupSize {
 			continue
 		}
 		merged := &containerGroup{key: c.prefix, tag: c.childTag}
@@ -542,13 +545,7 @@ func rankGroups(groups map[string]*containerGroup, pruneThreshold float64) []sco
 		ranked = append(ranked, scoredGroup{g, score(g, pruneThreshold)})
 	}
 	slices.SortFunc(ranked, func(a, b scoredGroup) int {
-		if a.score > b.score {
-			return -1
-		}
-		if a.score < b.score {
-			return 1
-		}
-		return 0
+		return cmp.Compare(b.score, a.score)
 	})
 	return ranked
 }
@@ -568,7 +565,7 @@ func pickSampleURLs(urls []string, n int) []string {
 	for i := range result {
 		result[i] = urls[i*(len(urls)-1)/(n-1)]
 	}
-	return utils.Deduplicate(result)
+	return result
 }
 
 // deduplicateGroupURLs returns per-link string keys and a deduplicated URL slice
@@ -757,10 +754,15 @@ func semanticBonus(tag string) float64 {
 	}
 }
 
+type keyCacheKey struct {
+	node  *html.Node
+	depth int
+}
+
 // containerKey builds a structural path string by walking up to depth ancestors.
 // Example: "main:nth-of-type(1) > ul:nth-of-type(1)"
 func containerKey(sel *goquery.Selection, depth int) string {
-	return containerKeyCached(sel, depth, make(map[*html.Node]int))
+	return containerKeyCached(sel, depth, make(map[*html.Node]int), make(map[keyCacheKey]string))
 }
 
 // containerKeyCached is containerKey with the nth-of-type index cache threaded
@@ -768,7 +770,7 @@ func containerKey(sel *goquery.Selection, depth int) string {
 // tile i (O(k^2) total); nthOfType instead fills the cache for every sibling in
 // one forward pass the first time any of them is asked for, so the group's cost
 // is amortized to O(k).
-func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.Node]int) string {
+func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.Node]int, keyCache map[keyCacheKey]string) string {
 	if depth == 0 || sel.Length() == 0 {
 		return ""
 	}
@@ -777,17 +779,28 @@ func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.No
 		return ""
 	}
 
+	ck := keyCacheKey{node: n, depth: depth}
+	if cached, ok := keyCache[ck]; ok {
+		return cached
+	}
+
 	part := fmt.Sprintf("%s:nth-of-type(%d)", n.Data, nthOfType(n, nthCache))
 
 	parent := sel.Parent()
+	var result string
 	if parent.Length() == 0 {
-		return part
+		result = part
+	} else {
+		parentKey := containerKeyCached(parent, depth-1, nthCache, keyCache)
+		if parentKey == "" {
+			result = part
+		} else {
+			result = parentKey + " > " + part
+		}
 	}
-	parentKey := containerKeyCached(parent, depth-1, nthCache)
-	if parentKey == "" {
-		return part
-	}
-	return parentKey + " > " + part
+
+	keyCache[ck] = result
+	return result
 }
 
 // nthOfType returns n's 1-based index among same-tag siblings, caching every

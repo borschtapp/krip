@@ -7,11 +7,11 @@ func Deduplicate[E comparable](s []E) []E {
 		return s
 	}
 
-	allKeys := make(map[E]bool)
-	var arr []E
+	seen := make(map[E]struct{}, len(s))
+	arr := make([]E, 0, len(s))
 	for _, item := range s {
-		if _, value := allKeys[item]; !value {
-			allKeys[item] = true
+		if _, ok := seen[item]; !ok {
+			seen[item] = struct{}{}
 			arr = append(arr, item)
 		}
 	}

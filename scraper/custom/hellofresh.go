@@ -144,22 +144,13 @@ type recipeNextData struct {
 						Type             string `json:"type"`
 						Name             string `json:"name"`
 					} `json:"allergensNew"`
-					AdjustedRating   float64   `json:"adjustedRating"`
-					CardLink         string    `json:"cardLink"`
-					Tier             int       `json:"tier"`
-					UpdatedCanonical string    `json:"updatedCanonical"`
-					UpdatedAt        time.Time `json:"updatedAt"`
-					HasBeenProcessed struct {
-						QualityJudge     bool `json:"qualityJudge"`
-						UpdatedCanonical bool `json:"updatedCanonical"`
-						Tier             bool `json:"tier"`
-					} `json:"hasBeenProcessed"`
-					IsCanonical   bool   `json:"isCanonical"`
-					ID            string `json:"id"`
-					VideoMetadata struct {
-						Thumbnails struct {
-						} `json:"thumbnails"`
-					} `json:"videoMetadata"`
+					AdjustedRating           float64     `json:"adjustedRating"`
+					CardLink                 string      `json:"cardLink"`
+					Tier                     int         `json:"tier"`
+					UpdatedCanonical         string      `json:"updatedCanonical"`
+					UpdatedAt                time.Time   `json:"updatedAt"`
+					IsCanonical              bool        `json:"isCanonical"`
+					ID                       string      `json:"id"`
 					Reviews                  interface{} `json:"reviews"`
 					CanonicalLink            string      `json:"canonicalLink"`
 					WebsiteURL               string      `json:"websiteUrl"`
@@ -213,7 +204,7 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 
 	var nextDataObj recipeNextData
 	if err := json.Unmarshal([]byte(nextDataRaw), &nextDataObj); err != nil {
-		return fmt.Errorf("json unmarshal error in HelloFresh nextData: %v", err)
+		return fmt.Errorf("json unmarshal error in HelloFresh nextData: %w", err)
 	}
 
 	recipe := nextDataObj.Props.PageProps.SsrPayload.Recipe
@@ -276,32 +267,23 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 		if recipe.ServingSize > 0 {
 			r.Nutrition.ServingSize = fmt.Sprintf("%d g", recipe.ServingSize)
 		}
+		nutritionMap := map[string]**float64{
+			"57b42a48b7e8697d4b305304": &r.Nutrition.Calories,            // calories (kcal)
+			"57b42a48b7e8697d4b305307": &r.Nutrition.FatContent,          // fat
+			"57b42a48b7e8697d4b305308": &r.Nutrition.SaturatedFatContent, // saturated fat
+			"57b42a48b7e8697d4b305305": &r.Nutrition.CarbohydrateContent, // carbohydrates
+			"57b42a48b7e8697d4b305306": &r.Nutrition.SugarContent,        // sugar
+			"57b42a48b7e8697d4b30530a": &r.Nutrition.FiberContent,        // fiber
+			"57b42a48b7e8697d4b305309": &r.Nutrition.ProteinContent,      // protein
+			"57b42a48b7e8697d4b30530b": &r.Nutrition.SaltContent,         // salt (g) — HelloFresh mislabels Salt as sodiumContent in JSON-LD
+			"652d4d58ce1a3c29bd168c82": &r.Nutrition.PotassiumContent,    // potassium (mg)
+			"652d4d6bce1a3c29bd168c84": &r.Nutrition.CalciumContent,      // calcium (mg)
+			"652d4d7bce1a3c29bd168c86": &r.Nutrition.IronContent,         // iron (mg)
+		}
 		for _, n := range recipe.Nutrition {
 			val := n.Amount
-			switch n.Type {
-			case "57b42a48b7e8697d4b305304": // calories (kcal)
-				r.Nutrition.Calories = &val
-			case "57b42a48b7e8697d4b305307": // fat
-				r.Nutrition.FatContent = &val
-			case "57b42a48b7e8697d4b305308": // saturated fat
-				r.Nutrition.SaturatedFatContent = &val
-			case "57b42a48b7e8697d4b305305": // carbohydrates
-				r.Nutrition.CarbohydrateContent = &val
-			case "57b42a48b7e8697d4b305306": // sugar
-				r.Nutrition.SugarContent = &val
-			case "57b42a48b7e8697d4b30530a": // fiber
-				r.Nutrition.FiberContent = &val
-			case "57b42a48b7e8697d4b305309": // protein
-				r.Nutrition.ProteinContent = &val
-			case "57b42a48b7e8697d4b30530b": // salt (g) — HelloFresh mislabels this as sodiumContent in JSON-LD
-				r.Nutrition.SaltContent = &val
-				r.Nutrition.SodiumContent = nil
-			case "652d4d58ce1a3c29bd168c82": // potassium (mg)
-				r.Nutrition.PotassiumContent = &val
-			case "652d4d6bce1a3c29bd168c84": // calcium (mg)
-				r.Nutrition.CalciumContent = &val
-			case "652d4d7bce1a3c29bd168c86": // iron (mg)
-				r.Nutrition.IronContent = &val
+			if field, ok := nutritionMap[n.Type]; ok {
+				*field = &val
 			}
 		}
 	}
@@ -486,7 +468,7 @@ func ScrapeHelloFreshFeed(data *model.DataInput, feed *model.Feed) error {
 
 	var nextDataObj feedNextData
 	if err := json.Unmarshal([]byte(nextDataRaw), &nextDataObj); err != nil {
-		return fmt.Errorf("json unmarshal error: %v", err)
+		return fmt.Errorf("json unmarshal error: %w", err)
 	}
 
 	payload := nextDataObj.Props.PageProps.SsrPayload
@@ -504,14 +486,16 @@ func ScrapeHelloFreshFeed(data *model.DataInput, feed *model.Feed) error {
 	if payload.ActiveWeek != "" {
 		var year, week int
 		if n, _ := fmt.Sscanf(payload.ActiveWeek, "%d-W%d", &year, &week); n == 2 {
-			// Rough estimation of the week's start date
-			t := time.Date(year, 1, 1, 0, 0, 0, 0, time.UTC)
-			t = t.AddDate(0, 0, (week-1)*7)
+			// ISO week 1 always contains Jan 4.
+			jan4 := time.Date(year, 1, 4, 0, 0, 0, 0, time.UTC)
+			// Find the Monday of that week
+			daysToSubtract := (int(jan4.Weekday()) + 6) % 7
+			mondayOfW1 := jan4.AddDate(0, 0, -daysToSubtract)
+			// Add (week - 1) * 7 days to get the Monday of the target week
+			t := mondayOfW1.AddDate(0, 0, (week-1)*7)
 			weekDate = &t
 		}
 	}
-
-	uniqueEntries := make(map[string]*model.Recipe)
 
 	for _, course := range payload.Courses {
 		if course.Recipe.Name != "" {
@@ -536,12 +520,8 @@ func ScrapeHelloFreshFeed(data *model.DataInput, feed *model.Feed) error {
 				DatePublished: weekDate,
 			}
 			entry.AddImageUrl(course.Recipe.ImageLink)
-			uniqueEntries[entry.Url] = entry
+			feed.AddEntry(entry)
 		}
-	}
-
-	for _, entry := range uniqueEntries {
-		feed.Entries = append(feed.Entries, entry)
 	}
 
 	return nil

@@ -20,6 +20,7 @@ import (
 
 var idPattern = regexp.MustCompile(`/(\d+)-`)
 var scriptPattern = regexp.MustCompile(`gon\.current_brand="([^"]+?)".*?gon\.current_country="([^"]+?)".*?gon\.api_token="([^"]+?)".*?gon\.api_host="([^"]+?)".*?`)
+var timePattern = regexp.MustCompile(`(\d+)-(\d+)\s*Minuten`)
 
 // these values I was able to retrieve from website
 var preparationMap = map[string]time.Duration{
@@ -284,9 +285,6 @@ func ScrapeMarleySpoonFeed(data *model.DataInput, feed *model.Feed) error {
 		Url:  utils.BaseUrl(data.Url),
 	}
 
-	// "20-30 Minuten" -> PT30M
-	timePattern := regexp.MustCompile(`(\d+)-(\d+)\s*Minuten`)
-
 	data.Document.Find("a[href*='/menu/']").Each(func(i int, link *goquery.Selection) {
 		href, _ := link.Attr("href")
 		if href == "/menu" || href == "/menu/" || !idPattern.MatchString(href) {
@@ -318,7 +316,7 @@ func ScrapeMarleySpoonFeed(data *model.DataInput, feed *model.Feed) error {
 		})
 
 		if categories := link.Find(".text-neutral-greyDark > div"); categories.Length() > 0 {
-			for _, category := range strings.Split(categories.Text(), "•") {
+			for category := range strings.SplitSeq(categories.Text(), "•") {
 				if cat := strings.Join(strings.Fields(category), " "); cat != "" {
 					entry.Categories = append(entry.Categories, cat)
 				}

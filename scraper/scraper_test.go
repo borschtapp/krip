@@ -1,6 +1,8 @@
 package scraper
 
 import (
+	"context"
+	"net/http"
 	"strings"
 	"testing"
 
@@ -9,6 +11,7 @@ import (
 	"golang.org/x/net/html"
 
 	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/scraper/custom"
 )
 
 func makeRecipe(name, rawUrl string, withImage, withIngredients, withInstructions bool) *model.Recipe {
@@ -31,7 +34,7 @@ func TestFilterEntries_RequiresImageByDefault(t *testing.T) {
 		makeRecipe("No Image", "https://x.com/r/2", false, true, true),
 	}
 
-	result := filterEntries(entries, model.FeedOptions{})
+	result := filterEntries(entries, model.FeedOptions{}, nil)
 
 	assert.Len(t, result, 1)
 	assert.Equal(t, "With Image", result[0].Name)
@@ -43,10 +46,32 @@ func TestFilterEntries_OptionalImageAcceptsAll(t *testing.T) {
 		makeRecipe("B", "https://x.com/r/2", false, true, true),
 	}
 
-	opt := model.FeedOptions{ScrapeOptions: model.ScrapeOptions{RecipeFilter: model.RecipeFilter{OptionalImage: true}}}
-	result := filterEntries(entries, opt)
+	opt := model.FeedOptions{RecipeFilter: model.RecipeFilter{OptionalImage: true}}
+	result := filterEntries(entries, opt, nil)
 
 	assert.Len(t, result, 2)
+}
+
+func TestFilterEntries_EmptyUrlNotExemptFromValidation(t *testing.T) {
+	// scrapedURLs simulates ScrapeFeed's real map: it never gets a "" key set,
+	// since the entry-scrape loop skips entries with an empty Url outright.
+	scrapedURLs := map[string]bool{"https://x.com/r/1": true}
+
+	entries := []*model.Recipe{
+		makeRecipe("No URL", "", true, true, true),
+		makeRecipe("Deferred stub", "https://x.com/r/2", false, false, false), // never attempted, not in scrapedURLs
+		makeRecipe("Scraped but incomplete", "https://x.com/r/1", false, true, true),
+	}
+
+	result := filterEntries(entries, model.FeedOptions{}, scrapedURLs)
+
+	var names []string
+	for _, r := range result {
+		names = append(names, r.Name)
+	}
+	assert.NotContains(t, names, "No URL", "entry with empty Url must not bypass Validate()")
+	assert.Contains(t, names, "Deferred stub", "unscraped stub entries should still be exempt from validation")
+	assert.NotContains(t, names, "Scraped but incomplete", "attempted-but-incomplete entries must still be validated")
 }
 
 func TestFilterEntries_MinIngredients(t *testing.T) {
@@ -56,8 +81,8 @@ func TestFilterEntries_MinIngredients(t *testing.T) {
 	enough := makeRecipe("Enough", "https://x.com/r/2", true, false, true)
 	enough.Ingredients = []*model.PropertyValue{{Name: "a"}, {Name: "b"}, {Name: "c"}}
 
-	opt := model.FeedOptions{ScrapeOptions: model.ScrapeOptions{RecipeFilter: model.RecipeFilter{MinIngredients: 3}}}
-	result := filterEntries([]*model.Recipe{few, enough}, opt)
+	opt := model.FeedOptions{RecipeFilter: model.RecipeFilter{MinIngredients: 3}}
+	result := filterEntries([]*model.Recipe{few, enough}, opt, nil)
 
 	assert.Len(t, result, 1)
 	assert.Equal(t, "Enough", result[0].Name)
@@ -113,4 +138,108 @@ func TestFindEntries_SingleInvalidSchemaEntryFallsThrough(t *testing.T) {
 	for _, e := range feed.Entries {
 		assert.NotEqual(t, "https://example.com/pasta", e.Url, "schema stub URL must not appear")
 	}
+}
+
+type mockHTTPClient struct {
+	doFunc func(req *http.Request) (*http.Response, error)
+}
+
+func (m *mockHTTPClient) Do(req *http.Request) (*http.Response, error) {
+	return m.doFunc(req)
+}
+
+func TestScrapeFeed_ContextCancelledEntryScrape(t *testing.T) {
+	// Register a dummy custom feed scraper to yield some entries
+	custom.RegisterFeedScraper("canceltestentry", func(data *model.DataInput, feed *model.Feed) error {
+		feed.Entries = []*model.Recipe{
+			{Url: "https://canceltestentry.com/1"},
+			{Url: "https://canceltestentry.com/2"},
+			{Url: "https://canceltestentry.com/3"},
+		}
+		return nil
+	})
+
+	ctx, cancel := context.WithCancel(context.Background())
+	cancel() // cancel immediately
+
+	callCount := 0
+	mockClient := &mockHTTPClient{
+		doFunc: func(req *http.Request) (*http.Response, error) {
+			callCount++
+			return nil, context.Canceled
+		},
+	}
+
+	opt := model.FeedOptions{
+		ScrapeOptions: model.ScrapeOptions{
+			RequestOptions: model.RequestOptions{
+				Context:    ctx,
+				HttpClient: mockClient,
+			},
+		},
+		SkipFeedMeta: true,
+	}
+
+	data := &model.DataInput{
+		Url: "https://canceltestentry.com/feed",
+	}
+	feed := &model.Feed{}
+
+	err := ScrapeFeed(data, feed, opt)
+	require.NoError(t, err) // ScrapeFeed returns nil on success or non-critical errors
+
+	// The loop should break immediately on the cancelled context, so Do should be called 0 times
+	assert.Equal(t, 0, callCount, "should not make any requests if context is cancelled")
+}
+
+func TestScrapeFeed_ContextCancelledDiscoveryValidation(t *testing.T) {
+	// Construct HTML with multiple candidate links
+	const rawHTML = `<!DOCTYPE html><html><body><main><ul>
+	  <li><a href="/recipes/pasta"><img src="/img/pasta.jpg"><span>Creamy Pasta</span></a></li>
+	  <li><a href="/recipes/chicken"><img src="/img/chicken.jpg"><span>Roast Chicken</span></a></li>
+	  <li><a href="/recipes/salad"><img src="/img/salad.jpg"><span>Summer Salad</span></a></li>
+	  <li><a href="/recipes/soup"><img src="/img/soup.jpg"><span>Tomato Soup</span></a></li>
+	</ul></main></body></html>`
+
+	root, err := html.Parse(strings.NewReader(rawHTML))
+	require.NoError(t, err)
+	data, err := NodeInput(root, "https://example.com/recipes", model.ScrapeOptions{SkipMetaUrl: true})
+	require.NoError(t, err)
+
+	ctx, cancel := context.WithCancel(context.Background())
+	cancel() // cancel immediately
+
+	callCount := 0
+	mockClient := &mockHTTPClient{
+		doFunc: func(req *http.Request) (*http.Response, error) {
+			callCount++
+			return nil, context.Canceled
+		},
+	}
+
+	opt := model.FeedOptions{
+		ScrapeOptions: model.ScrapeOptions{
+			RequestOptions: model.RequestOptions{
+				Context:    ctx,
+				HttpClient: mockClient,
+			},
+			SkipCustomScrapers: true,
+			SkipSchemaScraper:  true,
+		},
+		SkipFeedMeta:         true,
+		SkipRSSScraper:       true,
+		SkipDiscoveryScraper: false,
+		DiscoverySampleSize:  3,
+		SkipEntriesScrape:    true, // Skip the entry scrape step to focus only on discovery sampling
+	}
+
+	feed := &model.Feed{}
+	err = ScrapeFeed(data, feed, opt)
+	// Since all validation fails (and context is cancelled), findEntries will return "no entries found"
+	require.Error(t, err)
+
+	// Currently, the validator loop in findEntries (scraper.go) does NOT check options.Context.Err().
+	// It will make 3 calls (DiscoverySampleSize) to UrlInput, which calls client.Do (mockClient).
+	// If the issue is fixed, it should make 0 calls because it checks context cancellation before starting.
+	assert.Equal(t, 0, callCount, "should not make discovery validation requests if context is cancelled")
 }

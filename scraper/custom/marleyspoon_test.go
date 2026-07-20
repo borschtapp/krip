@@ -31,11 +31,9 @@ func TestMarleySpoonFeedOnline(t *testing.T) {
 	var website = "https://marleyspoon.de/menu"
 	feed, err := krip.ScrapeFeedUrl(website, krip.FeedOptions{
 		SkipEntriesScrape: true,
-		ScrapeOptions: krip.ScrapeOptions{
-			RecipeFilter: krip.RecipeFilter{
-				OptionalIngredients:  true,
-				OptionalInstructions: true,
-			},
+		RecipeFilter: krip.RecipeFilter{
+			OptionalIngredients:  true,
+			OptionalInstructions: true,
 		},
 	})
 	assert.NoError(t, err)
@@ -89,7 +87,7 @@ func TestMarleySpoonFeedParsing(t *testing.T) {
 			</a>
 		</main>`
 
-	doc, err := goquery.NewDocumentFromReader(strings.NewReader(string(content)))
+	doc, err := goquery.NewDocumentFromReader(strings.NewReader(content))
 	if err != nil {
 		t.Fatal(err)
 	}

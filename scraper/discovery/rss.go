@@ -14,6 +14,15 @@ func replayRSS(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed)
 		return fmt.Errorf("rss-link source has no URL")
 	}
 
+	baseUrl, err := url.Parse(data.Url)
+	if err != nil {
+		return fmt.Errorf("invalid base URL: %w", err)
+	}
+	rssUrl, err := url.Parse(d.Selector)
+	if err != nil || rssUrl.Host != baseUrl.Host {
+		return fmt.Errorf("rss source points to an external host")
+	}
+
 	body, _, err := utils.ExecuteRequest(
 		utils.RequestConfig{Method: "GET", URL: d.Selector},
 		data.RequestOptions,

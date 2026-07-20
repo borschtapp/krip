@@ -45,7 +45,7 @@ func CleanupInline(s string) string {
 func cleanupCommon(s string) string {
 	s = html.UnescapeString(s)
 	s = strings.TrimSpace(s)
-	s = strings.ReplaceAll(s, " ", " ")
+	s = strings.ReplaceAll(s, "\u00a0", " ")
 	s = strings.ReplaceAll(s, "\u00ad", "-")
 	s = Unquote(s)
 	s = RemoveDoubleSpace(s)
@@ -63,6 +63,9 @@ func TrimZeroWidthSpaces(s string) string {
 func SplitTitle(title string) []string {
 	title = strings.ReplaceAll(title, " - ", "|")
 	title = strings.ReplaceAll(title, " – ", "|")
+	title = strings.ReplaceAll(title, " — ", "|")
+	title = strings.ReplaceAll(title, " • ", "|")
+	title = strings.ReplaceAll(title, " :: ", "|")
 	parts := strings.Split(title, "|")
 
 	var result []string
@@ -77,29 +80,46 @@ func SplitTitle(title string) []string {
 
 func RemoveDoubleSpace(str string) string {
 	return strings.Join(strings.FieldsFunc(str, func(r rune) bool {
-		if uint32(r) <= unicode.MaxLatin1 {
-			switch r {
-			case '\t', '\v', '\f', '\r', ' ', 0x85, 0xA0:
-				return true
-			}
-			return false
-		}
-		return false
+		return r != '\n' && unicode.IsSpace(r)
 	}), " ")
 }
 
 func Unquote(s string) string {
-	if strings.HasPrefix(s, "\"") {
-		if strings.HasSuffix(s, "\"") {
-			if strings.Count(s[1:len(s)-1], "\"")%2 == 0 {
-				return s[1 : len(s)-1]
-			}
-		} else if strings.Count(s[1:], "\"")%2 == 0 {
-			return s[1:]
+	trimStrict := func(s, open, close string) string {
+		if strings.HasPrefix(s, open) && strings.HasSuffix(s, close) &&
+			strings.Count(s, open) == 1 && strings.Count(s, close) == 1 {
+			return s[len(open) : len(s)-len(close)]
 		}
-	} else if strings.HasSuffix(s, "\"") && strings.Count(s[:len(s)-1], "\"")%2 == 0 {
-		return s[:len(s)-1]
+		return s
 	}
+
+	trimQuote := func(s, ch string) string {
+		hasPrefix := strings.HasPrefix(s, ch)
+		hasSuffix := strings.HasSuffix(s, ch)
+		if !hasPrefix && !hasSuffix {
+			return s
+		}
+
+		start, end := 0, len(s)
+		if hasPrefix {
+			start = 1
+		}
+		if hasSuffix {
+			end = len(s) - 1
+		}
+		if start > end {
+			return s
+		}
+
+		if strings.Count(s[start:end], ch)%2 != 0 {
+			return s
+		}
+		return s[start:end]
+	}
+
+	s = trimStrict(s, "“", "”")
+	s = trimStrict(s, "«", "»")
+	s = trimQuote(s, "\"")
 	return s
 }
 
@@ -124,13 +144,6 @@ func SplitParagraphs(s string) []string {
 
 func RemoveNewLines(s string) string {
 	return strings.Join(strings.Fields(s), " ")
-}
-
-func Coalesce(dst, src string) string {
-	if len(dst) == 0 {
-		return src
-	}
-	return dst
 }
 
 var numberRegex = regexp.MustCompile(`\d+([.,]\d+)?`)

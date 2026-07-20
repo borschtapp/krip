@@ -17,6 +17,8 @@ func TestParseDuration(t *testing.T) {
 		{"10 minutes", time.Duration(10) * time.Minute, true},
 		{"1 minute", time.Duration(1) * time.Minute, true},
 		{"5 min", time.Duration(5) * time.Minute, true},
+		{"1.5 hours", 90 * time.Minute, true},
+		{"garbage", 0, false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {
@@ -42,6 +44,8 @@ func TestParseFloat(t *testing.T) {
 		{"test", 0, true},
 		{"", 0, true},
 		{"1,2,3", 0, true},
+		{"1,234.5", 1234.5, false},
+		{"1.234,5", 1234.5, false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {
@@ -74,4 +78,17 @@ func TestParseInt(t *testing.T) {
 			assert.Equal(t, tt.wantErr, err != nil)
 		})
 	}
+}
+
+func TestParseDate(t *testing.T) {
+	t1, ok1 := ParseDate("2023-01-05")
+	assert.True(t, ok1)
+	assert.Equal(t, 2023, t1.Year())
+
+	t2, ok2 := ParseDate("2023-01-05 10:00:00")
+	assert.True(t, ok2)
+	assert.Equal(t, 10, t2.Hour())
+
+	_, ok3 := ParseDate("invalid date")
+	assert.False(t, ok3)
 }
