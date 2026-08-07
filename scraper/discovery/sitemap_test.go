@@ -243,22 +243,22 @@ func TestSitemapCandidates_EnforcesSameHost(t *testing.T) {
 	assert.Contains(t, candidates, "https://example.com/sitemap_index.xml")
 }
 
-func TestFollowSitemapIndex_BlocksPrivateAndLoopback(t *testing.T) {
+func TestFollowSitemapIndex_EnforcesSameHost(t *testing.T) {
 	indexLocs := []string{
+		"http://malicious.com/sitemap.xml",
 		"http://127.0.0.1/sitemap.xml",
-		"http://localhost/sitemap.xml",
-		"http://192.168.1.1/sitemap.xml",
+		"http://example.com.evil.com/sitemap.xml",
 	}
 	opts := model.RequestOptions{
 		HttpClient: &mockHTTPClient{
 			doFunc: func(req *http.Request) (*http.Response, error) {
-				t.Fatalf("should not perform request to private/loopback URL: %s", req.URL.String())
+				t.Fatalf("should not perform request to a different host: %s", req.URL.String())
 				return nil, nil
 			},
 		},
 	}
 
-	locs, err := followSitemapIndex(indexLocs, opts)
+	locs, err := followSitemapIndex(indexLocs, opts, "example.com")
 	require.NoError(t, err)
 	assert.Empty(t, locs)
 }

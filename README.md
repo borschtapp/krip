@@ -138,6 +138,16 @@ fmt.Println(recipe)
 }
 ```
 
+## Security: SSRF protection
+
+Every outbound request made by Krip goes through the `HTTPClient` interface (`RequestOptions.HttpClient` /
+`ScrapeOptions.HttpClient`), which defaults to a plain `http.Client` with a 30s timeout and **no protection against
+requests to private, loopback, or link-local addresses**.
+
+If you scrape URLs that ultimately come from untrusted input (user-submitted URLs, third-party feeds, etc.) and your
+process can reach internal/private network resources, supply a hardened client via `HttpClient` — e.g. one built on
+[`safeurl`](https://github.com/doyensec/safeurl) — that validates the IP it dials, not just a pre-resolved hostname.
+
 ## Project Structure
 
 * **`cmd/`**: Entry points for the CLI application.

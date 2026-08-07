@@ -1,7 +1,6 @@
 package discovery
 
 import (
-	"context"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -14,7 +13,6 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/borschtapp/krip/model"
-	"github.com/borschtapp/krip/utils"
 )
 
 func TestRobotsSitemaps_ParsesDirective(t *testing.T) {
@@ -123,12 +121,9 @@ func TestFollowSitemapIndex_MergesConcurrently(t *testing.T) {
 	defer server.Close()
 
 	indexLocs := []string{server.URL + "/child-a.xml", server.URL + "/child-b.xml", server.URL + "/child-c.xml"}
-	opts := model.RequestOptions{
-		HttpClient: server.Client(),
-		Context:    context.WithValue(context.Background(), utils.AllowLoopbackKey, true),
-	}
+	opts := model.RequestOptions{HttpClient: server.Client()}
 
-	locs, err := followSitemapIndex(indexLocs, opts)
+	locs, err := followSitemapIndex(indexLocs, opts, serverHost(t, server))
 
 	require.NoError(t, err)
 	assert.Equal(t, int32(3), atomic.LoadInt32(&requests), "all 3 selected children should be fetched")
@@ -153,12 +148,9 @@ func TestFollowSitemapIndex_CapsAtThreeChildren(t *testing.T) {
 	for i := range 6 {
 		indexLocs = append(indexLocs, fmt.Sprintf("%s/child-%d.xml", server.URL, i))
 	}
-	opts := model.RequestOptions{
-		HttpClient: server.Client(),
-		Context:    context.WithValue(context.Background(), utils.AllowLoopbackKey, true),
-	}
+	opts := model.RequestOptions{HttpClient: server.Client()}
 
-	_, err := followSitemapIndex(indexLocs, opts)
+	_, err := followSitemapIndex(indexLocs, opts, serverHost(t, server))
 
 	require.NoError(t, err)
 	assert.Equal(t, int32(3), atomic.LoadInt32(&requests), "only the first 3 (bounded) children should be fetched")
@@ -190,12 +182,9 @@ func TestFollowSitemapIndex_NestedIndexRecursion(t *testing.T) {
 
 	// indexLocs: first one is an index, second is a leaf
 	indexLocs := []string{server.URL + "/nested-index.xml", server.URL + "/leaf-c.xml"}
-	opts := model.RequestOptions{
-		HttpClient: server.Client(),
-		Context:    context.WithValue(context.Background(), utils.AllowLoopbackKey, true),
-	}
+	opts := model.RequestOptions{HttpClient: server.Client()}
 
-	locs, err := followSitemapIndex(indexLocs, opts)
+	locs, err := followSitemapIndex(indexLocs, opts, serverHost(t, server))
 
 	require.NoError(t, err)
 	// Fetches:
@@ -234,12 +223,9 @@ func TestFollowSitemapIndex_NestedIndexRecursionLimit(t *testing.T) {
 	defer server.Close()
 
 	indexLocs := []string{server.URL + "/nested-index-1.xml"}
-	opts := model.RequestOptions{
-		HttpClient: server.Client(),
-		Context:    context.WithValue(context.Background(), utils.AllowLoopbackKey, true),
-	}
+	opts := model.RequestOptions{HttpClient: server.Client()}
 
-	locs, err := followSitemapIndex(indexLocs, opts)
+	locs, err := followSitemapIndex(indexLocs, opts, serverHost(t, server))
 
 	require.NoError(t, err)
 	// Fetches:
@@ -248,6 +234,15 @@ func TestFollowSitemapIndex_NestedIndexRecursionLimit(t *testing.T) {
 	// Total fetches should be 2, and no leaf locations should be found because the recursion stopped at the second index.
 	assert.Equal(t, int32(2), atomic.LoadInt32(&requests))
 	assert.Empty(t, locs)
+}
+
+// serverHost returns the host:port of an httptest.Server, for passing as the
+// same-host restriction argument to followSitemapIndex in tests.
+func serverHost(t *testing.T, server *httptest.Server) string {
+	t.Helper()
+	u, err := url.Parse(server.URL)
+	require.NoError(t, err)
+	return u.Host
 }
 
 func urlsetXML(locs ...string) []byte {

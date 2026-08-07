@@ -3,7 +3,6 @@ package discovery
 import (
 	"bytes"
 	"compress/gzip"
-	"context"
 	"encoding/xml"
 	"fmt"
 	"io"
@@ -48,13 +47,12 @@ func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredF
 		return fmt.Errorf("sitemap parse failed: %w", err)
 	}
 	if isIndex {
-		locs, _ = followSitemapIndex(locs, data.RequestOptions)
+		locs, _ = followSitemapIndex(locs, data.RequestOptions, baseUrl.Host)
 	}
 
 	// filterRecipeLocs already de-duplicates by loc, and feed is known-empty here
-	// (replay is the first entry-finding stage), so appending directly is
-	// equivalent to feed.AddEntry but skips its per-call O(len(feed.Entries)) scan
-	// — significant when a sitemap yields thousands of locs.
+	// (replay is the first entry-finding stage), so appending directly avoids
+	// AddEntries' O(len(feed.Entries)) seen-map build on every call.
 	for _, loc := range filterRecipeLocs(locs) {
 		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(loc, d.UrlPattern) {
 			continue
@@ -89,7 +87,7 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 		}
 
 		if isIndex {
-			locs, err = followSitemapIndex(locs, opts)
+			locs, err = followSitemapIndex(locs, opts, baseUrl.Host)
 			if err != nil || len(locs) == 0 {
 				continue
 			}
@@ -102,16 +100,15 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 
 		prefix := UrlPathPattern(recipeLocs)
 		// recipeLocs is already unique (filterRecipeLocs dedupes) and feed starts
-		// empty, so appending directly avoids AddEntry's O(len(feed.Entries)) scan
-		// per loc — this loop is exactly the "tens of thousands of locs" case §13
-		// of discovery-ideas.md calls out as quadratic.
+		// empty, so appending directly avoids AddEntries' O(len(recipeLocs)) seen-map build
 		for _, loc := range recipeLocs {
 			feed.Entries = append(feed.Entries, &model.Recipe{Url: loc})
 		}
 		return &model.DiscoveredFeed{
-			Source:     SourceSitemap,
-			Selector:   sitemapUrl,
-			UrlPattern: prefix,
+			Source:          SourceSitemap,
+			Selector:        sitemapUrl,
+			UrlPattern:      prefix,
+			ConfidenceScore: confidenceFromCount(len(recipeLocs), 5, 100),
 		}, nil
 	}
 
@@ -184,12 +181,16 @@ func robotsSitemaps(base string, opts model.RequestOptions) []string {
 
 // followSitemapIndex fetches child sitemaps from an index, returning all their locs.
 // Prefers children whose URL contains recipe-related keywords; fetches at most 3.
-func followSitemapIndex(indexLocs []string, opts model.RequestOptions) ([]string, error) {
+// host restricts children to the site being scraped: a sitemap index is content
+// supplied by the target site (or, if compromised, an attacker), so without this
+// check a malicious or careless entry could redirect discovery into fetching
+// arbitrary third-party URLs using the caller's HTTP client.
+func followSitemapIndex(indexLocs []string, opts model.RequestOptions, host string) ([]string, error) {
 	budget := 3
-	return followSitemapRecursive(indexLocs, opts, &budget, 0)
+	return followSitemapRecursive(indexLocs, opts, &budget, 0, host)
 }
 
-func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *int, depth int) ([]string, error) {
+func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *int, depth int, host string) ([]string, error) {
 	// Sort: recipe-keyword children first
 	var preferred, rest []string
 	for _, loc := range locs {
@@ -209,14 +210,7 @@ func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *in
 		}
 
 		parsed, err := url.Parse(childUrl)
-		if err != nil {
-			continue
-		}
-		ctx := opts.Context
-		if ctx == nil {
-			ctx = context.Background()
-		}
-		if utils.IsPrivateOrLoopbackHost(ctx, parsed.Hostname()) {
+		if err != nil || parsed.Host != host {
 			continue
 		}
 
@@ -236,7 +230,7 @@ func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *in
 			if depth >= 1 {
 				continue
 			}
-			nestedLocs, err := followSitemapRecursive(childLocs, opts, budget, depth+1)
+			nestedLocs, err := followSitemapRecursive(childLocs, opts, budget, depth+1, host)
 			if err == nil {
 				allLocs = append(allLocs, nestedLocs...)
 			}

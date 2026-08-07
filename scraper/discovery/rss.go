@@ -42,12 +42,14 @@ func replayRSS(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed)
 		return fmt.Errorf("rss parse failed: %w", err)
 	}
 
+	var entries []*model.Recipe
 	for _, e := range tmpFeed.Entries {
 		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(e.Url, d.UrlPattern) {
 			continue
 		}
-		feed.AddEntry(e)
+		entries = append(entries, e)
 	}
+	feed.AddEntries(entries)
 	return nil
 }
 
@@ -87,5 +89,9 @@ func tryRSSLink(data *model.DataInput, feed *model.Feed) (*model.DiscoveredFeed,
 		return nil, fmt.Errorf("rss feed empty")
 	}
 
-	return &model.DiscoveredFeed{Source: SourceRSSLink, Selector: absHref}, nil
+	return &model.DiscoveredFeed{
+		Source:          SourceRSSLink,
+		Selector:        absHref,
+		ConfidenceScore: confidenceFromCount(len(feed.Entries), 1, 20),
+	}, nil
 }

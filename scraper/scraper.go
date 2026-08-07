@@ -21,6 +21,19 @@ import (
 // Entries beyond this index are kept as stub entries (URL only).
 const maxEntriesForScrape = 20
 
+// safeScrape invokes a Scraper strategy, converting any panic into an error so
+// a malformed page degrades one strategy instead of crashing the whole scrape.
+func safeScrape(label string, fn model.Scraper, data *model.DataInput, r *model.Recipe) (err error) {
+	defer utils.RecoverPanic(label, &err)
+	return fn(data, r)
+}
+
+// safeScrapeFeed is the FeedScraper equivalent of safeScrape.
+func safeScrapeFeed(label string, fn model.FeedScraper, data *model.DataInput, feed *model.Feed) (err error) {
+	defer utils.RecoverPanic(label, &err)
+	return fn(data, feed)
+}
+
 func Scrape(data *model.DataInput, r *model.Recipe, options model.ScrapeOptions) error {
 	r.Url = data.Url
 	if r.Publisher == nil {
@@ -32,14 +45,14 @@ func Scrape(data *model.DataInput, r *model.Recipe, options model.ScrapeOptions)
 
 	if !options.SkipSchemaScraper {
 		// fill recipe with schema.org/Recipe metadata
-		if err := schema.Scrape(data, r); err != nil {
+		if err := safeScrape("schema scraper", schema.Scrape, data, r); err != nil {
 			log.Printf("schema error: %v", err)
 		}
 	}
 
 	if !options.SkipOpenGraphScraper {
 		// fill recipe with OpenGraph metadata
-		if err := opengraph.Scrape(data, r); err != nil {
+		if err := safeScrape("OpenGraph scraper", opengraph.Scrape, data, r); err != nil {
 			log.Printf("OpenGraph error: %v", err)
 		}
 	}
@@ -105,7 +118,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 	}
 
 	if !options.SkipFeedMeta {
-		if err := opengraph.ScrapeFeed(data, feed); err != nil {
+		if err := safeScrapeFeed("feed OpenGraph scraper", opengraph.ScrapeFeed, data, feed); err != nil {
 			log.Printf("feed: OpenGraph error: %v", err)
 		}
 	}
@@ -197,13 +210,13 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 	}
 
 	if !options.SkipRSSScraper {
-		if err := rss.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		if err := safeScrapeFeed("RSS feed scraper", rss.ScrapeFeed, data, feed); err == nil && len(feed.Entries) > 0 {
 			return nil
 		}
 	}
 
 	if !options.SkipSchemaScraper {
-		if err := schema.ScrapeFeed(data, feed); err == nil && len(feed.Entries) > 0 {
+		if err := safeScrapeFeed("schema feed scraper", schema.ScrapeFeed, data, feed); err == nil && len(feed.Entries) > 0 {
 			if len(feed.Entries) == 1 && !feed.Entries[0].IsValid() {
 				// Single invalid entry is likely a category page
 				feed.Entries = nil

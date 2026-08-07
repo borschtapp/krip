@@ -25,6 +25,23 @@ const (
 	maxGroupsToValidate = 3    // caps the number of candidate groups to check
 )
 
+// confidenceFromCount maps an entry count to a confidence score in
+// [sampleThreshold, 1.0], scaling linearly from minCount (the stage's own
+// success threshold) up to saturateCount. minCount maps to sampleThreshold
+// rather than 0 so that RSS and sitemap results — which have no per-link
+// heuristic scoring like DOM containers do — still land on the same
+// [0.55, 1.0] scale DOM confidence uses, instead of an independently-tuned range.
+func confidenceFromCount(count, minCount, saturateCount int) float64 {
+	if count <= minCount {
+		return sampleThreshold
+	}
+	if count >= saturateCount {
+		return 1.0
+	}
+	frac := float64(count-minCount) / float64(saturateCount-minCount)
+	return sampleThreshold + frac*(1.0-sampleThreshold)
+}
+
 // resolve returns a copy of s with package defaults filled in for any unset (zero-valued) field.
 func (s ScoringOptions) resolve() ScoringOptions {
 	if s.AcceptThreshold == 0 {
@@ -105,8 +122,8 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 			}
 			seen[u] = struct{}{}
 			// feed is known-empty here (replay is always the first entry-finding
-			// stage), so a plain append is equivalent to AddEntry's dedup-and-append
-			// but skips its O(len(feed.Entries)) scan on every call.
+			// stage), so a plain append is equivalent to AddEntries' dedup-and-append
+			// but skips its seen-map build on every call.
 			feed.Entries = append(feed.Entries, &model.Recipe{Url: u})
 		}
 		return nil
@@ -166,9 +183,11 @@ func tryDOMScoring(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, sa
 		return nil, err
 	}
 
-	for _, u := range urls {
-		feed.AddEntry(byUrl[u])
+	entries := make([]*model.Recipe, len(urls))
+	for i, u := range urls {
+		entries[i] = byUrl[u]
 	}
+	feed.AddEntries(entries)
 	return makeDiscoveredFeed(sg, urls), nil
 }
 

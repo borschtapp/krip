@@ -6,6 +6,7 @@ import (
 	"net/url"
 
 	"github.com/borschtapp/krip/model"
+	"github.com/borschtapp/krip/utils"
 )
 
 // Source constants for DiscoveredFeed.Source.
@@ -53,7 +54,9 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOption
 
 	// Stage 0: DOM container scoring (no extra requests, optionally for validation)
 	log.Println("discovery: trying DOM container scoring")
-	if d, err := tryDOMScoring(data, feed, baseUrl, sampling, scoring); err == nil && d != nil {
+	if d, err := runStage(feed, "DOM container scoring", func() (*model.DiscoveredFeed, error) {
+		return tryDOMScoring(data, feed, baseUrl, sampling, scoring)
+	}); err == nil && d != nil {
 		feed.Discovered = d
 		log.Printf("discovery: DOM container found with confidence score %.4f", d.ConfidenceScore)
 		return nil
@@ -63,7 +66,9 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOption
 
 	// Stage 1: RSS/Atom <link rel="alternate"> feed (from the page <head>, 1 extra request)
 	log.Println("discovery: trying RSS/Atom link in page head")
-	if d, err := tryRSSLink(data, feed); err == nil && d != nil {
+	if d, err := runStage(feed, "RSS/Atom link discovery", func() (*model.DiscoveredFeed, error) {
+		return tryRSSLink(data, feed)
+	}); err == nil && d != nil {
 		feed.Discovered = d
 		log.Println("discovery: RSS/Atom link found")
 		return nil
@@ -73,7 +78,9 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOption
 
 	// Stage 2: Sitemap (1–3 extra requests)
 	log.Println("discovery: trying sitemap")
-	if d, err := trySitemap(data, feed, baseUrl, data.RequestOptions); err == nil && d != nil {
+	if d, err := runStage(feed, "sitemap discovery", func() (*model.DiscoveredFeed, error) {
+		return trySitemap(data, feed, baseUrl, data.RequestOptions)
+	}); err == nil && d != nil {
 		feed.Discovered = d
 		log.Println("discovery: sitemap found")
 		return nil
@@ -84,20 +91,39 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, sampling SamplingOption
 	return fmt.Errorf("discovery: no entries found")
 }
 
+// runStage invokes fn, recovering any panic into an error and rolling back any
+// feed.Entries it may have added before panicking. This keeps the invariant
+// that ordinary stage failures already provide — a failed stage leaves no
+// partial state for the next stage to inherit — true for panics as well,
+// since a panic unwinds the stack without undoing prior mutations to feed.
+func runStage(feed *model.Feed, label string, fn func() (*model.DiscoveredFeed, error)) (d *model.DiscoveredFeed, err error) {
+	entriesBefore := len(feed.Entries)
+	defer func() {
+		if err != nil {
+			feed.Entries = feed.Entries[:entriesBefore]
+		}
+	}()
+	defer utils.RecoverPanic(label, &err)
+	return fn()
+}
+
 // ReplayDiscovered replays a previously discovered feed configuration.
 func ReplayDiscovered(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed) error {
-	switch d.Source {
-	case SourceRSSLink:
-		return replayRSS(data, feed, d)
+	_, err := runStage(feed, fmt.Sprintf("discovery replay (%s)", d.Source), func() (*model.DiscoveredFeed, error) {
+		switch d.Source {
+		case SourceRSSLink:
+			return nil, replayRSS(data, feed, d)
 
-	case SourceSitemap:
-		return replaySitemap(data, feed, d)
+		case SourceSitemap:
+			return nil, replaySitemap(data, feed, d)
 
-	case SourceDOMContainer:
-		return replayDOMScoring(data, feed, d)
+		case SourceDOMContainer:
+			return nil, replayDOMScoring(data, feed, d)
 
-	default:
-		feed.Discovered = nil
-		return fmt.Errorf("unknown discovery source: %s", d.Source)
-	}
+		default:
+			feed.Discovered = nil
+			return nil, fmt.Errorf("unknown discovery source: %s", d.Source)
+		}
+	})
+	return err
 }

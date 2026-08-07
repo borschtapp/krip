@@ -47,6 +47,29 @@ func (f *Feed) AddEntry(entry *Recipe) bool {
 	return true
 }
 
+// AddEntries adds multiple recipes to the feed, skipping ones that duplicate an existing entry's URL
+func (f *Feed) AddEntries(entries []*Recipe) int {
+	seen := make(map[string]struct{}, len(f.Entries)+len(entries))
+	for _, e := range f.Entries {
+		if len(e.Url) > 0 {
+			seen[e.Url] = struct{}{}
+		}
+	}
+
+	added := 0
+	for _, entry := range entries {
+		if len(entry.Url) > 0 {
+			if _, dup := seen[entry.Url]; dup {
+				continue
+			}
+			seen[entry.Url] = struct{}{}
+		}
+		f.Entries = append(f.Entries, entry)
+		added++
+	}
+	return added
+}
+
 func (f *Feed) String() string {
 	data, err := json.MarshalIndent(f, "", "  ")
 	if err != nil {

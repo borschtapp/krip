@@ -2,8 +2,6 @@ package custom
 
 import (
 	"fmt"
-	"log"
-	"runtime/debug"
 
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
@@ -23,20 +21,13 @@ func RegisterScraper(hostname string, fn model.Scraper) {
 	scrapers[hostname] = fn
 }
 
-func recoverPanic(label, alias string, errp *error) {
-	if p := recover(); p != nil {
-		log.Printf("%s panic for %s: %v\n%s", label, alias, p, debug.Stack())
-		*errp = fmt.Errorf("%s panic for %s: %v", label, alias, p)
-	}
-}
-
 func Scrape(data *model.DataInput, r *model.Recipe) (err error) {
 	alias := utils.HostAlias(data.Url)
 	fn, ok := scrapers[alias]
 	if !ok {
 		return nil
 	}
-	defer recoverPanic("custom scraper", alias, &err)
+	defer utils.RecoverPanic(fmt.Sprintf("custom scraper for %s", alias), &err)
 	if err = fn(data, r); err != nil {
 		return fmt.Errorf("custom scraper error: %w", err)
 	}
@@ -58,7 +49,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed) (err error) {
 	if !ok {
 		return nil
 	}
-	defer recoverPanic("custom feed scraper", alias, &err)
+	defer utils.RecoverPanic(fmt.Sprintf("custom feed scraper for %s", alias), &err)
 	if err = fn(data, feed); err != nil {
 		return fmt.Errorf("custom feed scraper error: %w", err)
 	}

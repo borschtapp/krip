@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"context"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -79,28 +78,4 @@ func TestHostname(t *testing.T) {
 func TestRemoveTrailingSlash(t *testing.T) {
 	assert.Equal(t, "https://Example.com/Path", RemoveTrailingSlash("https://Example.com/Path/"))
 	assert.Equal(t, "https://Example.com/Path", RemoveTrailingSlash("https://Example.com/Path"))
-}
-
-func TestIsPrivateOrLoopbackHost(t *testing.T) {
-	ctx := context.Background()
-
-	// Safe public hosts
-	assert.False(t, IsPrivateOrLoopbackHost(ctx, "example.com"))
-	assert.False(t, IsPrivateOrLoopbackHost(ctx, "8.8.8.8"))
-	assert.False(t, IsPrivateOrLoopbackHost(ctx, "google.com"))
-
-	// Private/loopback IPs
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "127.0.0.1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "::1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "10.0.0.1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "172.16.0.1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "192.168.1.1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "169.254.0.1"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "0.0.0.0"))
-
-	// Private/loopback Hostnames
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "localhost"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "test.local"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, "my.internal"))
-	assert.True(t, IsPrivateOrLoopbackHost(ctx, ""))
 }
