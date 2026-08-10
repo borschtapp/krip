@@ -36,8 +36,10 @@ type ScoringOptions struct {
 	AcceptThreshold float64
 	// SampleThreshold overrides the confidence score above which sampling is required.
 	SampleThreshold float64
-	// MinGroupSize overrides the minimum number of links a container group must have.
+	// MinGroupSize overrides the minimum number of links a finalized container group must have to be considered.
 	MinGroupSize int
+	// MinSiblingsToMerge overrides the minimum number of sibling child groups required before mergeSiblingGroups collapses them into one container.
+	MinSiblingsToMerge int
 	// MaxGroupsCheck overrides the maximum number of candidate groups to validate via sampling.
 	MaxGroupsCheck int
 }

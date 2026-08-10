@@ -332,11 +332,12 @@ func ScrapeKitchenStories(data *model.DataInput, r *model.Recipe) error {
 		if len(ksRecipe.Tags) != 0 {
 			r.Keywords = nil
 			for _, tag := range ksRecipe.Tags {
-				if tag.Type == "diet" {
+				switch tag.Type {
+				case "diet":
 					r.Diets = utils.AppendUnique(r.Diets, utils.CleanupInline(tag.Title))
-				} else if tag.Type == "ingredient" || tag.Type == "partner" || tag.Type == "recipe" || tag.Type == "monthly-issues" {
+				case "ingredient", "partner", "recipe", "monthly-issues":
 					continue // skip these tags
-				} else {
+				default:
 					r.Keywords = utils.AppendUnique(r.Keywords, utils.CleanupInline(tag.Title))
 				}
 			}

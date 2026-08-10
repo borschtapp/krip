@@ -18,6 +18,8 @@ new lines`, "remove\nnew lines"},
 		{`hello , world `, "hello, world"},
 		{`&quot;Fran &amp; Freddie&#39;s Diner&quot;`, "Fran & Freddie's Diner"},
 		{`&quot;Fran &amp; Freddie&#39;s Diner&quot; test`, "\"Fran & Freddie's Diner\" test"},
+		{`&lt;script&gt;alert(1)&lt;/script&gt;`, ""},
+		{`&lt;img src=x onerror=alert(1)&gt;`, `<img src="x">`},
 	}
 	for _, tt := range tests {
 		t.Run(tt.give, func(t *testing.T) {

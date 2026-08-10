@@ -65,9 +65,9 @@ func ParseFraction(str string) (float64, error) {
 		}
 	} else if strings.ContainsAny(str, Fractions) {
 		for symbol, value := range fractionsMap {
-			if strings.Contains(str, symbol) {
-				str = strings.Replace(str, symbol, "", 1)
-				res += value
+			if count := strings.Count(str, symbol); count > 0 {
+				str = strings.ReplaceAll(str, symbol, "")
+				res += value * float64(count)
 			}
 		}
 	}

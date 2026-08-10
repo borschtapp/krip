@@ -36,6 +36,9 @@ func ParseDuration(str string) (time.Duration, bool) {
 	if minutes, err := strconv.ParseFloat(matches[idxMinutes], 32); err == nil && minutes > 0 {
 		d += time.Duration(minutes * float64(time.Minute))
 	}
+	if d == 0 {
+		return 0, false
+	}
 	return d, true
 }
 
@@ -75,7 +78,11 @@ func ParseFloat(str string) (float64, error) {
 		// dot is the decimal separator, comma is the thousands separator: "1,234.56"
 		str = strings.ReplaceAll(str, ",", "")
 	case lastComma != -1 && strings.Count(str, ",") == 1:
-		str = strings.Replace(str, ",", ".", 1)
+		if len(str[lastComma+1:]) == 3 && lastComma >= 1 && lastComma <= 3 {
+			str = strings.ReplaceAll(str, ",", "")
+		} else {
+			str = strings.Replace(str, ",", ".", 1)
+		}
 	}
 	if i, err := strconv.ParseFloat(str, 64); err == nil {
 		return i, nil

@@ -7,18 +7,18 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"golang.org/x/net/html"
-
 	"github.com/astappiev/microdata"
 	"github.com/borschtapp/krip/model"
 	"github.com/borschtapp/krip/utils"
+	"golang.org/x/net/html"
 )
 
 func FileInput(fileName string, options model.ScrapeOptions) (*model.DataInput, error) {
-	file, err := os.Open(fileName)
+	file, err := os.Open(filepath.Clean(fileName))
 	if err != nil {
 		return nil, fmt.Errorf("unable to read the file: %w", err)
 	}
@@ -56,22 +56,36 @@ func FileInput(fileName string, options model.ScrapeOptions) (*model.DataInput, 
 }
 
 func UrlInput(url string, options model.ScrapeOptions) (*model.DataInput, error) {
-	resp, respUrl, err := utils.ExecuteRequest(utils.RequestConfig{URL: url}, options.RequestOptions)
+	resp, err := utils.ExecuteRequest(utils.RequestConfig{URL: url}, options.RequestOptions)
 	if err != nil {
 		return nil, err
 	}
 
-	root, err := html.Parse(bytes.NewReader(resp))
+	contentType := resp.ContentType
+	if contentType == "" {
+		contentType = http.DetectContentType(resp.Body)
+	}
+	if !strings.HasPrefix(contentType, "text/html") && !strings.HasPrefix(contentType, "application/xhtml+xml") {
+		return &model.DataInput{
+			Url:            resp.URL.String(),
+			Text:           string(resp.Body),
+			RequestOptions: options.RequestOptions,
+		}, nil
+	}
+
+	root, err := html.Parse(bytes.NewReader(resp.Body))
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse html tree: %w", err)
 	}
 
-	input, err := NodeInput(root, respUrl.String(), model.ScrapeOptions{SkipMetaUrl: true})
+	nodeOpts := options
+	nodeOpts.SkipMetaUrl = true
+	input, err := NodeInput(root, resp.URL.String(), nodeOpts)
 	if err != nil {
 		return nil, err
 	}
 
-	input.Text = string(resp)
+	input.Text = string(resp.Body)
 	input.RequestOptions = options.RequestOptions
 	return input, nil
 }

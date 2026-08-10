@@ -79,3 +79,16 @@ func TestRemoveTrailingSlash(t *testing.T) {
 	assert.Equal(t, "https://Example.com/Path", RemoveTrailingSlash("https://Example.com/Path/"))
 	assert.Equal(t, "https://Example.com/Path", RemoveTrailingSlash("https://Example.com/Path"))
 }
+
+func TestUrlMatchesPathPattern(t *testing.T) {
+	// Matching path & host
+	assert.True(t, UrlMatchesPathPattern("https://example.com/recipes/pasta", "/recipes/"))
+	assert.True(t, UrlMatchesPathPattern("https://example.com/recipes/pasta", "/recipes/", "example.com"))
+	assert.True(t, UrlMatchesPathPattern("/recipes/pasta", "/recipes/", "example.com"))
+
+	// Cross-host URL with matching path prefix must be rejected when targetHost is supplied
+	assert.False(t, UrlMatchesPathPattern("https://evil-site.com/recipes/pasta", "/recipes/", "example.com"))
+
+	// Cross-host URL with matching path prefix must be rejected when pattern contains host
+	assert.False(t, UrlMatchesPathPattern("https://evil-site.com/recipes/pasta", "https://example.com/recipes/"))
+}

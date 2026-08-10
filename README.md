@@ -50,7 +50,7 @@ krip https://cooking.nytimes.com/recipes/3783-original-plum-torte
 ### Go library
 
 ```go
-recipe, err := krip.ScrapeUrl("https://cooking.nytimes.com/recipes/3783-original-plum-torte")
+recipe, err := krip.ScrapeUrl("https://cooking.nytimes.com/recipes/3783-original-plum-torte", krip.ScrapeOptions{})
 if err != nil {
   // handle err
 }
@@ -66,9 +66,15 @@ fmt.Println(recipe)
 
 ```json
 {
-  "@id": "https://cooking.nytimes.com/recipes/3783-original-plum-torte",
+  "url": "https://cooking.nytimes.com/recipes/3783-original-plum-torte",
   "name": "Original Plum Torte",
-  "thumbnailUrl": "https://static01.nyt.com/images/2019/09/07/dining/plumtorte/plumtorte-articleLarge-v4.jpg",
+  "description": "The Times published Marian Burros’s recipe for Plum Torte every September from 1983 until 1989, when the editors determined that enough was enough. The recipe was to be printed for the last time that year. “To counter anticipated protests,” Ms. Burros wrote a few years later, “the recipe was printed in larger type than usual with a broken-line border around it to encourage clipping.” It didn’t help. The paper was flooded with angry letters. “The appearance of the recipe, like the torte itself, is bittersweet,” wrote a reader in Tarrytown, N.Y. “Summer is leaving, fall is coming. That's what your annual recipe is all about. Don't be grumpy about it.” We are not! And we pledge that every year, as summer gives way to fall, we will make sure that the recipe is easily available to one and all. The original 1983 recipe called for 1 cup sugar; the 1989 version reduced that to 3/4 cup. We give both options below. Here are \u003ca href=\" http://www.nytimes.com/interactive/2016/09/14/dining/marian-burros-plum-torte-recipe-variations.html\"\u003efive ways to adapt the torte\u003c/a\u003e.",
+  "inLanguage": "en-US",
+  "image": [
+    {
+      "url": "https://static01.nyt.com/images/2019/09/07/dining/plumtorte/plumtorte-articleLarge-v4.jpg"
+    }
+  ],
   "author": {
     "name": "Marian Burros"
   },
@@ -76,9 +82,7 @@ fmt.Println(recipe)
     "name": "NYT Cooking",
     "url": "https://cooking.nytimes.com"
   },
-  "inLanguage": "en-US",
-  "description": "The Times published Marian Burros’s recipe for Plum Torte every September from 1983 until 1989, when the editors determined that enough was enough. The recipe was to be printed for the last time that year. “To counter anticipated protests,” Ms. Burros wrote a few years later, “the recipe was printed in larger type than usual with a broken-line border around it to encourage clipping.” It didn’t help. The paper was flooded with angry letters. “The appearance of the recipe, like the torte itself, is bittersweet,” wrote a reader in Tarrytown, N.Y. “Summer is leaving, fall is coming. That's what your annual recipe is all about. Don't be grumpy about it.” We are not! And we pledge that every year, as summer gives way to fall, we will make sure that the recipe is easily available to one and all. The original 1983 recipe called for 1 cup sugar; the 1989 version reduced that to 3/4 cup. We give both options below. Here are \u003ca href=\" http://www.nytimes.com/interactive/2016/09/14/dining/marian-burros-plum-torte-recipe-variations.html\"\u003efive ways to adapt the torte\u003c/a\u003e.",
-  "totalTime": 75,
+  "totalTime": "PT1H15M",
   "recipeCategory": [
     "breakfast",
     "brunch",
@@ -94,16 +98,32 @@ fmt.Println(recipe)
     "nut-free",
     "vegetarian"
   ],
-  "recipeYield": 8,
+  "recipeYield": "8",
   "recipeIngredient": [
-    "3/4 to 1 cup sugar",
-    "1/2 cup unsalted butter, softened",
-    "1 cup unbleached flour, sifted",
-    "1 teaspoon baking powder",
-    "Pinch of salt (optional)",
-    "2 eggs",
-    "24 halves pitted purple plums",
-    "Sugar, lemon juice and cinnamon, for topping"
+    {
+      "name": "3/4 to 1 cup sugar"
+    },
+    {
+      "name": "1/2 cup unsalted butter, softened"
+    },
+    {
+      "name": "1 cup unbleached flour, sifted"
+    },
+    {
+      "name": "1 teaspoon baking powder"
+    },
+    {
+      "name": "Pinch of salt (optional)"
+    },
+    {
+      "name": "2 eggs"
+    },
+    {
+      "name": "24 halves pitted purple plums"
+    },
+    {
+      "name": "Sugar, lemon juice and cinnamon, for topping"
+    }
   ],
   "recipeInstructions": [
     {
@@ -120,16 +140,16 @@ fmt.Println(recipe)
     }
   ],
   "nutrition": {
-    "calories": "350",
-    "carbohydrateContent": "57 grams",
-    "fatContent": "13 grams",
-    "fiberContent": "3 grams",
-    "proteinContent": "4 grams",
-    "saturatedFatContent": "8 grams",
-    "sodiumContent": "63 milligrams",
-    "sugarContent": "42 grams",
-    "transFatContent": "0 grams",
-    "unsaturatedFatContent": "4 grams"
+    "calories": 350,
+    "carbohydrateContent": 57,
+    "fatContent": 13,
+    "fiberContent": 3,
+    "proteinContent": 4,
+    "saturatedFatContent": 8,
+    "sodiumContent": 63,
+    "sugarContent": 42,
+    "transFatContent": 0,
+    "unsaturatedFatContent": 4
   },
   "aggregateRating": {
     "ratingCount": 8717,
@@ -137,6 +157,26 @@ fmt.Println(recipe)
   }
 }
 ```
+
+### Feed Scraping & Universal Discovery
+
+Scrape recipe listing pages or RSS feeds, with automatic discovery on unstructured pages.
+
+```go
+// Scrape a recipe feed (discovers listing containers/feeds automatically)
+feed, err := krip.ScrapeFeedUrl("https://foodnetwork.co.uk/collections/air-fryer-recipes", krip.FeedOptions{
+    MaxEntriesForScrape: 10,
+})
+
+// Replay contract: pass feed.Discovered back to skip re-discovery on future runs
+freshFeed, err := krip.ScrapeFeedUrl("https://foodnetwork.co.uk/collections/air-fryer-recipes", krip.FeedOptions{
+    Discovered: feed.Discovered,
+})
+```
+
+* **Discovery**: Automatically locates recipe listings via (1) DOM container scoring, (2) RSS `<link>` headers, or (3) sitemap probing.
+* **Replay Contract**: Persist `feed.Discovered` (`*DiscoveredFeed`) and pass it back in `FeedOptions.Discovered` to bypass discovery overhead on subsequent runs.
+* **Options & Filtering**: `FeedOptions` supports `MaxEntriesForScrape`, `SkipEntriesScrape` (metadata/stubs only), and `RecipeFilter` rules (`MinIngredients`, `OptionalImage`, etc.).
 
 ## Security: SSRF protection
 
@@ -153,12 +193,13 @@ process can reach internal/private network resources, supply a hardened client v
 * **`cmd/`**: Entry points for the CLI application.
 * **`web/`**: HTTP Web Server implementation.
 * **`krip.go`**: Facade layer and public API.
-* **`model/`**: Domain data structures (`Recipe`, `DataInput`).
+* **`model/`**: Domain data structures (`Recipe`, `Feed`, `DataInput`, options).
 * **`scraper/`**: Core scraping engine.
-  * **`common/`**: Orchestration logic.
-  * **`schema/`**: Schema.org (JSON-LD/Microdata) strategies.
-  * **`opengraph/`**: OpenGraph metadata strategies.
-  * **`custom/`**: Site-specific scraper implementations.
+  * **`custom/`**: Site-specific scraper implementations and registry.
+  * **`discovery/`**: Universal feed discovery pipeline (DOM container scoring, RSS link check, sitemap probing).
+  * **`opengraph/`**: OpenGraph metadata extraction strategies.
+  * **`rss/`**: RSS feed parsing and extraction strategies.
+  * **`schema/`**: Schema.org (JSON-LD/Microdata) extraction strategies.
 * **`utils/`**: Helper functions for parsing, HTTP, and string manipulation.
 
 ## Contributing

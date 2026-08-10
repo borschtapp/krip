@@ -156,6 +156,10 @@ type Recipe struct {
 	Allergens     []*Allergen           `json:"allergens,omitempty"` // not a part of Recipe schema
 	DateModified  *time.Time            `json:"dateModified,omitempty"`
 	DatePublished *time.Time            `json:"datePublished,omitempty"`
+
+	// Scraped marks that this recipe went through a full Scrape pass, as opposed to being
+	// a stub populated only from a feed listing (title/image/URL).
+	Scraped bool `json:"-"`
 }
 
 func (r *Recipe) AddImageUrl(imageUrl string) {

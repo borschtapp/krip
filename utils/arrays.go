@@ -4,7 +4,7 @@ import "slices"
 
 func Deduplicate[E comparable](s []E) []E {
 	if len(s) < 2 {
-		return s
+		return slices.Clone(s)
 	}
 
 	seen := make(map[E]struct{}, len(s))
@@ -18,7 +18,7 @@ func Deduplicate[E comparable](s []E) []E {
 	return arr
 }
 
-func AppendUnique[E comparable](s []E, v E) []E {
+func AppendUnique(s []string, v string) []string {
 	if !slices.Contains(s, v) {
 		s = append(s, v)
 	}

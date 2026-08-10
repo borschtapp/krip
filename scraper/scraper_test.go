@@ -2,6 +2,8 @@ package scraper
 
 import (
 	"context"
+	"fmt"
+	"io"
 	"net/http"
 	"strings"
 	"testing"
@@ -34,7 +36,10 @@ func TestFilterEntries_RequiresImageByDefault(t *testing.T) {
 		makeRecipe("No Image", "https://x.com/r/2", false, true, true),
 	}
 
-	result := filterEntries(entries, model.FeedOptions{}, nil)
+	entries[0].Scraped = true
+	entries[1].Scraped = true
+
+	result := filterEntries(entries, model.FeedOptions{})
 
 	assert.Len(t, result, 1)
 	assert.Equal(t, "With Image", result[0].Name)
@@ -46,24 +51,27 @@ func TestFilterEntries_OptionalImageAcceptsAll(t *testing.T) {
 		makeRecipe("B", "https://x.com/r/2", false, true, true),
 	}
 
+	entries[0].Scraped = true
+	entries[1].Scraped = true
+
 	opt := model.FeedOptions{RecipeFilter: model.RecipeFilter{OptionalImage: true}}
-	result := filterEntries(entries, opt, nil)
+	result := filterEntries(entries, opt)
 
 	assert.Len(t, result, 2)
 }
 
 func TestFilterEntries_EmptyUrlNotExemptFromValidation(t *testing.T) {
-	// scrapedURLs simulates ScrapeFeed's real map: it never gets a "" key set,
-	// since the entry-scrape loop skips entries with an empty Url outright.
-	scrapedURLs := map[string]bool{"https://x.com/r/1": true}
+	noUrl := makeRecipe("No URL", "", true, true, true)
+	noUrl.Scraped = true
 
-	entries := []*model.Recipe{
-		makeRecipe("No URL", "", true, true, true),
-		makeRecipe("Deferred stub", "https://x.com/r/2", false, false, false), // never attempted, not in scrapedURLs
-		makeRecipe("Scraped but incomplete", "https://x.com/r/1", false, true, true),
-	}
+	deferredStub := makeRecipe("Deferred stub", "https://x.com/r/2", false, false, false) // never attempted, Scraped stays false
 
-	result := filterEntries(entries, model.FeedOptions{}, scrapedURLs)
+	scrapedIncomplete := makeRecipe("Scraped but incomplete", "https://x.com/r/1", false, true, true)
+	scrapedIncomplete.Scraped = true
+
+	entries := []*model.Recipe{noUrl, deferredStub, scrapedIncomplete}
+
+	result := filterEntries(entries, model.FeedOptions{})
 
 	var names []string
 	for _, r := range result {
@@ -74,6 +82,24 @@ func TestFilterEntries_EmptyUrlNotExemptFromValidation(t *testing.T) {
 	assert.NotContains(t, names, "Scraped but incomplete", "attempted-but-incomplete entries must still be validated")
 }
 
+// TestFilterEntries_SurvivesUrlRewrite is a regression test for the bug where Scrape
+// rewrites entry.Url (redirects, JSON-LD canonical url) after the caller already
+// recorded which entries it attempted. Tracking by a Scraped flag on the entry itself
+// - set by Scrape() - rather than by URL means the mutation can no longer defeat
+// RecipeFilter.
+func TestFilterEntries_SurvivesUrlRewrite(t *testing.T) {
+	entry := makeRecipe("Trailing Slash", "https://x.com/r/1", false, false, false) // no image/ingredients/instructions -> should fail default filter
+
+	dataInput := &model.DataInput{Url: "https://x.com/r/1/"} // simulates a redirect adding a trailing slash
+	err := Scrape(dataInput, entry, model.ScrapeOptions{SkipSchemaScraper: true, SkipOpenGraphScraper: true, SkipCustomScrapers: true})
+	require.NoError(t, err)
+	require.Equal(t, "https://x.com/r/1/", entry.Url, "Scrape must have rewritten the URL for this test to be meaningful")
+
+	result := filterEntries([]*model.Recipe{entry}, model.FeedOptions{})
+
+	assert.Empty(t, result, "a scraped entry that fails RecipeFilter must be discarded even though its Url changed mid-scrape")
+}
+
 func TestFilterEntries_MinIngredients(t *testing.T) {
 	few := makeRecipe("Few", "https://x.com/r/1", true, false, true)
 	few.Ingredients = []*model.PropertyValue{{Name: "salt"}}
@@ -81,8 +107,11 @@ func TestFilterEntries_MinIngredients(t *testing.T) {
 	enough := makeRecipe("Enough", "https://x.com/r/2", true, false, true)
 	enough.Ingredients = []*model.PropertyValue{{Name: "a"}, {Name: "b"}, {Name: "c"}}
 
+	few.Scraped = true
+	enough.Scraped = true
+
 	opt := model.FeedOptions{RecipeFilter: model.RecipeFilter{MinIngredients: 3}}
-	result := filterEntries([]*model.Recipe{few, enough}, opt, nil)
+	result := filterEntries([]*model.Recipe{few, enough}, opt)
 
 	assert.Len(t, result, 1)
 	assert.Equal(t, "Enough", result[0].Name)
@@ -129,8 +158,7 @@ func TestFindEntries_SingleInvalidSchemaEntryFallsThrough(t *testing.T) {
 	require.NoError(t, err)
 
 	feed := &model.Feed{}
-	scrapedURLs := map[string]bool{}
-	err = findEntries(data, feed, model.FeedOptions{}, scrapedURLs)
+	err = findEntries(data, feed, model.FeedOptions{})
 	require.NoError(t, err, "should succeed by falling through to discovery")
 
 	// Discovery must find the <ul> entries, not the schema stub.
@@ -242,4 +270,99 @@ func TestScrapeFeed_ContextCancelledDiscoveryValidation(t *testing.T) {
 	// It will make 3 calls (DiscoverySampleSize) to UrlInput, which calls client.Do (mockClient).
 	// If the issue is fixed, it should make 0 calls because it checks context cancellation before starting.
 	assert.Equal(t, 0, callCount, "should not make discovery validation requests if context is cancelled")
+}
+
+func TestScrapeFeed_RefinementDenominatorUsesAttemptedCount(t *testing.T) {
+	custom.RegisterFeedScraper("refine_denom_test", func(data *model.DataInput, feed *model.Feed) error {
+		var entries []*model.Recipe
+		// 4 valid recipe entries
+		for i := 1; i <= 4; i++ {
+			entries = append(entries, &model.Recipe{Name: fmt.Sprintf("Recipe %d", i), Url: fmt.Sprintf("https://refine_denom_test.com/recipes/dish-%d", i)})
+		}
+		// 6 invalid entries (will fail validation when scraped)
+		for i := 1; i <= 6; i++ {
+			entries = append(entries, &model.Recipe{Name: fmt.Sprintf("About %d", i), Url: fmt.Sprintf("https://refine_denom_test.com/about-%d", i)})
+		}
+		// 20 unattempted stubs
+		for i := 1; i <= 20; i++ {
+			entries = append(entries, &model.Recipe{Name: fmt.Sprintf("Stub %d", i), Url: fmt.Sprintf("https://refine_denom_test.com/recipes/stub-%d", i)})
+		}
+		feed.Entries = entries
+		return nil
+	})
+
+	mockClient := &mockHTTPClient{
+		doFunc: func(req *http.Request) (*http.Response, error) {
+			urlStr := req.URL.String()
+			body := `<html><body>No recipe</body></html>`
+			if strings.Contains(urlStr, "/recipes/dish-") {
+				body = `<!DOCTYPE html><html><head><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Dish",
+  "image": "img.jpg",
+  "publisher": {"@type": "Organization", "name": "Pub"},
+  "recipeIngredient": ["salt"],
+  "recipeInstructions": [{"@type": "HowToStep", "text": "cook"}]
+}
+</script></head><body></body></html>`
+			}
+			return &http.Response{
+				StatusCode: 200,
+				Body:       io.NopCloser(strings.NewReader(body)),
+				Header:     make(http.Header),
+				Request:    req,
+			}, nil
+		},
+	}
+
+	opt := model.FeedOptions{
+		ScrapeOptions: model.ScrapeOptions{
+			RequestOptions: model.RequestOptions{
+				HttpClient: mockClient,
+			},
+		},
+		MaxEntriesForScrape: 10,
+		SkipFeedMeta:        true,
+		Discovered:          &model.DiscoveredFeed{},
+	}
+
+	data := &model.DataInput{Url: "https://refine_denom_test.com/feed"}
+	feed := &model.Feed{}
+
+	err := ScrapeFeed(data, feed, opt)
+	require.NoError(t, err)
+
+	// Out of 10 attempted entries (4 valid dish recipes + 6 invalid about pages), 6 failed validation (60% > 30%).
+	// The 20 stubs were unattempted and remained in feed.Entries.
+	// Total initialCount = 30. If initialCount were used as denominator, 6/30 = 20% <= 30% (refinement would NOT trigger).
+	// With attemptedCount = 10 used as denominator, 6/10 = 60% > 30% (refinement DOES trigger).
+	assert.Equal(t, "/recipes/", feed.Discovered.UrlPattern, "refinement should trigger based on attempted entries discard ratio")
+}
+
+func TestScrapeFeed_DiscoveredNotMutatedCallerOptions(t *testing.T) {
+	callerDiscovered := &model.DiscoveredFeed{
+		Source:     "sitemap",
+		Selector:   "https://example.com/sitemap.xml",
+		UrlPattern: "",
+	}
+
+	opts := model.FeedOptions{
+		Discovered:           callerDiscovered,
+		SkipEntriesScrape:    true,
+		SkipRSSScraper:       true,
+		SkipDiscoveryScraper: true,
+	}
+
+	data := &model.DataInput{Url: "https://example.com/"}
+	feed := &model.Feed{}
+
+	_ = ScrapeFeed(data, feed, opts)
+
+	if feed.Discovered != nil {
+		feed.Discovered.UrlPattern = "/mutated-pattern/"
+	}
+
+	assert.Equal(t, "", callerDiscovered.UrlPattern, "caller options.Discovered struct should remain unmutated")
 }

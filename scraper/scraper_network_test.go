@@ -36,7 +36,7 @@ func TestFindEntries_AdaptiveSampling_StopsEarlyOnMajority(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if strings.HasPrefix(r.URL.Path, "/recipes/") {
 			atomic.AddInt32(&entryRequests, 1)
-			_, _ = fmt.Fprintf(w, validRecipePage, "Recipe at "+r.URL.Path)
+			_, _ = fmt.Fprintf(w, validRecipePage, "Recipe at "+r.URL.Path) // #nosec G705
 			return
 		}
 		w.WriteHeader(http.StatusNotFound)
@@ -63,8 +63,7 @@ func TestFindEntries_AdaptiveSampling_StopsEarlyOnMajority(t *testing.T) {
 	}
 
 	feed := &model.Feed{}
-	scrapedURLs := map[string]bool{}
-	err = findEntries(data, feed, options, scrapedURLs)
+	err = findEntries(data, feed, options)
 
 	require.NoError(t, err)
 	assert.Equal(t, int32(3), atomic.LoadInt32(&entryRequests),
@@ -110,11 +109,10 @@ func TestFindEntries_AdaptiveSampling_StopsEarlyOnRejection(t *testing.T) {
 	}
 
 	feed := &model.Feed{}
-	scrapedURLs := map[string]bool{}
 	// This group is expected to fail validation entirely (no group confirms any
 	// URL), which is a valid "no entries found" outcome; we only care about the
 	// request count spent getting there.
-	_ = findEntries(data, feed, options, scrapedURLs)
+	_ = findEntries(data, feed, options)
 
 	assert.Equal(t, int32(2), atomic.LoadInt32(&entryRequests),
 		"after 2 misses out of n=4, a majority (needs hits>=3) is already impossible, so the remaining 2 samples must not be fetched")

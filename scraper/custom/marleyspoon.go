@@ -105,7 +105,7 @@ func ScrapeMarleySpoon(data *model.DataInput, r *model.Recipe) error {
 			return err
 		}
 
-		body, _, err := utils.ExecuteRequest(utils.RequestConfig{
+		resp, err := utils.ExecuteRequest(utils.RequestConfig{
 			URL: apiUrl,
 			Headers: http.Header{
 				"Accept":        []string{"application/json"},
@@ -117,7 +117,7 @@ func ScrapeMarleySpoon(data *model.DataInput, r *model.Recipe) error {
 		}
 
 		marleySpoonData := MarleySpoonData{}
-		if err := json.Unmarshal(body, &marleySpoonData); err != nil {
+		if err := json.Unmarshal(resp.Body, &marleySpoonData); err != nil {
 			return err
 		}
 
@@ -147,7 +147,7 @@ func parseData(data *MarleySpoonData, r *model.Recipe) error {
 	}
 
 	if len(data.MealType) != 0 {
-		for _, diet := range strings.Split(data.MealType, ",") {
+		for diet := range strings.SplitSeq(data.MealType, ",") {
 			r.Diets = utils.AppendUnique(r.Diets, utils.CleanupInline(diet))
 		}
 	}

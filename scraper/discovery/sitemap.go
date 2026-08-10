@@ -30,7 +30,7 @@ func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredF
 		return fmt.Errorf("sitemap source points to an external host")
 	}
 
-	body, _, err := utils.ExecuteRequest(
+	resp, err := utils.ExecuteRequest(
 		utils.RequestConfig{Method: "GET", URL: d.Selector},
 		data.RequestOptions,
 	)
@@ -38,7 +38,7 @@ func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredF
 		return fmt.Errorf("sitemap fetch failed: %w", err)
 	}
 
-	body, err = maybeDecompress(body)
+	body, err := maybeDecompress(resp.Body)
 	if err != nil {
 		return fmt.Errorf("sitemap decompress failed: %w", err)
 	}
@@ -54,7 +54,7 @@ func replaySitemap(data *model.DataInput, feed *model.Feed, d *model.DiscoveredF
 	// (replay is the first entry-finding stage), so appending directly avoids
 	// AddEntries' O(len(feed.Entries)) seen-map build on every call.
 	for _, loc := range filterRecipeLocs(locs) {
-		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(loc, d.UrlPattern) {
+		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(loc, d.UrlPattern, baseUrl.Host) {
 			continue
 		}
 		feed.Entries = append(feed.Entries, &model.Recipe{Url: loc})
@@ -71,12 +71,12 @@ func trySitemap(data *model.DataInput, feed *model.Feed, baseUrl *url.URL, opts 
 		if opts.ContextDone() {
 			break
 		}
-		body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: sitemapUrl}, opts)
+		resp, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: sitemapUrl}, opts)
 		if err != nil {
 			continue
 		}
 
-		body, err = maybeDecompress(body)
+		body, err := maybeDecompress(resp.Body)
 		if err != nil {
 			continue
 		}
@@ -157,14 +157,14 @@ func sitemapCandidates(data *model.DataInput, baseUrl *url.URL) []string {
 // hardcoded guesses below miss entirely; probing it turns what would otherwise be
 // wasted failed probes plus a missed feed into one small extra request.
 func robotsSitemaps(base string, opts model.RequestOptions) []string {
-	body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: base + "/robots.txt"}, opts)
+	resp, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: base + "/robots.txt"}, opts)
 	if err != nil {
 		return nil
 	}
 
 	const directive = "sitemap:"
 	var sitemaps []string
-	for line := range strings.SplitSeq(string(body), "\n") {
+	for line := range strings.SplitSeq(string(resp.Body), "\n") {
 		line = strings.TrimSpace(line)
 		if idx := strings.IndexByte(line, '#'); idx >= 0 {
 			line = strings.TrimSpace(line[:idx])
@@ -200,11 +200,11 @@ func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *in
 			rest = append(rest, loc)
 		}
 	}
-	ordered := append(preferred, rest...)
+	preferred = append(preferred, rest...)
 
 	var allLocs []string
 
-	for _, childUrl := range ordered {
+	for _, childUrl := range preferred {
 		if *budget <= 0 {
 			break
 		}
@@ -216,11 +216,11 @@ func followSitemapRecursive(locs []string, opts model.RequestOptions, budget *in
 
 		*budget--
 
-		body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
+		resp, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: childUrl}, opts)
 		if err != nil {
 			continue
 		}
-		body, _ = maybeDecompress(body)
+		body, _ := maybeDecompress(resp.Body)
 		childLocs, isIndex, err := parseSitemap(body)
 		if err != nil {
 			continue

@@ -31,6 +31,9 @@ func (o RequestOptions) ContextDone() bool {
 }
 
 // RecipeFilter holds optional criteria for filtering recipes.
+// In feed scraping, content-level criteria (ingredients, instructions, publisher)
+// are enforced on individually scraped entries. Unattempted stub entries bypass content
+// validation since their detailed fields have not been fetched yet.
 type RecipeFilter struct {
 	// Accept recipes without images.
 	OptionalImage bool
@@ -89,8 +92,10 @@ type FeedOptions struct {
 	DOMAcceptThreshold float64
 	// Confidence score above which a DOM container requires sampling before acceptance (default 0.55).
 	DOMSampleThreshold float64
-	// Minimum number of links a DOM container group must have (default 3).
+	// Minimum number of links a finalized DOM container group must have (default 3).
 	DOMMinGroupSize int
+	// Minimum number of sibling child groups required before they are merged into one container (default 3).
+	DOMMinSiblingsToMerge int
 	// Maximum number of candidate DOM groups to validate via sampling (default 3).
 	DOMMaxGroupsCheck int
 }

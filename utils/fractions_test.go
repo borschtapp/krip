@@ -23,6 +23,8 @@ func TestParseFraction(t *testing.T) {
 		{"5", 5, false},
 		{"0", 0, false},
 		{"  ½  ", 0.5, false},
+		{"½½", 1, false},
+		{"½¼", 0.75, false},
 		{"1/0", 0, true},
 		{"1 2 1/3", 0, true},
 		{"1/2/3", 0, true},

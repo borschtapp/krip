@@ -43,15 +43,15 @@ func BaseUrl(urlStr string) string {
 }
 
 func Hostname(urlStr string) string {
-	if !strings.Contains(urlStr, "/") {
-		return urlStr
-	}
-	u, err := url.Parse(urlStr)
-	if err != nil {
-		return ""
+	if strings.Contains(urlStr, "/") {
+		u, err := url.Parse(urlStr)
+		if err != nil {
+			return ""
+		}
+		urlStr = u.Hostname()
 	}
 
-	host := strings.ToLower(u.Hostname())
+	host := strings.ToLower(urlStr)
 	host = strings.TrimPrefix(host, "www.")
 	return host
 }
@@ -68,12 +68,30 @@ func DomainZone(urlStr string) string {
 	return parts[len(parts)-1]
 }
 
-func UrlMatchesPathPattern(rawUrl, pattern string) bool {
+// UrlMatchesPathPattern checks if rawUrl's path starts with pattern.
+// If targetHost is supplied, absolute URLs with a non-matching host are rejected.
+func UrlMatchesPathPattern(rawUrl, pattern string, targetHost ...string) bool {
 	u, err := url.Parse(rawUrl)
 	if err != nil {
 		return false
 	}
-	return strings.HasPrefix(u.Path, pattern)
+	expectedHost := ""
+	if len(targetHost) > 0 {
+		expectedHost = targetHost[0]
+	}
+	patU, _ := url.Parse(pattern)
+	if expectedHost == "" && patU != nil {
+		expectedHost = patU.Host
+	}
+	if expectedHost != "" && u.Host != "" && Hostname(rawUrl) != Hostname(expectedHost) {
+		return false
+	}
+
+	pathPattern := pattern
+	if patU != nil && patU.Path != "" {
+		pathPattern = patU.Path
+	}
+	return strings.HasPrefix(u.Path, pathPattern)
 }
 
 func HostAlias(urlStr string) string {

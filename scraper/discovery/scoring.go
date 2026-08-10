@@ -19,7 +19,8 @@ import (
 
 const (
 	keyDepth            = 4    // ancestor levels used to build containerKey
-	minGroupSize        = 3    // groups smaller than this are ignored
+	minGroupSize        = 3    // finalized groups smaller than this are ignored
+	minSiblingsToMerge  = 3    // fewer sibling child groups than this are left unmerged
 	sampleThreshold     = 0.55 // accept only with sampling
 	acceptThreshold     = 0.70 // confidence score above which results are accepted without sampling
 	maxGroupsToValidate = 3    // caps the number of candidate groups to check
@@ -52,6 +53,9 @@ func (s ScoringOptions) resolve() ScoringOptions {
 	}
 	if s.MinGroupSize == 0 {
 		s.MinGroupSize = minGroupSize
+	}
+	if s.MinSiblingsToMerge == 0 {
+		s.MinSiblingsToMerge = minSiblingsToMerge
 	}
 	if s.MaxGroupsCheck == 0 {
 		s.MaxGroupsCheck = maxGroupsToValidate
@@ -138,7 +142,7 @@ func replayDOMScoring(data *model.DataInput, feed *model.Feed, d *model.Discover
 	container.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		abs := utils.ToAbsoluteUrl(baseUrl, href)
-		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(abs, d.UrlPattern) {
+		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(abs, d.UrlPattern, baseUrl.Host) {
 			return
 		}
 		if _, dup := seen[abs]; dup {
@@ -310,7 +314,7 @@ func extractFromPattern(data *model.DataInput, baseUrl *url.URL, pattern string)
 	data.Document.FindMatcher(linkMatcher).Each(func(_ int, s *goquery.Selection) {
 		href, _ := s.Attr("href")
 		abs := utils.ToAbsoluteUrl(baseUrl, href)
-		if utils.UrlMatchesPathPattern(abs, pattern) {
+		if utils.UrlMatchesPathPattern(abs, pattern, baseUrl.Host) {
 			urls = append(urls, abs)
 		}
 	})
@@ -462,7 +466,7 @@ type viableCandidate struct {
 // To handle multi-level wrapping (e.g. grid > tile:nth(N) > inner:nth(1) > <a>),
 // the function tries all possible strip depths (1 to keyDepth-1). It always
 // prefers the DEEPEST (most specific) common ancestor that has at least
-// sc.MinGroupSize sibling child groups, so over-merging is minimised.
+// sc.MinSiblingsToMerge sibling child groups, so over-merging is minimised.
 func mergeSiblingGroups(groups map[string]*containerGroup, sc ScoringOptions) {
 	sc = sc.resolve()
 	// candidateAncestor represents a proposed merge: a common ancestor prefix
@@ -503,7 +507,7 @@ func mergeSiblingGroups(groups map[string]*containerGroup, sc ScoringOptions) {
 	for _, c := range prefixToCandidate {
 		// Deduplicate child keys (a group may have been registered at multiple depths).
 		uniqueKeys := utils.Deduplicate(c.keys)
-		if len(uniqueKeys) >= sc.MinGroupSize {
+		if len(uniqueKeys) >= sc.MinSiblingsToMerge {
 			viable = append(viable, viableCandidate{c.prefix, c.childTag, uniqueKeys})
 		}
 	}
@@ -527,7 +531,7 @@ func mergeSiblingGroups(groups map[string]*containerGroup, sc ScoringOptions) {
 				pendingKeys = append(pendingKeys, k)
 			}
 		}
-		if len(pendingKeys) < sc.MinGroupSize {
+		if len(pendingKeys) < sc.MinSiblingsToMerge {
 			continue
 		}
 		merged := &containerGroup{key: c.prefix, tag: c.childTag}
@@ -661,6 +665,18 @@ func urlConsistencyScore(urls []*url.URL) float64 {
 					return 0
 				}
 			}
+			if depth == 1 {
+				hasSlugStructure := false
+				for _, segs := range allSegments {
+					if strings.Contains(segs[0], "-") || matchesRecipePath(segs[0]) {
+						hasSlugStructure = true
+						break
+					}
+				}
+				if !hasSlugStructure {
+					return 0
+				}
+			}
 			return 0.25
 		}
 		return 0
@@ -790,7 +806,7 @@ func containerKey(sel *goquery.Selection, depth int) string {
 // one forward pass the first time any of them is asked for, so the group's cost
 // is amortized to O(k).
 func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.Node]int, keyCache map[keyCacheKey]string) string {
-	if depth == 0 || sel.Length() == 0 {
+	if sel.Length() == 0 {
 		return ""
 	}
 	n := sel.Get(0)
@@ -803,7 +819,16 @@ func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.No
 		return cached
 	}
 
-	part := fmt.Sprintf("%s:nth-of-type(%d)", n.Data, nthOfType(n, nthCache))
+	// keyDepth ancestors are consumed; disambiguate the rest of the tree via
+	// ancestorDiscriminator instead of dropping it, so containers in unrelated
+	// subtrees with the same nearest-keyDepth shape don't collide on one key.
+	if depth == 0 {
+		result := ancestorDiscriminator(sel, nthCache)
+		keyCache[ck] = result
+		return result
+	}
+
+	part := nthOfTypeSelector(n, nthCache)
 
 	parent := sel.Parent()
 	var result string
@@ -820,6 +845,48 @@ func containerKeyCached(sel *goquery.Selection, depth int, nthCache map[*html.No
 
 	keyCache[ck] = result
 	return result
+}
+
+// ancestorDiscriminator walks upward from sel, returning a CSS selector
+// fragment unique to this node: an id-anchored form ("[id=\"...\"] tag:nth-of-
+// type(n) > ...") if an ancestor carries one, otherwise the full nth-of-type
+// path to the document root, which is unique since every node has exactly one
+// path to the root.
+func ancestorDiscriminator(sel *goquery.Selection, nthCache map[*html.Node]int) string {
+	var parts []string
+	cur := sel
+	for cur.Length() > 0 {
+		n := cur.Get(0)
+		if n == nil || n.Type != html.ElementNode {
+			cur = cur.Parent()
+			continue
+		}
+		if id, ok := cur.Attr("id"); ok && id != "" {
+			slices.Reverse(parts)
+			anchor := fmt.Sprintf(`[id="%s"]`, escapeCSSAttrValue(id))
+			if len(parts) == 0 {
+				return anchor
+			}
+			return anchor + " " + strings.Join(parts, " > ")
+		}
+		parts = append(parts, nthOfTypeSelector(n, nthCache))
+		cur = cur.Parent()
+	}
+	slices.Reverse(parts)
+	return strings.Join(parts, " > ")
+}
+
+// escapeCSSAttrValue escapes backslashes and double quotes so an arbitrary
+// attribute value (e.g. an id containing "." or ":") can be embedded in a
+// double-quoted CSS attribute selector without breaking out of the string.
+func escapeCSSAttrValue(v string) string {
+	v = strings.ReplaceAll(v, `\`, `\\`)
+	return strings.ReplaceAll(v, `"`, `\"`)
+}
+
+// nthOfTypeSelector returns the "tag:nth-of-type(n)" CSS fragment for n.
+func nthOfTypeSelector(n *html.Node, cache map[*html.Node]int) string {
+	return fmt.Sprintf("%s:nth-of-type(%d)", n.Data, nthOfType(n, cache))
 }
 
 // nthOfType returns n's 1-based index among same-tag siblings, caching every

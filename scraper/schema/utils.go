@@ -108,8 +108,8 @@ func getPropertyDuration(item *microdata.Item, key ...string) (time.Duration, bo
 	if val, ok := getPropertyString(item, key...); ok && len(val) != 0 {
 		if d, err := duration.Parse(utils.RemoveSpaces(val)); err == nil {
 			return d.ToTimeDuration(), true
-		} else if val, ok := utils.ParseDuration(val); ok {
-			return val, true
+		} else if d, ok := utils.ParseDuration(val); ok {
+			return d, true
 		} else {
 			log.Printf("unable to parse duration `%s`: %s\n", val, err.Error())
 		}

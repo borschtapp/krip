@@ -28,14 +28,23 @@ func safeScrape(label string, fn model.Scraper, data *model.DataInput, r *model.
 	return fn(data, r)
 }
 
-// safeScrapeFeed is the FeedScraper equivalent of safeScrape.
+// safeScrapeFeed is the FeedScraper equivalent of safeScrape. It also rolls
+// back any feed.Entries the strategy appended if it errors, so a failed stage
+// leaves a clean feed for the next strategy in findEntries.
 func safeScrapeFeed(label string, fn model.FeedScraper, data *model.DataInput, feed *model.Feed) (err error) {
+	entriesBefore := len(feed.Entries)
+	defer func() {
+		if err != nil {
+			feed.Entries = feed.Entries[:entriesBefore]
+		}
+	}()
 	defer utils.RecoverPanic(label, &err)
 	return fn(data, feed)
 }
 
 func Scrape(data *model.DataInput, r *model.Recipe, options model.ScrapeOptions) error {
 	r.Url = data.Url
+	r.Scraped = true
 	if r.Publisher == nil {
 		r.Publisher = &model.Organization{}
 	}
@@ -123,8 +132,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 		}
 	}
 
-	scrapedURLs := make(map[string]bool)
-	if err := findEntries(data, feed, options, scrapedURLs); err != nil {
+	if err := findEntries(data, feed, options); err != nil {
 		return err
 	}
 
@@ -149,11 +157,10 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 			if options.ContextDone() {
 				break
 			}
-			if entry.Url == "" || scrapedURLs[entry.Url] {
+			if entry.Url == "" {
 				continue
 			}
 
-			scrapedURLs[entry.Url] = true
 			dataInput, err := UrlInput(entry.Url, options.ScrapeOptions)
 			if err != nil {
 				continue
@@ -167,18 +174,34 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 
 	initialCount := len(feed.Entries)
 	originalEntries := feed.Entries
-	feed.Entries = filterEntries(feed.Entries, options, scrapedURLs)
+
+	attemptedCount := 0
+	for _, entry := range originalEntries {
+		if entry.Scraped {
+			attemptedCount++
+		}
+	}
+
+	feed.Entries = filterEntries(feed.Entries, options)
 
 	if len(feed.Entries) < initialCount {
 		discarded := initialCount - len(feed.Entries)
 		log.Printf("feed: filtered out %d (out of %d) entries that did not pass validation", discarded, initialCount)
 
+		denom := attemptedCount
+		if denom == 0 {
+			denom = initialCount
+		}
+
 		// If many entries were discarded, try to find a URL pattern.
-		if len(feed.Entries) > 0 && discarded*100/initialCount > 30 {
+		if len(feed.Entries) > 0 && denom > 0 && discarded*100/denom > 30 {
 			if pattern, matched := discovery.RefineByUrlPattern(originalEntries, feed.Entries); pattern != "" {
 				log.Printf("feed: url pattern found %q: %d total candidates, %d matches pattern, %d validated before", pattern, initialCount, matched, len(feed.Entries))
 
-				if feed.Discovered != nil && feed.Discovered.UrlPattern == "" {
+				if feed.Discovered == nil {
+					feed.Discovered = &model.DiscoveredFeed{}
+				}
+				if feed.Discovered.UrlPattern == "" {
 					feed.Discovered.UrlPattern = pattern
 				}
 			}
@@ -189,20 +212,21 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed, options model.FeedOptio
 	return nil
 }
 
-func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOptions, scrapedURLs map[string]bool) error {
+func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOptions) error {
 	// Fast path: caller already has a DiscoveredFeed from a previous run.
 	if options.Discovered != nil {
 		if err := discovery.ReplayDiscovered(data, feed, options.Discovered); err != nil {
 			feed.Discovered = nil
 			log.Printf("feed: discovery replay error: %v", err)
 		} else if len(feed.Entries) > 0 {
-			feed.Discovered = options.Discovered
+			discCopy := *options.Discovered
+			feed.Discovered = &discCopy
 			return nil
 		}
 	}
 
 	if !options.SkipCustomScrapers {
-		if err := custom.ScrapeFeed(data, feed); err != nil {
+		if err := safeScrapeFeed("custom feed scraper", custom.ScrapeFeed, data, feed); err != nil {
 			log.Printf("custom feed scraper error: %v", err)
 		} else if len(feed.Entries) > 0 {
 			return nil
@@ -228,13 +252,8 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 
 	// Try universal discovery: DOM scoring, RSS link, then sitemap.
 	if !options.SkipDiscoveryScraper {
-		// prescraped holds confirmed recipes from group validation sampling.
-		// It is populated inside the closure and read after ScrapeFeed returns,
-		// so we only mark URLs that ended up in the committed group.
-		var prescraped map[string]*model.Recipe
 		sampling := discovery.SamplingOptions{}
 		if options.DiscoverySampleSize > 0 {
-			prescraped = make(map[string]*model.Recipe)
 			sampling = discovery.SamplingOptions{
 				SampleSize: options.DiscoverySampleSize,
 				// Fetches URLs one at a time and stops as soon as the accept/reject
@@ -256,7 +275,6 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 							r := &model.Recipe{Url: u}
 							_ = Scrape(dataInput, r, options.ScrapeOptions)
 							if r.Validate(options.RecipeFilter) == nil {
-								prescraped[u] = r
 								confirmed = append(confirmed, r)
 							}
 						}
@@ -272,19 +290,13 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 		}
 
 		scoring := discovery.ScoringOptions{
-			AcceptThreshold: options.DOMAcceptThreshold,
-			SampleThreshold: options.DOMSampleThreshold,
-			MinGroupSize:    options.DOMMinGroupSize,
-			MaxGroupsCheck:  options.DOMMaxGroupsCheck,
+			AcceptThreshold:    options.DOMAcceptThreshold,
+			SampleThreshold:    options.DOMSampleThreshold,
+			MinGroupSize:       options.DOMMinGroupSize,
+			MinSiblingsToMerge: options.DOMMinSiblingsToMerge,
+			MaxGroupsCheck:     options.DOMMaxGroupsCheck,
 		}
 		if err := discovery.ScrapeFeed(data, feed, sampling, scoring); err == nil && len(feed.Entries) > 0 {
-			if prescraped != nil {
-				for _, e := range feed.Entries {
-					if _, ok := prescraped[e.Url]; ok {
-						scrapedURLs[e.Url] = true
-					}
-				}
-			}
 			return nil
 		}
 	}
@@ -292,10 +304,14 @@ func findEntries(data *model.DataInput, feed *model.Feed, options model.FeedOpti
 	return errors.New("no entries found")
 }
 
-func filterEntries(entries []*model.Recipe, opt model.FeedOptions, scrapedURLs map[string]bool) []*model.Recipe {
+// filterEntries filters feed entries according to opt.RecipeFilter.
+// Fully scraped entries (entry.Scraped == true) are validated against opt.RecipeFilter.
+// Unattempted stub entries (entry.Scraped == false) bypass content validation since their
+// detailed fields have not been fetched yet, provided they have a non-empty URL.
+func filterEntries(entries []*model.Recipe, opt model.FeedOptions) []*model.Recipe {
 	filtered := make([]*model.Recipe, 0, len(entries))
 	for _, entry := range entries {
-		if scrapedURLs != nil && entry.Url != "" && !scrapedURLs[entry.Url] {
+		if entry.Url != "" && !entry.Scraped {
 			filtered = append(filtered, entry)
 			continue
 		}

@@ -87,6 +87,23 @@ func TestScoreURLConsistency_LowScore(t *testing.T) {
 	assert.Less(t, score, 0.5, "mixed paths should score low")
 }
 
+func TestScoreURLConsistency_FlatNavVsFlatRecipeSlugs(t *testing.T) {
+	navHrefs := mustParseURLs(t, []string{
+		"https://example.com/about",
+		"https://example.com/jobs",
+		"https://example.com/press",
+		"https://example.com/terms",
+	})
+	assert.Equal(t, 0.0, urlConsistencyScore(navHrefs), "flat unhyphenated nav chrome should score 0")
+
+	recipeHrefs := mustParseURLs(t, []string{
+		"https://example.com/borts-z-purykom",
+		"https://example.com/pan-kotlet",
+		"https://example.com/sup-iz-hrybamy",
+	})
+	assert.Equal(t, 0.25, urlConsistencyScore(recipeHrefs), "flat hyphenated recipe slugs should get structural score 0.25")
+}
+
 func TestImageDensityScore(t *testing.T) {
 	const html = `<html><body>
 		<a href="/r/1"><img src="/i/1.jpg"><span>Recipe One</span></a>
@@ -323,7 +340,7 @@ func TestMergeSiblingGroups_CollapsesRecipeTiles(t *testing.T) {
 	assert.Equal(t, 4, maxLinks, "merged group should contain all sibling links")
 }
 
-func TestMergeSiblingGroups_RespectsMinGroupSizeOverride(t *testing.T) {
+func TestMergeSiblingGroups_RespectsMinSiblingsToMergeOverride(t *testing.T) {
 	const html = `<html><body><main><section>
 		<div><a href="/recipes/pasta">Creamy Pasta Bake</a></div>
 		<div><a href="/recipes/chicken">Roast Chicken Dinner</a></div>
@@ -331,7 +348,7 @@ func TestMergeSiblingGroups_RespectsMinGroupSizeOverride(t *testing.T) {
 		<div><a href="/recipes/soup">Tomato Basil Soup</a></div>
 	</section></main></body></html>`
 
-	// 1. With MinGroupSize set to 5 (greater than 4 links), no merge should occur.
+	// 1. With MinSiblingsToMerge set to 5 (greater than the 4 sibling groups), no merge should occur.
 	{
 		doc := parseDocument(t, html)
 		base, _ := url.Parse("https://example.com/recipes")
@@ -339,24 +356,24 @@ func TestMergeSiblingGroups_RespectsMinGroupSizeOverride(t *testing.T) {
 		countBefore := len(groups)
 		require.Equal(t, 4, countBefore)
 
-		mergeSiblingGroups(groups, ScoringOptions{MinGroupSize: 5})
-		assert.Equal(t, countBefore, len(groups), "should not merge when candidate sibling groups are fewer than MinGroupSize")
+		mergeSiblingGroups(groups, ScoringOptions{MinSiblingsToMerge: 5})
+		assert.Equal(t, countBefore, len(groups), "should not merge when candidate sibling groups are fewer than MinSiblingsToMerge")
 	}
 
-	// 2. With MinGroupSize set to 3 (less than or equal to 4 links), merging should occur.
+	// 2. With MinSiblingsToMerge set to 3 (at or below the 4 sibling groups), merging should occur.
 	{
 		doc := parseDocument(t, html)
 		base, _ := url.Parse("https://example.com/recipes")
 		groups := collectGroups(doc, base)
 
-		mergeSiblingGroups(groups, ScoringOptions{MinGroupSize: 3})
+		mergeSiblingGroups(groups, ScoringOptions{MinSiblingsToMerge: 3})
 		maxLinks := 0
 		for _, g := range groups {
 			if len(g.links) > maxLinks {
 				maxLinks = len(g.links)
 			}
 		}
-		assert.Equal(t, 4, maxLinks, "should merge when candidate sibling groups are at least MinGroupSize")
+		assert.Equal(t, 4, maxLinks, "should merge when candidate sibling groups are at least MinSiblingsToMerge")
 	}
 }
 
@@ -383,6 +400,47 @@ func TestMergeSiblingGroups_PreservesDistinctContainers(t *testing.T) {
 	mergeSiblingGroups(groups, ScoringOptions{})
 
 	assert.Equal(t, countBefore, len(groups), "unrelated containers should not be merged together")
+}
+
+// TestCollectGroups_DistinguishesUnrelatedContainersAtSameTruncatedDepth
+// covers a recipe list and an unrelated legal-links list in sibling regions
+// ("section.hero" vs "aside.promo"), each wrapped in exactly two generically-
+// indexed <div>s, so both containers' nearest keyDepth=4 ancestors share the
+// same tag/nth-of-type shape and must still resolve to distinct groups.
+func TestCollectGroups_DistinguishesUnrelatedContainersAtSameTruncatedDepth(t *testing.T) {
+	const html = `<html><body>
+		<section class="hero"><div><div><section><ul>
+			<li><a href="/recipes/r0">Recipe R0 With A Longer Title</a></li>
+			<li><a href="/recipes/r1">Recipe R1 With A Longer Title</a></li>
+			<li><a href="/recipes/r2">Recipe R2 With A Longer Title</a></li>
+			<li><a href="/recipes/r3">Recipe R3 With A Longer Title</a></li>
+		</ul></section></div></div></section>
+		<aside class="promo"><div><div><section><ul>
+			<li><a href="/legal/doc0">Doc0</a></li>
+			<li><a href="/legal/doc1">Doc1</a></li>
+			<li><a href="/legal/doc2">Doc2</a></li>
+			<li><a href="/legal/doc3">Doc3</a></li>
+		</ul></section></div></div></aside>
+	</body></html>`
+
+	doc := parseDocument(t, html)
+	base, _ := url.Parse("https://example.com/")
+	groups := collectGroups(doc, base)
+
+	require.Len(t, groups, 2, "recipe list and legal-links list must not collide into one group")
+
+	for _, g := range groups {
+		require.Len(t, g.links, 4)
+		firstPath := g.urls[0].Path
+		isRecipeGroup := strings.HasPrefix(firstPath, "/recipes/")
+		for _, u := range g.urls {
+			if isRecipeGroup {
+				assert.True(t, strings.HasPrefix(u.Path, "/recipes/"), "recipe group must not contain %q", u.Path)
+			} else {
+				assert.True(t, strings.HasPrefix(u.Path, "/legal/"), "legal group must not contain %q", u.Path)
+			}
+		}
+	}
 }
 
 func TestPickSampleURLs_EvenSpread(t *testing.T) {

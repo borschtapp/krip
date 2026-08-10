@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"time"
 
 	"github.com/borschtapp/krip"
 )
@@ -92,7 +93,11 @@ func main() {
 	http.HandleFunc("/api/v1/feed", feedHandler)
 
 	fmt.Printf("Starting server at port http://localhost:3000\n")
-	if err := http.ListenAndServe(":3000", nil); err != nil {
+	srv := &http.Server{
+		Addr:              ":3000",
+		ReadHeaderTimeout: 5 * time.Second,
+	}
+	if err := srv.ListenAndServe(); err != nil {
 		log.Fatal(err)
 	}
 }

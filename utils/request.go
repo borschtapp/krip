@@ -25,7 +25,13 @@ type RequestConfig struct {
 	Headers http.Header
 }
 
-func ExecuteRequest(config RequestConfig, options model.RequestOptions) ([]byte, *url.URL, error) {
+type RequestResult struct {
+	Body        []byte
+	ContentType string
+	URL         *url.URL
+}
+
+func ExecuteRequest(config RequestConfig, options model.RequestOptions) (*RequestResult, error) {
 	ctx := options.Context
 	if ctx == nil {
 		ctx = context.Background()
@@ -44,19 +50,19 @@ func ExecuteRequest(config RequestConfig, options model.RequestOptions) ([]byte,
 
 	req, err := http.NewRequestWithContext(ctx, config.Method, config.URL, config.Body)
 	if err != nil {
-		return nil, nil, fmt.Errorf("could not create request: %w", err)
+		return nil, fmt.Errorf("could not create request: %w", err)
 	}
 	req.Header = headers
 
 	res, err := client.Do(req)
 	if err != nil {
-		return nil, nil, fmt.Errorf("could not send request: %w", err)
+		return nil, fmt.Errorf("could not send request: %w", err)
 	}
 	defer func() { _ = res.Body.Close() }()
 
 	body, err := io.ReadAll(io.LimitReader(res.Body, 10*1024*1024))
 	if err != nil {
-		return nil, nil, fmt.Errorf("could not read response body: %w", err)
+		return nil, fmt.Errorf("could not read response body: %w", err)
 	}
 
 	if res.StatusCode/100 != 2 {
@@ -64,10 +70,14 @@ func ExecuteRequest(config RequestConfig, options model.RequestOptions) ([]byte,
 		if len(errBody) > 500 {
 			errBody = errBody[:500] + "..."
 		}
-		return nil, nil, fmt.Errorf("invalid status %d %s: %s", res.StatusCode, res.Status, errBody)
+		return nil, fmt.Errorf("invalid status %d %s: %s", res.StatusCode, res.Status, errBody)
 	}
 
-	return body, res.Request.URL, nil
+	return &RequestResult{
+		Body:        body,
+		ContentType: res.Header.Get("Content-Type"),
+		URL:         res.Request.URL,
+	}, nil
 }
 
 func mergeHeaders(base, extra http.Header) http.Header {

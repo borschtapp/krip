@@ -128,7 +128,7 @@ func ScrapeGousto(data *model.DataInput, r *model.Recipe) error {
 	parts := strings.Split(strings.Trim(u.Path, "/"), "/")
 	recipeId := parts[len(parts)-1]
 
-	body, _, err := utils.ExecuteRequest(utils.RequestConfig{
+	resp, err := utils.ExecuteRequest(utils.RequestConfig{
 		URL: "https://production-api.gousto.co.uk/cmsreadbroker/v1/recipe/" + recipeId,
 		Headers: http.Header{
 			"Accept": []string{"application/json"},
@@ -139,7 +139,7 @@ func ScrapeGousto(data *model.DataInput, r *model.Recipe) error {
 	}
 
 	goustoData := GoustoData{}
-	if err := json.Unmarshal(body, &goustoData); err != nil {
+	if err := json.Unmarshal(resp.Body, &goustoData); err != nil {
 		return err
 	}
 
@@ -193,10 +193,10 @@ func parseGoustoData(data *GoustoData, r *model.Recipe) error {
 	if len(data.Data.Entry.Ingredients) != 0 {
 		r.Yield = "2"
 		for _, item := range data.Data.Entry.Ingredients {
-			r.Ingredients = utils.AppendUnique(r.Ingredients, &model.PropertyValue{Name: item.Name})
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: item.Name})
 		}
 		for _, item := range data.Data.Entry.Basics {
-			r.Ingredients = utils.AppendUnique(r.Ingredients, &model.PropertyValue{Name: item.Title})
+			r.Ingredients = append(r.Ingredients, &model.PropertyValue{Name: item.Title})
 		}
 	}
 
@@ -211,5 +211,35 @@ func parseGoustoData(data *GoustoData, r *model.Recipe) error {
 		}
 	}
 
+	// Gousto reports nutrition per portion, matching the per-2-servings quantities used above.
+	np := data.Data.Entry.NutritionalInformation.PerPortion
+	if np.EnergyKcal > 0 || np.FatMg > 0 || np.CarbsMg > 0 || np.ProteinMg > 0 {
+		r.Nutrition = &model.NutritionInformation{
+			Calories:            numToFloat(np.EnergyKcal, 1),
+			FatContent:          numToFloat(np.FatMg, mgToG),
+			SaturatedFatContent: numToFloat(np.FatSaturatesMg, mgToG),
+			CarbohydrateContent: numToFloat(np.CarbsMg, mgToG),
+			SugarContent:        numToFloat(np.CarbsSugarsMg, mgToG),
+			FiberContent:        numToFloat(np.FibreMg, mgToG),
+			ProteinContent:      numToFloat(np.ProteinMg, mgToG),
+			SaltContent:         numToFloat(np.SaltMg, mgToG),
+		}
+		if np.NetWeightMg > 0 {
+			r.Nutrition.ServingSize = fmt.Sprintf("%.0f g", float64(np.NetWeightMg)*mgToG)
+		}
+	}
+
 	return nil
+}
+
+// mgToG converts a milligram magnitude to grams.
+const mgToG = 0.001
+
+// numToFloat scales v and returns a pointer to it, or nil when v is absent (Gousto omits zero values).
+func numToFloat(v int, scale float64) *float64 {
+	if v <= 0 {
+		return nil
+	}
+	f := float64(v) * scale
+	return &f
 }

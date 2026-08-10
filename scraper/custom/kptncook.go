@@ -3,6 +3,7 @@ package custom
 import (
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/url"
@@ -187,7 +188,7 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	parts := strings.Split(u.Path, "/")
 	recipeId := parts[len(parts)-1]
 
-	resp, _, err := utils.ExecuteRequest(utils.RequestConfig{
+	resp, err := utils.ExecuteRequest(utils.RequestConfig{
 		Method: "POST",
 		URL:    "https://mobile.kptncook.com/recipes/search?kptnkey=" + kptnKey + "&lang=" + r.Language,
 		Body:   bytes.NewReader([]byte(`[{"uid": "` + recipeId + `"}]`)),
@@ -201,8 +202,12 @@ func ScrapeKptnCook(data *model.DataInput, r *model.Recipe) error {
 	}
 
 	var kptnData []KptnCookRecipe
-	if err := json.Unmarshal(resp, &kptnData); err != nil {
+	if err := json.Unmarshal(resp.Body, &kptnData); err != nil {
 		return err
+	}
+
+	if len(kptnData) == 0 {
+		return errors.New("kptncook: no recipe data found")
 	}
 
 	if err := parseKptnData(&kptnData[0], r); err != nil {
@@ -229,7 +234,9 @@ func parseKptnData(data *KptnCookRecipe, r *model.Recipe) error {
 		r.CookTime = duration.Format(time.Duration(data.CookingTime) * time.Minute)
 	}
 
-	r.Nutrition = &model.NutritionInformation{}
+	if r.Nutrition == nil && (data.RecipeNutrition.Fat > 0 || data.RecipeNutrition.Protein > 0 || data.RecipeNutrition.Calories > 0 || data.RecipeNutrition.Carbohydrate > 0) {
+		r.Nutrition = &model.NutritionInformation{}
+	}
 	if data.RecipeNutrition.Fat > 0 {
 		r.Nutrition.FatContent = &data.RecipeNutrition.Fat
 	}

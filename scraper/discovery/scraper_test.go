@@ -15,7 +15,7 @@ import (
 
 func parseDocumentFile(t *testing.T, path string) *goquery.Document {
 	t.Helper()
-	f, err := os.Open(path)
+	f, err := os.Open(path) // #nosec G304
 	require.NoError(t, err)
 	defer func() { _ = f.Close() }()
 	doc, err := goquery.NewDocumentFromReader(f)

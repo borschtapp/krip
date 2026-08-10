@@ -320,11 +320,12 @@ func ScrapeHelloFresh(data *model.DataInput, r *model.Recipe) error {
 		var objSlice []struct {
 			Name string `json:"name"`
 		}
-		if json.Unmarshal(recipe.Cuisines, &strVal) == nil {
+		switch {
+		case json.Unmarshal(recipe.Cuisines, &strVal) == nil:
 			r.Cuisines = []string{strVal}
-		} else if json.Unmarshal(recipe.Cuisines, &strSlice) == nil {
+		case json.Unmarshal(recipe.Cuisines, &strSlice) == nil:
 			r.Cuisines = strSlice
-		} else if json.Unmarshal(recipe.Cuisines, &objSlice) == nil {
+		case json.Unmarshal(recipe.Cuisines, &objSlice) == nil:
 			for _, c := range objSlice {
 				if c.Name != "" {
 					r.Cuisines = append(r.Cuisines, c.Name)

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/url"
+	"strings"
 
 	"github.com/sosodev/duration"
 
@@ -106,7 +107,11 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 		r.Keywords = values
 	}
 	if values, ok := getPropertiesArray(recipeSchema, "sameAs"); ok {
-		r.Links = values
+		for _, v := range values {
+			if utils.IsAbsolute(v) {
+				r.Links = append(r.Links, strings.TrimSpace(v))
+			}
+		}
 	}
 
 	if val, ok := getPropertyString(recipeSchema, "cookingMethod", "CookingMethod"); ok {
@@ -134,8 +139,8 @@ func parseRecipe(recipeSchema *microdata.Item, r *model.Recipe, baseUrl *url.URL
 
 	parseRecipeImages(recipeSchema, r, baseUrl)
 	parseRecipeNutrition(recipeSchema, r)
-	parseRecipeIngredients(recipeSchema, r)
-	parseRecipeEquipment(recipeSchema, r)
+	parseRecipeIngredients(recipeSchema, r, baseUrl)
+	parseRecipeEquipment(recipeSchema, r, baseUrl)
 	parseRecipeInstructions(recipeSchema, r, baseUrl)
 	parseRecipeRating(recipeSchema, r)
 	parseRecipeVideo(recipeSchema, r, baseUrl)
@@ -175,18 +180,21 @@ func parseRecipeNutrition(item *microdata.Item, r *model.Recipe) {
 	}
 
 	r.Nutrition = &model.NutritionInformation{}
-	nutritionFields := map[string]**float64{
-		"calories":              &r.Nutrition.Calories,
-		"carbohydrateContent":   &r.Nutrition.CarbohydrateContent,
-		"cholesterolContent":    &r.Nutrition.CholesterolContent,
-		"fatContent":            &r.Nutrition.FatContent,
-		"fiberContent":          &r.Nutrition.FiberContent,
-		"proteinContent":        &r.Nutrition.ProteinContent,
-		"saturatedFatContent":   &r.Nutrition.SaturatedFatContent,
-		"sodiumContent":         &r.Nutrition.SodiumContent,
-		"sugarContent":          &r.Nutrition.SugarContent,
-		"transFatContent":       &r.Nutrition.TransFatContent,
-		"unsaturatedFatContent": &r.Nutrition.UnsaturatedFatContent,
+	nutritionFields := map[string]struct {
+		dest **float64
+		unit utils.Unit
+	}{
+		"calories":              {&r.Nutrition.Calories, utils.UnitKilocalorie},
+		"carbohydrateContent":   {&r.Nutrition.CarbohydrateContent, utils.UnitGram},
+		"cholesterolContent":    {&r.Nutrition.CholesterolContent, utils.UnitMilligram},
+		"fatContent":            {&r.Nutrition.FatContent, utils.UnitGram},
+		"fiberContent":          {&r.Nutrition.FiberContent, utils.UnitGram},
+		"proteinContent":        {&r.Nutrition.ProteinContent, utils.UnitGram},
+		"saturatedFatContent":   {&r.Nutrition.SaturatedFatContent, utils.UnitGram},
+		"sodiumContent":         {&r.Nutrition.SodiumContent, utils.UnitMilligram},
+		"sugarContent":          {&r.Nutrition.SugarContent, utils.UnitGram},
+		"transFatContent":       {&r.Nutrition.TransFatContent, utils.UnitGram},
+		"unsaturatedFatContent": {&r.Nutrition.UnsaturatedFatContent, utils.UnitGram},
 	}
 	for key, val := range nutrition.Properties {
 		if len(val) == 0 {
@@ -195,13 +203,21 @@ func parseRecipeNutrition(item *microdata.Item, r *model.Recipe) {
 		strVal := fmt.Sprint(val[0])
 		if key == "servingSize" {
 			r.Nutrition.ServingSize = strVal
-		} else if field, ok := nutritionFields[key]; ok {
-			*field = utils.FindNumber(strVal)
+			continue
+		}
+		field, ok := nutritionFields[key]
+		if !ok {
+			continue
+		}
+		if field.unit == utils.UnitKilocalorie {
+			*field.dest = utils.ParseKilocalories(strVal)
+		} else {
+			*field.dest = utils.ParseMass(strVal, field.unit)
 		}
 	}
 }
 
-func parseRecipeIngredients(item *microdata.Item, r *model.Recipe) {
+func parseRecipeIngredients(item *microdata.Item, r *model.Recipe, baseUrl *url.URL) {
 	values, ok := item.GetProperties("recipeIngredient", "ingredients", "supply")
 	if !ok {
 		return
@@ -231,10 +247,10 @@ func parseRecipeIngredients(item *microdata.Item, r *model.Recipe) {
 				prop.UnitText = utils.CleanupInline(val)
 			}
 			if val, ok := getPropertyString(nested, "image", "Image"); ok {
-				prop.Image = utils.CleanupInline(val)
+				prop.Image = utils.ToAbsoluteUrl(baseUrl, val)
 			}
 			if val, ok := getPropertyString(nested, "url", "Url"); ok {
-				prop.Url = utils.CleanupInline(val)
+				prop.Url = utils.ToAbsoluteUrl(baseUrl, val)
 			}
 			if val, ok := getPropertyString(nested, "estimatedCost", "EstimatedCost"); ok {
 				prop.EstimatedCost = utils.CleanupInline(val)
@@ -244,7 +260,7 @@ func parseRecipeIngredients(item *microdata.Item, r *model.Recipe) {
 	}
 }
 
-func parseRecipeEquipment(item *microdata.Item, r *model.Recipe) {
+func parseRecipeEquipment(item *microdata.Item, r *model.Recipe, baseUrl *url.URL) {
 	values, ok := item.GetProperties("tool", "recipeEquipment")
 	if !ok {
 		return
@@ -262,10 +278,10 @@ func parseRecipeEquipment(item *microdata.Item, r *model.Recipe) {
 				tool.Description = val
 			}
 			if val, ok := getPropertyString(nested, "url", "Url"); ok {
-				tool.Url = val
+				tool.Url = utils.ToAbsoluteUrl(baseUrl, val)
 			}
 			if val, ok := getPropertyString(nested, "image", "Image"); ok {
-				tool.Image = val
+				tool.Image = utils.ToAbsoluteUrl(baseUrl, val)
 			}
 			if val, ok := getPropertyString(nested, "requiredQuantity", "amount", "value"); ok {
 				tool.Quantity = val
@@ -278,7 +294,8 @@ func parseRecipeEquipment(item *microdata.Item, r *model.Recipe) {
 func parseRecipeInstructions(item *microdata.Item, r *model.Recipe, baseUrl *url.URL) {
 	if nested, ok := item.GetNested("recipeInstructions", "instructions", "step"); ok {
 		for _, step := range nested.Items {
-			if step.IsOfSchemaType("HowToStep") {
+			switch {
+			case step.IsOfSchemaType("HowToStep"):
 				// yummly stores publisher in every step, but not in root of the schema
 				if val, ok := step.GetNestedItem("publisher"); ok {
 					parsePublisher(val, r.Publisher, baseUrl, true)
@@ -286,23 +303,23 @@ func parseRecipeInstructions(item *microdata.Item, r *model.Recipe, baseUrl *url
 				if val, ok := step.GetNestedItem("author"); ok {
 					parseAuthor(val, r.Author, baseUrl, true)
 				}
-				r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(step)})
-			} else if step.IsOfSchemaType("HowToSection") {
-				section := model.HowToSection{HowToStep: parseHowToStep(step)}
+				r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(step, baseUrl)})
+			case step.IsOfSchemaType("HowToSection"):
+				section := model.HowToSection{HowToStep: parseHowToStep(step, baseUrl)}
 				if nested, ok := step.GetNested("itemListElement", "ItemListElement"); ok {
 					for _, s := range nested.Items {
-						parsed := parseHowToStep(s)
+						parsed := parseHowToStep(s, baseUrl)
 						section.Steps = append(section.Steps, &parsed)
 					}
 				}
 				r.Instructions = append(r.Instructions, &section)
-			} else if step.IsOfSchemaType("ItemList") {
+			case step.IsOfSchemaType("ItemList"):
 				if nested, ok := step.GetNested("itemListElement", "ItemListElement"); ok {
 					for _, s := range nested.Items {
-						r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(s)})
+						r.Instructions = append(r.Instructions, &model.HowToSection{HowToStep: parseHowToStep(s, baseUrl)})
 					}
 				}
-			} else {
+			default:
 				log.Println("unknown instruction type: ", fmt.Sprint(step.Types))
 			}
 		}
@@ -413,7 +430,7 @@ func parseAuthor(item *microdata.Item, p *model.Person, baseUrl *url.URL, overri
 	}
 }
 
-func parseHowToStep(item *microdata.Item) model.HowToStep {
+func parseHowToStep(item *microdata.Item, baseUrl *url.URL) model.HowToStep {
 	var step model.HowToStep
 	if val, ok := getPropertyStringOrChild(item, "text", "result"); ok {
 		step.Text = utils.Cleanup(val)
@@ -427,13 +444,13 @@ func parseHowToStep(item *microdata.Item) model.HowToStep {
 		}
 	}
 	if val, ok := getPropertyStringOrChild(item, "image", "url"); ok {
-		step.Image = val
+		step.Image = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 	if val, ok := getPropertyStringOrChild(item, "video", "embedUrl", "embedURL", "url"); ok {
-		step.Video = val
+		step.Video = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 	if val, ok := getPropertyString(item, "url"); ok {
-		step.Url = val
+		step.Url = utils.ToAbsoluteUrl(baseUrl, val)
 	}
 	return step
 }

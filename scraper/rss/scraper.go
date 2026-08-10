@@ -34,7 +34,7 @@ func ScrapeFeed(data *model.DataInput, feed *model.Feed) error {
 	for _, item := range f.Items {
 		entry := &model.Recipe{
 			Url:           item.Link,
-			Name:          item.Title,
+			Name:          utils.CleanupInline(item.Title),
 			Publisher:     publisher,
 			Description:   utils.Cleanup(item.Description),
 			Categories:    item.Categories,

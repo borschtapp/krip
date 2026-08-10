@@ -23,7 +23,7 @@ func replayRSS(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed)
 		return fmt.Errorf("rss source points to an external host")
 	}
 
-	body, _, err := utils.ExecuteRequest(
+	resp, err := utils.ExecuteRequest(
 		utils.RequestConfig{Method: "GET", URL: d.Selector},
 		data.RequestOptions,
 	)
@@ -33,7 +33,7 @@ func replayRSS(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed)
 
 	rssInput := &model.DataInput{
 		Url:            d.Selector,
-		Text:           string(body),
+		Text:           string(resp.Body),
 		RequestOptions: data.RequestOptions,
 	}
 
@@ -44,7 +44,7 @@ func replayRSS(data *model.DataInput, feed *model.Feed, d *model.DiscoveredFeed)
 
 	var entries []*model.Recipe
 	for _, e := range tmpFeed.Entries {
-		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(e.Url, d.UrlPattern) {
+		if d.UrlPattern != "" && !utils.UrlMatchesPathPattern(e.Url, d.UrlPattern, data.Url) {
 			continue
 		}
 		entries = append(entries, e)
@@ -76,12 +76,12 @@ func tryRSSLink(data *model.DataInput, feed *model.Feed) (*model.DiscoveredFeed,
 		return nil, fmt.Errorf("rss link points to an external host")
 	}
 
-	body, _, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: absHref}, data.RequestOptions)
+	resp, err := utils.ExecuteRequest(utils.RequestConfig{Method: "GET", URL: absHref}, data.RequestOptions)
 	if err != nil {
 		return nil, err
 	}
 
-	rssInput := &model.DataInput{Url: absHref, Text: string(body), RequestOptions: data.RequestOptions}
+	rssInput := &model.DataInput{Url: absHref, Text: string(resp.Body), RequestOptions: data.RequestOptions}
 	if err := rss.ScrapeFeed(rssInput, feed); err != nil {
 		return nil, err
 	}

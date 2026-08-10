@@ -18,6 +18,9 @@ func TestParseDuration(t *testing.T) {
 		{"1 minute", time.Duration(1) * time.Minute, true},
 		{"5 min", time.Duration(5) * time.Minute, true},
 		{"1.5 hours", 90 * time.Minute, true},
+		{"1 ½ hours", 90 * time.Minute, true},
+		{"about an hour", 0, false},
+		{"roughly one hour", 0, false},
 		{"garbage", 0, false},
 	}
 	for _, tt := range tests {
@@ -45,6 +48,7 @@ func TestParseFloat(t *testing.T) {
 		{"", 0, true},
 		{"1,2,3", 0, true},
 		{"1,234.5", 1234.5, false},
+		{"1,234", 1234, false},
 		{"1.234,5", 1234.5, false},
 	}
 	for _, tt := range tests {

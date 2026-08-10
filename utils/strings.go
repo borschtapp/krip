@@ -17,6 +17,7 @@ var (
 )
 
 func Cleanup(s string) string {
+	s = html.UnescapeString(s)
 	s = ugcPolicy.Sanitize(s)
 	s = cleanupCommon(s)
 
@@ -35,6 +36,7 @@ func Cleanup(s string) string {
 }
 
 func CleanupInline(s string) string {
+	s = html.UnescapeString(s)
 	s = strictPolicy.Sanitize(s)
 	s = cleanupCommon(s)
 	s = strings.Trim(s, ",;")
@@ -43,7 +45,10 @@ func CleanupInline(s string) string {
 }
 
 func cleanupCommon(s string) string {
-	s = html.UnescapeString(s)
+	s = strings.ReplaceAll(s, "&amp;", "&")
+	s = strings.ReplaceAll(s, "&#34;", "\"")
+	s = strings.ReplaceAll(s, "&quot;", "\"")
+	s = strings.ReplaceAll(s, "&#39;", "'")
 	s = strings.TrimSpace(s)
 	s = strings.ReplaceAll(s, "\u00a0", " ")
 	s = strings.ReplaceAll(s, "\u00ad", "-")
